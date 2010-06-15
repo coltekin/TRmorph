@@ -1,0 +1,9 @@
+dist-exclude
+FIXME
+NOTES
+testset.GK
+*.a
+*.swp
+.junk
+.gitignore
+*.tar.gz

@@ -1,0 +1,37 @@
+* benim/bizim is not analyzed as genitive
+* auto generate analyzer/generator for segmentation
+* -ki added to (time) adverbs is not properly handled
+* define analysis/surface/intermediate symbols clearly
+  --> phonological part may not need all the symbols
+* better analysis of question particles
+* n/y change in Yusufeli'ne/Yusufeli'ye (some of these are already marked
+  in the lexicon.)
+* mark "already plural" lexical items in the lexicon
+* numeric forms currently do not inflect 10(')da
+* proper handling of proper nouns (apostrophe, no consonant changes)
+
+* expressions like yarın-ki dün-kü, bu yıl-ki
+* -de followed by other morphemes: gide debilirim
+* derivation attached to inflected words
+  bizimki-leş-me 
+  (http://sozluk.sourtimes.org/show.asp?t=akp+nin+kuresel+ekonomik+kriz+icin+aldigi+onlemler)
+  bizden-leş-me 
+  (http://www.kafkasya.net/site/modules.php?name=Forums&file=viewtopic&p=2535)
+  kaçınılmazlığı (metu corpus)
+  (oku-ma-mış-lık, biz-den-leş-miş-lik, 
+     duyarsızlaşmışlık)
+* better/wider coverage of derivational morphemes.
+* Review and convert all analysis strings to correct/principled/detailed 
+  descriptions.
+
+DONE:
+
+* can reflexive and reciprocal co-occur?
+* bana -> ben + a ?
+* question suffix
+* s-drop: camii
+* gemination: üssu, hakkı ...
+* Doble copula cases: gidiyor-muş-sa, gidiyor-du-ysa (also gidiyor-sa-ydı)
+* 3p agrement, -lar, variation. 
+* compound noun forms: ağustosböcegi, ağustosböcekleri
+* `denildi': dobule passive or??

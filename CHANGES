@@ -1,0 +1,8 @@
+v0.2 [2010-06-06]
+    * Fixed archiving script
+    * Remove intermediate symbols (e.g. morpheme boundaries) 
+      from analysis string
+    * Require apostrophe after proper names
+    * Some more minor fixes 
+
+v0.1  [2009-11-07] First public release.
