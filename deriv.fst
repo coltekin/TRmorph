@@ -54,6 +54,8 @@ $VSTEM-rfl$ = $VSTEM$ || \
               [#Lsym#]* <rfl>:<> [#caus_types##aor_types#]* <Verb><RB>
 $VSTEM-rcp$ = $VSTEM$ || \
               [#Lsym#]* <rcp>:<> [#caus_types##aor_types#]* <Verb><RB>
+
+ALPHABET = [#Lsym#]
 $VSTEM-def$ = $VSTEM$ || \
               [^<rfl><rcp>]+ [#caus_types##aor_types#]* <Verb><RB>
 

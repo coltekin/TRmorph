@@ -11,8 +11,13 @@ The analyzer is distributed under GPL [1] (version 2 or later).
 
 You need SFST [2] to compile and use this analyzer. The Makefile
 provided compiles compiles all the sources and produces the binary
-'trmorph.a'. Assuming you have SFST, in POSIX systems typing 'make'
-should be enough to get started.
+'trmorph.a'. Assuming you have fst-compiler-utf8 from SFST in your
+path, in POSIX systems typing 'make' should be enough to get started.
+It turns out that it can also be compiled with HFST [3] (thanks to
+Francis Tyers and Tommi Pirinen). To compile using HFST tools, set
+FSTC envirionment to 'hfst', a command like 'FSTC=hfst make' should do
+the trick. The resulting FSA will be usable with other HFST tools. The
+rest of this document assumes that you are using SFST.
 
 $fst-mor trmorph.a
 analyze> evlerimizdekilerinki

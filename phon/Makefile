@@ -5,17 +5,11 @@ FSTFILES = 010-exception_deye.fst 020-compn.fst \
 		   130-exception_yor.fst 140-v_harmony.fst 015-exception_obs.fst\
 		   017-exception_i.fst 
 FSAFILES=$(FSTFILES:.fst=.a)
-
-
 SOURCES = $(LEXFILES) $(FSTFILES)
 
+include ../Makefile.inc
+
 .PHONY: all
-
-%.a: %.fst
-	fst-compiler-utf8 $< $@
-
-%.ca: %.a
-	fst-compact $< $@
 
 all: phon.a
 
