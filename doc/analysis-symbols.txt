@@ -1,28 +1,29 @@
-%%%%%% Main POS tags
+%- POS tags
 
-<Adj>       - Adjective 
-<Adv>       - Adverb
-<Noun>      - Noun
-<Prop>      - Proper name
-<Pron>      - Pronoun
-<Postp>     - Postposition
-<Interj>    - Interjection
-<Conj>      - Conjunction
-<Verb>      - Verb
-<Num>       - Number
-<Punct>     - Punctuation
+<adj>       - Adjective|Adjective
+<adv>       - Adverb|Adverb
+<n>         - Noun|Noun
+<np>        - Proper name|Proper_name
+<prn>       - Pronoun|Pronoun
+<postp>     - Postposition|Postposition
+<iy>        - Interjection|Interjection
+<cnj>       - Conjunction|Grammatical_conjunction
+<v>         - Verb|Verb
+<vaux>      - Auxiliary|Auxiliary_verb
+<num>       - Number|Number
+<pnct>      - Punctuation|Punctuation
 
-%%%%%%% (mostly) Nominal morphemes
+%- Nominal morphemes
 
 %
-% Nominal plural suffix 
+%-- Plural suffix|Plural
 %
-<plu>   - Plural suffix            -- ev-ler    `houses'
+<pl>   - Plural suffix            -- ev-ler    `houses'
         G&K:        -PL
         Oflazer:    +PL
 
 %
-% Nominal possessive suffixes
+%-- Possessive suffixes|Possessive_suffix
 %
 
 <p1s>   - 1st person singular possessive    -- ev-im `my house'
@@ -50,54 +51,55 @@
         Oflazer:    +POS3P
 
 %
-% Case suffixes (or postpositions)
+%-- Case suffixes (or postpositions)|Grammatical_case
 %
          
-<loc>   - Locative case     -- ev-de `in/on/at the house'
+<loc>   - Locative case|Locative_case   -- ev-de `in/on/at the house'
         G&K:        -LOC
         Oflazer:    +Loc
 
-<gen>   - Genitive case     -- ev-in `the one that belongs the house'
+<gen>   - Genitive case|Genitive_case  -- ev-in `the one that belongs the house'
         G&K:        -GEN
         Oflazer:    +Gen
 
-<acc>   - Accusative case   -- ev-i 
+<acc>   - Accusative case|Accusative_case   -- ev-i 
         G&K:        -ACC
         Oflazer:    +Acc
 
-<abl>   - Ablative case     -- ev-den   `from the house'
+<abl>   - Ablative case|Ablative_case     -- ev-den   `from the house'
         G&K:        -ABL
         Oflazer:    +Abl
 
-<dat>   - Dative case       --- ev-e    `to the house'
+<dat>   - Dative case|Dative_case      --- ev-e    `to the house'
         G&K:        -DAT
         Oflazer:    +Dat
 
-<ins>   - Instrumental/comitative -- ev-le  `with the house'
+<ins>   - Instrumental/comitative|Instrumental_case -- ev-le  `with the house' (this one also hase a clitic equivalent `ile', and is not considered as a case for most grammar books)
         G&K:        -INS
         Oflazer:    +Ins
 
 
-%
-% -ki attaches to the nominals in locative and genitive case and 
-% forms "attributive adjectival phrases or pronominal expressions" (G&K).
-% It can again get one of these case suffixes and recurse. 
+%-- ki
+%% -ki attaches to the nominals in locative and genitive case and 
+%% forms "attributive adjectival phrases or pronominal expressions" (G&K).
+%% It can again get one of these case suffixes and recurse. 
 %
 
-<ki>    -  -- ev-de-ki-nin-ki  `the one that belons to the person in the house' 
+<ki> - -ki -- ev-de-ki-nin-ki  `the one that belongs to the person in the house' 
         G&K:        -ADJ/-PRON
         Oflazer:    +Rel
 
-%%%%% morphemes that attach to (mostly) verbs
+%- Morphemes that attach to (mostly) verbs
 
 %
-% voice suffixes
+%-- voice suffixes
 %
-<refl>  - Reflexive   -- yıka `to wash' -> yıka-n `to wash oneself'
+
+<ref>  - Reflexive   -- yıka `to wash' -> yıka-n `to wash oneself'
         G&K:        -REF
         Oflazer:    +Refl
 
-<recp>  - Reciprocal  -- sev `to love' -> sev-iş `to love each other/make love'
+<rec>  - Reciprocal  -- sev `to love' -> sev-iş `to love each other/make love'
         G&K:        -REC
         Oflazer:    +Recip
 
@@ -111,8 +113,9 @@
 
 
 %
-% Compound verb morphemes: these attach to non-finite verb forms and form 
-% new verbs with different mood.
+%-- Compound verb morphemes
+%% these attach to non-finite verb forms and form 
+%% new verbs with different mood.
 %
 
 <abil>  - ability -- gör-ebil `to be able to see'
@@ -135,7 +138,7 @@
         G&K:        - ??
         Oflazer:    +Repeat
 
-<akal>
+<akal> -  not very productive
         G&K:        - ??
         Oflazer:    +Stay
 
@@ -149,7 +152,7 @@
 
 
 %
-% negative marker(s)
+%-- negative marker(s)
 %
 
 <neg>   - Negative 
@@ -157,7 +160,7 @@
         Oflazer:    +Neg
 
 %
-% Tense/aspect/modality markers
+%-- Tense/aspect/modality markers
 %
 
 <t_narr>    - narrative past tense -- görmüş `it is evident/said that he/she/it saw (something)'
@@ -180,7 +183,7 @@
         G&K:        -AOR
         Oflazer:    +Aor
 
-<t_makta>   - 
+<t_makta>   - ?
         G&K:        -IMPF
         Oflazer:    +Prog2
 
@@ -192,12 +195,13 @@
         G&K:        -OPT
         Oflazer:    +Imp
 
-<t_cond>
+<t_cond>   - conditional
         G&K:        -COND
         Oflazer:    +Desr
 
 %
-% Person agreement, note that these also attach to `nominal verbs'
+%-- Person agreement
+%% note that these also attach to `nominal verbs'
 %
 
 <1s>   - 1st person singular -- gör-dü-m `I saw'
@@ -226,11 +230,12 @@
 
 
 %
-% Copular markers. These normally attach verbs to form complex tenses, 
-% but also attach to nominals.
+%-- Copular markers. 
+%% These normally attach verbs to form complex tenses, 
+%% but also attach to nominals.
 %
 
-<cpl_di>    - past copula  -- 
+<cpl_di>    - past copula  --
         G&K:        -P.COP
         Oflazer:    +Past
 

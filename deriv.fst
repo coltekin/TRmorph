@@ -9,28 +9,28 @@
 %                       %  irregular root forms here.
 
 %%%%%% These are the lexical roots throughout this file
-%   a - Adverb
-%   c - Connective
-%   j - Adjective
-%   m - Number
-%   n - Noun
-%   pn - Proper Noun
-%   p - Postopsition
-%   r - Pronoun
-%   v - Verb
-%   x - Interjection
+%   A - Adverb
+%   C - Connective
+%   J - Adjective
+%   M - Number
+%   N - Noun
+%   PN - Proper Noun
+%   P - Postopsition
+%   R - Pronoun
+%   V - Verb
+%   X - Interjection
 %
 
-$ASTEM$ =  "lexicon/adverbs" <Adv><RB>
-$CSTEM$ =  "lexicon/conjunctions" <Conj><RB>
-$JSTEM$ =  "lexicon/adjectives" <Adj><RB>
-$MSTEM$ =  "<num.a>" <Num><RB>
-$NSTEM$ =  "lexicon/nouns" <Noun><RB>
-$PNSTEM$ = "lexicon/proper_nouns" <Prop><RB>
-$PSTEM$ =  "lexicon/postpositions" <Postp><RB>
-$RSTEM$ =  "lexicon/pronouns" <Pron><RB>
-$VSTEM$ =  "lexicon/verbs" <Verb><RB>
-$XSTEM$ =  "lexicon/interjections" <Interj><RB>
+$ASTEM$ =  "lexicon/adverbs" <adv><RB>
+$CSTEM$ =  "lexicon/conjunctions" <cnj><RB>
+$JSTEM$ =  "lexicon/adjectives" <adj><RB>
+$MSTEM$ =  "<num.a>" <num><RB>
+$NSTEM$ =  "lexicon/nouns" <n><RB>
+$PNSTEM$ = "lexicon/proper_nouns" <np><RB>
+$PSTEM$ =  "lexicon/postpositions" <postp><RB>
+$RSTEM$ =  "lexicon/pronouns" <prn><RB>
+$VSTEM$ =  "lexicon/verbs" <v><RB>
+$XSTEM$ =  "lexicon/interjections" <ij><RB>
 $MISC$ =  "lexicon/misc" 
 
 
@@ -42,22 +42,22 @@ $MISC$ =  "lexicon/misc"
 
 %%% Reflexive
 %
-$reflexive$ = <refl>:{<bI>n} <MB>
+$reflexive$ = <ref>:{<bI>n} <MB>
 
 %%% Reciprocal
 
-$reciprocal$ = <recp>:{<bI>ş} <MB>
+$reciprocal$ = <rec>:{<bI>ş} <MB>
 
 $VSTEM-rr$ =  $VSTEM$ || \
-              [#Lsym#]* <rfl>:<> <rcp>:<> [#caus_types##aor_types#]* <Verb><RB> 
+              [#Lsym#]* <rfl>:<> <rcp>:<> [#caus_types##aor_types#]* <v><RB> 
 $VSTEM-rfl$ = $VSTEM$ || \
-              [#Lsym#]* <rfl>:<> [#caus_types##aor_types#]* <Verb><RB>
+              [#Lsym#]* <rfl>:<> [#caus_types##aor_types#]* <v><RB>
 $VSTEM-rcp$ = $VSTEM$ || \
-              [#Lsym#]* <rcp>:<> [#caus_types##aor_types#]* <Verb><RB>
+              [#Lsym#]* <rcp>:<> [#caus_types##aor_types#]* <v><RB>
 
 ALPHABET = [#Lsym#]
 $VSTEM-def$ = $VSTEM$ || \
-              [^<rfl><rcp>]+ [#caus_types##aor_types#]* <Verb><RB>
+              [^<rfl><rcp>]+ [#caus_types##aor_types#]* <v><RB>
 
 $VSTEM$ = $VSTEM-def$ |\
           $VSTEM-rfl$ $reflexive$? |\
@@ -235,8 +235,8 @@ $D_sAra$ = <D_sAr>:{'<bSS><A>r}
 
 $DMA$ = $D_sAr$ | $D_sAra$ 
 
-$JSTEM$ = $JSTEM$ | $MSTEM$ $DMJ$ <Adj><MB>
-$ASTEM$ = $ASTEM$ | $MSTEM$ $DMA$ <Adv><MB>
+$JSTEM$ = $JSTEM$ | $MSTEM$ $DMJ$ <adj><MB>
+$ASTEM$ = $ASTEM$ | $MSTEM$ $DMA$ <adv><MB>
 
 
 %$ASTEM$>>"test-a.fst"
@@ -257,9 +257,9 @@ $DMN$ = $DMN0$ | $DMNa$
 % noun, to simplify the notation below. we modify the N here.
 
 $NSTEM$ = $NSTEM$ |\
-          $JSTEM$ ($DJN0$ <Noun><MB>)|\
-          $ASTEM$ ($DAN0$ <Noun><MB>)|\
-          $MSTEM$ ($DMN$ <Noun><MB>)
+          $JSTEM$ ($DJN0$ <n><MB>)|\
+          $ASTEM$ ($DAN0$ <n><MB>)|\
+          $MSTEM$ ($DMN$ <n><MB>)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,25 +292,25 @@ $NSTEM$ = $NSTEM$ |\
 %
 
 % TODO: appostrophe after PNSTEM
-$NSTEM$  = $NSTEM$ ($DNN$  <Noun><MB>)? \
-         |  $PNSTEM$ $DNN$  <Noun><MB> \ 
-         |  $VSTEM$ $DVN$   <Noun><MB> \
-         |  $ASTEM$ $DAN$   <Noun><MB> \
-         |  $JSTEM$ $DJN$   <Noun><MB>
+$NSTEM$  = $NSTEM$ ($DNN$  <n><MB>)? \
+         |  $PNSTEM$ $DNN$  <n><MB> \ 
+         |  $VSTEM$ $DVN$   <n><MB> \
+         |  $ASTEM$ $DAN$   <n><MB> \
+         |  $JSTEM$ $DJN$   <n><MB>
             
-$ASTEM$  = $ASTEM$ ($DAA$ <Adv><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNA$ <Adv><MB>
+$ASTEM$  = $ASTEM$ ($DAA$ <adv><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><MB>
 %           $VSTEM$ $DVA$   |\
 %           $JSTEM$ $DJA$ 
 
-$JSTEM$  = $JSTEM$ ($DJJ$ <Adj><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNJ$ <Adj><MB> \
-         |  $VSTEM$ $DVJ$ <Adj><MB> \
+$JSTEM$  = $JSTEM$ ($DJJ$ <adj><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNJ$ <adj><MB> \
+         |  $VSTEM$ $DVJ$ <adj><MB> \
 %        |  $ASTEM$ $DAJ$ 
 
 $VSTEM$  = $VSTEM$ \
-         | ($NSTEM$|$PNSTEM$) $DNV$ <Verb><MB> \
-         | $JSTEM$ $DJV$ <Verb><MB> \ 
+         | ($NSTEM$|$PNSTEM$) $DNV$ <v><MB> \
+         | $JSTEM$ $DJV$ <v><MB> \ 
 %           $ASTEM$ $DAV$   |\
 %           $VSTEM$ $DVV$?  |\
 
@@ -319,26 +319,26 @@ $VSTEM$  = $VSTEM$ \
 %% The part below be repeated to anlyze logner sequences of
 %% derivational morphemes.
 %
-$NSTEM$  = $NSTEM$ ($DNN$  <Noun><MB>)? \
-         |  $PNSTEM$ $DNN$  <Noun><MB> \ 
-         |  $VSTEM$ $DVN$   <Noun><MB> \
-         |  $ASTEM$ $DAN$   <Noun><MB> \
-         |  $JSTEM$ $DJN$   <Noun><MB>
+$NSTEM$  = $NSTEM$ ($DNN$  <n><MB>)? \
+         |  $PNSTEM$ $DNN$  <n><MB> \ 
+         |  $VSTEM$ $DVN$   <n><MB> \
+         |  $ASTEM$ $DAN$   <n><MB> \
+         |  $JSTEM$ $DJN$   <n><MB>
 
-$ASTEM$  = $ASTEM$ ($DAA$ <Adv><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNA$ <Adv><MB>
+$ASTEM$  = $ASTEM$ ($DAA$ <adv><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><MB>
 %           $VSTEM$ $DVA$   |\
 %           $JSTEM$ $DJA$ 
 
 
-$JSTEM$  = $JSTEM$ ($DJJ$ <Adj><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNJ$ <Adj><MB> \
-         |  $VSTEM$ $DVJ$ <Adj><MB> \
+$JSTEM$  = $JSTEM$ ($DJJ$ <adj><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNJ$ <adj><MB> \
+         |  $VSTEM$ $DVJ$ <adj><MB> \
 %        |  $ASTEM$ $DAJ$ 
 
 $VSTEM$  = $VSTEM$ \
-         | ($NSTEM$|$PNSTEM$) $DNV$ <Verb><MB> \
-         | $JSTEM$ $DJV$ <Verb><MB> \ 
+         | ($NSTEM$|$PNSTEM$) $DNV$ <v><MB> \
+         | $JSTEM$ $DJV$ <v><MB> \ 
 %           $ASTEM$ $DAV$   |\
 %           $VSTEM$ $DVV$?  |\
 
@@ -357,15 +357,15 @@ $VSTEM$  = $VSTEM$ \
 
 % first split the verbal stems based on causative types
 
-%$CAUS-reg$ = $VSTEM$ || ($AAsym$* [#V_all##caus_types#] <Verb>?[<RB><MB>])
+%$CAUS-reg$ = $VSTEM$ || ($AAsym$* [#V_all##caus_types#] <v>?[<RB><MB>])
 %
-%$CAUS-t$    = $VSTEM$  || ($AAsym$* <caus_t>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-dir$  = $VSTEM$  || ($AAsym$* <caus_dir>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-it$   = $VSTEM$  || ($AAsym$* <caus_it>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-ir$   = $VSTEM$  || ($AAsym$* <caus_ir>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-ar$   = $VSTEM$  || ($AAsym$* <caus_ar>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-art$  = $VSTEM$  || ($AAsym$* <caus_art>:<> <aor_ar>? <Verb><RB>)
-%$CAUS-none$ = $VSTEM$ || ($AAsym$* <caus_irreg>:<> <aor_ar>? <Verb><RB>)
+%$CAUS-t$    = $VSTEM$  || ($AAsym$* <caus_t>:<> <aor_ar>? <v><RB>)
+%$CAUS-dir$  = $VSTEM$  || ($AAsym$* <caus_dir>:<> <aor_ar>? <v><RB>)
+%$CAUS-it$   = $VSTEM$  || ($AAsym$* <caus_it>:<> <aor_ar>? <v><RB>)
+%$CAUS-ir$   = $VSTEM$  || ($AAsym$* <caus_ir>:<> <aor_ar>? <v><RB>)
+%$CAUS-ar$   = $VSTEM$  || ($AAsym$* <caus_ar>:<> <aor_ar>? <v><RB>)
+%$CAUS-art$  = $VSTEM$  || ($AAsym$* <caus_art>:<> <aor_ar>? <v><RB>)
+%$CAUS-none$ = $VSTEM$ || ($AAsym$* <caus_irreg>:<> <aor_ar>? <v><RB>)
 %
 %
 %% now put them together, replicating the irregular forms

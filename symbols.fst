@@ -20,7 +20,8 @@
 #V_all# = #V##V_xx##V_Pal##V_Buff#
 
 % POS tags
-#pos# = <Adj><Adv><Noun><Prop><Pron><Postp><Interj><Conj><Verb><Num><Punct>
+%#pos# = <Adj><Adv><Noun><Prop><Pron><Postp><Interj><Conj><Verb><Num><Punct>
+#pos# = <adj><adv><n><np><prn><postp><ij><cnj><v><vaux><num><pnct>
 #BM#  = <RB><MB>    % Boundary markers
 
 % other intermediate symbols (this should probalby contain
@@ -60,7 +61,7 @@
           <Dan_0><Djn_0><Dmn_0><Dnn_siz><Dvn_yIcI>
 
 % analysis symbols for inflectional suffixes
-#infl# = <refl><recp><caus><pass>\
+#infl# = <ref><rec><caus><pass>\
          <abil><iver><adur><agel><agor><akal><akoy><ayaz>\
          <neg> \
          <t_narr><t_past><t_fut><t_cont><t_aor><t_makta><t_obl><t_opt><t_cond>\
@@ -73,7 +74,7 @@
          <cv_ken><cv_ma><cv_mak><cv_mis><cv_zdan>\
          <dir>\
          <CV>\
-         <plu>\
+         <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
          <loc><gen><acc><abl><dat><ins>\
          <ki>\

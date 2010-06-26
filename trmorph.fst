@@ -111,15 +111,15 @@ $ADJECTIVE$ = $JSTEM$
 
 % any stem with causative or aorist irregularites
 $VSTEM-irreg$ = $VSTEM$ || \
-                ([#Lsym#]* [#caus_types#<aor_ar>] [#Lsym#]* <Verb><RB>)
+                ([#Lsym#]* [#caus_types#<aor_ar>] [#Lsym#]* <v><RB>)
 
 % this one is the default for all, no marked form in the lexicon:
 $VSTEM-reg$ = $VSTEM$ - $VSTEM-irreg$
 
 $VSTEM-irregC$ = $VSTEM-irreg$ || \
-                 ([#Lsym#]* [#caus_types#] [#Lsym#]* <Verb><RB>)
+                 ([#Lsym#]* [#caus_types#] [#Lsym#]* <v><RB>)
 $VSTEM-irregA$ = $VSTEM-irreg$ || \
-                 ([#Lsym#]* <aor_ar> [#Lsym#]* <Verb><RB>)
+                 ([#Lsym#]* <aor_ar> [#Lsym#]* <v><RB>)
 $VSTEM-regC$ = $VSTEM-irreg$ - $VSTEM-irregC$
 $VSTEM-regA$ = $VSTEM-irreg$ - $VSTEM-irregA$
 
@@ -132,37 +132,37 @@ $VS-iC-rA$ = $VSTEM-regA$
 $VS-iC-iA$ = $VSTEM-irregA$ & $VSTEM-irregC$ 
 
 $VSTEM-ir-t$   = $VSTEM-reg$ || \
-                 ([#AAsym#]* [#V_all#lr] [<rfl><rcp>]* <Verb>?[<RB><MB>])
+                 ([#AAsym#]* [#V_all#lr] [<rfl><rcp>]* <v>?[<RB><MB>])
 $VSTEM-ir-dir$ = $VSTEM-reg$ - $VSTEM-ir-t$
 
 % no causative marker, but aorist -ar
 $VSTEM-ar-t$ = $VS-rC-iA$ || \
-               ([#AAsym#]* [#V#lr] [<rfl><rcp>]* <aor_ar> <Verb><RB>)
+               ([#AAsym#]* [#V#lr] [<rfl><rcp>]* <aor_ar> <v><RB>)
 $VSTEM-ar-dir$ = $VS-rC-iA$ - $VSTEM-ar-t$
 
 
 % forms with irregular aorist and causative
-$VSTEM-ar-X$ = $VS-iC-iA$ || ([#Lsym#]* <caus_irreg> [#Lsym#]* <Verb><RB>)
+$VSTEM-ar-X$ = $VS-iC-iA$ || ([#Lsym#]* <caus_irreg> [#Lsym#]* <v><RB>)
 $VSTEM-ar-dir$ = $VSTEM-ar-dir$ |\
-                ($VS-iC-iA$ || ([#Lsym#]* <caus_dir> [#Lsym#]* <Verb><RB>))
+                ($VS-iC-iA$ || ([#Lsym#]* <caus_dir> [#Lsym#]* <v><RB>))
 $VSTEM-ar-t$ = $VSTEM-ar-t$ |\ 
-              ($VS-iC-iA$ || ([#Lsym#]* <caus_t> [#Lsym#]* <Verb><RB>))
-$VSTEM-ar-it$ = $VS-iC-iA$ || ([#Lsym#]* <caus_it> [#Lsym#]* <Verb><RB>)
-$VSTEM-ar-ir$ = $VS-iC-iA$ || ([#Lsym#]* <caus_ir> [#Lsym#]* <Verb><RB>)
-$VSTEM-ar-ar$ = $VS-iC-iA$ || ([#Lsym#]* <caus_ar> [#Lsym#]* <Verb><RB>)
-$VSTEM-ar-art$ = $VS-iC-iA$ || ([#Lsym#]* <caus_art> [#Lsym#]* <Verb><RB>)
+              ($VS-iC-iA$ || ([#Lsym#]* <caus_t> [#Lsym#]* <v><RB>))
+$VSTEM-ar-it$ = $VS-iC-iA$ || ([#Lsym#]* <caus_it> [#Lsym#]* <v><RB>)
+$VSTEM-ar-ir$ = $VS-iC-iA$ || ([#Lsym#]* <caus_ir> [#Lsym#]* <v><RB>)
+$VSTEM-ar-ar$ = $VS-iC-iA$ || ([#Lsym#]* <caus_ar> [#Lsym#]* <v><RB>)
+$VSTEM-ar-art$ = $VS-iC-iA$ || ([#Lsym#]* <caus_art> [#Lsym#]* <v><RB>)
 
 
 % irregular causative with default aorist -ir-
-$VSTEM-ir-X$ = $VS-iC-rA$ || ([#Lsym#]* <caus_irreg> <Verb><RB>)
+$VSTEM-ir-X$ = $VS-iC-rA$ || ([#Lsym#]* <caus_irreg> <v><RB>)
 $VSTEM-ir-dir$ = $VSTEM-ir-dir$ |\
-                ($VS-iC-rA$ || ([#Lsym#]* <caus_dir> <Verb><RB>))
+                ($VS-iC-rA$ || ([#Lsym#]* <caus_dir> <v><RB>))
 $VSTEM-ir-t$ = $VSTEM-ir-t$ |\ 
-              ($VS-iC-rA$ || ([#Lsym#]* <caus_t> <Verb><RB>))
-$VSTEM-ir-it$ = $VS-iC-rA$ || ([#Lsym#]* <caus_it> <Verb><RB>)
-$VSTEM-ir-ir$ = $VS-iC-rA$ || ([#Lsym#]* <caus_ir> <Verb><RB>)
-$VSTEM-ir-ar$ = $VS-iC-rA$ || ([#Lsym#]* <caus_ar> <Verb><RB>)
-$VSTEM-ir-art$ = $VS-iC-rA$ || ([#Lsym#]* <caus_art> <Verb><RB>)
+              ($VS-iC-rA$ || ([#Lsym#]* <caus_t> <v><RB>))
+$VSTEM-ir-it$ = $VS-iC-rA$ || ([#Lsym#]* <caus_it> <v><RB>)
+$VSTEM-ir-ir$ = $VS-iC-rA$ || ([#Lsym#]* <caus_ir> <v><RB>)
+$VSTEM-ir-ar$ = $VS-iC-rA$ || ([#Lsym#]* <caus_ar> <v><RB>)
+$VSTEM-ir-art$ = $VS-iC-rA$ || ([#Lsym#]* <caus_art> <v><RB>)
 
 %some summary variables for convenience
 
@@ -568,7 +568,7 @@ $NP$ = ($PSTEM$ | $NOUN$ | $VN$ |$PART$) \
 $D_yIcI$ = <Dvn_yIcI>:{<bY><I>c<I>}
 
 $ADJECTIVE$ = $ADJECTIVE$  \
-              | $CAUS$ $D_yIcI$ <Adj><MB>
+              | $CAUS$ $D_yIcI$ <adj><MB>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

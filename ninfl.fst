@@ -8,7 +8,7 @@
 
 %%%%% pluaral
 %
-$plu$ = <plu>:{l<A>r} <MB>
+$plu$ = <pl>:{l<A>r} <MB>
 
 %%%% possessive markers:
 %

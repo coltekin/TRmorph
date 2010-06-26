@@ -280,4 +280,4 @@ $mi$ = (<q>:{mi} | <q>:{mı} | <q>:{mü} | <q>:{mu}) <MB>
 %%%%%%%%%%% free morpheme (copua?) i
 %
 
-$I$ = i <Verb><MB>
+$I$ = i <v><MB>
