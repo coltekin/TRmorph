@@ -1,0 +1,85 @@
+body { 
+    color: black; 
+    background-color: #eeeeee;
+}
+
+div.xx { 
+    margin-left: 1em; 
+    margin-right: 2em; 
+    margin-top: 0;
+    background: #fafafa;
+    padding: 0.5em;
+    border: 2px solid #c0c0c0;
+}
+
+h1 {
+    font-size:1.2em;
+    color: black;
+    margin: 0px 0 0px 0px;
+}
+
+h2 {
+    font-size:1em;
+    color: black;
+    margin: 0px 0 0px 0px;
+}
+
+a {
+text-decoration:none;
+}
+
+input {
+border: 1px solid #797a77;
+background: white;
+background-color: white;
+margin: 5px 0 5px 0;
+}
+
+select {
+border: 1px solid #797a77;
+margin: 5px 0 5px 0;
+}
+
+img.border {
+border:1px solid #6A482F;
+}
+
+
+table.tlt { border-width: 0 0 0px 0px;
+        border-style: solid; 
+}
+
+
+.tlt td { border-width: 0px 0px 1px 0px;
+     border-style: dotted;
+     padding-left: 5px;
+     padding-right: 5px;
+     vertical-align: top;
+}
+
+.tlt th { border-width: 1px 0px 1px 0px;
+     border-style: solid;
+     background-color: #797a77; 
+     color: white;
+     padding-left: 5px;
+     padding-right: 5px;
+     text-align: left;
+}
+
+.tlt th.th2 { border-width: 1px 0px 1px 0px;
+     border-style: solid;
+     background-color: #a9aaa7; 
+     color: black;
+     padding-left: 5px;
+     padding-right: 5px;
+     text-align: center;
+}
+
+.tlt th.th3 { border-width: 1px 0px 1px 0px;
+     border-style: solid;
+     background-color: #c9cac7; 
+     color: black;
+     padding-left: 5px;
+     padding-right: 5px;
+     text-align: right;
+}
