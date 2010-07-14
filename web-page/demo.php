@@ -159,7 +159,7 @@ Type the word to analyze:<br>
 <tr><td><a name="postp"><b>postp</b>
     <td><a href=http://en.wikipedia.org/wiki/Postposition>Postposition</a>
     <td>&nbsp;
-<tr><td><a name="iy"><b>iy</b>
+<tr><td><a name="ij"><b>iy</b>
     <td><a href=http://en.wikipedia.org/wiki/Interjection>Interjection</a>
     <td>&nbsp;
 <tr><td><a name="cnj"><b>cnj</b>
