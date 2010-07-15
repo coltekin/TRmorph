@@ -72,8 +72,8 @@
          <cv_acak><cv_cesine><cv_dan><cv_dik><cv_ecek><cv_eli>\
          <cv_erek><cv_ince><cv_inceye><cv_ip><cv_ir><cv_iyor>\
          <cv_ken><cv_ma><cv_mak><cv_mis><cv_zdan>\
+         <cv>\
          <dir>\
-         <CV>\
          <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
          <loc><gen><acc><abl><dat><ins>\

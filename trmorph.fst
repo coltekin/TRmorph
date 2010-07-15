@@ -522,9 +522,15 @@ $CV$ = $T_VOICE$ $T_neg$? $T_compl2$* $T_cv$ |\
 % the converbial marker (I/A)r  behaves exactly same as aorist.
 % instead of replicating the whole aorist construction here, we will
 % give a free pass for aorist form without further suffixes added to
-% become CV
-%$CV$ = $CV$ | $AOR$ (<CV>:<> <MB>)
-$CV$ = $CV$ | ($AOR-pos$ | $AOR-neg1$) (<CV>:<> <MB>)
+% become a CV
+%
+
+$CV_IR$  = ($AOR-pos$ | $AOR-neg1$) (<cv>:<> <MB>)
+
+$CV$ = $CV$ | \
+       $CV_IR$
+
+%$CV$ = $CV$ | ($AOR-pos$ | $AOR-neg1$) (<cv>:<> <MB>)
 
 
 
@@ -619,6 +625,7 @@ ALPHABET = [#Asym#] <>:[#LEsymS#] \
            <A><I> e:<e> \
            a:<pA> ı:<pI> o:<pO> u:<pU> \
            <>:[#TMP#] <>:<RB> <>:<MB>
+
 
 $afilter$ = .*
 
