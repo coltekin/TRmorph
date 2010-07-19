@@ -68,12 +68,7 @@
          <t_imp><t_makta><t_obl><t_opt><t_cond>\
          <cpl_di><cpl_mis><cpl_sa><cpl_ken>\
          <1s><2s><2sf><3s><1p><2p><3p>\
-         <VN_dik><VN_acak><VN_ma><VN_mak><VN_yis>\
-         <part_dik><part_acak><part_yan>\
-         <cv_acak><cv_cesine><cv_dan><cv_dik><cv_ecek><cv_eli>\
-         <cv_erek><cv_ince><cv_inceye><cv_ip><cv_ir><cv_iyor>\
-         <cv_ken><cv_ma><cv_mak><cv_mis><cv_zdan>\
-         <cv>\
+         <vn><part><cv>\
          <dir>\
          <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
@@ -81,10 +76,6 @@
          <ki>\
          <ca>\
          <apos>
-
-
-
-
 
 %%%%% some character classes that are helpful
 

@@ -217,52 +217,52 @@ $dir$ =  <dir>:{<D><I>r} <MB>
 
 % verbal nouns
 
-$vn_dik$  = <VN_dik>:{<D><I><k>} <MB>
-$vn_acak$ = <VN_acak>:{<bY><A>c<A><k>} <MB>
-$vn_ma$   = <VN_ma>:{m<A>} <MB>
-$vn_mak$  = <VN_mak>:{m<A><K>} <MB>
-$vn_yis$  = <VN_yis>:{<bY><I>ş} <MB>
+$vn_dik$  = <vn>:{<D><I><k>} <MB>
+$vn_acak$ = <vn>:{<bY><A>c<A><k>} <MB>
+$vn_ma$   = <vn>:{m<A>} <MB>
+$vn_mak$  = <vn>:{m<A><K>} <MB>
+$vn_yis$  = <vn>:{<bY><I>ş} <MB>
 
 % participles 
-$part_dik$  = <part_dik>:{<D><I><k>} <MB>
-$part_acak$ = <part_acak>:{<bY><A>c<A><k>} <MB>
-$part_yan$  = <part_yan>:{<bY><A>n} <MB>
+$part_dik$  = <part>:{<D><I><k>} <MB>
+$part_acak$ = <part>:{<bY><A>c<A><k>} <MB>
+$part_yan$  = <part>:{<bY><A>n} <MB>
 
 
 % the rest forms converbs
-$cv_dik$  = <cv_dik>:{<D><I><k>} <MB>
-$cv_acak$ = <cv_acak>:{<bY><A>c<A><k>} <MB>
-$cv_ma$   = <cv_ma>:{m<A>} <MB>
-$cv_mak$  = <cv_mak>:{m<A><K>} <MB>
+$cv_dik$  = <cv>:{<D><I><k>} <MB>
+$cv_acak$ = <cv>:{<bY><A>c<A><k>} <MB>
+$cv_ma$   = <cv>:{m<A>} <MB>
+$cv_mak$  = <cv>:{m<A><K>} <MB>
 % these combine with negative only (G&K documents these as combined
 % morphemes -mazdan -madan).
-$cv_dan$  = <cv_dan>:{d<A>n} <MB>
-$cv_zdan$ = <cv_zdan>:{zd<A>n} <MB>
+$cv_dan$  = <cv>:{d<A>n} <MB>
+$cv_zdan$ = <cv>:{zd<A>n} <MB>
 
 % gelince, gelinceye kadar
-$cv_ince$ = <cv_ince>:{<bY><I>nc<A>} <MB>
+$cv_ince$ = <cv>:{<bY><I>nc<A>} <MB>
 
 % calışarak
-$cv_erek$ = <cv_erek>:{<bY><A>r<A><k>} <MB>
+$cv_erek$ = <cv>:{<bY><A>r<A><k>} <MB>
 
 % geleli
-$cv_eli$  = <cv_eli>:{<bY><A>l<I>} <MB>
+$cv_eli$  = <cv>:{<bY><A>l<I>} <MB>
 
 % gelene kadar
-$cv_ene$  = <cv_AnA>:{<bY><A>n<A>} <MB>
+$cv_ene$  = <cv>:{<bY><A>n<A>} <MB>
 
 % the will certainly overgenerate, normally they should be followed by
 % 'gibi'
 
-$cv_ir$   = <cv_ir>:{<I>r} <MB>
-$cv_ar$   = <cv_ir>:{<A>r} <MB>
-$cv_ecek$   = <cv_ecek>:{<bY><A>c<A><k>} <MB>
-$cv_mis$    = <cv_mis>:{<bY>m<I>ş} <MB>
-$cv_iyor$    = <cv_iyor>:{<bI>yor} <MB>
+$cv_ir$   = <cv>:{<I>r} <MB>
+$cv_ar$   = <cv>:{<A>r} <MB>
+$cv_ecek$   = <cv>:{<bY><A>c<A><k>} <MB>
+$cv_mis$    = <cv>:{<bY>m<I>ş} <MB>
+$cv_iyor$    = <cv>:{<bI>yor} <MB>
 % -cesine comes after A/Ir and mIş:
-$cv_cesine$ = <cv_cesine>:{<C><A>s<I>n<A>} <MB>
+$cv_cesine$ = <cv>:{<C><A>s<I>n<A>} <MB>
 
-$cv_ip$     = <cv_ip>:{<bY><I>p} <MB>
+$cv_ip$     = <cv>:{<bY><I>p} <MB>
 
 % TODO: pairs of -(y)a ... -(y)a  (e.g. baka baka)
 %                -DI ... -(y)AlI  (e.g. duydum duyalı)

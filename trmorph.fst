@@ -525,10 +525,10 @@ $CV$ = $T_VOICE$ $T_neg$? $T_compl2$* $T_cv$ |\
 % become a CV
 %
 
-$CV_IR$  = ($AOR-pos$ | $AOR-neg1$) (<cv>:<> <MB>)
-
-$CV$ = $CV$ | \
-       $CV_IR$
+%$CV_IR$  = ($AOR-pos$ | $AOR-neg1$) (<cv>:<> <MB>)
+%
+%$CV$ = $CV$ | \
+%       $CV_IR$
 
 %$CV$ = $CV$ | ($AOR-pos$ | $AOR-neg1$) (<cv>:<> <MB>)
 
