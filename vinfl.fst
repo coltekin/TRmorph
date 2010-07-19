@@ -179,7 +179,7 @@ $p1_3p$ = <3p>:{l<A>r} <MB>
 $p_g1$ = $p1_1s$ | $p1_2s$ | $p1_3s$ | $p1_1p$ | $p1_2p$ | $p1_3p$
 
 % these only work with optative (-(y)A)
-% this diverges away from G&K description
+% this specification slightly diverges from G&K description
 %
 $p3_1s$ = <1s>:{y<I>m} <MB>
 $p3_2s$ = <2s>:{s<I>n} <MB>

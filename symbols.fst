@@ -64,7 +64,8 @@
 #infl# = <ref><rec><caus><pass>\
          <abil><iver><adur><agel><agor><akal><akoy><ayaz>\
          <neg> \
-         <t_narr><t_past><t_fut><t_cont><t_aor><t_makta><t_obl><t_opt><t_cond>\
+         <t_narr><t_past><t_fut><t_cont><t_aor>\
+         <t_imp><t_makta><t_obl><t_opt><t_cond>\
          <cpl_di><cpl_mis><cpl_sa><cpl_ken>\
          <1s><2s><2sf><3s><1p><2p><3p>\
          <VN_dik><VN_acak><VN_ma><VN_mak><VN_yis>\
