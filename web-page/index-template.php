@@ -1,8 +1,3 @@
-#!/bin/sh
-
-url=http://www.let.rug.nl/coltekin/trmorph/demo/index
-
-cat <<'EOF'
 <html>
 <head>
    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -30,7 +25,7 @@ function addCh(ch)
 Turkish.  It is implemented using <a
 href="http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html">
 SFST</a>, and uses a lexicon based on (but heavily modified) the
-wordlist of <a href=http://code.google.com/p/zemberek/>Zemberek</a>
+word list from <a href=http://code.google.com/p/zemberek/>Zemberek</a>
 spell checker. The morphological analyzer is distributed under
 the <a href=http://www.gnu.org/licenses/gpl.html>GPL</a>.
 
@@ -65,23 +60,19 @@ please cite the following paper:
 
 <p>
 <div class=xx>
-<p> You can try current version of TRmoprh by typing the word in the box 
-    and click 'Analyze' button. If you have javascript enebled you can use the
-    buttons below the inputbox to enter special Turkish characters.
-    If things do not looka as it should, please let me know.
+<p> You can try current version of TRmorph by typing the word in the box 
+    and click 'Analyze' button. If you have javascript enabled you can use the
+    buttons below the input box to enter special Turkish characters.
+    If things do not looks as it should, please let me know.
 <p> For this demo, anything except <b>lowercase</b> letters, digits,
-    dash (-) and and apostrophe (') is filtered out. If you need
+    dash (-) and apostrophe (') is filtered out. If you need
     analysis involving other symbols, or need to analyze large amount
-    of data, please download and use an the off-line version.
+    of data, please download and use an off-line version.
 <p>
 <table width="95%">
 <tr>
 <td width="40%" valign="top">
-EOF
-cat<<EOF
-<form name="inputform" method='post' action='$url'>
-EOF
-cat<<'EOF'
+<form name="inputform" method='post' action='__URL__'>
 Type the word to analyze:<br>
 <input type="text" name="word" id="inputbox">
 <input type='submit' value='Analyze' name='submit'><br>
@@ -136,7 +127,8 @@ Type the word to analyze:<br>
 <p>
 <div class=xx>
 <p> The following is a (partial) list of analysis symbols used in
-    trmorph.
+    TRmorph. The list below does not include the derivational
+    morphemes that start with D_.
 
 <p>
 <table class="tlt" width="95%">
@@ -144,10 +136,10 @@ Type the word to analyze:<br>
     <th>Gloss
     <th>Notes/Example
 
-EOF
-(cd ../doc; ./syms-doc.sh html)
+<?php
+include 'sym-table.html';
+?>
 
-cat<<'EOF'
 </table>
 
 
@@ -165,4 +157,3 @@ cat<<'EOF'
 
 </body>
 </html>
-EOF
