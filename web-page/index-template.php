@@ -2,7 +2,7 @@
 <head>
    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
    <title> TRmorph demo</title>
-   <link type="text/css" rel="stylesheet" href="../../cc.css">
+   <link type="text/css" rel="stylesheet" href="http://www.let.rug.nl/coltekin/cc.css">
    <meta name="keywords" content="morphology, turkish, two-level analyzer"/>
 </head>
 <script language="javascript">
@@ -35,7 +35,7 @@ href="http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html">SFS
 As well as the full source code, a compiled fsa, suitable to be used
 with SFST's fst-mor or fst-infl is included. A UNIX makefile is
 provided for easy compilation from the sources (see the included
-<tt>README</tt> file for details. The analyzer is fairly complete,
+<a href=README><tt>README</tt></a> file for details. The analyzer is fairly complete,
 however, it may not be easy on unaccustomed eyes. Documentation and
 cleanup work is going on, you may want to visit soon to get a newer
 version.
@@ -60,8 +60,8 @@ please cite the following paper:
 
 <p>
 <div class=xx>
-<p> You can try current version of TRmorph by typing the word in the box 
-    and click 'Analyze' button. If you have javascript enabled you can use the
+<p> You can try the current version of TRmorph by typing the word in the box 
+    and clicking the 'Analyze' button. If you have javascript enabled you can use the
     buttons below the input box to enter special Turkish characters.
     If things do not looks as it should, please let me know.
 <p> For this demo, anything except <b>lowercase</b> letters, digits,
@@ -146,14 +146,19 @@ include 'sym-table.html';
 </div>
 
 <?php
-    error_reporting(0);
+//    error_reporting(0);
     $fp = fopen(".log", "a");
     foreach ($_SERVER as $key => $value) {
         fprintf($fp, "%s=%s\t", $key, $value); 
     }
     fprintf($fp, "\n"); 
+    fprintf($fp, "time,remote,forwarded_for:%s|%s|%s\n", 
+            $_SERVER["REQUEST_TIME"],
+            $_SERVER["REMOTE_ADDR"],
+            $_SERVER["HTTP_X_FORWARDED_FOR"]);
     fclose($fp);
 ?>
+<p class="date">Last updated: __DATE__</p>
 
 </body>
 </html>

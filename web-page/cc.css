@@ -83,3 +83,11 @@ table.tlt { border-width: 0 0 0px 0px;
      padding-right: 5px;
      text-align: right;
 }
+
+p.date {
+    text-align: right;
+    font-size:.7em;
+    color: gray;
+    margin: 0 0 0 0;
+    margin-right: 2.5em;
+}
