@@ -1,0 +1,12 @@
+Converb marker
+WP:Converb
+NOTE:These makers form subordinating clauses with adverbial function.
+NOTE:Most of the suffixes that form converbs can also form other forms
+NOTE:of subordination (verbal nouns and participles).
+NOTE:Normally, the converbial markers has a restricted context, i.e.,
+NOTE:they serve as cv only if they are followed by certain morphemes
+NOTE:or words (particles). Current version of TRmorph does not 
+NOTE:fully restrict these.
+EX:gör-mek için gittim `I went in order to see'.
+G&K:-CV
+Type:Verbal/sub
