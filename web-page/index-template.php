@@ -61,9 +61,15 @@ please cite the following paper:
 <p>
 <div class=xx>
 <p> You can try the current version of TRmorph by typing the word in the box 
-    and clicking the 'Analyze' button. If you have javascript enabled you can use the
-    buttons below the input box to enter special Turkish characters.
-    If things do not looks as it should, please let me know.
+    and clicking the 'Analyze' button. If you have javascript enabled
+    you can use the buttons below the input box to enter special
+    Turkish characters. The analysis symbols are linked to their
+    descriptions in this page. The stems are linked to their <a
+    href="http://www.wiktionary.org/">Wiktionary</a> definitions.
+
+<p> If things do not looks as it should, please let
+<a href=http://www.let.rug.nl/coltekin/>me</a> know.
+
 <p> For this demo, anything except <b>lowercase</b> letters, digits,
     dash (-) and apostrophe (') is filtered out. If you need
     analysis involving other symbols, or need to analyze large amount
@@ -108,7 +114,24 @@ Type the word to analyze:<br>
                 continue;
             }
     
-            $line = preg_replace("/<(\w+)>/", "&lt;<a href=\"#$1\">$1</a>&gt;", $line);
+            $dicturl = 'http://tr.wiktionary.org/wiki/';
+            $stem = preg_replace("/^(\w+)<.*/", "$1", $line);
+            $pos = preg_replace("/^\w+<(\w+)>.*/", "$1", $line);
+
+            if (strcmp($pos, "v") == 0) { // verb 
+                if (preg_match("/.*[aıou][^eiöü]*$/", $stem)) {
+                    $dictq =  $dicturl . $stem . 'mak';
+                } else {
+                    $dictq = $dicturl . $stem . 'mek';
+                }
+            } else {
+                $dictq = $dicturl . $stem ;
+            }
+            $line = preg_replace("/<(\w+)>/", 
+                                 "&lt;<a href=\"#$1\">$1</a>&gt;", $line);
+            $line = preg_replace("/^[^&]+(&lt;.*)/",
+                                 "<a href=\"$dictq\">$stem</a>$1",
+                                 $line);
             printf("<li>%s<br>\n", $line);
         }
         echo "</ul>";
