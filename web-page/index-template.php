@@ -3,7 +3,7 @@
    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
    <title> TRmorph demo</title>
    <link type="text/css" rel="stylesheet" href="http://www.let.rug.nl/coltekin/cc.css">
-   <meta name="keywords" content="morphology, turkish, two-level analyzer"/>
+   <meta name="keywords" content="morphology, turkish, turkish morphology, morphological analyzer, two-level analyzer"/>
 </head>
 <script language="javascript">
 function addCh(ch)
