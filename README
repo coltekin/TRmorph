@@ -6,8 +6,8 @@ this document please refer to: http://www.let.rug.nl/coltekin/trmorph/
 
 The analyzer is distributed under GPL [1] (version 2 or later). 
 (NOTE: The lexicon provided is based on wordlists from Zemberek [3],
- however, it has been heavily modified. Note that, Zemberek is
- distributed under a different free license, MDL.) 
+however, it has been heavily modified. Note that, Zemberek is
+distributed under a different free license, MDL.) 
 
 You need SFST [2] to compile and use this analyzer. The Makefile
 provided compiles compiles all the sources and produces the binary
@@ -16,7 +16,7 @@ path, in POSIX systems typing 'make' should be enough to get started.
 It turns out that it can also be compiled with HFST [3] (thanks to
 Francis Tyers and Tommi Pirinen). To compile using HFST tools, set
 FSTC envirionment to 'hfst', a command like 'FSTC=hfst make' should do
-the trick. The resulting FSA will be usable with other HFST tools. The
+the trick. The resulting FSA will be usable with the HFST tools. The
 rest of this document assumes that you are using SFST.
 
 $fst-mor trmorph.a
@@ -92,8 +92,8 @@ this order: <rcp>, <rfl>, <caus_*> and <aor_ar>.
 * Derivations
 
 All root forms in the lexicon are read in deriv.fst. This file tries
-to model the most productive derivations that attaches to the root
-forms. The choice of derivations in this file is based on their
+to model the most productive derivational suffixes that attache to the
+root forms. The choice of derivations in this file is based on their
 occurrences in various corpora. Mostly these are really productive
 ones, such as -lA suffix that makes verbs from nominals. A more
 complete list of suffixes are included in deriv_unproductive.fst.
@@ -157,10 +157,10 @@ sources of information.
 
 * Sources of Ambiguity (currently partially documented)
 
-TRMorph mostly follows the description of the Turkish morphology
-described in Göksel & Kerslake (2005). There are a few persistent
-sources of ambiguity that analyzer outputs without any attempt to
-resolve it. The following is a list of these ambiguities:
+TRMorph mostly follows the description of the Turkish morphology from
+Göksel & Kerslake (2005). There are a few persistent sources of
+ambiguity that analyzer outputs without any attempt to resolve it. The
+following is a list of these ambiguities:
 
     - Any nominal is analyzed as both as a nominal, and as a nominal
       verb. As in, 
@@ -200,18 +200,17 @@ work. Initially it was started to do segmentation and analysis of part
 of the CHILDES data. Later on I needed a gold standards for
 morphological segmentation experiments, and so on. Consequently, this
 is not a `designed' morphological analyzer, it grew out of particular
-need, but it did surely, it does parse about 90% of the words (tokens)
-in METU corpus, which is probably close to best that can be done
-(there is quite some noise in the data). 
+need. It parses about 90% of the words (tokens) in METU corpus, which
+is probably close to best that can be done (there is quite some noise
+in the data). 
 
-During my informal talks with some researchers, it felt that there is
-a need for a freely accessible and modifiable morphological analyzer
-for Turkish. Hence, I decided to put some more effort on it to make it
-possibly useful for others. Probably I'll make some effort time to
-time to improve it further. The TODO file in this directory is my list
-of items that needs to be done to improve the system. This is a tool I
-needed, not main focus of my research. So, if you need a feature, or
-see a bug and not able to do it yourself, please ask.
+During my informal talks with some researchers, I felt that there is a
+need for a freely accessible and modifiable morphological analyzer for
+Turkish. Hence, I decided to put some more effort on it to make it
+possibly useful for others. Probably I'll make some more effort time
+to time to improve it further. The TODO file in this directory is my
+list of items that needs to be done to improve the system. If you need
+a feature, or see a bug and not able to do it yourself, please ask.
 
 In general: please feel free to contact me on any issue regarding this
 analyzer.

@@ -7,7 +7,7 @@ SUBDIRS=phon
 
 include Makefile.inc
 
-.PHONY: all subdirs 
+.PHONY: all subdirs $(SUBDIRS)
 
 all: trmorph.a
 
