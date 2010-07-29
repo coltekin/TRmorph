@@ -146,16 +146,24 @@ include 'sym-table.html';
 </div>
 
 <?php
-//    error_reporting(0);
+    error_reporting(0);
+    if (isset($_POST["submit"])) {
+        $word = $_POST["word"];
+    } else  {
+        $word = "";
+    }
+
     $fp = fopen(".log", "a");
     foreach ($_SERVER as $key => $value) {
         fprintf($fp, "%s=%s\t", $key, $value); 
     }
     fprintf($fp, "\n"); 
-    fprintf($fp, "time,remote,forwarded_for:%s|%s|%s\n", 
+
+    fprintf($fp, "time,remote,forwarded_for,word:%s|%s|%s|%s\n",
             $_SERVER["REQUEST_TIME"],
             $_SERVER["REMOTE_ADDR"],
-            $_SERVER["HTTP_X_FORWARDED_FOR"]);
+            $_SERVER["HTTP_X_FORWARDED_FOR"],
+            $word);
     fclose($fp);
 ?>
 <p class="date">Last updated: __DATE__</p>
