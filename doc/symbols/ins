@@ -1,8 +1,15 @@
 Instrumental/comitative case
 WP:Instrumental_case 
 EX:ev-<b>le</b>  `with the house' 
-NOTE:This one also has a clitic equivalent `ile', and is not considered 
-NOTE:as a case for most grammar books.
+NOTE: This one also has a clitic equivalent `ile', and is not
+NOTE: considered as a case for most grammar books. Probably this
+NOTE: has three different functions. (1) <b>and:</b>
+NOTE: `araba-<b>yla</b> evi sattık' (we sold the car and the
+NOTE: house). (2) <b>instrumental case:</b> `araba-<b>yla</b> eve
+NOTE: gittik' (we went home with the car). (3) <b>comitative
+NOTE: case:</b> `Ali-<b>yle</b> eve gittik' (we went home with
+NOTE: Ali). Current version of TRmorph uses single symbol for all
+NOTE: three senses.
 G&K:-INS
 Oflazer:+Ins
 Type:Nominal/case

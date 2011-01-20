@@ -22,23 +22,30 @@ function addCh(ch)
 <div class=xx>
 
 <p> TRmorph is a relatively complete morphological analyzer for
-Turkish.  It is implemented using <a
+Turkish. It is implemented using <a
 href="http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html">
 SFST</a>, and uses a lexicon based on (but heavily modified) the
 word list from <a href=http://code.google.com/p/zemberek/>Zemberek</a>
 spell checker. The morphological analyzer is distributed under
 the <a href=http://www.gnu.org/licenses/gpl.html>GPL</a>.
 
-<p> Latest  version can be downloaded <a
-href="trmorph-0.2.tar.gz">here</a>. To use the analyzer you need <a
+<p> Latest tested version can be downloaded <a
+href="trmorph-0.2.tar.gz">here</a>. The development version can be
+reached using version management tool <a
+href=http://git-scm.com/><tt>git</tt></a> from <a
+href="trmorph.git">here</a>. The command
+`<tt>git clone http://www.let.rug.nl/coltekin/trmorph/trmorph.git</tt>'
+should fetch the latest development copy. 
+
+<p> To use the analyzer you need <a
 href="http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html">SFST</a>.
 As well as the full source code, a compiled fsa, suitable to be used
 with SFST's fst-mor or fst-infl is included. A UNIX makefile is
-provided for easy compilation from the sources (see the included
-<a href=README><tt>README</tt></a> file for details. The analyzer is fairly complete,
-however, it may not be easy on unaccustomed eyes. Documentation and
-cleanup work is going on, you may want to visit soon to get a newer
-version.
+provided for easy compilation from the sources (see the included <a
+href=README><tt>README</tt></a> file for details. The analyzer is
+fairly complete, however, it may not be easy on unaccustomed eyes.
+Documentation and cleanup work is going on, you may want to visit soon
+to get a newer version.
 
 <p>I'm always interested in comments, corrections or improvements from
 others. Please feel free to contact <a
@@ -67,13 +74,14 @@ please cite the following paper:
     descriptions in this page. The stems are linked to their <a
     href="http://www.wiktionary.org/">Wiktionary</a> definitions.
 
-<p> If things do not looks as it should, please let
-<a href=http://www.let.rug.nl/coltekin/>me</a> know.
-
 <p> For this demo, anything except <b>lowercase</b> letters, digits,
     dash (-) and apostrophe (') is filtered out. If you need
     analysis involving other symbols, or need to analyze large amount
     of data, please download and use an off-line version.
+
+<p> If things do not looks as it should, please let
+<a href=http://www.let.rug.nl/coltekin/>me</a> know.
+
 <p>
 <table width="95%">
 <tr>
@@ -150,8 +158,8 @@ Type the word to analyze:<br>
 <p>
 <div class=xx>
 <p> The following is a (partial) list of analysis symbols used in
-    TRmorph. The list below does not include the derivational
-    morphemes that start with D_.
+    TRmorph. The documentation below does not yet include the 
+    derivational morphemes that start with D_.
 
 <p>
 <table class="tlt" width="95%">
