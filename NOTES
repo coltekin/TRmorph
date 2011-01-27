@@ -1,5 +1,24 @@
+* the suffix -(y)lA is a mysterious one for the grammarians. sounds like it has 3 functions:
+  1. `and': `evle arabayı sattık' (we sold the house _and_ the car)
+  2. instrumental case: `arabayla eve gittik' (we went home _with_ the car)
+  3. comitative case: `Ali'yle eve gittik' (we went home _with_ Ali) 
+
+  Current version (2011-01-24) does not distinguish them. It is
+  difficult, in general, to make the distinction, particularly 2 & 3.
+
+  The usage in 2 & 3 are clearly like a case, and behaves completely
+  as one. First usage is distinct. For the usage as a case, on can go
+  on and add person agreement to the noun: `arabaylayım' (I'm with
+  [the] car), `Ali'yleyim' (I'm with Ali). But for the `and function'
+  this is not possible.
+
+  My prediction would be that the clitic form `ile' is more common for
+  the `and' function, but this needs to be checked.
+
+
 * `deyip' too frequent to be a typo, but feels like a typo.
-* Oflazer etal. 1994 claims that <C> after haç, çeç, iç, göç is
+
+* Oflazer et al. 1994 claims that <C> after haç, çeç, iç, göç is
   realized as `c' instead of `ç'. We go for the default.
 
 * -mişçesine seems to be frequently spelled as -mişcesine (also in
