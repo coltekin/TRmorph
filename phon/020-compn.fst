@@ -16,7 +16,7 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <compn>:<>
 
 $C$ = {<compn>}:{<bS><I>}
-$CompN$ = $C$ ^-> ( __ <Noun><RB><EoW> )
+$CompN$ = $C$ ^-> ( __ <n><RB><EoW> )
 
 
 ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\

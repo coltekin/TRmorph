@@ -17,7 +17,7 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <compn> \
            <BoW> e:i
 
-$diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [<Verb><RB><MB><>]* [<RB><MB>] [y<bY>])
+$diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [<v><RB><MB><>]* [<RB><MB>] [y<bY>])
 
 ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
@@ -33,6 +33,6 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
 % as well as de and ye, a few other verbs get an extra optional `n'
 % after root if followed by passive.
 %
-$denyen$ = (<BoW> (de|ye|yaşa|kapa|boya) [#infl_feat#]* <Verb><RB>) <> => n (<bI><LN>)
+$denyen$ = (<BoW> (de|ye|yaşa|kapa|boya) [#infl_feat#]* <v><RB>) <> => n (<bI><LN>)
 
 $diyi$ || $denyen$

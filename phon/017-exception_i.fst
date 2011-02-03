@@ -20,4 +20,4 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <compn> \
            <BoW>:<> <bY>:<>
 
-(<BoW>:<> i [<Verb><RB><MB><>]*) <bY> <=> <> 
+(<BoW>:<> i [<v><RB><MB><>]*) <bY> <=> <> 
