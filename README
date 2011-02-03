@@ -21,10 +21,10 @@ rest of this document assumes that you are using SFST.
 
 $fst-mor trmorph.a
 analyze> evlerimizdekilerinki
-ev<Noun><plu><p1p><loc><ki><plu><gen><ki>
-ev<Noun><plu><p1p><loc><ki><plu><gen><ki><3s>
+ev<n><pl><p1p><loc><ki><pl><gen><ki>
+ev<n><pl><p1p><loc><ki><pl><gen><ki><3s>
 analyze> 
-generate> ev<Noun><plu>
+generate> ev<n><plu>
 evler
 
 Note that the current output may be noisier than above. This is
@@ -164,8 +164,8 @@ following is a list of these ambiguities:
 
     - Any nominal is analyzed as both as a nominal, and as a nominal
       verb. As in, 
-            doktor<Noun>
-            doktor<Noun><3s>
+            doktor<n>
+            doktor<n><3s>
       The first analysis is valid for the cases like,
             doktor burada. `the doctor is here'.
       The second analysis works in 
@@ -178,9 +178,9 @@ following is a list of these ambiguities:
       inflections are implemented. The adjectives and adverbs are
       allowed to become a `noun' with an zero-derivation, hence, the
       adjective `hasta' is analyzed as
-            hasta<Adj>
-            hasta<Adj><Djn_0><Noun>
-            hasta<Adj><Djn_0><Noun><3s>
+            hasta<adj>
+            hasta<adj><Djn_0><n>
+            hasta<adj><Djn_0><n><3s>
       In practice, the first analysis should be correct for,
             hasta adam  `(the) ill man'
       The second, 
