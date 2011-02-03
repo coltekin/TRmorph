@@ -7,3 +7,5 @@ testset.GK
 .junk
 .gitignore
 *.tar.gz
+.git
+ref/
