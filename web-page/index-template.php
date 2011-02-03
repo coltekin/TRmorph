@@ -1,7 +1,7 @@
 <html>
 <head>
    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-   <title> TRmorph demo</title>
+   <title>TRmorph: A free morphological analyzer for Turkish</title>
    <link type="text/css" rel="stylesheet" href="http://www.let.rug.nl/coltekin/cc.css">
    <meta name="keywords" content="morphology, turkish, turkish morphology, morphological analyzer, two-level analyzer"/>
 </head>
@@ -30,7 +30,7 @@ spell checker. The morphological analyzer is distributed under
 the <a href=http://www.gnu.org/licenses/gpl.html>GPL</a>.
 
 <p> Latest tested version can be downloaded <a
-href="trmorph-0.2.tar.gz">here</a>. The development version can be
+href="trmorph-0.2.1.tar.gz">here</a>. The development version can be
 reached using version management tool <a
 href=http://git-scm.com/><tt>git</tt></a> from <a
 href="trmorph.git">here</a>. The command
