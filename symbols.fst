@@ -21,7 +21,7 @@
 
 % POS tags
 %#pos# = <Adj><Adv><Noun><Prop><Pron><Postp><Interj><Conj><Verb><Num><Punct>
-#pos# = <adj><adv><n><np><prn><postp><ij><cnj><v><vaux><num><pnct>
+#pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><pnct><exist><nexist><not>
 #BM#  = <RB><MB>    % Boundary markers
 
 % other intermediate symbols (this should probalby contain

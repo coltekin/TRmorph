@@ -7,6 +7,7 @@
 #include "symbols.fst"
 #include "vinfl.fst"
 #include "ninfl.fst"
+#include "particles.fst"
 
 %%% The stems from the lexicon (possibly with derivation)
 %
@@ -598,8 +599,17 @@ $I$ = $I$ $T_cpl$
 
 $CLITIC$ = $CLITIC$ | $I$
 
-%%%%%%%%%%%%% done
+% var/yok/degil is treated specially. TODO: there should be a cleaner
+% way.
+$VYD$ = $vyd$ ( $p_g2$ $dir$? |\
+                $dir$ $p2_3p$ |\
+                      $T_cpl$ |\
+    $cpl_mis$ $p_g2$ $cv_cesine$ )
 
+% TODO: these are not clitics.
+$CLITIC$ = $CLITIC$ | $VYD$
+
+%%%%%%%%%%%%% done
 
 $WORD$ = $NOUN$      |\
          $NP$        |\

@@ -22,7 +22,9 @@
 %
 
 $ASTEM$ =  "lexicon/adverbs" <adv><RB>
-$CSTEM$ =  "lexicon/conjunctions" <cnj><RB>
+$CSTEM$ =  "lexicon/cnjcoo" <cnjcoo><RB>
+$CSTEM$ =  $CSTEM$ | "lexicon/cnjsub" <cnjsub><RB>
+$CSTEM$ =  $CSTEM$ | "lexicon/cnjadv" <cnjadv><RB>
 $JSTEM$ =  "lexicon/adjectives" <adj><RB>
 $MSTEM$ =  "<num.a>" <num><RB>
 $NSTEM$ =  "lexicon/nouns" <n><RB>

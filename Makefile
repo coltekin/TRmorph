@@ -1,7 +1,8 @@
-LEXFILES = lexicon/adjectives lexicon/adverbs lexicon/conjunctions\
+LEXFILES = lexicon/adjectives lexicon/adverbs lexicon/cnjcoo\
+	       lexicon/cnjadv lexicon/cnjsub\
 			lexicon/interjections lexicon/nouns lexicon/postpositions\
 			lexicon/proper_nouns lexicon/verbs lexicon/misc
-FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst
+FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst particles.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
 SUBDIRS=phon
 
@@ -36,7 +37,7 @@ test:
 
 # DO NOT DELETE
 
-trmorph.a: symbols.fst vinfl.fst ninfl.fst
+trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst
 ninfl.a: symbols.fst
 num.a: symbols.fst
 deriv.a: symbols.fst ninfl.fst
