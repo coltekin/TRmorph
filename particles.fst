@@ -11,6 +11,7 @@
 % implementation is in trmoprh.fst
 
 $mi$ = (<q>:{mi} | <q>:{mı} | <q>:{mü} | <q>:{mu}) <MB>
+% $mi$ = (mi| mı | mü | mu) <q><MB>
 
 %%%%%%%%%%% free morpheme (copua?) i
 %
