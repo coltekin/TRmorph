@@ -10,7 +10,11 @@ include Makefile.inc
 
 .PHONY: all subdirs $(SUBDIRS)
 
+ifeq ($(FSTC),hfst)
+all: trmorph.a tr-mor.ol tr-gen.ol
+else
 all: trmorph.a
+endif
 
 trmorph.a: subdirs trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a
 deriv.a:  subdirs num.a symbols.fst $(LEXFILES)
@@ -41,3 +45,9 @@ trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst
 ninfl.a: symbols.fst
 num.a: symbols.fst
 deriv.a: symbols.fst ninfl.fst
+
+tr-mor.ol: trmorph.a
+	hfst-invert -i trmorph.a | hfst-fst2fst -O -o $@
+
+tr-gen.ol: trmorph.a
+	hfst-fst2fst -O -i trmorph.a -o $@
