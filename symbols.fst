@@ -36,6 +36,7 @@
 #Apos# = \'
 #Punct# = \.\?\!\:\,\;
 
+#Spc# = \ \
 
 % types of cuasative markers, some of them are lexicalzed
 %
@@ -80,29 +81,29 @@
 %%%%% some character classes that are helpful
 
 % surface symbols
-#Ssym# = #C##V##Digit##Punct##Perc##Nsep##Apos#
+#Ssym# = #C##V##Digit##Punct##Perc##Nsep##Apos##Spc#
 
 % special symbols that mark exceptions in the lexicon
 % By default, LEsymS are the symbols that are removed from the analyses. 
 % The others are replaced with the corresponding surface symbol.
 
 #LEsymS# = #infl_feat#<compn><del><dels><dup><yn>
-#LEsym# = #LEsymS##C_xx##V_xx##V_Pal#
+#LEsym# = #LEsymS##C_xx##V_xx##V_Pal##Spc#
 
 % All lexical symbos:
 
-#Lsym# = #Ssym##LEsym#
+#Lsym# = #Ssym##LEsym##Spc#
 
 %
 % Only the symbols that appear in analysis strings. (this excludes
 % the intermediate symbols like morpheme boundaries,)
 %
 
-#Asym# = #Ssym##pos##deriv##infl#
+#Asym# = #Ssym##pos##deriv##infl##Spc#
 
 %
 % All analysis symbols, including the intermediate ones.
 %
 
-#AAsym# = #Asym##BM##TMP#
+#AAsym# = #Asym##BM##TMP##Spc#
 
