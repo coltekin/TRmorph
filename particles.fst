@@ -26,6 +26,11 @@ $I$ = i <v><MB>
 
 $vyd$ = ((var <exist>) | (yok <nexist>) | (değil <not>)) <RB>
 
+%%%%%%%% punctuation marks
+%
+%
+
+$punct$ = ([#Punct#]) <Punct>:<>
 
 % TODO: pairs of -(y)a ... -(y)a  (e.g. baka baka)
 %                -DI ... -(y)AlI  (e.g. duydum duyalı)

@@ -92,18 +92,18 @@
 
 % All lexical symbos:
 
-#Lsym# = #Ssym##LEsym##Spc#
+#Lsym# = #Ssym##LEsym#
 
 %
 % Only the symbols that appear in analysis strings. (this excludes
 % the intermediate symbols like morpheme boundaries,)
 %
 
-#Asym# = #Ssym##pos##deriv##infl##Spc#
+#Asym# = #Ssym##pos##deriv##infl#
 
 %
 % All analysis symbols, including the intermediate ones.
 %
 
-#AAsym# = #Asym##BM##TMP##Spc#
+#AAsym# = #Asym##BM##TMP#
 

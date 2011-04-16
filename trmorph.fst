@@ -609,6 +609,13 @@ $VYD$ = $vyd$ ( $p_g2$ $dir$? |\
 % TODO: these are not clitics.
 $CLITIC$ = $CLITIC$ | $VYD$
 
+%%%% punctuation marks
+%
+$PUNCT$ = $punct$
+
+$PUNCT$ >> "punct.a"
+
+
 %%%%%%%%%%%%% done
 
 $WORD$ = $NOUN$      |\
@@ -623,6 +630,7 @@ $WORD$ = $NOUN$      |\
          $PSTEM$     |\
          $MSTEM$     |\
          $MISC$     |\
+         $PUNCT$     |\
          $CLITIC$
 
 
