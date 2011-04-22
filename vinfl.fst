@@ -217,16 +217,17 @@ $dir$ =  <dir>:{<D><I>r} <MB>
 
 % verbal nouns
 
-$vn_dik$  = <vn>:{<D><I><k>} <MB>
-$vn_acak$ = <vn>:{<bY><A>c<A><k>} <MB>
-$vn_ma$   = <vn>:{m<A>} <MB>
-$vn_mak$  = <vn>:{m<A><K>} <MB>
-$vn_yis$  = <vn>:{<bY><I>ş} <MB>
+$vn_dik$  = <vn_dik>:{d<I><k>} <MB>                                                                                                  
+$vn_acak$ = <vn_acak>:{<bY><A>c<A><k>} <MB>                                                                                          
+$vn_ma$   = <vn_ma>:{m<A>} <MB><bY>                                                                                                  
+$vn_mak$  = <vn_mak>:{m<A><K>} <MB>                                                                                                  
+$vn_yis$  = <vn_yis>:{<bY><I>ş} <MB>                                                                                                 
+
 
 % participles 
-$part_dik$  = <part>:{<D><I><k>} <MB>
-$part_acak$ = <part>:{<bY><A>c<A><k>} <MB>
-$part_yan$  = <part>:{<bY><A>n} <MB>
+$part_dik$  = <part_dik>:{<D><I><k>} <MB>
+$part_acak$ = <part_acak>:{<bY><A>c<A><k>} <MB>
+$part_yan$  = <part_yan>:{<bY><A>n} <MB>
 
 
 % the rest forms converbs

@@ -69,7 +69,9 @@
          <t_imp><t_makta><t_obl><t_opt><t_cond>\
          <cpl_di><cpl_mis><cpl_sa><cpl_ken>\
          <1s><2s><2sf><3s><1p><2p><3p>\
-         <vn><part><cv>\
+         <vn_dik><vn_acak><vn_ma><vn_mak><vn_yis>\
+         <part_dik><part_acak><part_yan>\
+         <cv>\
          <dir>\
          <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
