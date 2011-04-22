@@ -1,0 +1,9 @@
+Verbal Noun Markers
+WP:Verbal_noun
+NOTE:This is one of the morphemes that form noun clauses from
+NOTE:non-finite verbs. Together with Participles and Converbs,
+NOTE:some of the previous versions of TRmorph used to assign a single
+NOTE:symbol <vn> for all verbal noun markers.
+EX:adam ol-<b>acak</b> çocuk 
+G&K:-VN
+Type:Verbal/sub
