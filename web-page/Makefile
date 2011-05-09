@@ -16,6 +16,7 @@ sym-table.html:
 	$(MAKE) -C ..
 
 install:
+	mkdir -p $(WEBDIR)
 	cp -a index.php sym-table.html ../trmorph.a ../README $(WEBDIR)
 
 clean:
