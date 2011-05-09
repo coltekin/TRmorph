@@ -22,6 +22,7 @@ $CSTEM$ = "<conj.a>"
 $XSTEM$ = "<interj.a>"
 $PSTEM$ = "<postp.a>"
 $MSTEM$ = "<number.a>"
+$DSTEM$ = "<det.a>"
 
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
@@ -629,6 +630,7 @@ $WORD$ = $NOUN$      |\
          $XSTEM$     |\
          $PSTEM$     |\
          $MSTEM$     |\
+         $DSTEM$     |\
          $MISC$     |\
          $PUNCT$     |\
          $CLITIC$
