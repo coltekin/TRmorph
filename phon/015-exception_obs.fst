@@ -26,7 +26,7 @@ $N$ = {<RB>}:{<tmpBuf><RB>}
 
 $obs1$ = $N$ ^-> (<BoW> (o|bu|şu) [#pos##infl_feat#]* __ )
 
-$obs1$>>"test.a"
+%$obs1$>>"obs_test1.a"
 
 % the following might have been a cleaner solution, but SFST does not
 % like insertion with two-level rules
@@ -43,12 +43,14 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <compn> \
            <BoW> <tmpBuf>:n <tmpBuf>:<>
 
-$obs2$ = <tmpBuf> <=> <> (<RB> (<EoW>\
-                                |(<D><I>r<MB>)\
-                                |(<bY><D><I><MB>)\
-                                |(<RB><bY>m<I>ş<MB>)\
-                                |(<RB><bY>s<A><MB>)\
-                                |(<RB><bY>ken<MB>))\
-                               )
+$obs2$ = <tmpBuf> <=> <> (<RB> (<EoW>\ |([<MB><>]* ( (<D><I>r)\
+                                                    |(<bY><D><I>)\
+                                                    |(<bY>m<I>ş)\
+                                                    |(<bY>s<A>)\
+                                                    |(<bY>ken)\
+                                                   )\
+                                        )\
+                               )\
+                         )
 
 $obs1$ || $obs2$
