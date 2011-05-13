@@ -1,0 +1,29 @@
+reading transducer...
+finished.
+analyze> suyu
+su<n><p3s>
+su<n><p3s><3s>
+su<n><acc>
+su<n><acc><3s>
+analyze> özsuyu
+özsu<n><p3s>
+özsu<n><p3s><3s>
+özsu<n><acc>
+özsu<n><acc><3s>
+analyze> sunu
+sunu<n>
+sunu<n><3s>
+analyze> susu
+no result for susu
+analyze> özsusu
+no result for özsusu
+analyze> 
+generate> su<n><acc><3s>
+suyu
+generate> su<n><p3s>
+suyu
+generate> özsu<n><acc><3s>
+özsuyu
+generate> özsu<n><p3s>
+özsuyu
+generate> 

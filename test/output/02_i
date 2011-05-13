@@ -1,0 +1,34 @@
+reading transducer...
+finished.
+analyze> imiş
+i<v><cpl_mis><3s>
+analyze> idi
+i<v><cpl_di><3s>
+analyze> ise
+is<n><dat>
+is<n><dat><3s>
+i<v><cpl_sa><3s>
+analyze> iken
+i<v><3s><cpl_ken>
+analyze> öfkeliymiş
+öfke<n><D_lI><adj><Djn_0><n><cpl_mis><3s>
+öfke<n><D_lI><n><cpl_mis><3s>
+analyze> öfkeliydi
+öfke<n><D_lI><adj><Djn_0><n><cpl_di><3s>
+öfke<n><D_lI><n><cpl_di><3s>
+analyze> öfkeliyse
+öfke<n><D_lI><adj><Djn_0><n><cpl_sa><3s>
+öfke<n><D_lI><n><cpl_sa><3s>
+analyze> öfkeliyken
+öfke<n><D_lI><adj><Djn_0><n><3s><cpl_ken>
+öfke<n><D_lI><n><3s><cpl_ken>
+analyze> 
+generate> i<v><cpl_mis><3s>
+imiş
+generate> i<v><cpl_di><3s>
+idi
+generate> i<v><cpl_sa><3s>
+ise
+generate> i<v><3s><cpl_ken>
+iken
+generate> 

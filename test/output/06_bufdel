@@ -1,0 +1,115 @@
+reading transducer...
+finished.
+analyze> evi
+ev<n><p3s>
+ev<n><p3s><3s>
+ev<n><acc>
+ev<n><acc><3s>
+analyze> evle
+ev<n><ins>
+ev<n><ins><3s>
+ev<n><D_lA><v><t_imp><2s>
+analyze> evin
+evin<n>
+evin<n><3s>
+ev<n><p2s>
+ev<n><p2s><3s>
+ev<n><gen>
+ev<n><gen><3s>
+analyze> arabayla
+araba<n><ins>
+araba<n><ins><3s>
+analyze> arabası
+araba<n><p3s>
+araba<n><p3s><3s>
+analyze> arabayı
+araba<n><acc>
+araba<n><acc><3s>
+analyze> arabanın
+araban<n><p2s>
+araban<n><p2s><3s>
+araban<n><gen>
+araban<n><gen><3s>
+araba<n><p2s><gen>
+araba<n><p2s><gen><3s>
+araba<n><gen>
+araba<n><gen><3s>
+analyze> altışar
+altı<num><D_sAr><adv>
+altı<num><D_sAr><adv><Dan_0><n>
+altı<num><D_sAr><adv><Dan_0><n><3s>
+altışar<n>
+altışar<n><3s>
+analyze> üçer
+üç<num><D_sAr><adv>
+üç<num><D_sAr><adv><Dan_0><n>
+üç<num><D_sAr><adv><Dan_0><n><3s>
+analyze> evim
+ev<n><p1s>
+ev<n><p1s><3s>
+ev<n><1s>
+analyze> arabam
+araba<n><p1s>
+araba<n><p1s><3s>
+analyze> daracık
+dara<n><D_CIK><n>
+dara<n><D_CIK><n><3s>
+analyze> hemencecik
+hemencecik<n>
+hemencecik<n><3s>
+hemen<n><D_CA><n><D_CIK><n>
+hemen<n><D_CA><n><D_CIK><n><3s>
+hemen<n><D_CA><adv><D_AcIK><adv>
+hemen<n><D_CA><adv><D_IcIK><adv>
+hemen<adv><Dan_0><n><D_CA><n><D_CIK><n>
+hemen<adv><Dan_0><n><D_CA><n><D_CIK><n><3s>
+hemen<adv><Dan_0><n><D_CA><adv><D_AcIK><adv>
+hemen<adv><Dan_0><n><D_CA><adv><D_IcIK><adv>
+analyze> evyi
+no result for evyi
+analyze> evsi
+no result for evsi
+analyze> evyle
+no result for evyle
+analyze> arabaı
+no result for arabaı
+analyze> arabala
+araba<n><D_lA><v><t_imp><2s>
+analyze> evn
+no result for evn
+analyze> arabaın
+no result for arabaın
+analyze> üçşer
+no result for üçşer
+analyze> altıar
+no result for altıar
+analyze> 
+generate> ev<n><p3s>
+evi
+generate> ev<n><acc>
+evi
+generate> ev<n><ins>
+evle
+generate> ev<n><p2s>
+evin
+generate> ev<n><gen>
+evin
+generate> araba<n><ins>
+arabayla
+generate> araba<n><p3s>
+arabası
+generate> araba<n><acc>
+arabayı
+generate> araba<n><gen>
+arabanın
+generate> altı<num><D_sAr><adv>
+altı'şar
+altışar
+generate> üç<num><D_sAr><adv>
+üç'er
+üçer
+generate> ev<n><p1s>
+evim
+generate> araba<n><p1s>
+arabam
+generate> 

@@ -1,0 +1,79 @@
+reading transducer...
+finished.
+analyze> ona
+on<n><dat>
+on<n><dat><3s>
+ona<v><t_imp><2s>
+on<v><t_opt><3s>
+on<num><Dmn_0><n><dat>
+on<num><Dmn_0><n><dat><3s>
+o<prn><dat>
+o<prn><dat><3s>
+analyze> buna
+bun<n><dat>
+bun<n><dat><3s>
+buna<v><t_imp><2s>
+bu<prn><dat>
+bu<prn><dat><3s>
+analyze> şuna
+şu<prn><dat>
+şu<prn><dat><3s>
+analyze> oydu
+o<prn><cpl_di><3s>
+oy<n><cpl_di><3s>
+oy<v><t_past><3s>
+analyze> budur
+bu<prn><3s><dir>
+analyze> oyken
+o<prn><3s><cpl_ken>
+oy<n><3s><cpl_ken>
+analyze> oysa
+o<prn><cpl_sa><3s>
+oy<n><cpl_sa><3s>
+oysa<adv>
+oysa<adv><Dan_0><n>
+oysa<adv><Dan_0><n><3s>
+oysa<cnjadv>
+oy<v><t_cond><3s>
+analyze> oydu
+o<prn><cpl_di><3s>
+oy<n><cpl_di><3s>
+oy<v><t_past><3s>
+analyze> odur
+o<prn><3s><dir>
+analyze> şudur
+şu<prn><3s><dir>
+analyze> şuydu
+şu<prn><cpl_di><3s>
+analyze> şuymuş
+şu<prn><cpl_mis><3s>
+analyze> şuyken
+şu<prn><3s><cpl_ken>
+analyze> şundur
+no result for şundur
+analyze> şundu
+no result for şundu
+analyze> şunmuş
+no result for şunmuş
+analyze> şunken
+no result for şunken
+analyze> şunsa
+no result for şunsa
+analyze> şudu
+no result for şudu
+analyze> şumuş
+no result for şumuş
+analyze> şuken
+no result for şuken
+analyze> şusa
+no result for şusa
+analyze> 
+generate> şu<prn><3s><dir>
+şudur
+generate> şu<prn><cpl_di><3s>
+şuydu
+generate> şu<prn><cpl_mis><3s>
+şuymuş
+generate> şu<prn><3s><cpl_ken>
+şuyken
+generate> 

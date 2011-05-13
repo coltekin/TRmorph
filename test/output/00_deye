@@ -1,0 +1,61 @@
+reading transducer...
+finished.
+analyze> diyecek
+de<v><vn_acak>
+de<v><vn_acak><3s>
+de<v><t_fut><3s>
+de<v><part_acak>
+de<v><part_acak><3s>
+de<v><cv>
+analyze> yiyecek
+yiyecek<n>
+yiyecek<n><3s>
+ye<v><vn_acak>
+ye<v><vn_acak><3s>
+ye<v><t_fut><3s>
+ye<v><part_acak>
+ye<v><part_acak><3s>
+ye<v><cv>
+analyze> denir
+de<v><pass><t_aor><3s>
+analyze> yenir
+ye<v><pass><t_aor><3s>
+analyze> yaşanır
+yaşa<v><pass><t_aor><3s>
+analyze> kapanır
+kapa<v><pass><t_aor><3s>
+analyze> boyanır
+boya<v><pass><t_aor><3s>
+analyze> deyecek
+no result for deyecek
+analyze> yeyecek
+no result for yeyecek
+analyze> boyar
+boya<v><t_aor><3s>
+boyar<n>
+boyar<n><3s>
+analyze> yaşar
+yaşa<v><t_aor><3s>
+yaşar<v><t_imp><2s>
+analyze> kapar
+kapa<v><t_aor><3s>
+kap<v><t_aor><3s>
+analyze> dimiş
+no result for dimiş
+analyze> yaşımış
+no result for yaşımış
+analyze> 
+generate> de<v><t_fut><3s>
+diyecek
+generate> ye<v><t_fut><3s>
+yiyecek
+generate> yaşa<v><pass><t_aor><3s>
+yaşanılır
+yaşanır
+generate> kapa<v><pass><t_aor><3s>
+kapanılır
+kapanır
+generate> boya<v><pass><t_aor><3s>
+boyanılır
+boyanır
+generate> 

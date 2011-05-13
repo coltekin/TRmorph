@@ -1,0 +1,22 @@
+# this tests phon/010_exception_deye.fst
+#
+diyecek
+yiyecek
+denir
+yenir
+yaşanır
+kapanır
+boyanır
+deyecek
+yeyecek
+boyar
+yaşar
+kapar
+dimiş
+yaşımış
+
+de<v><t_fut><3s>
+ye<v><t_fut><3s>
+yaşa<v><pass><t_aor><3s>
+kapa<v><pass><t_aor><3s>
+boya<v><pass><t_aor><3s>
