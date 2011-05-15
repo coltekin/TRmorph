@@ -1,0 +1,16 @@
+reading transducer...
+finished.
+analyze> gidilir
+git<v><pass><t_aor><3s>
+analyze> gelinir
+gel<v><pass><t_aor><3s>
+analyze> gidinir
+no result for gidinir
+analyze> gelilir
+no result for gelilir
+analyze> 
+generate> git<v><pass><t_aor><3s>
+gidilir
+generate> gel<v><pass><t_aor><3s>
+gelinir
+generate> 

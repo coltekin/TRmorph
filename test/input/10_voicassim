@@ -1,0 +1,18 @@
+# 110-v_assimilation.fst
+#
+şekerci
+şarapçı
+geldi
+kaçtı
+#
+şekerçi
+şarapcı
+gelti
+kaçdı
+
+şarap<n><D_CI><adj>
+şeker<n><D_CI><adj>
+iktisat<n><D_CI><adj>
+makina<n><D_CI><adj>
+gel<v><t_past><3s>
+kaç<v><t_past><3s>

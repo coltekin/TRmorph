@@ -1,0 +1,89 @@
+reading transducer...
+finished.
+analyze> eve
+ev<n><dat>
+ev<n><dat><3s>
+analyze> evin
+evin<n>
+evin<n><3s>
+ev<n><p2s>
+ev<n><p2s><3s>
+ev<n><gen>
+ev<n><gen><3s>
+analyze> evler
+ev<n><pl>
+ev<n><pl><3s>
+ev<n><D_lA><v><t_aor><3s>
+ev<n><3p>
+analyze> arabaya
+araba<n><dat>
+araba<n><dat><3s>
+analyze> arabanın
+araban<n><p2s>
+araban<n><p2s><3s>
+araban<n><gen>
+araban<n><gen><3s>
+araba<n><p2s><gen>
+araba<n><p2s><gen><3s>
+araba<n><gen>
+araba<n><gen><3s>
+analyze> arabalar
+araba<n><pl>
+araba<n><pl><3s>
+araba<n><D_lA><v><t_aor><3s>
+araba<n><3p>
+arap<n><dat><3p>
+analyze> saat
+saat<n>
+saat<n><3s>
+analyze> saate
+saat<n><dat>
+saat<n><dat><3s>
+analyze> saatin
+saat<n><p2s>
+saat<n><p2s><3s>
+saat<n><gen>
+saat<n><gen><3s>
+analyze> saatler
+saat<n><pl>
+saat<n><pl><3s>
+saat<n><D_lA><v><t_aor><3s>
+saat<n><3p>
+analyze> eva
+no result for eva
+analyze> evın
+no result for evın
+analyze> evlar
+no result for evlar
+analyze> arabaye
+no result for arabaye
+analyze> arabanin
+no result for arabanin
+analyze> arabaler
+no result for arabaler
+analyze> saata
+no result for saata
+analyze> saatın
+no result for saatın
+analyze> saatlar
+no result for saatlar
+analyze> 
+generate> ev<n><dat>
+eve
+generate> ev<n><gen>
+evin
+generate> ev<n><pl>
+evler
+generate> araba<n><dat>
+arabaya
+generate> araba<n><gen>
+arabanın
+generate> araba<n><pl>
+arabalar
+generate> saat<n><dat>
+saate
+generate> saat<n><gen>
+saatin
+generate> saat<n><pl>
+saatler
+generate> 

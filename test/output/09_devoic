@@ -1,0 +1,122 @@
+reading transducer...
+finished.
+analyze> şarap
+şarap<n>
+şarap<n><3s>
+analyze> şarapta
+şarap<n><loc>
+şarap<n><loc><3s>
+analyze> şarabı
+şarap<n><p3s>
+şarap<n><p3s><3s>
+şarap<n><acc>
+şarap<n><acc><3s>
+analyze> ağaç
+ağaç<n>
+ağaç<n><3s>
+analyze> ağaçtan
+ağaç<n><abl>
+ağaç<n><abl><3s>
+analyze> ağacı
+ağa<n><D_CI><adj>
+ağa<n><D_CI><adj><Djn_0><n>
+ağa<n><D_CI><adj><Djn_0><n><3s>
+ağa<n><D_CI><n>
+ağa<n><D_CI><n><3s>
+ağaç<n><p3s>
+ağaç<n><p3s><3s>
+ağaç<n><acc>
+ağaç<n><acc><3s>
+analyze> bebek
+bebek<n>
+bebek<n><3s>
+analyze> bebeğin
+bebek<n><p2s>
+bebek<n><p2s><3s>
+bebek<n><gen>
+bebek<n><gen><3s>
+analyze> bebekle
+bebek<n><ins>
+bebek<n><ins><3s>
+bebek<n><D_lA><v><t_imp><2s>
+analyze> renk
+renk<n>
+renk<n><3s>
+analyze> renkli
+renk<n><D_lI><adj>
+renk<n><D_lI><adj><Djn_0><n>
+renk<n><D_lI><adj><Djn_0><n><3s>
+renk<n><D_lI><n>
+renk<n><D_lI><n><3s>
+analyze> renge
+renk<n><dat>
+renk<n><dat><3s>
+analyze> tat
+tat<n>
+tat<n><3s>
+tat<v><t_imp><2s>
+analyze> tatta
+tat<n><loc>
+tat<n><loc><3s>
+analyze> tadı
+tat<n><p3s>
+tat<n><p3s><3s>
+tat<n><acc>
+tat<n><acc><3s>
+analyze> tıbba
+tıp<n><dat>
+tıp<n><dat><3s>
+analyze> tıpta
+tıp<n><loc>
+tıp<n><loc><3s>
+analyze> şarapa
+no result for şarapa
+analyze> şarabda
+no result for şarabda
+analyze> ağaçı
+no result for ağaçı
+analyze> ağacdan
+no result for ağacdan
+analyze> bebekin
+no result for bebekin
+analyze> bebeğle
+no result for bebeğle
+analyze> renke
+no result for renke
+analyze> renğe
+no result for renğe
+analyze> rengli
+no result for rengli
+analyze> tatı
+no result for tatı
+analyze> tadda
+no result for tadda
+analyze> tıbda
+no result for tıbda
+analyze> tıpa
+tıpa<n>
+tıpa<n><3s>
+analyze> 
+generate> ağaç<n><acc>
+ağacı
+generate> tat<n><acc>
+tadı
+generate> renk<n><dat>
+renge
+generate> bebek<n><gen>
+bebeğin
+generate> şarap<n><gen>
+şarabın
+generate> tıp<n><dat>
+tıbba
+generate> ağaç<n><loc>
+ağaçta
+generate> tat<n><loc>
+tatta
+generate> renk<n><loc>
+renkte
+generate> bebek<n><loc>
+bebekte
+generate> şarap<n><loc>
+şarapta
+generate> 
