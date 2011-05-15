@@ -228,7 +228,7 @@ aceze
 açgözlü
 acı
 açı
-acıağaç
+acıağa<c>
 acıbadem
 acıbakla
 acıbalı<k>
@@ -320,7 +320,6 @@ adu
 a<dup>f
 aerobi<k>
 aerodinami<k>
-af
 afak
 afat
 afazi
@@ -352,7 +351,6 @@ ağa
 ağababa
 ağabey
 ağa<c>
-ağaç
 ağaççı<k>
 ağaçdelen
 ağaçkakan
@@ -483,7 +481,6 @@ akademi<k>
 akademisyen
 akağa
 akağa<c>
-akağaç
 akai<t>
 akaju
 aka<k>
@@ -510,7 +507,6 @@ akbuğday
 akburça<k>
 akça
 akçaağa<c>
-akçaağaç
 akçakava<k>
 akçayel
 akçe
@@ -2106,7 +2102,6 @@ baryum
 bas
 baş
 başağa<c>
-başağaç
 başağırlı<k>
 başak
 başa<k>
@@ -3600,7 +3595,6 @@ cesim
 çeşni
 cesur
 cesurane
-ce<t>
 cetbecet
 çete
 çetele
@@ -5997,7 +5991,6 @@ felsefe
 felsefi
 feminist
 feminizm
-fen
 fenafillah
 fener
 feni<k>
@@ -7212,8 +7205,6 @@ habbe
 haber
 haberdar
 habi<p>
-hac
-ha<c>
 haç
 hacamat
 hac<del>im
@@ -7260,7 +7251,6 @@ hahnyum
 hail
 haile
 haiz
-ha<k>
 hakan
 hakaret
 hakaretamiz
@@ -7520,7 +7510,6 @@ hastalı<k>
 hastane
 haşviyat
 haşyet
-hat
 hata
 hatbakıcı
 hat<del>im
@@ -7607,7 +7596,6 @@ hayvan
 hayvanat
 hayvani
 hayvaniyet
-haz
 haza
 hazak<pA>t
 hazan
@@ -7880,7 +7868,6 @@ hırsız
 hırsızlama
 hırt
 hırtapoz
-his
 hiş
 hisar
 hisarbuseli<k>
@@ -9641,7 +9628,6 @@ kapuz
 kar
 kara
 karaağa<c>
-karaağaç
 karaağaçgiller
 karaardı<c>
 karaardıç
@@ -10566,7 +10552,7 @@ kırmacı
 kirman
 kirmen
 kırmız
-kırmızıağaç
+kırmızıağa<c>
 kırmızıbiber
 kırmızılahana
 kırmızımtıra<k>
@@ -10689,7 +10675,6 @@ kızan
 kızarı<k>
 kızartı
 kızılağa<c>
-kızılağaç
 kızılca
 kızılcadiş
 kızılçam
@@ -10811,7 +10796,7 @@ kokain
 kokainman
 koka<k>
 kökanlam
-kokarağaç
+kokarağa<c>
 kokarca
 kokart
 kokar<t>
@@ -11089,7 +11074,7 @@ kopya
 kor
 kör
 kora
-körağaç
+körağa<c>
 koramir<pA>l
 körbağırsa<k>
 kordalılar
@@ -12042,7 +12027,6 @@ mağri<p>
 mağrurane
 mağşuş
 mahalle
-mahalli
 mahana
 maharet
 mahbes
@@ -12084,7 +12068,6 @@ mahmudiye
 mahmuz
 mahna
 mah<pA><dup>l
-mah<pA>l
 mahpus
 mahpushane
 mahra
@@ -13522,7 +13505,6 @@ münasi<p>
 münavebe
 münazaa
 münazara
-münce<dup>r
 mündemi<c>
 münderecat
 münderi<c>
@@ -13602,7 +13584,6 @@ mürşi<t>
 murt
 mürt
 mürteci
-mürte<dup>t
 mürteki<p>
 mürtesem
 mürur
@@ -13686,9 +13667,7 @@ muşta
 müstacel
 müstacelen
 müstaceliyet
-müşta<dup>k
 müstağni
-müstaha<dup>k
 müstahdem
 müstahkem
 müstahsil
@@ -14004,8 +13983,7 @@ narkoz
 narkozitör
 narsisizm
 narsisli<k>
-nas
-nas<del>ı<p>
+nas<del>i<p>
 nasfet
 naşi
 nasihatname
@@ -16121,7 +16099,6 @@ restorasyon
 restore
 resül
 resülm<pA>l
-re<dup><t>
 retina
 retori<k>
 reva
@@ -17163,7 +17140,6 @@ septisemi
 septisizm
 sepya
 ser
-şer
 sera
 şerait
 sera<k>
@@ -17398,7 +17374,6 @@ sıhriyet
 şiir
 sik
 sık
-şık
 sikalar
 şikar
 sikatif
@@ -18122,7 +18097,6 @@ suiniyet
 suistim<pA>l
 süit
 suiza<dup>n
-suizan
 süje
 şük<del>ür
 şükran
@@ -19459,8 +19433,6 @@ tezyinat
 tezyini
 tezyi<t>
 ti
-tıbben
-tıbbi
 tıbbiye
 ticaret
 ticaretgah
@@ -19507,7 +19479,6 @@ tını
 tinka
 tınnet
 tip
-tı<p>
 tıpa
 tıpatıp
 tipi
@@ -20157,7 +20128,6 @@ uru<p>
 üryan
 üryani
 us
-üs
 uşa<k>
 uşakkapan
 usan<c>
@@ -20863,7 +20833,6 @@ yassıkadayıf
 yassısolucanlar
 yassısolungaçlılar
 yastağa<c>
-yastağaç
 yastı<k>
 yat
 yatağan
@@ -21278,7 +21247,6 @@ zamkıarabi
 zamkinos
 zamme
 zampara
-zan
 zanaat
 zanaatkar
 zana<pA>t
@@ -21337,7 +21305,6 @@ zekni
 zelil
 zelve
 zelzele
-zem
 zembere<k>
 zembil
 zemheri
@@ -21494,7 +21461,6 @@ zuhur
 zuhurat
 zuhuri
 zükam
-zül
 zula
 zül<del>üf
 zul<del>üm
