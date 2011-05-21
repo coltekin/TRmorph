@@ -6,7 +6,7 @@
 % more `camisi' than `camii') this deletion is optional
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -15,4 +15,4 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            [#V_Buff#] <bY> <bS> <bSS> <bN>\
            <bS>:<> <dels>:<>
 
-(<dels>:<> [#pos##BM##infl_feat#]*) <bS> => <>
+(<dels>:<> [#pos##subcat##BM##infl_feat#]*) <bS> => <>

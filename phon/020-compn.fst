@@ -5,7 +5,7 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -19,7 +19,7 @@ $C$ = {<compn>}:{<bS><I>}
 $CompN$ = $C$ ^-> ( __ <n><RB><EoW> )
 
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \

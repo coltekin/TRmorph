@@ -11,7 +11,7 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -20,4 +20,4 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
            <e>:a <e>:e
 
-<e> <=> a (n [#pos#<>#BM##infl_feat#]* <bY><A> <MB>)
+<e> <=> a (n [#pos##subcat#<>#BM##infl_feat#]* <bY><A> <MB>)

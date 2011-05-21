@@ -2,13 +2,13 @@
 
 % This leaves boundary markers untouched, useful for obtaining
 % surface segmentations.
-% ALPHABET = [#C##V##Digit##Ssym#] [#pos##infl_feat#]:<> <RB><MB>
+% ALPHABET = [#C##V##Digit##Ssym#] [#pos##subcat##infl_feat#]:<> <RB><MB>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Delete analysis only symbols from the surface string
 %
 
-ALPHABET = [#Ssym#] [#BM##pos##infl_feat#]:<> 
+ALPHABET = [#Ssym#] [#BM##pos##subcat##infl_feat#]:<> 
 $delete-pos$ = .*
 
 

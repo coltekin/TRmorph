@@ -11,9 +11,9 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##infl_feat#] [#BM#]\
+ALPHABET = [#Ssym#] [#pos##subcat##infl_feat#] [#BM#]\
            <A> <I> [#V_Pal#] \
            a:<I> e:<I> <A>:<I>
 
-[ae<A>] <=> <I> ([#pos##infl_feat#]* [#BM#]+ yor)
+[ae<A>] <=> <I> ([#pos##subcat##infl_feat#]* [#BM#]+ yor)
 

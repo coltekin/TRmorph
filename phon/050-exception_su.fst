@@ -10,7 +10,7 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -19,9 +19,9 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            [#V_Buff#] <bY> <bS> <bSS> <bN> \
            <bN>:y <bS>:y 
 
-$b-y$ = (s u [#pos##BM##infl_feat#]*) [<bN><bS>] <=> y
+$b-y$ = (s u [#pos##subcat##BM##infl_feat#]*) [<bN><bS>] <=> y
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -29,6 +29,6 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> \
            <>:y
-$insy$ = (s u [#pos##BM##infl_feat#]*) <> <=> y (<bI>)
+$insy$ = (s u [#pos##subcat##BM##infl_feat#]*) <> <=> y (<bI>)
 
 $b-y$ || $insy$
