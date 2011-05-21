@@ -1,0 +1,11 @@
+A:A:cami:cami<n>
+A:A:camii:cami<n><p3s>
+A:A:camisi:cami<n><p3s>
+A:A:bayii:bayi<n><p3s>
+A:A:bayisi:bayi<n><p3s>
+G:A:bayi<n><p3s>:bayii
+G:A:bayi<n><p3s>:bayisi
+G:A:cami<n><p3s>:camii
+G:A:cami<n><p3s>:camisi
+G:A:merci<n><p3s>:mercii
+G:A:merci<n><p3s>:mercisi
