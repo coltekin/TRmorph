@@ -43,13 +43,13 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <compn> \
            <BoW> <tmpBuf>:n <tmpBuf>:<>
 
-$obs2$ = <tmpBuf> <=> <> (<RB> (<EoW>\ |([<MB><>]* ( (<D><I>r)\
-                                                    |(<bY><D><I>)\
-                                                    |(<bY>m<I>ş)\
-                                                    |(<bY>s<A>)\
-                                                    |(<bY>ken)\
-                                                   )\
-                                        )\
+$obs2$ = <tmpBuf> <=> <> (<RB> (<EoW> |([<MB><>]* ( (<D><I>r)\
+                                                   |(<bY><D><I>)\
+                                                   |(<bY>m<I>ş)\
+                                                   |(<bY>s<A>)\
+                                                   |(<bY>ken)\
+                                                  )\
+                                       )\
                                )\
                          )
 
