@@ -12,8 +12,7 @@ ALPHABET = [#Ssym#] [#BM##pos##subcat##infl_feat#]:<>
 $delete-pos$ = .*
 
 
-$PHON$ =   "<005-swap_cat.a>" \
-        || "<010-exception_deye.a>" \
+$PHON$ = "<010-exception_deye.a>" \
         || "<015-exception_obs.a>" \
         || "<017-exception_i.a>" \
         || "<020-compn.a>" \

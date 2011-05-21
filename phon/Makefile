@@ -1,4 +1,4 @@
-FSTFILES = 005-swap_cat.fst 010-exception_deye.fst 020-compn.fst \
+FSTFILES = 010-exception_deye.fst 020-compn.fst \
 		   040-exception_ben.fst 050-exception_su.fst 060-xception_del_bS.fst\
 		   070-exception_del_buff.fst 080-vowel_epenth.fst 090-duplication.fst\
 		   100-fs_devoicing.fst 110-v_assimilation.fst 120-passive_ln.fst\
