@@ -99,10 +99,10 @@ $DAN$ = $D_lik$
 
 %%%%% -CAK          --- TODO: this may be an exceotion (of -CIK)
 % N->N, yavrucak, J->J ???
-$D_cak$ = <D_CAK>:{<C><A><k>}
+$D_cak$ = <D_CAK>:{<C><A><k>} | <D_CAK>:{<C><A>} 
 %%%%% -CIK
 % N->N kedicik, adacık
-$D_cik$ = <D_CIK>:{<C><I><k>}
+$D_cik$ = <D_CIK>:{<C><I><k>} | <D_CIK>:{<C><I>}
 %%%%% -CAgIz
 % N->N çocukcağız -- TODO looks like -cAğIz rather than -CAğIz
 $D_cagiz$ = <D_CAgIz>:{<C><A>ğ<I>z}
