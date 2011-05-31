@@ -109,9 +109,7 @@ setlocale(LC_CTYPE, "en_US.UTF-8");
     if (isset($_POST["submit"])) {
         $word = $_POST["word"];
 //        $word = preg_replace("/[^a-zçğıöşü0-9' -]/", "", $word);
-        echo "before: $word<br>";
         $word = escapeshellarg($word);
-        echo "after: $word<br>";
         
         echo "Analysis for the word <b>$word</b>:<br><br>";
         $command = "echo $word | __WEBDIR__/fst-infl -q trmorph.a";
