@@ -30,26 +30,23 @@ spell checker. The morphological analyzer is distributed under
 the <a href=http://www.gnu.org/licenses/gpl.html>GPL</a>.
 
 <p> Latest tested version can be downloaded <a
-href="trmorph-0.2.1.tar.gz">here</a>. The development version can be
-reached using version management tool <a
-href=http://git-scm.com/><tt>git</tt></a> from <a
-href="trmorph.git">here</a>. The command
-`<tt>git clone http://www.let.rug.nl/coltekin/trmorph/trmorph.git</tt>'
-should fetch the latest development copy. 
-
-<p> To use the analyzer you need <a
+href="trmorph-0.2.1.tar.gz">here</a>.  As well as the full source
+code, a compiled fsa, suitable to be used with SFST tools, is included
+in this package. The latest development version can be downloaded from
+<a href="https://github.com/coltekin/TRmorph">github</a>.  To use the
+analyzer you need <a
 href="http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html">SFST</a>.
-As well as the full source code, a compiled fsa, suitable to be used
-with SFST's fst-mor or fst-infl is included. A UNIX makefile is
-provided for easy compilation from the sources (see the included <a
-href=README><tt>README</tt></a> file for details. The analyzer is
-fairly complete, however, it may not be easy on unaccustomed eyes.
-Documentation and cleanup work is going on, you may want to visit soon
-to get a newer version.
+The analyzer can also be compiled and used with <a
+href=http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/>HFST</a>
+tools. A UNIX makefile is provided for easy compilation from the
+sources (see the included <a href=README><tt>README</tt></a> file for
+details. 
 
-<p>I'm always interested in comments, corrections or improvements from
-others. Please feel free to contact <a
-href=http://www.let.rug.nl/coltekin/>me</a>.
+<p>The analyzer is fairly complete, however, it may not be easy on
+unaccustomed eyes. Documentation and cleanup work is going on, you may
+want to visit soon to get a newer version. I'm always interested in
+comments, corrections or improvements from others. Please feel free to
+contact <a href=http://www.let.rug.nl/coltekin/>me</a>.
 
 <p>If you use this analyzer in your research, and want to cite it,
 please cite the following paper:
@@ -67,19 +64,19 @@ please cite the following paper:
 
 <p>
 <div class=xx>
-<p> You can try the current version of TRmorph by typing the word in the box 
-    and clicking the 'Analyze' button. If you have javascript enabled
+<p> You can try the current development version (as of __DATE__) of
+    TRmorph here. If you have javascript enabled
     you can use the buttons below the input box to enter special
     Turkish characters. The analysis symbols are linked to their
     descriptions in this page. The stems are linked to their <a
     href="http://www.wiktionary.org/">Wiktionary</a> definitions.
 
-<p> For this demo, anything except <b>lowercase</b> letters, digits,
-    dash (-) and apostrophe (') is filtered out. If you need
-    analysis involving other symbols, or need to analyze large amount
-    of data, please download and use an off-line version.
+<p> Some characters in the input string are filtered out in the web
+demo.  If the demo fails to accept the input you provide, or if you
+need to analyze large amount of data, please download and use an
+off-line version.
 
-<p> If things do not looks as it should, please let
+<p> If things do not looks as they should, please let
 <a href=http://www.let.rug.nl/coltekin/>me</a> know.
 
 <p>
@@ -101,7 +98,7 @@ Type the word to analyze:<br>
 <td valign="top">
 
 <?php
-
+setlocale(LC_CTYPE, "en_US.UTF-8");
 /*
     foreach ( $_POST as $key => $value ) { 
         echo $key . " " . "=" . " " . $value; 
@@ -111,10 +108,13 @@ Type the word to analyze:<br>
 
     if (isset($_POST["submit"])) {
         $word = $_POST["word"];
-        $word = preg_replace("/[^a-zçğıöşü0-9' -]/", "", $word);
+//        $word = preg_replace("/[^a-zçğıöşü0-9' -]/", "", $word);
+        echo "before: $word<br>";
+        $word = escapeshellarg($word);
+        echo "after: $word<br>";
         
         echo "Analysis for the word <b>$word</b>:<br><br>";
-        $command = "echo \"$word\" | /storage/coltekin/public_html/trmorph/demo/fst-infl -q trmorph.a";
+        $command = "echo $word | __WEBDIR__/fst-infl -q trmorph.a";
         exec($command, $output); 
         echo "<ul>";
         foreach($output as $line){
