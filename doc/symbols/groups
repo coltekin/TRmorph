@@ -4,6 +4,8 @@ Nominal/case:Case suffixes:Grammatical_case
 Nominal/Possessive:Possessive Suffixes:Possessive_suffix
 Nominal/ki:ki:
 POS:POS Tags:Part_of_speech
+SUBCAT:Subcategories:
+SUBCAT/prn:Subcategories of pronouns:
 Verbal:Morphemes that attach to (mostly) verbs
 Verbal/comp:Compound verb morphemes:
 Verbal/cpl:Copular suffixes:Copula_(linguistics)

@@ -3,7 +3,7 @@
 out_type=${1:-txt}
 gr_file=symbols/groups
 
-g1="POS Nominal Verbal"
+g1="POS SUBCAT Nominal Verbal"
 
 print_sym_html()
 {
