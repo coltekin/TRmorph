@@ -631,9 +631,10 @@ $WORD$ = $NOUN$      |\
          $PSTEM$     |\
          $MSTEM$     |\
          $DSTEM$     |\
-         $MISC$     |\
+         $MISC$      |\
          $PUNCT$     |\
-         $CLITIC$
+         $CLITIC$    |\
+         "<version.a>"
 
 
 %

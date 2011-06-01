@@ -1,34 +1,15 @@
 =======these should normally be included in the rule set
-zamanki
 bizimki
 benimki
 sizinki
 kadarki
 dahaki
 karşıki
-sabahki
-geceki
-gündüzki
-gündüzkü
-günki
-günkü
-ayki
-yılki
-önceki
-sonraki
-evvelki
-şimdiki
-bugünkü
-bugünki
-dünkü
-dünki
-yarınki
-seferki
-============these need reconsideration
 öyle
 böyle
 şöyle
-=======
+============
+>>>>>>> 472523d5ec0acaa6efbf379eec4065873dd03d5d
 bir
 aynı
 biraz
@@ -172,8 +153,6 @@ tropi<k>
 karayağız
 sosy<pA>l
 finansal
-hiçbir
-herhangi
 yağışlı
 büyükbaş
 küçükbaş
