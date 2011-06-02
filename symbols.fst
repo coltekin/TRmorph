@@ -72,7 +72,10 @@
          <1s><2s><2sf><3s><1p><2p><3p>\
          <vn_dik><vn_acak><vn_ma><vn_mak><vn_yis>\
          <part_dik><part_acak><part_yan>\
-         <cv>\
+         <cv_dik><cv_acak><cv_ma><cv_mak><cv_dan><cv_zdan>\
+         <cv_ince><cv_erek><cv_erek><cv_eli><cv_ene>\
+         <cv_ir><cv_ar><cv_ecek><cv_mis><cv_iyor><cv_cesine>\
+         <cv_ip>\
          <dir>\
          <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
