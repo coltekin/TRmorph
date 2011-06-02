@@ -8,13 +8,13 @@
 % interacts with: $FSD$ (needs to be after)
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##infl_feat#] [#BM#]\
+ALPHABET = [#Ssym#] [#pos##subcat##infl_feat#] [#BM#]\
            <A> <I> [#V_Pal#] \
            <LN> \
            <D>:d <D>:t <C>:c <C>:ç
 
-$VA_Dt$ = (.:[#C_uv#] .:[#C##Apos##pos#<>#BM##infl_feat#]*) <D> <=> t
-$VA_Cc$ = (.:[#C_uv#] .:[#C##Apos##pos#<>#BM##infl_feat#]*) <C> <=> ç
+$VA_Dt$ = (.:[#C_uv#] .:[#C##Apos##pos##subcat#<>#BM##infl_feat#]*) <D> <=> t
+$VA_Cc$ = (.:[#C_uv#] .:[#C##Apos##pos##subcat#<>#BM##infl_feat#]*) <C> <=> ç
 
 $VA_Dt$ & $VA_Cc$
 
