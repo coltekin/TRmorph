@@ -5,7 +5,7 @@
 
 % First correct but slow version:
 %
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -16,9 +16,9 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
 #=D# = #C#<C><D><K><c><p><t><k><g><LN>
 $D$ = {[#=D#]}:{[#=D#][#=D#]}
 
-$Dup$ = $D$ ^-> (<dup> __ [#pos##BM##infl_feat#]* [#V#<A><I>])
+$Dup$ = $D$ ^-> (<dup> __ [#pos##subcat##BM##infl_feat#]* [#V#<A><I>])
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \

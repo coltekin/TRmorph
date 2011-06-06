@@ -8,16 +8,18 @@ SUBDIRS=phon
 
 include Makefile.inc
 
-.PHONY: all subdirs $(SUBDIRS)
+.PHONY: all subdirs trmorph $(SUBDIRS)
+
+all: subdirs trmorph
 
 ifeq ($(FSTC),hfst)
-all: trmorph.a tr-mor.ol tr-gen.ol
+trmorph: tr-mor.ol tr-gen.ol
 else
-all: trmorph.a
+trmorph: trmorph.a
 endif
 
-trmorph.a: subdirs trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a
-deriv.a:  subdirs num.a symbols.fst $(LEXFILES)
+trmorph.a: trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a phon/phon.a
+deriv.a: num.a symbols.fst $(LEXFILES)  phon/phon.a
 
 subdirs: 
 	for dir in $(SUBDIRS); do  $(MAKE) -C $$dir;  done
@@ -41,7 +43,7 @@ test:
 
 # DO NOT DELETE
 
-trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst
+trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst version.a
 ninfl.a: symbols.fst
 num.a: symbols.fst
 deriv.a: symbols.fst ninfl.fst
@@ -51,3 +53,6 @@ tr-mor.ol: trmorph.a
 
 tr-gen.ol: trmorph.a
 	hfst-fst2fst -O -i trmorph.a -o $@
+
+version.fst: $(SOURCES) phon/*.fst
+	./version.sh > version.fst

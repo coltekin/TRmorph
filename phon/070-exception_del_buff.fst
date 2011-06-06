@@ -6,7 +6,7 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -16,7 +16,7 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <bI>:<I> <bI>:<> <bA>:<A> <bA>:<>
 
 
-$Del_BC$ = ([#C##C_xx#<LN>] [#pos##Apos##BM##infl_feat#]*) [#C_Buff#] <=> <>
-$Del_BV$ =  ([#V#<I><A>] [#pos##Apos##BM##infl_feat#]*) [#V_Buff#] <=> <>
+$Del_BC$ = ([#C##C_xx#<LN>] [#pos##subcat##Apos##BM##infl_feat#]*) [#C_Buff#] <=> <>
+$Del_BV$ =  ([#V#<I><A>] [#pos##subcat##Apos##BM##infl_feat#]*) [#V_Buff#] <=> <>
 
 $Del_BC$ & $Del_BV$
