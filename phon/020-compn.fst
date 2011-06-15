@@ -13,10 +13,10 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
            <e> <caus> <EoW>\
-           <compn>:<>
+           <compn>
 
-$C$ = {<compn>}:{<bS><I>}
-$CompN$ = $C$ ^-> ( __ <n><RB><EoW> )
+$C$ = {<compn>[#V#]}:{}
+$CompN$ = $C$ ^-> ( __ [<n><np>]<RB>[^<EoW>] )
 
 
 ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
@@ -27,7 +27,7 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
            <e> <caus>\
-           <EoW>:<>
+           <EoW>:<> <compn>:<>
 
 $DelEoW$ = .*
 
