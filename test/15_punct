@@ -1,0 +1,8 @@
+# we do not test for `:' here, it is the field seperator 
+# and the script has not escape method.
+A:A:.:.<pnct>
+A:A:!:!<pnct>
+A:A:?:?<pnct>
+A:A:;:;<pnct>
+A:A:,:,<pnct>
+A:A:...:...<pnct>
