@@ -1,0 +1,5 @@
+# buffer (y) in accusative case changes to n before 3p possessive
+A:A:evlerini:ev<n><p3p><acc>
+A:A:evini:ev<n><p3s><acc>
+A:R:eviyi:ev<n><p3s><acc>
+A:R:evleriyi:ev<n><p3p><acc>
