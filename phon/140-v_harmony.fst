@@ -13,11 +13,11 @@
 %       with the cases like ye -> y<I> -> yi (-yor).
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##infl_feat#] [#BM#]\
+ALPHABET = [#Ssym#] [#pos##subcat##infl_feat#] [#BM#]\
            <A>:a <A>:e <I>:i <I>:ı <I>:u <I>:ü \
            [#V_Pal#]
 
-#Non_V# = #C##pos##Apos##infl_feat#<>#BM#
+#Non_V# = #C##pos##subcat##Apos##infl_feat#<>#BM#
 
 % $VH_Ii$ = (.:[#V_fu#<pA><pI>] [#Non_V#]*) <I> <=> i
 $VH_II$ = (.:[#V_bu#] [#Non_V#]*) <I> <=> ı
@@ -28,7 +28,7 @@ $VH_Aa$ = (.:[#V_b#]  [#Non_V#]*) <A> <=> a
 %$VH_Ae$ = (.:[#V_f#<pA><pI><pO><pU>]  [#Non_V#]*) <A> <=> e
 
 
-ALPHABET = [#Ssym#] [#pos##infl_feat#] [#BM#]\
+ALPHABET = [#Ssym#] [#pos##subcat##infl_feat#] [#BM#]\
            <pA>:a <pI>:<> <pO>:o <pU>:u
 
 $Del_pV$ = .*

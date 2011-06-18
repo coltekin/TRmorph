@@ -6,7 +6,7 @@
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -19,7 +19,7 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
 
 $diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [<v><RB><MB><>]* [<RB><MB>] [y<bY>])
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \

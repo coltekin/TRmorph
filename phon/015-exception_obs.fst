@@ -10,7 +10,7 @@
 #include "../symbols.fst"
 
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -24,7 +24,7 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
 
 $N$ = {<RB>}:{<tmpBuf><RB>}
 
-$obs1$ = $N$ ^-> (<BoW> (o|bu|şu) [#pos##infl_feat#]* __ )
+$obs1$ = $N$ ^-> (<BoW> (o|bu|şu) [#pos##subcat#]*) __ 
 
 %$obs1$>>"obs_test1.a"
 
@@ -32,7 +32,7 @@ $obs1$ = $N$ ^-> (<BoW> (o|bu|şu) [#pos##infl_feat#]* __ )
 % like insertion with two-level rules
 %$obs1$ = (<BoW> (o|bu|şu) [#pos##infl_feat#]*) <> <=> <tmpBuf> (<RB>[^<EoW>])
 
-ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
            <C><D><K> \
            <c><p><t><k><g> \
@@ -43,14 +43,17 @@ ALPHABET = [#Ssym#] [#pos##BM##infl_feat#]\
            <compn> \
            <BoW> <tmpBuf>:n <tmpBuf>:<>
 
-$obs2$ = <tmpBuf> <=> <> (<RB> (<EoW> |([<MB><>]* ( (<D><I>r)\
+$obs2$ = <tmpBuf> <=> <> (<RB> ([<MB><>]* (<EoW> |\
+                                                  ( (<D><I>r)\
                                                    |(<bY><D><I>)\
                                                    |(<bY>m<I>ş)\
                                                    |(<bY>s<A>)\
                                                    |(<bY>ken)\
                                                   )\
-                                       )\
+                                           )\
                                )\
                          )
+
+%$obs2$>>"obs_test2.a"
 
 $obs1$ || $obs2$

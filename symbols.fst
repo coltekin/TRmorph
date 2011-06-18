@@ -20,8 +20,8 @@
 #V_all# = #V##V_xx##V_Pal##V_Buff#
 
 % POS tags
-%#pos# = <Adj><Adv><Noun><Prop><Pron><Postp><Interj><Conj><Verb><Num><Punct>
 #pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><det><pnct><exist><nexist><not><q>
+#subcat# = <pers><dem><locp><qst>
 #BM#  = <RB><MB>    % Boundary markers
 
 % other intermediate symbols (this should probalby contain
@@ -34,7 +34,7 @@
 #Perc# = \%
 #Nsep# = \.\, 
 #Apos# = \'
-#Punct# = \.\?\!\:\,\;
+#Punct# = \.\?\!\:\,\;\'\(\)\-\"
 
 #Spc# = \ \
 
@@ -71,7 +71,10 @@
          <1s><2s><2sf><3s><1p><2p><3p>\
          <vn_dik><vn_acak><vn_ma><vn_mak><vn_yis>\
          <part_dik><part_acak><part_yan>\
-         <cv>\
+         <cv_dik><cv_acak><cv_ma><cv_mak><cv_dan><cv_zdan>\
+         <cv_ince><cv_erek><cv_erek><cv_eli><cv_ene>\
+         <cv_ir><cv_ar><cv_ecek><cv_mis><cv_iyor><cv_cesine>\
+         <cv_ip>\
          <dir>\
          <pl>\
          <p1s><p2s><p3s><p1p><p2p><p3p>\
@@ -94,14 +97,14 @@
 
 % All lexical symbos:
 
-#Lsym# = #Ssym##LEsym#
+#Lsym# = #Ssym##LEsym##subcat# 
 
 %
 % Only the symbols that appear in analysis strings. (this excludes
 % the intermediate symbols like morpheme boundaries,)
 %
 
-#Asym# = #Ssym##pos##deriv##infl#
+#Asym# = #Ssym##pos##subcat##deriv##infl#
 
 %
 % All analysis symbols, including the intermediate ones.

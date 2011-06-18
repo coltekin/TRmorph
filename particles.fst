@@ -30,7 +30,7 @@ $vyd$ = ((var <exist>) | (yok <nexist>) | (değil <not>)) <RB>
 %
 %
 
-$punct$ = ([#Punct#]) <Punct>:<>
+$punct$ = ([#Punct#] | \.\.\.) <pnct>
 
 % TODO: pairs of -(y)a ... -(y)a  (e.g. baka baka)
 %                -DI ... -(y)AlI  (e.g. duydum duyalı)
