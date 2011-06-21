@@ -34,7 +34,7 @@ $RSTEM$ =  "lexicon/pronouns" <prn><RB>
 $VSTEM$ =  "lexicon/verbs" <v><RB>
 $XSTEM$ =  "lexicon/interjections" <ij><RB>
 $DSTEM$ =  "lexicon/det" <det><RB>
-$MISC$ =  "lexicon/misc" 
+$MISC$ =  "lexicon/misc"
 
 
 %%%% Even though most treat reflexive and reciprocal verb forms in
