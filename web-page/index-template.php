@@ -121,8 +121,8 @@ setlocale(LC_CTYPE, "en_US.UTF-8");
             }
     
             $dicturl = 'http://tr.wiktionary.org/wiki/';
-            $stem = preg_replace("/^(\w+)<.*/", "$1", $line);
-            $pos = preg_replace("/^\w+<(\w+)>.*/", "$1", $line);
+            $stem = preg_replace("/^([^<]+)<.*/", "$1", $line);
+            $pos = preg_replace("/^[^<]+<([^>]+)>.*/", "$1", $line);
 
             if (strcmp($pos, "v") == 0) { // verb 
                 if (preg_match("/.*[aıou][^eiöü]*$/", $stem)) {
@@ -133,7 +133,7 @@ setlocale(LC_CTYPE, "en_US.UTF-8");
             } else {
                 $dictq = $dicturl . $stem ;
             }
-            $line = preg_replace("/<(\w+)>/", 
+            $line = preg_replace("/<([^>]+)>/", 
                                  "&lt;<a href=\"#$1\">$1</a>&gt;", $line);
             $line = preg_replace("/^[^&]+(&lt;.*)/",
                                  "<a href=\"$dictq\">$stem</a>$1",
