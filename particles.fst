@@ -24,7 +24,7 @@ $I$ = i <v><MB>
 % The suffixes these take are listed in trmoprh.fst
 %
 
-$vyd$ = ((var <exist>) | (yok <nexist>) | (değil <not>)) <RB>
+$vyd$ = ((var <exist>) | (yok:<> <nexist>) | (yok <nexist>) | (değil <not>)) <RB>
 
 %%%%%%%% punctuation marks
 %
