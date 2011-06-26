@@ -73,7 +73,7 @@ $VSTEM$ = $VSTEM-def$ |\
 
 %%%%%  -lI 
 % N->N atlı, N->J, akıllı, J->J mavili, J->N ??
-$D_li$ = <D_lI>:{l<I>}
+$D_li$ = <D_lI>:{xxx}
 
 $DNN$ = $D_li$
 $DNJ$ = $D_li$
@@ -81,14 +81,14 @@ $DJJ$ = $D_li$
 
 %%%%%  -slz 
 % N->J insafsız, N->A, arabasız, TODO: non-prod N->N telsiz
-$D_siz$ = <Dnn_siz>:{s<I>z}
+$D_siz$ = <Dnn_siz>:{xxx}
 
 $DNJ$ = $DNJ$ | $D_siz$
 $DNA$ = $D_siz$
 
 %%%%%  -lIK
 % N->N krallık, J->N iyilik, A->N yavaşlık
-$D_lik$ = <D_lIK>:{l<I><k>}
+$D_lik$ = <D_lIK>:{xxx}
 
 $DNN$ = $DNN$ | $D_lik$
 $DJN$ = $D_lik$
@@ -97,32 +97,30 @@ $DAN$ = $D_lik$
 % TODO: we may want to mark dimunitive function
 % TODO: currently dimunitives overgenerate
 
-%%%%% -CAK          --- TODO: this may be an exceotion (of -CIK)
-% N->N, yavrucak, J->J ???
-$D_cak$ = <D_CAK>:{<C><A><k>}
+
+$D_cak$ = <D_CAK>:{xxx}
 %%%%% -CIK
 % N->N kedicik, adacık
-$D_cik$ = <D_CIK>:{<C><I><k>}
+$D_cik$ = <D_CIK>:{xxx}
 %%%%% -CAgIz
 % N->N çocukcağız -- TODO looks like -cAğIz rather than -CAğIz
-$D_cagiz$ = <D_CAgIz>:{<C><A>ğ<I>z}
+$D_cagiz$ = <D_CAgIz>:{xxx}
 
-$DNN$ = $DNN$ | $D_cak$ 
 $DNN$ = $DNN$ | $D_cik$ 
 $DNN$ = $DNN$ | $D_cagiz$
 
 %%%%% -AcIK / IcIK
 % A->A daracık, hemencecik
 % A->A azıcık, TODO: küçücük
-$D_acik$ = <D_AcIK>:{<bA><C><I><k>}
-$D_icik$ = <D_IcIK>:{<bI><C><I><k>}
+$D_acik$ = <D_AcIK>:{xxx}
+$D_icik$ = <D_IcIK>:{xxx}
 
 $DAA$ = $D_acik$ | $D_icik$
 
 %%%% -CI
 % N->N şekerci, N->J gerici, ?? J->J mavici
 % V->N öğrenci FIXME: this happens only after `n' otherwise -yIcI, ?? V->J 
-$D_ci$ = <D_CI>:{<C><I>}
+$D_ci$ = <D_CI>:{xxx}
 
 
 $DNN$ = $DNN$ | $D_ci$
@@ -132,69 +130,69 @@ $DVN$ = $D_ci$
 %%%% -(y)ICI
 % V->N öğrenci (but all of these should be lexicalized)
 % V->J bulaşıcı, yapıcı, kesici ...
-$D_yIcI$ = <Dvn_yIcI>:{<bY><I>c<I>}
+$D_yIcI$ = <Dvn_yIcI>:{xxx}
 
 % $DVN$ = $DVN$ | $D_yIcI$
 $DVJ$ = $D_yIcI$
 
 %%%% -CIl
 % N->J insancıl, N->N balıkçıl
-$D_cil$ = <D_cil>:{<C><I>l}
+$D_cil$ = <D_cil>:{xxx}
 
 $DNJ$ = $DNJ$ | $D_cil$
 $DNN$ = $DNN$ | $D_cil$
 
 %%%% -gil
 %%%% N->N, Ahmetgil, baklagil TODO: can come after inflections: amca-m-gil
-$D_gil$ = <D_gil>:{g<I>l}
+$D_gil$ = <D_gil>:{xxx}
 
 $DNN$ = $DNN$ | $D_gil$
 
 
 %%%% -lA
 %%%% N->V tuzla, J->V kurula TODO: gıdakla, ahla
-$D_la$ = <D_lA>:{l<A>}
+$D_la$ = <D_lA>:{xxx}
 
 $DNV$ = $D_la$
 $DJV$ = $D_la$
 
 %%%% -lAn
 %%%% N->V avlan, J->V kurulan 
-$D_lan$ = <D_lAn>:{l<A>n}
+$D_lan$ = <D_lAn>:{xxx}
 
 $DNV$ = $DNV$ | $D_lan$
 $DJV$ = $DJV$ | $D_lan$
 
 %%%% -lAş
 %%%% N->V mektuplaş, J->V güzelleş
-$D_las$ = <D_lAs>:{l<A>ş}
+$D_las$ = <D_lAs>:{xxx}
 
 $DNV$ = $DNV$ | $D_las$
 $DJV$ = $DJV$ | $D_las$
 
 %%%% -lAş
 %%%% N->V mektuplaş, J->V güzelleş
-$D_las$ = <D_lAs>:{l<A>ş}
+$D_las$ = <D_lAs>:{xxx}
 
 $DNV$ = $DNV$ | $D_las$
 $DJV$ = $DJV$ | $D_las$
 
 %%% -mAdIK
 % V->J görmedik, TODO: this can come after voice (görülmedik)
-$D_madik$ = <D_mAdIK>:{m<A>d<I><k>}
+$D_madik$ = <D_mAdIK>:{xxx}
 
 $DJV$ = $DJV$ | $D_madik$
 
 %%% -(y)Iş
 % V->N duruş, yürüyüş, görüş, dönüş, bakış
-$D_yIS$ = <D_yIS>:{<bY><I>ş}
+$D_yIS$ = <D_yIS>:{xxx}
 
 $DVN$ = $DVN$ | $D_yIS$
 
 %%% -mA
 % V->N ödeme, arama, kıyma, kesme
 % V->J kıyma, kesme, dökme, bunama
-$D_mA$ = <D_mA>:{m<A>}
+$D_mA$ = <D_mA>:{xxx}
 
 $DVN$ = $DVN$ | $D_mA$
 %$DVJ$ = $DVJ$ | $D_mA$
@@ -202,7 +200,7 @@ $DVN$ = $DVN$ | $D_mA$
 %%% -CA
 % N->N çocukça, N->J Almanca, J->J hızlıca 
 % TODO: M->J onlarca, -mAcA, NOTE: G&K takes these as two different sufixes
-$D_ca$ = <D_CA>:{<C><A>}
+$D_ca$ = <D_CA>:{xxx}
 
 $DNN$ = $DNN$ | $D_ca$
 $DNA$ = $DNA$ | $D_ca$
@@ -211,7 +209,7 @@ $DJJ$ = $DJJ$ | $D_ca$
 
 %%% -sAl
 % N->J tarihsel, düşsel
-$D_sAl$ = <D_sAl>:{s<A>l}
+$D_sAl$ = <D_sAl>:{xxx}
 
 $DNJ$ = $DNJ$ | $D_sAl$
 
@@ -219,7 +217,7 @@ $DNJ$ = $DNJ$ | $D_sAl$
 
 %%% -gil
 % N->N abimgil, amcasıgil 
-$D_gil$ = $poss$? <D_gil>:{gil}
+$D_gil$ = $poss$? <D_gil>:{xxx}
 
 $DNN$ = $DNN$ | $D_gil$
 
@@ -233,8 +231,8 @@ $D_IncIa$ = <D_IncI>:{'<bI>nc<I>}
 
 $DMJ$ = $D_IncI$ | $D_IncIa$ 
 
-$D_sAr$ = <D_sAr>:{<bSS><A>r}
-$D_sAra$ = <D_sAr>:{'<bSS><A>r}
+$D_sAr$ = <D_sAr>:{xxx}
+$D_sAra$ = <D_sAr>:{xxx}
 
 $DMA$ = $D_sAr$ | $D_sAra$ 
 
@@ -246,9 +244,9 @@ $ASTEM$ = $ASTEM$ | $MSTEM$ $DMA$ <adv><MB>
 %%%% Zero derivations to allow J, A, M -> N
 %
 
-$DJN0$ = <Djn_0>:<>
-$DAN0$ = <Dan_0>:<>
-$DMN0$ = <Dmn_0>:<>
+$DJN0$ = <Djn_0>:<xxx>
+$DAN0$ = <Dan_0>:<xxx>
+$DMN0$ = <Dmn_0>:<xxx>
 
 $DMNa$ = <apos>:{'}
 
