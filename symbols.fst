@@ -21,7 +21,7 @@
 
 % POS tags
 #pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><det><pnct><exist><nexist><not><q>
-#subcat# = <pers><dem><locp><qst><tv><iv>
+#subcat# = <pers><dem><locp><qst>
 #BM#  = <RB><MB>    % Boundary markers
 
 % other intermediate symbols (this should probalby contain
@@ -34,7 +34,7 @@
 #Perc# = \%
 #Nsep# = \.\, 
 #Apos# = \'
-#Punct# = \.\?\!\:\,\;\'\(\)\-
+#Punct# = \.\?\!\:\,\;\'\(\)\-\"
 
 #Spc# = \ \
 
@@ -43,7 +43,6 @@
 % note that the lexical markers for reflexive and reciprocal is
 % different than the corresponding analysis symbols.
 %
-#trans# = <tv><iv>
 #caus_types# = <caus_dir><caus_t><caus_it><caus_ir><caus_ar><caus_art><caus_irreg>
 #aor_types# = <aor_ir><aor_ar>
 #refl# = <rfl>
