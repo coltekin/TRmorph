@@ -10,12 +10,12 @@
 
 %%%%%% These are the lexical roots throughout this file
 %   A - Adverb
-%   C - Connective
+%   C - Connective 
 %   J - Adjective
 %   M - Number
 %   N - Noun
-%   PN - Proper Noun
-%   P - Postopsition
+%   PN - Proper noun
+%   P - Postposition
 %   R - Pronoun
 %   V - Verb
 %   X - Interjection
@@ -274,12 +274,12 @@ $NSTEM$ = $NSTEM$ |\
 %
 % Options are: 
 %     - No derivation   : all derivation should be handeled in the
-%                         lexiocn
+%                         lexicon
 %     - N derivations   : allow a fixed number of derivational suffixes
 %                         to be added
 %     - Only productive : use only the productive derivational
 %                         morphemes, assume non-productive ones are
-%                         handeled in the lexicon
+%                         handled in the lexicon
 %     - 0/1 non-productive N/unlimited productive (TODO)
 %     - Unlimited derivation   (TODO)
 %
