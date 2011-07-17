@@ -29,6 +29,7 @@ $JSTEM$ =  "lexicon/adjectives" <adj><RB>
 $MSTEM$ =  "<num.a>" <num><RB>
 $NSTEM$ =  "lexicon/nouns" <n><RB>
 $PNSTEM$ = "lexicon/proper_nouns" <np><RB>
+$PNSTEM$ = $PNSTEM | "lexicon/toponyms" <np><top><RB>
 $PSTEM$ =  "lexicon/postpositions" <postp><RB>
 $RSTEM$ =  "lexicon/pronouns" <prn><RB>
 $VSTEM$ =  "lexicon/verbs" <v><RB>
