@@ -13,7 +13,6 @@
 %
 %
 $NSTEM$ = "<noun.a>" | "<pron.a>"
-$ACRO$ = "<acro.a>"
 $PNSTEM$ = "<prop.a>" 
 $ASTEM$ = "<adv.a>" 
 $JSTEM$ = "<adj.a>" 
@@ -66,8 +65,7 @@ $NINFL$ = (($CASE1$ $ki$)* $INFL_c1$?) | \
 
 $NOUN$ = $NSTEM$ $NINFL$? | \
          $PNSTEM$ | \
-         $PNSTEM$ $apos$ $NINFL$ | \
-         $ACRO$ $apos$ $NINFL$
+         $PNSTEM$ $apos$ $NINFL$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -623,7 +621,6 @@ $PUNCT$ >> "punct.a"
 
 $WORD$ = $NOUN$      |\
          $NP$        |\
-         $ACRO$      |\
          $VERB$      |\
          $NONFIN_V$  |\
          $ADVERB$    |\
