@@ -33,7 +33,7 @@ $PNSTEM$ = $PNSTEM$ | "lexicon/toponyms" <np><RB>
 $PNSTEM$ = $PNSTEM$ | "lexicon/pn_ant" <np><RB>
 $PNSTEM$ = $PNSTEM$ | "lexicon/pn_cog" <np><RB>
 $PNSTEM$ = $PNSTEM$ | "lexicon/pn_org" <np><RB>
-$PNSTEM$ = $PNSTEM$ | "lexicon/pn_acr" <np><RB>
+$ACRO$ =   "lexicon/pn_acr" <np><RB>
 $PSTEM$ =  "lexicon/postpositions" <postp><RB>
 $RSTEM$ =  "lexicon/pronouns" <prn><RB>
 $VSTEM$ =  "lexicon/verbs" <v><RB>
@@ -411,6 +411,7 @@ $VSTEM$  >> "verb.a"
 $MSTEM$  >> "number.a"
 $DSTEM$  >> "det.a"
 $MISC$   >> "misc.a"
+$ACRO$   >> "acro.a"
 
 
 
