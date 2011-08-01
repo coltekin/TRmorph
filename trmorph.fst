@@ -545,7 +545,7 @@ $NONFIN_V$ = $VN$ | $PART$ | $CV$
 % (most) postpositions can get nominal inflections
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$PSTEM$ = $PSTEM$ $NINFL$?
+$PSTEM$ = $PSTEM$ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
