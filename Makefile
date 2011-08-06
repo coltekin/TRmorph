@@ -2,7 +2,7 @@ LEXFILES = lexicon/adjectives lexicon/adverbs lexicon/cnjcoo\
 	       lexicon/cnjadv lexicon/cnjsub\
 			lexicon/interjections lexicon/nouns lexicon/postpositions\
 			lexicon/proper_nouns lexicon/verbs lexicon/misc lexicon/toponyms\
-			lexicon/pn_org lexicon/pn_ant lexicon/pn_cog lexicon/pn_acr
+			lexicon/pn_org lexicon/pn_ant lexicon/pn_cog lexicon/pn_acr lexicon/postpositions_infl
 FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst particles.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
 SUBDIRS=phon

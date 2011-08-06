@@ -40,7 +40,7 @@ $VSTEM$ =  "lexicon/verbs" <v><RB>
 $XSTEM$ =  "lexicon/interjections" <ij><RB>
 $DSTEM$ =  "lexicon/det" <det><RB>
 $MISC$ =  "lexicon/misc"
-$PISTEM$ = "lexicon/postpositions_infl"
+$PISTEM$ = "lexicon/postpositions_infl" <postp><RB>
 
 
 %%%% Even though most treat reflexive and reciprocal verb forms in
@@ -434,4 +434,5 @@ $PISTEM$ >> "postpi.a"
  $DSTEM$ |\
  $MISC$ |\
  $VSTEM$ |\
+ $PISTEM$ |\
  $MSTEM$ ) <>:<EoW> || "<phon/phon.a>"
