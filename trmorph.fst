@@ -21,7 +21,7 @@ $CSTEM$ = "<conj.a>"
 %$RSTEM$ = "<pron.a>"
 $XSTEM$ = "<interj.a>"
 $PSTEM$ = "<postp.a>"
-$PISTEM$ = <"postpi.a>"
+$PISTEM$ = "<postpi.a>"
 $MSTEM$ = "<number.a>"
 $DSTEM$ = "<det.a>"
 
@@ -559,7 +559,7 @@ $PISTEM$ = $PISTEM$ $NINFL$?
 % nominal predicates 
 %
 % TODO: check!
-$NP$ = ($PSTEM$ | $NOUN$ | $VN$ |$PART$) \
+$NP$ = ($PISTEM$ | $NOUN$ | $VN$ |$PART$) \
                         ( $p_g2$ $dir$? |\
                          $dir$ $p2_3p$ |\
                          $T_cpl$ |\
@@ -631,6 +631,7 @@ $WORD$ = $NOUN$      |\
 %         $RSTEM$     |\
          $XSTEM$     |\
          $PSTEM$     |\
+         $PISTEM$     |\
          $MSTEM$     |\
          $DSTEM$     |\
          $MISC$      |\
