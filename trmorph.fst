@@ -13,7 +13,7 @@
 %
 %
 $NSTEM$ = "<noun.a>" | "<pron.a>"
-$PNSTEM$ = "<prop.a>" 
+$PNSTEM$ = "<prop.a>"
 $ASTEM$ = "<adv.a>" 
 $JSTEM$ = "<adj.a>" 
 $VSTEM$ = "<verb.a>"
@@ -21,6 +21,7 @@ $CSTEM$ = "<conj.a>"
 %$RSTEM$ = "<pron.a>"
 $XSTEM$ = "<interj.a>"
 $PSTEM$ = "<postp.a>"
+$PISTEM$ = <"postpi.a>"
 $MSTEM$ = "<number.a>"
 $DSTEM$ = "<det.a>"
 
@@ -542,10 +543,11 @@ $NONFIN_V$ = $VN$ | $PART$ | $CV$
 %%%%%%%%%%%%%%%%%%%%%%%% End of verbal Morphotactics %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% (most) postpositions can get nominal inflections
+% some postpositions can get nominal inflections, some can't
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$PSTEM$ = $PSTEM$ 
+$PSTEM$ = $PSTEM$
+$PISTEM$ = $PISTEM$ $NINFL$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
