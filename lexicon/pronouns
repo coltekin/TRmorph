@@ -1,22 +1,22 @@
-b<e>n<pers>
-s<e>n<pers>
-o<pers>
-biz<pers>
-siz<pers>
-onlar<pers>
-bu<dem>
-şu<dem>
-kendi
-kim<qst>
-ne<qst>
-hangi<qst>
-nere<qst>
-ora<locp>
-bura<locp>
-şura<locp>
-herbir
-öteki
-beriki
-birbiri<pers>
-hepsi
-hep
+b<e>n<pers>	# ben
+s<e>n<pers>	# sen
+o<pers>	# o
+biz<pers>	# biz
+siz<pers>	# siz
+onlar<pers>	# onlar
+bu<dem>	# bu
+şu<dem>	# şu
+kendi	# kendi
+kim<qst>	# kim
+ne<qst>	# ne
+hangi<qst>	# hangi
+nere<qst>	# nere
+ora<locp>	# ora
+bura<locp>	# bura
+şura<locp>	# şura
+herbir	# herbir
+öteki	# öteki
+beriki	# beriki
+birbiri<pers>	# birbiri
+hepsi	# hepsi
+hep	# hep
