@@ -12,8 +12,8 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <LN> \
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
-           <e> <caus> <EoW>\
+           <e> <caus> <BoW><EoW>\
            <compn> \
-           <BoW>:<> <bY>:<>
+           <bY>:<>
 
-(<BoW>:<> i [<v><RB><MB><>]*) <bY> <=> <> 
+(<BoW> i [<v><RB><MB><>]*) <bY> <=> <> 
