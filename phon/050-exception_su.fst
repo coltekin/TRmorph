@@ -1,25 +1,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% $xcptn_su$: Handling of exception words ending with `su'
-% buffer `n' and `s' are realized as `y' after words ending with `su'.
-%     suyu (his/her water) not susu or su-yu (water-acc) not su-nu
+% $xcptn_su$: Handling of exception words ending with `su' and the word 'ne'
 %
-% we also handle insertion of `y' as in su-yum
+% Some stems, particularly `su' and `ne', get a `y' at the end if
+% followed by possessive suffixes with a <bI> or <bS> (all possessives
+% except p3p) and genitive case marker -(n)In.
 %
+% In case of `su' this is the only way: 
+%  suyum(p1s), suyun(p2s), suyu(p3s), suyumuz(p1p), suyunuz(p2p) and suyun(gen)
+% the alternative is not grammatical:
+%  sum, sun, susu, sumuz, sunuz and sunun
 %
-% affects analysis symbol <bN>, has to be before $Del$.
+% In case of `ne' and some other words that end with `su' (suchs as akarsu)
+% this seems to be optional. With ne, 
+%  neyim(p1s), neyin(p2s), neyi(p3s), neyimiz(p1p), neyiniz(p2p) and neyin(gen)
+% is the correct/preferred way. Nowever, althogh less preferable, the
+% alternative (no y insertion) is also fine
+%  nem, nen, nesi, nemiz, neniz and nenin
+%
+% The stems that require y-insertion should be added to $y-exception$
+% below. The stems where the y-insertion is optional should be added
+% to $y-optional$.
+%
 %
 #include "../symbols.fst"
 
-ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
-           <A> <I> [#V_Pal#] \
-           <C><D><K> \
-           <c><p><t><k><g> \
-           <LN> \
-           <dup><del><dels>\
-           [#V_Buff#] <bY> <bS> <bSS> <bN> \
-           <bN>:y <bS>:y 
-
-$b-y$ = (s u [#pos##subcat##BM##infl_feat#]*) [<bN><bS>] <=> y
+$y-exception$ = (su|özsu|karasu)
+$y-optional$ = (ne|akarsu|Akarsu)
 
 ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <A> <I> [#V_Pal#] \
@@ -28,7 +34,23 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <LN> \
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> \
-           <>:y
-$insy$ = (s u [#pos##subcat##BM##infl_feat#]*) <> <=> y (<bI>)
+           <BoW> 
 
-$b-y$ || $insy$
+$insy$ = {<RB>}:{<RB> y} | {<MB>}:{<MB>  y}
+
+$insy1$ = $insy$ ^-> ((<BoW> $y-exception$ [#subcat##pos##Apos##BM##infl_feat#]*) __ ([<bI><bN><bS>]))
+
+$insy2$ = $insy$ ^->? ((<BoW> $y-optional$ [#pos##subcat##Apos##BM##infl_feat#]*) __ ([<bI><bN><bS>]))
+
+ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
+           <A> <I> [#V_Pal#] \
+           <C><D><K> \
+           <c><p><t><k><g> \
+           <LN> \
+           <dup><del><dels>\
+           [#V_Buff#] <bY> <bS> <bSS> <bN> \
+           <BoW>:<>
+
+$delBoW$ = .*
+
+$insy1$ || $insy2$ || $delBoW$

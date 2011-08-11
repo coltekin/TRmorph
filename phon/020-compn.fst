@@ -12,7 +12,7 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <LN> \
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
-           <e> <caus> <EoW>\
+           <e> <caus> <EoW><BoW>\
            <compn>:<>
 
 $C$ = {<compn>}:{<bS><I>}
@@ -27,7 +27,7 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
            <e> <caus>\
-           <EoW>:<>
+           <BoW><EoW>:<>
 
 $DelEoW$ = .*
 
