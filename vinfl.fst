@@ -29,7 +29,7 @@ $caus_Art$ = <caus>:{<A>rt} <MB>
 % ends with `l', otherwise `n'. <bI> is the buffer vowel, which is
 % dropped or realized as <I>
 
-$passive$ = <pass>:{<bI><LN>} <MB>
+$passive$ = <pass>:{<bI>l} <MB>
 
 %%%%%%%%%%%%%%%% End of voice suffixes
 
