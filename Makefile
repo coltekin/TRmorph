@@ -3,7 +3,7 @@ LEXFILES = lexicon/adjectives lexicon/adverbs lexicon/cnjcoo\
 			lexicon/interjections lexicon/nouns lexicon/postpositions\
 			lexicon/proper_nouns lexicon/verbs lexicon/misc lexicon/toponyms\
 			lexicon/pn_org lexicon/pn_ant lexicon/pn_cog lexicon/pn_acr lexicon/postpositions_infl
-FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst particles.fst
+FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst particles.fst morph.fst afilter.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
 SUBDIRS=phon
 
@@ -16,7 +16,7 @@ all: subdirs trmorph
 ifeq ($(FSTC),hfst)
 trmorph: tr-mor.ol tr-gen.ol
 else
-trmorph: trmorph.a
+trmorph: trmorph.a trmorph-gen.a
 endif
 
 trmorph.a: trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a phon/phon.a
@@ -44,7 +44,8 @@ test:
 
 # DO NOT DELETE
 
-trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst version.a
+trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst version.a morph.a afilter.a
+trmorph-gen.a: trmorph.a
 ninfl.a: symbols.fst
 num.a: symbols.fst
 deriv.a: symbols.fst ninfl.fst
@@ -52,8 +53,8 @@ deriv.a: symbols.fst ninfl.fst
 tr-mor.ol: trmorph.a
 	hfst-invert -i trmorph.a | hfst-fst2fst -O -o $@
 
-tr-gen.ol: trmorph.a
-	hfst-fst2fst -O -i trmorph.a -o $@
+tr-gen.ol: trmorph-gen.a
+	hfst-fst2fst -O -i trmorph-gen.a -o $@
 
 version.fst: $(SOURCES) phon/*.fst
 	./version.sh > version.fst

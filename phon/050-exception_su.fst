@@ -13,7 +13,7 @@
 % In case of `ne' and some other words that end with `su' (suchs as akarsu)
 % this seems to be optional. With ne, 
 %  neyim(p1s), neyin(p2s), neyi(p3s), neyimiz(p1p), neyiniz(p2p) and neyin(gen)
-% is the correct/preferred way. Nowever, althogh less preferable, the
+% is the correct/preferred way. However, althogh less preferable, the
 % alternative (no y insertion) is also fine
 %  nem, nen, nesi, nemiz, neniz and nenin
 %
@@ -21,6 +21,9 @@
 % below. The stems where the y-insertion is optional should be added
 % to $y-optional$.
 %
+% NOTE: also change 050-exception_su-gen.fst if you change this file
+%
+% FIXME: everything is duplicated in 050-exception_su-gen.fst.
 %
 #include "../symbols.fst"
 
@@ -42,15 +45,4 @@ $insy1$ = $insy$ ^-> ((<BoW> $y-exception$ [#subcat##pos##Apos##BM##infl_feat#]*
 
 $insy2$ = $insy$ ^->? ((<BoW> $y-optional$ [#pos##subcat##Apos##BM##infl_feat#]*) __ ([<bI><bN><bS>]))
 
-ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
-           <A> <I> [#V_Pal#] \
-           <C><D><K> \
-           <c><p><t><k><g> \
-           <LN> \
-           <dup><del><dels>\
-           [#V_Buff#] <bY> <bS> <bSS> <bN> \
-           <BoW>:<>
-
-$delBoW$ = .*
-
-$insy1$ || $insy2$ || $delBoW$
+$insy1$ || $insy2$
