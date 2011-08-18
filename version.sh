@@ -17,4 +17,4 @@ else
     release=TRmorph.`cat VERSION`.unknown
 fi
 
-echo "{$version}:{version} | {$release}:{release}" | sed 's/\./\\&/g'
+echo "{$version}:{version} | {$release}:{release}" | sed 's/[.-]/\\&/g'
