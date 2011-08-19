@@ -1,26 +1,26 @@
 =======these should normally be included in the rule set
-bizimki	     # bizimki
-benimki	     # benimki
-sizinki	     # sizinki
-dahaki	     # dahaki
-karşıki	     # karşıki
-öyle	     # öyle
-böyle	     # böyle
-şöyle	     # şöyle
+bizimki	# bizimki
+benimki	# benimki
+sizinki	# sizinki
+dahaki	# dahaki
+karşıki	# karşıki
+öyle	# öyle
+böyle	# böyle
+şöyle	# şöyle
 ============	# ============
-günkü   # günkü
-maoist  # maoist
-bağlı   # bağlı
-makinalı    # makinalı
+günkü	# günkü
+maoist	# maoist
+bağlı	# bağlı
+makinalı	# makinalı
 saf # saf
-farklı  # farklı
+farklı	# farklı
 sonraki # sonraki
-önceki  # önceki
-yılki   # yılki
-ayki    # ayki
+önceki	# önceki
+yılki	# yılki
+ayki	# ayki
 şimdiki # şimdiki
 zamanki # zamanki
-bu günkü    # bu günkü
+bu günkü	# bu günkü
 tehlikeli	# tehlikeli
 farklı	# farklı
 önemli	# önemli
@@ -37,7 +37,7 @@ sürekli	# sürekli
 lir	# lir
 gafur	# gafur
 dobra	# dobra
-emin    # emin
+emin	# emin
 ardışı<k>	# ardışık
 spesiyal	# spesiyal
 paskal	# paskal
