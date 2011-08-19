@@ -559,7 +559,7 @@ $PISTEM$ = $PISTEM$ $NINFL$?
 % nominal predicates 
 %
 % TODO: check!
-$NP$ = ($PISTEM$ | $NOUN$ | $VN$ |$PART$) \
+$NP$ = ($PISTEM$ | $PSTEM$ | $NOUN$ | $VN$ |$PART$) \
                         ( $p_g2$ $dir$? |\
                          $dir$ $p2_3p$ |\
                          $T_cpl$ |\

@@ -79,7 +79,7 @@ $VSTEM$ = $VSTEM-def$ |\
 
 %%%%%  -lI 
 % N->N atlı, N->J, akıllı, J->J mavili, J->N ??
-$D_li$ = <D_lI>:{xxx}
+$D_li$ = <D_lI>:{l<I>}
 
 $DNN$ = $D_li$
 $DNJ$ = $D_li$
@@ -87,14 +87,14 @@ $DJJ$ = $D_li$
 
 %%%%%  -slz 
 % N->J insafsız, N->A, arabasız, TODO: non-prod N->N telsiz
-$D_siz$ = <Dnn_siz>:{xxx}
+$D_siz$ = <Dnn_siz>:{s<I>z}
 
 $DNJ$ = $DNJ$ | $D_siz$
 $DNA$ = $D_siz$
 
 %%%%%  -lIK
 % N->N krallık, J->N iyilik, A->N yavaşlık
-$D_lik$ = <D_lIK>:{xxx}
+$D_lik$ = <D_lIK>:{l<I><k>}
 
 $DNN$ = $DNN$ | $D_lik$
 $DJN$ = $D_lik$
@@ -126,7 +126,7 @@ $DAA$ = $D_acik$ | $D_icik$
 %%%% -CI
 % N->N şekerci, N->J gerici, ?? J->J mavici
 % V->N öğrenci FIXME: this happens only after `n' otherwise -yIcI, ?? V->J 
-$D_ci$ = <D_CI>:{xxx}
+$D_ci$ = <D_CI>:{c<I>}
 
 
 $DNN$ = $DNN$ | $D_ci$
@@ -157,7 +157,7 @@ $DNN$ = $DNN$ | $D_gil$
 
 %%%% -lA
 %%%% N->V tuzla, J->V kurula TODO: gıdakla, ahla
-$D_la$ = <D_lA>:{xxx}
+$D_la$ = <D_lA>:{l<A>}
 
 $DNV$ = $D_la$
 $DJV$ = $D_la$
@@ -191,7 +191,7 @@ $DJV$ = $DJV$ | $D_madik$
 
 %%% -(y)Iş
 % V->N duruş, yürüyüş, görüş, dönüş, bakış
-$D_yIS$ = <D_yIS>:{xxx}
+$D_yIS$ = <D_yIS>:{<bY><I>ş}
 
 $DVN$ = $DVN$ | $D_yIS$
 
