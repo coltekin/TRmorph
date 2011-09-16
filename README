@@ -13,11 +13,13 @@ You need SFST [2] to compile and use this analyzer. The Makefile
 provided compiles compiles all the sources and produces the binary
 'trmorph.a'. Assuming you have fst-compiler-utf8 from SFST in your
 path, in POSIX systems typing 'make' should be enough to get started.
-It turns out that it can also be compiled with HFST [3] (thanks to
+It turns out that it can also be compiled with HFST [4] (thanks to
 Francis Tyers and Tommi Pirinen). To compile using HFST tools, set
 FSTC envirionment to 'hfst', a command like 'FSTC=hfst make' should do
 the trick. The resulting FSA will be usable with the HFST tools. The
 rest of this document assumes that you are using SFST.
+
+Using SFST:
 
 $fst-mor trmorph.a
 analyze> evlerimizdekilerinki
@@ -25,6 +27,14 @@ ev<n><pl><p1p><loc><ki><pl><gen><ki>
 ev<n><pl><p1p><loc><ki><pl><gen><ki><3s>
 analyze> 
 generate> ev<n><plu>
+evler
+
+Using HFST:
+
+$ echo "evlerimizdekilerinki" | hfst-proc tr-mor.ol 
+^evlerimizdekilerinki/ev<n><pl><p1p><loc><ki><pl><gen><ki>/ev<n><pl><p1p><loc><ki><pl><gen><ki><3s>$
+
+$ echo "^ev<n><pl>$" | hfst-proc -d tr-gen.ol 
 evler
 
 Note that the current output may be noisier than above. This is
@@ -43,9 +53,10 @@ items with related part of speech. The special lexicon "misc" contains
 items that go through analysis unaltered. This is used for frequent
 exceptions that are difficult (or costly) to handle.
 
-The regular entries are all lowercase. In current version all symbols
-are single word, i.e. does not contain any white spaces. Besides basic
-alphabet, we have a number of special symbols in the lexicon.
+The regular entries are all lowercase, except for proper nouns. In current 
+version all symbols are single word, i.e. do not contain any white 
+space. Besides the basic alphabet, we also have a number of special 
+symbols in the lexicon.
 
 The symbols <p><t><c><g><k><K> are likely to be found root-final
 positions. These are rewritten as p/b, t/d, ç/c, g/ğ, k/ğ, k/y
@@ -92,7 +103,7 @@ this order: <rcp>, <rfl>, <caus_*> and <aor_ar>.
 * Derivations
 
 All root forms in the lexicon are read in deriv.fst. This file tries
-to model the most productive derivational suffixes that attache to the
+to model the most productive derivational suffixes that attach to the
 root forms. The choice of derivations in this file is based on their
 occurrences in various corpora. Mostly these are really productive
 ones, such as -lA suffix that makes verbs from nominals. A more
@@ -119,7 +130,7 @@ adverb to have multiple analyses, it seems to make more sense
 linguistically.
 
 deriv.fst writes multiple `stem automata' files, which are later read
-by trmorpoh.fst.
+by trmorph.fst.
 
 It should also be noted that some of the `productive' derivational
 morphemes that attaches after the inflections are included in
@@ -221,4 +232,5 @@ c.coltekin@rug.nl
 -------------------------
 [1] http://www.gnu.org/licenses/gpl.html
 [2] http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html
-[3] http://code.google.com/p/zemberek/,  
+[3] http://code.google.com/p/zemberek/
+[4] http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/ 

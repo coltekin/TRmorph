@@ -2925,10 +2925,6 @@ boy<del>un
 boykot
 boykotaj
 boylam
-böyle
-böylecene
-böyleleri
-böylesi
 boynuz
 boynuzlama
 boynuzlugiller
@@ -2965,7 +2961,6 @@ branda
 branş
 breş
 brezil
-brezilya
 briç
 brıçka
 brifing
@@ -3489,7 +3484,6 @@ celi
 çelikçoma<k>
 çelikhane
 çelikleme
-celil
 çelim
 çelişi<k>
 çelişken
@@ -4173,7 +4167,6 @@ damla
 damlataş
 damper
 damping
-dan
 dana
 danaburnu
 dandi<k>
@@ -4619,6 +4612,7 @@ dinamo
 dinamometre
 dinar
 dinazor
+dinozor
 dinç
 dindar
 dindaş
@@ -4633,7 +4627,6 @@ dini
 din<k>
 dinlence
 dinleti
-dinozor
 di<p>
 dipçi<k>
 dipfriz
@@ -5374,7 +5367,6 @@ elhasıl
 elif
 elifba
 eli<k>
-elim
 elindeli<k>
 elips
 elipsoid<pA>l
@@ -6080,8 +6072,6 @@ figüran
 figüratif
 fihrist
 fiil
-fiilen
-fiili
 fiilimsi
 fiiliyat
 fık<del>ıh
@@ -6133,7 +6123,6 @@ filum
 finalist
 finalizm
 finans
-finanse
 finansman
 fincan
 fındı<k>
@@ -6642,7 +6631,6 @@ gazve
 gebe
 gebeş
 gebre
-geç
 gece
 gececi
 geçe<k>
@@ -7511,7 +7499,6 @@ hatır
 hatıra
 hatırat
 hatmi
-hatta
 hattat
 hattıhareket
 hatun
@@ -8139,11 +8126,7 @@ içgöbe<k>
 içgörü
 içgüdü
 içgüvey
-ıcığı
-içiiş
 içim
-için
-içinde
 içindeleme
 içindeli<k>
 içiri<k>
@@ -8397,7 +8380,6 @@ ilinti
 ilişi<k>
 ilişki
 ilişkin
-ilk
 ilkah
 ilkbahar
 ilkçağ
@@ -10298,9 +10280,7 @@ keşi<k>
 keşikleme
 kesim
 kesimhane
-kesin
 kesinbilgi
-kesinkes
 kesinti
 keşiş
 keşişhane
@@ -12978,7 +12958,6 @@ minv<pA>l
 minyatür
 minyon
 mir
-mır
 mira
 mira<c>
 miraç
@@ -14535,7 +14514,6 @@ ons
 ontojenez
 ontoloji
 öntüreme
-onu
 onum
 onun
 onur
@@ -14787,8 +14765,6 @@ oydaş
 öyküleme
 oylaşım
 oylaşlı<k>
-öyle
-öyleleri
 oylu<k>
 oylum
 oymabaskı
@@ -15216,7 +15192,6 @@ pehlivan
 pehpeh
 pekdoku
 peken<t>
-pekin
 pekiyi
 pekmez
 peksimet
@@ -17873,13 +17848,9 @@ soygun
 soyguncu
 soyka
 soykırım
-şöyle
-şöyleleri
 söylem
-şöylemesine
 söylence
 söylenti
-şöylesi
 söyleşi
 söylev
 soylu
@@ -23019,3 +22990,46 @@ başkanvekil<compn>
 alınter<compn>
 evsahi<p><compn>
 günbatım<compn>
+çalışma
+birleşme
+yıllık
+bibliyoman
+havaciva
+karakalem
+kesinleme
+mayi
+emlekli<k>
+kapatma
+geçersizli<k>
+uygulama
+sorumlu
+yükümlülü<k>
+uzlaşma
+çatışma
+gelişme
+sorumlulu<k>
+bağımsız
+etkinli<k>
+güvenli<k>
+bağımsızlı<k>
+tren yol<compn>
+sponsorluk
+edinme
+öğretme
+iyimserlik
+tarama
+kaçırma
+yürütme
+bekleme
+sürtüşme
+yetersizlik
+kovuşturma
+uzatma
+belirsizlik
+numaralı
+temizleme
+temizlik
+kaybetme
+yaşama
+kurtarma
+ertelenme
