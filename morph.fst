@@ -471,6 +471,8 @@ $T_part$ = $part_dik$ $NINFL$? |\
            $part_acak$ $NINFL$? |\
            $part_yan$ $NINFL$?
 
+$T_inf$ = $vinf$ $NINFL$?
+
 %%%%%%%%%%% converb formations
 %
 % these are very selective 
@@ -521,6 +523,8 @@ $CV$ = $T_VOICE$ $T_neg$? $T_compl2$* $T_cv$ |\
        ($AOR-pos$|$AOR-neg1$) $cpl_mis$? $T_cv_cesine$ |\
        $T_VOICE$ $T_neg$? $T_compl2$* $tense_g1$? $cpl_mis$ $cv_cesine$ 
 
+$INF$ = $T_VOICE$ $T_neg$? $T_inf$
+
 % the converbial marker (I/A)r  behaves exactly same as aorist.
 % instead of replicating the whole aorist construction here, we will
 % give a free pass for aorist form without further suffixes added to
@@ -537,7 +541,7 @@ $CV$ = $T_VOICE$ $T_neg$? $T_compl2$* $T_cv$ |\
 
 
 % FIXME: following list (at least so_cv) overgenerates (e.g.  gelmişince)
-$NONFIN_V$ = $VN$ | $PART$ | $CV$
+$NONFIN_V$ = $VN$ | $PART$ | $CV$ | $INF$
 
 %%%%%%%%%%%%%%%%%%%%%%%% End of verbal Morphotactics %%%%%%%%%%%%%%%%%%%%%%%%%
 

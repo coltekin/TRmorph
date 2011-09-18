@@ -264,3 +264,8 @@ $cv_iyor$    = <cv_iyor>:{<bI>yor} <MB>
 $cv_cesine$ = <cv_cesine>:{<C><A>s<I>n<A>} <MB>
 
 $cv_ip$     = <cv_ip>:{<bY><I>p} <MB>
+
+
+%%% -mAK (also) makes verbs infinitive
+%
+$vinf$  = <vinf>:{m<A><K>} <MB>
