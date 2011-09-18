@@ -5,15 +5,15 @@
 #C_xx# = <c><p><t><k><g><K><D><C>
 #C_all# = #C##C_xx##C_Buff#
 
-#V# = aeıioöuüAEIİOÖUÜ
-#V_f# = eiöüEİÖÜ
-#V_b# = aıouAIOU
-#V_h# = iüıuİÜIU
-#V_l# = eöaoEÖAO
-#V_br# = ouOU
+#V# = aeıioöuüAEIİOÖUÜâÂîÎûÛ 
+#V_f# = eiöüEİÖÜîÎ
+#V_b# = aıouAIOUâÂûÛ
+#V_h# = iüıuİÜIUîÎûÛ
+#V_l# = eöaoEÖAOâÂ
+#V_br# = ouOUûÛ
 #V_fr# = öüÖÜ
-#V_bu# = aıAI
-#V_fu# = eiEİ
+#V_bu# = aıAIâÂ
+#V_fu# = eiEİîÎ
 #V_Buff# = <bI><bA>
 #V_Pal# = <pA><pI><pO><pU>
 #V_xx# = <A><I><e>

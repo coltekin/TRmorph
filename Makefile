@@ -19,6 +19,9 @@ trmorph: trmorph.a trmorph-gen.a trmorph-bm.a
 endif
 
 trmorph.a: trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a phon/phon.a
+
+trmorph-gen.a trmorph-bm.a: trmorph.a
+
 deriv.a: num.a symbols.fst $(LEXFILES)  phon/phon.a
 
 subdirs: 
