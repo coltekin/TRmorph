@@ -3,4 +3,6 @@
 ref
 data
 version.fst
-tmp/
+tr-gen.ol
+tr-mor.ol
+tmp

@@ -6,7 +6,7 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-%%%%% pluaral
+%%%%% plural
 %
 $plu$ = <pl>:{l<A>r} <MB>
 
