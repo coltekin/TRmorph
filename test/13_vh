@@ -17,7 +17,7 @@ A:R:arabaler:araba<n><pl>
 A:A:saat:saat<n>
 A:A:saate:saat<n><dat>
 A:A:kârlar:kâr<n><pl>
-A:A:mahkûmlar:mahkûm<n><pl>
+A:A:mahkûmlar:mahkûm<adj><Djn_0><n><pl>
 A:R:saata:saat<n><dat>
 A:A:saatin:saat<n><p2s>
 A:R:saatın:saat<n><p2s>
@@ -26,7 +26,7 @@ A:R:saatın:saat<n><gen>
 A:A:saatler:saat<n><pl>
 A:R:saatlar:saat<n><pl>
 A:R:kârler:kâr<n><pl>
-A:R:mahkûmler:mahkûm<n><pl>
+A:R:mahkûmler:mahkûm<adj><Djn_0><n><pl>
 G:A:ev<n><dat>:eve
 G:A:ev<n><gen>:evin
 G:A:ev<n><pl>:evler
