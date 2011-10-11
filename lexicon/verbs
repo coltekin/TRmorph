@@ -494,7 +494,6 @@ bulan
 bulaş
 bulgula
 bulun
-bulundur
 buluş
 bulutlan
 bumla
@@ -886,7 +885,7 @@ esle
 eşle
 esne
 esri
-e<t><aor_ar>
+e<t><caus_dir><aor_ar>
 etekle
 eterle
 etiketle
@@ -2213,7 +2212,6 @@ tuzla
 uçlan
 üçle
 uçukla
-uçur
 uçuş
 ucuzla
 ufal
@@ -2487,3 +2485,19 @@ zorla
 züğürtle
 zulme<t><aor_ar>
 zümrütlen
+oy al
+oy ver
+terk et<caus_dir>
+temsil e<t><aor_ar><caus_dir>
+iade e<t><aor_ar><caus_dir>
+umut e<t><aor_ar><caus_dir>
+ümit e<t><aor_ar><caus_dir>
+kabul e<t><aor_ar><caus_dir>
+kulluk e<t><aor_ar><caus_dir>
+kabul e<t><aor_ar><caus_dir>
+devam e<t><aor_ar><caus_dir>
+itiraf e<t><aor_ar><caus_dir>
+manevra yap<caus_dir><aor_ar>
+yer ver<caus_dir>
+bekle
+düzenle

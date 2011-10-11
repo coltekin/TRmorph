@@ -1,8 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $xception_deye$: verbs `de' and  `ye' became `di' and `yi' if they
+%                  followed by a 'y'
 %
-% the bound root(?) i- seems to omit the buffer y as in 
-%   i-dir (not i-ydir)
-% 
 #include "../symbols.fst"
 
 ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
@@ -12,8 +11,10 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <LN> \
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
-           <e> <caus> <BoW><EoW>\
+           <e> <caus> <EoW>\
            <compn> \
-           <bY>:<>
+           <BoW> e:i
 
-(<BoW> i [<v><RB><MB><>]*) <bY> <=> <> 
+$diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [<v><RB><MB><>]* [<RB><MB>] [y<bY>])
+
+$diyi$

@@ -22,6 +22,6 @@ $N1T$ = ($n1$|$N10$|$N100$)? $n1t$ ($N1G$|$N1M$|$N1K$|$N100$|$N10$|$n1$)?
 
 % TODO: this is too liberal
 
-$Num$ = [#Perc#]? [#Digit#] [#Digit##Nsep#]*
+$Num$ = [#Perc#]? [#Digit#] [#Digit##Nsep#]* [#Digit##Nsep##Digit#]* 
 
 ($n0$ | $n1$ | $N10$ | $N100$ | $N1K$ | $N1M$ | $N1G$ | $N1T$ ) | $Num$

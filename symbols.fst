@@ -5,15 +5,15 @@
 #C_xx# = <c><p><t><k><g><K><D><C>
 #C_all# = #C##C_xx##C_Buff#
 
-#V# = aeıioöuüAEIİOÖUÜ
-#V_f# = eiöüEİÖÜ
-#V_b# = aıouAIOU
-#V_h# = iüıuİÜIU
-#V_l# = eöaoEÖAO
-#V_br# = ouOU
+#V# = aeıioöuüAEIİOÖUÜâÂîÎûÛ 
+#V_f# = eiöüEİÖÜîÎ
+#V_b# = aıouAIOUâÂûÛ
+#V_h# = iüıuİÜIUîÎûÛ
+#V_l# = eöaoEÖAOâÂ
+#V_br# = ouOUûÛ
 #V_fr# = öüÖÜ
-#V_bu# = aıAI
-#V_fu# = eiEİ
+#V_bu# = aıAIâÂ
+#V_fu# = eiEİîÎ
 #V_Buff# = <bI><bA>
 #V_Pal# = <pA><pI><pO><pU>
 #V_xx# = <A><I><e>
@@ -71,6 +71,7 @@
          <1s><2s><2sf><3s><1p><2p><3p>\
          <vn_dik><vn_acak><vn_ma><vn_mak><vn_yis>\
          <part_dik><part_acak><part_yan>\
+         <vinf>\
          <cv_dik><cv_acak><cv_ma><cv_mak><cv_dan><cv_zdan>\
          <cv_ince><cv_erek><cv_erek><cv_eli><cv_ene>\
          <cv_ir><cv_ar><cv_ecek><cv_mis><cv_iyor><cv_cesine>\

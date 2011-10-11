@@ -8,6 +8,6 @@
 
 $afilter$ = "<afilter.a>" 
 $morph$ = "<morph.a>"
-$phon$ = "<phon/phon.a>"
+$phon$ = "<phon/phon-bm.a>"
 
 $afilter$ || <BoW> $morph$ <EoW> || $phon$

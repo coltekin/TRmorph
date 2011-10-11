@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $del_BoW$: Delete the beginning of word symbol
 %
-% the bound root(?) i- seems to omit the buffer y as in 
-%   i-dir (not i-ydir)
-% 
+% FIXME: doing this as an extra step is unnecessary
+%
 #include "../symbols.fst"
 
 ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
@@ -11,9 +11,7 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <c><p><t><k><g> \
            <LN> \
            <dup><del><dels>\
-           [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
-           <e> <caus> <BoW><EoW>\
-           <compn> \
-           <bY>:<>
+           [#V_Buff#] <bY> <bS> <bSS> <bN> \
+           <BoW>:<>
 
-(<BoW> i [<v><RB><MB><>]*) <bY> <=> <> 
+.*

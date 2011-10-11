@@ -18,6 +18,7 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <LN> \
            <dup><del><dels>\
            [#V_Buff#] <bY> <bS> <bSS> <bN> <bN>\
+           <BoW>\
            <e>:a <e>:e
 
 <e> <=> a (n [#pos##subcat#<>#BM##infl_feat#]* <bY><A> <MB>)

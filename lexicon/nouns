@@ -830,7 +830,6 @@ altı<k>
 altimetre
 altın
 altınbaş
-altıncı
 altınolu<k>
 altıntop
 altıparma<k>
@@ -1508,6 +1507,7 @@ askarit
 askat
 aşkefza
 asker
+askerli<k>
 askeriye
 askı
 aşkın
@@ -1665,7 +1665,6 @@ avla<k>
 avlu
 avokado
 av<pA>l
-avrasya
 avra<t>
 avret
 avro
@@ -2700,7 +2699,6 @@ biperva
 bira
 birader
 birahane
-bırakı
 bırakınızcılı<k>
 bırakıt
 bircili<k>
@@ -2718,11 +2716,9 @@ birikim
 birikinti
 biriktirim
 biriktirimci
-birileri
 birim
 birincil
 birincizar
-birisi
 birler
 birleşi
 birleşi<k>
@@ -2931,10 +2927,6 @@ boy<del>un
 boykot
 boykotaj
 boylam
-böyle
-böylecene
-böyleleri
-böylesi
 boynuz
 boynuzlama
 boynuzlugiller
@@ -2971,7 +2963,6 @@ branda
 branş
 breş
 brezil
-brezilya
 briç
 brıçka
 brifing
@@ -3495,7 +3486,6 @@ celi
 çelikçoma<k>
 çelikhane
 çelikleme
-celil
 çelim
 çelişi<k>
 çelişken
@@ -4179,7 +4169,6 @@ damla
 damlataş
 damper
 damping
-dan
 dana
 danaburnu
 dandi<k>
@@ -4625,6 +4614,7 @@ dinamo
 dinamometre
 dinar
 dinazor
+dinozor
 dinç
 dindar
 dindaş
@@ -4639,7 +4629,6 @@ dini
 din<k>
 dinlence
 dinleti
-dinozor
 di<p>
 dipçi<k>
 dipfriz
@@ -4791,7 +4780,6 @@ dızman
 dizüstü
 dizyem
 do
-dobra
 doçent
 doğa
 doğaç
@@ -5381,7 +5369,6 @@ elhasıl
 elif
 elifba
 eli<k>
-elim
 elindeli<k>
 elips
 elipsoid<pA>l
@@ -5492,7 +5479,6 @@ enfarktüs
 enfeksiyon
 enfiye
 enflasyon
-enflasyonist
 enflüanza
 enformasyon
 enformati<k>
@@ -5703,7 +5689,6 @@ eşraf
 esrar
 esrarkeş
 esre
-eşref
 esri
 essah
 eşses
@@ -5784,7 +5769,6 @@ evla
 evladiyeli<k>
 evla<t>
 evle<k>
-evli
 evlili<k>
 evliya
 evliyalı<k>
@@ -5818,7 +5802,6 @@ ezani
 ezber
 ezcümle
 ezel
-ezeli
 ezgi
 ezgin
 ezilgen
@@ -6091,8 +6074,6 @@ figüran
 figüratif
 fihrist
 fiil
-fiilen
-fiili
 fiilimsi
 fiiliyat
 fık<del>ıh
@@ -6144,7 +6125,6 @@ filum
 finalist
 finalizm
 finans
-finanse
 finansman
 fincan
 fındı<k>
@@ -6469,7 +6449,6 @@ gaf
 gaffar
 gafil
 gaflet
-gafur
 gag
 ga<g>
 gaga
@@ -6654,7 +6633,6 @@ gazve
 gebe
 gebeş
 gebre
-geç
 gece
 gececi
 geçe<k>
@@ -7523,7 +7501,6 @@ hatır
 hatıra
 hatırat
 hatmi
-hatta
 hattat
 hattıhareket
 hatun
@@ -7691,11 +7668,9 @@ hengam
 hengame
 hentbol
 henüz
-hep
 hepatit
 hepatoloji
 hepçil
-hepsi
 hepten
 hepyek
 hepye<k>
@@ -8002,7 +7977,6 @@ hük<del>üm
 hükmen
 hükmi
 hukuk
-hukuken
 hukuki
 hükümdar
 hükümet
@@ -8154,11 +8128,7 @@ içgöbe<k>
 içgörü
 içgüdü
 içgüvey
-ıcığı
-içiiş
 içim
-için
-içinde
 içindeleme
 içindeli<k>
 içiri<k>
@@ -8412,7 +8382,6 @@ ilinti
 ilişi<k>
 ilişki
 ilişkin
-ilk
 ilkah
 ilkbahar
 ilkçağ
@@ -10313,9 +10282,7 @@ keşi<k>
 keşikleme
 kesim
 kesimhane
-kesin
 kesinbilgi
-kesinkes
 kesinti
 keşiş
 keşişhane
@@ -10452,7 +10419,6 @@ kımız
 kımkım
 kimli<k>
 kimono
-kimse
 kimüs
 kimya
 kimyager
@@ -11439,7 +11405,6 @@ künk
 kün<k>
 kunt
 künye
-kup
 küp
 kupa
 küpe
@@ -12995,7 +12960,6 @@ minv<pA>l
 minyatür
 minyon
 mir
-mır
 mira
 mira<c>
 miraç
@@ -13185,7 +13149,6 @@ muallim
 muamelat
 muamele
 muamma
-muammer
 muanni<t>
 muaraza
 muare
@@ -14027,7 +13990,6 @@ nazir
 nazır
 nazire
 nazizm
-ne
 nebat
 nebatat
 nebati
@@ -14554,7 +14516,6 @@ ons
 ontojenez
 ontoloji
 öntüreme
-onu
 onum
 onun
 onur
@@ -14806,8 +14767,6 @@ oydaş
 öyküleme
 oylaşım
 oylaşlı<k>
-öyle
-öyleleri
 oylu<k>
 oylum
 oymabaskı
@@ -14978,7 +14937,6 @@ pamu<k>
 pamukaki
 pamukçu<k>
 pamuktaş
-panama
 panayır
 pancar
 panda
@@ -15236,7 +15194,6 @@ pehlivan
 pehpeh
 pekdoku
 peken<t>
-pekin
 pekiyi
 pekmez
 peksimet
@@ -16933,7 +16890,6 @@ sefarethane
 sefaretname
 sefer
 seferber
-seferi
 sefih
 şefik
 sefil
@@ -16972,7 +16928,6 @@ sehven
 şehvet
 şehvetperest
 şehzade
-sek
 sekant
 şekavet
 sekban
@@ -17895,13 +17850,9 @@ soygun
 soyguncu
 soyka
 soykırım
-şöyle
-şöyleleri
 söylem
-şöylemesine
 söylence
 söylenti
-şöylesi
 söyleşi
 söylev
 soylu
@@ -19118,7 +19069,6 @@ temren
 temrin
 temriye
 temsil
-temsili
 temyiz
 ten
 tenafür
@@ -19556,7 +19506,6 @@ toksikomani
 toksin
 tokurtu
 tokuz
-tokyo
 tol
 tolerans
 tolga
@@ -23043,3 +22992,47 @@ başkanvekil<compn>
 alınter<compn>
 evsahi<p><compn>
 günbatım<compn>
+çalışma
+birleşme
+yıllık
+bibliyoman
+havaciva
+karakalem
+kesinleme
+mayi
+emlekli<k>
+kapatma
+geçersizli<k>
+uygulama
+sorumlu
+yükümlülü<k>
+uzlaşma
+çatışma
+gelişme
+sorumlulu<k>
+bağımsız
+etkinli<k>
+güvenli<k>
+bağımsızlı<k>
+tren yol<compn>
+sponsorluk
+edinme
+öğretme
+iyimserlik
+tarama
+kaçırma
+yürütme
+bekleme
+sürtüşme
+yetersizlik
+kovuşturma
+uzatma
+belirsizlik
+numaralı
+temizleme
+temizlik
+kaybetme
+yaşama
+kurtarma
+ertelenme
+kâr
