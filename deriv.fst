@@ -35,6 +35,8 @@ $VSTEM$ =  "lexicon/verbs" <v><RB>
 $XSTEM$ =  "lexicon/interjections" <ij><RB>
 $DSTEM$ =  "lexicon/det" <det><RB>
 $MISC$ =  "lexicon/misc"
+$ONOM$ =  "lexicon/onom" <onom><RB>
+$REDUP$ =  "lexicon/redup" <redup><RB>
 
 
 %%%% Even though most treat reflexive and reciprocal verb forms in
@@ -408,6 +410,8 @@ $VSTEM$  >> "verb.a"
 $MSTEM$  >> "number.a"
 $DSTEM$  >> "det.a"
 $MISC$   >> "misc.a"
+$ONOM$ >> "onom.a"
+$REDUP$ >> "redup.a"
 
 
 
@@ -427,4 +431,6 @@ $MISC$   >> "misc.a"
  $DSTEM$ |\
  $MISC$ |\
  $VSTEM$ |\
- $MSTEM$ ) <>:<EoW> || "<phon/phon.a>"
+ $MSTEM$ |\
+ $ONOM$ |\
+ $REDUP$) <>:<EoW> || "<phon/phon.a>"

@@ -23,6 +23,8 @@ $XSTEM$ = "<interj.a>"
 $PSTEM$ = "<postp.a>"
 $MSTEM$ = "<number.a>"
 $DSTEM$ = "<det.a>"
+$ONOMST$ = "<onom.a>"
+$REDUPST$ = "<redup.a>"
 
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
@@ -638,6 +640,8 @@ $WORD$ = $NOUN$      |\
          $MISC$      |\
          $PUNCT$     |\
          $CLITIC$    |\
+         $ONOMST$    |\
+         $REDUPST$   |\
          "<version.a>"
 
 
