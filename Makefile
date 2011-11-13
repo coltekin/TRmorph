@@ -35,6 +35,9 @@ clean:
 	-rm -f *.a *~ Makefile.bak tests.all 
 	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
 
+TODO:
+	todo -T
+
 #Makefile: *.fst
 #	-makedepend -Y -o.a $(SOURCES) 2>/dev/null 
 
