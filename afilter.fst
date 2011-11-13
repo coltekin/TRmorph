@@ -16,9 +16,16 @@ $deltempsym$ = .
 
 ALPHABET = [#pos##subcat#]
 
+% TODO: this is a q&d hack that allows only a 
+%       limited number of (three) subcategories 
 #=SC# = #subcat#
+#=SC2# = #subcat#
+#=SC3# = #subcat#
 #=C# = #pos#
-$swap$ = ({[#=C#][#=SC#]}:{[#=SC#][#=C#]} | [#pos#])
+$swap1$ = {[#=C#][#=SC#]}:{[#=SC#][#=C#]}
+$swap2$ = {[#=C#][#=SC#][#=SC2#]}:{[#=SC#][#=SC2#][#=C#]}
+$swap3$ = {[#=C#][#=SC#][#=SC2#][#=SC3#]}:{[#=SC#][#=SC2#][#=SC3#][#=C#]}
 
+$swap$ = $swap1$ | $swap2$ | $swap3$ | [#pos#][#subcat#]*
 
 ($deltempsym$  | $swap$)*

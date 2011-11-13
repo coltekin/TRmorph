@@ -54,4 +54,7 @@
         using TDK or DD. There is a half-baked solution, but needs
         some more time to finilize it.
     </note>
+    <note priority="medium" time="1321228599">
+        fix fixed number of subcategories in afilter.fst
+    </note>
 </todo>
