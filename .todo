@@ -57,4 +57,9 @@
     <note priority="medium" time="1321228599">
         fix fixed number of subcategories in afilter.fst
     </note>
+    <note priority="medium" time="1323083676">
+        passive for intransitive verbs should not take person agreemnet
+
+        gel-in-di is OK, gel-in-di-k is not.
+    </note>
 </todo>
