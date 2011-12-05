@@ -25,9 +25,9 @@ $caus_Art$ = <caus>:{<A>rt} <MB>
 
 %%% Passive
 
-% <LN> realized as `n' if preceeding morpheme (almost always the stem 
-% ends with `l', otherwise `n'. <bI> is the buffer vowel, which is
-% dropped or realized as <I>
+% <LN> is realized as `n' if the preceeding morpheme (almost always
+% the stem) ends with `l' or a vowel, otherwise as `l'. <bI> is the
+% buffer vowel, which is dropped or realized as <I>
 
 $passive$ = <pass>:{<bI><LN>} <MB>
 

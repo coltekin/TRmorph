@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % $LN$: Handling of passive <I>n/<I>l difference
-% after a surface `l' <LN> becomes `n', `l' otherwise
+% after an `l' or a vowel <LN> becomes `n', `l' otherwise
 %
 % affected analysis sym: <LN>
 %
