@@ -296,7 +296,7 @@ $NSTEM$ = $NSTEM$ |\
 
 % TODO: appostrophe after PNSTEM
 $NSTEM$  = $NSTEM$ ($DNN$  <n><MB>)? \
-         |  $PNSTEM$ $DNN$  <n><MB> \ 
+         |  $PNSTEM$ $apos$ $DNN$  <n><MB> \ 
          |  $VSTEM$ $DVN$   <n><MB> \
          |  $ASTEM$ $DAN$   <n><MB> \
          |  $JSTEM$ $DJN$   <n><MB>
@@ -335,12 +335,12 @@ $ASTEM$  = $ASTEM$ ($DAA$ <adv><MB>)? \
 
 
 $JSTEM$  = $JSTEM$ ($DJJ$ <adj><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNJ$ <adj><MB> \
+         | ($NSTEM$|$PNSTEM$ $apos$) $DNJ$ <adj><MB> \
          |  $VSTEM$ $DVJ$ <adj><MB> \
 %        |  $ASTEM$ $DAJ$ 
 
 $VSTEM$  = $VSTEM$ \
-         | ($NSTEM$|$PNSTEM$) $DNV$ <v><MB> \
+         | ($NSTEM$|$PNSTEM$ $apos$) $DNV$ <v><MB> \
          | $JSTEM$ $DJV$ <v><MB> \ 
 %           $ASTEM$ $DAV$   |\
 %           $VSTEM$ $DVV$?  |\
