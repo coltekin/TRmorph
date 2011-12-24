@@ -22,7 +22,7 @@
 % POS tags
 #pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><det><pnct><exist><nexist><not><q>
 #subcat# = <pers><dem><locp><qst><top><ant><cog><org><acr>
-#BM#  = <RB><MB>    % Boundary markers
+#BM#  = <RB><MB><DB>    % Boundary markers
 
 % other intermediate symbols (this should probalby contain
 % <K><D><C><A><I>, we assume they may appear in lexicon for some

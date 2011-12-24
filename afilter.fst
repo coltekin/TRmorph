@@ -10,7 +10,7 @@ ALPHABET = [#Ssym##deriv##infl#] \
            ç:<c> p:<p> t:<t> k:<k> g:<g> k:<K> t:<D> ç:<C> \
            <A><I> e:<e> \
            a:<pA> ı:<pI> o:<pO> u:<pU> \
-           <>:[#TMP#] <>:<RB> <>:<MB>
+           <>:[#TMP#] <>:[#BM#]
 
 $deltempsym$ = .
 

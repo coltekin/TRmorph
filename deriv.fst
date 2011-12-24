@@ -45,11 +45,11 @@ $MISC$ =  "lexicon/misc"
 
 %%% Reflexive
 %
-$reflexive$ = <ref>:{<bI>n} <MB>
+$reflexive$ = <ref>:{<bI>n} <DB><MB>
 
 %%% Reciprocal
 
-$reciprocal$ = <rec>:{<bI>ş} <MB>
+$reciprocal$ = <rec>:{<bI>ş} <DB><MB>
 
 $VSTEM-rr$ =  $VSTEM$ || \
               [#Lsym#]* <rfl>:<> <rcp>:<> [#caus_types##aor_types#]* <v><RB> 
@@ -238,8 +238,8 @@ $D_sAra$ = <D_sAr>:{'<bSS><A>r}
 
 $DMA$ = $D_sAr$ | $D_sAra$ 
 
-$JSTEM$ = $JSTEM$ | $MSTEM$ $DMJ$ <adj><MB>
-$ASTEM$ = $ASTEM$ | $MSTEM$ $DMA$ <adv><MB>
+$JSTEM$ = $JSTEM$ | $MSTEM$ $DMJ$ <adj><DB><MB>
+$ASTEM$ = $ASTEM$ | $MSTEM$ $DMA$ <adv><DB><MB>
 
 
 %$ASTEM$>>"test-a.fst"
@@ -260,9 +260,9 @@ $DMN$ = $DMN0$ | $DMNa$
 % noun, to simplify the notation below. we modify the N here.
 
 $NSTEM$ = $NSTEM$ |\
-          $JSTEM$ ($DJN0$ <n><MB>)|\
-          $ASTEM$ ($DAN0$ <n><MB>)|\
-          $MSTEM$ ($DMN$ <n><MB>)
+          $JSTEM$ ($DJN0$ <n><DB><MB>)|\
+          $ASTEM$ ($DAN0$ <n><DB><MB>)|\
+          $MSTEM$ ($DMN$ <n><DB><MB>)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,25 +295,25 @@ $NSTEM$ = $NSTEM$ |\
 %
 
 % TODO: appostrophe after PNSTEM
-$NSTEM$  = $NSTEM$ ($DNN$  <n><MB>)? \
-         |  $PNSTEM$ $apos$ $DNN$  <n><MB> \ 
-         |  $VSTEM$ $DVN$   <n><MB> \
-         |  $ASTEM$ $DAN$   <n><MB> \
-         |  $JSTEM$ $DJN$   <n><MB>
+$NSTEM$  = $NSTEM$ ($DNN$  <n><DB><MB>)? \
+         |  $PNSTEM$ $apos$ $DNN$  <n><DB><MB> \ 
+         |  $VSTEM$ $DVN$   <n><DB><MB> \
+         |  $ASTEM$ $DAN$   <n><DB><MB> \
+         |  $JSTEM$ $DJN$   <n><DB><MB>
             
-$ASTEM$  = $ASTEM$ ($DAA$ <adv><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><MB>
+$ASTEM$  = $ASTEM$ ($DAA$ <adv><DB><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><DB><MB>
 %           $VSTEM$ $DVA$   |\
 %           $JSTEM$ $DJA$ 
 
-$JSTEM$  = $JSTEM$ ($DJJ$ <adj><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNJ$ <adj><MB> \
-         |  $VSTEM$ $DVJ$ <adj><MB> \
+$JSTEM$  = $JSTEM$ ($DJJ$ <adj><DB><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNJ$ <adj><DB><MB> \
+         |  $VSTEM$ $DVJ$ <adj><DB><MB> \
 %        |  $ASTEM$ $DAJ$ 
 
 $VSTEM$  = $VSTEM$ \
-         | ($NSTEM$|$PNSTEM$) $DNV$ <v><MB> \
-         | $JSTEM$ $DJV$ <v><MB> \ 
+         | ($NSTEM$|$PNSTEM$) $DNV$ <v><DB><MB> \
+         | $JSTEM$ $DJV$ <v><DB><MB> \ 
 %           $ASTEM$ $DAV$   |\
 %           $VSTEM$ $DVV$?  |\
 
@@ -322,26 +322,26 @@ $VSTEM$  = $VSTEM$ \
 %% The part below be repeated to anlyze logner sequences of
 %% derivational morphemes.
 %
-$NSTEM$  = $NSTEM$ ($DNN$  <n><MB>)? \
-         |  $PNSTEM$ $DNN$  <n><MB> \ 
-         |  $VSTEM$ $DVN$   <n><MB> \
-         |  $ASTEM$ $DAN$   <n><MB> \
-         |  $JSTEM$ $DJN$   <n><MB>
+$NSTEM$  = $NSTEM$ ($DNN$  <n><DB><MB>)? \
+         |  $PNSTEM$ $DNN$  <n><DB><MB> \ 
+         |  $VSTEM$ $DVN$   <n><DB><MB> \
+         |  $ASTEM$ $DAN$   <n><DB><MB> \
+         |  $JSTEM$ $DJN$   <n><DB><MB>
 
-$ASTEM$  = $ASTEM$ ($DAA$ <adv><MB>)? \
-         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><MB>
+$ASTEM$  = $ASTEM$ ($DAA$ <adv><DB><MB>)? \
+         | ($NSTEM$|$PNSTEM$) $DNA$ <adv><DB><MB>
 %           $VSTEM$ $DVA$   |\
 %           $JSTEM$ $DJA$ 
 
 
-$JSTEM$  = $JSTEM$ ($DJJ$ <adj><MB>)? \
-         | ($NSTEM$|$PNSTEM$ $apos$) $DNJ$ <adj><MB> \
-         |  $VSTEM$ $DVJ$ <adj><MB> \
+$JSTEM$  = $JSTEM$ ($DJJ$ <adj><DB><MB>)? \
+         | ($NSTEM$|$PNSTEM$ $apos$) $DNJ$ <adj><DB><MB> \
+         |  $VSTEM$ $DVJ$ <adj><DB><MB> \
 %        |  $ASTEM$ $DAJ$ 
 
 $VSTEM$  = $VSTEM$ \
-         | ($NSTEM$|$PNSTEM$ $apos$) $DNV$ <v><MB> \
-         | $JSTEM$ $DJV$ <v><MB> \ 
+         | ($NSTEM$|$PNSTEM$ $apos$) $DNV$ <v><DB><MB> \
+         | $JSTEM$ $DJV$ <v><DB><MB> \ 
 %           $ASTEM$ $DAV$   |\
 %           $VSTEM$ $DVV$?  |\
 
