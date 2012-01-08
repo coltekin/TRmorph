@@ -20,7 +20,7 @@
 #V_all# = #V##V_xx##V_Pal##V_Buff#
 
 % POS tags
-#pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><det><pnct><exist><nexist><not><q><bch><ui><pau><onom><redup>
+#pos# = <adj><adv><n><np><prn><postp><ij><cnjcoo><cnjsub><cnjadv><v><vaux><num><det><pnct><exist><nexist><not><q><bch><ui><pau><onom><redup><disc_part>
 #subcat# = <pers><dem><locp><qst><ngtv><top><ant><cog><org><acr>
 #BM#  = <RB><MB><DB>    % Boundary markers
 
