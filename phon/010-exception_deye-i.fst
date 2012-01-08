@@ -15,6 +15,6 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <compn> \
            <BoW> e:i
 
-$diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [<v><RB><MB><>]* [<RB><MB>] [y<bY>])
+$diyi$ = (<BoW> [dy]) e <=> i ([#infl_feat#]* [#BM#<v><>]* [#BM#] [y<bY>])
 
 $diyi$

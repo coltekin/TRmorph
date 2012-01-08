@@ -16,4 +16,4 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <compn> \
            <bY>:<>
 
-(<BoW> i [<v><RB><MB><>]*) <bY> <=> <> 
+(<BoW> i [<v><RB><DB><MB><>]*) <bY> <=> <> 

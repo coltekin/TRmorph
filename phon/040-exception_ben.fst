@@ -21,4 +21,4 @@ ALPHABET = [#Ssym#] [#pos##subcat##BM##infl_feat#]\
            <BoW>\
            <e>:a <e>:e
 
-<e> <=> a (n [#pos##subcat#<>#BM##infl_feat#]* <bY><A> <MB>)
+<e> <=> a (n [#pos##subcat#<>#BM##infl_feat#]* <bY><A> [<DB>]?<MB>)

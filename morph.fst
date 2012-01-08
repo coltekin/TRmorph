@@ -620,10 +620,13 @@ $CLITIC$ = $CLITIC$ | $VYD$
 %
 $PUNCT$ = $punct$
 
-$PUNCT$ >> "punct.a"
+%$PUNCT$ >> "punct.a"
 
 
 %%%%%%%%%%%%% done
+
+%$NSTEM$ >> "/tmp/nstem.a"
+%$NOUN$ >> "/tmp/noun.a"
 
 $WORD$ = $NOUN$      |\
          $NP$        |\

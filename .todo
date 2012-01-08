@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="medium" time="1321092121">
+        kavruldu is not analyzed correctly
+    </note>
+    <note priority="medium" time="1321219285">
+        benim/bizim is not analyzed as genitive
+    </note>
+    <note priority="medium" time="1321219310">
+        better analysis of question particles
+    </note>
+    <note priority="medium" time="1321219332">
+        n/y change in Yusufeli'ne/Yusufeli'ye
+
+        some of these are already marked in the lexicon.
+    </note>
+    <note priority="medium" time="1321219384">
+        mark "already plural" lexical items in the lexicon
+    </note>
+    <note priority="medium" time="1321219404">
+        correct inflection of numbers and abbreviations
+    </note>
+    <note priority="medium" time="1321219439">
+        -de followed by other morphemes: gide debilirim
+    </note>
+    <note priority="medium" time="1321219461">
+        derivation attached to inflected words
+
+        bizimki-leş-me 
+        (http://sozluk.sourtimes.org/show.asp?t=akp+nin+kuresel+ekonomik+kriz+icin+aldigi+onlemler)
+        bizden-leş-me 
+        (http://www.kafkasya.net/site/modules.php?name=Forumsfile=viewtopicp=2535)
+        kaçınılmazlığı (metu corpus)
+        (oku-ma-mış-lık, biz-den-leş-miş-lik, duyarsızlaşmışlık)
+    </note>
+    <note priority="medium" time="1321219625">
+        verbs with -mIş are not analyzed as verbal adjective
+
+        "...doğmamış bebeğimi öldürdü" [issue #1 on github]
+    </note>
+    <note priority="medium" time="1321219725">
+        ila/ile different analyses [issue #2 on github]
+    </note>
+    <note priority="medium" time="1321219817">
+        verb subcategorization
+    </note>
+    <note priority="medium" time="1321219822">
+        proper noun subcategorization
+    </note>
+    <note priority="medium" time="1321219842">
+        big lexicon review
+
+        The lexicon can be checked (semi)automatically for correctness
+        using TDK or DD. There is a half-baked solution, but needs
+        some more time to finalize it.
+    </note>
+    <note priority="medium" time="1321228599">
+        fix fixed number of subcategories in afilter.fst
+    </note>
+    <note priority="medium" time="1323083676">
+        passive for intransitive verbs should not take person agreemnet
+
+        gel-in-di is OK, gel-in-di-k is not.
+    </note>
+    <note priority="medium" time="1324730467">
+        broken 'postpositions + nominal inflections'
+    </note>
+</todo>
