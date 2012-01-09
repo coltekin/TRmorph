@@ -159,7 +159,7 @@ $p2_2sf$ = <2sf>:{s<I>n<I>z} <MB>
 $p2_3s$ = <3s>:{} <MB>
 $p2_1p$ = <1p>:{<bY><I>z} <MB>
 $p2_2p$ = <2p>:{s<I>n<I>z} <MB>
-$p2_3p$ = <3p>:{l<A>r} <MB>
+$p2_3p$ = (<3p>:{l<A>r} | <3p>:{}) <MB>
 
 % note: 2psg formal form is not in
 $p_g2$ = $p2_1s$ | $p2_2s$ | $p2_3s$ | $p2_1p$ | $p2_2p$ | $p2_3p$
@@ -173,7 +173,7 @@ $p1_2sf$ = <2sf>:{n<I>z} <MB>
 $p1_3s$ = <3s>:{} <MB>
 $p1_1p$ = <1p>:{<k>} <MB>
 $p1_2p$ = <2p>:{n<I>z} <MB>
-$p1_3p$ = <3p>:{l<A>r} <MB>
+$p1_3p$ = (<3p>:{l<A>r} | <3p>:{}) <MB>
 
 % note: 2psg formal form is not in
 $p_g1$ = $p1_1s$ | $p1_2s$ | $p1_3s$ | $p1_1p$ | $p1_2p$ | $p1_3p$
@@ -188,6 +188,7 @@ $p3_3s$ = <3s>:{} <MB>
 $p3_1p$ = <1p>:{l<I>m} <MB>
 $p3_2p$ = <2p>:{s<I>n<I>z} <MB>
 $p3_3p$ = <3p>:{l<A>r} <MB>
+$p3_3p$ = (<3p>:{l<A>r} | <3p>:{}) <MB>
 
 % note: 2psg formal form is not in
 $p_g3$ = $p3_1s$ | $p3_2s$ | $p3_3s$ | $p3_1p$ | $p3_2p$ | $p3_3p$
@@ -198,7 +199,7 @@ $p4_2s$ = (<2s>:{s<A>n<A>} | <2s>:{<>}) <MB>
 $p4_2sf$ = (<2sf>:{<bY><I>n} | <2sf>:{<bY><I>n<I>z} | <2sf>:{s<A>n<I>z<A>}) <MB>
 $p4_3s$ = <3s>:{s<I>n} <MB>
 $p4_2p$ = (<2p>:{<bY><I>n} | <2p>:{<bY><I>n<I>z} | <2p>:{s<A>n<I>z<A>}) <MB>
-$p4_3p$ = <3p>:{s<I>nl<A>r} <MB>
+$p4_3p$ = (<3p>:{s<I>nl<A>r} | <3p>:{}) <MB>
 
 % note: 2psg formal form is not in
 $p_g4$ = $p4_2s$ | $p4_3s$ |  $p4_2p$ | $p4_3p$
