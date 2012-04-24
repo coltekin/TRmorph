@@ -1,5 +1,5 @@
 WEBDIR ?= $(HOME)/public_html/trmorph
-URL = ./index
+URL = ./index.php
 DATE = $(shell date +%Y-%m-%d)
 FSTINFL = $(shell which fst-infl)
 
