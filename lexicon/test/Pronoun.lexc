@@ -1,0 +1,31 @@
+
+LEXICON PrnRoot
+ben     PersPrn;
+sen     PersPrn;
+o       PersPrn;   !N.B. may refer to non-person in some cases
+biz     PersPrn;
+siz     PersPrn;
+onlar   PersPrn;
+bu      DemPrn;
+şu      DemPrn;
+o       DemPrn;
+kendi   PersPrn;    !N.B. may refer to non-person in some cases
+! Note these are now in morph.lexc
+!kim     QPrn;
+!ne      QPrn;
+!hangi   QPrn;
+!nere    QPrn;
+ora     LocPrn;
+bura    LocPrn;
+şura    LocPrn;
+herbir  Prn;
+öteki   Prn;
+beriki  Prn;
+birbir  PPrnBirBir; ! this has to be inflected
+hepsi   Prn;
+birisi  Prn;
+birileri    Prn;
+kimse   Prn;
+!TODO: solu - aşağısı - dışarısı - ötesi
+!      normally derived, but probalby listing them is also ok.
+

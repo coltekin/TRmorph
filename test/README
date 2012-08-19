@@ -1,0 +1,21 @@
+
+Test cases in this directory requires `expect'.
+
+The files that start with extension `.test' specify test cases, on for
+each line, similar to:
+
+A:A:eve:ev<n><dat>
+A:R:eva:ev<n><dat>
+G:A:ev<n><dat>:eve
+G:R:ev<n><dat>:eva
+
+The first field (separated with colon `:') tells whether test is valid
+for analysis (A) or generation (G). The second field instructs whether
+the test-expect pair is good and should be accepted (A) or bad and
+rejected (R). The third field is the string to test, and the fourth
+field is string to expect (or not to expect for R). For a reject test,
+if the expect string is not specified, then it means the send string
+is not accepted at all and analysis or generation should fail. So, the
+second line above is better specified,
+
+A:R:eva:

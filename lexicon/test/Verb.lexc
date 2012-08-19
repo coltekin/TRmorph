@@ -1,0 +1,76 @@
+
+LEXICON VerbRoot
+çalış           V;
+oku             V;
+yaz             V;
+otur            V;
+anlat           V;
+üfle            V;
+boya            V;
+yaşa            V;
+kapa            V;
+fısılda         V_Rcp;
+yıka            V_Rfl;
+ara             V_Rfl_Rcp;
+de              V_CausDir;
+ye              V_CausDir;
+al              V_CausDir;
+dur             V_CausDir;
+bul             V_Rcp_CausDir;
+!gör             V_Rcp_CausDir; ! causative actually irregular, but people seem to use 'gördür'
+gör             V_Rfl_Rcp_CausIrreg; ! causative is `göster'.
+sar             V_Rfl_CausDir_AorAr;
+gel             V_CausIrreg; ! causative is `getir'.
+yüz             V_AorAr;
+tart            V_AorAr;
+say             V_AorAr;
+ov              V_AorAr;
+it              V_AorAr;
+göç             V_AorAr;
+yap             V_AorAr;
+boz             V_Rcp_AorAr;    ! reciprocal is questionalble bozuşmak is derived but lexically different
+yaz             V_Rcp_AorAr;
+boğ             V_Rcp_AorAr;
+sık             V_Rcp_AorAr;
+öp              V_Rcp_AorAr;
+giy             V_Rfl_AorAr;
+tak             V_Rfl_Rcp_AorAr; ! reciprocal is questionable
+sev             V_Rfl_Rcp_AorAr;
+ört             V_Rfl_Rcp_AorAr;
+döv             V_Rfl_Rcp_AorAr;
+kur             V_CausDir_AorAr;
+sor             V_CausDir_AorAr;
+e^t             V_CausDir_AorAr;
+dol             V_Rcp_CausDir_AorAr;
+gül             V_Rcp_CausDir_AorAr;
+böl             V_Rfl_Rcp_CausDir_AorAr;
+kalk            V_Rfl_CausIrreg_AorAr;
+gir             V_CausIrreg_AorAr;
+sok             V_CausIrreg_AorAr;
+üz              V_CausIrreg_AorAr;
+gi^t            V_CausIrreg_AorAr;
+!git             V_CausAr_AorAr;    ! `gider'mek is lexicalized 
+çık             V_CausAr_AorAr;
+çök             V_CausArt_AorAr;
+çök             V_AorAr;       ! `çöktür'mek is also fine
+tık             V_CausAt_AorAr;
+art             V_CausIr_AorAr;
+!art             V_AorAr;       ! some would use `arttır'
+aş              V_CausIr_AorAr;
+bat             V_CausIr_AorAr;
+bit             V_CausIr_AorAr;
+doğ             V_CausIr_AorAr;
+düş             V_CausIr_AorAr;
+geç             V_CausIr_AorAr;
+iç              V_CausIr_AorAr;
+kaç             V_CausIr_AorAr;
+piş             V_CausIr_AorAr;
+şaş             V_CausIr_AorAr;
+şiş             V_CausIr_AorAr;
+taş             V_CausIr_AorAr;
+uç              V_CausIr_AorAr;
+yat             V_CausIr_AorAr;
+yit             V_CausIr_AorAr;
+yet             V_CausIr;
+kork            V_CausIt_AorAr;
+üşü             V_CausIt;

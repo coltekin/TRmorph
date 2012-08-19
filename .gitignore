@@ -7,3 +7,6 @@ tr-gen.ol
 tr-mor.ol
 tmp
 TODO
+*.swp
+*.fst
+trmorph.lexc

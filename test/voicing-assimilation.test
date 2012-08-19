@@ -1,0 +1,12 @@
+A:A:şekerci:şeker<n><D_CI><n>
+A:R:şekerçi:
+A:A:şarapçı:şarap<n><D_CI><n>
+A:R:şarapcı:
+A:A:geldi:gel<v><t_past><3s>
+A:R:gelti:gel<v><t_past><3s>
+A:A:kaçtı:kaç<v><t_past><3s>
+A:R:kaçdı:kaç<v><t_past><3s>
+G:A:iktisat<n><D_CI><n>:iktisatçı
+G:A:makina<n><D_CI><n>:makinacı
+G:A:gel<v><t_past><3s>:geldi
+G:A:kaç<v><t_past><3s>:kaçtı

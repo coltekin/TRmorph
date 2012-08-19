@@ -1,0 +1,12 @@
+A:A:imiş:i<v><cpl_mis><3s>
+A:R:iymiş:i<v><cpl_mis><3s>
+A:A:idi:i<v><cpl_di><3s>
+A:R:iydi:i<v><cpl_di><3s>
+A:A:ise:i<v><cpl_sa><3s>
+A:R:iyse:i<v><cpl_sa><3s>
+#A:A:iken:i<v><3s><cpl_ken>
+A:R:iyken:i<v><3s><cpl_ken>
+G:A:i<v><cpl_mis><3s>:imiş
+G:A:i<v><cpl_di><3s>:idi
+G:A:i<v><cpl_sa><3s>:ise
+#G:A:i<v><3s><cpl_ken>:iken

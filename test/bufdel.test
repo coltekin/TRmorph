@@ -1,0 +1,44 @@
+A:A:evi:ev<n><p3s>
+A:R:evsi:
+A:A:evi:ev<n><acc>
+A:R:evyi:
+A:A:evle:ev<n><ins>
+A:R:evyle:
+A:A:evin:ev<n><p2s>
+A:A:evin:ev<n><gen>
+A:A:evim:ev<n><p1s>
+A:R:evn:
+A:R:evm:
+A:A:arabayla:araba<n><ins>
+A:R:arabala:araba<n><ins>
+A:A:arabası:araba<n><p3s>
+A:A:arabayı:araba<n><acc>
+A:R:arabaı:
+A:A:arabanın:araba<n><p2s><gen>
+A:A:arabanın:araba<n><gen>
+A:R:arabaın:
+#TODO: add these back
+#A:A:altışar:altı<num><D_sAr><adv>
+#A:R:altıar:altı<num><D_sAr><adv>
+#A:A:üçer:üç<num><D_sAr><adv>
+#A:R:üçşer:üç<num><D_sAr><adv>
+A:A:arabam:araba<n><p1s>
+A:R:arabaım:
+#analyze> daracık
+#hemencecik<n>
+G:A:ev<n><p3s>:evi
+G:A:ev<n><acc>:evi
+G:A:ev<n><ins>:evle
+G:A:ev<n><p2s>:evin
+G:A:ev<n><gen>:evin
+G:A:araba<n><ins>:arabayla
+G:A:araba<n><p3s>:arabası
+G:A:araba<n><acc>:arabayı
+G:A:araba<n><gen>:arabanın
+#TODO: add these back
+#G:A:altı<num><D_sAr><adv>:altı'şar
+#G:A:altı<num><D_sAr><adv>:altışar
+#G:A:üç<num><D_sAr><adv>:üç'er
+#G:A:üç<num><D_sAr><adv>:üçer
+G:A:ev<n><p1s>:evim
+G:A:araba<n><p1s>:arabam

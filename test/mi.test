@@ -1,0 +1,43 @@
+A:A:mi:mi<q>
+A:A:mi:mi<q><3p>
+A:A:mi:mi<q><3s>
+A:A:mu:mu<q><3s>
+A:A:mü:mü<q><3s>
+A:A:mı:mı<q><3s>
+A:A:geldi mi:gel<v><t_past><3p><q>
+A:A:geldin mi:gel<v><t_past><2s><q>
+A:A:geldiler mi:gel<v><t_past><3p><q>
+A:A:gelecek mi:gel<v><t_fut><q><3s>
+A:A:gelecek misin:gel<v><t_fut><q><2s>
+A:A:gelecekler mi:gel<v><t_fut><3p><q>
+A:R:gelecek miler:
+A:R:geldi misin:
+A:R:geldi miler:
+A:A:okuyor muyuz:oku<v><t_cont><q><1p>
+A:A:okuyor muyduk:oku<v><t_cont><q><cpl_di><1p>
+A:A:okuyor muymuşuz:oku<v><t_cont><q><cpl_mis><1p>
+A:A:okuyor muymuşlar:oku<v><t_cont><q><cpl_mis><3p>
+A:A:okuyorlar mıymış:oku<v><t_cont><3p><q><cpl_mis>
+A:A:göçmüşler mi:göç<v><t_narr><3p><q>
+A:A:göçüyorlar mıymış:göç<v><t_cont><3p><q><cpl_mis>
+A:A:göçmüş mü:göç<v><t_narr><q><3s>
+A:A:göçmüş müdür:göç<v><t_narr><q><3p><dir>
+A:A:göçmüş müdürler:göç<v><t_narr><q><dir><3p>
+A:A:okumakta mı:oku<v><t_makta><q><3s>
+A:A:okumakta mıdır:oku<v><t_makta><q><3s><dir>
+A:A:okumakta mıdırlar:oku<v><t_makta><q><dir><3p>
+# the following one is questionable
+A:A:okumaktalar mıdır:oku<v><t_makta><3p><q><dir>
+A:A:okumaktalar mı:oku<v><t_makta><3p><q>
+A:A:okumaktalar mıymış:oku<v><t_makta><3p><q><cpl_mis>
+A:A:okumakta mıymışlar:oku<v><t_makta><q><cpl_mis><3p>
+A:A:okumalı mı:oku<v><t_obl><q><3s>
+A:A:okumalı mıyız:oku<v><t_obl><q><1p>
+A:A:okumalı mısınız:oku<v><t_obl><q><2p>
+A:A:okumalı mısınızdır:oku<v><t_obl><q><2p><dir>
+A:R:okumaktalar mıymışlar:
+A:R:okumakta mıymışızdır:
+A:A:okuyor muydular:oku<v><t_cont><q><cpl_di><3p>
+A:A:okuyorlar mıydı:oku<v><t_cont><3p><q><cpl_di>
+A:A:okuyor muyduk:oku<v><t_cont><q><cpl_di><1p>
+A:A:okuyor muyduksa:oku<v><t_cont><q><cpl_di><1p><cpl_sa>

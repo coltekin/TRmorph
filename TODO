@@ -1,0 +1,19 @@
+- TODO's marked all around in the source files.
+- Derivational morphemes 
+- Postpositions 
+- Apostrophe insertion is not currently comply with official spelling
+  rules.
+- <acr> is not analyzed
+- Handling of reduplication is less than acceptable. We have a
+  lexicon, Redup, with a few non-wrod reduplication pieces, like
+  'maşkım'. However, 
+        (1) ideally these items should be tokenized together with the
+            previous word: e.g., 'aşkım maşkım'
+        (2) They should be allowed to inflect (the entry should be
+            something like 'aşk maşk<n>').
+-   apply up> okuyorsak mı
+    ???
+
+- Use a more natural lexical representation for compound noun roots.
+  Now, we require the -(s)I at the end to be removed, which can be
+  done by xfst rules just fine.

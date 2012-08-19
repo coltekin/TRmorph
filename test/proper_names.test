@@ -1,0 +1,22 @@
+A:A:Ali:Ali<np>
+A:R:Ali':
+A:A:Ali'nin:Ali<np><gen>
+A:A:Ali'de:Ali<np><loc>
+A:A:Ali'ye:Ali<np><dat>
+A:R:Ali'in:
+A:R:Ali'e:
+A:R:Ali'e:
+#
+# FSD with aposthrophe
+#
+A:A:Kızılırmak'a:Kızılırmak<np><dat>
+A:R:Kızılırmağ'a:
+A:R:Kızılırmak'ya:
+A:A:Kızılırmak'ın:Kızılırmak<np><gen>
+A:R:Kızılırmağ'ın:
+A:R:Kızılırmak'nın:
+A:A:Kızılırmak'ta:Kızılırmak<np><loc>
+A:R:Kızılırmağ'ta:
+A:R:Kızılırmağ'da:
+A:R:Kızılırmak'da:
+#
