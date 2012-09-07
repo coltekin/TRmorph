@@ -794,10 +794,8 @@ LEXICON     n1tCont
 ! They are removed from both surface and analysis.
 
 LEXICON NumberNumeric
-
 <%0|1|2|3|4|5|6|7|8|9>  FirstNum;
                         NumPercent;
-                        dSep;
 
 LEXICON FirstNum
 <%0|1|2|3|4|5|6|7|8|9>  SecondNum;
