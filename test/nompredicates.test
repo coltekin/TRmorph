@@ -4,6 +4,6 @@ A:A:ev<n><pl><3s>
 G:A:ev<n><3p>:evler
 G:A:ev<n><3p>:ev
 A:A:evde:ev<n><loc><3p>
-A:R:evi:ev<n><acc><3s>
-A:R:evi:ev<n><acc><3p>
-G:R:ev<n><acc><3p>
+#A:R:evi:ev<n><acc><3s>
+#A:R:evi:ev<n><acc><3p>
+#G:R:ev<n><acc><3p>
