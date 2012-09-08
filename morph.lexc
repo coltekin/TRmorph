@@ -1945,12 +1945,26 @@ mi        mI;
 mu        mI;
 mü        mI;
 i         V_i;
-! the following four are not techincally clitics, 
+! the following three are not techincally clitics, 
 ! but they are here for lack of a better place 
 var       var;
 yok       yok;
 değil     degil;
+!
 ile       ileCont;
+! 
+üzer      uzerCont;
+
+! üzer (somewhat) is like `üst', but does not 
+! occur in bare form. so we allow it to take any 
+! nominal inflection, but do not allow to surface without one.
+!
+! TODO: this should be more restrictive
+!
+LEXICON   uzerCont 
+                Nplu;   ! ??
+                Npos;
+                Ncase;
 
 LEXICON  ileCont
 %<postp%>:@RB   Case1Cont;
