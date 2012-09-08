@@ -29,6 +29,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                       %<part_dik%> %<part_acak%> %<part_yan%>
                   %<cnjsub%> %<cnjcoo%> %<cnjadv%>
                   %<ij%>
+                  %<ngtv%> %<bch%> %<disc_part%> %<pau%> %<ui%>
                   %<punct%>
                   %<redup%>
                   %<exist%> %<ntexist%> %<not%>
@@ -332,6 +333,9 @@ LEXICON DIrEnd
 
 LEXICON Adj
 %<adj%>:@RB        AdjCont;
+
+LEXICON AdjNcomp
+@NCOMP%<n%>:^(s)^I@NCOMP@RB AdjCont;
 
 LEXICON  AdjCont
                     #;
