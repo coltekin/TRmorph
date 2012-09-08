@@ -41,6 +41,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
                   ^pA ^pI ^pO ^pU
                   @RB @MB @dB
+                  @APOS
                   @tSep @dSep
                   @NCOMP
                   @DEL@ @DUP@ @DELS@
@@ -99,7 +100,11 @@ LEXICON CnjSub
 !
 
 LEXICON PostP
-%<postp%>:@RB       Ninfl;
+%<postp%>:@RB       PostPCont;
+
+LEXICON PostPCont
+                    #;
+                    Ninfl;
 
 !
 ! onomatopoeic words
@@ -146,14 +151,26 @@ LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 LEXICON NP
 %<np%>:0@RB   NPApos;
 
+LEXICON NPnation
+%<np%>:0@RB   NPnationCont;
+
+LEXICON NPperson
+%<np%>:0@RB   NPpersonCont;
+
+LEXICON NPnationCont
+              NPApos;
+              ND_CAlanguage;
+
+LEXICON NPpersonCont
+              NPApos;
+0:@APOS@MB   D_gil;
+
 LEXICON   NPApos  
-        #;
-0:'     NPCont;
-!        NPCont;
+                #;
+0:@APOS@MB     NPCont;
 
 LEXICON   NPCont  
         Nderiv;
-        D_gil;
         Ninfl;
 
 LEXICON Ncomp ! this is only for lexicalized forms with compounding
@@ -879,7 +896,7 @@ LEXICON NumericCont
                 NumericApos;
 
 LEXICON NumericApos
-%<apos%>:%'@MB      NumDeriv;
+%<apos%>:%@APOS@MB      NumDeriv;
 
 
 LEXICON NumDeriv
@@ -2015,7 +2032,7 @@ LEXICON Nderiv
             ND_CA;
             D_CI;
             D_CIl;
-            ND_lA;
+!            ND_lA;
             ND_lAn;
             ND_lAS;
             D_sAl;
@@ -2180,8 +2197,11 @@ LEXICON D_gil
 !       tuz-la, şeker-le, kuru-la ....
 !       it also attaches to some(all/most?) onomatopoeic words.
 !
-LEXICON ND_lA
-%<D_lA%>:l^A       DerivVCont;
+!  NOTE: although it is productive, the N->V derivation causes a lot 
+!        of ambiguous analyses. it is commented out.
+!
+!LEXICON ND_lA
+!%<D_lA%>:l^A       DerivVCont;
 LEXICON OD_lA
 %<D_lA%>:l^A       DerivVCont;
 

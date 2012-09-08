@@ -32,10 +32,20 @@ define ConsXX    %^c | %^p | %^t | %^k | %^g | %^K | %^D | %^C | %@LN ;
 define ConsSilent %^sVC |  %^sUC;
 define ConsAll  Cons | ConsXX ; ! except buffers
 
-! Intermedate symbols with no surface forms
-define Boundary %@MB | %@RB | %@dB; 
+! Intermediate symbols with no surface forms
+define Boundary %@MB | %@RB | %@dB %@APOS; 
 define IntSym   Boundary | %@NCOMP | %@opt3;
 define Apos %';
+
+!
+! Replace apostrophe wit acceptable symbols 
+!
+! 
+! NOTE: for generation it is better to limit these to only one.
+!
+define AposSym %'|%’;
+
+define replaceApos %@APOS -> AposSym;
 
 !
 ! Replace @dB `digit boundary' with space or nothing
@@ -515,6 +525,7 @@ define Capitalize a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D,
 clear stack
 read regex     AFilter
            .o. Lexicon 
+           .o. replaceApos
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator
