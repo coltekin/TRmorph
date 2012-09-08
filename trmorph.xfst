@@ -279,7 +279,11 @@ define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB
 ! Namely,
 !       - in the passive form of the verb stems ending with `koy'
 !          `y' becomes `n' optionally (generally preferred). 
-!       - the passive form of `kapa' is `kapatıl'
+!       - the passive form of `kapa' is `kapatıl'. Note that with the
+!         above exception, this makes it ambiguous between 'kapatıl' 
+!         and `kapanıl'. 
+!           TODO: not completely convinced that `kapanır' is not another 
+!                 option
 !       - the passive form of `anla' is `anlaşıl'
 !
 !

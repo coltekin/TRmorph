@@ -1,4 +1,4 @@
-LEXICON ?= old
+LEXICON ?= new
 ROOTLEX=$(shell ls lexicon/$(LEXICON)/*.lexc)
 
 all: trmorph.fst

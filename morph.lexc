@@ -107,6 +107,67 @@ LEXICON PostPCont
                     #;
                     Ninfl;
 
+LEXICON PostPlocation
+                PostPloc;
+                PostPdat;
+                PostPabl;
+
+LEXICON PostPloc
+%<n%>%<p1s%>:@RB^(I)m@MB      PostPlocCont;
+%<n%>%<p2s%>:@RB^(I)n@MB      PostPlocCont;
+%<n%>%<p3s%>:@RB^(s)^I@MB     PostPlocCont;
+%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPlocCont;
+%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPlocCont;
+%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
+
+LEXICON PostPlocCont
+%<loc%>%<postp%>:^D^A@MB     #;
+
+LEXICON PostPdat
+%<n%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
+%<n%>%<p2s%>:@RB^(I)n@MB      PostPdatCont;
+%<n%>%<p3s%>:@RB^(s)^I@MB     PostPdatCont;
+%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPdatCont;
+%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPdatCont;
+%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
+
+LEXICON PostPdatCont
+%<dat%>%<postp%>:^(y)^A@MB   #;
+
+LEXICON PostPins
+%<n%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
+%<n%>%<p2s%>:@RB^(I)n@MB      PostPinsCont;
+%<n%>%<p3s%>:@RB^(s)^I@MB     PostPinsCont;
+%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPinsCont;
+%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPinsCont;
+%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
+
+LEXICON PostPinsCont
+%<ins%>%<postp%>:^(y)l^A@MB  #;
+
+LEXICON PostPabl
+%<n%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
+%<n%>%<p2s%>:@RB^(I)n@MB      PostPablCont;
+%<n%>%<p3s%>:@RB^(s)^I@MB     PostPablCont;
+%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPablCont;
+%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPablCont;
+%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
+
+LEXICON PostPablCont
+%<abl%>%<postp%>:^D^An@MB    #;
+
+LEXICON PostPca
+%<n%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
+%<n%>%<p2s%>:@RB^(I)n@MB      PostPcaCont;
+%<n%>%<p3s%>:@RB^(s)^I@MB     PostPcaCont;
+%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPcaCont;
+%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPcaCont;
+%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
+
+LEXICON PostPcaCont
+%<D_CA%>%<postp%>:^C^A@MB       #;
+
+
 !
 ! onomatopoeic words
 !
