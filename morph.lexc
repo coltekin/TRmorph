@@ -1946,6 +1946,11 @@ i         V_i;
 var       var;
 yok       yok;
 değil     degil;
+ile       ileCont;
+
+LEXICON  ileCont
+%<postp%>:@RB   Case1Cont;
+!TODO: better word class??
 
 LEXICON var
 %<exist%>:@RB Ncont;
