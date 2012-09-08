@@ -266,7 +266,7 @@ define iDeleteY %^%(y%) -> 0 || .#. i %@RB _ ;
 ! after a limited set of verbal roots, and optional `n' is inserted
 ! before passive morpheme
 
-define wordsPassiveN {de}|{ye}|{yaşa}|{kapa}|{boya};
+define wordsPassiveN {de}|{ye}|{yaşa}|{kapa}|{boya}|{söyle};
 define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB 
                                      _ %^%(I%) %@LN %@MB ;
 
@@ -274,9 +274,20 @@ define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB
 ! Replace intermediate symbol @LN on passive according to preceding context
 !
 !
-! The passive morpheme is -(I)n if the preceding letter is `l' or a vowel -(I)n otherwise.
+! The passive morpheme is -(I)n if the preceding letter is `l' or a 
+! vowel -(I)n otherwise. We also add a few more exceptional cases here.
+! Namely,
+!       - in the passive form of the verb stems ending with `koy'
+!          `y' becomes `n' optionally (generally preferred). 
+!       - the passive form of `kapa' is `kapatıl'
+!       - the passive form of `anla' is `anlaşıl'
+!
+!
 
-define PassiveLN  %@LN -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
+define PassiveLN  y (->) n  || k o _ %@RB  %^%(I%) %@LN %@MB
+              .o. [..] -> t || .#. {kapa} %@RB _ %^%(I%) %@LN %@MB
+              .o. [..] -> ş || .#. {anla} %@RB _ %^%(I%) %@LN %@MB
+              .o. %@LN -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
               .o. %@LN -> l ;
 
 !
