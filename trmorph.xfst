@@ -512,7 +512,7 @@ define DeleteBoundary ["@MB" | "@RB"] -> 0 ;
 ! The vowels with circumflex î, û, â are written without circumflex
 ! most of the time. We optionally delete the accent from the surface.
 
-define DeleteCircumflex î (->) ı, Î (->) I, 
+define DeleteCircumflex î (->) i, Î (->) İ, 
                         û (->) u, Û (->) U, 
                         â (->) a, Â (->) A;
 
