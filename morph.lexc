@@ -2081,6 +2081,22 @@ LEXICON Punctuation
 %-              Punc;
 %"              Punc;
 %.%.%.          Punc;
+%“              Punc;
+%‘              Punc;
+%”              Punc;
+%"              Punc;
+%/              Punc;
+%*              Punc;
+%'              Punc;
+%’              Punc;
+%«              Punc;
+%»              Punc;
+%‹              Punc;
+%›              Punc;
+%„              Punc;
+%‟              Punc;
+%‚              Punc;
+%‛              Punc;
 
 LEXICON  Punc
 %<punct%>:0     #;
