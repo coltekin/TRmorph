@@ -933,11 +933,12 @@ LEXICON tStep3cont
                         NumericStem;
 
 !
-! One may want to more restrictive with the percent sign, 
+! One may want to be more restrictive with the percent sign, 
 ! but we accept anything, which makes sense for things like %200.
 ! It may also be good for generation to restrict the suffixes attached  
-! after a percentage
-!
+! after a percentage. On the other hand, for most cases, percent 
+! sign will be tokenized separately.
+! 
 LEXICON NumPercent 
 %<perc%>:%%@MB             NumPercentCont;
 
