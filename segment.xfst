@@ -1,0 +1,111 @@
+!
+! This script creates a segmenter.
+!
+! We first analyze the input, then use a modified generator 
+! that leaves the boundaries on the surface. 
+!
+! The result is likely to be ambiguous. There are two types of
+! ambiguities that this fst generates. Firs is due to multiple morphs
+! that may be used for the same function.
+! For example, this automaton will give `oku-r' and `oku-r-lar'
+! for segmentation of `okur'. The second one is due to the fact that 
+! there are two ways to indicate third person plural verbal agreement
+! either by a null morpheme (which is the case with `onlar kitap okur') 
+! or an over morpheme -lar. This can be fixed in the segmenter below
+! as well. However, for these cases, filtering the output is easy
+! anyway.  One can check, whether the original string and the
+! segmented string after removing the boundaries is the same or not. 
+!
+! The other, more genuine segmentation ambiguity occurs when the
+! string can be segmented in two different ways. For example `evleri'
+! will both  be segmented as `ev-leri' and `ev-ler-i'. Ambiguities
+! that do not affect the segmentation aside, the first one has only 
+! the third person plural possessive morpheme, while the
+! second one have two, one plural marker and one accusative case marker
+! (or third person singular possessive marker).
+!
+! The consecutive boundaries that may happen because of the null
+! morphemes are removed.
+!
+read lexc trmorph.lexc
+define Lexicon;
+
+source morph-phon.xfst
+
+define analyze AFilter
+           .o. Lexicon 
+           .o. replaceApos
+           .o. NumberSpace
+           .o. NumericInsSilentP
+           .o. NumericSeparator
+           .o. CompNoun
+           .o. DeleteSI
+           .o. DeleteLAR
+           .o. InsertN
+           .o. DelS
+           .o. PronounExceptions
+           .o. InsertY
+           .o. iDeleteY
+           .o. NbeforePassive
+           .o. PassiveLN
+           .o. Causative
+           .o. Optative3
+           .o. SpaceBeforeMI
+           .o. NegAorist
+           .o. DeleteBuffer
+           .o. DeYeException
+           .o. YorException
+           .o. VowelEpenthesis
+           .o. VowelHarmony 
+           .o. FSDevoicing
+           .o. VoicingAssimilation
+           .o. Redup
+           .o. DeleteSilentP
+           .o. KiKu
+           .o. DeleteCircumflex
+           .o. DeleteBoundary
+           .o. Capitalize
+           .o. AllCaps ;
+!
+! This is the same analyzer. Except, it leaves the boundaries 
+! intact at the surface level
+! TODO: this can be made more strict/unambigous.
+!
+define analyzeBM AFilter
+           .o. Lexicon 
+           .o. replaceApos
+           .o. NumberSpace
+           .o. NumericInsSilentP
+           .o. NumericSeparator
+           .o. CompNoun
+           .o. DeleteSI
+           .o. DeleteLAR
+           .o. InsertN
+           .o. DelS
+           .o. PronounExceptions
+           .o. InsertY
+           .o. iDeleteY
+           .o. NbeforePassive
+           .o. PassiveLN
+           .o. Causative
+           .o. Optative3
+           .o. SpaceBeforeMI
+           .o. NegAorist
+           .o. DeleteBuffer
+           .o. DeYeException
+           .o. YorException
+           .o. VowelEpenthesis
+           .o. VowelHarmony 
+           .o. FSDevoicing
+           .o. VoicingAssimilation
+           .o. Redup
+           .o. DeleteSilentP
+           .o. KiKu
+           .o. DeleteCircumflex
+           .o. %@RB|%@MB -> "-"
+           .o. "-" -> 0 // "-" _
+           .o. "-" -> 0 ||  _ .#.;
+
+read regex analyzeBM.i .o. analyze;
+
+save stack segment.fst

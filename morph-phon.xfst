@@ -1,0 +1,552 @@
+!
+! This file only contains a set of useful definitions. This is sourced
+! from the other scripts that generate useful automata.
+!
+
+!
+! Define some useful character classes
+!
+
+! Vowels
+define Vf   e | i | ö | ü | E | İ | Ö | Ü | î | Î | %^sFRV | %^sFUV;
+define Vb   a | ı | o | u | A | I | O | U | â | Â | û | Û | %^sBRV | %^sBUV;
+define Vh   i | ü | ı | u | İ | Ü | I | U | î | Î | û | Û | %^si | %^sü | %^sı | %^su;
+define Vl   e | ö | a | o | E | Ö | A | O | â | Â | %^se | %^sö | %^sa | %^so;
+define Vfr  ö | ü | Ö | Ü | %^sFRV;
+define Vfu  e | i | E | İ | î | Î | %^sFUV;
+define Vbr  o | u | O | U | û | Û | %^sBRV;
+define Vbu  a | ı | A | I | â | Â | %^sBUV;
+define Vowel  Vf | Vb;
+define Vbuf %^%(I%) | %^%(A%);
+define Vpal %^pA | %^pI | %^pO | %^pU;
+define Vxx  %^A | %^I ;
+define Vsilent %^sFRV | %^sFUV | %^sBRV | %^sBUV ; 
+define Vall Vowel | Vxx | Vpal; ! except buffer vowels
+
+! Consonants
+define ConsV b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | 
+           B | D | C | G | V | Z | J | F | Ğ | L | M | N | R | W | Y | %^sVC;
+define ConsUV p | t | ç | k | f | s | ş | h | 
+            P | T | Ç | K | F | S | Ş | H | %^sUC;
+define Cons  ConsV | ConsUV;
+define ConsBuf %^%(y%) | %^%(s%) | %^%(ş%) | %^%(n%);
+define ConsXX    %^c | %^p | %^t | %^k | %^g | %^K | %^D | %^C | %@LN ;
+define ConsSilent %^sVC |  %^sUC;
+define ConsAll  Cons | ConsXX ; ! except buffers
+
+! Intermediate symbols with no surface forms
+define Boundary %@MB | %@RB | %@dB %@APOS; 
+define IntSym   Boundary | %@NCOMP | %@opt3;
+
+!
+! Delete apostrophe  if it is followed by null morphemes
+! Replace it with acceptable symbols 
+! 
+! NOTE: for generation it is better to limit these to only one.
+!
+define AposSym %'|%’;
+
+define replaceApos %@APOS -> 0 || _ Boundary+ .#.
+               .o. %@APOS -> AposSym;
+
+!
+! Replace @dB `digit boundary' with space or nothing
+!
+! we allow insertion of spce anywhere, or lack of it between the
+! `digits'.
+!
+
+define NumberSpace      %@dB  -> 0    || _ %@RB
+                    .o. %@dB (->) " "
+                    .o. %@dB  -> 0;
+
+!
+! Numeric (silent) phonemes
+!
+!
+! We add `silent' phonemes to the end of the numeric forms so that
+! they inflect correctly with regard to vowel harmony, buffer deletion
+! and voicing assimilation.
+!
+
+define NumericInsSilentP [..] -> %^sBRV %^sVC || %0^{12,14} ./. %@tSep  _ %@RB
+                     .o. [..] -> %^sBUV %^sVC || %0^{9,11}  ./. %@tSep  _ %@RB
+                     .o. [..] -> %^sBRV %^sVC || %0^{6,8}   ./. %@tSep  _ %@RB
+                     .o. [..] -> %^sFUV %^sVC || %0^{3,5}   ./. %@tSep  _ %@RB
+                     .o. [..] -> %^sFRV %^sVC || %0^2      _ %@RB
+                     .o. [..] -> %^sBRV %^sVC || [1|3] %0  _ %@RB
+                     .o. [..] -> %^sFUV       || 2 %0      _ %@RB
+                     .o. [..] -> %^sBUV %^sUC || 4 %0      _ %@RB
+                     .o. [..] -> %^sFUV       || 5 %0      _ %@RB
+                     .o. [..] -> %^sBUV %^sUC || 6 %0      _ %@RB
+                     .o. [..] -> %^sFUV %^sUC || 7 %0      _ %@RB
+                     .o. [..] -> %^sFUV %^sVC || 8 %0      _ %@RB
+                     .o. [..] -> %^sBUV %^sVC || 9 %0      _ %@RB
+                     .o. [..] -> %^sBUV %^sVC || %0        _ %@RB
+                     .o. [..] -> %^sFUV %^sVC || 1         _ %@RB
+                     .o. [..] -> %^sFUV       || 2         _ %@RB
+                     .o. [..] -> %^sFRV %^sUC || [3|4]     _ %@RB
+                     .o. [..] -> %^sFUV %^sUC || 5         _ %@RB
+                     .o. [..] -> %^sBUV       || 6         _ %@RB
+                     .o. [..] -> %^sFUV       || 7         _ %@RB
+                     .o. [..] -> %^sFUV %^sVC || 8         _ %@RB
+                     .o. [..] -> %^sBRV %^sVC || 9         _ %@RB ;
+
+!
+!   Numeric separator
+!
+! For now, the following is the official rules, inserting comma for
+! decimal separator and dot for thousand separator. These are likely
+! to be wrong for not-so-official documents, such as scientific texts
+! and web corpora.
+!
+
+define NumericSeparator     %@tSep -> "."   
+                        .o. %@dSep -> "," ;
+
+!
+! This part deals with the intermediate symbol @NCOMP inserted 
+! in surface forms. In particular, if @NCOMP is followed by plural
+! suffix lAr, it is moved after the plural suffix, if it is followed
+! by the composite suffix lArI, it is deleted. The other cases where
+! (s)I is deleted handled separately below.
+!
+! TODO: there is some double work done in parts of this rule
+
+define CompNoun [ %^%(s%) %^I -> 0 || _ %@NCOMP Boundary l %^A r ]
+           .o.  [ l %^A r -> l %^A r %@MB %^%(s%) %^I || %@NCOMP Boundary _ %@MB ]
+           .o.  [ %^%(s%) %^I %@MB l %^A r -> l %^A r %@MB %^%(s%) %^I || (%@NCOMP) Boundary (%') _ %@MB ]
+           .o.  [ %@NCOMP -> 0 ];
+
+!
+! (s)I deletion
+!
+!
+! The morpheme (s)I is deleted in some contexts. What is deleted is 
+! not clear, but we model such that (s)I gets deleted 
+! - before another (s)I
+! - before lAr
+! - before lArI
+! - after lI, sIz, CI
+!
+
+define DeleteSI  %^%(s%) %^I -> 0 ||          _ Boundary %^%(s%) %^I Boundary,
+                                              _ Boundary l %^A r %^I Boundary,
+                                              _ Boundary [ l %^I | 
+                                                           l %^I k | 
+                                                           s %^I z | 
+                                                           %^C %^I ],
+                                     %^%(s%) %^I %@RB ' _ %@MB;
+!
+! lAr deletion
+!
+!
+! If there are multiple morphemes in a sequence with surface 
+! form lAr or lArI following each other, only one survives on the surface.
+!
+
+define DeleteLAR  l %^A r -> 0 || Boundary _ Boundary+ l %^A r 
+              .o. l %^A r -> 0 || Boundary l %^A r (%^I) Boundary+ _ 
+              .o. l %^A r -> 0 || Boundary l %^A r %@MB %^%(s%) (%^I) %@MB+ _ ;
+
+
+!
+! `n' insertion after (s) / larI (y) -> (n)
+!
+!
+! After (s)I and larI -DA -DAn become -nDA -nDAn, (y)A becomes nA
+
+define InsertN  %^D %^A   -> n %^D %^A,
+                %^D %^A n -> n %^D %^A n,
+                %^%(y%) %^A  -> n %^A,
+                %^%(y%) %^I %@MB -> n %^I %@MB,
+                %^C %^A  -> n %^C %^A
+                || [ %^%(s%) %^I |
+                     Boundary [ l %^A r %^I | k i | k ü]
+                   ] [Boundary|AposSym]+ _ ;
+
+!
+! DelS
+!
+! Delete (s) after a few marked nouns. The well known example is cami
+! -> cami-i (p3s or compn). Yet, this deletion in current language
+! seems to be optional ((as of 2009-10-21 google finds
+! more `camisi' than `camii'). Better course of action seems to be
+! disregarding this alternation during generation.
+!
+
+define DelS %^%(s%) (->) 0 || %@DELS%@ IntSym* _ 
+    .o. %@DELS%@ -> 0;
+
+!
+! Pronoun Exceptions
+!
+!
+! The stuff below in the order composed:
+!   . before dative marker `ben' and `sen' become `ban-a' and `san-a'
+!   . o/bu/şu before plural and case markers an `n' is inserted
+!   . o/bu/şu before 1st/2nd person possessive suffixes a `y' is inserted
+!   . after listed pronouns, before (y)lA, surface form of the genitive 
+!     suffix  is inserted (this is about form, it is not the genitive marker)
+!     this is normally the rule, a large number of speaker do not follow it.
+!     again, it may be a good idea to restrict generation on this one.
+!   . genitive marker after ben/biz becomes -Im instead of -(n)In.
+!   . locative pronouns ora/bura/sura/nere optionally loose their 
+!     last vowel if they precede -DA and -DAn, and less frequently -(y)A. 
+!     this is another case where generations should take only one of
+!     the options (not deleting the vowel is the correct written form, in
+!     colloquial deletion is more common for -DA and -DAn)
+!     
+
+define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB 
+                      .o. [..] -> n || .#. [ {o}  |
+                                             {bu} |
+                                             {şu}
+                                           ] %@RB Boundary*
+                                       _
+                                           [ l %^A (r)          |
+                                             %^%(y%) %^I        |
+                                             %^%(y%) %^A        |
+                                             %^D %^A n          |
+                                             %^%(y%) l %^A      |
+                                             %^D %^A 
+                                           ] %@MB
+                      .o. [..] -> y || .#. [ {o}  |
+                                             {bu} |
+                                             {şu}
+                                           ] Boundary+
+                                       _
+                                           [ %^%(I%) m       |
+                                             %^%(I%) n       |
+                                             %^%(I%) m %^I z |
+                                             %^%(I%) n %^I z 
+                                           ] %@MB
+                      .o. [..] (->) %^%(n%) %^I n || .#. [ {ben} | 
+                                                           {sen} |
+                                                           {o}   | 
+                                                           {biz} | 
+                                                           {siz} | 
+                                                           {bu}  | 
+                                                           {şu}
+                                                         ] Boundary+ (n)
+                                                     _
+                                                        %^%(y%) l %^A %@MB
+                      .o. n -> m || .#. [{ben}|{biz}] Boundary+ %^%(n%) %^I _  
+                      .o. [a|e] (->) 0 || .#. [{bur}|{şur}|{or}|{ner}] _
+                                        %@RB [%^D %^A (n) | %^%(y%) %^A] %@MB 
+                      .o. %^%(y%) -> y || .#. [{bur}|{şur}|{or}|{ner}] %@RB _ %^A %@MB ;
+
+!
+! InsertY
+!
+!
+! The symbol `y'  is inserted after some words, particularly 
+! ones that end with `su' and before the suffixes that start with 
+! (n), (y) or (I) (genitive and possessive suffixes except p3p).
+! For some words, this insertion seems to be optional for some 
+! speakers/registers, e.g., `ne-y-imiz' is the common/correct form but 
+! `ne-miz' is also used relatively frequently.
+
+
+define insertYwords     {su}|{özsu}|{karasu} ;
+define insertYoptional  {ne}|{akarsu}|{Akarsu} ;
+
+define InsertY  [..] -> y || insertYwords %@RB _ [%^%(I%) | %^%(n%) | %^%(s%)]
+            .o. [..] (->) y || insertYoptional %@RB _ [ %^%(I%) | %^%(n%) | %^%(s%)] ;
+
+
+!
+! Delete buffer y after i-
+!
+
+define iDeleteY %^%(y%) -> 0 || .#. i %@RB _ ;
+
+!
+! `N' before  passive morpheme
+!
+!
+! after a limited set of verbal roots, and optional `n' is inserted
+! before passive morpheme
+
+define wordsPassiveN {de}|{ye}|{yaşa}|{kapa}|{boya}|{söyle};
+define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB 
+                                     _ %^%(I%) %@LN %@MB ;
+
+!
+! Replace intermediate symbol @LN on passive according to preceding context
+!
+!
+! The passive morpheme is -(I)n if the preceding letter is `l' or a 
+! vowel -(I)n otherwise. We also add a few more exceptional cases here.
+! Namely,
+!       - in the passive form of the verb stems ending with `koy'
+!          `y' becomes `n' optionally (generally preferred). 
+!       - the passive form of `kapa' is `kapatıl'. Note that with the
+!         above exception, this makes it ambiguous between 'kapatıl' 
+!         and `kapanıl'. 
+!           TODO: not completely convinced that `kapanır' is not another 
+!                 option
+!       - the passive form of `anla' is `anlaşıl'
+!
+!
+
+define PassiveLN  y (->) n  || k o _ %@RB  %^%(I%) %@LN %@MB
+              .o. [..] -> t || .#. {kapa} %@RB _ %^%(I%) %@LN %@MB
+              .o. [..] -> ş || .#. {anla} %@RB _ %^%(I%) %@LN %@MB
+              .o. %@LN -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
+              .o. %@LN -> l ;
+
+!
+! Replace intermediate symbol @CAUS with the correct form of causative suffix
+!
+!
+! Except in lexical exceptions handled in morphotactics, the passive suffix 
+! is -t after a `l', `r' or vowel, otherwise it is -DIr.
+
+define Causative  %@CAUS -> t          // [Vall | l | r] IntSym*  _ %@MB 
+              ,,  %@CAUS -> %^D %^I r  // \[Vall | l | r] Boundary+  _ %@MB;
+
+!
+! Optative 3s form change
+!
+!
+! After third person agreement suffixes optative suffix disappears. We mark
+! this with symbol @opt3 in morphotactics, so that it is easy to spot it
+! here.
+!
+
+define Optative3  %^%(y%) %^A -> 0 || Boundary _ %@MB %@opt3
+              .o. %@opt3 -> 0;
+
+!
+! Insert space before question particle
+!
+!
+! Even though it is normally written separately, correct analysis of the 
+! question particle -mI requires the knowledge of the previous word 
+! (generally verb). The following allows correct analysis in such
+! cases given that the input is tokenized accordingly (keeping the
+! preceding verbal form and the question particle within the same
+! token). 
+!
+! Furthermore, people tend not to obey the rules, and do not leave
+! space between the question particle and the preceding word. As a
+! making this insertion optional allows us to analyze less formal
+! writing like blog posts or internet forums.
+
+define SpaceBeforeMI    %@miSPC -> [0|" "];
+
+!
+! Negative Aorist
+!
+!
+! Aorist suffix becomes -z after negative marker -mA, and before first
+! person suffixes it gets dropped completely.
+!
+
+define NegAorist  %^%(I%) r -> z || Boundary m %^A %@MB  
+                                   _ %@MB
+            .o. z -> 0 || Boundary m %^A %@MB 
+                         _ %@MB %^%(y%) %^I [m | z] %@MB
+            .o. %^%(y%) %^I -> 0 || Boundary m %^A %@MB %@MB
+                                   _ m %@MB;
+
+!
+! Buffer deletion
+!
+
+define NonBufCons [Cons | ConsXX ];
+define DelBufCons [ConsBuf -> 0 || [Cons | ConsXX] [IntSym | AposSym]* _ ]
+                  .o. [ %^%(y%) -> y,, 
+                        %^%(s%) -> s,,
+                        %^%(ş%) -> ş,,
+                        %^%(n%) -> n 
+                      ];
+
+define DelBufVow [Vbuf -> 0 || [Vowel | Vxx ] [IntSym | AposSym]* _ ] 
+             .o. [ %^%(I%) -> %^I ,,
+                   %^%(A%) -> %^A ] ;
+
+define DeleteBuffer DelBufCons .o. DelBufVow ;
+
+!
+! de/ye exception
+!
+!
+! final `e' becomes `i' in some verbal roots before a suffix starting
+! with  `y'.
+!
+
+define DeYeException e -> i || .#. [d|y] _ %@RB Boundary* y ;
+
+!
+! -yor exception
+!
+!
+! `a' `e' and underspecified low-unrounded vowel `A' becomes
+! corresponding high vowel before the suffix -yor
+!
+! We change all to ^I here and let the vowel harmony do the rest.
+
+define YorException [a|e|%^A] -> %^I || _ Boundary (%^I) y o r %@MB;
+
+!
+! Clitic mI
+!
+!
+! We analyze question particle mI as a clitic. It normally follows
+! vowel harmony according to the preceding word. But we allow all
+! combinations here. This option overgenerates.
+!
+!define CliticMI %^I -> [ı|i|u|ü] || .#. m _ %@RB;
+
+!
+! vowel epenthesis: burun -> burnu
+!
+!
+! Delete vowels after @DEL@ from lexically marked words 
+! if they are suffixed a morpheme starting with a vowel.
+!
+
+define VowelEpenthesis [ Vowel -> 0 ||  _ %@DEL%@ ConsAll IntSym* Vall ]
+                   .o. %@DEL%@ -> 0;
+
+
+!
+! Vowel Harmony
+!
+! We also delete `palatalized' vowels at the end since they are
+! only used for vowel harmony.
+!
+
+define DelPV %^pA -> a , %^pI -> ı, %^pO -> o, %^pU -> u ;
+
+define VowelHarmony [ %^I -> ı  //  Vbu          \Vall* _  ,,
+                      %^I -> u  //  Vbr          \Vall* _  ,,
+                      %^I -> ü  //  [Vfr | %^pO | %^pU] \Vall* _  ,,
+                      %^I -> i  //  [Vfu | %^pA | %^pI] \Vall* _  ,,
+                      %^A -> a  //  Vb           \Vall* _  ,,
+                      %^A -> e  //  [Vf | Vpal]  \Vall* _  ]
+               .o. DelPV;
+
+!
+! Final stop devoicing
+!
+!
+! NOTE: reduplication should be done after this one.
+!
+
+define FSDevoicing  [%^c -> c,
+                     %^g -> ğ,
+                     %^K -> y,
+                     %^p -> b,
+                     %^t -> d ||    _ IntSym* [ Vowel | Vxx ]  ]
+                .o.  %^k -> ğ || \n _ IntSym* [ Vowel | Vxx ]
+                .o.  %^k -> g || n  _ IntSym* [ Vowel | Vxx ]
+                .o. [%^c -> ç,
+                     %^g -> g,
+                     %^K -> k,
+                     %^p -> p,
+                     %^t -> t,
+                     %^k -> k];
+
+!
+! Voicing assimilation
+!
+
+define VoicingAssimilation  [ %^D -> t , 
+                              %^C -> ç  || ConsUV [ IntSym | AposSym]* _ ]
+                       .o.  [ %^D -> d,
+                              %^C -> c ];
+
+!
+! Reduplication of some root final consonants (gemination)
+!         hak -> hakkı
+
+
+
+define RedupGen     %@DUP%@ -> %@DUPL || _ Cons IntSym* Vall
+                .o. [..] -> %@DUPR || %@DUPL ? _ 
+                .o. [..] -> %@DUPL Cons %@DUPR || %@DUPL ? %@DUPR _ ;
+
+define Redup _eq(RedupGen, %@DUPL, %@DUPR)
+         .o. %@DUP%@ | %@DUPL | %@DUPR -> 0;
+
+!
+! Delete silent phonemes
+!
+
+define DeleteSilentP [ Vsilent | ConsSilent ] -> 0;
+
+!
+! ki -> kü
+!
+! the suffix ki may be realized as kü if the preceding vowel is `ü'
+! this seems to be mostly optional with varying degree of preference
+! over one or the other  based on the root form. For example, it is
+! more likely to hear 'dünkü' but 'gülünki'.
+
+define KiKu i (->)  ü || ü [\Vall]* Boundary k _ %@MB ;
+
+!
+! Filter for cleaning up the intermediate symbols in the analysis level
+! we also deal with adding -sI to compound noun roots, since we use a
+! special notation in lexicon and leave the -(s)I out in lexical entries.
+! 
+!
+
+define AFilter    FSDevoicing.i 
+              .o. VowelHarmony.i 
+              .o. DeleteBuffer.i
+              .o. %^%(s%) %^I  <- %@NCOMP
+              .o. 0 <- %@DEL%@ 
+              .o. 0 <- %@DELS%@ 
+              .o. 0 <- %@DUP%@
+              .o. 0 <- %@dB
+              .o. %<cv%_ir%> <- %<t%_aor%> %<cv%_ir%>;
+
+
+define DeleteBoundary ["@MB" | "@RB"] -> 0 ;
+
+!
+! Delete Circumflex
+!
+! The vowels with circumflex î, û, â are written without circumflex
+! most of the time. We optionally delete the accent from the surface.
+
+define DeleteCircumflex î (->) i, Î (->) İ, 
+                        û (->) u, Û (->) U, 
+                        â (->) a, Â (->) A;
+
+!
+! Allow capitalization, normally this should happen only at the
+! beginning of a sentence.
+!
+!
+
+define Capitalize a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D, 
+        e (->) E, f (->) F, g (->) G, ğ (->) Ğ, h (->) H, ı (->) I, i (->) İ, 
+        j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O, ö (->) Ö, 
+        p (->) P, r (->) R, s (->) S, ş (->) Ş, t (->) T, u (->) U, ü (->) Ü, 
+        v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â || .#. _ ;
+
+!
+! Accept All-capitals text. For this to work properly, it should be
+! composed with Capitalize above.
+!
+! Second bit makes sure that once we start capitalizing the word, we
+! go all the way  to the end. No half capitalization.
+!
+define CAP [A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|Î|Û|Â];
+define AllCaps a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D, 
+        e (->) E, f (->) F, g (->) G, ğ (->) Ğ, h (->) H, ı (->) I, i (->) İ, 
+        j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O, ö (->) Ö, 
+        p (->) P, r (->) R, s (->) S, ş (->) Ş, t (->) T, u (->) U, ü (->) Ü, 
+        v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â 
+        // CAP _ 
+    .o. a -> A, b -> B, c -> C, ç -> Ç, d -> D, 
+        e -> E, f -> F, g -> G, ğ -> Ğ, h -> H, ı -> I, i -> İ, 
+        j -> J, k -> K, l -> L, m -> M, n -> N, o -> O, ö -> Ö, 
+        p -> P, r -> R, s -> S, ş -> Ş, t -> T, u -> U, ü -> Ü, 
+        v -> V, y -> Y, z -> Z, î -> Î, û -> Û, â -> Â 
+        // CAP CAP _;
