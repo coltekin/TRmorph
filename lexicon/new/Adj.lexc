@@ -1,0 +1,118 @@
+LEXICON AdjRoot
+sarı            Adj;
+büyü^k          Adj;
+üst             Adj;
+eşit            Adj;
+hor             Adj;
+vahşi           Adj;
+yoksul          Adj;
+iç              Adj;    ! TODO: re-consider analysis of 
+dış             Adj;    !       ön/arka/iç/dış
+ara             Adj;
+ön              Adj;
+arka            Adj;
+yükse^k         Adj;
+alça^k          Adj;
+son             Adj;
+mecbur          Adj;
+uluslarara      AdjNcomp;   ! uluslararası
+milletlerara    AdjNcomp;   ! milletlerarası
+erke^k          Adj;
+kadın           Adj;
+sosyal          Adj;
+ileri           Adj;
+geri            Adj;
+geniş           Adj;
+içeri           Adj;
+dışarı          Adj;
+iyi             Adj;  
+kötü            Adj;  
+gerce^k         Adj;  
+genel           Adj;  
+toplu           Adj;  
+milli           Adj;  
+fiilen          Adj;  
+orta^k          Adj;  
+ideal           Adj;  
+işbu            Adj;  
+evrensel        Adj;  
+hür             Adj;  
+özgür           Adj;  
+gerçe^k         Adj;  
+siyasi          Adj;  
+siyasal         Adj;  
+içtimai         Adj;  
+toplumsal       Adj;  
+tekmil          Adj;    ! old/rare
+bağımsız        Adj;  
+muhtar          Adj;    ! old/rare
+hukuki          Adj;  
+ayrı            Adj;  
+türlü           Adj;  
+zalimane        Adj;    ! old/rare?
+gayriinsani     Adj;    ! old/rare
+haiz            Adj;    ! old
+sair            Adj;    ! old/rare
+aykırı          Adj;
+keyfi           Adj;
+cezai           Adj;    ! old
+tam             Adj;
+adil            Adj;
+açı^k           Adj;
+gerekli         Adj;
+kanunen         Adj;
+masum           Adj;
+özel            Adj;
+serbest         Adj;
+adi             Adj;
+müstenit        Adj;    ! old/rare
+müstakbel       Adj;    ! old/rare
+tabi            Adj;    ! old/rare?
+rahatsız        Adj;
+serbest         Adj;
+gizli           Adj;
+muadil          Adj;    ! old/rare
+dürüst          Adj;
+zaruri          Adj;    ! old
+ekonomi^k       Adj;
+kültürel        Adj;
+elverişli       Adj;
+işsiz           Adj;
+uygun           Adj;
+mak^pUl         Adj;    ! makul
+muayyen         Adj;
+tıbbi           Adj;
+hasta           Adj;
+sakat           Adj;
+dul             Adj;
+ihtiyar         Adj;
+ilk             Adj;
+tekni^k         Adj;
+mesleki         Adj;
+güzel           Adj;
+mütevelli^t     Adj;    ! old/rare
+manevi          Adj;
+maddi           Adj;
+mümkün          Adj;
+demokrati^k     Adj;    ! ?: ^k
+yöneli^k        Adj;    ! ?: ^k
+doğal           Adj;
+orta            Adj;
+zorba           Adj;
+etkin           Adj;
+tedricî         Adj;    ! old/rare
+ayrımcı         Adj;
+ulusal          Adj;
+yansız          Adj;
+ağır            Adj;
+sürekli         Adj;
+yetişkin        Adj;
+belirli         Adj;
+belirgin        Adj;
+boş             Adj;    ! adv??
+dolu            Adj;    ! adv??
+yeterli         Adj;
+yaşlı           Adj;
+az              Adj;    ! adv??
+ço^k            Adj;    ! adv??
+bağlı           Adj;

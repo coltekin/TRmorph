@@ -1,0 +1,366 @@
+
+LEXICON NRoot
+adalet              N;
+a@DUP@f             N;
+ağa^c               N;
+araba               N;
+ayaklanma           N;
+barış               N;
+baskı               N;
+bayi@DELS@          N;
+bebe^k              N;
+buru@DEL@n          N;
+buzdola^p           Ncomp;
+cami@DELS@          N;
+çare                N;
+dehşet              N;
+devi@DEL@r          N;
+dost                N;
+dünya               N;
+esas                N;
+ev                  N;
+güçbirli^k          Ncomp;
+gül                 N;
+ha@DUP@k            N;
+haysiyet            N;
+hukuk               N;
+hürriyet            N;
+husus               N;
+iktisa^t            N;
+ilan                N;
+ilişki              N;
+insan               N;
+kabul               N;
+kâr                 N;
+koordinasyon        N;
+makina              N;
+merci@DELS@         N;
+millet              N;
+oda                 N;
+omu@DEL@z           N;
+omuz                N;
+önsöz               N;
+özsu                N;
+re@DUP@^t           N;
+re@DUP@^t           N;
+rejim               N;
+ren^k               N;
+sahi^p              N;
+sa^pAt              N;
+şara^p              N;
+sebe^p              N;
+şeker               N;
+sı@DUP@r            N;
+sır                 N;
+söz                 N;
+su                  N;
+sutop               Ncomp;
+ta^t                N;
+temel               N;
+teşvik              N;
+tı@DUP@^p           N;
+üye                 N;
+versiyon            N;
+vicdan              N;
+yabanhavu^c         Ncomp;
+yanıbaş             Ncomp;
+zaruret             N;
+zulüm               N;
+aile                N;
+isyan               N;
+ama^c               N;
+halk                N;
+anlaşma             N;
+antlaşma            N;
+ana                 N; ! family ??
+şahı@DEL@s          N;
+değer               N;
+iman                N;
+inan^c              N;
+şart                N;
+karar               N;
+beyan               N;
+devlet              N;
+teşkilat            N;
+teşkilât            N; !??
+işbirli^k           Ncomp;
+saygı               N;
+sevgi               N;
+temin               N;
+taahhü^t            N;
+şeki@DEL@l          N;
+yer                 N;
+derece              N;
+önem                N;
+kurul               N;
+fer^t               N;
+uzu@DEL@v           N;
+uzuv                N;
+beyanname           N;
+gözönü              N;
+öğretim             N;
+eğitim              N;
+yol                 N;
+tedbir              N;
+ahâli               N;
+ahali               N;
+idare               N;
+ülke                N;
+tatbik              N;
+gayret              N;
+madde               N;
+bakım               N;
+akı@DEL@l           N;
+kardeş              N;  ! family
+zihniyet            N;
+hareket             N;
+hayat               N;
+ırk                 N;
+cinsiyet            N;
+dil                 N;
+din                 N;
+^pAki@DEL@^t        N;
+aki^t               N;
+menşe               N; ! old/rare
+servet              N; 
+fark                N; 
+istifade            N; ! old/rare
+memleket            N; 
+uyru^k              N; 
+vesayet             N; 
+muhtar              N; 
+egemenli^k          N; 
+statü               N; 
+kişi                N; 
+emniyet             N; 
+köle                N; 
+kul                 N; 
+ticaret             N; 
+yasa^k              N; 
+işkence             N; 
+ceza                N; 
+muamele             N; 
+kişili^k            N; 
+kanun               N; 
+anayasa             N; 
+fiil                N;  ! old
+eylem               N;
+netice              N;  ! old
+sonuç               N;
+mahkeme             N; 
+müracaat            N;  ! old
+vecibe              N;  ! old 
+mahiyet             N;  ! old 
+isna^t              N;  ! old
+tespit              N;  ! old
+dava                N;
+taraf               N;
+suç                 N;
+sanı^k              N;
+savünma             N;
+tertibat            N;  ! old
+düzene^k            N;
+yargı               N;
+sıra                N;
+teşkil              N;
+ihm^pAl             N;
+mahkum              N;
+mahkûm              N;
+şiddet              N;
+mesken              N;
+şeref               N;
+şöhret              N;
+tecavüz             N;
+maruz               N;
+sınır               N;
+dahil               N;
+hari^c              N;
+terk                N;
+mülteci             N;
+kab^pUl             N;
+tale^p              N;
+cürüm               N;  ! old
+prensi^p            N;
+faaliyet            N;
+kovuşturma          N;
+mahrum              N;
+çağ                 N;
+var                 N;
+konu                N;
+er                  N;
+eş                  N;
+rıza                N;
+cemiyet             N;
+unsur               N;
+ihtimal             N;
+olasılı^k           N;
+baş                 N;
+mal                 N;
+mülk                N;
+fikir               N;
+kana^pAt            N;
+vasıta              N;
+suret               N;
+tatbikat            N;
+ibadet              N;
+ayin                N;
+izhar               N;  ! old/rare
+mevzubahis          N;  ! old/rare
+malümat             N;  ! old
+varsıta             N;
+el                  N;
+yay                 N;
+ok                  N;
+saldırı             N;
+derne^k             N;
+serbesti            N;  !old/rare
+malik               N;  !old/rare
+mensu^p             N;  !old/rare
+temsilci            N;
+kamu                N; 
+iş                  N; 
+yönetim             N; 
+hizmet              N; 
+irade               N; 
+otorite             N; 
+us^pUl              N; 
+cereyan             N; 
+oy                  N; 
+seçim               N; 
+ifade               N; 
+güvenli^k           N; 
+şahsiyet            N; 
+kayna^k             N; 
+mütenasi^p          N;  !old/rare
+işsizli^k           N;
+karşılı^k           N;
+ücret               N;
+menfa^pAt           N;
+sendika             N;
+müddet              N;  !old
+süre                N;
+tatil               N;
+giyim               N;
+sağlı^k             N;
+refah               N;
+seviye              N;
+düzey               N;
+hastalı^k           N;
+sakatlı^k           N;
+dullu^k             N;
+ihtiyarlı^k         N;
+geçim               N;
+imkân               N;
+h^pAl               N;
+çocu^k              N;
+ihtimam             N;  !old
+yardım              N; 
+fayda               N; 
+öğrenim             N; 
+safha               N; 
+para                N; 
+ilköğretim          N; 
+mecburi             N; 
+liyak^pAt           N; 
+kuvvet              N; 
+çocu^k              N;
+hedef               N;
+gru^p               N;
+hoşgörü             N;
+idame               N;  ! old
+baba                N;  ! family
+tür                 N;
+sanat               N;
+ilim                N;
+bilim               N;
+saha                N;
+iştir^pAk           N;
+edebiyat            N;
+eser                N;
+menfaat             N;
+derpiş              N;  !old/rare
+nizam               N;
+görev               N;
+gere^k              N;
+ahlâk               N;
+düzen               N;
+refah               N;
+ica^p               N;  !old
+maksa^t             N;  !old
+sınırlama           N;
+hükü@DEL@m          N;
+zümre               N;
+girişim             N;
+yorum               N;
+tarih               N;
+tercüme             N;
+döküman             N;
+komisyon            N;
+devre               N;
+ve^ci@DEL@h         N;  !old/rare -- archaic
+bildirge            N;
+başlangıç           N;
+yapı                N;
+onur                N;
+devi@DEL@r          N;
+göz                 N;
+ar^t                N;
+infial              N;
+barbar              N;
+korku               N;
+yoksunlu^k          N;
+özlem               N;
+ulus                N;
+belge               N;
+teyit               N;
+taş                 N;
+başarı              N;
+ölçü                N;
+birey               N;
+organ               N;
+amaç                N;
+önlem               N;
+çaba                N;
+köken               N;
+mülkiyet            N;
+zalim               N;
+yasa                N;
+ihlal               N;
+yetki               N;
+yarar               N;
+sürgün              N;
+yükümlü             N;
+güvence             N;
+sonu^c              N;
+yaşam               N;
+müdahale            N;
+seyah^pAt           N;
+niteli^k            N;
+ilki                N;
+durum               N;
+yurttaş             N;
+olur                N;
+ilke                N;
+bilgi               N;
+örgüt               N;
+hükümet             N;
+koşul               N;
+deste^k             N;
+çıkar               N;
+zaman               N;
+standar^t           N;
+konut               N;
+denetim             N;
+anne                N; ! family
+amca                N; ! family
+teyze               N; ! family
+hala                N; ! family
+dayı                N; ! family
+aşama               N;
+zorunlu             N;
+yetene^k            N;
+yaratı              N;
+ürün                N;
+olana^k             N;
+ödev                N;
+sayı                N;

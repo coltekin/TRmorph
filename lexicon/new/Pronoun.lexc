@@ -1,0 +1,39 @@
+!
+! NOTE: pronouns that form questions are now in morph.lexc
+!
+LEXICON PrnRoot
+ben             PersPrn;
+sen             PersPrn;
+o               PersPrn;
+biz             PersPrn;
+siz             PersPrn;
+onlar           PersPrn;
+bu              DemPrn;
+şu              DemPrn;
+o               DemPrn;
+kendi           PersPrn;
+herkes          PersPrn;  !TODO: this does not take all nominal inflections
+bir% şey        PersPrn;
+her% şey        PersPrn;
+ora             LocPrn;
+bura            LocPrn;
+şura            LocPrn;
+herbir          Prn;
+öteki           Prn;
+beriki          Prn;
+birbir          PPrnBirBir; ! this has to be inflected
+hepsi           Prn;
+birisi          Prn;
+birileri        Prn;
+kimse           PersPrn;
+hiç% kimse      PersPrn;
+hiçkimse        PersPrn;
+hiçbirşey       Prn;
+hiçbir% şey     Prn;
+hiçbiri         Prn;
+hiçbirisi       Prn;
+insan           PersPrn;
+şey             Prn;
+!TODO: solu - aşağısı - dışarısı - ötesi
+!      normally derived, but probalby listing them is also ok.
+
