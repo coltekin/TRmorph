@@ -535,6 +535,17 @@ define Capitalize a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D,
         v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â || .#. _ ;
 
 !
+! Accept All-capitals text. For this to work properly, it should be
+! composed with Capitalize above.
+!
+define AllCaps a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D, 
+        e (->) E, f (->) F, g (->) G, ğ (->) Ğ, h (->) H, ı (->) I, i (->) İ, 
+        j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O, ö (->) Ö, 
+        p (->) P, r (->) R, s (->) S, ş (->) Ş, t (->) T, u (->) U, ü (->) Ü, 
+        v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â 
+        // [A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|Î|Û|Â] _ ;
+
+!
 ! Put all of them together. The order is important. 
 !
 clear stack
@@ -571,6 +582,7 @@ read regex     AFilter
            .o. KiKu
            .o. DeleteCircumflex
            .o. Capitalize
+           .o. AllCaps
            .o. DeleteBoundary ;
 
 save stack trmorph.fst
