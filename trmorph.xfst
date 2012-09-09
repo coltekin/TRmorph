@@ -532,12 +532,23 @@ define Capitalize a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D,
 ! Accept All-capitals text. For this to work properly, it should be
 ! composed with Capitalize above.
 !
+! Second bit makes sure that once we start capitalizing the word, we
+! go all the way  to the end. No half capitalization.
+!
+define CAP [A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|Î|Û|Â];
 define AllCaps a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D, 
         e (->) E, f (->) F, g (->) G, ğ (->) Ğ, h (->) H, ı (->) I, i (->) İ, 
         j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O, ö (->) Ö, 
         p (->) P, r (->) R, s (->) S, ş (->) Ş, t (->) T, u (->) U, ü (->) Ü, 
         v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â 
-        // [A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|Î|Û|Â] _ ;
+        // CAP _ 
+    .o. a -> A, b -> B, c -> C, ç -> Ç, d -> D, 
+        e -> E, f -> F, g -> G, ğ -> Ğ, h -> H, ı -> I, i -> İ, 
+        j -> J, k -> K, l -> L, m -> M, n -> N, o -> O, ö -> Ö, 
+        p -> P, r -> R, s -> S, ş -> Ş, t -> T, u -> U, ü -> Ü, 
+        v -> V, y -> Y, z -> Z, î -> Î, û -> Û, â -> Â 
+        // CAP CAP _;
+
 
 !
 ! Put all of them together. The order is important. 
@@ -574,8 +585,8 @@ read regex     AFilter
            .o. DeleteSilentP
            .o. KiKu
            .o. DeleteCircumflex
+           .o. DeleteBoundary
            .o. Capitalize
-           .o. AllCaps
-           .o. DeleteBoundary ;
+           .o. AllCaps ;
 
 save stack trmorph.fst
