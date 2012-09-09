@@ -35,17 +35,17 @@ define ConsAll  Cons | ConsXX ; ! except buffers
 ! Intermediate symbols with no surface forms
 define Boundary %@MB | %@RB | %@dB %@APOS; 
 define IntSym   Boundary | %@NCOMP | %@opt3;
-define Apos %';
 
 !
-! Replace apostrophe wit acceptable symbols 
-!
+! Delete apostrophe  if it is followed by null morphemes
+! Replace it with acceptable symbols 
 ! 
 ! NOTE: for generation it is better to limit these to only one.
 !
 define AposSym %'|%’;
 
-define replaceApos %@APOS -> AposSym;
+define replaceApos %@APOS -> 0 || _ Boundary+ .#.
+               .o. %@APOS -> AposSym;
 
 !
 ! Replace @dB `digit boundary' with space or nothing
@@ -161,7 +161,7 @@ define InsertN  %^D %^A   -> n %^D %^A,
                 %^C %^A  -> n %^C %^A
                 || [ %^%(s%) %^I |
                      Boundary [ l %^A r %^I | k i | k ü]
-                   ] [Boundary|Apos]+ _ ;
+                   ] [Boundary|AposSym]+ _ ;
 
 !
 ! DelS
@@ -354,14 +354,14 @@ define NegAorist  %^%(I%) r -> z || Boundary m %^A %@MB
 !
 
 define NonBufCons [Cons | ConsXX ];
-define DelBufCons [ConsBuf -> 0 || [Cons | ConsXX] [IntSym | Apos]* _ ]
+define DelBufCons [ConsBuf -> 0 || [Cons | ConsXX] [IntSym | AposSym]* _ ]
                   .o. [ %^%(y%) -> y,, 
                         %^%(s%) -> s,,
                         %^%(ş%) -> ş,,
                         %^%(n%) -> n 
                       ];
 
-define DelBufVow [Vbuf -> 0 || [Vowel | Vxx ] [IntSym | Apos]* _ ] 
+define DelBufVow [Vbuf -> 0 || [Vowel | Vxx ] [IntSym | AposSym]* _ ] 
              .o. [ %^%(I%) -> %^I ,,
                    %^%(A%) -> %^A ] ;
 
@@ -453,7 +453,7 @@ define FSDevoicing  [%^c -> c,
 !
 
 define VoicingAssimilation  [ %^D -> t , 
-                              %^C -> ç  || ConsUV [ IntSym | Apos]* _ ]
+                              %^C -> ç  || ConsUV [ IntSym | AposSym]* _ ]
                        .o.  [ %^D -> d,
                               %^C -> c ];
 
@@ -475,12 +475,6 @@ define Redup _eq(RedupGen, %@DUPL, %@DUPR)
 !
 
 define DeleteSilentP [ Vsilent | ConsSilent ] -> 0;
-
-!
-! Delete apostrophe if it is the last surface character.
-!
-
-define DeleteFinalApos %' -> 0 || _ IntSym* .#. ;
 
 !
 ! ki -> kü
@@ -578,7 +572,6 @@ read regex     AFilter
            .o. VoicingAssimilation
            .o. Redup
            .o. DeleteSilentP
-           .o. DeleteFinalApos 
            .o. KiKu
            .o. DeleteCircumflex
            .o. Capitalize

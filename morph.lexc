@@ -208,32 +208,38 @@ LEXICON Redup
 !
 
 LEXICON NPcomp  ! this is only for lexicalized forms with compounding
-@NCOMP%<ncomp%>%<np%>:^(s)^I@NCOMP@RB NPApos;
+@NCOMP%<ncomp%>%<np%>:^(s)^I@NCOMP@RB NPcont;
 
 LEXICON NP
-%<np%>:0@RB   NPApos;
+%<np%>:0@RB   NPcont;
+
+LEXICON NPcont
+                #;
+                NPApos;
+!                NPNoApos;
+
+LEXICON NPApos  
+0:@APOS@MB     NPAposCont;
+
+LEXICON   NPAposCont  
+                Nderiv;
+                Ninfl;
 
 LEXICON NPnation
 %<np%>:0@RB   NPnationCont;
 
+LEXICON NPnationCont
+                NPcont;
+                ND_CAlanguage;
+
 LEXICON NPperson
 %<np%>:0@RB   NPpersonCont;
 
-LEXICON NPnationCont
-              NPApos;
-              ND_CAlanguage;
-
 LEXICON NPpersonCont
-              NPApos;
-0:@APOS@MB   D_gil;
+                NPcont;
+0:@APOS@MB      D_gil;
 
-LEXICON   NPApos  
-                #;
-0:@APOS@MB     NPCont;
 
-LEXICON   NPCont  
-        Nderiv;
-        Ninfl;
 
 LEXICON Ncomp ! this is only for lexicalized forms with compounding
 @NCOMP%<ncomp%>%<n%>:^(s)^I@NCOMP@RB NcompCont;
@@ -961,7 +967,7 @@ LEXICON NumericCont
                 NumericApos;
 
 LEXICON NumericApos
-%<apos%>:%@APOS@MB      NumDeriv;
+0:%@APOS@MB      NumDeriv;
 
 
 LEXICON NumDeriv
@@ -2069,28 +2075,27 @@ LEXICON degil
 !
 
 LEXICON Punctuation
-%.              Punc;
-%?              Punc;
-%!              Punc;
-%:              Punc;
+%-              Punc;
 %,              Punc;
 %;              Punc;
-%'              Punc;
-%(              Punc;
-%)              Punc;
-%-              Punc;
-%"              Punc;
-%.%.%.          Punc;
-%“              Punc;
-%‘              Punc;
-%”              Punc;
-%"              Punc;
+%:              Punc;
+%!              Punc;
+%?              Punc;
 %/              Punc;
-%*              Punc;
+%.              Punc;
+%.%.%.          Punc;
 %'              Punc;
+%‘              Punc;
 %’              Punc;
+%"              Punc;
+%"              Punc;
+%“              Punc;
+%”              Punc;
 %«              Punc;
 %»              Punc;
+%(              Punc;
+%)              Punc;
+%*              Punc;
 %‹              Punc;
 %›              Punc;
 %„              Punc;
