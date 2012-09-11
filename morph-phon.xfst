@@ -114,8 +114,10 @@ define NumericSeparator     %@tSep -> "."
 ! TODO: there is some double work done in parts of this rule
 
 define CompNoun [ %^%(s%) %^I -> 0 || _ %@NCOMP Boundary l %^A r ]
-           .o.  [ l %^A r -> l %^A r %@MB %^%(s%) %^I || %@NCOMP Boundary _ %@MB ]
-           .o.  [ %^%(s%) %^I %@MB l %^A r -> l %^A r %@MB %^%(s%) %^I || (%@NCOMP) Boundary (%') _ %@MB ]
+           .o.  [ l %^A r -> l %^A r %@MB %^%(s%) %^I 
+                || %@NCOMP Boundary _ %@MB ]
+           .o.  [ %^%(s%) %^I %@MB l %^A r -> l %^A r %@MB %^%(s%) %^I 
+                || (%@NCOMP) Boundary (AposSym) _ %@MB ]
            .o.  [ %@NCOMP -> 0 ];
 
 !
@@ -125,9 +127,11 @@ define CompNoun [ %^%(s%) %^I -> 0 || _ %@NCOMP Boundary l %^A r ]
 ! The morpheme (s)I is deleted in some contexts. What is deleted is 
 ! not clear, but we model such that (s)I gets deleted 
 ! - before another (s)I
-! - before lAr
 ! - before lArI
-! - after lI, sIz, CI
+! - after lI, lIk, sIz, CI
+! 
+! TODO/CHECK: It seems not to be deleted afater -lIk in some cases. 
+!  `ev hayvanılık??'
 !
 
 define DeleteSI  %^%(s%) %^I -> 0 ||          _ Boundary %^%(s%) %^I Boundary,
@@ -136,7 +140,7 @@ define DeleteSI  %^%(s%) %^I -> 0 ||          _ Boundary %^%(s%) %^I Boundary,
                                                            l %^I k | 
                                                            s %^I z | 
                                                            %^C %^I ],
-                                     %^%(s%) %^I %@RB ' _ %@MB;
+                                     %^%(s%) %^I %@RB AposSym _ %@MB;
 !
 ! lAr deletion
 !
