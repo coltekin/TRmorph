@@ -1988,9 +1988,12 @@ Participle;
 ConVerb;
 
 LEXICON VerbalNoun
-%<vn_ma%>:m^A@MB              Ncont;
-%<vn_mak%>:m^A^K@MB           VNMakCont;
-%<vn_yis%>:^(y)^Iş@MB        Ncont;
+%<vn_ma%>:m^A@MB                Ncont;
+%<vn_mak%>:m^A^K@MB             VNMakCont;
+%<vn_yis%>:^(y)^Iş@MB           Ncont;
+%<vn_dik%>:^D^I^k@MB            Ncont;
+%<vn_acak%>:^(y)^Ac^A^k@MB      Ncont;
+%<vn_yan%>:^(y)^An@MB           Ncont;
 
 LEXICON VNMakCont
                               NCaseNoGen;
@@ -2003,7 +2006,8 @@ LEXICON Participle
 
 LEXICON PartCont
                    #;
-                   AdjCont;
+                   Ncont;
+!                   AdjCont;
 
 ! TODO: this part need rework. The list below roughly follows
 !       G&K and the SFST version.
@@ -2224,7 +2228,7 @@ LEXICON Aderiv
 LEXICON Vderiv
             D_yIcI;
             D_yIS;
-            D_mA;
+!            D_mA;
 
 LEXICON Oderiv
             OD_lA;
@@ -2396,11 +2400,12 @@ LEXICON D_yIS
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
 !    V->J: kıyma, kesme, dökme, bunama
-!   TODO: these probably are also lexicalized
+! these probably are also lexicalized, and this creates a lot of
+! ambiguity (-mA is also a subordinating suffix). So it's out.
 !
-LEXICON D_mA
-%<D_mA%>:m^A   DerivNCont;
-%<D_mA%>:m^A   DerivJCont;
+!LEXICON D_mA
+!%<D_mA%>:m^A   DerivNCont;
+!%<D_mA%>:m^A   DerivJCont;
 
 ! -sAl makes adjectives from nouns
 !       bilimsel, tarihsel, duşsel...
