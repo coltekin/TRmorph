@@ -116,6 +116,7 @@ LEXICON PostPloc
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPlocCont;
 %<n%>%<p2s%>:@RB^(I)n@MB      PostPlocCont;
 %<n%>%<p3s%>:@RB^(s)^I@MB     PostPlocCont;
+!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPlocCont;
 %<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPlocCont;
 %<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPlocCont;
 %<n%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
@@ -127,6 +128,7 @@ LEXICON PostPdat
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
 %<n%>%<p2s%>:@RB^(I)n@MB      PostPdatCont;
 %<n%>%<p3s%>:@RB^(s)^I@MB     PostPdatCont;
+!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPdatCont;
 %<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPdatCont;
 %<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPdatCont;
 %<n%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
@@ -138,6 +140,7 @@ LEXICON PostPins
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
 %<n%>%<p2s%>:@RB^(I)n@MB      PostPinsCont;
 %<n%>%<p3s%>:@RB^(s)^I@MB     PostPinsCont;
+!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPinsCont;
 %<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPinsCont;
 %<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPinsCont;
 %<n%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
@@ -149,6 +152,7 @@ LEXICON PostPabl
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
 %<n%>%<p2s%>:@RB^(I)n@MB      PostPablCont;
 %<n%>%<p3s%>:@RB^(s)^I@MB     PostPablCont;
+!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPablCont;
 %<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPablCont;
 %<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPablCont;
 %<n%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
@@ -160,6 +164,7 @@ LEXICON PostPca
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
 %<n%>%<p2s%>:@RB^(I)n@MB      PostPcaCont;
 %<n%>%<p3s%>:@RB^(s)^I@MB     PostPcaCont;
+!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPcaCont;
 %<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPcaCont;
 %<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPcaCont;
 %<n%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
@@ -281,6 +286,7 @@ LEXICON Npos
 %<p1s%>:^(I)m@MB      NposCont;
 %<p2s%>:^(I)n@MB      NposCont;
 %<p3s%>:^(s)^I@MB     NposCont;
+%<p3p%>:^(s)^I@MB     NposCont; ! burasi Ali'lerin ev-i
 %<p1p%>:^(I)m^Iz@MB   NposCont;
 %<p2p%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>:l^Ar^I@MB     NposCont;
