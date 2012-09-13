@@ -343,10 +343,16 @@ LEXICON KiCont
 !
 ! This part deals with person agreement
 !
-! TODO: -yken
 
 LEXICON NomPredicate
                         NomPredPagr;
+                        NomPredPagr3p;
+                        NomPredDir;
+                        NomPredQ;
+                        CplAll;
+
+LEXICON NomPredicateMAK
+                        NomPredPagr3s;
                         NomPredPagr3p;
                         NomPredDir;
                         NomPredQ;
@@ -372,8 +378,12 @@ LEXICON NomPredPagrCont
                     #;
                     DIrEnd;
 
+LEXICON NomPredPagr3s
+%<3s%>:0@MB             NomPredPagrCont;
+%<3p%>:0@MB             NomPredPagrCont;
+
 LEXICON  NomPredPagr3p
-%<3p%>:l^Ar@MB   NomPredPagr3pCont;
+%<3p%>:l^Ar@MB          NomPredPagr3pCont;
 
 LEXICON   NomPredPagr3pCont
         NomPredPagrCont;        ! includes end state
@@ -1996,8 +2006,9 @@ LEXICON VerbalNoun
 %<vn_yan%>:^(y)^An@MB           Ncont;
 
 LEXICON VNMakCont
+                              #;
                               NCaseNoGen;
-                              NomPredicate;
+                              NomPredicateMAK;
 
 LEXICON Participle
 %<part_dik%>:^D^I^k@MB              PartCont;
