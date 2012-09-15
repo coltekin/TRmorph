@@ -165,8 +165,9 @@ define InsertN  %^D %^A   -> n %^D %^A,
                 %^%(y%) %^A  -> n %^A,
                 %^%(y%) %^I %@MB -> n %^I %@MB,
                 %^C %^A  -> n %^C %^A
-                || [ %^%(s%) %^I |
-                     Boundary [ l %^A r %^I | k i | k ü]
+                || [ %^%(s%) %^I 
+                    | Boundary [ l %^A r %^I | k i | k ü]
+                    | .#. k e n d i
                    ] [Boundary|AposSym]+ _ ;
 
 !
