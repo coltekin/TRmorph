@@ -418,7 +418,7 @@ LEXICON Adj
 %<adj%>:@RB        AdjCont;
 
 LEXICON AdjNcomp
-@NCOMP%<n%>:^(s)^I@NCOMP@RB AdjCont;
+@NCOMP%<adj%>:^(s)^I@NCOMP@RB AdjCont;
 
 LEXICON  AdjCont
                     #;
