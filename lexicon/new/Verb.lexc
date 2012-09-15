@@ -104,6 +104,7 @@ kaç                     V_CausIr_AorAr;
 kaldır                  V;
 kalk                    V_Rfl_CausIrreg_AorAr;
 kal                     V_CausDir;
+zorunda% kal            V_CausDir;  ! CausIrreg???  (zorunda bırakmak)
 kanıtla                 V;
 kapat                   V;
 kapa                    V;

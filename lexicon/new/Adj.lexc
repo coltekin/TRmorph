@@ -2,6 +2,7 @@ LEXICON AdjRoot
 sarı            Adj;
 büyü^k          Adj;
 üst             Adj;
+alt             Adj;
 eşit            Adj;
 hor             Adj;
 vahşi           Adj;
@@ -116,3 +117,5 @@ yaşlı           Adj;
 az              Adj;    ! adv??
 ço^k            Adj;    ! adv??
 bağlı           Adj;
+sıradan         Adj;
+dost            Adj;
