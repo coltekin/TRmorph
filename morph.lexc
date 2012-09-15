@@ -33,7 +33,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   %<punct%>
                   %<redup%>
                   %<exist%> %<ntexist%> %<not%>
-                  %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%>
+                  %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%> %<VJ_%0%>
                   %<dimin%>
                   %<D_lI%> %<D_sIz%> %<D_lIk%> %<D_CI%> %<D_CA%>
                     %<D_cil%> %<D_gil%> %<D_lA%> %<D_lAn%> %<D_lAS%> 
@@ -1434,10 +1434,10 @@ LEXICON VInfinitiveCont
 
 LEXICON VTAM
 %<t_narr%>:m^Iş@MB          TAMNarrCont;
-%<t_fut%>:^(y)^Ac^A^k@MB    TAMg1Cont;
-%<t_obl%>:m^Al^I@MB         TAMg1Cont;
-%<t_makta%>:m^Akt^A@MB      TAMg1Cont; ! TODO: -maktayızdır ??
-%<t_cont%>:^(I)yor@MB       TAMg1Cont;
+%<t_fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
+%<t_obl%>:m^Al^I@MB         TAMOblCont;
+%<t_makta%>:m^Akt^A@MB      TAMMaktaCont; ! TODO: -maktayızdır ??
+%<t_cont%>:^(I)yor@MB       TAMContCont;
 %<t_past%>:^D^I@MB          TAMDICont;
 %<t_cond%>:s^A@MB           TAMCondCont;
 %<t_cond%>:^(y)^A@MB        TAMCondYACont; ! this is informal use
@@ -1448,12 +1448,29 @@ LEXICON TAMAor      ! this is the regular one
 %<t_aor%>:^(I)r@MB          AorCont;
 
 LEXICON TAMNarrCont
-                            TAMg1Cont;
-                            NarrCVcesine;
+            TAMg1Cont;
+            NarrCVcesine;
+            VerbalAdj;
 
 LEXICON AorCont
-                            TAMg1Cont;  ! TODO: allow not allow -DIr: okurdur
-                            AorCV;
+            TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
+            AorCV;
+            VerbalAdj;
+
+LEXICON TAMFutCont
+            TAMg1Cont;
+            VerbalAdj;
+
+LEXICON TAMOblCont
+            TAMg1Cont;
+
+LEXICON TAMMaktaCont
+            TAMg1Cont;
+            VerbalAdj;
+
+LEXICON TAMContCont
+            TAMg1Cont;
+            VerbalAdj;
 
 LEXICON TAMg1Cont
             PAgrG1;
@@ -1461,6 +1478,21 @@ LEXICON TAMg1Cont
             TAMG1Q;
             TAMg1DIr;
             CplAll;
+
+! This is for cases like: 'birleşmiş milletler', 
+! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
+! 'adam olacak çocuk', 'ele gelir sonuç' etd.
+! some of these (-makta -yor) are restircted to be used 
+! before an auxiliary verb (ol, bul) but some can stand alone.
+! These are, after all, some sort of sobordination. The result 
+! is something that complements a noun, so we mark it as 
+! an adjectie. Especially -acak is confusing as we also have 
+! an explicit subordinating suffix.
+! We assume that these forms do not get any further suffixes, 
+! until we are proven wrong by data.
+!
+LEXICON VerbalAdj
+%<VJ_%0%>%<adj%>:@MB       #;
 
 !
 !
