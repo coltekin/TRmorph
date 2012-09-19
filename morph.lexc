@@ -172,6 +172,20 @@ LEXICON PostPca
 LEXICON PostPcaCont
 %<D_CA%>%<postp%>:^C^A@MB       #;
 
+!
+! Possessive suffixes after adjectives and determiners make pronouns.
+!
+!
+
+LEXICON JP_poss
+%<p1s%>%<prn%>:^(I)m@MB      NposCont;
+%<p2s%>%<prn%>:^(I)n@MB      NposCont;
+%<p3s%>%<prn%>:^(s)^I@MB     NposCont;
+!%<p3p%>%<prn%>:^(s)^I@MB     NposCont; !TODO: check if this refers to plural
+%<p1p%>%<prn%>:^(I)m^Iz@MB   NposCont;
+%<p2p%>%<prn%>:^(I)n^Iz@MB   NposCont;
+%<p3p%>%<prn%>:l^Ar^I@MB     NposCont;
+
 
 !
 ! onomatopoeic words
@@ -482,7 +496,11 @@ LEXICON LocPrn  ! TODO: these do not inflect except only in some fixed expressio
 !
 
 LEXICON  Det
-%<det%>:@RB #;
+%<det%>:@RB DetCont;
+
+LEXICON DetCont
+                    #;
+                    JP_poss;    ! TODO: not all determiners do this.
 
 !
 ! Numbers
@@ -2261,6 +2279,7 @@ LEXICON Jderiv
             JD_lAn;
             JD_lAS;
             JN_zero;
+            JP_poss;
 
 LEXICON Aderiv
             AD_lIk;
