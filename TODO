@@ -1,11 +1,18 @@
 - TODO's marked all around in the source files.
+- The adjectives (or nouns or postpositions) of location 'iç, dış,
+  üst, etc.' form complex adjectivals 'insanlık dışı, doğa üstü...'.
+  This is similar to what is described as 'postpositional usage' in
+  G&K, but it is different than the patterns listed by them. It also
+  looks like a noun compound.
 - Relate irregular causatives, such as kalk->kaldır to their root forms.
+    kalk  -> kaldır
+    öğren -> öğret
 - Derivational morphemes need review
 - Postpositions 
 - Apostrophe insertion does not currently comply with official spelling
   rules.
 - <acr> is not analyzed
-- Mark auxiliary verbs like ol/bulun.
+- Mark auxiliary verbs like ol/bul.
 - Mark verbs for transitivity.
 - Mark verbs for (typical) cases their indirect objects take.
 - Handling of reduplication is less than acceptable. We have a
@@ -27,3 +34,4 @@
 - lexical class <cnjsub> is somewhat related to <cv_arak> (e.g., in
   olarak).
 - için <cnjcoo> ??
+- remove multi-char analyais symbols, they do not need to be multichar.

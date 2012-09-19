@@ -508,6 +508,7 @@ define AFilter    FSDevoicing.i
               .o. 0 <- %@DELS%@ 
               .o. 0 <- %@DUP%@
               .o. 0 <- %@dB
+!             .o. 0 <- (ConsSilent|Vsilent)
               .o. %<cv%_ir%> <- %<t%_aor%> %<cv%_ir%>;
 
 

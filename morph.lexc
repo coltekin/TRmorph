@@ -33,6 +33,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   %<punct%>
                   %<redup%>
                   %<exist%> %<ntexist%> %<not%>
+                  %<alpha%>
                   %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%> %<VJ_%0%>
                   %<dimin%>
                   %<D_lI%> %<D_sIz%> %<D_lIk%> %<D_CI%> %<D_CA%>
@@ -48,6 +49,8 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   @DEL@ @DUP@ @DELS@
                   @LN @CAUS
                   @miSPC @opt3
+                  ^sFUV ^sFRV ^sBUV ^sBRV %^sVC %^sUC
+!                   e,i   ü,ö   a,ı   o,u   
 
 LEXICON Root
 NRoot;
@@ -67,6 +70,7 @@ RedupRoot;
 OnomRoot;
 Exceptions;
 WHwords;
+Alpha;
 
 !
 ! conjunctions
@@ -2527,4 +2531,22 @@ niçin       QAdv;
 hani        QIntj;
 nasıl       QAdv;
 
+!
+! The following are letters of the alphabet.
+!
+! Q, W and X are not in the TR alphabet, but they show up in various
+! texts.
+LEXICON Alpha
+<A|E|I|İ|O|Ö|U|Ü>                                       AlphaCont;
+<[B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|R|S|Ş|T|V|Y|Z] 0:%^sFUV>  AlphaCont;
+<[H|K|Q|W] 0:%^sBUV>                                    AlphaCont;
+<H 0:%^sBUV 0:%^sVC>                                    AlphaCont;
+<X 0:^sFUV 0:^sUC>                                      AlphaCont; 
 
+!
+! when inflected, we require apostrophe after letters (when required
+! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
+!
+LEXICON AlphaCont
+%<alpha%>:@RB   NPApos;
+%<alpha%>:@RB   #;
