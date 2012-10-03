@@ -325,6 +325,7 @@ LEXICON  NCaseNoGen
 %<loc%>:^D^A@MB     LocCaseCont;
 
 LEXICON  Ncase
+                    D_sIz; ! sIz can combine after most of the inflectional suffixes
                     NCaseNoGen;                    
 %<gen%>:^(n)^In@MB  GenCaseCont;
 
@@ -2256,7 +2257,7 @@ LEXICON Mderiv
 
 LEXICON Nderiv
             D_lI;
-            D_sIz;
+!            D_sIz; ! sIz can combine after most of the inflectional suffixes
             ND_lIk;
             Dimin;
             ND_CA;
@@ -2324,6 +2325,15 @@ LEXICON   D_lI
 
 ! -sIz behaves almost exactly like -lI, with the opposite meaning.
 !           şeker `sugar' -> şeker-siz `[something] without sugar' 
+!
+! Further, -sIz tends to appear after some nominal suffixes, for
+! example: 'çocuk-lar-ım-sız'. In principle, it can attach wherever 
+! a case suffix can (which may raise the question whether it may 
+! function as a case suffix or not---`abessive case'?). For most of
+! these cases -lI may be plausible too, but it sounds less likely,
+! possibly because the instrumental/commutative suffix has a similar
+! function. We do not allow -lI to combine that freely, unless/until data
+! dictates so.
 !
 ! it is more likely for -sIz to form adverbs 
 !       N -> N : kitap-sız (lexicalized)
