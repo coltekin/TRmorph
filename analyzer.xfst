@@ -9,7 +9,8 @@ source morph-phon.xfst
 clear stack
 read regex     AFilter
            .o. Lexicon 
-           .o. replaceApos
+!!!APOSTROPHE_yes .o. replaceApos
+!!!APOSTROPHE_maybe .o. replaceAposOpt
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator
@@ -40,6 +41,7 @@ read regex     AFilter
            .o. DeleteCircumflex
            .o. DeleteBoundary
            .o. Capitalize
-           .o. AllCaps ;
+           .o. AllCaps 
+           ;
 
 save stack trmorph.fst
