@@ -50,6 +50,13 @@ define replaceApos %@APOS -> 0 || _ Boundary+ .#.
                .o. %@APOS -> AposSym;
 
 !
+! The same as above, but also allow forms with no apostrophe
+!
+define replaceAposOpt %@APOS -> 0 || _ Boundary+ .#.
+                      .o. %@APOS (->) 0
+                      .o. %@APOS -> AposSym;
+
+!
 ! Replace @dB `digit boundary' with space or nothing
 !
 ! we allow insertion of spce anywhere, or lack of it between the
