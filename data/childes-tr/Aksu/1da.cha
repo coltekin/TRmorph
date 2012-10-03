@@ -1,0 +1,265 @@
+@UTF8
+@Begin
+@Languages:	tur
+@Participants:	CHI Nağme Target_Child , EXP Alev Investigator , MOT Mother
+@ID:	tur|aksu|CHI|3;0.||||Target_Child|||
+@ID:	tur|aksu|EXP|||||Investigator|||
+@ID:	tur|aksu|MOT|||||Mother|||
+*CHI:	bu ne ?
+*EXP:	bunlar kim ?
+*CHI:	kızla oğlan .
+*EXP:	beraber ne yapar [= yaparlar] ?
+*CHI:	bilmem .
+*CHI:	o çocuk mu ?
+*CHI:	onun üstünde koşsunmu ?
+*EXP:	kız ne yapıyor ?
+*CHI:	yürüyor .
+*EXP:	oğlan ne yapıyor ?
+*CHI:	yatıyor .
+%com:	A tell the boy to eat . there is only the english version here .
+*CHI:	öglan kız yemiyor , yiyecek .
+*EXP:	niye koşarlar ?
+*CHI:	yemiyelim diye .
+*EXP:	kiminle oynarsın ?
+*CHI:	Aylinle .
+*EXP:	başka .
+*CHI:	annemle .
+*EXP:	başka ?
+*CHI:	annemle .
+*CHI:	babamla .
+*CHI:	ablamla .
+*CHI:	kardeşimle oynarım .
+*EXP:	nasıl oyunlar ?
+*CHI:	koşmaca oynarım .
+*EXP:	annenle ne oynarsın ?
+*CHI:	iskambil oynarım .
+*EXP:	evcilik oynarmısın ?
+*CHI:	oynamam .
+*EXP:	nasıl oynanır bilirmisin ?
+*CHI:	bilirim .
+*EXP:	nasıl oynanır ?
+*CHI:	ben kapının arkasında saklanırım .
+*EXP:	bebeğini yatırıyorsun değil mi ?
+*CHI:	sallıyorum .
+*CHI:	yine yapalım anne salıncak ?
+*EXP:	dışarıya kiminle gidersin ?
+*CHI:	ablamla .
+*EXP:	dışarda ne görüyorsun ?
+*CHI:	martı.
+*EXP:	martı ne ?
+*CHI:	bilmem .
+*EXP:	kuş mu ?
+*CHI:	kuş.
+*EXP:	uçarmı?
+*CHI:	uçar .
+*EXP:	nasıl atarsın ?
+*CHI:	böyle atarım .
+*EXP:	kağıt kalem versem resim yaparmısın ?
+*CHI:	yapamam .
+*CHI:	ben yapamam .
+*CHI:	ben yazı yazarım .
+*CHI:	herşeyden xxx .
+*EXP:	vereyimmi sana ?
+*CHI:	ver .
+*CHI:	heryerini yaparım .
+*CHI:	heryerini yaparım .
+*EXP:	ismini yazabilirmisin ?
+*CHI:	xxx .
+*EXP:	bu ne resmi ?
+*CHI:	bu öyle bir yazı resmi .
+*EXP:	adam yap .
+*CHI:	adam .
+*EXP:	hani gözü kaşı?
+*CHI:	ağzı , gözü , kaşı.
+*CHI:	saçları.
+*CHI:	şuraya yazarım .
+*CHI:	arkasına da yazarım .
+*EXP:	insan yap .
+*CHI:	xxx baş yaparım ama ben .
+%com:	she puts her hand on the paper in an attempt to draw
+*CHI:	xxx yapamam .
+*CHI:	xxx yaptıktan sonra yapar xxx .
+%com:	the last word in the sentence above is not legible in the text .
+*EXP:	onu kim aldı sana ?
+*CHI:	aldılar .
+*CHI:	dedemle .
+*EXP:	nerde [= nerede] aldılar ?
+*CHI:	Istanbulda aldılar .
+*CHI:	doğum günümde verdiler .
+*EXP:	kaç yaşındaydın ?
+*CHI:	iki yaşında .
+*CHI:	küçük yaşımdaydım .
+*EXP:	kimler oturuyor bu evde ?
+*CHI:	biz .
+*EXP:	bu evde kimler var ?
+*CHI:	biz varız ya .
+*EXP:	babanı anlat .
+*CHI:	yalancı birisi .
+*EXP:	ne iş yapar ?
+*CHI:	yatar .
+*EXP:	hergün gider mi ?
+*CHI:	gider .
+*EXP:	nereye ?
+*CHI:	işe .
+*EXP:	annen ne yapar ?
+*CHI:	annem de xxx işi biter , Mustafayı ben de oynatırım .
+*EXP:	bugün ne yaptı annen ?
+*CHI:	birşey yapmadı.
+*EXP:	baba ne yaptı?
+*CHI:	babam bişey [= birşey] xxx .
+*EXP:	Mustafa ne yaptı?
+*CHI:	kaka yaptı?
+*EXP:	anne nasıl süslenir ?
+*CHI:	tarar .
+*EXP:	yüzüne ne sürer ?
+*CHI:	yüzüne pamuk sürer .
+*CHI:	birşey sürmez .
+*EXP:	dudaklarına birşey sürermi ?
+*CHI:	gözlerine oje süruyor .
+*EXP:	saçını kim tarar ?
+*CHI:	annem , babam .
+*EXP:	ütü kim ütüler ?
+*CHI:	ablam .
+*EXP:	ne zaman ütüler ?
+*CHI:	iki gün .
+*CHI:	şuna yazı yazıcam [= yazacağım] .
+*EXP:	yerleri kim temizler ?
+*CHI:	ben .
+*CHI:	ben temizlerim , süpürürüm .
+*EXP:	neyle ?
+*CHI:	koltuk süpürgemle .
+*EXP:	niye süpürürüz ?
+*CHI:	kirli .
+*EXP:	baban ne okur ?
+*CHI:	kitap .
+*EXP:	anne ne okur ?
+*CHI:	anne de okur .
+*EXP:	baban ne zaman okur ?
+*CHI:	sabahları.
+*EXP:	ne okur ?
+*EXP:	ne zaman uyur ?
+*CHI:	iki gün .
+*EXP:	anneni tarif etsene .
+*CHI:	yapamam .
+*CHI:	söyliyecem [= söyliyeceğim] .
+%com:	the word above was not very legible in the text
+*CHI:	kalemi versene .
+*EXP:	bugün ne oldu ?
+*CHI:	birşey olmadı.
+*EXP:	kim okşadı?
+*CHI:	tavuk .
+*CHI:	boş içindekiler , boş.
+*EXP:	kim yedi ?
+*CHI:	at .
+*CHI:	lombülü lombülü gider .
+%com:	lombülü lombülü= sound gesture imitating a camel
+*CHI:	xxx .
+*EXP:	kim kokladı?
+*CHI:	geyik kokladı.
+*CHI:	sünu versene .
+*CHI:	xxx getirmedinmi buraya ?
+*CHI:	çimdikledi .
+*EXP:	kim çimdikledi ?
+*CHI:	ben .
+*EXP:	yalasın bebeği deve .
+*CHI:	bu da bunun içinde durur .
+*CHI:	kırılır .
+*EXP:	ne onlar ?
+*CHI:	kevgir .
+*EXP:	ne yaparsın ?
+*CHI:	yemek yerim .
+*EXP:	anne ne verir kepçeyle ?
+*CHI:	çorba .
+*CHI:	makarna .
+*CHI:	bu makarna .
+*CHI:	bu çorba .
+*CHI:	böyle yapar .
+*CHI:	ondan sonra içine koyar .
+*CHI:	ordan sular akar .
+*EXP:	suyu neyle içersin ?
+*CHI:	bardakla .
+*EXP:	nasıl ?
+*CHI:	hüp , hüp diye .
+%com:	demonstrates/ imitates sound made in drinking
+*EXP:	saçların güzel .
+*CHI:	seninki ?
+*CHI:	önce makarna koyayım size .
+*CHI:	makarna koydum .
+*CHI:	yanına da et koyayımmı?
+*CHI:	bunların hepsi yıkanacak .
+*CHI:	ben yıkarım .
+*EXP:	nasıl yıkarsın ?
+*CHI:	yesende [= yesene] .
+%com:	the child added an extra suffix; or does he mean: "ye sen de"?
+*CHI:	kaşık da vericem [= vereceğim] .
+*CHI:	sen ye , kaşık da vereceğim .
+*CHI:	bir tane kaşık kaldı.
+*CHI:	al bakalım kaşiğı.
+*EXP:	kedi ne yapar ?
+*CHI:	çimdikler .
+*EXP:	başka ne yapar ?
+*CHI:	tırmalar .
+*CHI:	işte , işte .
+*EXP:	kediler başka ne yapar ?
+*CHI:	başka birşey yapmaz [= yapmazlar] .
+*CHI:	giderler sokağa .
+*CHI:	eve girmez ki .
+*CHI:	girmez ki eve .
+*EXP:	köpekler ne yapar ?
+*CHI:	köpekler hav hav xxx .
+%com:	hav hav: sound gesture imitating a barking dog
+*CHI:	ısırır hem de .
+*EXP:	başka ?
+*CHI:	başka birşey yapmaz .
+*EXP:	ne içer köpekler ?
+*CHI:	ne içerler anne köpekler ?
+*MOT:	ne yedirirdik ?
+*CHI:	ne yedirirdik ?
+*MOT:	kemiği nasıl yerdi ?
+*CHI:	nasıl yerdi ?
+%com:	demonstrates
+*CHI:	masanın altı.
+*EXP:	köpek ne için içer ?
+*CHI:	işte .
+*EXP:	su niye içer ?
+*CHI:	su içmez , et suyu .
+*CHI:	işte acıkır karnı.
+*CHI:	suyumu içiyim geliyim .
+*EXP:	kuşlar ne yapar ?
+*CHI:	cik cik cik der .
+*EXP:	başka ?
+*CHI:	ısırır , öter .
+*CHI:	mama bulamaz .
+*CHI:	geçen gün mama bulamadı.
+%com:	the last word in the above sentence is not very legible in the text
+*CHI:	ben de balkona mamalarını hazırlardım tabii xxx .
+*CHI:	ba ba ba yerler .
+*CHI:	meme y xxx .
+%com:	the text is not very legible here
+*EXP:	kuşlar nasıl uçar ?
+*CHI:	nasıl uçar kuşlar ?
+*CHI:	anne şu masanın üstüne yatıcam [= yatacağım] ben .
+*EXP:	neyin üstüne yatıcan [= yatacaksın] ?
+*CHI:	masanın .
+*EXP:	kurtlar ne yapar , yerler değil mi ?
+*CHI:	anne kurt yermi ?
+*CHI:	kurt yemez , ısırmaz .
+*CHI:	nerde [= nerede] gezer kurtlar ?
+*CHI:	nerdedir [= nerededir] dağlar ?
+*CHI:	orman ne demek ?
+*EXP:	balıkları biliyormusun ?
+*CHI:	baliğı bilmiyorum .
+*CHI:	hani böyle yüzer ya balıklar .
+*CHI:	anne bu balığı keselim bugün , yiyelim .
+*EXP:	bu ne ?
+*CHI:	kuyruk .
+*CHI:	kuyruğunu da yerim .
+*CHI:	Mustafa xxx .
+*CHI:	anne bu nerde [= nerede] gezer ?
+*CHI:	ne yapar ?
+*CHI:	anne bu da burda [= burada] dursun .
+*CHI:	şu da .
+*CHI:	anne bunun tüylerini ben hiç çıkaramam .
+*CHI:	bu abiden [= ağabeyden] .
+%com:	although the correct form of abi is ağabey , abi is more common
+@End

@@ -1,0 +1,694 @@
+@UTF8
+@Begin
+@Languages:	tur
+@Participants:	CHI Işıl Target_Child , EXP Alev Investigator
+@ID:	tur|aksu|CHI|3;8.||||Target_Child|||
+@ID:	tur|aksu|EXP|||||Investigator|||
+*EXP:	bak , şekerim , burada bir tane oğlan var .
+*EXP:	bir tane de kız var .
+*EXP:	ne yaparlar bunlar beraber ?
+*EXP:	ne yapabilirler ?
+*CHI:	ne ?
+*EXP:	oynayabilirler değilmi ?
+*CHI:	oynayabilirler .
+*EXP:	oynasınlar bakayım .
+*EXP:	oğlana söyle kız yemek yesin .
+*EXP:	söyle oğlana kız yemek yesin .
+*CHI:	söyledi işte .
+%com:	doll touches other
+*EXP:	sen söyle oğlana .
+*EXP:	sen söyle oğlana .
+*CHI:	a düştü.
+*EXP:	o çocuklar koşabilirlermi ?
+*CHI:	koşabilirler .
+*EXP:	sen koşabilirmisin ?
+%com:	affirmative gestures
+*EXP:	niye koşarsın ?
+*CHI:	niye ?
+*EXP:	niye koşarsın sen ?
+*CHI:	niye ?
+*EXP:	bilmem , sen söyle bana .
+*CHI:	ben de bilmiyorum .
+*EXP:	sen de mi bilmiyorsun .
+*EXP:	peki kime koşarsın sen ?
+*CHI:	ona koşarım .
+*EXP:	ona koşarsın , o ne o ?
+*CHI:	oğlan .
+*EXP:	peki Işılcım [= Işılcığım] , sen kiminle oynarsın ?
+*CHI:	bunlan [= bunla] .
+*EXP:	bunlar olmayınca kimle oynarsın ?
+*EXP:	arkadaşların var mı?
+*CHI:	var .
+*EXP:	kim senin arkadaşın ?
+*CHI:	Funda benim arkadaşım .
+*EXP:	tabii , siz Fundayla ne oynuyorsunuz ?
+*CHI:	taktaklan .
+%com:	blocks
+*EXP:	başka ne oynuyorsunuz ?
+*CHI:	oyuncak .
+*EXP:	nasıl oyuncaklar .
+*CHI:	tavşan var , bebek var .
+*EXP:	bebekle ne oynuyorsunuz ?
+*CHI:	evcilik .
+*EXP:	evcilik ?
+*EXP:	nasıl oynanıyor evcilik oyunu ?
+*CHI:	diziyorsun onları.
+*EXP:	nasıl diziyorsun ?
+*CHI:	böyle sıralıyorsun , sıralıyorsun .
+%com:	gestures
+*CHI:	çiçek gibi , böyle böyle , böyle sıralıyorsun .
+%com:	gestures
+*EXP:	peki ne zaman oynuyorsunuz Fundayla ?
+*CHI:	öbürgün .
+*EXP:	gece oynuyormusunuz beraber ?
+*CHI:	ama babam kızıyor .
+*CHI:	sabahleyin oyna diyor .
+*EXP:	akşam baba eve geliyor çünkü , değilmi ?
+*CHI:	kim kapıyı açacak , diyormuş.
+*EXP:	kim kapıyı açacak diyormuş , değilmi ?
+*EXP:	kim açıyor kapıyı?
+*CHI:	ben .
+*EXP:	koşup açıyormusun babana ?
+*CHI:	hı.
+*EXP:	nasıl açıyorsun ?
+*CHI:	böyle açıyorum .
+%com:	gestures
+*EXP:	baba ne zaman eve geliyor ?
+*CHI:	geceden sonra geliyor .
+*EXP:	ne yapıyor sana ?
+*CHI:	seviyor .
+*EXP:	öpüyormu ?
+*CHI:	hı.
+*EXP:	babanın terliklerini getiriyormusun ?
+*EXP:	peki , sen arada bir dışarıya çıkıyormusun ?
+*CHI:	ıh .
+%com:	no
+*CHI:	ıh .
+*EXP:	bazen çıkıyorsun sokağa değilmi ?
+*EXP:	kimle çıkıyorsun ?
+*CHI:	babamla , koleje gidiyoruz .
+*EXP:	ne yapıyorsunuz kolejde ?
+*CHI:	salıncaklara biniyoruz .
+*CHI:	kaydırağa biniyorsunuz .
+*EXP:	kolejde babanın ofisi varmı?
+*CHI:	orada oyuncak var .
+*CHI:	kolejde .
+*CHI:	ama kapalı.
+*CHI:	o yarın gelecek .
+*CHI:	Nezih içecek alacak öğretmenine .
+*CHI:	ondan sonra açılacak oyuncaklar .
+*CHI:	ama o tarafta .
+*CHI:	hani maden var ya , oradan çıkıyorsun .
+*CHI:	bakıyorsun .
+*CHI:	oradan çıkıyorsun , bakıyorsun oyuncaklara .
+*EXP:	senin topun varmı?
+*CHI:	var , yok .
+*EXP:	sen hiç top attınmı?
+*CHI:	atmadım , Nezih attı.
+*EXP:	nasıl atıyor ?
+*CHI:	böyle atıyor .
+%com:	gestures
+*EXP:	peki , gel senlen [= senle] birazcık ta resim yapalım .
+%com:	she starts drawing with considerable effort , small lines at a time
+*EXP:	ne yapıyorsun canım ?
+*CHI:	bir tane masa .
+%com:	she has made a rectangle like shape , and she places small circles around for chairs
+*EXP:	çok güzel olmuş o masa .
+*EXP:	ne masası o ?
+*CHI:	yemek için masa .
+*EXP:	kimler oturuyor etrafına ?
+*CHI:	Funda .
+*EXP:	başka ?
+*CHI:	sen .
+*EXP:	başka ?
+*CHI:	babası.
+*CHI:	burada babam , burada siz .
+*EXP:	ne yapıyoruz masada ?
+*CHI:	yemek yiyorsunuz .
+*EXP:	ne yemeği yiyoruz ?
+*CHI:	burası , böyle kapıyorsun .
+*CHI:	bunu da böyle , tamam .
+*EXP:	ne var onun etrafında ?
+*EXP:	niye kapattın ?
+%com:	she is drawing , enclosing the table with four lines
+*EXP:	ne yapıyorsun masanın etrafına ?
+*CHI:	bunlar böyle duracak .
+*EXP:	nedir onlar ?
+*CHI:	böcek .
+*EXP:	böcek ?
+*CHI:	hım .
+%com:	affirmative
+*EXP:	masanın etrafına böcek mi gelmiş?
+*EXP:	ne böceği bunlar ?
+*CHI:	salıncak böceği .
+*EXP:	peki ne yemekleri var üstünde ?
+*CHI:	yemek , pırasa .
+*EXP:	başka ?
+*CHI:	fasulye .
+*EXP:	başka ?
+*CHI:	ıspanak .
+*EXP:	aman ne güzel .
+*EXP:	tatlı varmı?
+*CHI:	hı hı.
+*EXP:	ne tatlısı?
+*CHI:	bayağı işte , elma gibi .
+*CHI:	ben yazayımmı?
+*EXP:	sen yaz .
+*EXP:	neyle yazarsın ?
+*CHI:	şöyle yapacam [= yapacağım] .
+*EXP:	neyle yazarsın ?
+*CHI:	kalemle yazacam [= yazacağım] böyle .
+*CHI:	kurşun .
+*EXP:	neyle resim yapıyorsun peki ?
+*CHI:	dolma kalem alıyorum , yapıyorum .
+*EXP:	başka birşey kullanıyormusun ?
+%com:	affirmative
+*CHI:	bu daha pek olmadı.
+%com:	the drawing
+*EXP:	be senin bileziğin ne kadar güzel .
+*EXP:	kim verdi sana bu bileziği ?
+*CHI:	çarşıdan aldık .
+*EXP:	kim aldı?
+*CHI:	annem .
+*EXP:	neden yapılmış bu ?
+*CHI:	bu yapılmamış , çarşıdan alınmış.
+*CHI:	ama sıkıyor burası.
+*CHI:	buraya getirttir .
+*EXP:	ne cins bu , teneke mi ?
+*CHI:	hı.
+%com:	affirmative
+*EXP:	yoksa altın mı?
+*CHI:	altın değil , çiçekli .
+%com:	flower designs on the bracelet
+*CHI:	yazıyımmı [= yazayımmı] sana ?
+*EXP:	peki şekerim sen söylermisin bana , bu evde kimler oturuyor ?
+*CHI:	biz .
+*EXP:	kim yani ?
+*CHI:	babam , abim , annem , ben .
+*CHI:	bu evde kim oturuyor ?
+%com:	points to examiner's house
+*EXP:	bu evde de biz oturuyoruz .
+*CHI:	evet .
+*EXP:	peki annen ne zaman uyuyor ?
+*CHI:	şimdi , televizyon başladıktan sonra .
+*EXP:	sen ne zaman uyuyorsun ?
+*CHI:	televizyon başladıktan sonra .
+*EXP:	gündüz uyuyormusun ?
+*CHI:	gündüz uyuyorum .
+*EXP:	annen nerde yatıyor senin ?
+*CHI:	burada , o odada .
+%com:	points to room
+*EXP:	o odada yatağı var mı?
+*CHI:	var , hani sizin evde büyük yatağınız var ya .
+*CHI:	onun gibi .
+*EXP:	peki , bugün ne oldu sabahleyin ?
+*EXP:	ben bir gürültü duydum .
+*EXP:	birşey oldumu ?
+*CHI:	televizyon başladı.
+*EXP:	sabahleyin televizyon var mıydı?
+%com:	affirmative
+*EXP:	sahi mi ?
+*EXP:	ne gösterdiler ?
+*CHI:	kovboyculuk .
+*EXP:	filim mi ?
+%com:	affirmative
+*EXP:	güzel miydi ?
+*CHI:	güzel değildi .
+*EXP:	güzel değil miydi ?
+*CHI:	Eyüp amcam gelmişti .
+*CHI:	bizim telefonumuz var .
+*EXP:	güle güle kullanın .
+*CHI:	benim değil .
+*EXP:	kimin ?
+*CHI:	annemle babamın .
+*CHI:	telefon ediyorlar .
+*CHI:	çok şık .
+*CHI:	sizinki gibi .
+*CHI:	bak böyle .
+%com:	points to teyp
+*EXP:	bizimki telefon değil , teyp .
+*EXP:	annen senin süsleniyormu ?
+*CHI:	hı.
+%com:	affirmative
+*EXP:	nasıl ?
+*CHI:	bayağı.
+*EXP:	anlat bana , ne sürüyor yüzüne ?
+*CHI:	krem sürüyor .
+*CHI:	boya sürüyor .
+*EXP:	nasıl boya ?
+*CHI:	babam xxx .
+*EXP:	nasıl boya sürüyor ?
+*EXP:	gözünü boyuyormu ?
+*CHI:	böyle sürüyor .
+%com:	gestures
+*EXP:	ne renk boya ?
+*CHI:	öbür renk .
+*EXP:	ne renk , kırmızı mı?
+*CHI:	hı.
+*EXP:	peki dudağına ne renk sürüyor ?
+*CHI:	ruj sürüyor dudağına .
+*EXP:	koku sürüyormu ?
+*CHI:	no .
+%com:	gestures
+*EXP:	güzel kokusu var mı annenin ?
+*CHI:	var .
+*EXP:	kolonyası var mı annenin ?
+*CHI:	var .
+*EXP:	senin tırnaklarında ne var ?
+*CHI:	oje .
+*EXP:	kim sürdü ojeleri parmağına ?
+*CHI:	Fethiye hala .
+*EXP:	sen seviyormusun oje ?
+*CHI:	seviyorum , babam alacak oje .
+*CHI:	bak bunun gibi beyaz .
+%com:	laughs
+*CHI:	Fethiye halam almıştı.
+*EXP:	peki evde kim ütü ütülüyor ?
+*CHI:	annem .
+*EXP:	ne zaman ütülüyor ?
+*CHI:	bugünleri öbürgünleri .
+*EXP:	neyle ütülüyor ?
+*CHI:	babamın gömleğini .
+*EXP:	başka ne ütülüyor ?
+*CHI:	Nezihin pantalonunu .
+*EXP:	peki neyle ütülüyor ?
+*CHI:	hı?
+*EXP:	eliyle mi ütülüyor ?
+*CHI:	ütüyle .
+*CHI:	ütüsü var .
+*EXP:	nasıl bir ütü?
+*CHI:	su dolduruyorsun ütülüyorsun .
+*EXP:	buharlı mı ütü?
+*CHI:	yoo .
+*EXP:	sulu ?
+*CHI:	evet , su dolduruyorsun .
+*CHI:	yapıyorsun , yapıyorsun .
+%com:	gestures
+*CHI:	ütülüyorsun böyle .
+%com:	she is drawing meanwhile C bu baston .
+*EXP:	peki yerleri kim temizliyor ?
+*CHI:	annem .
+*EXP:	neyle temizliyor ?
+*CHI:	şey alıyor temizliyor .
+*EXP:	ne alıyor .
+*CHI:	toz bezi .
+*CHI:	su dolduruyor , yapıyor .
+*EXP:	ne atıyor içine .
+*CHI:	sabun .
+*EXP:	nasıl sabun ?
+*CHI:	bayağı sabun .
+*CHI:	hani torbada var ya , onlardan atıyor .
+*CHI:	ama bitmiş.
+*EXP:	peki niye süpürüyor annen yerleri ?
+*CHI:	toz olduğu için .
+*EXP:	kirleniyormu ev sık sık .
+*CHI:	kirleniyor .
+*EXP:	kim kirletiyor ?
+*CHI:	ağbimle [= ağabeyimle] babam , annem , ben .
+*EXP:	evi dördünüz kirletiyorsunuz değil mi ?
+*CHI:	evet .
+*CHI:	ondan sonra süpürüyoruz .
+*EXP:	sen yardım ediyormusun ?
+*CHI:	hı.
+%com:	affirmative
+*EXP:	nasıl yardım ediyorsun ?
+*CHI:	bayağı.
+*EXP:	anlat bana .
+*CHI:	siliyorum .
+*EXP:	siliyorsun , başka ne yapıyorsun ?
+*CHI:	hiçbirşey .
+*EXP:	sen elbiselerini topluyormusun ?
+*CHI:	hı.
+*EXP:	içerden bir ses geliyor , ne sesi o ?
+%com:	washing machine
+*CHI:	makine .
+*EXP:	ne makinası?
+*CHI:	çamaşır makinesi .
+*EXP:	kim yıkıyor çamaşırı?
+*CHI:	annem .
+*EXP:	senin elbiselerini mi yıkıyor ?
+*CHI:	hı.
+%com:	affirmative
+*CHI:	ama bozulmuştu , yaptılar .
+*EXP:	kim yaptı?
+*EXP:	peki Işıl , annen evde çalışıyor , böyle işler görüyor .
+*EXP:	baba ne iş yapıyor ?
+*CHI:	o da çalışıyor .
+*EXP:	a , o nasıl çalışıyor ?
+*CHI:	yazı yazıyor .
+*EXP:	niye çalışıyor ?
+%com:	still drawing
+*CHI:	a , bunu ağbimi yaptım bak .
+*EXP:	niye çalışıyor baban canım ?
+*CHI:	niye çalışıyor ?
+*EXP:	sen biliyormusun ?
+*CHI:	bilmiyorum .
+*EXP:	baban okuyormu bazen ?
+*CHI:	okuyor .
+*EXP:	ne okuyor ?
+*CHI:	Nezihe kitap .
+*EXP:	ne zaman okuyor ?
+*CHI:	öbür gün , başka gün .
+*EXP:	gündüz mü okuyor , gece mi okuyor ?
+*CHI:	gece .
+*CHI:	ama uyuyoruz gündüz .
+*EXP:	peki Nezih ne yapıyor ?
+*CHI:	ne yapıyor , ders .
+*EXP:	okula gidiyor degilmi Nezih ?
+%com:	affirmative
+*EXP:	kaçıncı sınıfta sen biliyormusun ?
+*CHI:	çik .
+%com:	no
+*CHI:	kaçıncı sınıfta anne ?
+*EXP:	Nezihin arkadaşları varmı?
+*CHI:	var .
+*EXP:	kim ?
+*CHI:	O'merle Cem .
+*EXP:	geliyormu onlar buraya ?
+%com:	affirmative
+*EXP:	sen oynuyormusun onlarla ?
+*CHI:	kendisi oynuyor .
+*EXP:	sen onlarla oynamıyorsun , niçin oynamıyorsun ?
+*CHI:	var benim arkadaşlarım .
+*EXP:	sen bana bu evi anlatsana .
+*EXP:	bu ev , kaç odası var ?
+*CHI:	üç tane .
+*EXP:	kimin odaları onlar ?
+*CHI:	biri babamın , bide [= birde] annemin , birde benim .
+*CHI:	birde Nezihin .
+*EXP:	mutfağı varmı?
+*CHI:	var .
+*EXP:	küçük mü mutfak , büyük mü?
+*CHI:	büyük .
+*EXP:	banyosu da var ?
+*CHI:	küveti dolduruyoruz zaten .
+*EXP:	sonra ne yapıyorsunuz .
+*CHI:	uyuyoruz .
+*CHI:	hem oynayacağız , oynayacağız .
+*EXP:	küvetin içinde ne oynuyorsunuz ?
+*CHI:	oynamıyoruz , yıkanıyoruz .
+*EXP:	kim yıkıyor seni ?
+*CHI:	kendim .
+*CHI:	Funda kendisi yıkanıyormu ?
+*EXP:	hayır , onu ben yıkıyorum .
+*EXP:	sen neyle yıkanıyorsun ?
+*CHI:	şampuanla .
+*EXP:	başka ?
+*CHI:	döküyorum elime .
+*CHI:	ıslatıp başım [= başıma] koyuyorum .
+*EXP:	sonra ne yapıyorsun ?
+*CHI:	yıkanıyorum işte , çıkıyorum .
+*EXP:	çıktıktan sonra ne yapıyorsun ?
+*CHI:	kurulanıyorum .
+*CHI:	hadi [= haydi] oynayacağız .
+*CHI:	değişecezmi [= değişecekmiyiz] bunları.
+*EXP:	efendim canım ?
+*CHI:	bak bu değiş , bu gel .
+*CHI:	ben gidecem [= gideceğim] okula .
+*CHI:	daha xxx .
+*CHI:	bak bunun için .
+%com:	playing with the plastic boxes and talking to the brother he has come in
+*EXP:	ne yapıyorsun şekerim ?
+*CHI:	hiç.
+*EXP:	anlat bana .
+*CHI:	bakayım .
+*CHI:	bunlar ne biliyormusun ?
+*CHI:	şeker .
+*CHI:	şeker koyummu [= koyayımmı] ?
+*CHI:	kahve yapıyımmı [= yapayımmı] ben sana ?
+%com:	uses sticks to stir coffee
+*CHI:	bunları alacaksın , buna koydukmu .
+%com:	sugar in boxes
+*EXP:	ne yapıyorsun ?
+*CHI:	kahve .
+*CHI:	hadi [= haydi] bakalım yeniden yapalım .
+*EXP:	ne yapıyorsun ?
+*CHI:	güzelleştiriyorum .
+%com:	brother comes and kisses her
+*CHI:	güle güle .
+*CHI:	Alev teyzeyi öpmedin .
+%com:	to the brother
+*EXP:	bir dahaki sefere öper artık , ziyanı yok .
+*EXP:	şimdi ne yapıyorsun ?
+*CHI:	temizliyorum .
+*EXP:	diziyormusun ?
+*CHI:	diziyorum .
+*EXP:	nereye diziyorsun ?
+*CHI:	buraya , kağıtın üstüne .
+*EXP:	şimdi ne yapıyorsun ?
+*CHI:	temizledim , yeniden bulaşık çıktı.
+*EXP:	sen bana bir masal anlatırmısın ?
+*CHI:	ben bilmiyorumki masal .
+*EXP:	nasıl bilmiyorsun , bin kuzu masalını bilmiyormusun ?
+*CHI:	giriyormu içine , bu giriyormu içine .
+%com:	trying to place a large box into smaller one
+*EXP:	girmiyor tabii .
+*CHI:	ama bu ufacık , ama bu büyük .
+*CHI:	buda gelmez , bu gelir .
+*CHI:	bu gelir .
+%com:	placing small boxes into large ones
+*EXP:	evet ?
+*EXP:	hadi [= haydi] şimdi bir masal anlat , sesini teybe alayım .
+*EXP:	nasıl masal anlatacaksın ?
+*EXP:	hadi [= haydi] bir varmış bir yokmuş.
+*CHI:	öyle denmez .
+*EXP:	nasıl denir ?
+*CHI:	kambur zaman içinde .
+%com:	silence
+*EXP:	anlatabilirmisin bana masal ?
+%com:	no , negative
+*EXP:	peki şarkı biliyormusun ?
+%com:	no , gesture
+*EXP:	ben senin söylediğini duyuyorum ama .
+*EXP:	al kardeşim , sev kardeşim diye .
+*CHI:	hepsini bilmiyorum .
+*EXP:	ne kadarını biliyorsun ?
+*EXP:	ne kadarını biliyorsan söyle bana .
+*CHI:	cık .
+%com:	no
+*EXP:	sen yoruldunmu artık , karnın acıktımı?
+%com:	no
+*EXP:	ben şimdi gideyim , yarın gene gelirim .
+*CHI:	biliyorum .
+*EXP:	ne biliyorsun , masalmı?
+*EXP:	anlat bakayım hadi [= haydi] .
+*CHI:	bakkal mı?
+*CHI:	doldursana içine .
+%com:	offers the cup
+*CHI:	ne doldurayım ?
+*EXP:	su , pislik olur sonra .
+*CHI:	olsun .
+*EXP:	ne o ?
+*CHI:	balon .
+*EXP:	nerde balon ?
+%com:	on the cup , picture of a baloon
+*EXP:	hadi [= haydi] masalı anlatacakmısın ?
+*CHI:	efendim ?
+*EXP:	anlatacakmısın ?
+*CHI:	anlatacam [= anlatacağım] .
+*EXP:	e , hadi [= haydi] bekliyorum .
+*CHI:	bekle işte .
+*EXP:	sen babaannene gittinmi bu günlerde ?
+*EXP:	almıyorlarki hastaneye .
+%com:	grandfather was sick at the hospital
+*EXP:	görmedinmi dedeni ?
+*CHI:	cık .
+*EXP:	ne olmuş senin dedene ?
+*CHI:	hasta oldu .
+*EXP:	ne hastalığı.
+*CHI:	işte olmuş.
+*EXP:	neresi acımış.
+*CHI:	acımamış , hasta .
+*EXP:	nasıl hasta , soğuk mu almış , grip mi olmuş?
+*EXP:	Eyüp amcan geldimi ?
+*CHI:	geldi .
+*EXP:	ne zaman geldi ?
+*CHI:	geldi işte .
+*EXP:	ne yaptınız , beraber oynadınızmı?
+*CHI:	ıh , ıh .
+%com:	negative
+*EXP:	ne yaptınız peki ?
+*CHI:	oturduk , hastanede koltuk var ama .
+*CHI:	divan .
+*CHI:	oynayacazmı [= oynayacakmıyız] ?
+*EXP:	onlarla yarın oynayacağız artık .
+*CHI:	ipler , ama ipler .
+*CHI:	iplen [= iple] oynayacazmı [= oynayacakmıyız] ?
+*CHI:	aynı xxx var .
+*EXP:	nerden almış Aynur teyzen ?
+*CHI:	hiçbiryerden almamışki .
+*EXP:	kim vermiş onu ona ?
+*EXP:	nasıl hiç kimseden ?
+*EXP:	yüzüğü çarşıdan mı almış?
+*EXP:	dükkandan mı almış , ne yapmış?
+*CHI:	yeni değilmiş.
+*EXP:	senin yüzüğün de var ama değil mi ?
+*CHI:	hı.
+*EXP:	senin bileziğin var ama değil mi ?
+*CHI:	senin varmı?
+*EXP:	yok .
+*CHI:	var , var .
+*CHI:	bak böyle bilezik .
+*EXP:	sen benim hayvanlarımı seviyormusun ?
+*CHI:	seviyorum .
+*EXP:	bak ne güzel hayvanlar değil mi ?
+*EXP:	zürafa , keçi .
+*EXP:	sen hiç keçi gördünmü?
+*EXP:	tos keçi , burada yukarda [= yukarıda] yok mu ?
+*EXP:	Etilerde , oralarda ?
+*CHI:	köpek var mı köpek .
+*EXP:	köpek te var tabii .
+*CHI:	aşağıda , öbür bahçede .
+*CHI:	biz de gördük keçiyle kuzu .
+*CHI:	siz gördünüzmü?
+*CHI:	biz aşağıya gittik , orada gördük .
+*CHI:	siz gördünüzmü?
+*EXP:	hiç görmedik .
+*CHI:	onlar gittiler .
+*EXP:	nereye gittiler ?
+*CHI:	evine .
+*EXP:	keçiler ne yer ?
+*CHI:	ot yer .
+*EXP:	su içermi keçiler ?
+*CHI:	ıh , ıh , suyu yokki .
+*EXP:	susuz kalırsa ne yapar keçiler ?
+*CHI:	içmediki su .
+*EXP:	bak kedi , bizim evin önüne gelen kediye benziyor değil mi ?
+*EXP:	o kedi ne yapıyor , bizim evin önüne gelen kedi ?
+*CHI:	hiçbirşey .
+*EXP:	niye geliyor kapının önüne ?
+*CHI:	geliyor işte .
+*EXP:	sen mi çağırdın ?
+*CHI:	kendisi geliyor .
+*EXP:	seni tırmaladımı hiç?
+*CHI:	yok .
+*EXP:	tırmalarmı kediler ?
+*CHI:	yok .
+*CHI:	dün akşam tırmalamıştı.
+*EXP:	niye tırmaladı?
+*CHI:	tırmaladı işte .
+*EXP:	durup dururken tırmalanırmı?
+*CHI:	tırmalanır tabii .
+*EXP:	başka ne yapar kediler , ağaca çıkarlarmı?
+*CHI:	çıkmazki .
+*CHI:	siz gördünüzmü?
+*CHI:	bizim orda da mırnav var .
+*EXP:	benim kedinin bir arkadaşı var , o da köpek .
+*CHI:	bücürle mırnav .
+*EXP:	bu köpek ne yapar biliyormusun ?
+*CHI:	ne yapar ?
+*EXP:	böyle koşar koşar gelir , iyilir [= eğilir] , su içer .
+*CHI:	çeşmeden içermi ?
+*CHI:	düştü kedi de .
+*EXP:	köpekler niçin su içer sen biliyormusun ?
+*CHI:	bilmiyorum .
+*EXP:	sen niçin su icersin ?
+*CHI:	niçin .
+*CHI:	susadım diye .
+*EXP:	köpekler niçin içer ?
+*CHI:	susadım diye .
+*EXP:	tabii .
+*EXP:	köpekler süt içermi ?
+*CHI:	içer .
+*CHI:	Funda ne içiyor ?
+*CHI:	akşam yaptılar demek .
+*EXP:	sana bir kuş vereyimmi kuş?
+*CHI:	ne güzel .
+*EXP:	bunlar ne ?
+%com:	wings
+*CHI:	kanatları.
+*EXP:	kuşlar nasıl uçar ?
+%com:	moves wings on bird
+*EXP:	böyle böyle uçarlar .
+*EXP:	kuşlar su içermi ?
+*CHI:	içer tabii .
+*EXP:	kim veriyor kuşlara su ?
+*CHI:	kendisi içiyor .
+*EXP:	kuşlar nerede oturur biliyormusun ?
+*CHI:	nerde [= nerede] ?
+*EXP:	ben de bilmiyorum .
+*EXP:	kuşların yuvaları var mı , biliyormusun ?
+*CHI:	var tabii .
+*EXP:	hiç sen kuş yuvası gördünmü?
+*CHI:	sen gördünmü?
+*CHI:	ben görmedim .
+*EXP:	yavru kuşlar nerde duruyor ?
+*CHI:	evinde .
+*CHI:	ismi ne ?
+%com:	of the bird
+*CHI:	kuş.
+*EXP:	soyadı ne ?
+*EXP:	kuşoğlu .
+%com:	laughs
+*CHI:	değil .
+*EXP:	tabii , kuş kuşoğlu onun ismi .
+*CHI:	ismi kuş.
+*EXP:	soyadı olmazmı kuşun ?
+*EXP:	senin soyadın yokmu ?
+*CHI:	yok tabii .
+*EXP:	var tabii .
+*CHI:	Yetiş mi ?
+*EXP:	tabii Yetiş.
+*CHI:	bunun varmı?
+*EXP:	var tabii , kuşoğlu .
+*CHI:	değil .
+*CHI:	ah ne güzel bu ya .
+*CHI:	sıcacık .
+*EXP:	sen hiç kurt gördünmü?
+*CHI:	bu mu kurt ?
+*CHI:	ne güzel tırmalıyor yanağını.
+*EXP:	niye tırmalıyor ?
+%com:	laughs
+*EXP:	ısırıyormu kurt ?
+*EXP:	bir de balık vereyim ben sana .
+*CHI:	a ne güzel balık .
+*CHI:	akşamleyin gördüm ben balık .
+*EXP:	anlat bana balıkları.
+*CHI:	bu balıkın gözleri .
+*CHI:	kopartırsın bunları.
+%com:	wings
+*CHI:	koyarsın pişer .
+*EXP:	nerede pişer ?
+*CHI:	tabakta .
+*EXP:	neyin içinde pişer ?
+*CHI:	cici cici .
+%com:	balık kisses me
+*EXP:	balık beni seviyormu ?
+*EXP:	bu ne bu bak ?
+*CHI:	bu ne ?
+*EXP:	neresi bu baliğın ?
+*CHI:	neresi ?
+*EXP:	kuyruğu .
+*EXP:	balıklar nasıl yüzer ?
+*CHI:	böyle , böyle .
+%com:	gestures
+*CHI:	durar [= durur] böyle .
+*CHI:	biz denizde böyle büyük balık gördük .
+*EXP:	ne balığı?
+*CHI:	büyük .
+*CHI:	ben bularım [= bulurum] sana kibrit .
+*CHI:	bak burada ne var biliyormusun ?
+*CHI:	gösteriyim [= göstereyim] .
+*CHI:	birşey gösteriyim [= göstereyim] bak .
+*CHI:	bunlar bıçak .
+*EXP:	ne güzel , kimin onlar .
+%com:	camping knives
+*CHI:	siz aldınızmı?
+*CHI:	babanıza aldınızmı bundan ?
+*CHI:	ya gördünmü?
+*CHI:	ama sokuluyor bu bak sokuluyor .
+%com:	the knife set closes
+*EXP:	o kaşıkla ne yapılır ?
+*CHI:	yemek yenir .
+*EXP:	bıçakla ne yapılır ?
+*CHI:	bu girmişti akşamleyin .
+%com:	can't close the set , surprized
+*CHI:	bu mandoline benziyor , değilmi ağbi [= ağabey] ?
+*CHI:	ama öyle değil , böyle açılıyor .
+*CHI:	bak şurası böyle açılıyor .
+*EXP:	nasıl çalınıyor mandoline ?
+*CHI:	böyle .
+%com:	gestures
+*EXP:	ağbin [= ağabeyin] mandoline çalıyormu ?
+*CHI:	çalıyor .
+@End

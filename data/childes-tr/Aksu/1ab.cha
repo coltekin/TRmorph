@@ -1,0 +1,435 @@
+@UTF8
+@Begin
+@Languages:	tur
+@Participants:	CHI Arel Target_Child , EXP Alev Investigator , MOT Mother
+@ID:	tur|aksu|CHI|2;4.||||Target_Child|||
+@ID:	tur|aksu|EXP|||||Investigator|||
+@ID:	tur|aksu|MOT|||||Mother|||
+*EXP:	anneler babaanneye gittilermi ?
+*CHI:	gittiler .
+*EXP:	geldilermi sonra ?
+*EXP:	geldiler .
+*EXP:	sen ne yaptın o arada ?
+*CHI:	otobüsle oynadım .
+*EXP:	hangi otobüsle ?
+*CHI:	başka otobüsle .
+*CHI:	bibiple .
+*EXP:	bibiplemi oynadın ?
+*CHI:	oynadım .
+*CHI:	kule ?
+*EXP:	kuleyle de mi oynadın ?
+*CHI:	oynadım .
+*EXP:	gezmeye gittinmi ?
+*CHI:	gittim .
+*EXP:	Ayala geldimi sana misafirliğe ?
+*EXP:	Ayala geldimi ?
+*CHI:	gelmedi .
+*CHI:	İsmail .
+*EXP:	İsmail geldimi ?
+*CHI:	geldi .
+*EXP:	Rahim .
+*CHI:	geldi .
+*CHI:	S'aban efendi .
+*EXP:	S'aban efendi ?
+%com:	referring to the doorkeeper and his sons
+*EXP:	o da mı geldi ?
+*CHI:	geldi .
+*EXP:	çok misafir gelmiş.
+*EXP:	deden nasıl , iyi mi ?
+*CHI:	Sabahattin dede .
+*EXP:	Sabahattin dede de geldimi ?
+*CHI:	hı.
+*EXP:	ne yaptı , senlen oynadımı?
+*CHI:	oynadı.
+*CHI:	bibiplen [= bibiple] oynadım .
+*EXP:	koştunmu ?
+*CHI:	koştu .
+*EXP:	niye koştun ?
+*CHI:	koştu .
+*EXP:	niye koştun ?
+*CHI:	anneannem ne yapıyor ?
+*EXP:	bilmem ne yapıyor; sen gördünmü anneanneni ?
+*CHI:	gördüm .
+*EXP:	oynuyormuydu anneannen ?
+*CHI:	oynuyordu .
+*EXP:	ben öksürüyorum , sen öksürüyormusun ?
+*CHI:	öksürmüyorum .
+*EXP:	ben hasta oldum , sen olmadınmı?
+*CHI:	olma xxx .
+*EXP:	sen olmadınmı?
+*CHI:	ol xxx .
+*EXP:	ver , ismim ne benim ?
+*EXP:	sen kiminle oynadın ?
+*CHI:	ha ?
+*EXP:	İsmail'le mi oynadın ?
+*CHI:	oynadım .
+*CHI:	bibip .
+*EXP:	bibiplemi oynadın ?
+*CHI:	oynadım .
+*EXP:	ne zaman oynadın ?
+*EXP:	efendim ?
+*CHI:	sağa sola oynadım .
+*EXP:	sağa sola oynadın , öyle mi ?
+*EXP:	bir saat sonra mı oynadın ?
+*CHI:	ha .
+*EXP:	ne zaman ?
+*CHI:	oynadım .
+*EXP:	yerleri temizledinmi ?
+*CHI:	temizledim .
+*EXP:	neyle temizledin ?
+*CHI:	omo temizledim .
+%com:	omo is a brand name for a cleaning detergent used in Turkey
+*EXP:	sahi mi ?
+*EXP:	başka şey oynıyalım senlen .
+*EXP:	bunu sana kim verdi ?
+*CHI:	kazak .
+*CHI:	bunu kim getirdi ?
+%com:	referring to the interviewer's sweater
+*EXP:	bunu kendim aldım .
+*EXP:	sevdinmi rengini , güzel mi ?
+*CHI:	hı.
+*EXP:	beyendinmi rengini , hı?
+*EXP:	saçların uzamış.
+*CHI:	hı?
+*EXP:	ben sana bir araba vereyim bak .
+*CHI:	otobüs te .
+*EXP:	bak ne geliyor .
+%com:	a doll on a car
+*EXP:	hadi söyle bana ne geliyor .
+*CHI:	orası.
+*CHI:	gece ordan ne yapıyor ?
+*EXP:	hiç , ne geliyor sana .
+*CHI:	hı.
+*EXP:	ne geliyor ?
+*CHI:	araba .
+*EXP:	araba geliyor değilmi ?
+*CHI:	şeker nerde ?
+*EXP:	şeker orda al .
+*EXP:	ne yapıyorsun ?
+*EXP:	ne yapıyorsun canım ?
+*CHI:	bunun kapısı nerede ?
+*CHI:	bunun ne yapıyor ?
+*CHI:	bunun içinde amca ne yapıyor ?
+*EXP:	hangi amca canım ?
+*CHI:	amca ne yapıyor ?
+*EXP:	oynuyor .
+*EXP:	oynuyor o amca .
+*EXP:	oynuyormu ?
+*CHI:	oynuyor .
+*EXP:	ne yapıyor sen bana söyle .
+*CHI:	o amca ne yapıyor ?
+*EXP:	sen bana söyle , hangi amca ?
+*CHI:	hı.
+*EXP:	hangi amca ?
+*CHI:	o ne yapıyor ?
+*EXP:	bu amca mı?
+*EXP:	ne yapıyor bilmem .
+*CHI:	o ne ?
+*EXP:	amca .
+*CHI:	baba .
+*EXP:	baba .
+%com:	a doll
+*EXP:	ne yapıyor baba ?
+*CHI:	bunun pantolonu nerde ?
+*CHI:	o pantolon .
+*EXP:	burda işte pantolon .
+*CHI:	o ne ?
+*EXP:	o da gömlek değilmi ?
+*CHI:	hı.
+*CHI:	gömlek .
+*CHI:	işaret nerde ?
+*EXP:	hangi işaret , trafik işareti mi ?
+*CHI:	işaret .
+*EXP:	şu mu ?
+*CHI:	evet .
+*EXP:	burda işte .
+*EXP:	bana yol yaparmısın bu işaretlerle ?
+*CHI:	yaparsın .
+*EXP:	yaparım .
+%com:	the inerviewer's note: "note that he tends to use the 2nd person singular"
+*CHI:	yaparım .
+*EXP:	peki .
+*EXP:	dur bakalım şimdi , bunu bir deneyelim senlen .
+*CHI:	işaret , işaret nerde ?
+*EXP:	dur şimdi , sana verecem [= vereceğim] .
+*EXP:	şimdik dur , ben sana koyayım .
+*CHI:	onlar ne ?
+*CHI:	ben ne yaptım bak .
+*EXP:	sen bana bir yol yaparmısın .
+*CHI:	yaparsın .
+*EXP:	al bunları sen bana dümdüz bir yol yap .
+*CHI:	birtane daha .
+*CHI:	onu da .
+*EXP:	evet .
+*EXP:	koy bakalım da göreyim .
+*CHI:	koydu .
+*CHI:	koydu .
+*EXP:	şimdi bu yol düzgün oldumu ?
+*CHI:	oldu .
+*EXP:	böyle yapabilirmisin ?
+*CHI:	bilirsin .
+*EXP:	hadi sen öyle yap .
+*CHI:	yaptım .
+*MOT:	sen dizdinmi bunları cici cici ?
+*CHI:	dizdim .
+*CHI:	otobüs ne yapmış?
+*CHI:	anne otobüs ne yapmiş?
+*CHI:	anne otobüs nerede ?
+*EXP:	al canım .
+*CHI:	anne otobüs .
+*MOT:	Alev teyzeye sor .
+*EXP:	al .
+*CHI:	şimdi ne yapacağım Alev teyzelere ?
+*EXP:	oynuyacaklar .
+*CHI:	sepet nerde ?
+*MOT:	sepet nerde ?
+*CHI:	orda .
+*MOT:	bebek nerde ?
+*CHI:	anne bu ne ?
+*CHI:	şu ne ?
+*MOT:	çocuk .
+*CHI:	adam .
+*EXP:	adam mı?
+*CHI:	anne böyle olsun .
+*CHI:	öyle .
+*CHI:	ay düşürmesin o .
+*CHI:	o düşmesin .
+*MOT:	sen tut ta düşmesin .
+*CHI:	kapat .
+*MOT:	kapat .
+*CHI:	öyle değil .
+*CHI:	takılmıyor .
+*CHI:	öyle yapalım .
+*EXP:	ne oldu şimdi ?
+*EXP:	adam nerde Erel ?
+*CHI:	yok .
+*EXP:	o adam .
+*CHI:	baba .
+*EXP:	baba mı?
+*CHI:	o düş xxx .
+*CHI:	onun ayağı düşmesin .
+*EXP:	peki sen tut ta düşmesin .
+*CHI:	düşüyor .
+*MOT:	sen tutarsan düşmez .
+*CHI:	düşüyor .
+*CHI:	şurdan koyalım .
+*CHI:	ay düşüyor .
+*EXP:	uyuycakmış , uykusu gelmiş.
+*CHI:	ha ?
+*EXP:	adamın uykusu gelmiş.
+*CHI:	yok , aahh .
+*CHI:	sıcak .
+*CHI:	onun uykusu ?
+*EXP:	onun uykusu gelmişmi ?
+*CHI:	gelmemiş.
+*EXP:	nerde uyuyormuş o ?
+*CHI:	adamın ?
+*MOT:	sütü?
+*MOT:	yok sütsüz uyuyormuş o .
+*MOT:	nerde uyuyor o çocuk ?
+*EXP:	nerde uyuyor ?
+*EXP:	nerde uyuyor o çocuk şekerim ?
+*CHI:	hı.
+*EXP:	yatağı var ha , yorgan .
+%com:	puts a blanket on the doll
+*MOT:	adamın üstüne ört bakalım battaniyeyi .
+*CHI:	ört .
+*EXP:	adamın üstüne ört .
+*CHI:	onun üstüne .
+*MOT:	battaniyeyi adamın üstüne ört .
+*CHI:	örttüm .
+*CHI:	battaniye nerde ?
+*MOT:	bu battaniye olsun .
+*EXP:	onu ört bakalım .
+*CHI:	onu .
+%com:	points at another doll
+*EXP:	onu da yanına koy , ikisini birden ört .
+*CHI:	koydum .
+*CHI:	bu ne ?
+*CHI:	burası ne ?
+*MOT:	bakayım .
+*MOT:	lambası.
+*CHI:	anne lambası.
+*CHI:	onun lambası yansın .
+*MOT:	yok şimdi gündüz olduğu için yanmıyormuş.
+*MOT:	gece olunca .
+*MOT:	yanacakmış , karanlık olunca .
+*MOT:	aydınlıkta lamba yakıyormuyuz biz ?
+*CHI:	yakıyor .
+*EXP:	yakmıyoruz .
+*CHI:	karanlık olunca .
+*CHI:	bu ne ?
+*MOT:	sen söyle , ne o ?
+*CHI:	şu .
+*CHI:	anne kuş nerde ?
+*MOT:	hı , ne o ?
+*CHI:	uçak .
+*EXP:	uçak degıl , uçağa benziyormu ?
+*EXP:	kanatları nerde ?
+*EXP:	kanatları varmı?
+*CHI:	var .
+*MOT:	hani nerde kanatları?
+*MOT:	nerde hani kanatları?
+*MOT:	in aşağı al onu .
+%com:	drops something
+*MOT:	git arkadan al .
+*MOT:	onun adı ne biliyormusun Erel ?
+*CHI:	hı?
+*EXP:	traktör neymiş?
+*CHI:	traktör .
+*EXP:	traktör ne yapıyor ?
+*CHI:	bu yapıyor .
+*EXP:	ne yapıyor ?
+*EXP:	toprağı kazıyor traktör .
+*CHI:	adam nerde ?
+*CHI:	o ne ?
+*CHI:	işte düşmesin .
+*CHI:	onu yazıyor ama .
+*MOT:	kedi ne yapar Erel ?
+*MOT:	niye tırmalar ?
+*CHI:	orası ne oldu ?
+%com:	referring to doğs patches
+*EXP:	onun rengi öyle , birşey olmamış.
+*CHI:	olmamış.
+*EXP:	köpeğin öyle kürkü var .
+*CHI:	onun .
+*EXP:	onun puanı yok , o kara kediymiş.
+*EXP:	hani birtane karakedi biliyorsun ya , ne olmuştu kara kedi ?
+*CHI:	hı.
+*EXP:	kara kedi ne olmuştu ?
+*CHI:	uf olmuştu .
+%com:	uf olmak: children use that expression to mean "to hurt".
+*EXP:	kedi niye tırmalıyor Erel ?
+*CHI:	hı.
+*EXP:	neden tırmalıyor ?
+*CHI:	onun uykusu nerde ?
+*MOT:	uykusu kalmamış onun .
+*CHI:	orası.
+*MOT:	bak köpek ne yapar ?
+*MOT:	ne yapar köpek ha ?
+*MOT:	anlat bakalım , köpek ne yapar Erelim ?
+*CHI:	anne bu neye çıkmıyor ?
+*EXP:	çıkıyor bak .
+%com:	referring to a box
+*CHI:	eh .
+*EXP:	Erel bu ne ?
+*CHI:	adam .
+*EXP:	bu ?
+*CHI:	pisi .
+%com:	pisi: a word often used by children to mean "a cat"
+*EXP:	pisi mi ?
+*EXP:	iyicene bak .
+*CHI:	hav hav .
+%com:	hav hav: a word often used by children to mean "a dog"
+*EXP:	ne yapar hav havlar ?
+*EXP:	su içer .
+*MOT:	su içermi hav havlar ?
+*CHI:	içmez .
+*MOT:	içmezmi ?
+*CHI:	anne onun kapısı.
+*CHI:	onun kapısı.
+*CHI:	onun kafası.
+*MOT:	hiç traktör otobüsün içine sığarmı anacım ?
+*MOT:	ha ne geliyor ?
+%com:	a bird
+*EXP:	ne o ?
+*CHI:	kuş.
+*EXP:	nasıl uçar şekerim ?
+*CHI:	kuş uçuyor .
+*EXP:	bunlar nesi kuşun ?
+*CHI:	girdi .
+%com:	he is playing on his own
+*CHI:	bunun içinde ne var ?
+*EXP:	ne yapıyorsun şekerim ?
+*CHI:	ha .
+*EXP:	ne yapıyorsun ?
+*CHI:	şu ne ?
+*EXP:	kim geliyor ?
+*CHI:	bebek geliyor .
+%com:	a doll on a bus
+*EXP:	ne yapıyorsun ?
+*CHI:	birtane daha koyuyorsun .
+%com:	the interviewer's note: "note the use of the second person singular
+*EXP:	çıkart onları ondan .
+*CHI:	sen çıkart onları.
+*CHI:	onların hepsini çıkart onlar gitsin .
+*EXP:	gitsin bakalım , görelim nasıl olacak .
+*CHI:	şimdi ne yapacağız ?
+*CHI:	anne köprü nerde ?
+*CHI:	köprü nerde ?
+*MOT:	bunun köprüsu ?
+*EXP:	vereyimmi sana ?
+*CHI:	vereyim .
+*CHI:	öbürkünü nerde ?
+*CHI:	öbür .
+*EXP:	kuş nerden gitti demin ?
+*CHI:	ordan gitti .
+*MOT:	orası neresi ?
+*CHI:	garaja .
+*MOT:	orası garaj mı köprü mü?
+*MOT:	otomobil nerde ?
+*CHI:	o .
+*CHI:	orda .
+*MOT:	orası garaj mı köprü mü?
+*EXP:	ne yaptın onları öyle ?
+%com:	he puts the toy buses
+*CHI:	anne ben sana dizdim .
+*CHI:	bunun mamasını.
+*CHI:	anne birtane xxx .
+*CHI:	anne onun maması nede ?
+*MOT:	mamasını yemiş bitirmiş.
+*CHI:	yok .
+*CHI:	onun kapısı nerde ?
+*CHI:	anne şeyin kapısı nerde ?
+*EXP:	neyin kapısı?
+*CHI:	onun kapısı.
+*MOT:	köprünün kapısı yok .
+*CHI:	evin kapısı nerde ?
+*CHI:	Erelin .
+*MOT:	Erel'in kapısı içerde .
+*CHI:	o ne ?
+*MOT:	traktör .
+*EXP:	o ne ?
+*MOT:	traktörün tekerlekleri .
+*CHI:	bunlar .
+*MOT:	bunlar da arka tekerlekleri .
+*CHI:	bu ne bu ?
+*MOT:	o da çiftçi .
+*MOT:	traktörün şöförü çiftçi .
+*CHI:	şöför bunun şöförü.
+*CHI:	onun maması nerde ?
+*MOT:	onun maması nedir ?
+*MOT:	mama yer mi otomobiller ?
+*CHI:	yer .
+*MOT:	yemez , ne mama yer ?
+*CHI:	garaj .
+*CHI:	polis amca nerde ?
+*MOT:	polis amca dışarda sokakta .
+*CHI:	sen gidicen [= gideceksin] .
+*MOT:	şimdi yağmur yağıyor , gidemezsin .
+*MOT:	ne yapıyor köpek ?
+*CHI:	burası nerde ?
+*CHI:	bibip nereye gidiyor ?
+*CHI:	anne şunlar ne ?
+*MOT:	onları diz bakalım sen .
+*MOT:	onlar işaret , yol işaretleri .
+*CHI:	işaretmiş.
+*CHI:	yol .
+*CHI:	anne evi güzel öyle yaptım , oraya yapıyorum .
+*MOT:	sen yaparsın diz bakalım .
+*MOT:	onlardan ev yapılmaz ki .
+*CHI:	ev yapılır .
+*CHI:	anne şunu şuraya .
+*CHI:	adam nerde ?
+*CHI:	orda .
+*CHI:	o da çıkıyor .
+*CHI:	onun ayakları çıkıyor .
+*CHI:	çıkamadı.
+*CHI:	burdan çıkıyor .
+*MOT:	ordan çıkamaz , kapısı arkada ?
+*CHI:	ay çıkamadı.
+*MOT:	çek ayaklarından cıksın .
+%com:	trying to get a doll out of a box
+*CHI:	şöyle .
+*CHI:	çıkmaz .
+@End

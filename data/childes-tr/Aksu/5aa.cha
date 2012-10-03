@@ -1,0 +1,478 @@
+@UTF8
+@Begin
+@Languages:	tur
+@Participants:	CHI Vahide Target_Child , EXP Ayla Investigator , MOT Mother , GRM Grandmother
+@ID:	tur|aksu|CHI|2;0.||||Target_Child|||
+@ID:	tur|aksu|EXP|||||Investigator|||
+@ID:	tur|aksu|MOT|||||Mother|||
+@ID:	tur|aksu|GRM|||||Grandmother|||
+*EXP:	Vahide , sen hiç oynuyormusun oyun ?
+*CHI:	oynuyorum .
+*EXP:	ne oyunlar oynuyorsun sen ?
+*CHI:	oyuncaklar dolu .
+*EXP:	çocukları görüyormusun , orada oynuyorlar sizin caddede ?
+*EXP:	Hergün ?
+*EXP:	görüyormusun onları sen ?
+*CHI:	görmü xxx .
+*EXP:	ne oyunlar oynuyorlar ?
+*CHI:	ne oynuyor(lar) ya ?
+*EXP:	yok şimdi değil , hergün .
+*CHI:	görmüyorum .
+*EXP:	hayır , hergün , dışarıya çıktığında .
+*CHI:	görmüyorum .
+*EXP:	dışarıya çıktığında görüyormusun ?
+*CHI:	görmüyorum ya .
+*EXP:	çocuklar ne oyunlar oynuyorlar ?
+*CHI:	göremiyorum .
+%com:	she thinks she is being asked about what is currently visible outside
+*EXP:	peki göremiyorsun .
+*EXP:	çocuklar niye koşarlar Vahide ?
+*CHI:	koşar .
+*CHI:	benim gibi koşar .
+*EXP:	sen kimlerle oynuyorsun ?
+*EXP:	senin arkadaşların varmı?
+*CHI:	yerde bıraktım .
+*EXP:	neyi ?
+*CHI:	köpeği .
+*EXP:	arkadaşın varmı?
+*CHI:	var işte bak .
+*EXP:	bebek arkadaşın senin , hı?
+*EXP:	sen ne zaman oyun oynuyorsun ?
+*CHI:	oyuncaklarım odamda kaldı.
+*EXP:	nasıl atarsın sen ?
+*EXP:	göster bakıyım .
+*CHI:	ben bilmiyorum .
+*EXP:	ne resim yapıyorsun orada ?
+*EXP:	anlat bakıyım bana .
+*CHI:	yazı yapıyorum .
+*EXP:	ne resmi yapıyorsun ?
+*CHI:	yazı yapıyorum .
+*CHI:	sen de yap hadi .
+*EXP:	anlat bana bakıyım .
+*EXP:	ne resmi o ?
+*CHI:	Vahide Akalın .
+%com:	her name
+*EXP:	başka ?
+*EXP:	başka ne yapıyorsun ?
+*CHI:	kuş.
+*CHI:	kuş yaptım bak .
+*EXP:	neyle resim yapıyorsun sen Vahide ?
+*CHI:	(kalemle) .
+*EXP:	kalemle .
+*EXP:	bunu kim aldı sana ?
+*CHI:	biz almıştık .
+*CHI:	annem aldı.
+*EXP:	annen ne yapıyor Vahide senin ?
+*EXP:	annen ne yapar ?
+*CHI:	bulaşık yıkar .
+*EXP:	annen nasıl süsleniyor ?
+*CHI:	böyle .
+*EXP:	baban ne yapar , baban ?
+*EXP:	babanı bana anlat .
+*CHI:	babam kızar bana .
+*EXP:	niye kızar ?
+%com:	no response
+*EXP:	kim temizliyor yerleri ?
+*CHI:	ben temizlemiyorum , annem temizliyor .
+*EXP:	niye temizliyor yerleri Vahide annen ?
+%com:	adult responses indicate the child's evasion of question
+*EXP:	Vahide , niye temizliyor ?
+*MOT:	yerleri kim temizliyor Vahide ?
+*CHI:	annem temizliyor .
+*MOT:	niçin temizliyor ?
+*CHI:	pis olunca temizliyor .
+*EXP:	Vahide , sen hiç masal biliyormusun ?
+*EXP:	birtane anlat bize .
+*CHI:	anlatmıyorum ben masal .
+*CHI:	bilmiyorum .
+*EXP:	bilirsin .
+*CHI:	bilmem .
+*EXP:	anlat .
+*CHI:	olmaz .
+*MOT:	o kalemle ne yapıyorsun ?
+*CHI:	yazı yazıyorum .
+*MOT:	nereye yazıyorsun ?
+*CHI:	buna yazıyorum işte .
+*MOT:	bu ne ?
+*MOT:	ne o ?
+*CHI:	kitap .
+*EXP:	bugün ne oldu ?
+*EXP:	ne oldu bugün ?
+*CHI:	olmaz .
+*MOT:	kim geldi bugün size Vahide ?
+*CHI:	olmaz .
+*EXP:	dün ne oldu , dün ?
+*EXP:	nereye gittiniz dün ?
+*CHI:	atta gittik .
+*EXP:	nereye gittiniz ?
+*CHI:	size gidiyorduk .
+*CHI:	nereye gidiyorduk biz anne ?
+*MOT:	saçlarına ne taktılar Canan'ın ?
+*CHI:	toka .
+*MOT:	kim aldı o tokaları?
+*CHI:	ben aldım .
+*MOT:	ne dedin Canan'a götürünce ?
+*CHI:	mersi dedi Canan .
+*MOT:	mersi mi dedi Canan ?
+*EXP:	Suzan da baktı mı size ?
+*CHI:	baktı.
+*EXP:	Suzan'a da al toka , olurmu ?
+*CHI:	Suzanın var da tokası.
+*MOT:	senin babaannen geldimi ?
+*CHI:	gelmedi .
+*MOT:	niye yalan söylüyorsun ?
+*CHI:	geldi .
+*CHI:	xxx .
+*MOT:	nereye gitti , otobüse bindi ?
+*CHI:	Bona .
+*MOT:	Bon nerede ?
+*MOT:	halan nereye gitti ?
+*CHI:	Beykoza .
+*CHI:	xxx .
+*MOT:	sen ne diyorsun Olgun'a ?
+*CHI:	elini itiyorum , yapma diyorum , yapıyor .
+*MOT:	yine mi yapıyor ?
+*MOT:	kızsaydın , yapma diyorum sana deseydin .
+*MOT:	demedinmi ?
+*CHI:	utanmasana dedim .
+*MOT:	utanmasana mı dedin ha ?
+*MOT:	Aylin geliyormu , senin arkadaşın varmı?
+*CHI:	yok .
+*MOT:	bize de gelsinmi ?
+*CHI:	gelmesin .
+*EXP:	bir masal söylermi acaba ?
+*CHI:	bir varmış anne , bir varmış anne xxx .
+*MOT:	söyle , bir varmış , yokmuş.
+*CHI:	bir varmış yokmuş anne .
+*MOT:	neler varmış?
+*CHI:	kara korsanlar .
+*MOT:	başka ?
+*CHI:	ayılar .
+*MOT:	ayılar da varmış.
+*MOT:	ne yapıyorlarmış?
+*CHI:	mööö.
+*MOT:	ay , çok korktum .
+*MOT:	sonra ?
+*CHI:	bağırdı , bak .
+*CHI:	bağırdı o .
+*MOT:	kim bağırdı?
+*CHI:	vapur da bağırdı.
+*MOT:	efendim ?
+*CHI:	vapur da bağırdı , vuup bağırdı.
+*CHI:	vapur da bağırdı.
+*EXP:	vapur da bağırdı.
+*EXP:	ne dedi vapur ?
+*CHI:	vuup .
+*EXP:	vuup dedi , ha ?
+*CHI:	vuup .
+*CHI:	arkamda birşey var .
+*EXP:	yok , hiçbirşey yok .
+*CHI:	varmış.
+*EXP:	arkanda ne varmış?
+*CHI:	işte bu .
+*EXP:	ne o ?
+*CHI:	sandalye .
+*CHI:	batmış bana .
+*EXP:	batmış.
+*EXP:	sen dün ne yaptın ?
+*CHI:	xxxince .
+*EXP:	dün ne yaptın yavrum ?
+*CHI:	ben oynamışçım [= oynamışdım] .
+*EXP:	kim geldi buraya ?
+*CHI:	ben düşecem dedi bana .
+*EXP:	hı?
+*CHI:	xxx (çiçek) xxx (şimdi) .
+*EXP:	düşe'cekmi ?
+*CHI:	çek .
+*EXP:	çiçek ?
+*CHI:	çek bu xxx (işte) (bak) xxx .
+*EXP:	gidecekmi ?
+*EXP:	kim gidecek ?
+*CHI:	babam gidecek .
+*EXP:	nereye gidecek ?
+*CHI:	para kazanmağa .
+*EXP:	para kazanmaya gidecek baban ha .
+*EXP:	baban nereye gidiyor para kazanmaya ?
+*CHI:	mama alıcak .
+*EXP:	annen ne yapıcak ?
+*CHI:	annem de mama yapacak .
+*EXP:	başka kimler var bu evde ?
+*CHI:	burda biz oturuyoruz .
+*EXP:	başka ?
+*EXP:	hani bir abla vardı burda , U'lkü abla , o ne oldu ?
+*CHI:	o anne oldu .
+*EXP:	anne mi oldu ?
+*EXP:	oh .
+*EXP:	nerede U'lkü?
+*CHI:	evinde .
+*EXP:	ah , evine gitmiş ha ?
+*CHI:	evine .
+*EXP:	bak bunu tarif etsene , bakıyım burda neler var .
+*EXP:	peki masanın .
+*EXP:	üstünde şu var , ondan sonra televizyonun üstünde resim var , peki , söyle bakıyım bana .
+*CHI:	işte bak .
+*CHI:	sen söyle .
+*CHI:	bak , anneannem babam var .
+*EXP:	nerde ?
+*CHI:	işte .
+*CHI:	ben size gösteriyim de .
+*EXP:	sen buraya gel , ben görüyorum , gel .
+*CHI:	işte bak .
+*EXP:	gördüm .
+*EXP:	anneyle baba .
+*CHI:	onu gelin yapmış.
+*EXP:	efendim ?
+*CHI:	gelin yapmış.
+*EXP:	düğün mü yapmış?
+*CHI:	evet .
+*EXP:	o neyin üstünde ?
+*CHI:	televizyonun üstünde .
+*EXP:	başka neler var bu odada ?
+*CHI:	ah , terlik de .
+*CHI:	terlik .
+*EXP:	terlik ver .
+*EXP:	nerde ?
+*EXP:	nerde terlik ?
+*CHI:	işte bak .
+*CHI:	pis terlik , pis terlik .
+*EXP:	başka ne var bu odada acaba ?
+*EXP:	başka neler var ?
+*CHI:	bak ilaçlar var .
+*CHI:	onlar pis , onlar eh eh .
+*EXP:	dün kimler geldi buraya , anlat bana bakıyım .
+*EXP:	kimler geldi ?
+*CHI:	anne , bize kimler geldi ?
+%com:	she answers offstage
+*MOT:	S'ule teyzeler geldi .
+*CHI:	S'ule teyzeler geldi bize .
+*EXP:	ne yaptılar ?
+*CHI:	bana .
+*EXP:	efendim ?
+*CHI:	biz seni götürürüz dediler bana .
+*EXP:	“seni götürürüz dediler bana” ha .
+*EXP:	sen niye gitmedin ?
+*EXP:	gitmedin .
+*EXP:	ha ?
+*CHI:	annem götürecek beni .
+*EXP:	onlar nerde oturuyorlar ?
+*CHI:	Küçük Bebekte .
+*CHI:	xxx .
+*EXP:	kediler ne yapar , anlatsana .
+*CHI:	miyav miyav yapar .
+*EXP:	başka ne yaparlar , anlat hadi .
+*CHI:	mam mam mam yapar .
+*EXP:	başka ?
+*CHI:	benim oyuncağımı da getirecem .
+*CHI:	belki ben , belki .
+*CHI:	ben (giymiş) , bak .
+*EXP:	ne (giymiş) ?
+*CHI:	bak aynısinden .
+*EXP:	efendim ?
+*CHI:	aynısinden .
+*EXP:	ha , aynısinden .
+*EXP:	Vahide , kediler niye tırmalar ?
+*EXP:	niçin tırmalar , çocuğum ?
+*CHI:	otobüsün içine girdiler .
+*EXP:	otobüsün içine girdiler xxx kim ?
+*CHI:	pisi onlar , pisi .
+*EXP:	köpekler ne yapar , Vahide , hadi anlat .
+*CHI:	hav yapar köpekler .
+*EXP:	ne içer köpekler ?
+*CHI:	ne içiyor , anne (de) ?
+*EXP:	ne içiyor Bon ?
+%com:	Bon is the name of the dog
+*CHI:	çay .
+*EXP:	su içer evladım .
+*CHI:	Bon su içer .
+*EXP:	niçin içiyor , biliyormusun sen Vahide ?
+*EXP:	Vahide ?
+*CHI:	ben su veririm ona içer .
+*EXP:	niye içer ?
+*CHI:	çay içerim ben , çay içerim bardağım .
+*CHI:	ben çay içmiyorum .
+*CHI:	Bon içiyor .
+*CHI:	ben çay da içtim , Bon da içti .
+*CHI:	a , birtane , aaa , annem .
+%com:	mother interprets this as: "annem görünüyor"
+*CHI:	içeri gir , içeri , dışarda üşürsün .
+*CHI:	çok sogük .
+*EXP:	kuşlar ne yapar ?
+*CHI:	cik yaparlar .
+*EXP:	sonra ne yaparlar böyle böyle ?
+*CHI:	böyle yaparlar .
+*EXP:	ne yaparlar ?
+*EXP:	koşarlarmı kuşlar ?
+*CHI:	koşarlar .
+*EXP:	başka ne yaparlar ?
+*CHI:	dışarsına , dışarıya giderler böyle .
+*EXP:	nereye giderler ?
+*CHI:	anne , nereye giderler ?
+*MOT:	ağaçlara konarlar , yavrum .
+*CHI:	ağaçlara konarlarmış.
+*EXP:	şu nesi kuşun ?
+%com:	referring to the wings of the bird
+*EXP:	nesi bunlar ?
+*CHI:	o nesi kuşun ?
+*EXP:	kanatları.
+*CHI:	kanatları o .
+*EXP:	ya , kanatları.
+*EXP:	peki , bu ne ?
+*CHI:	o balık .
+*EXP:	bu nesi balıgın ?
+*CHI:	kuyruğu .
+*EXP:	balıklar ne yapar ?
+*CHI:	ne yapar ?
+*EXP:	nerde olur balıklar ?
+*CHI:	denizde onlar .
+*EXP:	ah , balıklar yüzer denizde .
+*CHI:	yüzer denizde .
+*EXP:	biraz anlatsana balıklari bana ?
+*CHI:	bu gider , gider böyle de .
+*EXP:	böyle gider ha , denizde ?
+*CHI:	bunu .
+*CHI:	ben düzelttim onu .
+*CHI:	denizde y üzerler .
+*CHI:	evine gitmişler sonra .
+*CHI:	burda balık var , işte bak , buda , işte bak , burda .
+*EXP:	kurtlar ne yapar ?
+*CHI:	ne yapar kurtlar ?
+*EXP:	anlatsana bana .
+*CHI:	bu tırmaladı , balığı tırmaladı kurt .
+*MOT:	kurt tırmalamış balığı.
+*EXP:	bu tırmaladı balıgı , bu hı?
+*CHI:	tırmaladı kurt , tırmaladı.
+*CHI:	çok tırmaladı.
+*MOT:	teyze neler getirmiş sana ?
+*CHI:	oyuncaklar getirmiş.
+*MOT:	ne var oyuncakların içinde ?
+*CHI:	xxxlar var içinde .
+*CHI:	al bunu .
+*MOT:	anlat , neymiş bunlar ?
+*CHI:	bunlar huu yapar .
+*CHI:	ne yapar , anne ne yapar ?
+*MOT:	dün biz nereye gittik , Vahide ?
+*CHI:	nereye gittik ?
+*MOT:	dün biz nereye gittik , anlat bize .
+*MOT:	bak .
+*MOT:	toplar yine oyuncaklarını.
+*MOT:	gider teyze .
+*EXP:	neler giydin ?
+*CHI:	paltolar giydim .
+*CHI:	neler giydim , dolu dolu .
+*CHI:	neler ?
+*MOT:	xxx .
+*CHI:	paltolar giydim .
+*MOT:	üstüne de birşey giydin .
+*EXP:	ceket mi giydin ?
+*CHI:	ceket giydim .
+*EXP:	bir masal anlat bize .
+*EXP:	bir varmış , bir yokmuş xxx ne varmış?
+*CHI:	bir kudrun [= kurt] varmış.
+*EXP:	sonra ?
+%com:	somebody enters
+*EXP:	ne yapmış kurt ?
+*EXP:	kim gelmiş?
+*CHI:	kurt .
+*EXP:	ehh , sonra ?
+*CHI:	kurt basmıyor , kurt .
+*CHI:	basmıyor kurt .
+*CHI:	basmadı daha .
+*CHI:	bak durdu bak .
+*CHI:	a burda durdu ya .
+*CHI:	a , bu düşüyor .
+*MOT:	hoşgeldin de .
+*CHI:	söylemiyecem .
+*MOT:	çok ayıp .
+*EXP:	nesi var bu kurdun ?
+*CHI:	ayak var .
+*EXP:	başka nesi var bu kurdun ?
+*CHI:	ağzı burnu .
+*EXP:	Vahide , bugün ne yapacaksınız ?
+*EXP:	hava güzel , nereye gideceksiniz ?
+*CHI:	neneme .
+*EXP:	ne yapacaksınız orda ?
+*CHI:	yanıma otursun .
+%com:	wants grandmother to sit next to her
+*EXP:	otursun .
+*CHI:	gelmiyor bak , nerde ?
+*CHI:	nerde ?
+*GRM:	oturayımmı?
+*CHI:	oturma .
+*CHI:	annemi çağır benim yanıma .
+*EXP:	hani nerde baban ?
+*CHI:	para kazanmağa gitti .
+*EXP:	nerde para kazanıyor ?
+*EXP:	nerde para kazanıyor , yavrum , babacığın ?
+*CHI:	para kazanmakta .
+*EXP:	ne yapıyor ama ?
+*EXP:	ne yapıyor para kazanmağa ?
+*EXP:	nasıl para .
+*EXP:	kazanıyor ?
+*CHI:	mama alıyor bana .
+*CHI:	mama alıyor bize .
+*CHI:	bu durmuyor .
+*CHI:	bu durdu bak .
+*CHI:	bu durmadı.
+*CHI:	bu da dursun .
+*EXP:	o da dursun .
+*EXP:	peki , bu ne yapıyor ?
+*CHI:	donu çıktı bunun .
+*CHI:	donu çıktı bebeğin .
+*EXP:	kim çıkardı biliyormusun donunu ?
+*CHI:	kim çıkardı?
+*EXP:	bilmem .
+*CHI:	bunun donu çıkmış.
+*CHI:	niye çıkardın donunu ?
+%com:	Ayla and the mother
+*CHI:	donunu giydirdim ben .
+*CHI:	poposu gözükmüyor hiç.
+*CHI:	gözükmüyor poposu .
+*CHI:	kazağına bak bunun , kazağına bak bunun , kazağına bak .
+*CHI:	kazağına bak bunun , kazağına bak .
+*EXP:	baktım , ne güzel değilmi ?
+*CHI:	bak başına .
+*CHI:	bu arabası nerde bunun ?
+*EXP:	işte orda arabası.
+*CHI:	bak bunun arabasına binemiyor .
+*EXP:	binemiyormu ?
+*CHI:	binemiyor ya , binemiyor bu .
+*EXP:	küçük bebek te , onun için binemiyor .
+*CHI:	donunu çıkartıver bana donunu .
+*EXP:	çıkartmasın .
+*EXP:	bak kahve fincanına bak .
+*CHI:	kahve fincanına bak .
+*EXP:	ne yapılır onlar ?
+*CHI:	kahve yapılır .
+*CHI:	bak .
+*CHI:	korkuttum onu ben .
+*CHI:	ha ha , korktu .
+*CHI:	cıktı bunun içinden bu .
+*CHI:	donunu çıkartmasına [?] bana .
+*CHI:	çıkartmadı , bak .
+*EXP:	çıkartmadı.
+*EXP:	donunu cıkartmıyor artık .
+*CHI:	kurt gelir , sonra poposunu , kurt gelir sonra .
+*EXP:	kurt mu gelir ?
+*CHI:	ısırır sonra .
+*EXP:	ah , kurt ısırır poposunu .
+*CHI:	a , düşüyor bu .
+*CHI:	bu durmuyor bu , bu .
+*EXP:	bak ben durduruyum işte .
+*CHI:	kurt durdurmuyor , bak .
+*EXP:	duruyor .
+*EXP:	bak , ne güzel .
+*EXP:	uyuyor kurt şimdi .
+*CHI:	bunu koy bana .
+*CHI:	bunu koy , anne .
+%com:	referring to tea
+*CHI:	picamasıymış , bak picaması.
+*EXP:	efendim .
+*CHI:	picamasıymış , bunun picaması.
+*EXP:	ah , pıcaması varmış.
+*CHI:	onun donu yok , yalnız benim donum var .
+*CHI:	bak , benim donuma benziyor bu .
+*CHI:	donum bana çıkartmasınlar .
+*CHI:	çıkartıyor donum bana , çıkartıyor .
+*EXP:	çıkartmıyacak .
+*CHI:	bak çıkartmıyor hiç.
+@End
