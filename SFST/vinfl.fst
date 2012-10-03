@@ -218,12 +218,11 @@ $dir$ =  <dir>:{<D><I>r} <MB>
 
 % verbal nouns
 
-$vn_dik$  = <vn_dik>:{d<I><k>} <MB>                                                                                                  
-$vn_acak$ = <vn_acak>:{<bY><A>c<A><k>} <MB>                                                                                          
-$vn_ma$   = <vn_ma>:{m<A>} <MB><bY>                                                                                                  
-$vn_mak$  = <vn_mak>:{m<A><K>} <MB>                                                                                                  
-$vn_yis$  = <vn_yis>:{<bY><I>ş} <MB>                                                                                                 
-
+$vn_dik$  = <vn_dik>:{d<I><k>} <MB>
+$vn_acak$ = <vn_acak>:{<bY><A>c<A><k>} <MB>
+$vn_ma$   = <vn_ma>:{m<A>} <MB>
+$vn_mak$  = <vn_mak>:{m<A><K>} <MB>
+$vn_yis$  = <vn_yis>:{<bY><I>ş} <MB>
 
 % participles 
 $part_dik$  = <part_dik>:{<D><I><k>} <MB>
