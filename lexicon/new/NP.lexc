@@ -8,3 +8,7 @@ Türk                        NPnation;
 Alman                       NPnation;
 Türk                        NPperson;
 Birleşmiş% Milletler        NP;
+Allah                       NP;
+Erel                        NP;
+Ayala                       NP; ! this is NOT a misspeled word (from CHILDES)
+Dvora                       NP; ! this is NOT a misspeled word (from CHILDES)

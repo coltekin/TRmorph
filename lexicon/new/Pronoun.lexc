@@ -14,6 +14,7 @@ o               DemPrn;
 kendi           PersPrn;
 herkes          PersPrn;  !TODO: this does not take all nominal inflections
 bir% şey        PersPrn;
+birşey          PersPrn;
 her% şey        PersPrn;
 ora             LocPrn;
 bura            LocPrn;
