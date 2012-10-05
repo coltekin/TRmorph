@@ -1,0 +1,15 @@
+mama        N;
+ham         N;
+atta        N;
+dandini     N; !???
+dasdana     N; !???
+şimdik      AdvTime;  !???
+evet        Co; ! communicatior
+hayır       Co; ! communicatior
+lütfen      Co; ! communicatior
+tamam       Co; ! communicatior
+mersi       Co; ! communicatior
+bilmem      Co; ! communicatior
+teşekkür% ederim  Co; ! communicatior
+ıhhh        Inerjection;
+heh         Inerjection;
