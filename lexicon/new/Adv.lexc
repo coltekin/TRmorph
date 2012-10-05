@@ -6,6 +6,10 @@ daha                Adv;
 kolay               Adv;
 iyi                 Adv;  
 kötü                Adv;  
+bahar               AdvTime;
+yaz                 AdvTime;
+kış                 AdvTime;
+bugün               AdvTime;
 dün                 AdvTime;
 yarın               AdvTime;
 içeri               Adv;    ! Location
@@ -27,3 +31,6 @@ en% çok             Adv;
 asıl                Adv;
 özellikle           Adv;
 bilhassa            Adv;  !old
+acaba               Adv;
+acep                Adv;
+şimdi               AdvTime;
