@@ -33,4 +33,10 @@ asıl                Adv;
 bilhassa            Adv;  !old
 acaba               Adv;
 acep                Adv;
+gece                AdvTime;
+gündüz              AdvTime;
+akşam               AdvTime;
+sabah               AdvTime;
 şimdi               AdvTime;
+artı^k              Adv;    ! AdvTime, but does not cobine with ki
+bazen               AdvTime;! -ki after this is a bit odd
