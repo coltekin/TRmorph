@@ -220,7 +220,7 @@
 *EXP:	ne oldu buna bozuldumu ?
 %com:	some trouble with the recorder
 *CHI:	bozuldu .
-*EXP:	hay allah , ne yapacaz şimdi ?
+*EXP:	hay allah , ne yapaca(ğı)z şimdi ?
 *CHI:	şimdi ne yapalım ?
 *EXP:	tamirci getirelimmi ?
 *CHI:	bilmem .
@@ -342,7 +342,7 @@
 *CHI:	oooo no@s:en .
 *EXP:	kim bu yapıyor ?
 *CHI:	hani o saçları .
-*MOT:	ceylanların pınari .
+*MOT:	ceylanların pınarı .
 *MOT:	hani kuşlar xxx .
 *CHI:	pınarı .
 *CHI:	ağaçlar .
@@ -467,7 +467,7 @@
 *CHI:	baba gidiyor .
 *EXP:	baba gitti .
 *EXP:	kutu nerede ?
-*CHI:	kutu dandanı yapıyor .
+*CHI:	kutu dandanı@c yapıyor .
 *EXP:	dandanı yapıyor , ama nerede yapıyor dandanı ?
 *EXP:	kutu nerede dandanı yapıyor ?
 *CHI:	o kutu nerede ?
@@ -509,13 +509,13 @@
 *CHI:	kedi .
 *EXP:	kim öptü ?
 *CHI:	bu öptü .
-*EXP:	oynıyacakmıyız , ben gideyimmi ?
-*CHI:	oynıyacak .
+*EXP:	oynıyacakmıyız [: oynayacakmıyız], ben gideyimmi ?
+*CHI:	oynıyacak [: oynayacak] .
 *EXP:	kim düşürdü ?
 *CHI:	o düşürdü .
 *EXP:	senin kardeşin yapabilirmi onu ?
 *CHI:	yapar .
-*EXP:	ondan oynıyalımmı bebekle ?
+*EXP:	ondan oynıyalım [: oynayalım] mı bebekle ?
 *CHI:	bebekle .
 *EXP:	senin arkadaşların varmı ?
 *CHI:	yok .
@@ -556,7 +556,7 @@
 *CHI:	koşarşı [: koşarım] .
 *EXP:	koşarsın .
 *EXP:	niye koşarsın ?
-*CHI:	koşarşı .
+*CHI:	koşarşı [: koşarım] .
 *EXP:	niçin ?
 *CHI:	oy koş ondan .
 *EXP:	koşarsın ondan , öyle mi ?
@@ -606,9 +606,10 @@
 *EXP:	bak ben sana güzel şeyler vereceğim .
 *EXP:	gel yanıma .
 *CHI:	otobüsü .
-*EXP:	ootobüsü sonra vereceğim .
-*CHI:	düstü .
+*EXP:	otobüsü sonra vereceğim .
+*CHI:	düstü [: düştü] .
 %com:	something falls
+%com:	not sure if the above is a typo, or reflection of how the word is said.
 *CHI:	duracak .
 %com:	setting up toy street signs
 *EXP:	sen bunu düzgün koydunmu ?
@@ -652,11 +653,11 @@
 *CHI:	keçi düştü .
 *CHI:	xxx ne oldu ?
 *EXP:	bacaği acımış .
-*CHI:	keçi ayağ ?
+*CHI:	keçi ayağ(ı) ?
 *EXP:	hm .
 *CHI:	keçi ?
 *EXP:	tabii .
-*CHI:	ayağ ?
+*CHI:	ayağ [: ayak] ?
 *EXP:	hm .
 *CHI:	kesti .
 *CHI:	keçi bunu yaptı .
