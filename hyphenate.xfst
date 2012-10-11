@@ -1,0 +1,36 @@
+! 
+! This automaton hyphenates Turkish words. In ! Turkish,
+! hyphenation is always done on syllable boundaries, and the
+! rule is regular. The automaton below is based on a "textbook
+! case" replace operation. The only complication comes from
+! the fact that there can only be a single vowel in a syllable
+! (it happens only in few foreign-origin words). We first make
+! sure that all vowels are split, and then insert a hyphen
+! after a C*VC* sequence, if precedes CV. Apostrophe is
+! ignored.
+! 
+! The automaton seem to work fine (not tested extensively, but
+! used for a few practical cases). Only known (potential)
+! problem is related to how words like 'elektrik' is
+! hyphenated. Following the general pattern the automate will
+! hyphenate it as e-lekt-rik, although one may consider the
+! syllable boundaries to be e-lek-trik.
+! 
+! 
+
+! Vowels
+define V   e | i | ö | ü | E | İ | Ö | Ü | î | Î | 
+           a | ı | o | u | A | I | O | U | â | Â | û | Û ;
+
+! Consonants
+define C   b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | 
+           B | D | C | G | V | Z | J | F | Ğ | L | M | N | R | W | Y | 
+           p | t | ç | k | f | s | ş | h | P | T | Ç | K | F | S | Ş | H ;
+
+define Apos %'|%’;
+
+define hyphenate         V       -> ... %-               || _  (Apos) V 
+                    .o.  [C|Apos]* V [C|Apos]* @> ... %- || _  (Apos) C (Apos) V;
+
+read regex hyphenate.i;
+save stack hyphenate.fst
