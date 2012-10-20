@@ -1,0 +1,27 @@
+#this tests phon/010_exception_deye.fst
+#
+A:A:boyanır:boya<v><pass><t_aor><3s>
+A:A:boyar:boya<v><t_aor><3s>
+A:A:denir:de<v><pass><t_aor><3s>
+A:A:diyecek:de<v><t_fut><3s>
+A:A:kapatılır:kapa<v><pass><t_aor><3s>
+A:A:kapar:kapa<v><t_aor><3s>
+A:A:yaşanır:yaşa<v><pass><t_aor><3s>
+A:A:yaşar:yaşa<v><t_aor><3s>
+A:A:yenir:ye<v><pass><t_aor><3s>
+A:A:yiyecek:ye<v><t_fut><3s>
+A:R:deyecek:de<v><t_fut><3s>
+A:R:dimiş:de<v><t_narr><3s>
+A:R:kapır:kapa<v><t_aor><3s>
+A:R:yaşımış:yaşa<v><t_narr><3s>
+A:R:yeyecek:ye<v><t_fut><3s>
+G:A:boya<v><pass><t_aor><3s>:boyanılır
+G:A:boya<v><pass><t_aor><3s>:boyanır
+G:A:de<v><t_fut><3s>:diyecek
+G:A:kapa<v><pass><t_aor><3s>:kapanılır
+G:A:kapa<v><pass><t_aor><3s>:kapatılır
+G:A:yaşa<v><pass><t_aor><3s>:yaşanılır
+G:A:yaşa<v><pass><t_aor><3s>:yaşanır
+G:A:ye<v><t_fut><3s>:yiyecek
+G:R:kapa<v><pass><t_aor><3s>:kapınır
+G:R:yaşa<v><pass><t_aor><3s>:yaşınır

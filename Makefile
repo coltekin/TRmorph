@@ -1,65 +1,43 @@
-LEXFILES = lexicon/adjectives lexicon/adverbs lexicon/cnjcoo\
-	       lexicon/cnjadv lexicon/cnjsub\
-			lexicon/interjections lexicon/nouns lexicon/postpositions\
-			lexicon/proper_nouns lexicon/verbs lexicon/misc
-FSTFILES = trmorph.fst ninfl.fst vinfl.fst num.fst symbols.fst particles.fst morph.fst afilter.fst
-SOURCES = $(LEXFILES) $(FSTFILES)
-SUBDIRS=phon
+LEXICON ?= new
+ROOTLEX=$(shell ls lexicon/$(LEXICON)/*.lexc)
 
-include Makefile.inc
+#
+# Options
+#
+# Some behavior of the analyzer can be controlled with the options
+# below.
 
-.PHONY: all subdirs trmorph $(SUBDIRS)
+#
+#  Require apostrophe after proper names and numbers.
+#
+#  yes:   apostrophe is obligatory.
+#  maybe: apostrophe is optional.
+#
+#  NOTE: currently,  TRmorph's apostrophe insertion does not 
+#        follow  the official spelling rules.
 
-all: subdirs trmorph
+APOSTROPHE=maybe
 
-ifeq ($(FSTC),hfst)
-trmorph: tr-mor.ol tr-gen.ol
-else
-trmorph: trmorph.a trmorph-gen.a trmorph-bm.a
-endif
+#
+# End of options
+#
 
-trmorph.a: trmorph.fst symbols.fst vinfl.fst ninfl.fst deriv.a phon/phon.a
+all: trmorph.fst
 
-trmorph-gen.a trmorph-bm.a: trmorph.a
+segment: segment.fst
 
-deriv.a: num.a symbols.fst $(LEXFILES)  phon/phon.a
+trmorph.lexc: morph.lexc $(ROOTLEX)
+		cat $^ > $@
 
-subdirs: 
-	for dir in $(SUBDIRS); do  $(MAKE) -C $$dir;  done
+trmorph.fst: trmorph.xfst trmorph.lexc morph-phon.xfst
+	foma -f trmorph.xfst
 
-archive:
-	./archive.sh $(DISTNAME)
+trmorph.xfst: analyzer.xfst
+	cat $^ | sed 's/^!!!APOSTROPHE_$(APOSTROPHE)//;/^!!!APOSTROPHE/d' \
+	> $@
 
-testset: ../data/data
-	awk '{print $$2}' ../data/data |sort |uniq > tests.all
+segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
+	foma -f segment.xfst
 
 clean:
-	-rm -f *.a *~ Makefile.bak tests.all version.fst
-	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
-
-TODO:
-	todo -T
-
-#Makefile: *.fst
-#	-makedepend -Y -o.a $(SOURCES) 2>/dev/null 
-
-test:
-	fst-mor trmorph.a  < testset.1 |tee /tmp/trfst-testset1.out|less; \
-		(echo -n `date`" "; grep 'no result' </tmp/trfst-testset1.out|wc -l) >> .testset1-results
-
-# DO NOT DELETE
-
-trmorph.a: symbols.fst vinfl.fst ninfl.fst particles.fst version.a morph.a afilter.a
-trmorph-gen.a: trmorph.a
-ninfl.a: symbols.fst
-num.a: symbols.fst
-deriv.a: symbols.fst ninfl.fst
-
-tr-mor.ol: trmorph.a
-	hfst-invert -i trmorph.a | hfst-fst2fst -O -o $@
-
-tr-gen.ol: trmorph-gen.a
-	hfst-fst2fst -O -i trmorph-gen.a -o $@
-
-version.fst: $(SOURCES) phon/*.fst
-	./version.sh > version.fst
+	rm -f trmorph.xfst trmorph.fst trmorph.lexc

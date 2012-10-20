@@ -1,0 +1,47 @@
+read lexc trmorph.lexc
+define Lexicon;
+
+source morph-phon.xfst
+
+!
+! Put all of them together. The order is important. 
+!
+clear stack
+read regex     AFilter
+           .o. Lexicon 
+!!!APOSTROPHE_yes .o. replaceApos
+!!!APOSTROPHE_maybe .o. replaceAposOpt
+           .o. NumberSpace
+           .o. NumericInsSilentP
+           .o. NumericSeparator
+           .o. CompNoun
+           .o. DeleteSI
+           .o. DeleteLAR
+           .o. InsertN
+           .o. DelS
+           .o. PronounExceptions
+           .o. InsertY
+           .o. iDeleteY
+           .o. NbeforePassive
+           .o. PassiveLN
+           .o. Causative
+           .o. Optative3
+           .o. SpaceBeforeMI
+           .o. NegAorist
+           .o. DeleteBuffer
+           .o. DeYeException
+           .o. YorException
+           .o. VowelEpenthesis
+           .o. VowelHarmony 
+           .o. FSDevoicing
+           .o. VoicingAssimilation
+           .o. Redup
+           .o. DeleteSilentP
+           .o. KiKu
+           .o. DeleteCircumflex
+           .o. DeleteBoundary
+           .o. Capitalize
+           .o. AllCaps 
+           ;
+
+save stack trmorph.fst

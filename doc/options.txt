@@ -1,0 +1,81 @@
+
+Main driving force behind starting with TRmorph was customizability.
+The idea is mainly to enable user to bake his/her custom analyzer.
+Since it is an open-source analyzer, you can of course change it the
+way you want and build a custom analyzer. However, not everyone is
+fluent in FST languages/tools that are used for building this
+analyzer. As a result, a set of custom options for frequent cases are
+handy.
+
+The following list is not yet (fully) implemented, but the idea is to
+enable user to customize the analyzer based on the options below
+during the compile time.
+
+* CAPITALIZE_FIRST_LETTER [yes|no]
+
+  Capitalization of first letter of a word. Lexicon lists ordinary
+  words as lowercase. Hence, we'd typically want to allow the words at
+  the beginning of sentences to capitalized. The default option is
+  'yes', which  is probably what you want for a general analyzer. 
+  Nevertheless, you may want to disable for some applications.
+
+* ALL_CAPS  [no|yes]
+  
+  Allow everything in capitals.
+
+* ALL_LOWERCASE [no|yes]
+
+  Allow everything in lowercase letters.
+
+* ALLOW_ALL_ASCII [no|yes]
+  
+  In online communication, it is commonplace for Turkish speakers to
+  completely omit diacritic on non-ASCII letters in Turkish alphabet.
+  Enabling this option allows analyzing such text, with the expense of
+  (quite) some ambiguous analysis or overgeneration.
+
+* APOSTROPHE_AFTER_NP [yes|maybe|no]
+
+  Require apostrophe after proper names. This is required by default.
+  One can relax it 'maybe', or not allow it at all. 
+
+  NOTE: that TRmorph's apostrophe insertion does not currently follow
+  the official spelling rules.
+
+* APOSTROPHE_AFTER_NUMBER [digits|alpha|digitsrelaxed|alpharelaxed|all|none]
+  
+  Typically an apostrophe is required after a number written with
+  digits, but not letters. Nevertheless, actual use is rather
+  confused. So, any of these can be made optional or compulsory.
+  Default is to allow and require only after digits.
+
+* NUMBER_THOUSAND_SEP [dot|comma]
+  NUMBER_DECIMAL_SEP [comma|dot]
+
+  Thousand and decimal separator for numbers. The official rule is to
+  use dot `.' for thousand and comma `,' for the decimal separator.
+  However, people often write the other way around.  Note that you can
+  get funny results if you use the same symbol for both thousand and
+  decimal separators.
+
+* NUMBER_PERC_AFTER [no|yes]
+
+  In Turkish percent sign `%' is placed before the number. So default
+  is 'no'. Setting this to `yes' allows percent sign both before or
+  after the numbers.
+
+* NUMBER_CURRENCY_BEFORE [no|yes]
+
+  In Turkish currency sign follow the number. So default is 'no'.
+  Setting this to `yes' allows known currency signs to be both before
+  or after the numbers.
+
+* ALLOW_NO_C_ASSIMILATION  [no|yes]
+
+  The underlying C at the beginning of some of the suffixes such as
+  -CI normally goes through voicing assimilation, so the correct form
+  is `c' after a voiced consonant of a vowel `şeker-ci' and `ç' after
+  non-voiced consonant `şarap-çı'. However, people often seem to omit
+  devoicing, e.g., say/write `şarap-cı'. Enabling this options allow
+  analyzing these words.
+

@@ -1,0 +1,111 @@
+LEXICON PostPRoot
+! these can stand alone
+gibi                            PostP;
+için                            PostP;
+ile                             PostP;
+kadar                           PostP;
+göre                            PostP;
+doğru                           PostP;
+rağmen                          PostP;
+karşın                          PostP;
+başka                           PostP;
+gayrı                           PostP;
+beri                            PostP;
+bu% yana                        PostP;
+dolayı                          PostP;
+itibaren                        PostP;
+önce                            PostP;
+evvel                           PostP;
+sonra                           PostP;
+yana                            PostP;
+karşı                           PostP;
+
+!--------
+ait                             PostP;
+aşağı                           PostP;
+bile                            PostP;
+birlikte                        PostP;
+boyunca                         PostP;
+dair                            PostP;
+değin                           PostP;
+dek                             PostP;
+halde                           PostP;
+halinde                         PostP;
+öte                             PostP;
+ötürü                           PostP;
+süresince                       PostP;
+takdirde                        PostP;
+üzere                           PostP;
+üzerine                         PostP;
+yerde                           PostP;
+yukarı                          PostP;
+ilgili                          PostP;
+kere                            PostP;  ! TODO: is this a noun???
+!--------
+! TODO: these are derived (?) from nouns
+!tarafından                      PostP;
+!aracılığıyla                    PostP;
+!vasıtasıyla                     PostP;  ! old/rare
+!boyunca                         PostP;
+!gereğince                       PostP;
+!süresınce                       PostP;
+!yüzünden                        PostP;
+!nedeniyle                       PostP;
+!uğrüna                          PostP;
+!sayesinde                       PostP;
+!açısından                       PostP;
+!açısından                       PostP;
+
+
+! The rest of the postpostions are derived from other 
+! word classes (mostly nouns)
+! Instead of enumerating them here, we do it in 
+! moprhotactics which may also be helpful for 
+! syntactic analysis.
+!
+! these need possesive + dative/locative/ablative
+!
+ön                      PostPlocation;
+arka                    PostPlocation;
+iç                      PostPlocation;
+dış                     PostPlocation;
+üst                     PostPlocation;
+üzer                    PostPlocation;
+alt                     PostPlocation;
+yan                     PostPlocation;
+karşı                   PostPlocation;
+ara                     PostPlocation;
+etraf                   PostPlocation;
+çevre                   PostPlocation;
+öte                     PostPlocation;
+
+! ! these require possessive and ablative case
+açı                     PostPabl; ! açı-sın-dan 
+bakım                   PostPabl; ! bakım-ın-dan 
+yüz                     PostPabl; ! yüz-ün-den 
+taraf                   PostPabl; ! taraf-ın-dan 
+
+! ! these require possessive and instrumental
+aracılı^k               PostPins; ! aracılığ-ı-yla 
+itibar                  PostPins;! itibar-i-yla 
+itib^pAr                PostPins;! itibar-i-yla 
+vasıta                  PostPins;! vasita-si-yla
+neden                   PostPins;! neden-i-yle 
+yol                     PostPins;! yol-u-yla 
+
+! ! these require possessive and dative
+ad                      PostPdat;! ad-ın-a 
+uğu@DEL@r               PostPdat;! uğr-un-a
+yer                     PostPdat;! yer-in-e 
+
+! these require possessive and locative
+saye                    PostPloc;! ‘shadow’ 
+boy                     PostPloc;! boy-un-ca 
+konu                    PostPloc;! konu-sun-da 
+hak                     PostPloc;! hakk-ın-da 
+sıra                    PostPloc;! sıra-sın-de 
+
+! these require possessive and and -cA
+! TODO/CHECK: these do not seem to combine with other possessive suffixes
+gerek                   PostPca;! gereğ-in-ce 
+süre                    PostPca;! süre-sin-ce 

@@ -1,0 +1,256 @@
+
+LEXICON VerbRoot
+açıkla                  V;
+aç                      V_AorAr;
+alıkoy                  V_AorAr;
+al                      V_CausDir;
+amaçla                  V;
+anlaş                   V;  ! this is derived from reciprocal of `anla'
+anlat                   V;  ! this is derived from the causative of `anla'.
+anla                    V;
+!anla                    V_Rcp;
+ara                     V_Rfl_Rcp;
+art                     V_CausIr_AorAr;
+!ar                     V_AorT;       ! some would use `arttır'
+aşağıla                 V;
+aş                      V_CausIr_AorAr;
+ayı@DEL@r               V_Rcp;
+ayırde^t                V_AorAr;
+bak                     V_Rcp_AorAr;
+başar                   V;
+baş% kaldır             V;
+başkaldır               V;
+bat                     V_CausIr_AorAr;
+belirle                 V;
+belir                   V;
+benimse                 V;
+besle                   V_Rfl;
+beyan% e^t              V_AorAr;
+bırak                   V;
+birleş                  V;
+bit                     V_CausIr_AorAr;
+boğ                     V_Rcp_AorAr;
+böl                     V_Rfl_Rcp_CausDir_AorAr;
+boya                    V;
+boz                     V_Rcp_AorAr;    ! reciprocal is questionalble bozuşmak is derived but lexically different
+bulundur                V; ! NOTE: this is semantically bul<pasv><caus>
+bul                     V_Rcp_CausDir;
+çaba% göster            V;
+çalış                   V;
+cereyan% e^t            V_AorAr;
+çık                     V_CausAr_AorAr;
+çök                     V_AorAr;       ! `çöktür'mek is also fine
+çök                     V_CausArt_AorAr;
+davran                  V;
+dayan                   V;  ! this is passive of `daya' but lexicalized
+daya                    V;
+değiş                   V;
+derpiş% e^t             V_AorAr;    ! old/rare
+destekle                V;
+de                      V_CausDir;
+devre^t                 V_AorAr;
+doğ                     V_CausIr_AorAr;
+dolaş                   V;
+dol                     V_Rcp_CausDir_AorAr;
+donat                   V;
+dönüş                   V;
+dön                     V_AorAr;
+döv                     V_Rfl_Rcp_AorAr;
+dur                     V_CausDir;
+düş                     V_CausIr_AorAr;
+edin                    V; ! this may be et<rfl>
+eğlen                   V;
+elde% e^t               V_AorAr;
+er                      V_CausDir_AorAr;
+e^t                     V_AorAr;
+fark% e^t               V_AorAr;
+teşekkür% e^t           V_AorAr;
+faydalan                V;
+fısılda                 V_Rcp;
+gayret% e^t             V_AorAr;
+geç                     V_CausIr_AorAr;
+geliş                   V;
+gel                     V_CausIrreg; ! causative is `getir'.
+gerek                   V;
+getir                   V;
+giriş                   V;
+gir                     V_CausIrreg_AorAr;
+!git                     V_CausAr_AorAr;    ! `gider'mek is lexicalized 
+gi^t                    V_CausIrreg_AorAr;
+giy                     V_Rfl_AorAr;
+göç                     V_AorAr;
+!gör                     V_Rcp_CausDir; ! causative actually irregular, but people seem to use 'gördür'
+gör                     V_Rfl_Rcp_CausIrreg; ! causative is `göster'.
+göster                  V;
+göz% ardı% e^t          V_AorAr;
+gözet                   V; ! maybe rcp
+gözönünde% tut          V_AorAr;
+güçlen                  V;
+gül                     V_Rcp_CausDir_AorAr;
+hareket% e^t            V_AorAr;
+hor% gör                V_Rfl_Rcp_CausIrreg;
+içer                    V;
+iç                      V_CausIr_AorAr;
+ifade% e^t              V_AorAr;
+ihlal% e^t              V_AorAr;
+ilan% e^t               V_AorAr;
+ilerle                  V;
+inan                    V;
+işle                    V;
+istifade% e^t           V_AorAr;
+iştirak% e^t            V_AorAr;
+it                      V_AorAr;
+izhar% e^t              V_AorAr;    !old/rare
+kaç                     V_CausIr_AorAr;
+kaldır                  V;
+kalk                    V_Rfl_CausIrreg_AorAr;
+kal                     V_CausDir;
+zorunda% kal            V_CausDir;  ! CausIrreg???  (zorunda bırakmak)
+kanıtla                 V;
+kapat                   V;
+kapa                    V;
+kapsa                   V;
+karar% ver              V_CausDir;
+karış                   V;
+karşıla                 V_Rcp;
+katıl                   V;
+kayıtla                 V; ! rare
+kır                     V_CausDir_AorAr;
+kısıtla                 V;
+kışkırt                 V;
+konuş                   V;
+kork                    V_CausIt_AorAr;
+koru                    V;
+koş                     V_AorAr;
+kovuştur                V;
+kov                     V_AorAr;
+koy                     V_Rfl_AorAr;
+kurtul                  V;
+kur                     V_CausDir_AorAr;
+kuvvetlen               V;
+mahkum% e^t             V_AorAr;
+mahkûm% e^t             V_AorAr;
+mahrum% e^t             V_AorAr;
+mahrum% kal             V_CausDir;
+maruz% bırak            V;
+maruz% kal              V_CausDir;
+mecbur% kal             V_CausDir;
+mevzubahis% ol          V_CausDir;  ! old
+üye% ol                 V_CausDir;  ! old
+müdahale% e^t           V_AorAr;
+niyetlen                V;
+öğret                   V;
+oku                     V;
+oluş                    V;
+ol                      V_CausDir;
+önem% ver               V_CausDir;
+öngör                   V_CausDir;
+önle                    V;
+öp                      V_Rcp_AorAr;
+ört                     V_Rfl_Rcp_AorAr;
+otur                    V;
+ov                      V_AorAr;
+oyla                    V;
+özle                    V_Rcp;
+paylaş                  V;
+piş                     V_CausIr_AorAr;
+sağla                   V;
+sahip% ol               V_CausDir;
+saldır                  V;
+sar                     V_Rfl_CausDir_AorAr;
+şaş                     V_CausIr_AorAr;
+savun                   V;
+saygı% göster           V;
+say                     V_AorAr;
+sebep% ol               V_CausDir;
+seç                     V_AorAr;
+sevgi% göster           V;
+sevke^t                 V_AorAr;    ! officially this is written separately
+sev                     V_Rfl_Rcp_AorAr;
+sığın                   V;
+sık                     V_Rcp_AorAr;
+sınırla                 V;
+sınırla                 V;
+şiş                     V_CausIr_AorAr;
+sok                     V_CausIrreg_AorAr;
+sor                     V_CausDir_AorAr;
+söyle                   V_Rfl_Rcp;
+sürgün% e^t             V_AorAr;
+sürt                    V_Rfl_Rcp_AorAr;
+ileri% sür              V_CausDir_AorAr;
+sür                     V_CausDir_AorAr;
+taahhüt% e^t            V_AorAr;
+tabi% ol                V_CausDir;
+tak                     V_Rfl_Rcp_AorAr; ! reciprocal is questionable
+talep% e^t              V_AorAr;
+tamamlan                V;
+tanı                    V_Rcp;
+tart                    V_AorAr;
+taşı                    V;
+taş                     V_CausIr_AorAr;
+tatbik% e^t             V_AorAr;
+ta^t                    V_AorAr;
+tercüme% e^t            V_AorAr;
+terk% e^t               V_AorAr;
+terk% e^t               V_AorAr;
+terke^t                 V_AorAr;
+teşkil% e^t             V_AorAr;
+teşvik% e^t             V_AorAr;
+tık                     V_CausAt_AorAr;
+toplan                  V;
+tutukla                 V;
+tut                     V_Rcp_AorAr;
+uç                      V_CausIr_AorAr;
+üfle                    V;
+ulaş                    V;
+üşü                     V_CausIt;
+uyan                    V;
+uygula                  V;
+uy                      V_Rcp_AorAr;
+üz                      V_CausIrreg_AorAr;
+var                     V_CausDir;
+vazgeç                  V;
+ver                     V_CausDir;
+yadsı                   V;
+yakala                  V;
+yap                     V_AorAr;
+yaraş                   V;
+yarat                   V;
+yardım% e^t             V_AorAr;
+yardım% gör             V_AorAr;
+yargıla                 V;
+yaşa                    V;
+yaşa                    V;
+yat                     V_CausIr_AorAr;
+yay                     V_AorAr;
+yaz                     V;
+yaz                     V_Rcp_AorAr;
+yerine% getir           V;
+yet                     V_CausIr;
+ye                      V_CausDir;
+yıka                    V_Rfl;
+yit                     V_CausIr_AorAr;
+yok% e^t                V_AorAr;
+yoke^t                  V_AorAr;
+yönet                   V;
+yorumla                 V;
+yükle                   V;
+yüz                     V_AorAr;
+zorlaş                  V;
+zorla                   V;
+dinlen                  V;
+iste                    V;
+at                      V_Rcp_AorAr;
+sil                     V_Rfl_CausDir_AorAr;
+çiz                     V_AorAr;
+oyna                    V_Rcp;
+bil                     V_CausDir;
+başla                   V;
+yürüt                   V;
+topla                   V;
+uza                     V;
+acı                     V;
+çal                     V_CausDir_AorAr;
+yağ                     V_AorAr;
+ısla                    V;
+götür                   V;  ! git<caus>?

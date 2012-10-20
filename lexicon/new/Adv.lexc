@@ -1,0 +1,36 @@
+
+LEXICON AdvRoot
+en                  Adv;
+daha                Adv;
+çabu^k              Adv;
+kolay               Adv;
+iyi                 Adv;  
+kötü                Adv;  
+bahar               AdvTime;
+yaz                 AdvTime;
+kış                 AdvTime;
+bugün               AdvTime;
+dün                 AdvTime;
+yarın               AdvTime;
+içeri               Adv;    ! Location
+dışarı              Adv;    ! Location
+bizzat              Adv;  ! this does not nominalize
+daima               Adv;  ! this does not nominalize
+gayrı               Adv;  ! this does not nominalize
+gayri               Adv;  ! this does not nominalize
+hiç                 Adv;
+tam                 Adv;
+zor                 Adv;
+sadece              Adv;
+yalnız              Adv;
+ancak               Adv;
+sırf                Adv;
+bir% tek            Adv;
+daha% çok           Adv;
+en% çok             Adv;
+asıl                Adv;
+özellikle           Adv;
+bilhassa            Adv;  !old
+acaba               Adv;
+acep                Adv;
+şimdi               AdvTime;

@@ -1,0 +1,87 @@
+LEXICON PostPRoot
+! these can stand alone
+gibi                            PostP;
+için                            PostP;
+ile                             PostP;
+kadar                           PostP;
+göre                            PostP;
+doğru                           PostP;
+rağmen                          PostP;
+karşın                          PostP;
+başka                           PostP;
+gayrı                           PostP;
+beri                            PostP;
+bu% yana                        PostP;
+dolayı                          PostP;
+itibaren                        PostP;
+önce                            PostP;
+evvel                           PostP;
+sonra                           PostP;
+yana                            PostP;
+karşı                           PostP;
+
+!--------
+ait                             PostP;
+aşağı                           PostP;
+bile                            PostP;
+birlikte                        PostP;
+boyunca                         PostP;
+dair                            PostP;
+değin                           PostP;
+dek                             PostP;
+halde                           PostP;
+halinde                         PostP;
+öte                             PostP;
+ötürü                           PostP;
+süresince                       PostP;
+takdirde                        PostP;
+üzere                           PostP;
+üzerine                         PostP;
+yerde                           PostP;
+yukarı                          PostP;
+ilgili                          PostP;
+
+! TODO: the following list is (mostly) from G&K. 
+!       it makes sense to include them at some point
+!
+! these need possesive marking
+! ön
+! arka
+! iç
+! dış
+! üst
+! üzer
+! alt
+! yan
+! karşı
+! ara
+! etraf
+! çevre
+! öte
+! ! these require possessive and ablative case
+! açı ! açı-sın-dan 
+! bakım ! bakım-ın-dan 
+! yüz ! yüz-ün-den 
+! taraf ! taraf-ın-dan 
+! ! these require possessive and instrumental
+! aracılık ! aracılığ-ı-yla 
+! itibar ! itibar-i-yla 
+! vasita ! vasita-si-yla
+! neden ! neden-i-yle 
+! yol ! yol-u-yla 
+! ! these require possessive and dative
+! ad ! ad-ın-a 
+! uğu@DEL@r ! uğr-un-a
+! yer ! yer-in-e 
+! 
+! ! these require possessive and locative
+! saye ! ‘shadow’ 
+! boy ! boy-un-ca 
+! konu ! konu-sun-da 
+! hak ! hakk-ın-da 
+! sıra ! sıra-sın-de 
+! 
+! ! these require possessive and and -cA
+! gerek ! gereğ-in-ce 
+! süre ! süre-sin-ce 
+
