@@ -70,7 +70,7 @@ arka                    PostPlocation;
 iç                      PostPlocation;
 dış                     PostPlocation;
 üst                     PostPlocation;
-üzer                    PostPlocation;
+! üzer                    PostPlocation; ! this one is a bound root and listed in morph.lexc
 alt                     PostPlocation;
 yan                     PostPlocation;
 karşı                   PostPlocation;
