@@ -2149,15 +2149,19 @@ ile       ileCont;
 üzer      uzerCont;
 
 ! üzer (somewhat) is like `üst', but does not 
-! occur in bare form. so we allow it to take any 
-! nominal inflection, but do not allow to surface without one.
+! occur in bare form. Below we (currently) allow 
+! it to form pospositional phrases just like üst/alt etc. 
+! However, we do not allow it to function as adjectives.
 !
-! TODO: this should be more restrictive
+!
+! TODO: check whether this is too restrictive or not. 
 !
 LEXICON   uzerCont 
-                Nplu;   ! ??
-                Npos;
-                Ncase;
+            uzerAdj;
+            PostPlocation;
+
+LEXICON uzerAdj
+%<adj%>:@RBi    Jderiv;
 
 LEXICON  ileCont
 %<postp%>:@RB   Case1Cont;
