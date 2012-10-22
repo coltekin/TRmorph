@@ -1,4 +1,6 @@
 - TODO's marked all around in the source files.
+- The formation of pronouns by -(s)I to "place adverbials", such as
+  içeri, aşağı, öte ...
 - The adjectives (or nouns or postpositions) of location 'iç, dış,
   üst, etc.' form complex adjectivals 'insanlık dışı, doğa üstü...'.
   This is similar to what is described as 'postpositional usage' in
@@ -24,6 +26,7 @@
             something like 'aşk maşk<n>').
 -   apply up> okuyorsak mı
     ???
+- yan- and yak- relation
 - compound noun roots does not really need the <ncomp> tag. First, it
   is not very informative. Second, the compounds in the lexicon
   without -(s)I is not marked. The marking in the lexicon is for 
