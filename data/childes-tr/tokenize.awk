@@ -10,7 +10,7 @@ BEGIN {line=""}
         gsub(/[^\]]+\]/, "", line);
         gsub(/[\t ][\t ]*/, "\n", line);
         gsub(/[()]/, "", line);
-        print line
+        if (line) {print line};
    }
    line="";
    line = $0;
