@@ -207,7 +207,9 @@ define DelS %^%(s%) (->) 0 || %@DELS%@ IntSym* _
 !     last vowel if they precede -DA and -DAn, and less frequently -(y)A. 
 !     this is another case where generations should take only one of
 !     the options (not deleting the vowel is the correct written form, in
-!     colloquial deletion is more common for -DA and -DAn)
+!     colloquial use deletion is more common for -DA and -DAn)
+!     A similar contraction also occurs for "directional pronouns"
+!     içeri and dışarı before -dA and -dAN (e.g., içerden, dışarda).
 !     
 
 define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB 
@@ -246,8 +248,9 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB
                       .o. n -> m || .#. [{ben}|{biz}] Boundary+ %^%(n%) %^I _  
                       .o. [a|e] (->) 0 || .#. [{bur}|{şur}|{or}|{ner}] _
                                         %@RB [%^D %^A (n) | %^%(y%) %^A] %@MB 
-                      .o. %^%(y%) -> y || .#. [{bur}|{şur}|{or}|{ner}] %@RB _ %^A %@MB ;
-
+                      .o. %^%(y%) -> y || .#. [{bur}|{şur}|{or}|{ner}] %@RB _ %^A %@MB
+                      .o. [i|ı] (->) 0 || .#. [{içer}|{dışar}] _
+                                        Boundary+ [%^D %^A (n) ] %@MB  ;
 !
 ! InsertY
 !
