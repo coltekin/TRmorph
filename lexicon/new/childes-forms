@@ -1,6 +1,7 @@
-mama        N;
+omo         N;  ! detergent brand
 ham         N;
 atta        N;
+bibip       N;
 dandini     N; !???
 dasdana     N; !???
 şimdik      AdvTime;  !???
@@ -13,3 +14,4 @@ bilmem      Co; ! communicatior
 teşekkür% ederim  Co; ! communicatior
 ıhhh        Inerjection;
 heh         Inerjection;
+öbürkünü
