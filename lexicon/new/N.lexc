@@ -110,7 +110,7 @@ gayret              N;
 madde               N;
 bakım               N;
 akı@DEL@l           N;
-kardeş              N;  ! family
+kardeş              N;  ! family -- ?? kardeşimler?
 zihniyet            N;
 hareket             N;
 hayat               N;
@@ -432,7 +432,7 @@ okul                N;
 çikolata            N;
 tane                N;  ! this may need special attention. 'enumerator'?
 daire               N;
-abla                N; ! family ??
+abla                N; ! family
 yata^k              N;
 tavu^k              N;
 geyi^k              N;
@@ -454,3 +454,43 @@ keçi                N;
 şapka               N;
 kafa                N;
 baca^k              N;
+babaanne            N; ! family
+büyükanne           N; ! family
+anneanne            N; ! family
+büyükbaba           N; ! family
+dede                N; ! family
+kule                N;
+misafir             N;
+isi@DEL@m           N;
+kaza^k              N;
+kapı                N;
+gömle^k             N;
+işaret              N;
+trafi^k             N;
+oyun                N;
+oyunca^k            N;
+sepet               N;
+adam                N;
+aya^k               N;
+uyku                N;
+süt                 N;
+yorgan              N;
+battaniye           N;
+lamba               N;
+uça^k               N;
+kana^t              N;
+traktör             N;
+topra^k             N;
+kaz                 N;
+köpe^k              N;
+kürk                N;
+puan                N;
+otomobil            N;
+mama                N;
+tekerle^k           N;
+çiftçi              N;
+şöför               N;
+otomobil            N;
+soka^k              N;
+cadde               N;
+diz                 N;
