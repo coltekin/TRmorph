@@ -54,7 +54,7 @@ do
 
     if echo $line | grep ':<>' >/dev/null 2>&1;then
             astring=$(echo $line|sed 's/:<>//g')
-            line=$(echo $line|sed 's/.:<>//g')
+            line=$(echo $line|sed 's/\^*.:<>//g')
     fi
 
 # echo "! caus: '$caus'"
