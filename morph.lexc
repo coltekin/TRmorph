@@ -447,7 +447,7 @@ LEXICON Adv
 %<adv%>:@RB         AdvCont;
                   
 LEXICON QAdv
-%<adv%><%qst*>:@RB  AdvCont;
+%<adv%>%<qst%>:@RB  AdvCont;
 
 LEXICON AdvTime
 %<adv%>:@RB         AdvTimeCont;
