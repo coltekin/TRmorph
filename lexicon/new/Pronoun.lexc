@@ -1,40 +1,93 @@
 !
 ! NOTE: pronouns that form questions are now in morph.lexc
 !
-LEXICON PrnRoot
-ben             PersPrn;
-sen             PersPrn;
-o               PersPrn;
-biz             PersPrn;
-siz             PersPrn;
-onlar           PersPrn;
-bu              DemPrn;
-şu              DemPrn;
-o               DemPrn;
-kendi           PersPrn;
-herkes          PersPrn;  !TODO: this does not take all nominal inflections
-bir% şey        PersPrn;
-birşey          PersPrn;
-her% şey        PersPrn;
-ora             LocPrn;
-bura            LocPrn;
-şura            LocPrn;
-herbir          Prn;
-öteki           Prn;
-beriki          Prn;
-birbir          PPrnBirBir; ! this has to be inflected
-hepsi           Prn;
-birisi          Prn;
-birileri        Prn;
-kimse           PersPrn;
-hiç% kimse      PersPrn;
-hiçkimse        PersPrn;
-hiçbirşey       Prn;
-hiçbir% şey     Prn;
-hiçbiri         Prn;
-hiçbirisi       Prn;
-insan           PersPrn;
-şey             Prn;
 !TODO: solu - aşağısı - dışarısı - ötesi
 !      normally derived, but probalby listing them is also ok.
+!TODO: pronouns derived with -sI/-lArI 
 
+LEXICON PrnRoot
+âlem              Prn;
+aynısı            Prn;
+başka%_biri       Prn;
+başkası           Prn;
+bazısı            Prn;
+benimki           Prn;
+ben               PersPrn;
+beriki            Prn;
+bir%_başkası      Prn;
+birbir            PPrnBirBir; ! this has to be inflected
+birçoğu           Prn;
+birçokları        Prn;
+bir%_diğeri       Prn;
+birileri          PersPrn;
+biri              Prn;
+birisi            PersPrn;
+birkaçı           Prn;
+bir% şey          Prn;
+birşey            Prn;
+bizimki           Prn;
+biz               PersPrn;
+böylesi           Prn;
+bu                DemPrn;
+buncası           Prn;
+bura              LocPrn;
+çoğu              Prn;
+çokları           Prn;
+cümle%_âlem       PersPrn;
+cümle             Prn;
+cümlesi           Prn;
+diğeri            Prn;
+dost%_düşman      PersPrn;
+dünya%_âlem       PersPrn;
+dünya             PersPrn;
+falanca           Prn;
+falan             Prn;
+filan             Prn;
+hangisi           Prn;
+hepsi             Prn;
+her%_biri         Prn;
+herbir            Prn;
+herhangi% biri    Prn;
+herkes            PersPrn;  !TODO: this does not take all nominal inflections
+her%_şey          PersPrn;
+hiçbiri           Prn;
+hiçbirisi         Prn;
+hiçbir% şey       Prn;
+hiçbirşey         Prn;
+hiç% kimse        PersPrn;
+hiçkimse          PersPrn;
+insan             PersPrn;
+kaçı              Prn;
+kâinat            Prn;
+kendi             PersPrn;
+kimi              Prn;
+kimisi            Prn;
+kimseci^k         Prn;
+kimse             PersPrn;
+o%_bu             Prn;
+öbürkü            Prn;
+öbürleri          Prn;
+öbürü             Prn;
+o                 DemPrn;
+o                 PersPrn;
+onlar             PersPrn;
+oncası            Prn;
+ora               LocPrn;
+öteki%_beriki     Prn;
+ötekileri         Prn;
+öteki             Prn;
+ötekisi           Prn;
+pek%_çoğu         Prn;
+seninki           Prn;
+sen               PersPrn;
+şey               Prn;
+siz               PersPrn;
+siz               Prn;
+şu%_bu            Prn;
+şu                DemPrn;
+şuncası           Prn;
+şura              LocPrn;
+topu              Prn;
+umum              Prn;
+yediden%_yetmişe  Prn;
+yedi%_mahalle     Prn;
