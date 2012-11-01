@@ -31,8 +31,8 @@ read regex     AFilter
            .o. DeleteBuffer
            .o. DeYeException
            .o. YorException
-           .o. VowelEpenthesis
            .o. VowelHarmony 
+           .o. VowelEpenthesis
            .o. FSDevoicing
            .o. VoicingAssimilation
            .o. Redup
