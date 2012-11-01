@@ -1,0 +1,17 @@
+!
+!
+!
+
+define PoStags "<n>" | "<np>" | "<adj>" | "<adv>" | "<num>" | "<det>" 
+             | "<v>" | "<cnjsub>" | "<cnjcoo>" | "<cnjadv>" | "<ij>" 
+             | "<ngtv>" | "<bch>" | "<disc_part>" | "<pau>" | "<ui>" 
+             | "<punct>" | "<redup>" | "<exist>" | "<ntexist>" 
+             | "<not>" | "<alpha>";
+
+
+define stem  ?* ->@ 0 || PoStags _  
+        .o. PoStags -> 0;
+
+read regex stem.i .o. @"trmorph.fst";
+
+save stack stemmer.fst

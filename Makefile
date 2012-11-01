@@ -39,5 +39,10 @@ trmorph.xfst: analyzer.xfst
 segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
 	foma -f segment.xfst
 
+stemmer: stemmer.fst 
+
+stemmer.fst: stemmer.xfst trmorph.fst
+	foma -f stemmer.xfst
+
 clean:
 	rm -f trmorph.xfst trmorph.fst trmorph.lexc

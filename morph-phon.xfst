@@ -21,7 +21,7 @@ define Vbuf %^%(I%) | %^%(A%);
 define Vpal %^pA | %^pI | %^pO | %^pU;
 define Vxx  %^A | %^I ;
 define Vsilent %^sFRV | %^sFUV | %^sBRV | %^sBUV ; 
-define Vall Vowel | Vxx | Vpal; ! except buffer vowels
+define Vall Vowel | Vxx | Vpal | Vsilent; ! except buffer vowels
 
 ! Consonants
 define ConsV b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | 
@@ -32,7 +32,7 @@ define Cons  ConsV | ConsUV;
 define ConsBuf %^%(y%) | %^%(s%) | %^%(ş%) | %^%(n%);
 define ConsXX    %^c | %^p | %^t | %^k | %^g | %^K | %^D | %^C | %@LN ;
 define ConsSilent %^sVC |  %^sUC;
-define ConsAll  Cons | ConsXX ; ! except buffers
+define ConsAll  Cons | ConsXX |ConsSilent; ! except buffers
 
 ! Intermediate symbols with no surface forms
 define Boundary %@MB | %@RB | %@dB %@APOS; 
