@@ -1368,12 +1368,19 @@ LEXICON VCausIrregAorArCont
                         VAorAr;
                         VNoCausNoAorCont;
 
-! LEXICON V_Rcp_CausIrreg_AorAr
+LEXICON V_Rcp_CausIrreg_AorAr
+%<v%>:@RB           VRcpCausIrregAorArCont;
 
 LEXICON V_Rfl_CausIrreg_AorAr
 %<v%>:@RB           VRflCausIrregAorArCont;
 
 LEXICON VRflCausIrregAorArCont
+                        VRfl;
+                        VAorAr;
+                        VNoCausNoAorCont;
+
+LEXICON VRcpCausIrregAorArCont
+                        VRcp;
                         VAorAr;
                         VNoCausNoAorCont;
 

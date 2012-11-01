@@ -195,9 +195,9 @@ G:A:kalk<v><t_aor><1s>:kalkarım
 G:A:kalk<v><pass><t_aor><1s>:kalkılırım
 G:R:kalk<v><caus><t_aor><1s>:
 G:R:kalk<v><caus><caus><caus><vinf>:
-G:R:kalk<v><rfl><vinf>:
+G:A:kalk<v><rfl><vinf>:kalkınmak
 G:R:kalk<v><rcp><vinf>:
-G:R:kalk<v><rfl><caus><vinf>:
+G:A:kalk<v><rfl><caus><vinf>:kalkındırmak
 G:A:çık<v><pass><vinf>:çıkılmak
 G:A:çık<v><caus><vinf>:çıkarmak
 G:A:çık<v><t_aor><1s>:çıkarım
