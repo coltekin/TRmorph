@@ -535,6 +535,23 @@ define DeleteCircumflex î (->) i, Î (->) İ,
                         â (->) a, Â (->) A;
 
 !
+! Add Circumflex
+!
+! Current spelling rules state that circumflex is used only when a
+! word is ambiguous without circumflex, e.g., 'hala' and 'hâlâ'.
+! However most older text include circumflexed vowels that would not
+! be recognized by a lexicon according to the new rules. 
+! 
+! This simply allows free replacement of non-circumflexed versions of
+! the vowels with circumflexed versions in the surface. This should
+! have little impact on analysis since people rarely insert these
+! accents by mistake, but this would certainly cause overblown 
+! generation with lots of incorrect words.
+!
+
+define AddCircumflex  DeleteCircumflex.i;
+
+!
 ! Allow capitalization, normally this should happen only at the
 ! beginning of a sentence.
 !
@@ -566,3 +583,18 @@ define AllCaps a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D,
         p -> P, r -> R, s -> S, ş -> Ş, t -> T, u -> U, ü -> Ü, 
         v -> V, y -> Y, z -> Z, î -> Î, û -> Û, â -> Â 
         // CAP CAP _;
+
+!
+! Accept text written in all or partial ASCII. This is common in
+! online communication, especially when people use non TR keyboards.
+! 
+
+define AllASCII      ç (->) c, Ç (->) Ç,
+                     ğ (->) g, Ğ (->) G,
+                     ı (->) i, İ (->) I,
+                     ö (->) o, Ö (->) O,
+                     ş (->) s, Ş (->) S,
+                     ü (->) u, Ü (->) U,
+                     î (->) i, Î (->) I,
+                     û (->) u, Û (->) U,
+                     â (->) a, Â (->) A;
