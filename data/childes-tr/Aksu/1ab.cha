@@ -93,9 +93,7 @@
 *CHI:	hı ?
 *EXP:	ben sana bir araba vereyim bak .
 *CHI:	otobüste .
-%[cc] original transcription was 'otobüs te', it may be emphasizing a
-%     pause in between, but it is more likely a typical error mixing
-%     up the type of de/da.
+%com:	[cc] original transcription was 'otobüs te', it may be emphasizing a pause in between, but it is more likely a typical error mixing up the type of de/da.
 *EXP:	bak ne geliyor .
 %com:	a doll on a car
 *EXP:	hadi söyle bana ne geliyor .

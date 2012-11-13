@@ -30,36 +30,36 @@
 *EXP:	ben onu çocuklara götürüyorum ama sonra nasıl olacak ?
 *CHI:	burda kalsın , sonra alırsın .
 *CHI:	başka zaman al bunları , burda kalsın da saklayım oraya .
-*CHI:	onun içinde , gene de sana verecem onları.
+*CHI:	onun içinde , gene de sana verecem onları .
 *EXP:	dur bakalım , o işleri düşünürüz .
-*EXP:	olmazmı?
+*EXP:	olmazmı ?
 *CHI:	olur , evin arasına koyarım .
 *CHI:	onlar durur evin arasında .
 *CHI:	oraya koyayım eniştem gelince de vereyim .
-*CHI:	eniştemde benim arabam vardı.
-*CHI:	sana vereyimmi benim arabamı?
+*CHI:	eniştemde benim arabam vardı .
+*CHI:	sana vereyimmi benim arabamı ?
 *MOT:	gidemezsin .
-*MOT:	onun bağlı , ben bisikletini getirecem sana .
-*EXP:	biraz sonra olmazmı?
+*MOT:	onun bağlı , ben bisikletini getirecem [: getireceğim] sana .
+*EXP:	biraz sonra olmazmı ?
 *CHI:	şurda , şurda .
 *EXP:	bak deminki hayvanlar var ya , onları gene verecem sana mecburen .
-*EXP:	tamam mı?
+*EXP:	tamam mı ?
 *CHI:	tamam .
-*EXP:	veriyimmi tekrar , ver .
+*EXP:	veriyimmi [: vereyim mi] tekrar , ver .
 *CHI:	istiyorum .
-*CHI:	buda bırakırsan araabaları.
+*CHI:	buda bırakırsan arabaları .
 *CHI:	burda kalsın .
 *CHI:	arabalar da bizde kalsın .
-*CHI:	oraya saklıyalım .
+*CHI:	oraya saklıyalım [: saklayalım] .
 *CHI:	o evin orası kapalı bak geliyorlar .
-*CHI:	öğretmenin; masada arabası yürümüyor tekerleklerin .
-*EXP:	oyuncak çünkü.
+*CHI:	öğretmenin ; masada arabası yürümüyor tekerleklerin .
+*EXP:	oyuncak çünkü .
 *CHI:	bak bak , kamyonu nasıl geçer be baksana .
 *CHI:	arabayı bırak .
 *MOT:	şimdi Levent , bak , Yalovaya giderken ilkin neye bindik çocuğum ?
 *CHI:	arabalı vapura .
 *EXP:	sonra nereye bindik ?
-*CHI:	sonra da taksıye bindik .
+*CHI:	sonra da taksiye bindik .
 *EXP:	ondan sonra nereye gittik ?
 *CHI:	sonra da minibüse bindik , ondan sonra banyolara gittik .
 *EXP:	orda ne oynadın çocuğum ?
@@ -71,7 +71,7 @@
 *EXP:	başka .
 *CHI:	başka da .
 *EXP:	kocaman birşey aldık , ne aldık .
-*EXP:	neylen oynadın ?
+*EXP:	neylen [: neyle] oynadın ?
 *CHI:	toplan .
 *CHI:	oynadık değilmi ?
 *EXP:	anlat bakalım nasıl gittik ?
@@ -91,18 +91,18 @@
 *CHI:	tahta gibiydi .
 *EXP:	havluyu mu giydiniz ?
 *CHI:	ha .
-*EXP:	sabun niye yokmuş?
+*EXP:	sabun niye yokmuş ?
 *CHI:	sabunu aldık .
 *CHI:	sabunu götürdük hamama da .
 *CHI:	hala da başını yıkadı , ben de sularla oynadım .
 *EXP:	hoşuna gittimi ?
 *CHI:	ha .
 *EXP:	sıcakmıydı su da ?
-*CHI:	ha sıcaktı.
-*EXP:	soğuk suda [= suyu da ?] açtık değilmi ?
+*CHI:	ha sıcaktı .
+*EXP:	soğuk suda [: suyu da] [?] açtık değilmi ?
 *CHI:	sonra da minibüse bindik .
-*CHI:	hertarafa bindik .
-*CHI:	hertarafa götürdün beni .
+*CHI:	her tarafa bindik .
+*CHI:	her tarafa götürdün beni .
 *CHI:	çünkü hasta oldum .
 *CHI:	ver otomobili .
 *MOT:	ne içtin başka , çay içtinmi ?
@@ -115,28 +115,28 @@
 *CHI:	binmiyorum .
 *MOT:	arkadaşların varmı parkta ?
 *CHI:	vardı ama çocuk , bahçe çocukları oralarda .
-*EXP:	bahçe çocukları mı?
-*CHI:	hı.
+*EXP:	bahçe çocukları mı ?
+*CHI:	hı .
 *EXP:	ne yapıyorlar çocuklar orda ?
 *CHI:	bekçi baba salıncakları koparıyor .
 *CHI:	evine alıyor , koyuyor .
 *CHI:	evine giriyor .
 *CHI:	evinde yatıyor .
-*EXP:	sonra ne zaman koyuyor salıncakları?
-*CHI:	sabahleyin takıyor salıncağı.
+*EXP:	sonra ne zaman koyuyor salıncakları ?
+*CHI:	sabahleyin takıyor salıncağı .
 *CHI:	otobüsü versene .
 *CHI:	şuraya koy .
 *EXP:	verirmisiniz xxx .
-*CHI:	verirmisiniz otobüsü.
-*CHI:	bak arabanın şeysi gitti be .
+*CHI:	verirmisiniz otobüsü .
+*CHI:	bak arabanın şeysi [: şeyi] gitti be .
 *CHI:	bak otobüs burasına .
 *CHI:	o senin araban değil .
 %com:	talking to the brother who is pulling things
 *MOT:	enişten ne getiriyor akşamları senin ?
-*CHI:	öğretmenin arabası.
+*CHI:	öğretmenin arabası .
 *CHI:	bak öğretmen burda .
 *CHI:	bu öğretmen .
-*CHI:	bunun arabası.
+*CHI:	bunun arabası .
 *CHI:	arkasında uçak unuttum be .
 *MOT:	ama anlatmadın ne yaptık sonra ?
 *CHI:	Sarıyerde vapura bindik .
@@ -153,32 +153,32 @@
 *EXP:	pasta yemedinmi ?
 *CHI:	ben hamamın sandalyesine oturdum yıkandım öyle .
 *CHI:	şunu versene şunu .
-*CHI:	köprüyü.
-*CHI:	verirmisin köprüyü.
-*CHI:	araba aldı.
+*CHI:	köprüyü .
+*CHI:	verirmisin köprüyü .
+*CHI:	araba aldı .
 *MOT:	enişten akşamları sana ne getiriyor Levent .
 *CHI:	akşamları şekerpare getiriyor .
-*CHI:	pastahaneden getiriyor .
+*CHI:	pastahaneden [: pastaneden] getiriyor .
 *EXP:	kim yolluyor sana şekerpare ?
 *CHI:	babam yolluyor .
 *EXP:	nerde baban senin ?
-*CHI:	arabada , Mercedes almış.
-*EXP:	aman ne güzel , sen beyendinmi , bindinmi ?
-*CHI:	beyendim , böyle bindim .
+*CHI:	arabada , Mercedes almış .
+*EXP:	aman ne güzel , sen beğendinmi , bindinmi ?
+*CHI:	beğendim , böyle bindim .
 *CHI:	arabasını elledim böyle .
-*CHI:	tutarken elledim bir baktım tekerleklerin burası.
-*CHI:	çarpmış.
+*CHI:	tutarken elledim bir baktım tekerleklerin burası .
+*CHI:	çarpmış .
 *CHI:	sonra amcamın arabasının burası taksi gelirken dönüyordu .
-*CHI:	taksi de amcamın tekerleklerinin burasına çarpmış.
+*CHI:	taksi de amcamın tekerleklerinin burasına çarpmış .
 *EXP:	kaza oldumu ?
 *CHI:	kaza oldu .
 *CHI:	sonra da çıktı arabadan .
 *CHI:	sonra bindi gitti .
-*CHI:	sonradan arabbanın kenarısına [= kenarına] geldi .
+*CHI:	sonradan arabanın kenarısına [: kenarına] geldi .
 %com:	"kenarısı" is not correct; correct form: "kenarı". the child added an extra suffix sonra o girdi ona .
-*CHI:	değilmi bağırdı.
+*CHI:	değilmi bağırdı .
 *CHI:	sonra da arabaya bindi garaja gitti .
-*EXP:	çok pahalı oldumu bu iş?
+*EXP:	çok pahalı oldumu bu iş ?
 *CHI:	arabada gitti .
 *CHI:	olmaz öğretmenin o .
 %com:	talking to the brother
@@ -200,7 +200,7 @@
 *CHI:	köprünün burası , araba geçiyor altından .
 *CHI:	bak kafası da .
 *CHI:	klakson bu da .
-*CHI:	a itiyor arabayı.
+*CHI:	a itiyor arabayı .
 *EXP:	Levent , ablan nerde senin ?
 *CHI:	okulda .
 *EXP:	büyük mü ablan canım senin ?
@@ -208,16 +208,16 @@
 *CHI:	versene onu .
 *CHI:	ver onu .
 %com:	to the brother again
-*EXP:	sen bana anlat birazcık , senin burda arkadaşların varmı?
+*EXP:	sen bana anlat birazcık , senin burda arkadaşların varmı ?
 *CHI:	var .
 *CHI:	okula gidiyorlar .
-*EXP:	anaokuluna mı?
-*CHI:	hı.
+*EXP:	anaokuluna mı ?
+*CHI:	hı .
 *EXP:	onlarlan oynuyormusun bazen ?
 *CHI:	oynuyorum ama onlar da beni dövüyorlar .
 *EXP:	niçin ?
 *CHI:	işte .
-*CHI:	yemek yedirmiyorlar onlar da bir türlü.
+*CHI:	yemek yedirmiyorlar onlar da bir türlü .
 *EXP:	ne terbiyesiz çocuklar onlar öyle .
 *CHI:	terbiyesiz , ne terbiyesiz ne .
 *CHI:	okulda da burnum akıyor böyle .
@@ -249,15 +249,15 @@
 *CHI:	bunlan oynarım .
 *CHI:	bak selam veriyor .
 *EXP:	arkadaşın varmı senin ?
-*CHI:	yok ama Tulga da [= Tolga ?] oynuyor benlen .
-*CHI:	sonra da Tanjuyla oynıycam [= oynayacağım] ben .
-*CHI:	Tulga da gitmiş arkaya .
-*CHI:	Tulga ben oynamıyorum senlen dedim .
-*CHI:	ben de Tanjuylan oynuyorum o zaman .
+*CHI:	yok ama Tulga [=? Tolga] da oynuyor benlen [: benimle] .
+*CHI:	sonra da Tanjuyla oynıycam [: oynayacağım] ben .
+*CHI:	Tulga [=? Tolga] da gitmiş arkaya .
+*CHI:	Tulga [=? Tolga] ben oynamıyorum senlen dedim .
+*CHI:	ben de Tanjuylan [: Tanju'yla] oynuyorum o zaman .
 *EXP:	iyi ediyorsun .
 *EXP:	ne oyunlar oynuyorsunuz ?
 *CHI:	oynuyoruz , oynuyoruz , çok oynuyoruz .
-*CHI:	sonra çantam da orda kalmış.
+*CHI:	sonra çantam da orda kalmış .
 *CHI:	çantamda kitap ta yok .
 *CHI:	karıştırmaz çocuklar .
 *CHI:	arabalarımı karıştırıyorlar .
@@ -273,13 +273,13 @@
 *EXP:	peki sen dışarıya kimle gidiyorsun ?
 *CHI:	halamla gidiyorum .
 *EXP:	ne yapıyorsunuz dışarda ?
-*CHI:	beraber gidioruz .
+*CHI:	beraber gidioruz [: gidiyoruz].
 *CHI:	çıkmıyoruz tabii .
 *EXP:	beraber yemeklik mi alıyorsunuz ?
 *CHI:	ha .
 *EXP:	enişten nerde ?
 *CHI:	eniştem de dükkanda .
-*CHI:	bukadar araba değilmi ?
+*CHI:	bu kadar araba değilmi ?
 *EXP:	cumartesi pazar enişten geliyormu ?
 *CHI:	geliyor ama karanlıkta geliyor .
 *CHI:	gidiyor sabahleyin , sonra da gidiyor karanlıkta geliyor .
@@ -287,27 +287,27 @@
 *CHI:	ha seviyorum .
 *CHI:	ama otobüsten burdan çıkarlar değilmi kadınlar .
 %com:	busy with the bus
-*CHI:	bunun arkasına girecem [= gireceğim] , oturucam [= oturacağım].
-*CHI:	araba kullanacam [= kullanacağım] .
+*CHI:	bunun arkasına girecem [: gireceğim] , oturucam [: oturacağım] .
+*CHI:	araba kullanacam [: kullanacağım] .
 *CHI:	Emirgan bir .
 %com:	imitating dolmuş drivers
 *EXP:	peki canım dışarda neler var ?
 *CHI:	dışarda hiçbirşey yok .
 *CHI:	sular gece akmışlar sabaha kadar .
-*CHI:	Mustafa ağbi silmiş.
-*CHI:	öyle de su içinde kalmış , temizliyor süpürgeyle oraları.
-*CHI:	hertaraf su içinde kalmış.
+*CHI:	Mustafa ağbi [: ağabey] silmiş .
+*CHI:	öyle de su içinde kalmış , temizliyor süpürgeyle oraları .
+*CHI:	her taraf su içinde kalmış .
 *CHI:	kapağdan [?] böyle arasından su akıyor .
-*CHI:	sonra burası.
+*CHI:	sonra burası .
 *CHI:	sonra da yağmur akıyor .
 *CHI:	yağmur yağıyor , sonra da saçlarımıza yağmur yağıyor .
 *CHI:	paltomuza da yağmur yağıyor .
-*CHI:	sonra da arabalarımız evde kaldı.
-*EXP:	senin topun varmı?
+*CHI:	sonra da arabalarımız evde kaldı .
+*EXP:	senin topun varmı ?
 *CHI:	var .
 *CHI:	bisikletim de var .
-*EXP:	topunlan oynuyormusun ?
-*CHI:	oynuyorum topumlan .
+*EXP:	topunlan [: topunla] oynuyormusun ?
+*CHI:	oynuyorum topumlan [: topumla] .
 *CHI:	ama bizde .
 *CHI:	bende kedi alıp evimize koyuyoruz .
 *CHI:	kedi alıyoruz , kağıt bağlıyoruz .
@@ -330,7 +330,7 @@
 *CHI:	hiç defterlen resim yaparım .
 *CHI:	gızzzz .
 %com:	sound gesture
-*MOT:	kalemsiiz olurmu ?
+*MOT:	kalemsiz olurmu ?
 *CHI:	olur .
 *EXP:	buraya yapmak istermisin resim ?
 *CHI:	yaparım .
@@ -344,14 +344,14 @@
 *EXP:	peki , yap bir Akbank .
 *CHI:	biraz böyle yol yaptım .
 *EXP:	yolun üstüne ne yapacaksın ?
-*GRM:	birtane top yap bakayım .
+*GRM:	bir tane top yap bakayım .
 *CHI:	top yapamam be .
-*GRM:	böyle yapacaaksın .
+*GRM:	böyle yapacaksın .
 *CHI:	kocaman .
 *GRM:	aferin .
 *CHI:	ayyy .
 %com:	laughs
-*GRM:	silme , silme güzel oldu , birtane daha yap .
+*GRM:	silme , silme güzel oldu , bir tane daha yap .
 *CHI:	peki .
 *EXP:	bir de çiçek yap .
 *CHI:	yap .
@@ -367,10 +367,10 @@
 *EXP:	kaç tane top var orda ?
 *CHI:	iki tane üç tane .
 *EXP:	say bakayım .
-*CHI:	bir iki üç dört beş.
+*CHI:	bir iki üç dört beş .
 *CHI:	dur şuraya yazayım da .
 *CHI:	şurası da .
-*EXP:	ben senin bu şeyini çok beyendim .
+*EXP:	ben senin bu şeyini çok beğendim .
 *CHI:	ama bunu ben giderken giyiyorum .
 *EXP:	onu kim verdi sana ?
 *CHI:	pazardan aldık .
@@ -389,7 +389,7 @@
 *CHI:	süslenir ama arabaları karıştırır , arabaları atar .
 *CHI:	sokağa .
 *CHI:	bazen süsleniyor , arabada içine giriyor .
-*CHI:	uçağı versene , şuraya koyum [= koyayım] .
+*CHI:	uçağı versene , şuraya koyum [: koyayım] .
 *EXP:	halan nasıl süsleniyor senin ?
 *CHI:	halam öyle süsleniyor sonra .
 *CHI:	büyük oluyor yemek yiyince , ben büyük oluyorum .
@@ -405,7 +405,7 @@
 *EXP:	peki yerleri kim temizliyor ?
 *CHI:	teyze temizliyor .
 *EXP:	neyle temizliyor yerleri ?
-*CHI:	okadar .
+*CHI:	o kadar .
 *CHI:	bezlen temizliyor .
 *EXP:	süpürüyormu ?
 *CHI:	süpürüyor , sonra da gırgırlıyor .
@@ -413,17 +413,17 @@
 *CHI:	alıyor sularla .
 *EXP:	niye süpürüyor , neden ?
 *CHI:	sonra sular da yere şakır şakır .
-*CHI:	yağmış , sonrra da yerler de su içinde kalmış.
+*CHI:	yağmış , sonra da yerler de su içinde kalmış .
 *CHI:	Elmas teyzem de siliyor yerleri bezlen .
 *EXP:	peki neden süpürüyor ?
 *CHI:	süpürüyor , gırgırlıyor .
 *EXP:	neden ama ?
 *CHI:	işte .
 *EXP:	sen bana biraz da babanı anlat .
-*CHI:	sonra babam da pastahaneye gidip arabasınlan .
-*CHI:	Mercedes arabada , burdan Mercedesinlen gitmiş.
-*CHI:	Hülya da gitmiş yanına , amcamın arabasına binmiş.
-*CHI:	gitmiş amcamın arabasında orda olmuş.
+*CHI:	sonra babam da pastahaneye [: pastaneye] gidip arabasınlan [: arabasıyla] .
+*CHI:	Mercedes arabada , burdan Mercedesinlen [: Mercedesiyle] gitmiş .
+*CHI:	Hülya da gitmiş yanına , amcamın arabasına binmiş .
+*CHI:	gitmiş amcamın arabasında orda olmuş .
 *CHI:	amcamın arabası da model gibi yürüyor .
 *CHI:	Ford gibi .
 *EXP:	peki canım senin baban bazen okuyormu ?
@@ -436,38 +436,38 @@
 *CHI:	defter okuyor .
 *EXP:	başka ne okuyor ?
 *CHI:	başka da defter okuyor .
-*CHI:	gazte [= gazete] .
+*CHI:	gazte [: gazete] .
 *EXP:	baban seni gezmeye götürüyormu Levent ?
 *CHI:	götürüyor .
-*EXP:	nereye gotürüyor ?
-*CHI:	pastahaneye .
-*EXP:	pastahanede ne görüyorsun sen , ne yapıyorsun orda ?
-*CHI:	pastahanede arabalara biniyorum .
+*EXP:	nereye götürüyor ?
+*CHI:	pastahaneye [: pastaneye] .
+*EXP:	pastahanede [: pastanede] ne görüyorsun sen , ne yapıyorsun orda ?
+*CHI:	pastahanede [: pastanede] arabalara biniyorum .
 *CHI:	açıyorum kapısını biniyorum .
 *CHI:	böyle çeviriyorum , çeviriyorum .
 *CHI:	o yaramaz yaramaz .
 %com:	commenting on the brother
-*GRM:	Levent , yar'in sabah nereye gidelim ?
+*GRM:	Levent , yarın sabah nereye gidelim ?
 *CHI:	yarın sabah dişçiye gidelim hadi .
 *EXP:	dişçide dişine baktılarmı senin ?
 *CHI:	bakmadılar .
 *EXP:	ne koydular dişine anlatsana .
 *CHI:	pamuk koymadılar , et koydular .
-*CHI:	etim dilim ağzımı yaktı.
-*CHI:	sonra dişçi xxx yaptı.
+*CHI:	etim dilim ağzımı yaktı .
+*CHI:	sonra dişçi xxx yaptı .
 *CHI:	ben su içmedimmi orda ?
 *EXP:	içtin tabii .
 *CHI:	içmedim tükürdüm .
 *EXP:	hadi evimize gidelimmi ?
 *CHI:	şimdi değil .
 *CHI:	öğretmen burda benlen konuştu , bunları getirdi .
-*EXP:	Barboroşa uğrıyalım giderken .
-*CHI:	yo [= yok] şimdi değil .
+*EXP:	Barboros'a uğrıyalım [: uğrayalım] giderken .
+*CHI:	yo [: yok] şimdi değil .
 *CHI:	şu öğretmen gitsin de öyle gidelim .
 *EXP:	olur .
 *CHI:	şimdi oynayayım da şurda .
-*CHI:	şu öğretmenin oyuncaklarıylan .
-*CHI:	bak hertaraf dağıtık [= dağınık] .
+*CHI:	şu öğretmenin oyuncaklarıylan [: oyuncaklarıyla] .
+*CHI:	bak her taraf dağıtık [:: dağınık] .
 *CHI:	oynuyor baksana .
 *CHI:	bu oyuncaklar bunlar benim oldu .
 *EXP:	sabahleyin ne yedin evladım ?
@@ -476,7 +476,7 @@
 *CHI:	yalan söyleyenlere ne yapacaksın ?
 *EXP:	sen yalan değil , şaka yapıyorsun .
 *CHI:	şaka yapıyorum .
-*EXP:	ben ne yedim biliyormmusun ?
+*EXP:	ben ne yedim biliyormusun ?
 *EXP:	balık .
 *CHI:	aaaa !
 %com:	surprised
@@ -489,7 +489,7 @@
 *EXP:	bir de üstüne çay içtim .
 *CHI:	aa .
 %com:	laughs
-*CHI:	onun üzerine çay dökülürmü?
+*CHI:	onun üzerine çay dökülürmü ?
 *CHI:	dökülmez onun .
 *CHI:	üzerine .
 *CHI:	vrrr .

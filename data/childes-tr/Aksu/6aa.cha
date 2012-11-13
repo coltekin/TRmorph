@@ -14,30 +14,30 @@
 *CHI:	oynuyor , fare .
 *EXP:	farelerin nesi var ?
 *CHI:	burnu var , dişleri var .
-*CHI:	kuyruğunu gördünmü?
+*CHI:	kuyruğunu gördünmü ?
 *EXP:	dişleri ne yapar ?
 *CHI:	böyle yapar .
 *CHI:	kurşun asker .
 *EXP:	ne yapıyor kız ?
 *CHI:	böyle .
 *EXP:	niye öyle durmuş kız ?
-*CHI:	düşmüş.
-*EXP:	bu kimmiş?
-*CHI:	asker düsmüş.
+*CHI:	düşmüş .
+*EXP:	bu kimmiş ?
+*CHI:	asker düşmüş .
 *CHI:	bak .
 *EXP:	bu ne ?
 *CHI:	balık , bak !
-*CHI:	böyle yapmış.
+*CHI:	böyle yapmış .
 *EXP:	balığı niye kesiyor ?
-*CHI:	bak , deniz var burda [= burada] .
+*CHI:	bak , deniz var burda [: burada] .
 *CHI:	bak bunlar .
 *CHI:	bak bu .
-*CHI:	bu düşmüş.
-*CHI:	yırtılmış.
-*EXP:	bu neymiş?
+*CHI:	bu düşmüş .
+*CHI:	yırtılmış .
+*EXP:	bu neymiş ?
 *CHI:	köpek .
 *EXP:	niye köpekler ısırır ?
-*EXP:	köpekler ısırırmı?
+*EXP:	köpekler ısırırmı ?
 *CHI:	ısırmaz .
 *CHI:	bu ne ?
 *CHI:	kalemimi ver , kalemimi .
@@ -46,18 +46,18 @@
 *CHI:	kurşun kalem .
 *EXP:	aydede yap .
 *CHI:	yapmam .
-*CHI:	kuş.
+*CHI:	kuş .
 *EXP:	kuşlar ne yapar ?
 *CHI:	Aylini yaptım .
 *EXP:	kuşlar ne yapar ?
 *CHI:	cik cik yapar , mama yer .
 %com:	cik cik: sound imitation of birds mama: a common word among children; stands for food
-*EXP:	başka ne yapar; nasıl uçar ?
+*EXP:	başka ne yapar ; nasıl uçar ?
 *CHI:	böyle uçar .
 *EXP:	köpekler ne yapar ?
 *CHI:	köpek , köpek .
 *EXP:	niçin içer köpekler ?
-*CHI:	su içer , ota [= ot] yiyer [= yer] .
+*CHI:	su içer , ota [:: ot] yiyer [: yer] .
 %com:	the child added an extra suffix to the verb "yemek"
 *EXP:	niçin içer ?
 *CHI:	xxx .
@@ -66,7 +66,7 @@
 *CHI:	xxx yaptım ben .
 %com:	hav hav: sound imitation of a doğs barking; also stands for a dog
 *EXP:	neden içiyorsun süt ?
-*CHI:	içiyorum , içicem , içicem [= içeceğim] .
+*CHI:	içiyorum , içicem [: içeceğim] , içicem [: içeceğim] .
 *CHI:	anne de içer .
 *EXP:	neyle içersin su ?
 *CHI:	bir kuş yapacağım .
@@ -81,12 +81,12 @@
 *EXP:	neyle yazıyor Aylin ?
 *CHI:	yerde yazıcağım .
 *CHI:	burda yazacağım .
-*EXP:	oynıyalımmı?
+*EXP:	oynıyalım [: oynayalım] mı ?
 *CHI:	oynama .
-*CHI:	oynıyacağım .
+*CHI:	oynıyacağım [: oynayacağım] .
 %com:	not clear in the text who says the sentence right above
 *CHI:	anne , bırakmam .
-*CHI:	başka kuş , başka kuş.
+*CHI:	başka kuş , başka kuş .
 *CHI:	xxx .
 *EXP:	kuş mu yaptın ?
 *EXP:	ne resmi yaptın ?
@@ -115,7 +115,7 @@
 *CHI:	anne yapıyor .
 *CHI:	gidiyor anne .
 *EXP:	anne ne yapıyor ?
-*CHI:	uf olmuş.
+*CHI:	uf olmuş .
 *CHI:	kuş yap bana .
 *EXP:	bu evde başka kim var ?
 *EXP:	yerleri kim süpürür ?
@@ -135,7 +135,7 @@
 *EXP:	anne okurmu ?
 *CHI:	okur , okuyor .
 *EXP:	ne zaman okuyor ?
-*CHI:	iki diye [= ikide] okuyor .
+*CHI:	<iki diye> [: ikide] okuyor .
 *CHI:	çocuk xxx .
 *CHI:	sesimi de al .
 *CHI:	çalsın .
@@ -146,35 +146,35 @@
 *CHI:	su .
 *CHI:	xxx yok , su istiyorum .
 *CHI:	su istiyorum .
-*CHI:	aç , aç.
-*EXP:	neyi aç?
+*CHI:	aç , aç .
+*EXP:	neyi aç ?
 *CHI:	şunu .
 *CHI:	başka yok ama .
 *CHI:	başka yok ama .
 *CHI:	başka yok .
-*EXP:	nerde [= nerede] ?
-*CHI:	burda [= burada] .
+*EXP:	nerde [: nerede] ?
+*CHI:	burda [: burada] .
 *CHI:	yine yap .
-*EXP:	tavşan nerde [= nerede] ?
+*EXP:	tavşan nerde [: nerede] ?
 *CHI:	yok .
 *CHI:	yatıyor .
 *EXP:	nerde yatıyor ?
-*CHI:	orda [= orada] .
+*CHI:	orda [: orada] .
 *EXP:	kutunun neresinde ?
 *CHI:	kutunun içinde .
 *CHI:	onu koy .
 *EXP:	şimdi nerde ?
-*CHI:	orda [= orada] .
+*CHI:	orda [: orada] .
 *CHI:	vermedi .
 *EXP:	nerde tavşan ?
-*CHI:	tavşan yapıcam [= yapacağım] (alıcam) [= alacağım] ben .
+*CHI:	tavşan yapıcam [: yapacağım] (alıcam) [: alacağım] ben .
 *CHI:	tavşan .
 *EXP:	nerde uyuyor tavşan ?
 *CHI:	yine açsın .
 *CHI:	orda tavşan .
 *CHI:	yatıyor .
 *EXP:	nerede ?
-*CHI:	orda [= orada] ?
+*CHI:	orda [: orada] ?
 *EXP:	nerde tavşan ?
 *CHI:	yok .
 *CHI:	açsana şunu .
@@ -182,7 +182,7 @@
 *CHI:	açsana .
 *CHI:	gitme .
 *CHI:	tavşan bu .
-*CHI:	aç şunu aç.
+*CHI:	aç şunu aç .
 *CHI:	anne !
 *CHI:	açsana şunu .
 *CHI:	açsana .

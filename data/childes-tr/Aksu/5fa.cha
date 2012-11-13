@@ -11,9 +11,9 @@
 *CHI:	tamam .
 *EXP:	sen bugün neler yaptın ?
 *EXP:	anlat bana , ne oldu bu sabah ?
-*EXP:	oynadın mı?
+*EXP:	oynadın mı ?
 *CHI:	oynadım .
-*EXP:	hangi oyunlar [= oyunları] oynadın ?
+*EXP:	hangi oyunlar [: oyunları] oynadın ?
 *CHI:	Nihalle oynadım .
 *EXP:	çocuklar ne yapar dışarda ?
 *CHI:	Kadir gelecek bize .
@@ -23,15 +23,15 @@
 *EXP:	ne yapacaksınız onunla ?
 *CHI:	kavga edeceğiz .
 *EXP:	niye ?
-*CHI:	kovboyculuk oynıyacağız .
+*CHI:	kovboyculuk oynıyacağız [: oynayacağız] .
 *EXP:	nasıl oynuyorsunuz kovboyculuk ?
 *CHI:	tüfekle .
-*CHI:	sope benim tüfeğim olacak .
+*CHI:	sopa benim tüfeğim olacak .
 *CHI:	o da düşman olacak .
-*CHI:	öbürüki [= öbürü] de derilikız [= kızılderili] olacak .
+*CHI:	öbürüki [: öbürü] de derilikız [: kızılderili] olacak .
 %com:	there is no such word as "derilikız" in Turkish , the child got it wrong . also added an extra suffix to "öbürü"
-*EXP:	oh , Kadir derilikız olacak .
-*CHI:	a a yok , Nihal derilikız olacak .
+*EXP:	oh , Kadir derilikız [: kızılderili] olacak .
+*CHI:	a a yok , Nihal derilikız [: kızılderili] olacak .
 *EXP:	Kadir ne olacak ?
 *CHI:	o da benim düşmanım olacak .
 *EXP:	sonra ?
@@ -40,11 +40,11 @@
 *CHI:	biz de onu öldürürüz .
 *CHI:	işte bundan yapacağız .
 *EXP:	bu tehlikeli bir oyun .
-*CHI:	yok onları xxx götürmiyeceğiz .
+*CHI:	yok onları xxx götürmiyeceğiz [: götürmeyeceğiz].
 *CHI:	kaçıracağız .
 *EXP:	onları nereye götüreceksiniz ?
 *CHI:	şeye , bizim dağa götüreceğiz , dağa .
-*EXP:	nerede o dağ?
+*EXP:	nerede o dağ ?
 *CHI:	hani bizim şey var ya , işte oradan gideceğiz .
 *EXP:	ne yapıcaksınız dağda onu ?
 *CHI:	şey yapıcağız , doktora götüreceğiz .
@@ -55,7 +55,7 @@
 *EXP:	doktor ne yapacak ?
 *CHI:	bizim şey de xxx var ya .
 *CHI:	bizim düşmanlar var ya .
-*CHI:	iste onu ben öldürmiyeceğim , o derilikızı öldürecek .
+*CHI:	iste onu ben öldürmiyeceğim [: öldürmeyeceğim], o derilikızı [: kızılderiliyi] öldürecek .
 *EXP:	nelerle oynanıyor bu oyun ?
 *CHI:	tüfeklerle .
 *EXP:	başka ?
@@ -68,8 +68,8 @@
 *CHI:	ölecek .
 *EXP:	ben korktum bu oyundan .
 *EXP:	ben durmam burda bu oyun oynanırken .
-*CHI:	biz içeride oyniyacağız .
-*EXP:	nerede oynıyacaksınız ?
+*CHI:	biz içeride oynıyacağız [: oynayacağız] .
+*EXP:	nerede oynıyacaksınız [: oynayacaksınız] ?
 *CHI:	şimdi gelecek bu .
 *EXP:	nereden geliyor Kadir ?
 *CHI:	Kadir içeri odadan geliyor .
@@ -81,18 +81,18 @@
 *CHI:	tüfeklerimizi bırakırız , kavga ederiz .
 *EXP:	ha , güreş ediyorsunuz .
 *EXP:	nasıl oluyor bu güreş oyunu ?
-*CHI:	şimdi biz gidiyoruz atlan [= atla] xxx .
-*CHI:	şimdi biz derilikız gördük , onu kaçırdık .
+*CHI:	şimdi biz gidiyoruz atlan [: atla] xxx .
+*CHI:	şimdi biz derilikız [: kızılderili] gördük , onu kaçırdık .
 *EXP:	sonra ?
-*CHI:	sonra da o hemen okula kaçtı.
+*CHI:	sonra da o hemen okula kaçtı .
 *CHI:	ondan sonra biz de onu dışardan kovalıyorduk .
 *EXP:	nerede oynuyorsunuz bu oyunu ?
 *CHI:	dışarıda .
-*CHI:	Kadirlen [= Kadir'le] .
+*CHI:	Kadirlen [: Kadir'le] .
 *EXP:	nereye kaçıyordu kızılderili kız ?
 *CHI:	o bahçeye kadar , dağa kadar .
 *CHI:	füt xxx onlardan bizden kaçıyor o .
-*CHI:	bizim dağlara , hani bahçede var ya , ışte oradakine .
+*CHI:	bizim dağlara , hani bahçede var ya , işte oradakine .
 *CHI:	biz de düşüyorduk .
 *EXP:	sen dışarıya kiminle çıkıyorsun ?
 *CHI:	Kadirle .
@@ -106,13 +106,13 @@
 *CHI:	çünkü onun tüfeği var .
 *EXP:	nerde tüfeği babanın ?
 *CHI:	salonda .
-*EXP:	asılımı?
-*EXP:	I don't see a gun in the living room .
+*EXP:	asılımı ?
+*EXP:	I@s:en don't@s:en see@s:en a@s:en gun@s:en in@s:en the@s:en living@s:en room@s:en .
 %com:	only th english version was transcribed here; probably she said: ben salonda tüfek görmüyorum .
 *CHI:	yatak odasında .
 *CHI:	Kadirin de tüfeği var .
 *CHI:	Cemalin de .
-*EXP:	Kadir'in tüfeği neredeymiş?
+*EXP:	Kadir'in tüfeği neredeymiş ?
 *CHI:	evinde .
 *EXP:	Kadir'le nereye gittiniz ?
 *CHI:	o benim arkadaşım .
@@ -121,35 +121,35 @@
 *EXP:	kimle ?
 *CHI:	Kadirle .
 *EXP:	ne oynuyordu ?
-*CHI:	bir sinemaya gittik; Memoya .
-*EXP:	Memöya mı , Cemoya mı?
+*CHI:	bir sinemaya gittik ; Memoya .
+*EXP:	Memoya mı , Cemoya mı ?
 *CHI:	Padişaha .
 *EXP:	ne yapıyorlardı o filimde ?
-*CHI:	sakallı vardı.
+*CHI:	sakallı vardı .
 *EXP:	ne yapıyordu ?
 *CHI:	padişaha kızıyordu .
 *EXP:	neden ?
 *CHI:	işte .
 *EXP:	sonra ?
-*CHI:	sonra onu alıp kaçırıyorlardı.
-*REL:	Türkan S'oray'ın kucağında ne vardı?
-%com:	Türkan S'oray is a wellknown Turkish actress
+*CHI:	sonra onu alıp kaçırıyorlardı .
+*REL:	Türkan Şoray'ın kucağında ne vardı ?
+%com:	Türkan Şoray is a wellknown Turkish actress
 *CHI:	bebek xxx ne bebeği be ?
-*REL:	Alıyi babası hiçbir yere götürmüyor .
+*REL:	Aliyi babası hiçbir yere götürmüyor .
 *CHI:	Ben onun ablası değilim .
 %com:	irrelevant comment
-*EXP:	o senin baban mı?
+*EXP:	o senin baban mı ?
 *CHI:	evet .
 *EXP:	tahta almaya gittinizmi ?
 *CHI:	evet .
-*EXP:	nereden aldınız tahtayı?
+*EXP:	nereden aldınız tahtayı ?
 *CHI:	arkadaşımdan .
-*EXP:	niçin aldınız tahtayı?
-*CHI:	(zorla) aldı.
+*EXP:	niçin aldınız tahtayı ?
+*CHI:	(zorla) aldı .
 %com:	it is not clear in the transcription whether the child said "zorla"
-*EXP:	ne yapıcakmış tahtayı?
+*EXP:	ne yapıcakmış tahtayı ?
 *CHI:	taktı o .
-*EXP:	nereye taktı?
+*EXP:	nereye taktı ?
 *CHI:	kapıya .
 *CHI:	ah , tahtaları yapamadık .
 *CHI:	tahtaları da yapalım .
@@ -161,7 +161,7 @@
 *CHI:	dede uyuyor .
 *EXP:	ablalar ne yapıyor ?
 *CHI:	onlar da uyuyor .
-*EXP:	şimdi uyuyorlarmı?
+*EXP:	şimdi uyuyorlarmı ?
 *CHI:	okula gittiler .
 *EXP:	bu evde kimler oturuyor ?
 *CHI:	biz .
@@ -171,7 +171,7 @@
 *CHI:	atlar kavga eder .
 *EXP:	bu evde kimler oturuyor ?
 *CHI:	xxx oturuyor , ablam oturuyor .
-*CHI:	buraya koysana arabayı.
+*CHI:	buraya koysana arabayı .
 *EXP:	baba akşamları ne yapıyor ?
 *CHI:	akşamları xxx .
 *CHI:	ders çalışıyor , kitap okuyor .
@@ -233,17 +233,17 @@
 *EXP:	nasıl ses çıkarırlar , cik cik cik ?
 *CHI:	evet , öyle çıkarırlar .
 *EXP:	kurtlar ne yapar ?
-*EXP:	şuna bak ağzını açmış.
+*EXP:	şuna bak ağzını açmış .
 *EXP:	kurtlar ne yapar , bilmezmisin ?
 *CHI:	atlar yer .
 *CHI:	yerleri ısırır böyle böyle böyle .
 *EXP:	balıklar ne yapar ?
 *CHI:	dur , dur şunu düzelteyim .
-*CHI:	oh , kırıldı.
-*CHI:	bak , kırıldı , kırıldı.
-*EXP:	nasıl kırıldı?
-*CHI:	böyle pat diye düştü.
-*EXP:	zavallı donkey .
+*CHI:	oh , kırıldı .
+*CHI:	bak , kırıldı , kırıldı .
+*EXP:	nasıl kırıldı ?
+*CHI:	böyle pat diye düştü .
+*EXP:	zavallı donkey@s:en .
 %com:	it is broken
 *CHI:	yok be , at bu da at , hepsi at .
 *EXP:	balıklar ne yapar ?
@@ -260,7 +260,7 @@
 %com:	şap: sound imitation of jumping into the water
 *CHI:	şap diye .
 *CHI:	atladım .
-*CHI:	trablenden bile atladım .
+*CHI:	trablenden [: tramplenden] bile atladım .
 *CHI:	ta ben oradaydım , göremiyorlardı bile beni .
 *EXP:	kimle gidiyorsun denize ?
 *CHI:	babamla .
@@ -269,11 +269,11 @@
 *EXP:	başka ne yapıyorsunuz yazın ?
 *CHI:	babam bana palet alacak .
 *EXP:	eh xxx .
-*CHI:	ben de onlan [= onla] gezeceğim .
+*CHI:	ben de onlan [: onla] gezeceğim .
 *CHI:	ondan sonra pat diye düşeceğim .
 *REL:	kumda ne yapıyorsun ?
 *CHI:	kumda şey yapıyorum .
-*CHI:	boyuyorum atı.
+*CHI:	boyuyorum atı .
 *CHI:	atımı boyuyorum .
 *REL:	yatıyordun hani .
 *CHI:	ha xxx ben kumda yatıyordum ha xxx .
@@ -281,7 +281,7 @@
 *CHI:	başka denize atlıyordum .
 *EXP:	denizde ne yapıyorsun ?
 *CHI:	denizden sonra , denizin merdiveni var .
-*CHI:	işte orda biz evcilik oynıyorduk Kadirlen [= Kadir'le] .
+*CHI:	işte orda biz evcilik oynıyorduk [: oynuyorduk] Kadirlen [: Kadir'le] .
 %com:	the child added an extra suffix , no need for "n": Kadir ile
 *EXP:	nasıl oyun o ?
 *CHI:	denizcilik oyunu .
@@ -296,17 +296,17 @@
 *REL:	ha , atıyorlardı sizi ha ?
 *CHI:	yok , biz kendimiz atlıyorduk .
 *EXP:	neler gördün denizde .
-*EXP:	balık gördünmü?
+*EXP:	balık gördünmü ?
 *CHI:	yok , görmedim .
-*CHI:	babam balığa gitmişti , orda balık tutuyorlardı.
+*CHI:	babam balığa gitmişti , orda balık tutuyorlardı .
 *REL:	neye bindiler ?
 *CHI:	kayığa bindiler gittiler .
 *REL:	kimi götürdüler ?
-*CHI:	babamı.
+*CHI:	babamı .
 *REL:	başka ?
-*CHI:	başka , davet amcam vardı.
+*CHI:	başka , davet amcam vardı .
 *REL:	birini daha götürdüler .
-*CHI:	biri de Cem vardı , Kadir de vardı , Avni amcam da vardı.
+*CHI:	biri de Cem vardı , Kadir de vardı , Avni amcam da vardı .
 *CHI:	her kişi vardı , dolu dolu , sıra yoktu sıra , oturanlar .
 *CHI:	yoktu .
 *REL:	amcalarının adını söyle .
@@ -318,7 +318,7 @@
 *EXP:	neler yapıyor orda ?
 *CHI:	hiçbirşey yapmıyor , çalışıyor .
 *CHI:	taşı versene ordan .
-*EXP:	ne yapıcan [= yapacaksın] ?
+*EXP:	ne yapıcan [: yapacaksın] ?
 *CHI:	hiçbirşey .
 *EXP:	nerde gidiyor bu kamyon ?
 *CHI:	yerden gidiyor .
@@ -327,7 +327,7 @@
 *EXP:	nerde duruyor ?
 *CHI:	orda .
 *EXP:	şunlar ne ?
-*CHI:	wood .
+*CHI:	wood@s:en  .
 %com:	only the English version was transcribed above .
 *REL:	bunun adı ne ?
 *CHI:	sandalye .
@@ -343,7 +343,7 @@
 *EXP:	sen kargayla tilkiyi biliyormusun ?
 *EXP:	hadi anlat .
 *CHI:	karga , bizim kargamız var ya .
-*CHI:	herzaman biz onları babamla yakalıyoruz .
+*CHI:	her zaman biz onları babamla yakalıyoruz .
 *CHI:	işte tilkileri de , sopa alıyordum , babam da ince sopa .
 *CHI:	alıyordu , bir gebertiyordum , ağlıyordu .
 *CHI:	işte onlar hepsi ağlıyordu .
@@ -353,8 +353,8 @@
 *CHI:	ondan sonra biz de , onlar da kaçıyorlardı , kuyruğundan .
 %com:	şambır: here it is used as an imitation of the sound made when someone or something falls into water
 *CHI:	bir çimdik attık , şimdi orda bir takla attı , şambır diye düştü denize .
-*CHI:	ondan sonra da tilk i bir düştü trablenden .
-*CHI:	(tilkisini) öldürdü.
+*CHI:	ondan sonra da tilki bir düştü trablenden [: tramplenden] .
+*CHI:	(tilkisini) öldürdü .
 *CHI:	şimdi tilki birisini arıyordu .
 *CHI:	rıp rıp diye eşekler geldi .
 %com:	rıp rıp: here used as a sound gesture/the child's own invention
@@ -364,7 +364,7 @@
 *CHI:	sonra da gittiler .
 *CHI:	sen gelirken biz açmadık .
 *EXP:	neyi açmadınız ?
-*CHI:	kapıyı.
+*CHI:	kapıyı .
 *CHI:	ha xxx açtım , peki , ben tek açtım .
 *EXP:	kediyle köpek ne yaptılar ?
 *CHI:	onlar kavga ettiler .
@@ -375,7 +375,7 @@
 *CHI:	tahtaları yapalım .
 *EXP:	ne yapalım tahtalarla ?
 *CHI:	ev yapalım .
-*CHI:	bak been diziyorum bunu .
+*CHI:	bak been [: ben] diziyorum bunu .
 *EXP:	aferin , güzel a diz .
 *CHI:	güzelcene dizelim ki düşmesin .
 *EXP:	ne olacak sonra o ?

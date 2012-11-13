@@ -29,7 +29,7 @@
 *EXP:	niye tırmalar ?
 *CHI:	çünkü duvara çıkmak için .
 *EXP:	başka ne yapar kediler ?
-*CHI:	başka ne naparlar ?
+*CHI:	başka ne naparlar [: ne yaparlar] ?
 *CHI:	şey yaparlar .
 *CHI:	süt içerler .
 *CHI:	kuzular , şey .
@@ -43,15 +43,15 @@
 *EXP:	koşuyorlar , kavga ediyorlar ?
 *EXP:	başka ?
 *CHI:	başka ?
-*CHI:	ben sizin köpeğini [= köpeğinizi] görüyorum .
+*CHI:	ben sizin köpeğini [:: köpeğinizi] görüyorum .
 *CHI:	hergün .
-*CHI:	Güllühanların orda [= orada] .
+*CHI:	Güllühanların orda [: orada] .
 *EXP:	kimlerin orada ?
-*CHI:	Güllühanların orda [= orada] .
+*CHI:	Güllühanların orda [: orada] .
 *EXP:	Güllühanların orda .
-*CHI:	ha , orda [= orada] görüyorum .
+*CHI:	ha , orda [: orada] görüyorum .
 *EXP:	ne yapıyor ?
-*CHI:	berberciye [= berbere] saldırıyor .
+*CHI:	berberciye [:: berbere] saldırıyor .
 *EXP:	kime ?
 *CHI:	berberciye saldırıyor .
 *EXP:	köpekler ne içer biliyormusun ?
@@ -61,25 +61,25 @@
 *CHI:	evet .
 *EXP:	niçin içer ?
 *CHI:	çünkü susadığı için .
-*EXP:	küşlar ne yapar ?
+*EXP:	kuşlar ne yapar ?
 *CHI:	kuşlar şey yapar .
 *CHI:	kuşlar kendisine yem getirir .
-*CHI:	ot yiyerler [= yerler] .
+*CHI:	ot yiyerler [: yerler] .
 *CHI:	köpekler de yerler .
 *EXP:	bu nesi kuşun ?
-*CHI:	kanadı.
+*CHI:	kanadı .
 *EXP:	ne yapar böyle ?
 *CHI:	uçar .
 *EXP:	nasıl uçar ?
 *CHI:	bayağı uçar .
 *EXP:	kurtları biliyormusun ?
 *CHI:	kurtlar şey yaparlar .
-*CHI:	ısırırlar çocukları.
+*CHI:	ısırırlar çocukları .
 *EXP:	çocukları mı ısırırlar ?
 *CHI:	bir de korkuturlar .
-*CHI:	sapan almış.
+*CHI:	sapan almış .
 *CHI:	bir köpeği .
-*CHI:	sizin köpeği [= köpeğe] sapan attılar .
+*CHI:	sizin köpeği [:: köpeğe] sapan attılar .
 *EXP:	sopa attılar ?
 *CHI:	sapan attılar .
 %com:	no
@@ -87,47 +87,47 @@
 *CHI:	şey , Muzaffer .
 *EXP:	Muzaffer kim ?
 *CHI:	çingene .
-*EXP:	köpek ne yaptı?
-*CHI:	köpek te .
+*EXP:	köpek ne yaptı ?
+*CHI:	köpek de .
 *CHI:	ben eve kaçtım .
 *CHI:	abimler de .
-*CHI:	lerin bahçesine kaçtı.
+*CHI:	lerin bahçesine kaçtı .
 *EXP:	balıklar ne yapar ?
 *CHI:	balıklar denizde yüzerler .
 *CHI:	balıklar xxx .
-*CHI:	balık tutmağa gitmiş xxx bazan babamla .
+*CHI:	balık tutmağa [: tutmaya] gitmiş xxx bazan babamla .
 *EXP:	bu nesi ?
 *CHI:	kuyruğu .
 *EXP:	nasıl yüzer balıklar ?
 *CHI:	balıklar bayağı yüzerler .
-*EXP:	hiç gordünmü suyun içinde ?
+*EXP:	hiç gördünmü suyun içinde ?
 *CHI:	gördüm .
 *EXP:	nasıl yüzüyorlar ?
-*CHI:	bayağı.
+*CHI:	bayağı .
 *CHI:	sonra .
-*CHI:	balıklar , bir gün biz balık tutmağa gitmiştik babamla .
-*CHI:	orda [= orada] balıklar yokmuş.
-*CHI:	balıklar yokmuş.
+*CHI:	balıklar , bir gün biz balık tutmağa [: tutmaya] gitmiştik babamla .
+*CHI:	orda [: orada] balıklar yokmuş .
+*CHI:	balıklar yokmuş .
 *EXP:	balık nasıl tutuyorsunuz ?
-*CHI:	oltaylan [= oltayla] .
+*CHI:	oltaylan [: oltayla] .
 *CHI:	sopa var bizde bir tane .
-*CHI:	onlan [= onunla] tutuyoruz .
-*EXP:	sonra ne yapıyorsunuz o balıkları?
+*CHI:	onlan [: onunla] tutuyoruz .
+*EXP:	sonra ne yapıyorsunuz o balıkları ?
 *CHI:	pişirip yiyoruz .
 *EXP:	seviyormusun sen balık yemeyi ?
 *CHI:	evet .
 *CHI:	seviyorum .
 *EXP:	sen hiç kurt hikayesi biliyormusun ?
-*CHI:	hiç.
+*CHI:	hiç .
 *CHI:	kartalı biliyorum .
 *EXP:	ne yapmış kartal ?
 *CHI:	bir parça .
-*CHI:	kartal uçmuş , bir dala konmuş.
-*CHI:	ordan [= oradan] geçen bir tilki şen sesinle öt demiş.
-*CHI:	aptal karga gak demiş.
-*CHI:	peyniri de tilki yemiş.
+*CHI:	kartal uçmuş , bir dala konmuş .
+*CHI:	ordan [: oradan] geçen bir tilki şen sesinle öt demiş .
+*CHI:	aptal karga gak demiş .
+*CHI:	peyniri de tilki yemiş .
 *EXP:	anneanne hikaye anlatmıyormu sana ?
-*CHI:	aslan Memetciği biliyordum .
+*CHI:	aslan Memetciği [: Mehmetçiği] biliyordum .
 *CHI:	şimdi unuttum .
 %com:	brother said something
 *CHI:	yahu unuttum .
@@ -137,24 +137,24 @@
 *CHI:	plak şeyi .
 *EXP:	dün başka ne yaptınız ?
 *CHI:	başka , başka ?
-*EXP:	anne ne yaptı?
+*EXP:	anne ne yaptı ?
 *CHI:	annem daireye gitti .
-*CHI:	iş yaptı orda [= orada] .
+*CHI:	iş yaptı orda [: orada] .
 *CHI:	sonra .
 *CHI:	ondan sonra .
-*EXP:	anneanne ne yaptı?
+*EXP:	anneanne ne yaptı ?
 *CHI:	anneannem de yemek pişirdi .
 *EXP:	baba ne zaman geliyor .
-*CHI:	aslan Mehmetcik .
+*CHI:	aslan Mehmetcik [: Mehmetçik] .
 %com:	a poem about the Turkish soldier
 *CHI:	tarlada rençber .
 *CHI:	sınırlarda asker .
 *CHI:	tunç gibi gezer .
-*CHI:	aslan Mehmetcik .
+*CHI:	aslan Mehmetcik [: Mehmetçik] .
 *CHI:	doyuranım ol .
 *CHI:	koruyanım ol .
 *CHI:	benim canım ol .
-*CHI:	aslan Mehmetcik .
+*CHI:	aslan Mehmetcik [: Mehmetçik] .
 %com:	he is repeating after brother
 *EXP:	kim öğretmişti bunu sana ?
 *CHI:	babam .
@@ -167,7 +167,7 @@
 *EXP:	ne yapıyor senle ?
 *CHI:	hergün oynuyoruz .
 *EXP:	ne oyunları oynuyorsunuz ?
-*CHI:	atçilık .
+*CHI:	atçılık .
 *EXP:	atçılık nasıl oynanıyor ?
 *CHI:	oklavayla .
 *EXP:	ne yapıyor bu ?
@@ -176,7 +176,7 @@
 *EXP:	koşuyor .
 *CHI:	koşuyor .
 *EXP:	kimi itiyor ?
-*CHI:	oğlanı.
+*CHI:	oğlanı .
 *EXP:	kimi itiyor ?
 *EXP:	bu ne ?
 *CHI:	çocuğu .
@@ -192,14 +192,14 @@
 *EXP:	burda bir ev var .
 *CHI:	bu mu ?
 *CHI:	dur şu traktör .
-*EXP:	ona ne çarptı?
+*EXP:	ona ne çarptı ?
 *CHI:	araba .
 *CHI:	anneanne eve bak .
-*EXP:	bu araba neye çarptı?
+*EXP:	bu araba neye çarptı ?
 *CHI:	şeye , eve .
-*EXP:	ona kim çarptı?
+*EXP:	ona kim çarptı ?
 *CHI:	kadına .
-*EXP:	kadına kim çarptı?
+*EXP:	kadına kim çarptı ?
 *CHI:	şey , traktör .
 *EXP:	onu ne itti ?
 *CHI:	tayyare .
@@ -208,27 +208,27 @@
 *EXP:	kim geliyor ?
 *CHI:	çocuk .
 *EXP:	neyi itiyor ?
-*CHI:	şeyi , traktörü.
+*CHI:	şeyi , traktörü .
 *EXP:	bak ne yapıyor .
 *CHI:	koşuyor .
 *EXP:	onu kime getirdi ?
 *CHI:	ata .
 *EXP:	kimi itiyor ?
-*CHI:	şeyi , traktörü.
+*CHI:	şeyi , traktörü .
 *CHI:	çocuğu itiyor .
 *EXP:	neyi itti ?
-*CHI:	traktörü.
-*EXP:	ona ne çarptı?
-*CHI:	araba çarptı.
+*CHI:	traktörü .
+*EXP:	ona ne çarptı ?
+*CHI:	araba çarptı .
 *EXP:	kime onu getirdi ?
 *CHI:	kaza .
 *EXP:	neyi itiyor bu ?
 *CHI:	şeyi , evi itiyor .
-*EXP:	neye çarptı?
-*CHI:	traktöre çarptı.
+*EXP:	neye çarptı ?
+*CHI:	traktöre çarptı .
 *EXP:	arabaya , ama niye traktör diyorsun ?
 *CHI:	ben buna traktör diyorum .
 *EXP:	onu kim itti ?
 *CHI:	araba itti .
-*CHI:	şu oyuncaklarla oynıyayım [= oynayayım] .
+*CHI:	şu oyuncaklarla oynıyayım [: oynayayım] .
 @End

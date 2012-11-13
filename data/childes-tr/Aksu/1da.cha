@@ -17,9 +17,9 @@
 *EXP:	oğlan ne yapıyor ?
 *CHI:	yatıyor .
 %com:	A tell the boy to eat . there is only the english version here .
-*CHI:	öglan kız yemiyor , yiyecek .
+*CHI:	oğlan kız yemiyor , yiyecek .
 *EXP:	niye koşarlar ?
-*CHI:	yemiyelim diye .
+*CHI:	yemiyelim [: yemeyelim] diye .
 *EXP:	kiminle oynarsın ?
 *CHI:	Aylinle .
 *EXP:	başka .
@@ -45,12 +45,12 @@
 *EXP:	dışarıya kiminle gidersin ?
 *CHI:	ablamla .
 *EXP:	dışarda ne görüyorsun ?
-*CHI:	martı.
+*CHI:	martı .
 *EXP:	martı ne ?
 *CHI:	bilmem .
 *EXP:	kuş mu ?
-*CHI:	kuş.
-*EXP:	uçarmı?
+*CHI:	kuş .
+*EXP:	uçarmı ?
 *CHI:	uçar .
 *EXP:	nasıl atarsın ?
 *CHI:	böyle atarım .
@@ -69,9 +69,9 @@
 *CHI:	bu öyle bir yazı resmi .
 *EXP:	adam yap .
 *CHI:	adam .
-*EXP:	hani gözü kaşı?
-*CHI:	ağzı , gözü , kaşı.
-*CHI:	saçları.
+*EXP:	hani gözü kaşı ?
+*CHI:	ağzı , gözü , kaşı .
+*CHI:	saçları .
 *CHI:	şuraya yazarım .
 *CHI:	arkasına da yazarım .
 *EXP:	insan yap .
@@ -84,7 +84,7 @@
 *CHI:	aldılar .
 *CHI:	dedemle .
 *EXP:	nerde [= nerede] aldılar ?
-*CHI:	Istanbulda aldılar .
+*CHI:	İstanbulda aldılar .
 *CHI:	doğum günümde verdiler .
 *EXP:	kaç yaşındaydın ?
 *CHI:	iki yaşında .
@@ -104,18 +104,18 @@
 *EXP:	annen ne yapar ?
 *CHI:	annem de xxx işi biter , Mustafayı ben de oynatırım .
 *EXP:	bugün ne yaptı annen ?
-*CHI:	birşey yapmadı.
-*EXP:	baba ne yaptı?
+*CHI:	birşey yapmadı .
+*EXP:	baba ne yaptı ?
 *CHI:	babam bişey [= birşey] xxx .
-*EXP:	Mustafa ne yaptı?
-*CHI:	kaka yaptı?
+*EXP:	Mustafa ne yaptı ?
+*CHI:	kaka yaptı ?
 *EXP:	anne nasıl süslenir ?
 *CHI:	tarar .
 *EXP:	yüzüne ne sürer ?
 *CHI:	yüzüne pamuk sürer .
 *CHI:	birşey sürmez .
 *EXP:	dudaklarına birşey sürermi ?
-*CHI:	gözlerine oje süruyor .
+*CHI:	gözlerine oje sürüyor .
 *EXP:	saçını kim tarar ?
 *CHI:	annem , babam .
 *EXP:	ütü kim ütüler ?
@@ -135,7 +135,7 @@
 *EXP:	anne ne okur ?
 *CHI:	anne de okur .
 *EXP:	baban ne zaman okur ?
-*CHI:	sabahları.
+*CHI:	sabahları .
 *EXP:	ne okur ?
 *EXP:	ne zaman uyur ?
 *CHI:	iki gün .
@@ -145,18 +145,18 @@
 %com:	the word above was not very legible in the text
 *CHI:	kalemi versene .
 *EXP:	bugün ne oldu ?
-*CHI:	birşey olmadı.
-*EXP:	kim okşadı?
+*CHI:	birşey olmadı .
+*EXP:	kim okşadı ?
 *CHI:	tavuk .
-*CHI:	boş içindekiler , boş.
+*CHI:	boş içindekiler , boş .
 *EXP:	kim yedi ?
 *CHI:	at .
-*CHI:	lombülü lombülü gider .
+*CHI:	lombülü@c lombülü@c gider .
 %com:	lombülü lombülü= sound gesture imitating a camel
 *CHI:	xxx .
-*EXP:	kim kokladı?
-*CHI:	geyik kokladı.
-*CHI:	sünu versene .
+*EXP:	kim kokladı ?
+*CHI:	geyik kokladı .
+*CHI:	şunu versene .
 *CHI:	xxx getirmedinmi buraya ?
 *CHI:	çimdikledi .
 *EXP:	kim çimdikledi ?
@@ -185,7 +185,7 @@
 *CHI:	seninki ?
 *CHI:	önce makarna koyayım size .
 *CHI:	makarna koydum .
-*CHI:	yanına da et koyayımmı?
+*CHI:	yanına da et koyayımmı ?
 *CHI:	bunların hepsi yıkanacak .
 *CHI:	ben yıkarım .
 *EXP:	nasıl yıkarsın ?
@@ -193,8 +193,8 @@
 %com:	the child added an extra suffix; or does he mean: "ye sen de"?
 *CHI:	kaşık da vericem [= vereceğim] .
 *CHI:	sen ye , kaşık da vereceğim .
-*CHI:	bir tane kaşık kaldı.
-*CHI:	al bakalım kaşiğı.
+*CHI:	bir tane kaşık kaldı .
+*CHI:	al bakalım kaşığı .
 *EXP:	kedi ne yapar ?
 *CHI:	çimdikler .
 *EXP:	başka ne yapar ?
@@ -218,19 +218,19 @@
 *MOT:	kemiği nasıl yerdi ?
 *CHI:	nasıl yerdi ?
 %com:	demonstrates
-*CHI:	masanın altı.
+*CHI:	masanın altı .
 *EXP:	köpek ne için içer ?
 *CHI:	işte .
 *EXP:	su niye içer ?
 *CHI:	su içmez , et suyu .
-*CHI:	işte acıkır karnı.
-*CHI:	suyumu içiyim geliyim .
+*CHI:	işte acıkır karnı .
+*CHI:	suyumu içiyim geleyim .
 *EXP:	kuşlar ne yapar ?
 *CHI:	cik cik cik der .
 *EXP:	başka ?
 *CHI:	ısırır , öter .
 *CHI:	mama bulamaz .
-*CHI:	geçen gün mama bulamadı.
+*CHI:	geçen gün mama bulamadı .
 %com:	the last word in the above sentence is not very legible in the text
 *CHI:	ben de balkona mamalarını hazırlardım tabii xxx .
 *CHI:	ba ba ba yerler .
@@ -248,7 +248,7 @@
 *CHI:	nerdedir [= nerededir] dağlar ?
 *CHI:	orman ne demek ?
 *EXP:	balıkları biliyormusun ?
-*CHI:	baliğı bilmiyorum .
+*CHI:	balığı bilmiyorum .
 *CHI:	hani böyle yüzer ya balıklar .
 *CHI:	anne bu balığı keselim bugün , yiyelim .
 *EXP:	bu ne ?

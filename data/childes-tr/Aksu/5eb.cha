@@ -6,7 +6,7 @@
 @ID:	tur|aksu|EXP|||||Investigator|||
 *EXP:	ne oynuyordun dışarıda ?
 *EXP:	ben seni gördüm .
-*CHI:	bilmiyorumki .
+*CHI:	bilmiyorum ki .
 *EXP:	ben gördüm seni .
 *EXP:	ne oyunlar oynuyordun ?
 *CHI:	unuttum .
@@ -20,21 +20,21 @@
 *CHI:	oturuyordu .
 *EXP:	Işılla ne oyunlar oynuyorsunuz ?
 *CHI:	taş atıyoruz .
-*EXP:	kime atıyorsunuz taşı?
-*CHI:	aşağa [= aşağıya] .
-*EXP:	nerden aşağı?
-*CHI:	sokaktan aşağı.
+*EXP:	kime atıyorsunuz taşı ?
+*CHI:	aşağa [: aşağıya] .
+*EXP:	nerden aşağı ?
+*CHI:	sokaktan aşağı .
 *EXP:	çocuklar ne oyunlar oynarlar ?
 *CHI:	çocuklar yerlere yatıyorlar .
 *EXP:	başka neler ?
 *EXP:	saklambaç nasıl oynuyorsunuz ?
-*CHI:	iki tane çocuklar [= çocuk] saklanıyorlar .
-*CHI:	iki tane çocuklar saklanıyorlar .
+*CHI:	iki tane çocuklar [:: çocuk] saklanıyorlar .
+*CHI:	iki tane çocuklar [:: çocuk] saklanıyorlar .
 *CHI:	gözlerini yuman çocuklar onları buluyorlar .
 *EXP:	koşmaca nasıl oynarlar ?
-*CHI:	onu bilmiyorumki .
+*CHI:	onu bilmiyorum ki .
 *EXP:	çocuklar niçin koşar ?
-*CHI:	bilmiyorumki .
+*CHI:	bilmiyorum ki .
 *EXP:	çocuklar ne zaman oynarlar ?
 *CHI:	biraz sonra .
 *EXP:	sizin evde kimler oturuyor ?
@@ -50,7 +50,7 @@
 *CHI:	iş yapıyor .
 *EXP:	anlat bakayım neler yapıyor mutfakta .
 *EXP:	ne işi yapıyor ?
-*CHI:	bayağı iş.
+*CHI:	bayağı iş .
 *EXP:	yerleri kim temizliyor ?
 *CHI:	annem .
 *EXP:	neyle ?
@@ -63,33 +63,33 @@
 *EXP:	neyle yapıyor ?
 *CHI:	ütüyle .
 *EXP:	dün evde ne oldu ?
-*CHI:	bir şey olmadı.
+*CHI:	bir şey olmadı .
 *EXP:	sabah kalkınca ne yapıyorsunuz ?
 *CHI:	kahvaltı hazırladı annem .
 *EXP:	sonra ?
-*CHI:	sonra da annem iş yaptı.
+*CHI:	sonra da annem iş yaptı .
 *EXP:	sonra ?
-*CHI:	sonra da bizi sokağa çıkardı.
+*CHI:	sonra da bizi sokağa çıkardı .
 *CHI:	abimle beni .
 *EXP:	sonra ?
 *CHI:	o zaman da eve geldik sonra da .
 *EXP:	nereye gittiniz ?
 *CHI:	sokakta oynadık .
-*EXP:	siz oynarken annen ne yaptı?
-*CHI:	iş yaptı.
-*EXP:	bu elbiseyi sana kim aldı?
-*CHI:	benim vardı.
-*EXP:	kim almıştı?
+*EXP:	siz oynarken annen ne yaptı ?
+*CHI:	iş yaptı .
+*EXP:	bu elbiseyi sana kim aldı ?
+*CHI:	benim vardı .
+*EXP:	kim almıştı ?
 *CHI:	hiç kimse .
 *EXP:	baban sana güzel şeyler getiriyormu ?
 *EXP:	akşam eve gelirken ?
 *CHI:	bisiklet alacak babam bana .
-*EXP:	abinin pisikleti [= bisikleti] varmı?
-*EXP:	pisikletle [= bisikletle] gezeceksin .
+*EXP:	abinin pisikleti [: bisikleti] varmı ?
+*EXP:	pisikletle [: bisikletle] gezeceksin .
 *CHI:	abim de arkasına biner .
-*CHI:	sonra da pisikletimi [= bisikletimi] itiyorum .
+*CHI:	sonra da pisikletimi [: bisikletimi] itiyorum .
 *EXP:	sen en çok hangisini seviyorsun bu hayvanların ?
-*CHI:	bunların hiç kimsesini [= hiç birini] sevmiyorum .
+*CHI:	bunların hiç kimsesini [: birini] sevmiyorum .
 *EXP:	niye ?
 *CHI:	işte .
 *CHI:	yalnız bunu seviyorum o kadar .
@@ -103,12 +103,12 @@
 *EXP:	köpekler başka ne yapar ?
 *CHI:	hiç birşey .
 *EXP:	şunlar nesi kuşun ?
-*CHI:	hiç birşeysi .
+*CHI:	hiç birşeysi [: birşeyi] .
 *EXP:	kuşlar nasıl uçar ?
 *CHI:	böyle .
 *EXP:	nerde uçarlar ?
 *CHI:	sokakta .
-*EXP:	kurtu bul .
+*EXP:	kurtu [: kurdu] bul .
 *CHI:	nerde ?
 *CHI:	a burda .
 *EXP:	annen sana masal anlatıyormu ?
@@ -120,13 +120,13 @@
 *EXP:	evde ?
 *CHI:	oturduk .
 *EXP:	ne vardı televizyonda ?
-*CHI:	ben bilmiyorumki .
+*CHI:	ben bilmiyorum ki .
 *EXP:	ne gördünüz ?
 *CHI:	ama ben yatıyordum .
 *EXP:	kim seyrediyordu ?
 *CHI:	annemle abim .
 *EXP:	masal anlatsana .
-*CHI:	ama ben masalı bilmiyorumki .
+*CHI:	ama ben masalı bilmiyorum ki .
 *EXP:	biliyorsun .
 *CHI:	vallahi bilmiyorum .
 *EXP:	kedileri anlat , seviyorum dedin .
@@ -145,7 +145,7 @@
 *EXP:	ne yapıyor annesi Fundanın ?
 *CHI:	o da iş yapıyor .
 *EXP:	ne iş yapıyor ?
-*CHI:	bayağı iş.
+*CHI:	bayağı iş .
 *EXP:	ne işi ?
 *CHI:	hep bulaşık yıkıyorlar .
 *CHI:	sonra da yemek yapıyorlar .
@@ -154,7 +154,7 @@
 *EXP:	bir tane daha kadın var orada .
 *CHI:	benim annem ?
 *EXP:	yo .
-*CHI:	Fundanın halası?
+*CHI:	Fundanın halası ?
 *EXP:	ne yapıyor ?
 *CHI:	o da Fundanın annesiyle konuşuyor .
 *EXP:	Fundanın babası ne yapıyor ?
@@ -171,9 +171,9 @@
 *CHI:	kaşar peyniri yok ta beyaz peynir var .
 *EXP:	başka neler ?
 *EXP:	nerde sizin dükkan ?
-*EXP:	eve yakınmı?
+*EXP:	eve yakınmı ?
 *EXP:	sen büyüyünce ne olacaksın ?
-*EXP:	okula gidecenmi [= gidecekmisin] ?
+*EXP:	okula gidecenmi [: gidecek misin] ?
 *CHI:	büyüyünce okula gideceğim .
 *EXP:	ne olacaksın ?
 *CHI:	hiç birşey olmayacağım .
@@ -187,15 +187,15 @@
 *CHI:	kamyon .
 *EXP:	onu kime getirdi ?
 *CHI:	kediye .
-*EXP:	neye çarptı?
+*EXP:	neye çarptı ?
 *CHI:	eve .
-*EXP:	ona kim çarptı?
-*CHI:	ona bu çarptı.
-*EXP:	ona kim çarptı?
+*EXP:	ona kim çarptı ?
+*CHI:	ona bu çarptı .
+*EXP:	ona kim çarptı ?
 *CHI:	bu .
 *EXP:	onu ne itiyor ?
 *CHI:	bu .
-*EXP:	ne onun adı?
+*EXP:	ne onun adı ?
 *EXP:	uçak .
 *CHI:	uçak .
 *EXP:	onu kime getirdi ?
@@ -213,14 +213,14 @@
 *EXP:	neyi itti ?
 *CHI:	şeyi .
 *CHI:	kamyonu .
-*EXP:	ona ne çarptı?
-*CHI:	bu , yine çarpsın hadi [= haydi] .
+*EXP:	ona ne çarptı ?
+*CHI:	bu , yine çarpsın hadi [: haydi] .
 *CHI:	yine çarpsın .
 *EXP:	kime getirdi onu ?
 *CHI:	kaza .
 *EXP:	neyi itiyor ?
 *CHI:	itiyor böyle şeyi .
-*EXP:	neye çarptı?
+*EXP:	neye çarptı ?
 *CHI:	otobüse .
 *EXP:	onu kim itti ?
 *CHI:	benim elim .

@@ -8,9 +8,9 @@
 @ID:	tur|aksu|FAT|||||Father|||
 @ID:	tur|aksu|GRM|||||Grandmother|||
 *EXP:	ne haber ?
-*CHI:	anino (götür) (bak) .
+*CHI:	anino@c (götür) (bak) .
 %com:	anino= anneanne
-*CHI:	anino xxx .
+*CHI:	anino@c xxx .
 *EXP:	anlamıyorum ki ne dediğini , hiç anlamıyorum .
 *EXP:	gördünmü teybi ?
 *EXP:	baban senin sesini bazen teybe alıyormuş değilmi ?
@@ -22,7 +22,7 @@
 %com:	the sentence above was transcribed in parentheses in the text .
 *EXP:	gelsene şuraya birşeyler veriyim .
 *EXP:	gel bak .
-*CHI:	anino .
+*CHI:	anino@c .
 *EXP:	ama gelirsen tabii .
 *CHI:	gel .
 *EXP:	gelme peki .
@@ -35,19 +35,19 @@
 *MOT:	allah allah , çok enteresan birşey , dur bakalım şimdi .
 *MOT:	şunu .
 *MOT:	şuraya koyalım bir , ha canım .
-*CHI:	bu işte d'uşmüş aşagıya bu .
+*CHI:	bu işte düşmüş aşağıya bu .
 %com:	referring to the book on the floor
-*EXP:	hangisi düşmuş , dur yanına geliyim de hangisi göster sen bana .
-*CHI:	bunu düşmuş.
+*EXP:	hangisi düşmüş , dur yanına geliyim [: geleyim] de hangisi göster sen bana .
+*CHI:	bunu düşmüş .
 *EXP:	allah allah !
 %com:	playing with animals
 *EXP:	niye düştü bu köpek ?
 *EXP:	a ah aa , aa , çok güzel .
 *EXP:	bunlar neleri ?
 *EXP:	etrafındakiler ?
-*CHI:	bak bunlara , duşmüş.
+*CHI:	bak bunlara , düşmüş .
 %com:	picture of fallen suitcases
-*EXP:	düşmuş ha .
+*EXP:	düşmüş ha .
 *EXP:	bavullar da üstüne mi gelmiş böyle ?
 *CHI:	ha .
 %com:	approving/ affirmative sound gesture
@@ -58,19 +58,19 @@
 *EXP:	ha evet , bu da bavul mu ?
 *CHI:	ha .
 *EXP:	bu da bavul değilmi ?
-*EXP:	neresi burası?
+*EXP:	neresi burası ?
 *EXP:	nereye gidiyormuş köpek ?
 *EXP:	ha canım ?
-*CHI:	buraya , burası yırtılmış.
-*EXP:	kim yırttı?
-*CHI:	kendin [= kendi] yırtılmış o .
+*CHI:	buraya , burası yırtılmış .
+*EXP:	kim yırttı ?
+*CHI:	kendin [:: kendi] yırtılmış o .
 *EXP:	ne koyuyor bu adam bu hanıma ?
 %com:	picture of someone pouring something
-*CHI:	meyva suyu .
-*EXP:	nasıl meyva suyu , ne cins ?
+*CHI:	meyva [: meyve] suyu .
+*EXP:	nasıl meyva [: meyve] suyu , ne cins ?
 *EXP:	biliyormusun onu ?
 *EXP:	elma suyu mu , vişne .
-*EXP:	mi , portakal mı?
+*EXP:	mi , portakal mı ?
 *EXP:	hangisi ?
 *CHI:	ıhh ?
 %com:	sound gesture
@@ -79,56 +79,56 @@
 *EXP:	bak yemeği de xxx .
 *EXP:	başka göster bakalım .
 %com:	we are looking at a bunch of books , trying to warm up the child
-*CHI:	sana onu gösteriyorum , o yapacak , o da ağlıyacak .
+*CHI:	sana onu gösteriyorum , o yapacak , o da ağlıyacak [: ağlayacak] .
 *EXP:	onu da göster bakalım , güzel birşeyler daha göster .
-*CHI:	ondan getirmiş , bundan getirmiş.
+*CHI:	ondan getirmiş , bundan getirmiş .
 %com:	pointing at a tray and some food
-*CHI:	bundan getirmiş.
+*CHI:	bundan getirmiş .
 *EXP:	nedir o ?
-*CHI:	tren , anino ondan almış.
-*EXP:	kim almış?
-*CHI:	ondan gidiyormuş , bundan çıkıyormuş , anino ona biniyor .
-*CHI:	gidiyormuş.
+*CHI:	tren , anino@c ondan almış .
+*EXP:	kim almış ?
+*CHI:	ondan gidiyormuş , bundan çıkıyormuş , anino@c ona biniyor .
+*CHI:	gidiyormuş .
 *CHI:	iggggg .
 %com:	he is imitating the sound of a train's whistle; talking about the picture of a train .
 *EXP:	nereye gidiyor Burçak , nereye gidiyor canım ?
 *CHI:	evine .
-*EXP:	bu ne canım biliyormsun sen ?
+*EXP:	bu ne canım biliyor musun sen ?
 %com:	picture of a ship
 *CHI:	bacası ben olaydım .
 %com:	from an old song , about the famous ship Yavuz .
 *CHI:	bacası ben olaydım .
 %com:	now looking at the picture of a boy
-*CHI:	bu çantanı [= çantasını] aldı , gidiyor okula .
+*CHI:	bu çantanı [:: çantasını] aldı , gidiyor okula .
 %com:	looking at the picture of a chicken and chicks
 *EXP:	bunlar ne yapıyor burda ?
-*CHI:	bu , o annesinin kucağına çıkmiş.
+*CHI:	bu , o annesinin kucağına çıkmış .
 *EXP:	bu annesinin kucağı mı bu ?
-*EXP:	sırtına çikmış gibi bir hali var .
-*CHI:	hıı.
+*EXP:	sırtına çıkmış gibi bir hali var .
+*CHI:	hıı .
 *EXP:	bak bakalım kucak mı bu ?
-*CHI:	hıı.
+*CHI:	hıı .
 *EXP:	bu nesi annesinin ?
 %com:	talking about the hen still
 *EXP:	şu kırmızı şey nesi ?
 *CHI:	siyah .
 *EXP:	peki nedir bu siyah şey , biliyormusun ?
 *EXP:	ibik , ona ibik derler biliyormusun .
-*EXP:	tavuğun ibıgi .
+*EXP:	tavuğun ibiği .
 *EXP:	bu ne bakayım ?
 *CHI:	ev .
 *EXP:	peki bu ne ?
 *CHI:	çiçek .
-*EXP:	şu , sü çiçek mi ?
-*CHI:	hıı.
+*EXP:	şu , şu çiçek mi ?
+*CHI:	hıı .
 %com:	affirmative sound gesture
 *EXP:	peki bu ne ?
 *CHI:	çiçek .
-*EXP:	ağaç!
-*CHI:	ağaç.
+*EXP:	ağaç !
+*CHI:	ağaç .
 *EXP:	bu ne ?
 *EXP:	kovboyun nesi bu ?
-*CHI:	babam ondan alacakmıştı , alacakmıştı.
+*CHI:	babam ondan alacakmıştı [: alacaktı], alacakmıştı [: alacaktı].
 %com:	above he either means "alacaktı" or "alacakmış". "alacakmıştı" is not correct
 *EXP:	bu ne bu ?
 *CHI:	at , o ona atmış , gagalıyorlar .
@@ -142,7 +142,7 @@
 *CHI:	bu bunu atmış , gagalıyorlar .
 *EXP:	niye gagalıyorlar , niçin ?
 *CHI:	mama yemiyor .
-*EXP:	onun için gagalıyorlarmı?
+*EXP:	onun için gagalıyorlarmı ?
 *CHI:	hah .
 %com:	affirmative sound gesture
 *EXP:	peki bunlar ne yapıyorlar ?
@@ -151,17 +151,17 @@
 *CHI:	o da çekilin yoldan gidiyor .
 *EXP:	geliyor kaptan .
 %com:	a phrase from a nursery rhyme
-*CHI:	U'sküdara gidelim diyor .
-*EXP:	ne yapacaklarmış U'sküdar'da ?
+*CHI:	Üsküdara gidelim diyor .
+*EXP:	ne yapacaklarmış Üsküdar'da ?
 %com:	referring to two pigeons in the picture
-*CHI:	bu da U'sküdara gidelim diyorlar .
-*EXP:	peki , şunlar ne diyormuş?
+*CHI:	bu da Üsküdara gidelim diyorlar .
+*EXP:	peki , şunlar ne diyormuş ?
 *CHI:	yıkanıyorlar .
-*EXP:	ne diyorlarmış?
+*EXP:	ne diyorlarmış ?
 %com:	now talking about the ducks in water
-*EXP:	birşey söylüyorlarmıymış?
+*EXP:	birşey söylüyorlarmıymış ?
 *CHI:	konuşuyorlar .
-*EXP:	ne konuşuyorlarmış?
+*EXP:	ne konuşuyorlarmış ?
 *EXP:	bu ne yapıyor bu ?
 %com:	a cat on a cherry tree
 *CHI:	kiraz .
@@ -171,31 +171,31 @@
 *CHI:	al .
 *EXP:	mersi .
 *EXP:	ben kulağıma takıp küpe yapacağım .
-*EXP:	beyendinmi .
+*EXP:	beyendin [: beğendin] mi .
 *EXP:	küpelerimi ?
-*CHI:	hı?
+*CHI:	hı ?
 *EXP:	bak düştü küpem .
 *EXP:	düştü küpe .
-*CHI:	hı?
+*CHI:	hı ?
 %com:	now he gives me another
-*CHI:	hı?
+*CHI:	hı ?
 *EXP:	bir tane daha mı veriyorsun ?
-*CHI:	hı.
+*CHI:	hı .
 %com:	affirmative sound gesture
 *EXP:	çok mersi .
 *EXP:	biraz da yiyelim artık istersen .
-*CHI:	hı.
-*EXP:	onu beyenmedim ben , rengi sarı.
+*CHI:	hı .
+*EXP:	onu beyenmedim [: beğenmedim] ben , rengi sarı .
 *EXP:	bir tane daha verirmisin ?
-*EXP:	güzelmiş.
+*EXP:	güzelmiş .
 *EXP:	çekirdeğini nereye atayım .
-*CHI:	hı?
+*CHI:	hı ?
 *EXP:	çekirdeği var kirazın .
 *EXP:	nereye atayım ?
-*CHI:	hı?
+*CHI:	hı ?
 *EXP:	o ne o o ?
 *CHI:	kiraz .
-*EXP:	çekirdeği varmı?
+*EXP:	çekirdeği varmı ?
 *CHI:	var .
 *EXP:	nerede ?
 *EXP:	ye de çıkart çekirdeğini .
@@ -207,9 +207,9 @@
 *EXP:	kedinin neleri bunlar ?
 *EXP:	kedinin bıyıkları nerede ?
 *CHI:	ıh ıh ıh .
-*EXP:	bak kedinin bıyıgı var böyle .
+*EXP:	bak kedinin bıyığı var böyle .
 %com:	I put my hair on my face
-*EXP:	sana da bıyık yapalımmı?
+*EXP:	sana da bıyık yapalımmı ?
 *EXP:	ama senin saçların kısa .
 *EXP:	başka kimler var bu resimde ?
 *EXP:	bu kim , bu adam ?
@@ -217,25 +217,25 @@
 *EXP:	bu ne içiyor ?
 *CHI:	süt .
 *EXP:	neden süt içiyor ?
-*CHI:	karnı acıkmış , süt içiyormuş.
-*EXP:	biz senlen biraz başka şey oynayalımmı?
-*CHI:	tulumbayı fış fış fış.
+*CHI:	karnı acıkmış , süt içiyormuş .
+*EXP:	biz senlen biraz başka şey oynayalımmı ?
+*CHI:	tulumbayı fış fış fış .
 %com:	he points to a water pump
 *CHI:	bunu tutuyor , bunu tutuyor , fış fış çekiyorlar .
 *EXP:	ne oluyor sonra fış fış çekince ?
 *CHI:	bunu içiyorlar suyu .
 *EXP:	su mu çıkarıyor tulumba ?
-*CHI:	hı.
+*CHI:	hı .
 %com:	affirmative sound gesture
 *EXP:	kim içiyor o suyu ?
 *CHI:	bu .
 *EXP:	o ne ?
 *CHI:	tulumba .
 *EXP:	şu ne ?
-*CHI:	çompi .
-*EXP:	çompi ne demek ?
+*CHI:	çompi@c .
+*EXP:	çompi@c ne demek ?
 *EXP:	attın ?
-*CHI:	hı?
+*CHI:	hı ?
 *CHI:	bu ne ?
 *EXP:	bana kuzu gibi görünüyor .
 *EXP:	sana ne gibi görünüyor ?
@@ -258,16 +258,16 @@
 *CHI:	kağıt .
 %com:	a picture of children writing
 *CHI:	yazıyorlar .
-*CHI:	bu yazıyor , bu ona sarıldı.
+*CHI:	bu yazıyor , bu ona sarıldı .
 *CHI:	o da yazıyor .
 *EXP:	o mektubu ne yapacaklar sonra ?
-*CHI:	çompi yapacaklar .
+*CHI:	çompi@c yapacaklar .
 %com:	"çompi" is a word he seems to use when at a loss
 *CHI:	yazı yazdılar .
 *EXP:	bu arkadaki ne ?
 *CHI:	pencere .
 *EXP:	pencereden ne görünüyor ?
-*CHI:	çompi .
+*CHI:	çompi@c .
 *CHI:	bak burada bunlar var .
 *EXP:	ne onlar , isimlerini biliyormusun ?
 *CHI:	kerpeten , bu çompsi , bu testere , kesiyorlar .
@@ -282,8 +282,8 @@
 *EXP:	ne oyunu bu ?
 *CHI:	bulamaz , saklamışlar , beni bulamaz diyorlar .
 *CHI:	bu .
-*CHI:	sandviç.
-*EXP:	kim veriyor sandövici ?
+*CHI:	sandviç .
+*EXP:	kim veriyor sandövici [: sandvici] ?
 *CHI:	nine onu görmemişti .
 *EXP:	bu köpek ne yapıyor ?
 *CHI:	buraya top koymuş , bu da teyp çalıyor , bu da teyp çalıyor .
@@ -298,7 +298,7 @@
 *CHI:	aydede durağın nerede söylüyorlar , ca ca .
 *CHI:	ca ba ca xxx .
 *EXP:	şarkı mı söylüyorlar ?
-*CHI:	hı.
+*CHI:	hı .
 %com:	affirmative sound gesture
 *EXP:	bu köpek ortalarda kalmış değilmi ?
 *CHI:	o da oynamıyor .
@@ -306,7 +306,7 @@
 *CHI:	oynuyorlar .
 *EXP:	bu ne ?
 *CHI:	bu külah , giymiş başına .
-*EXP:	peki bu ne giymiş?
+*EXP:	peki bu ne giymiş ?
 *CHI:	şapka .
 *EXP:	bu ne yapıyor böyle ?
 *CHI:	xxx hazırlıyor .
@@ -314,18 +314,18 @@
 *EXP:	bunu koyalım , bunu da böyle koyalım .
 *EXP:	bunu kaldıralımmı artık ?
 *CHI:	kaldıralım .
-*EXP:	bunu da yanına koyalımmı?
+*EXP:	bunu da yanına koyalımmı ?
 *CHI:	evet .
-*EXP:	bunu da üstüne koyalımmı?
+*EXP:	bunu da üstüne koyalımmı ?
 *CHI:	koymayalım .
-*EXP:	biraz da benim oyuncaklarımla oynayalımmı?
+*EXP:	biraz da benim oyuncaklarımla oynayalımmı ?
 *CHI:	buna da .
 *EXP:	ona da mı bakalım ?
 %com:	picture of a car
 *EXP:	hadi bakalım , sen bana söyle .
 *CHI:	buna binmişler gidiyorlar .
 *EXP:	nereye gidiyorlar ?
-*CHI:	Istanbula .
+*CHI:	İstanbula .
 *EXP:	bunlar ne ?
 *CHI:	tekerlek .
 *EXP:	peki bunlar ne ?
@@ -342,16 +342,16 @@
 *CHI:	karşıda .
 *EXP:	nereye gelmişler ?
 *CHI:	buraya .
-*EXP:	neresi burası?
+*EXP:	neresi burası ?
 *CHI:	yer , gidiyor yerde araba .
-*EXP:	şu ne şurası?
+*EXP:	şu ne şurası ?
 *CHI:	vapur .
 *EXP:	deniz nerde ?
 *CHI:	bu .
 *EXP:	peki şunlar ne ?
 *CHI:	çiçekler .
 *EXP:	denizin içinde çiçekler mi var ?
-*CHI:	hı.
+*CHI:	hı .
 %com:	affirmative sound gesture
 *EXP:	peki , şu insanlar ne yapıyorlar ?
 *CHI:	yürüyorlar .
@@ -363,35 +363,35 @@
 *EXP:	peki ne yapıyor bu kız ?
 *CHI:	koymuş bavula onu .
 %com:	koyacakmıştı is not correct . correct form: koyacakmış father brings out toys
-*CHI:	kapıyı çarpmış.
+*CHI:	kapıyı çarpmış .
 *CHI:	buraya .
-*CHI:	koyacakmıştı.
-*CHI:	adam çıkarmıştı.
+*CHI:	koyacakmıştı [: koyacakmış] .
+*CHI:	adam çıkarmıştı .
 *FAT:	hangisini istiyorsun Burçak ?
 *CHI:	annem getirmişti .
 %com:	he means uçağımı above . his father says that is a frequent error
 *CHI:	uçağını istiyorum baba .
 *CHI:	bu ne ?
 *EXP:	kız .
-*EXP:	bunu nereye koyacaz [= koyacağız] ?
+*EXP:	bunu nereye koyacaz [: koyacağız] ?
 *CHI:	buraya .
 *EXP:	kız nerede ?
 *CHI:	içinde .
 *EXP:	ne zaman aldı anne onu sana ?
-*CHI:	şimdi aldı.
+*CHI:	şimdi aldı .
 *EXP:	pek güzel .
-*EXP:	ben de kedimi gösteriyimmi sana ?
-*CHI:	hı.
+*EXP:	ben de kedimi gösteriyim [: göstereyim] mi sana ?
+*CHI:	hı .
 %com:	affirmative sound gesture
 *EXP:	bak bu da benim kedim , bu da sepet .
 *EXP:	nerede kedi ?
 *EXP:	xxx .
-*EXP:	biraz benim oyuncaklarımla oynamak istermsin ?
+*EXP:	biraz benim oyuncaklarımla oynamak ister misin ?
 *EXP:	hadi gel .
-*CHI:	bu da almış.
+*CHI:	bu da almış .
 *EXP:	nedir o canım ?
-*CHI:	kuş.
-*CHI:	antene konmuş.
+*CHI:	kuş .
+*CHI:	antene konmuş .
 *GRM:	bu ne ?
 %com:	children's books are out
 *GRM:	Ayşegül okula nasıl gidiyor bakalım ?
@@ -400,5 +400,5 @@
 *GRM:	kime rastlamış yolda ?
 *CHI:	kedi ne diyor ?
 *GRM:	miyav miyav diyor .
-*CHI:	kuş , kuş , karakedi , kuş.
+*CHI:	kuş , kuş , kara kedi , kuş .
 @End

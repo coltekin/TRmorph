@@ -8,16 +8,16 @@
 *CHI:	seviyorum .
 *EXP:	hangi hayvanları seviyorsun en çok ?
 *CHI:	en çok mu ?
-*EXP:	evet , söyle hadi [= haydi] .
+*EXP:	evet , söyle hadi [: haydi] .
 *EXP:	neleri seviyorsun ?
 *CHI:	kuzuyu da seviyorum .
 *EXP:	başka ?
 *CHI:	lamayı da seviyorum .
-*EXP:	sizin evde hayvanlar var mı?
+*EXP:	sizin evde hayvanlar var mı ?
 *CHI:	yok .
 *EXP:	niye ?
 *CHI:	bizim oyuncaklarımız var .
-*EXP:	sen hiç kedi gördünmü?
+*EXP:	sen hiç kedi gördünmü ?
 *CHI:	gördüm .
 *EXP:	canlı kedi ?
 *CHI:	sokaklarda var .
@@ -31,39 +31,39 @@
 *EXP:	nasıl ağlar ?
 *EXP:	hav , hav diye mi ağlar ?
 *EXP:	nasıl ağlar ?
-*CHI:	hiç.
+*CHI:	hiç .
 *CHI:	köpek öyle ağlar .
 *EXP:	miyav , miyav .
 *CHI:	miyav .
-*EXP:	kediler tırmalarmı?
+*EXP:	kediler tırmalarmı ?
 %com:	sign , yes
 *EXP:	niye tırmalar ?
 *CHI:	herkesi tırmalar .
-*EXP:	hı?
-*CHI:	herhesi tırmalar .
+*EXP:	hı ?
+*CHI:	herkesi tırmalar .
 *EXP:	niye tırmalar kediler ?
 *CHI:	kediler mi ?
 *EXP:	başka hayvanları gördün sen sokakta ?
-*CHI:	sokakta mı?
-*EXP:	hı.
+*CHI:	sokakta mı ?
+*EXP:	hı .
 *CHI:	sokakta .
 *EXP:	burdan şimdi dışarı gidince ne görüyorsun dışarda ?
-*CHI:	dışarıda mı?
-*EXP:	hı.
+*CHI:	dışarıda mı ?
+*EXP:	hı .
 *CHI:	köpekleri görüyorum .
 *EXP:	onlar ne yaparlar ?
-*CHI:	onlar mı?
-*EXP:	hı.
+*CHI:	onlar mı ?
+*EXP:	hı .
 *CHI:	yerlerde gezerler , ondan sonra .
 *EXP:	bağırırmı köpekler ?
 *EXP:	nasıl bağırır köpekler ?
 *CHI:	köpekler mi ?
 *EXP:	nasıl bağırıyorlar ?
 *CHI:	hav hav diye .
-*EXP:	başka ne yapar köpekler , ısırırlarmı?
+*EXP:	başka ne yapar köpekler , ısırırlarmı ?
 *CHI:	ben anne diye bağırırsam .
 *CHI:	ablam da köpekleri kovuyor .
-*EXP:	köpekler ısırırmı?
+*EXP:	köpekler ısırırmı ?
 *CHI:	ısırır .
 *CHI:	ablamı ısırmaz .
 *EXP:	sen niçin korkuyorsun köpeklerden ?
@@ -77,84 +77,84 @@
 *CHI:	ısırır .
 *EXP:	niye ısırır acaba köpekler ?
 *CHI:	köpekler mi ?
-*CHI:	inadına böyle yapıcak [= yapacak] .
+*CHI:	inadına böyle yapıcak [: yapacak] .
 %com:	dog
 *CHI:	böyle yapıcak .
 *CHI:	böyle yapıcak .
 *EXP:	kuşlar ne yaparlar ?
-*CHI:	kuşlar mı?
-*EXP:	hı.
+*CHI:	kuşlar mı ?
+*EXP:	hı .
 *CHI:	havalarda uçarlar .
 *EXP:	nereye giderler , nereye uçarlar ?
 *CHI:	bizim eve uçarlar .
-*CHI:	başka biryerlere de uçarlar .
+*CHI:	başka bir yerlere de uçarlar .
 *CHI:	eski evimize de uçarlar .
 *EXP:	nerde eski eviniz sizin ?
 *CHI:	bizim mi ?
-*EXP:	hı.
-*CHI:	ta karşida .
+*EXP:	hı .
+*CHI:	ta karşıda .
 %com:	far
 *CHI:	birazcıkta yakında .
 *EXP:	sen oraya gidiyormusun bazen ?
 *EXP:	sizin eski evinize ?
 *CHI:	gitmiyorum .
 *EXP:	buraya nereden geldiniz ?
-*CHI:	biim arabayla .
+*CHI:	bizim arabayla .
 *EXP:	nereden geldiniz ?
 *CHI:	bizim arabayla gelmedik .
 *EXP:	ama nereden geldiniz buraya ?
 *CHI:	başkalarının arabasıyla geldik .
 *EXP:	bunlar ne bunlar ?
-*CHI:	onlar mı?
-*EXP:	hı.
-*CHI:	kuş.
+*CHI:	onlar mı ?
+*EXP:	hı .
+*CHI:	kuş .
 *EXP:	kuşun nesi bunlar ?
-*CHI:	onlar mı?
-*EXP:	hı.
-*EXP:	nesi böyle bunlar açılmış?
-*CHI:	açılmışmı?
+*CHI:	onlar mı ?
+*EXP:	hı .
+*EXP:	nesi böyle bunlar açılmış ?
+*CHI:	açılmışmı ?
 *EXP:	ne bunlar ?
 *CHI:	ben bilmiyorum .
 *EXP:	kanatları mı kuşun ?
-*CHI:	kanatları.
+*CHI:	kanatları .
 *EXP:	nasıl uçar kuşlar ?
 *CHI:	kuşlar mi ?
-*EXP:	hı.
+*EXP:	hı .
 *CHI:	böyle .
 *CHI:	buralarını açarlar .
-*EXP:	kanatlarını.
+*EXP:	kanatlarını .
 *CHI:	buralarını da açarlar .
 *CHI:	böyle uçarlar .
-*EXP:	kurtları biliyormusun kurtları?
-*CHI:	kurtları?
+*EXP:	kurtları biliyormusun kurtları ?
+*CHI:	kurtları ?
 *EXP:	kurt hikayesi dinledinmi ?
 *CHI:	diledim .
 *EXP:	ne yapıyor orda kurtlar ?
 *CHI:	kurt mu ?
-*EXP:	hı.
+*EXP:	hı .
 *EXP:	ne yapıyor şekerim ?
 *EXP:	kurt ne yapıyor o hikayede ?
 *CHI:	hikayede mi ?
-*EXP:	hı.
+*EXP:	hı .
 *CHI:	kurt kardeşini yiyor .
 *EXP:	niye yiyor kardeşini ?
 *CHI:	o mu ?
-*CHI:	as hı.
+*CHI:	as hı .
 *CHI:	ben bilmiyorum .
 *EXP:	biliyorsun .
 *CHI:	balık .
 *EXP:	balıklar ne yaparlar ?
-*CHI:	denbizlerde yüzerler .
+*CHI:	denizlerde yüzerler .
 *EXP:	bu nesi balığın ?
-*CHI:	balığın mı?
-*EXP:	hı.
+*CHI:	balığın mı ?
+*EXP:	hı .
 *CHI:	ben bilmiyorum .
 *EXP:	kuyruğu .
 *CHI:	kuyruğu .
 *CHI:	o da balık .
-*EXP:	ne yaparsın bunla [= bununla] ?
-*CHI:	bunla mı [= bununla mı] ?
-*EXP:	hı.
+*EXP:	ne yaparsın bunla [: bununla] ?
+*CHI:	bunla [: bununla] mı  ?
+*EXP:	hı .
 *CHI:	kahve içerim .
 *EXP:	sütü neyle içersin ?
 *CHI:	bardakla .
@@ -178,7 +178,7 @@
 *CHI:	annem ne yapıyor biliyormusun ?
 *EXP:	ne yapıyor ?
 *CHI:	iş yapıyor .
-*EXP:	gine [= yine] iş yapıyor ?
+*EXP:	gine [: yine] iş yapıyor ?
 *CHI:	her zaman yapıyor .
 *EXP:	yerleri temizliyormu ?
 *CHI:	temizliyor .
@@ -186,7 +186,7 @@
 *EXP:	ütüyü kim yapıyor ?
 *CHI:	ütüyü mü , annem .
 *EXP:	neyle ütü yapıyor ?
-*EXP:	sen gördünmü hiç?
+*EXP:	sen gördünmü hiç ?
 *CHI:	gördüm .
 *EXP:	neyle ütü yapıyor annen ?
 *CHI:	ütüyle .
@@ -203,33 +203,33 @@
 *CHI:	yine gidiyor .
 *EXP:	annenle baban ne yaparlar ?
 *CHI:	babam uyuyor .
-*CHI:	sütçü köşeyi döndü.
+*CHI:	sütçü köşeyi döndü .
 *CHI:	her taraf sesle doldu .
-*CHI:	uykunun da tadı kaçtı.
-*CHI:	okul vakti yaklaştı.
+*CHI:	uykunun da tadı kaçtı .
+*CHI:	okul vakti yaklaştı .
 %com:	a song
 *EXP:	başka ne şarkı biliyorsun ?
-*CHI:	başka mı?
+*CHI:	başka mı ?
 *EXP:	sen okula gidiyormusun ?
 *CHI:	gitmiyorum .
-*CHI:	büyüyünce gidecem [= gideceğim] .
-*EXP:	kaç yaşında olunca gidecen ?
+*CHI:	büyüyünce gidecem [: gideceğim] .
+*EXP:	kaç yaşında olunca gidecen [: gideceksin] ?
 *EXP:	şimdi kaç yaşındasın sen ?
 *CHI:	dört .
 *EXP:	çok oyun oynuyormusun ?
 *CHI:	oynuyorum .
 *EXP:	ne oyunlar oynuyorsun ?
-*CHI:	evler yapıyorum oyuncaklarımlan [= oyuncaklarımla] .
+*CHI:	evler yapıyorum oyuncaklarımlan [: oyuncaklarımla] .
 *CHI:	bozuyorum .
 *CHI:	topluyorum .
 *EXP:	kiminle oynuyorsun ?
-*CHI:	ablamlan [= ablamla] .
+*CHI:	ablamlan [: ablamla] .
 *EXP:	neyle oynuyorsun ?
-*CHI:	oyuncaklarlan [= oyuncaklarla] .
+*CHI:	oyuncaklarlan [: oyuncaklarla] .
 *EXP:	bunu kim aldı sana ?
-*CHI:	annem aldı.
+*CHI:	annem aldı .
 *CHI:	xxx den getirdi .
-*EXP:	ne zaman aldı?
+*EXP:	ne zaman aldı ?
 *CHI:	benim .
 *EXP:	senin elbisen .
 *EXP:	seviyormusun ?
@@ -240,16 +240,16 @@
 *CHI:	çok geçti .
 *EXP:	kim geliyor akşam size ?
 *CHI:	Nonoşlar geliyor .
-*CHI:	Tulay teyzemler de geliyor .
+*CHI:	Tulay [=? Tülay] teyzemler de geliyor .
 *CHI:	Ataman amcalar da geliyor .
 *EXP:	seviyormusun misafirleri ?
-*EXP:	senle konuşuyorlarmı?
+*EXP:	senle konuşuyorlarmı ?
 *CHI:	konuşuyorlar .
-*EXP:	senle oynuyorlarmı?
+*EXP:	senle oynuyorlarmı ?
 *CHI:	oynuyorlar .
 *CHI:	bunu yapsana .
 *CHI:	o konuşsun .
-*EXP:	ordaki [= oradaki] ne ?
+*EXP:	ordaki [: oradaki] ne ?
 *CHI:	ordaki mi ?
 *CHI:	televizyon .
 *EXP:	seyrediyormusun sen ?
@@ -264,10 +264,10 @@
 *CHI:	şarkılar gösteriyorlar .
 %com:	program
 *CHI:	o bitiyor .
-*CHI:	pilli bebekler , kıvırcık başlı.
+*CHI:	pilli bebekler , kıvırcık başlı .
 %com:	man
 *EXP:	kıvırcık , o ne ?
-*CHI:	kıvırcık mı?
+*CHI:	kıvırcık mı ?
 *CHI:	peynir alıyor .
 *CHI:	sonra içine düşüyor .
 *EXP:	neyin içine ?
@@ -289,36 +289,36 @@
 *EXP:	birbirinize hikaye söylüyormusunuz ?
 *CHI:	söylüyoruz .
 *EXP:	anlatsana bana bir hikaye .
-*CHI:	bir varmış bir yokmuş.
+*CHI:	bir varmış bir yokmuş .
 *CHI:	evvel zaman içinde , kalbur saman içinde .
-*CHI:	bir tane tintin kuzuyla xxx varmış.
-*CHI:	annesi demişki .
-*CHI:	kızım kimseye kapıyı açmayın demiş.
-*CHI:	annesi gitmiş.
-*CHI:	kurt gelmiş.
+*CHI:	bir tane tintin@c [?] kuzuyla xxx varmış .
+*CHI:	annesi demiş ki .
+*CHI:	kızım kimseye kapıyı açmayın demiş .
+*CHI:	annesi gitmiş .
+*CHI:	kurt gelmiş .
 *CHI:	yavrularım , yavrularım .
-*CHI:	açın kapıyı ben geldim demiş.
+*CHI:	açın kapıyı ben geldim demiş .
 *CHI:	açmamışlar .
-*CHI:	açmamış.
-*CHI:	gitmiş kurt , annesi gelmiş.
+*CHI:	açmamış .
+*CHI:	gitmiş kurt , annesi gelmiş .
 *CHI:	açmış kapıyı annesi .
-*CHI:	ondan sonra yine gitmiş.
-*CHI:	sonra yine kurt gelmiş.
-*CHI:	yavrularım , yavrularım açın kapıyı.
-*CHI:	ben geldim demiş.
-*CHI:	açmıslar .
+*CHI:	ondan sonra yine gitmiş .
+*CHI:	sonra yine kurt gelmiş .
+*CHI:	yavrularım , yavrularım açın kapıyı .
+*CHI:	ben geldim demiş .
+*CHI:	açmışlar .
 *CHI:	bir de baktılar kurt .
 *CHI:	kardeşini yedi gitti .
-*CHI:	sonra annesi gelmiş.
+*CHI:	sonra annesi gelmiş .
 *CHI:	kızım nerde kardeşin ?
-*CHI:	anneciğim kurt geldi , yedi demiş.
-*CHI:	sonra kuyu kazmış kazmış.
-*CHI:	oraya da yatmış.
-*CHI:	bir tane de örtü örtmüş.
-*CHI:	yemeği pişirmiş.
-*CHI:	ondan sonra kurt gelmiş.
+*CHI:	anneciğim kurt geldi , yedi demiş .
+*CHI:	sonra kuyu kazmış kazmış .
+*CHI:	oraya da yatmış .
+*CHI:	bir tane de örtü örtmüş .
+*CHI:	yemeği pişirmiş .
+*CHI:	ondan sonra kurt gelmiş .
 *CHI:	uyuyormu ?
-*EXP:	hı.
+*EXP:	hı .
 *CHI:	kedi .
 *EXP:	bunu kime getirdi ?
 *CHI:	onu ?
@@ -327,10 +327,10 @@
 *EXP:	neymiş o ?
 *CHI:	kedi .
 *EXP:	öyleyse kime getirdi ?
-*CHI:	a xxx tı.
-*EXP:	neye çarptı?
+*CHI:	a xxx tı .
+*EXP:	neye çarptı ?
 *CHI:	eve .
-*EXP:	ona kim çarptı?
+*EXP:	ona kim çarptı ?
 *EXP:	onu ne itti ?
 *CHI:	uçak .
 *EXP:	onu kime itti ?
@@ -338,9 +338,9 @@
 *CHI:	şeye getirdi .
 *CHI:	zürafa getirdi .
 *EXP:	ama kime getirdi ?
-*CHI:	züraf xxx .
-*CHI:	yemeği yerken kuyunun içine de düşmüş.
-*CHI:	o kemiciklerim dermisin .
-*CHI:	tintin kızı yermisin .
-*CHI:	burda da hikaye burda bitmiş.
+*CHI:	züraf [: zürafa] [?] xxx .
+*CHI:	yemeği yerken kuyunun içine de düşmüş .
+*CHI:	o kemiciklerim [: kemikciklerim] [?] dermisin .
+*CHI:	tintin@c kızı yermisin .
+*CHI:	burda da hikaye burda bitmiş .
 @End
