@@ -1,0 +1,27 @@
+!
+! This file contains lexical items found during analysis of Turkish 
+! section of the CHILDES. Some of them are lexical items of everyday
+! usage, but some are either "child sepak", or even child speak of a
+! particular environment.
+!
+xxx%<disfl%>:xxx                #;
+bumbuz                          Adj;
+şimdik                          AdvTime;  !???
+bıcı% bıcı                      N;
+güle% güle                      Interjection;
+hapur% hupur                    Onom; !from CHILDES
+atta                            N;
+bibip                           N;
+teleski                         N;
+dandini                         N; !???
+dasdana                         N; !???
+bıcıbıcı                        N;  ! bath: child form
+yumoş                           N;  ! brand
+omo                             N;  ! detergent brand
+vim                             N;  ! detergent brand
+havhav                          N;  ! dog: child form
+memiş                           N;  ! meme: child form
+fruko                           N;  ! NP??
+meysu                           N;  ! NP??
+Bop                             NP; 
+silofon                         N;  ! xylofon
