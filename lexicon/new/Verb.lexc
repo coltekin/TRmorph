@@ -16,6 +16,7 @@ affol        V_CausIrreg;
 afsunla      V;
 ağar         V;
 ağın         V;
+ağır         V; ! officially this is wrong, but more common than ağrı-
 ağırsa       V;
 ağla         V;
 ağna         V; ! rare
@@ -682,6 +683,7 @@ gez          V_Rfl_AorAr; !?? reflexive: gezin??
 gıcırda      V;
 gider        V;
 girenle      V;
+gırgırla     V;
 giriş        V;
 gir          V_CausIrreg_AorAr;
 gi^t         V_CausAr_AorAr;
@@ -917,6 +919,7 @@ kanıtsa      V;
 kanla        V;
 kantarla     V;
 kan          V_AorAr;
+kapan        V;
 kaparozla    V;
 kapat        V;
 kapa         V;
@@ -1018,6 +1021,7 @@ kınala       V;
 kına         V;
 kınla        V;
 kıpırda      V;
+kıpra        V_Rfl_Rcp;     ! Rcp ??
 kirala       V;
 kırbaçla     V;
 kireçle      V;
@@ -1589,8 +1593,8 @@ soğur        V;
 soğut        V;
 soğu         V;
 sokul        V_CausDir; !caus irreg??
+sok          V_AorAr;
 sök          V_AorAr;
-sok          V_CausIrreg_AorAr;
 solla        V;
 sölpü        V;
 solukla      V;
