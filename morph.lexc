@@ -281,6 +281,32 @@ LEXICON Ninfl
                 Ncase;
                 NomPredicate;
 
+!
+! Nouns representing family members can get plural after p1s/p2s
+!
+! teyze-m-ler, dayın-n-lar ..
+! -lAr here works like a derivational morpheme that derives another
+! (plural) noun. However, it is at best odd to have another possessive
+! suffix, so, we do not allow another possessive suffix afater -lAr.
+!
+
+LEXICON Nfamily
+%<n%>:0@RB   Ncont;
+%<n%>:0@RB   NfamCont;
+
+LEXICON NfamCont
+%<p1s%>:^(I)m@MB      NfamPosCont;
+%<p2s%>:^(I)n@MB      NfamPosCont;
+
+LEXICON NfamPosCont
+%<pl%>:l^Ar@MB NposCont;
+! %<pl%>:l^Ar@MB NpluCont; ! use this instead  of the above line
+                           ! to accept forms like dayı-n-lar-ım
+
+!
+! End of family nouns possessive-plural 
+!
+
 LEXICON N
 %<n%>:0@RB   Ncont;
 

@@ -19,10 +19,10 @@ abece                 N;
 aberasyon             N;
 abide                 N;
 abıhayat              N;
-abi                   N;
+abi                   Nfamily; ! officially this is wrong
 abis                  N;
 abiye                 N;
-abla                  N;      !          family
+abla                  Nfamily;
 ablatif               N;
 ablatya               N;
 abli                  N;
@@ -124,7 +124,7 @@ aftos                 N;
 afyonkeş              N;
 afyon                 N;
 ağababa               N;
-ağabey                N;
+ağabey                Nfamily;
 ağaççı^k              N;
 ağaçdelen             N;
 ağaçkakan             N;
@@ -477,8 +477,7 @@ amberbu               N;
 amber                 N;
 amblem                N;
 ambulans              N;
-amca                  N;
-amca                  N;      !          family
+amca                  Nfamily;
 amcazade              N;
 amele                 N;
 ameliyathane          N;
@@ -543,7 +542,7 @@ anamal                N;
 ana                   N;
 ananas                N;
 anane                 N;
-ana                   N;      !          family    ??
+ana                   Nfamily;
 anaokulu              N;
 anapara               N;
 anarşi                N;
@@ -604,10 +603,8 @@ anlı^k                N;
 anmalı^k              N;
 anma                  N;
 an                    N;
-anneanne              N;
-anneanne              N;      !          family
-anne                  N;
-anne                  N;      !          family
+anneanne              Nfamily;
+anne                  Nfamily;
 anofel                N;
 anomali               N;
 anons                 N;
@@ -1079,16 +1076,15 @@ azot                  N;
 azotölçer             N;
 azotometre            N;
 azvay                 N;
-babaanne              N;      !          family
+babaanne              Nfamily;
 babafingo             N;
 babaköş               N;        ! term/rare
-baba                  N;
-baba                  N;      !          family
+baba                  Nfamily;
 babayiği^t            N;
 baca^k                N;
 baca                  N;
 bacana^k              N;
-bacı                  N;
+bacı                  Nfamily;
 badana                N;
 badas                 N;
 badat                 N;
@@ -2037,8 +2033,8 @@ buyot                 N;
 buyru^k               N;
 buyrultu              N;
 büyücü                N;
-büyükanne             N;      !          family
-büyükbaba             N;      !          family
+büyükanne             Nfamily;
+büyükbaba             Nfamily;
 büyükelçi             N;
 büyü                  N;
 buyuru                N;
@@ -2053,7 +2049,6 @@ buzla                 N;
 buzluğan              N;
 buz                   N;
 büz                   N;
-buzuki                N;
 büzü^k                N;
 büzüktaş              N;
 buzul                 N;
@@ -2829,8 +2824,7 @@ dayana^k              N;
 dayanım               N;
 dayanışma             N;
 dayantı               N;
-dayı                  N;
-dayı                  N;      !          family
+dayı                  Nfamily;
 dayızade              N;
 debag^pAt             N;
 debbe                 N;
@@ -2839,8 +2833,7 @@ debi                  N;
 debriyaj              N;
 dedektif              N;
 dedektör              N;
-dede                  N;
-dede                  N;      !          family
+dede                  Nfamily;
 dedikodu              N;
 dedüksiyon            N;
 defa                  N;
@@ -3722,7 +3715,7 @@ enginar               N;
 engizisyon            N;
 eni^k                 N;
 enir                  N;
-enişte                N;
+enişte                Nfamily;
 enjeksiyon            N;
 enjektör              N;
 enkaz                 N;
@@ -4973,8 +4966,7 @@ hakkaniyet            N;
 hakkıhıyar            N;
 hakkıhuzur            N;
 hakk^pAk              N;
-hâlâ                  N;
-hala                  N;      !          family
+hala                  Nfamily;
 halas                 N;
 halat                 N;
 halavet               N;
@@ -6754,8 +6746,8 @@ karbüratör            N;
 karbür                N;
 karcığar              N;
 kardelen              N;
-kardeş:kardaş         N;
-kardeş                N;      ! family -- ?? kardeşimler?
+kardeş:kardaş         Nfamily;
+kardeş                Nfamily;
 kardin^pAl            N;
 kardiyak              N;
 kardiyografi          N;
@@ -9910,7 +9902,7 @@ nilüfergiller         N;
 nilüfer               N;
 nimbus                N;
 nimet                 N;
-nine                  N;
+nine                  Nfamily;
 ninni                 N;
 nipel                 N;
 nirengi               N;
@@ -13807,8 +13799,7 @@ teyemmüm              N;
 teyi^t                N;
 teyit                 N;
 tey^p                 N;
-teyze                 N;
-teyze                 N;      !          family
+teyze                 Nfamily;
 teyzezade             N;
 tezahürat             N;
 tezahür               N;
@@ -14874,7 +14865,7 @@ yemeni                N;
 yemin                 N;
 yemiş                 N;
 yem                   N;
-yenge                 N;    ! family
+yenge                 Nfamily;
 yengi                 N;
 yenibahar             N;
 yeniçeri              N;
