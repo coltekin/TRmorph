@@ -49,7 +49,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   @DEL@ @DUP@ @DELS@
                   @LN @CAUS
                   @miSPC @opt3
-                  ^sFUV ^sFRV ^sBUV ^sBRV %^sVC %^sUC
+                  ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
 !                   e,i   ü,ö   a,ı   o,u   
 
 LEXICON Root
@@ -2588,7 +2588,7 @@ LEXICON Alpha
 <[B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|R|S|Ş|T|V|Y|Z] 0:%^sFUV>  AlphaCont;
 <[H|K|Q|W] 0:%^sBUV>                                    AlphaCont;
 <H 0:%^sBUV 0:%^sVC>                                    AlphaCont;
-<X 0:^sFUV 0:^sUC>                                      AlphaCont; 
+<X 0:%^sFUV 0:%^sUC>                                    AlphaCont; 
 
 !
 ! when inflected, we require apostrophe after letters (when required
