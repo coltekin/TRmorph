@@ -283,7 +283,7 @@ define iDeleteY %^%(y%) -> 0 || .#. i %@RB _ ;
 ! after a limited set of verbal roots, and optional `n' is inserted
 ! before passive morpheme
 
-define wordsPassiveN {de}|{ye}|{yaşa}|{kapa}|{boya}|{söyle};
+define wordsPassiveN {de}|{ye}|{yaşa}|{kapa}|{boya}|{söyle}|{iste};
 define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB 
                                      _ %^%(I%) %@LN %@MB ;
 
@@ -306,6 +306,7 @@ define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB
 !
 
 define PassiveLN  y (->) n  || k o _ %@RB  %^%(I%) %@LN %@MB
+              .o. %^%(I%) %@LN (->) 0 || k o n %@RB  _ %@MB
               .o. [..] -> t || .#. {kapa} %@RB _ %^%(I%) %@LN %@MB
               .o. [..] -> ş || .#. {anla} %@RB _ %^%(I%) %@LN %@MB
               .o. %@LN -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
