@@ -3,7 +3,7 @@ LEXICON PostPRoot
 gibi                            PostP;
 için                            PostP;
 ile                             PostP;
-kadar                           PostP;
+kadar                           PostPKi;
 göre                            PostP;
 doğru                           PostP;
 rağmen                          PostP;
@@ -18,7 +18,7 @@ itibaren                        PostP;
 evvel                           PostP;
 sonra                           PostP;
 yana                            PostP;
-karşı                           PostP;
+karşı                           PostPKi;
 
 !--------
 ait                             PostP;

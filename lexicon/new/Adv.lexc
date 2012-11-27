@@ -118,7 +118,7 @@ cidden              Adv;
 ço^k                Adv;
 çokça               Adv;
 cümleten            Adv;
-daha                Adv;
+daha                AdvTime;
 daha% çok           Adv;
 daima               Adv;
 daima               Adv;       ! this does not nominalize
@@ -158,7 +158,7 @@ eskiden             Adv;       !AdvTime?
 evce^k              Adv;
 evet                Adv; ! TODO: better analysis?
 evvela              Adv;
-evvel               Adv;
+evvel               AdvTime;
 ezbere              Adv;
 ezkaza              Adv;
 faraza              Adv;

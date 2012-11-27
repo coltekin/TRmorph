@@ -111,6 +111,13 @@ LEXICON PostPCont
                     #;
                     Ninfl;
 
+LEXICON PostPKi
+%<postp%>:@RB       PostPKiCont;
+
+LEXICON  PostPKiCont
+                    Ki;
+                    PostPCont;
+
 LEXICON PostPlocation
                 PostPloc;
                 PostPdat;
@@ -315,6 +322,12 @@ LEXICON Ncont
     NcompCont; ! includes final
     NcompInfl;
 
+LEXICON Ntime
+%<n%>:@RB    NtimeCont;
+
+LEXICON NtimeCont
+                    Ki;
+                    Ncont;
 
 LEXICON Nplu
 %<pl%>:l^Ar@MB NpluCont;
