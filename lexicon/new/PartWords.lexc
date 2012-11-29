@@ -1,0 +1,121 @@
+!
+! The items below are parts of multi-word lexical units. Typically,
+! they do not occur in isolation. Most of the time these are
+! consecutive words ('abuk subuk'), but they may also be discontinuous 
+! parts (ya ... ya, kâh ... kâh).
+!
+! Normally, tokenizer should not split these words. However, (1) current 
+! tokenizers do, (2) some of these are not easily enumearate catch.
+! For exmple 'püslen' only occurs in verb 'süslen püslen' but,
+! typically both parts are inflected (e.g., 'süslenmiş püslenmiş'), or
+! 'bark' which occurs in noun 'ev bark', but bot parts can get
+! inflected ('evli barklı', 'evimize barkımıza').
+!
+! TODO:
+! - currently we do not mark the parts that occur independently,
+!   normally it may make sense to mark both (in the face of more
+!   ambiguity) to signal which parts function together.
+! - This list can be generated somewhat automatically from the other
+!   lexicons.
+! - There is also a related and somewhat productive re-duplication 
+!   process (kafa mafa, okul mokul) where forms that otherwise are not
+!   words independently can be made. We do not cover them in here or
+!   in the analyzer yet.
+! 
+
+
+LEXICON PartWords
+abuk        AdjPart;
+allak       AdjPart;
+barksız     AdjPartLast;
+bücüş       AdjPartLast;
+büğrü       AdjPartLast;
+bulacalı    AdjPartLast;
+bulla^k     AdjPartLast;
+bullak      AdjPartLast;
+cıvıl       AdjPartLast;
+dağın       AdjPartLast;
+darma       AdjPart;
+derli       AdjPart;
+didik       AdjPartLast;
+eciş        AdjPart;
+kıpır       AdjPartLast;
+manik       AdjPart;
+mey^pAl     AdjPartLast;
+parıl       AdjPartLast;
+pörçü^k     AdjPartLast;
+püslü       AdjPartLast;
+sabuk       AdjPartLast;
+saçı^k      AdjPartLast;
+seçik       AdjPartLast;
+tefe^k      AdjPartLast;
+tıklım      AdjPartLast;
+tiril       AdjPartLast;
+vıcık       AdjPartLast;
+
+%açık        AdvPartLast;
+apar        AdvPart;
+argın       AdvPartLast;
+bangır      AdvPartLast;
+bita6p      AdvPartLast;
+bön         AdvPartLast;
+cayır       AdvPartLast;
+ciyak       AdvPartLast;
+fellik      AdvPartLast;
+fıkır       AdvPartLast;
+fıldır      AdvPartLast;
+fırıl       AdvPartLast;
+fısır       AdvPartLast;
+fokur       AdvPartLast;
+gıdım       AdvPartLast;
+gırıl       AdvPartLast;
+gümbür      AdvPartLast;
+gürül       AdvPartLast;
+haldır      AdvPartLast;
+%hara^p      AdvPart;
+harıl       AdvPartLast;
+haşır       AdvPartLast;
+hışır       AdvPartLast;
+hüngür      AdvPartLast;
+kikir       AdvPartLast;
+kıkır       AdvPartLast;
+kıvıl       AdvPartLast;
+mırıl       AdvPartLast;
+mışıl       AdvPartLast;
+pırt        AdvPartLast;
+pıtır       AdvPartLast;
+püfür       AdvPartLast;
+püklüm      AdvPartLast;
+sapır       AdvPartLast;
+şapır       AdvPartLast;
+şapur       AdvPartLast;
+seçi^k      AdvPartLast;
+şıkır       AdvPartLast;
+şıngır      AdvPartLast;
+şıpır       AdvPartLast;
+şırıl       AdvPartLast;
+süklüm      AdvPart;
+şupur       AdvPartLast;
+takır       AdvPartLast;
+topar       AdvPartLast;
+uğul        AdvPartLast;
+vıdı        AdvPartLast;
+vızır       AdvPartLast;
+%yourgun     AdvPart;
+zangır      AdvPartLast;
+zır         AdvPartLast;
+zırt        AdvPart;
+abur        AdjPart;
+cubur       AdjPartLast;
+bar^k       NPartLast;  !in 'ev bark' both parts are likely inflected 
+kuşam       NPartLast;
+ıvır        NPart;
+zıvır       NPartLast;
+börtü       NPart;
+çoluk       NPart;
+sokum       NPartLast;
+ayçiçek     NPart;
+uçuç        NPart;
+püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
+ya          CnjCooPart;
+kâh         CnjAdvPart;

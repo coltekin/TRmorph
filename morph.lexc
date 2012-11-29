@@ -71,6 +71,8 @@ OnomRoot;
 Exceptions;
 WHwords;
 Alpha;
+Abbreviation;
+!!!__PARTWORDS_true__PartWords;
 
 !
 ! conjunctions
@@ -90,6 +92,18 @@ LEXICON CnjAdv
 
 LEXICON CnjSub
 %<cnjsub%>:@RB      #;
+
+!
+! The following are for multi-word or discontinous conjunctions.
+!
+LEXICON CnjCooPart
+%<cnjcoo%>%<part%>:@RB      #;
+
+LEXICON CnjAdvPart
+%<cnjadv%>%<part%>:@RB      #;
+
+! LEXICON CnjSubPart
+! %<cnjsub%>%<part%>:@RB      #;
 
 !
 ! Postpositions
@@ -311,11 +325,17 @@ LEXICON NfamPosCont
                            ! to accept forms like dayı-n-lar-ım
 
 !
-! End of family nouns possessive-plural 
+! End of family nouns + possessive-plural 
 !
 
 LEXICON N
 %<n%>:0@RB   Ncont;
+
+LEXICON NPart
+%<n%>%<part%>:0@RB   #;
+
+LEXICON NPartLast
+%<n%>%<part%>:0@RB   Ncont
 
 LEXICON Ncont
     Nderiv;
@@ -475,6 +495,12 @@ LEXICON DIrEnd
 LEXICON Adj
 %<adj%>:@RB        AdjCont;
 
+LEXICON AdjPartLast
+%<adj%>%<part%>:@RB        AdjCont;
+
+LEXICON AdjPart
+%<adj%>%<part%>:@RB        #;
+
 LEXICON AdjNcomp
 @NCOMP%<adj%>:^(s)^I@NCOMP@RB AdjCont;
 
@@ -484,6 +510,12 @@ LEXICON  AdjCont
 
 LEXICON Adv
 %<adv%>:@RB         AdvCont;
+
+LEXICON AdvPartLast
+%<adv%>%<part%>:@RB        AdvCont;
+
+LEXICON AdvPart
+%<adv%>%<part%>:@RB        #;
                   
 LEXICON QAdv
 %<adv%>%<qst%>:@RB  AdvCont;
@@ -1133,8 +1165,15 @@ LEXICON NumDistCont
 !  - aorist form is -(I)r
 !  - causative is predictable from the final phoneme
 !  - no reflexive or reciprocal is allowed
-LEXICON V        
+
+LEXICON V
 %<v%>:@RB   VCont;
+
+LEXICON VPartLast
+%<v%>%<part%>:@RB   VCont;
+
+LEXICON VPart
+%<v%>%<part%>:@RB   #;
 
 LEXICON   VCont
                 Vderiv;

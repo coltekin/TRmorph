@@ -7,6 +7,7 @@ ROOTLEX=$(shell ls lexicon/$(LEXICON)/*.lexc)
 # Some behavior of the analyzer can be controlled with the options
 # below.
 
+#  APOSTROPHE
 #
 #  Require apostrophe after proper names and numbers.
 #
@@ -18,23 +19,37 @@ ROOTLEX=$(shell ls lexicon/$(LEXICON)/*.lexc)
 
 APOSTROPHE=maybe
 
+#  PARTWORDS
+#
+#  Compile in lexical units that are part-words, like 'argın' in
+#  'yorgun argın', and mark as part of a word. Ideally these words
+#  should be tokenized together, but in case it is not, this gives a
+#  way for later porcessing to combine the pieces.
+#
+#  true: compile part words in.
+#  any other value disables it.
+#
+
+PARTWORDS=true
 #
 # End of options
 #
+
+export APOSTROPHE
+export PARTWORDS
 
 all: trmorph.fst
 
 segment: segment.fst
 
 trmorph.lexc: morph.lexc $(ROOTLEX)
-		cat $^ > $@
+		./options.sh $^ > $@
 
 trmorph.fst: trmorph.xfst trmorph.lexc morph-phon.xfst
 	foma -f trmorph.xfst
 
 trmorph.xfst: analyzer.xfst
-	cat $^ | sed 's/^!!!APOSTROPHE_$(APOSTROPHE)//;/^!!!APOSTROPHE/d' \
-	> $@
+	options.sh $^ > $@
 
 segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
 	foma -f segment.xfst
