@@ -1,0 +1,13 @@
+LEXICON Abbreviation
+mm          N_unit;
+cm          N_unit;
+m           N_unit;
+km          N_unit;
+gr          N_unit;
+kg          N_unit;
+mg          N_unit;
+l           N_unit;
+ml          N_unit;
+TV          N_abbr;
+vb          N_abbr;
+vs          N_abbr;

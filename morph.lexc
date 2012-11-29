@@ -325,17 +325,30 @@ LEXICON NfamPosCont
                            ! to accept forms like dayı-n-lar-ım
 
 !
+! Noun abbreviations
+!
+
+LEXICON N_unit  ! we may treat these differntly later
+%<n%>%<abbr%>:@RB       NAbbrCont;
+
+LEXICON N_abbr  
+%<n%>%<abbr%>:@RB       NAbbrCont;
+
+LEXICON NAbbrCont
+0:@APOS@MB              Ncont;
+
+!
 ! End of family nouns + possessive-plural 
 !
 
 LEXICON N
-%<n%>:0@RB   Ncont;
+%<n%>:@RB   Ncont;
 
 LEXICON NPart
-%<n%>%<part%>:0@RB   #;
+%<n%>%<part%>:@RB   #;
 
 LEXICON NPartLast
-%<n%>%<part%>:0@RB   Ncont
+%<n%>%<part%>:@RB   Ncont
 
 LEXICON Ncont
     Nderiv;
