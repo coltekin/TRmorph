@@ -18,7 +18,7 @@ define Vbr  o | u | O | U | û | Û | %^sBRV;
 define Vbu  a | ı | A | I | â | Â | %^sBUV;
 define Vowel  Vf | Vb;
 define Vbuf %^%(I%) | %^%(A%);
-define Vpal %^pA | %^pI | %^pO | %^pU;
+define Vpal %^pA | %^pI | %^pO | %^pU | %^pÂ | %^pÎ | %^pÔ |%^pÛ;
 define Vxx  %^A | %^I ;
 define Vsilent %^sFRV | %^sFUV | %^sBRV | %^sBUV ; 
 define Vall Vowel | Vxx | Vpal | Vsilent; ! except buffer vowels
@@ -435,7 +435,8 @@ define VowelEpenthesis [ Vowel -> 0 ||  _ %@DEL%@ ConsAll IntSym* Vall ]
 ! only used for vowel harmony.
 !
 
-define DelPV %^pA -> a , %^pI -> ı, %^pO -> o, %^pU -> u ;
+define DelPV %^pA -> a , %^pI -> ı, %^pO -> o, %^pU -> u , 
+             %^pÂ -> â , %^pÎ -> î, %^pÔ -> ô, %^pÛ -> û;
 
 define VowelHarmony [ %^I -> ı  //  Vbu          \Vall* _  ,,
                       %^I -> u  //  Vbr          \Vall* _  ,,

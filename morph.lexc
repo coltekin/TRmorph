@@ -41,7 +41,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                     %<D_yIS%> %<D_mA%>
                   ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
-                  ^pA ^pI ^pO ^pU
+                  ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
                   @RB @MB @dB
                   @APOS
                   @tSep @dSep
