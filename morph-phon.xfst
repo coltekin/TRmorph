@@ -443,6 +443,7 @@ define VowelHarmony [ %^I -> ı  //  Vbu          \Vall* _  ,,
                       %^I -> i  //  [Vfu | %^pA | %^pI] \Vall* _  ,,
                       %^A -> a  //  Vb           \Vall* _  ,,
                       %^A -> e  //  [Vf | Vpal]  \Vall* _  ]
+               .o. [ %^A -> e , %^I -> i ] ! defaults
                .o. DelPV;
 
 !
