@@ -579,6 +579,7 @@ elver        V_CausDir;
 emayla       V;
 emekle       V;
 emle         V;
+empoze% e^t  V_AorAr;
 emre^t       V_AorAr;
 emreyle      V;
 em           V_AorAr; !Causative is irregular, but we allow regular form too
@@ -750,6 +751,7 @@ göynü        V;
 göy          V_AorAr; ! dialectal use
 göz% ardı% e^t  V_AorAr;
 gözardı% e^t  V_AorAr;
+gözardı% e^t V_AorAr;
 gözardı% ol   V_CausIrreg;
 gözetle      V;
 gözet        V; ! maybe rcp
@@ -1248,6 +1250,7 @@ melezle      V;
 mene^t       V_AorAr;
 merdanele    V;
 merhemle     V;
+methe^t      V_AorAr;
 mevzubahis% ol  V_CausIrreg; ! old
 mıhla        V;
 mıknatısla   V;
@@ -1263,6 +1266,7 @@ mızı         V;
 modelle      V;
 morar        V;
 mortla       V;
+motive e^t   V_AorAr;
 müdahale% e^t  V_AorAr;
 mühimse      V;
 mührele      V;
@@ -1473,6 +1477,7 @@ saç          V_AorAr;
 sağal        V; !rare
 sağlamla     V;
 sağla        V;
+sağol        V_CausIrreg;
 sağ          V_AorAr;
 sahip% ol    V_CausDir;
 sahnele      V;
@@ -1662,6 +1667,8 @@ soğul        V; !dialectal
 soğur        V;
 soğut        V;
 soğu         V;
+şoke% e^t    V_AorAr;
+şoke% ol     V_CausIrreg;
 sokul        V_CausDir; !caus irreg??
 sok          V_AorAr;
 sök          V_AorAr;
@@ -1845,6 +1852,7 @@ tokatla      V;
 tökezle      V;
 tokurda      V;
 tokuş        V;
+tolere% e^t  V_AorAr;
 tomrukla     V;
 tomur        V; !dialectal
 tonla        V;
@@ -2144,6 +2152,7 @@ yut          V_AorAr;
 yuvala       V;
 yuvarla      V;
 yuvgula      V;
+yüzgöz% ol   V_CausIrreg;
 yüzleş       V;
 yüzle        V;
 yüz          V_AorAr;
@@ -2155,6 +2164,7 @@ zanne^t      V_AorAr;
 zanneyle     V;
 zannolun     V;
 zapte^t      V_AorAr;
+zap          V_AorAr;
 zarfla       V;
 zayıfla      V;
 zedele       V;
