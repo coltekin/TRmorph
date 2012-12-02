@@ -49,7 +49,7 @@ trmorph.fst: trmorph.xfst trmorph.lexc morph-phon.xfst
 	foma -f trmorph.xfst
 
 trmorph.xfst: analyzer.xfst
-	options.sh $^ > $@
+	./options.sh $^ > $@
 
 segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
 	foma -f segment.xfst
