@@ -2022,7 +2022,7 @@ LEXICON CplEvidCont
                 PAgrG1End;
                 CplPAgrG1; ! this is marked/rare usage - gidiyormuşumsa
                 CplCond2;
-                CVcesine;
+                NarrCVcesine;
 ! TODO: In a relatively rare number of cases -DIr may follow if -(I)yor 
 !       precedes the evidential copula.
 
@@ -2226,7 +2226,7 @@ LEXICON NarrCVcesine
 
 !
 ! End of morphotactics description. We have some closed class root
-! forms below. Others root lexicons are attached at the end of this
+! forms below. Other root lexicons are attached at the end of this
 ! file  automatically.
 !
 
