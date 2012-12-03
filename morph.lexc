@@ -1605,15 +1605,21 @@ LEXICON TAMg1Cont
 ! 'adam olacak çocuk', 'ele gelir sonuç' etd.
 ! some of these (-makta -yor) are restircted to be used 
 ! before an auxiliary verb (ol, bul) but some can stand alone.
-! These are, after all, some sort of sobordination. The result 
+! These are, after all, some sort of subordination. The result 
 ! is something that complements a noun, so we mark it as 
-! an adjectie. Especially -acak is confusing as we also have 
+! an adjective. Especially -acak is confusing as we also have 
 ! an explicit subordinating suffix.
-! We assume that these forms do not get any further suffixes, 
+!
+! These forms combine with suffix -lIk rather productively. 
+! Just a few examples:
+!
+!   düşmüşlük,  güvenilirlikte, sararmışlığıma ....
+!
+! We assume that these forms do not get any other suffixes, 
 ! until we are proven wrong by data.
 !
 LEXICON VerbalAdj
-%<VJ_%0%>%<adj%>:@MB       #;
+%<VJ_%0%>%<adj%>:@MB       ND_lIk;
 
 !
 !
