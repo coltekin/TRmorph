@@ -54,6 +54,8 @@ tiril       AdjPartLast;
 vıcık       AdjPartLast;
 
 %açık        AdvPartLast;
+şıklata     AdvPart;
+uzadıya     AdvPart;
 apar        AdvPart;
 argın       AdvPartLast;
 bangır      AdvPartLast;
@@ -74,6 +76,7 @@ gürül       AdvPartLast;
 haldır      AdvPartLast;
 %hara^p      AdvPart;
 harıl       AdvPartLast;
+şapırdata   AdvPartLast;
 haşır       AdvPartLast;
 hışır       AdvPartLast;
 hüngür      AdvPartLast;
@@ -110,12 +113,16 @@ cubur       AdjPartLast;
 bar^k       NPartLast;  !in 'ev bark' both parts are likely inflected 
 kuşam       NPartLast;
 ıvır        NPart;
-zıvır       NPartLast;
-börtü       NPart;
 çoluk       NPart;
+zıvır       NPartLast;
+kuşam       NPartLast;
+börtü       NPart;
+çolu^k      NPartLast;
 sokum       NPartLast;
 ayçiçek     NPart;
 uçuç        NPart;
 püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
+tolere      VPart;       !in 'tolere et-'
+gözardı     VPart;       !in 'gözardı et-'
 ya          CnjCooPart;
 kâh         CnjAdvPart;
