@@ -1419,9 +1419,6 @@ LEXICON VCausItAorArCont
                         VCausIt;
                         VNoCausNoAorCont;
 
-LEXICON VCausIt
-%<caus%>:^Ar@MB        VCont;
-
 !
 LEXICON V_Rcp_CausDir_AorAr
 %<v%>:@RB           VRcpCausDirAorArCont;
