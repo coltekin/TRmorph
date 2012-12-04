@@ -2253,7 +2253,7 @@ ile       ileCont;
 üzer      uzerCont;
 
 ! üzer (somewhat) is like `üst', but does not 
-! occur in bare form. Below we (currently) allow 
+! occur in bare form. Below, we (currently) allow 
 ! it to form pospositional phrases just like üst/alt etc. 
 ! However, we do not allow it to function as adjectives.
 !
@@ -2265,7 +2265,7 @@ LEXICON   uzerCont
             PostPlocation;
 
 LEXICON uzerAdj
-%<adj%>:@RBi    Jderiv;
+%<adj%>:@RB     Jderiv;
 
 LEXICON  ileCont
 %<postp%>:@RB   Case1Cont;
