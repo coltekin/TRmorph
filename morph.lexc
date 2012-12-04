@@ -1501,6 +1501,7 @@ LEXICON  VPassiveCont
                           VCabilNeg;
                           VNegative;
                           VNegativeCont;
+                          D_yAsI;
 !
 
 LEXICON VCabilNeg
@@ -2364,8 +2365,7 @@ LEXICON  Punc
 ! indefinite number of derivations.
 ! 
 !
-! TODO: better handling of derivations. Some combine with each other
-!       productively.
+! TODO: better handling of derivations. 
 !
 
 LEXICON Mderiv
@@ -2412,6 +2412,7 @@ LEXICON Vderiv
             D_yIcI;
             D_yIS;
 !            D_mA;
+            D_yAsI;
 
 LEXICON Oderiv
             OD_lA;
@@ -2588,6 +2589,20 @@ LEXICON JD_lAS
 !
 LEXICON D_yIS
 %<D_yIS%>:^(y)^Iş   DerivNCont;
+
+! -(y)AsI makes adjectives, and can be attached afte voice suffixes,
+!  and possibly to any non-finite verbal form.
+!
+!   okuyası, görülesi, getirtesi 
+!
+!  TODO: There may be two different processes that we hide behind this
+!  derivation. The forms without passive does not function like adjectives.
+!  They mostly be used in conditional/existential predicates, 
+!  'uyuyası olsaydı', 'getiresi varsa ...'. But we mark all resulting
+!  forms as adjectives.
+!
+LEXICON D_yAsI
+%<D_yAsI%>:^(y)^As^I   DerivJCont;
 
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
