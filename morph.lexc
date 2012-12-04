@@ -43,7 +43,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
                   ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
                   @RB @MB @dB
-                  @APOS
+                  @APOS @ABBR
                   @tSep @dSep
                   @NCOMP
                   @DEL@ @DUP@ @DELS@
@@ -255,7 +255,10 @@ LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<ncomp%>%<np%>:^(s)^I@NCOMP@RB NPcont;
 
 LEXICON NP
-%<np%>:0@RB   NPcont;
+%<np%>:@RB   NPcont;
+
+LEXICON NP_abbr
+%<np%>%<abbr%>:@ABBR@RB   NPAposCont;
 
 LEXICON NPcont
                 #;
@@ -270,14 +273,14 @@ LEXICON   NPAposCont
                 Ninfl;
 
 LEXICON NPnation
-%<np%>:0@RB   NPnationCont;
+%<np%>:@RB   NPnationCont;
 
 LEXICON NPnationCont
                 NPcont;
                 ND_CAlanguage;
 
 LEXICON NPperson
-%<np%>:0@RB   NPpersonCont;
+%<np%>:@RB   NPpersonCont;
 
 LEXICON NPpersonCont
                 NPcont;
@@ -312,8 +315,8 @@ LEXICON Ninfl
 !
 
 LEXICON Nfamily
-%<n%>:0@RB   Ncont;
-%<n%>:0@RB   NfamCont;
+%<n%>:@RB   Ncont;
+%<n%>:@RB   NfamCont;
 
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
@@ -329,10 +332,10 @@ LEXICON NfamPosCont
 !
 
 LEXICON N_unit  ! we may treat these differntly later
-%<n%>%<abbr%>:@RB       NAbbrCont;
+%<n%>%<abbr%>:@ABBR@RB       Ncont;
 
 LEXICON N_abbr  
-%<n%>%<abbr%>:@RB       NAbbrCont;
+%<n%>%<abbr%>:@ABBR@RB       Ncont;
 
 LEXICON NAbbrCont
 0:@APOS@MB              Ncont;

@@ -22,6 +22,8 @@ define Vpal %^pA | %^pI | %^pO | %^pU | %^pÂ | %^pÎ | %^pÔ |%^pÛ;
 define Vxx  %^A | %^I ;
 define Vsilent %^sFRV | %^sFUV | %^sBRV | %^sBUV ; 
 define Vall Vowel | Vxx | Vpal | Vsilent; ! except buffer vowels
+define Vsurface   e | i | ö | ü | E | İ | Ö | Ü | î | Î |
+                  a | ı | o | u | A | I | O | U | â | Â | û | Û ;
 
 ! Consonants
 define ConsV b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | 
@@ -33,10 +35,35 @@ define ConsBuf %^%(y%) | %^%(s%) | %^%(ş%) | %^%(n%);
 define ConsXX    %^c | %^p | %^t | %^k | %^g | %^K | %^D | %^C | %@LN ;
 define ConsSilent %^sVC |  %^sUC;
 define ConsAll  Cons | ConsXX |ConsSilent; ! except buffers
+define ConsSurface b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | 
+                   B | D | C | G | V | Z | J | F | Ğ | L | M | N | R | W | Y |
+                   p | t | ç | k | f | s | ş | h | 
+                   P | T | Ç | K | F | S | Ş | H ;
+
+define SilentLetter Vsilent | ConsSilent;
+define SurfaceLetter ConsSurface | Vsurface;
 
 ! Intermediate symbols with no surface forms
 define Boundary %@MB | %@RB | %@dB %@APOS; 
 define IntSym   Boundary | %@NCOMP | %@opt3;
+
+
+!
+! Abbreviation handling
+!
+! The first rule adds the default silent front/unronded vowel 
+! to abbreviation which does not have any vowel, or any silent 
+! letters added in the lexicon.
+!
+! The second rule replaces the @ABBR symbol with apostrophe 
+! if the surface form ends with a regular letter. In other cases, 
+! like where the abberviation ends with a superscript or dot 
+! apostrophe is not used.
+!
+
+define Abbr     [..] -> %^sFUV  || .#. ConsSurface+ _ %@ABBR
+           .o. %@ABBR -> %@APOS || SurfaceLetter SilentLetter* _
+           .o. %@ABBR -> 0;
 
 !
 ! Delete apostrophe  if it is followed by null morphemes
@@ -521,7 +548,7 @@ define AFilter    FSDevoicing.i
               .o. 0 <- %@DELS%@ 
               .o. 0 <- %@DUP%@
               .o. 0 <- %@dB
-!             .o. 0 <- (ConsSilent|Vsilent)
+              .o. 0 <- (ConsSilent|Vsilent)
               .o. %<cv%_ir%> <- %<t%_aor%> %<cv%_ir%>;
 
 
