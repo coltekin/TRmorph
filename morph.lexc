@@ -351,7 +351,7 @@ LEXICON NPart
 %<n%>%<part%>:@RB   #;
 
 LEXICON NPartLast
-%<n%>%<part%>:@RB   Ncont
+%<n%>%<part%>:@RB   Ncont;
 
 LEXICON Ncont
     Nderiv;
