@@ -372,7 +372,7 @@ LEXICON NpluCont
    #;
    Npos;
    Ncase;
-   NomPredicate;
+   NomPredicatePLU;
    ND_CA;
 
 LEXICON Npos
@@ -438,12 +438,16 @@ LEXICON KiCont
 ! This part deals with person agreement
 !
 
-LEXICON NomPredicate
+LEXICON NomPredicatePLU
                         NomPredPagr;
-                        NomPredPagr3p;
+                        NomPredPagr3s;
                         NomPredDir;
                         NomPredQ;
                         CplAll;
+
+LEXICON NomPredicate
+                        NomPredPagr3p;
+                        NomPredicatePLU;
 
 LEXICON NomPredicateMAK
                         NomPredPagr3s;
