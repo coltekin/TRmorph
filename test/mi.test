@@ -35,7 +35,7 @@ A:A:okumalı mı:oku<v><t_obl><q><3s>
 A:A:okumalı mıyız:oku<v><t_obl><q><1p>
 A:A:okumalı mısınız:oku<v><t_obl><q><2p>
 A:A:okumalı mısınızdır:oku<v><t_obl><q><2p><dir>
-A:R:okumaktalar mıymışlar:
+A:R:okumaktalar mıymışlar:oku<v><vn_mak><loc><3p><q><cpl_mis><3p>
 A:R:okumakta mıymışızdır:
 A:A:okuyor muydular:oku<v><t_cont><q><cpl_di><3p>
 A:A:okuyorlar mıydı:oku<v><t_cont><3p><q><cpl_di>

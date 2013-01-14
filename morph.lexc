@@ -1604,23 +1604,20 @@ LEXICON TAMg1Cont
 ! This is for cases like: 'birleşmiş milletler', 
 ! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
 ! 'adam olacak çocuk', 'ele gelir sonuç' etd.
-! some of these (-makta -yor) are restircted to be used 
+! some of these (-makta -yor) are restricted to be used 
 ! before an auxiliary verb (ol, bul) but some can stand alone.
 ! These are, after all, some sort of subordination. The result 
 ! is something that complements a noun, so we mark it as 
 ! an adjective. Especially -acak is confusing as we also have 
 ! an explicit subordinating suffix.
 !
-! These forms combine with suffix -lIk rather productively. 
-! Just a few examples:
-!
-!   düşmüşlük,  güvenilirlikte, sararmışlığıma ....
-!
-! We assume that these forms do not get any other suffixes, 
-! until we are proven wrong by data.
+! We assume that these forms behave just like any other adjective, 
+! although they may be more conservative about combining with all
+! suffixes that attach to adjectives (particularly, see the note 
+! above on -makta -yor).
 !
 LEXICON VerbalAdj
-%<VJ_%0%>%<adj%>:@MB       ND_lIk;
+%<VJ_%0%>%<adj%>:@MB       AdjCont;
 
 !
 !
