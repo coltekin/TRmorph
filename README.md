@@ -17,7 +17,7 @@ end).
 
 You can get the latest version of TRmorph from GitHub here:
 https://github.com/coltekin/TRmorph. The best is to clone the
-repository using git, and pull frequently since this version is
+repository using git, and pull often since this version is
 changed relatively frequently, but GitHub also allows you to download
 the as a `.zip` file.
 
