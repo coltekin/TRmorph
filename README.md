@@ -29,6 +29,8 @@ of foma). Here are some examples:
 
     $ foma
     ...
+    foma[0]: regex @"trmorph.fst";
+    2.3 MB. 53564 states, 149484 arcs, Cyclic.
     foma[1]: up okudum
     oku<v><t_past><1s>
     foma[1]: down oku<v><t_past><2s>
