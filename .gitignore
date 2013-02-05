@@ -11,3 +11,4 @@ TODO
 *.fst
 trmorph.lexc
 trmorph.xfst
+.foma_history

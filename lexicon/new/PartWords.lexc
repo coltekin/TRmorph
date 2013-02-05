@@ -121,6 +121,7 @@ börtü       NPart;
 sokum       NPartLast;
 ayçiçek     NPart;
 uçuç        NPart;
+konu        NPart;      !in `konu komşu'
 püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
 tolere      VPart;       !in 'tolere et-'
 gözardı     VPart;       !in 'gözardı et-'

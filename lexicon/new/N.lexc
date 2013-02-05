@@ -1,5 +1,7 @@
 
 LEXICON NRoot
+gündüz                N;
+gece                  N;
 abadi                 N;
 abajur                N;
 abaküs                N;
@@ -1011,6 +1013,7 @@ avu@DEL@^c            N;    !rare correct form is avuç
 avukat                N;
 avuntu                N;
 avur^t                N;
+ayçöre^k              Ncomp;
 ayakaltı              N;
 ayakbastı             N;
 ayakça^k              N;
@@ -1180,7 +1183,6 @@ bakan                 N;
 bakara                N;
 bakaya                N;
 bakım                 N;
-bakı                  N;
 bakınca^k             N;
 bakır                 N;
 bakışım               N;
@@ -2031,7 +2033,7 @@ bunalım               N;
 bunaltı               N;
 bunama                N;
 bungalov              N;
-bun                   N;
+bun                   N;    ! rare
 bünye                 N;
 burağan               N;
 burça^k               N;
@@ -3894,6 +3896,7 @@ esba^p                N;
 eşcinsel              N;
 esef                  N;
 eşe^k                 N;
+eşe^k:eşşe^k          N;
 eşele^k               N;
 eşelmobil             N;
 eseme                 N;
@@ -6809,7 +6812,7 @@ kaplan                N;
 kaplıca               N;
 kaplumbağa            N;
 ka^p                  N;
-kap                   N;
+%kap                   N;   ! rare non-standard use 
 kaporta               N;
 kapriçyo              N;
 kapris                N;
@@ -7922,6 +7925,7 @@ kontuvar              N;
 konu^k                N;
 konum                 N;
 konu                  N;
+konu% komşu           N;
 konuşmacı             N;
 konut                 N;
 konvansiyon           N;

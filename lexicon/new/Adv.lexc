@@ -1,5 +1,10 @@
 
 LEXICON AdvRoot
+koşar% adım         Adv;
+yan% yana           Adv;
+yan% yana           Adv;
+bir% daha           AdvTime;
+bir% an             AdvTime;
 abuk% subuk         Adv;
 acaba               Adv;
 acele               Adv;
@@ -422,6 +427,7 @@ sırf                Adv;
 şırıl% şırıl        Adv;
 sittinsene          Adv;
 siyaseten           Adv;
+soluk% soluğa       Adv;
 sonra               AdvTime;
 sonradan            Adv;
 sonunda             Adv;
