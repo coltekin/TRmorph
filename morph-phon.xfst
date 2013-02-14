@@ -250,6 +250,7 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB
                                              %^%(y%) %^A        |
                                              %^D %^A n          |
                                              %^%(y%) l %^A      |
+                                             s %^I z            |
                                              %^D %^A 
                                            ] %@MB
                       .o. [..] -> y || .#. [ {o}  |
