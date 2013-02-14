@@ -572,7 +572,7 @@ LEXICON PersPrn
 %<prn%>%<pers%>:@RB PrnCont;
 
 LEXICON PPrnBirBir
-%<prn%>%<pers%>:@RB PrnContNoPlu;
+%<prn%>:@RB PrnContNoPlu;
 
 LEXICON PrnContNoPlu
         Npos;
@@ -2468,6 +2468,7 @@ LEXICON   D_sIz
 !
 LEXICON   ND_lIk
 %<D_lIk%>:l^I^k@MB       DerivNCont;
+%<D_lIk%>:l^I^k@MB       DerivJCont;
 LEXICON   JD_lIk
 %<D_lIk%>:l^I^k@MB       DerivNCont;
 LEXICON   AD_lIk
