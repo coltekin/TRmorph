@@ -148,6 +148,7 @@ LEXICON PostPloc
 
 LEXICON PostPlocCont
 %<loc%>%<postp%>:^D^A@MB     #;
+%<loc%>%<postp%>:^D^A@MB     Ki;
 
 LEXICON PostPdat
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
