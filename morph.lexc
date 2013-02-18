@@ -2441,6 +2441,7 @@ LEXICON Oderiv
 !
 LEXICON   D_lI
 %<D_lI%>:l^I@MB         DerivJCont;
+%<D_lI%>:l^I@MB         DerivACont;
 
 ! -sIz behaves almost exactly like -lI, with the opposite meaning.
 !           şeker `sugar' -> şeker-siz `[something] without sugar' 
