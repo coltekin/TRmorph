@@ -23,6 +23,9 @@ hiç% bir        Det;
 herhangi        Det;
 başka           Det;
 herhangi% bir   Det;
+öyle            Det;
+böyle           Det;
+şöyle           Det;
 ! definite_determiners_below_this_line#
 o               Det;
 bu              Det;

@@ -16,6 +16,7 @@ dolayı                          PostP;
 itibaren                        PostP;
 önce                            PostP;
 evvel                           PostP;
+ço^k                            PostP;
 sonra                           PostP;
 yana                            PostP;
 karşı                           PostPKi;
@@ -40,6 +41,7 @@ takdirde                        PostP;
 yerde                           PostP;
 yukarı                          PostP;
 ilgili                          PostP;
+ilişkin                         PostP;
 kere                            PostP;  ! TODO: is this a noun???
 !--------
 ! TODO: these are derived (?) from nouns
@@ -78,6 +80,7 @@ ara                     PostPlocation;
 etraf                   PostPlocation;
 çevre                   PostPlocation;
 öte                     PostPlocation;
+kenar                   PostPlocation;
 
 ! ! these require possessive and ablative case
 açı                     PostPabl; ! açı-sın-dan 

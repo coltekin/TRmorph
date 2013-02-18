@@ -80,8 +80,13 @@ yeter% ki           CnjAdv;
 yok                 CnjAdv;
 yok% mu             CnjAdv;
 yok:yo              CnjAdv;
+yoksa               CnjAdv;
 zaten               CnjAdv;
 zira                CnjAdv;
+bir% yana           CnjAdv;
+bir% kere           CnjAdv;
+bir% de             CnjAdv;
+şöyle% dursun       CnjAdv;
 
 LEXICON CnjCooRoot
 ama                 CnjCoo;
@@ -101,8 +106,11 @@ ne                  CnjCoo;
 ve                  CnjCoo;
 veya                CnjCoo;
 veyahut             CnjCoo;
+yoksa               CnjCoo;
 ya                  CnjCoo;
 ya% da              CnjCoo;
+bir% de             CnjCoo;
+ister               CnjCoo;
 
 LEXICON CnjSubRoot
 diye                CnjSub;
