@@ -1773,6 +1773,8 @@ LEXICON OptQCont
 %<cpl_di%>:^(y)^D^I@MB      PAgrG2End;
 %<cpl_mis%>:^(y)m^Iş@MB     PAgrG1End;
 
+! TODO: opt3s below seems to be a half-implemented feature, but not
+!       clear what...
 
 LEXICON OptPAgr
 %<1s%>:^(y)^Im@MB       OptPAgrCont;
@@ -1780,6 +1782,7 @@ LEXICON OptPAgr
 %<3s%>:@opt3s^In@MB     OptPAgrCont;
 %<1p%>:l^Im@MB          OptPAgrCont;
 %<2p%>:s^In^Iz@MB       #;
+%<3p%>:@opt3s^In@MB     OptPAgrCont;
 %<3p%>:@opt3s^Inl^Ar@MB OptPAgrCont;
 %<3s%>:0@MB             OptPAgrCont; ! these two are 
 %<3p%>:l^Ar@MB          OptPAgrCont; ! colloquial use
@@ -1809,6 +1812,7 @@ LEXICON PAgrIMPEnd
 %<2s%>:s^An^A@MB        #;
 %<2s%>:^(y)^In@MB       #;
 %<3s%>:s^In@MB          #;
+%<3p%>:s^In@MB          #;
 %<2p%>:^(y)^In@MB       #;
 %<2p%>:^(y)^In^Iz@MB    #;
 %<2p%>:s^An^Iz^A@MB  #;
