@@ -1,0 +1,22 @@
+!
+! This is a root lexicon for a limited set of words or clitics that
+! are treated differently. For the lack of a better name, we call them
+! Clitics, but not all words listed here are clitics.
+!
+!
+
+LEXICON Clitics
+mı        mI;
+mi        mI;
+mu        mI;
+mü        mI;
+i         V_i;
+! the following three are not technically clitics, 
+! but they are here for lack of a better place 
+var       var;
+yok       yok;
+değil     degil;
+!
+ile       ileCont;
+! 
+üzer      uzerCont;

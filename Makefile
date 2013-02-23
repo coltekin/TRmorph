@@ -1,5 +1,5 @@
 LEXICON ?= new
-ROOTLEX=$(shell ls lexicon/$(LEXICON)/*.lexc)
+ROOTLEX=$(shell ls lexicon/*.lexc lexicon/$(LEXICON)/*.lexc)
 
 #
 # Options

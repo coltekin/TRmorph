@@ -1,0 +1,19 @@
+!
+! The following are letters of the alphabet.
+!
+! Q, W and X are not in the TR alphabet, but they show up in various
+! texts.
+LEXICON Alpha
+<A|E|I|İ|O|Ö|U|Ü>                                       AlphaCont;
+<[B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|R|S|Ş|T|V|Y|Z] 0:%^sFUV>  AlphaCont;
+<[H|K|Q|W] 0:%^sBUV>                                    AlphaCont;
+<H 0:%^sBUV 0:%^sVC>                                    AlphaCont;
+<X 0:%^sFUV 0:%^sUC>                                    AlphaCont; 
+
+!
+! when inflected, we require apostrophe after letters (when required
+! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
+!
+LEXICON AlphaCont
+%<alpha%>:@RB   NPApos;
+%<alpha%>:@RB   #;
