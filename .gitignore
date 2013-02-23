@@ -12,3 +12,5 @@ TODO
 trmorph.lexc
 trmorph.xfst
 .foma_history
+*.cpp.lexc
+*.cpp.xfst

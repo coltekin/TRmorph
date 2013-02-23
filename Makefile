@@ -1,5 +1,13 @@
 LEXICON ?= new
-ROOTLEX=$(shell ls lexicon/*.lexc lexicon/$(LEXICON)/*.lexc)
+COMMONLEX=$(shell ls lexicon/*.lexc)
+ROOTLEX=$(COMMONLEX) $(shell ls lexicon/$(LEXICON)/*.lexc)
+CPP=gcc -E -traditional -P -w -x c
+
+%.cpp.lexc: %.lexc
+	$(CPP) -o $@ $^
+
+%.cpp.xfst: %.xfst
+	$(CPP) -o $@ $^
 
 #
 # Options
@@ -38,26 +46,42 @@ PARTWORDS=true
 export APOSTROPHE
 export PARTWORDS
 
-all: trmorph.fst
+analyzer: trmorph.fst
 
-segment: segment.fst
-
-trmorph.lexc: morph.lexc $(ROOTLEX)
-		./options.sh $^ > $@
+all: trmorph.fst segment.fst stemmer.fst guesser.fst
 
 trmorph.fst: trmorph.xfst trmorph.lexc morph-phon.xfst
 	foma -f trmorph.xfst
 
+trmorph.lexc: morph.lexc $(ROOTLEX)
+		./options.sh $^ > $@
+
 trmorph.xfst: analyzer.xfst
 	./options.sh $^ > $@
 
+#
+# a simple segmenter
+#
 segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
 	foma -f segment.xfst
+
+#
+# stemmer 
+#
 
 stemmer: stemmer.fst 
 
 stemmer.fst: stemmer.xfst trmorph.fst
 	foma -f stemmer.xfst
 
+#
+# unknown word guesser
+#
+guesser.fst: guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
+	foma -f guesser.cpp.xfst
+
+#
+# housekeeping goes below
+#
 clean:
 	rm -f trmorph.xfst trmorph.fst trmorph.lexc

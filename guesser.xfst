@@ -1,0 +1,58 @@
+#include "options.h"
+
+read lexc guesser.cpp.lexc
+define Lexicon;
+
+source morph-phon.xfst
+
+!
+! Put all of them together. The order is important. 
+!
+clear stack
+read regex Lexicon 
+           .o. Abbr
+#if (GUESSER_APOSTROPHE_OPTIONAL == 1)
+           .o. replaceAposOpt
+#else  // GUESSER_APOSTROPHE_REQUIRED or none set
+           .o. replaceApos
+#endif
+           .o. NumberSpace
+           .o. NumericInsSilentP
+           .o. NumericSeparator
+           .o. CompNoun
+           .o. DeleteSI
+           .o. DeleteLAR
+           .o. InsertN
+           .o. DelS
+           .o. PronounExceptions
+           .o. InsertY
+           .o. iDeleteY
+           .o. NbeforePassive
+           .o. PassiveLN
+           .o. Causative
+           .o. Optative3
+           .o. SpaceBeforeMI
+           .o. NegAorist
+           .o. DeleteBuffer
+           .o. DeYeException
+           .o. YorException
+           .o. VowelHarmony 
+           .o. VowelEpenthesis
+           .o. FSDevoicing
+           .o. VoicingAssimilation
+           .o. Redup
+           .o. DeleteSilentP
+           .o. KiKu
+#if (GUESSER_CIRCUMFLEX_OPTIONAL == 1)
+           .o. DeleteCircumflex
+#endif
+           .o. DeleteBoundary
+#if (GUESSER_CAPITALIZE == 1)
+           .o. Capitalize
+#endif
+#if (GUESSER_ALLCAPS == 1)
+           .o. AllCaps 
+#endif
+           ;
+
+save stack guesser.fst
