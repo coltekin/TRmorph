@@ -32,7 +32,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   %<ngtv%> %<bch%> %<disc_part%> %<pau%> %<ui%>
                   %<punct%>
                   %<redup%>
-                  %<exist%> %<ntexist%> %<not%>
+                  %<exist%> %<notexist%> %<not%>
                   %<alpha%>
                   %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%> %<VJ_%0%>
                   %<dimin%>
@@ -1745,7 +1745,7 @@ LEXICON var
 %<exist%>:@RB Ncont;
 
 LEXICON yok
-%<ntexist%>:@RB Ncont;
+%<notexist%>:@RB Ncont;
 
 LEXICON degil
 %<not%>:@RB Ncont;
