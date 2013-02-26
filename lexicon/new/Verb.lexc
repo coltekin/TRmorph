@@ -47,7 +47,6 @@ algıla       V;
 alıkon       V;
 alıkoy       V_AorAr;
 alın         V;
-alıştır      V;
 alış         V;
 alkışla      V;
 alla         V;
@@ -1342,7 +1341,6 @@ onayla       V;
 öner         V;
 öngör        V_CausDir;
 önle         V;
-onul         V;
 on           V_AorAr;
 öp           V_Rcp_AorAr;
 oranla       V;
@@ -1350,6 +1348,7 @@ oranla       V;
 örkle        V;
 örnekle      V;
 örnekse      V;
+örnek% al    V_CausDir;
 orsala       V;
 örsele       V;
 ortala       V;
@@ -2194,7 +2193,11 @@ zırvala      V;
 zonkla       V;
 zorlaş       V;
 zorla        V;
-zorunda% kal V_CausDir; ! CausIrreg??? (zorunda bırakmak)
+zorunda% kal V_CausIrreg; ! Caus: zorunda bırak
+zorunda% bırak V; ! causative of 'zorunda kal-'
 zulme^t      V;
 gözden% geçir V;
-kullan      V;
+kullan       V;
+yol% aç      V_AorAr;
+ortaya% çık  V_AorAr;
+işe% yara    V;
