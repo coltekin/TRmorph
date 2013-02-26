@@ -820,6 +820,7 @@ LEXICON  VAorAr
 LEXICON   AorArCont
                     TAMg1Cont;
                     AorCV;
+                    VerbalAdj;
 
 LEXICON V_Rcp_AorAr
 %<v%>:@RB           VRcpAorArCont;
