@@ -236,7 +236,7 @@
 *CHI:	çarptı .
 %com:	he is playing with a toy car
 *CHI:	bunun başına çarptı .
-*CHI:	geldi , ooop düştü içine .
+*CHI:	geldi , ooop@o düştü içine .
 *EXP:	çocuklar ne yaparlar ?
 *CHI:	oynarlar .
 *EXP:	nerde oynarlar .
@@ -340,7 +340,7 @@
 *CHI:	teyp çalar .
 *CHI:	kitap okur .
 %com:	there is a sentence here written in brackets: (kardeş olurdu diye) but it is difficult to tell who said it
-*CHI:	bi [: bir] de gider çalışmaya .
+*CHI:	bi(r) de gider çalışmaya .
 *CHI:	sonra gine [: yine] gelir .
 *CHI:	sonra oynar bizle .
 *EXP:	anne ne yapar ?
@@ -398,7 +398,7 @@
 *EXP:	kime ?
 *CHI:	anneye .
 *EXP:	anne ne dedi ?
-*CHI:	anne de kahve içti , bi [: bir] de xxx oldu .
+*CHI:	anne de kahve içti , bi(r) de xxx oldu .
 *CHI:	gidiyorlardı .
 *CHI:	otobüs geliyordu .
 *CHI:	ona biniyorduk .

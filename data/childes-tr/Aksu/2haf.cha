@@ -96,7 +96,7 @@
 %com:	gülerek
 *EXP:	kediler mi yedi ?
 *CHI:	yedi .
-*EXP:	hapur , hupur yedilermi kediler ?
+*EXP:	hapur@o , hupur@o yedilermi kediler ?
 *CHI:	evet .
 *EXP:	hadi , beyendilermi [: beğendiler mi] bari ?
 *CHI:	eh , yedim .
@@ -105,7 +105,7 @@
 *CHI:	hı .
 *EXP:	tabii , sen niye kedilere verdin ?
 *CHI:	verdim işte .
-*CHI:	bi tanesini [: bir tanesini] ben yedim .
+*CHI:	bi(r) tanesini ben yedim .
 *EXP:	büyük müydü balıklar ?
 *CHI:	evet .
 *EXP:	ne kadar büyüktü ?
@@ -307,7 +307,7 @@
 *EXP:	niye huysuzluk ediyorsun ?
 *CHI:	oynuycaz [: oynayacağız] .
 *EXP:	oynuycaz [: oynayacağız] tabii , beraber .
-*EXP:	ama böyle bıyk bıyk yaparsan olmaz tabii .
+*EXP:	ama böyle bıyk@b bıyk@b yaparsan olmaz tabii .
 *EXP:	böyle değilmi , hım ?
 *CHI:	dur .
 *EXP:	hayır ben o zaman oynamam .

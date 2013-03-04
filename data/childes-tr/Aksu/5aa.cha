@@ -13,7 +13,7 @@
 *EXP:	çocukları görüyormusun , orada oynuyorlar sizin caddede ?
 *EXP:	Hergün ?
 *EXP:	görüyormusun onları sen ?
-*CHI:	görmü xxx .
+*CHI:	görmü@a xxx .
 *EXP:	ne oyunlar oynuyorlar ?
 *CHI:	ne oynuyor(lar) ya ?
 *EXP:	yok şimdi değil , hergün .
@@ -40,15 +40,15 @@
 *EXP:	sen ne zaman oyun oynuyorsun ?
 *CHI:	oyuncaklarım odamda kaldı .
 *EXP:	nasıl atarsın sen ?
-*EXP:	göster bakıyım .
+*EXP:	göster bakıyım [: bakayım] .
 *CHI:	ben bilmiyorum .
 *EXP:	ne resim yapıyorsun orada ?
-*EXP:	anlat bakıyım bana .
+*EXP:	anlat bakıyım [: bakayım] bana .
 *CHI:	yazı yapıyorum .
 *EXP:	ne resmi yapıyorsun ?
 *CHI:	yazı yapıyorum .
 *CHI:	sen de yap hadi .
-*EXP:	anlat bana bakıyım .
+*EXP:	anlat bana bakıyım [: bakayım] .
 *EXP:	ne resmi o ?
 *CHI:	Vahide Akalın .
 %com:	her name
@@ -158,13 +158,13 @@
 *MOT:	kim bağırdı ?
 *CHI:	vapur da bağırdı .
 *MOT:	efendim ?
-*CHI:	vapur da bağırdı , vuup bağırdı .
+*CHI:	vapur da bağırdı , vuup@o bağırdı .
 *CHI:	vapur da bağırdı .
 *EXP:	vapur da bağırdı .
 *EXP:	ne dedi vapur ?
-*CHI:	vuup .
-*EXP:	vuup dedi , ha ?
-*CHI:	vuup .
+*CHI:	vuup@o .
+*EXP:	vuup@o dedi , ha ?
+*CHI:	vuup@o .
 *CHI:	arkamda birşey var .
 *EXP:	yok , hiçbirşey yok .
 *CHI:	varmış .
@@ -207,9 +207,9 @@
 *CHI:	evinde .
 *EXP:	ah , evine gitmiş ha ?
 *CHI:	evine .
-*EXP:	bak bunu tarif etsene , bakıyım burda neler var .
+*EXP:	bak bunu tarif etsene , bakıyım [: bakayım] burda neler var .
 *EXP:	peki masanın .
-*EXP:	üstünde şu var , ondan sonra televizyonun üstünde resim var , peki , söyle bakıyım bana .
+*EXP:	üstünde şu var , ondan sonra televizyonun üstünde resim var , peki , söyle bakıyım [: bakayım] bana .
 *CHI:	işte bak .
 *CHI:	sen söyle .
 *CHI:	bak , anneannem babam var .
@@ -239,7 +239,7 @@
 *EXP:	başka neler var ?
 *CHI:	bak ilaçlar var .
 *CHI:	onlar pis , onlar eh eh .
-*EXP:	dün kimler geldi buraya , anlat bana bakıyım .
+*EXP:	dün kimler geldi buraya , anlat bana bakıyım [: bakayım] .
 *EXP:	kimler geldi ?
 *CHI:	anne , bize kimler geldi ?
 %com:	she answers offstage
@@ -260,7 +260,7 @@
 *EXP:	kediler ne yapar , anlatsana .
 *CHI:	miyav miyav yapar .
 *EXP:	başka ne yaparlar , anlat hadi .
-*CHI:	mam mam mam yapar .
+*CHI:	mam@o mam@o mam@o yapar .
 *EXP:	başka ?
 *CHI:	benim oyuncağımı da getirecem [: getireceğim].
 *CHI:	belki ben , belki .
@@ -331,7 +331,7 @@
 *EXP:	böyle gider ha , denizde ?
 *CHI:	bunu .
 *CHI:	ben düzelttim onu .
-*CHI:	denizde y üzerler .
+*CHI:	denizde yüzerler .
 *CHI:	evine gitmişler sonra .
 *CHI:	burda balık var , işte bak , buda , işte bak , burda .
 *EXP:	kurtlar ne yapar ?

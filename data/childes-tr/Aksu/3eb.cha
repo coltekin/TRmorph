@@ -187,7 +187,7 @@
 *CHI:	içecem [: içeceğim] .
 *EXP:	oyuncakları alıp bir yere gitme .
 *EXP:	otur oturduğun yerde .
-*CHI:	bumbu içecem [: içeceğim] .
+*CHI:	bumbu@c içecem [: içeceğim] .
 %com:	water comes back riding a toy car goes to the window , calls to the mind
 *CHI:	Kezban bacı , bu nerden [: nereden] kapatılıyor ?
 *EXP:	bak şimdi ben sana birşey söyliyeyim [: söyleyeyim] mi ?
@@ -414,7 +414,7 @@
 *EXP:	efendim ?
 *CHI:	su içecem [: içeceğim] , gelecem [: geleceğim] sonra .
 *CHI:	dur getiririm .
-*EXP:	otur bakalım artık etc .
+*EXP:	otur bakalım artık etc@s:en .
 *CHI:	ben artık oynamıyacağım [: oynamayacağım] .
 *EXP:	oynayacaksın galiba .
 *EXP:	bak bakayım şu kediye .

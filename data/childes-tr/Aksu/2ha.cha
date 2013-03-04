@@ -32,9 +32,9 @@
 *CHI:	Kumburgaz var .
 *EXP:	söyle ne oynadınız ?
 *CHI:	anne , Kumburgaz , kaça gidiyorduk , hani orda yatmıştık ?
-*EXP:	Kumbur Kazağı ?
+*EXP:	<Kumbur Kazağı> [: Kumburgaz] ?
 *CHI:	heeh , orda yattık .
-*EXP:	benim kumbur Kazağı'nda tanıdığım var , senin de varmı ?
+*EXP:	benim <kumbur Kazağı'nda> [: Kumburgaz'da] tanıdığım var , senin de varmı ?
 *CHI:	thip@wp , daydaylarım oturuyor .
 *EXP:	kimler ?
 *CHI:	daydaylarım .
@@ -96,7 +96,7 @@
 %com:	she is laughing again .
 *EXP:	kediler mi yedi ?
 *CHI:	yedi .
-*EXP:	hapur hupur yedilermi kediler ?
+*EXP:	hapur@o hupur@o yedilermi kediler ?
 *CHI:	evet .
 *EXP:	hadii ?
 *EXP:	beyendilermi [: beğendiler mi] bari ?
@@ -327,7 +327,7 @@
 *EXP:	niye huysuzluk ediyorsun ?
 *CHI:	oynıycaz [: oynayacağız] .
 *EXP:	oynuyacağız [: oynayacağız] tabii , beraber .
-*EXP:	ama böyle bıyk bıyk yaparsan olmaz .
+*EXP:	ama böyle bıyk@b bıyk@b yaparsan olmaz .
 *EXP:	tabii , öyle değilmi ?
 *EXP:	hım ?
 *CHI:	olur .

@@ -169,10 +169,10 @@
 *CHI:	attaya .
 %com:	when he can't see an object , he says "attaya" , meaning , it went away
 *CHI:	attaya .
-*CHI:	dandini yapmıyor .
-*CHI:	dandini dandini das(dana) .
+*CHI:	dandini@si yapmıyor .
+*CHI:	dandini@si dandini@si das(dana)@si .
 %com:	from a nursery rhyme
-*EXP:	dandini dandini dastana , danalar girmiş bostana .
+*EXP:	<dandini dandini dastana , danalar girmiş bostana>@si .
 *EXP:	lütfen bana bir sigara verirmisin , açarmısın onu .
 *EXP:	çok teşekkür ederim .
 *EXP:	şimdi kapatabilirim .
@@ -328,8 +328,8 @@
 *EXP:	varmı dandini ?
 *CHI:	yok .
 *EXP:	sen dandini yaparken ne içiyorsun ?
-*CHI:	dandini dandini dastana .
-*EXP:	danalar girsin bostana .
+*CHI:	<dandini dandini dastana>@si .
+*EXP:	<danalar girsin bostana>@si .
 *CHI:	kov bostancı danayı .
 *EXP:	yemesin lahanayı .
 *CHI:	pişst pişst .
@@ -424,7 +424,7 @@
 *MOT:	kaç tane bibip@c var ?
 *CHI:	garaj .
 *EXP:	garaja gitsinmi araba ?
-*CHI:	ı ıh .
+*CHI:	<ı ıh> .
 *EXP:	gitmesinmi ?
 *CHI:	gitmesin .
 *EXP:	bozuk mu ?
@@ -468,8 +468,8 @@
 *EXP:	baba gitti .
 *EXP:	kutu nerede ?
 *CHI:	kutu dandanı@c yapıyor .
-*EXP:	dandanı yapıyor , ama nerede yapıyor dandanı ?
-*EXP:	kutu nerede dandanı yapıyor ?
+*EXP:	dandanı@c yapıyor , ama nerede yapıyor dandanı@c ?
+*EXP:	kutu nerede dandanı@c yapıyor ?
 *CHI:	o kutu nerede ?
 *EXP:	sincap nerede ?
 *CHI:	orda .
@@ -483,11 +483,11 @@
 *CHI:	Ayşe abla gitti .
 *EXP:	kuş nerede ?
 *CHI:	kuş bakıyor .
-*CHI:	o dandanı yapıyor .
-*EXP:	peki nerede dandanı yapıyor ?
+*CHI:	o dandanı@c yapıyor .
+*EXP:	peki nerede dandanı@c yapıyor ?
 *EXP:	yatağında mı ?
 *CHI:	yatağı yok .
-*EXP:	nerede dandanı yapıyor ?
+*EXP:	nerede dandanı@c yapıyor ?
 *CHI:	kalkacak .
 *CHI:	düştü tavuk .
 %com:	the hen falls
@@ -535,7 +535,7 @@
 *EXP:	ilaç verdinmi ?
 *CHI:	ilaç .
 *EXP:	sürdünmü ilaç ?
-*CHI:	sürdü ç xxx .
+*CHI:	sürdü ç@a xxx .
 *EXP:	mandalinaları kim aldı ?
 *CHI:	abla .
 *EXP:	hangi abla ?

@@ -115,7 +115,7 @@
 *CHI:	hop bunu böyle yapıyor .
 *EXP:	köpekler ne yapar .
 *CHI:	böyle gider .
-*CHI:	hov diye , hav hav diye .
+*CHI:	hov@o diye , hav hav diye .
 *EXP:	niçin içer köpek ?
 *CHI:	şey kahve içer .
 *CHI:	çay süt içer .
@@ -148,7 +148,7 @@
 *EXP:	nasıl ısırır ?
 *CHI:	hav , böyle ha xxx böyle .
 *EXP:	balık ne yapar ?
-*CHI:	balık ku ku ku ku .
+*CHI:	balık ku@o ku@o ku@o ku@o .
 *EXP:	burası ne balığın .
 *CHI:	şey böyle şey .
 *EXP:	yüzermi ?

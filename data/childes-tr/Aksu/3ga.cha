@@ -101,7 +101,7 @@
 *CHI:	ikisi sığarmı ?
 %com:	two dolls in bus
 *CHI:	sığarmış .
-*CHI:	c evet .
+*CHI:	c@c evet .
 *EXP:	ikisi oynuyacaklar [: oynayacaklar] mı ?
 *CHI:	hayır .
 *EXP:	ya ne yapacaklar ?
@@ -268,7 +268,7 @@
 *CHI:	annemler aldı .
 *EXP:	nerden aldı ?
 *CHI:	bak yapabildimmi ?
-*EXP:	ı hı , pencerelerini de yap onun .
+*EXP:	ı@i hı , pencerelerini de yap onun .
 %com:	drawing a house
 *EXP:	nerden aldı annenler kemeri canım ?
 *CHI:	bilmiyorum .
@@ -430,7 +430,7 @@
 *CHI:	bu da yatacak .
 *CHI:	bunlar yere inmiyormu ?
 *CHI:	böyle iniyor .
-*CHI:	c işte böylece çıksınlar .
+*CHI:	c@c işte böylece çıksınlar .
 *CHI:	çıkarlarmı bunlar böyle ?
 *CHI:	öyle , öyle söyle , benim yaptığım gibi .
 *CHI:	öyle yapmazlar , böyle yaparlarmı ?
@@ -464,7 +464,7 @@
 *CHI:	yatsın şimdi bu .
 *CHI:	uykusu geldi .
 *CHI:	bu da yatsın .
-*CHI:	c verebilirmisin bir tane daha ?
+*CHI:	c@c verebilirmisin bir tane daha ?
 *EXP:	evet .
 *CHI:	bittimi ?
 %com:	biscuits
@@ -479,11 +479,11 @@
 *EXP:	değil canım traktör .
 *CHI:	traktörü çıkardım .
 *CHI:	uçağı çıkarttım bir de .
-*CHI:	c bu ne ?
+*CHI:	c@c bu ne ?
 *EXP:	traktör .
 *EXP:	bak traktörün üstüne bir adam çıkmış .
 *CHI:	bunlar ne ?
 *EXP:	şimdi oynayacağız onlarlan [: onlarla] .
 *CHI:	olur .
-*CHI:	c şu arabaların yanına gelecek , bu da buraya .
+*CHI:	c@c şu arabaların yanına gelecek , bu da buraya .
 @End

@@ -272,7 +272,7 @@
 *EXP:	nasıl gittiniz Kumburgaza ?
 *CHI:	Kumburgazdaki dayımla .
 *EXP:	yürüyerek mi gittiniz ?
-*CHI:	i ih .
+*CHI:	i@i ih .
 *EXP:	neyle gittiniz ?
 *CHI:	Kumburgaza .
 *EXP:	ama neye bindinizde gittiniz ?
@@ -342,8 +342,8 @@
 *EXP:	konuşabiliyormu düzgün ?
 *CHI:	konuşamıyor .
 *EXP:	ne gibi konuşuyor ?
-*CHI:	abdik .
-*EXP:	abdik gibi nasıl konuşuyor ?
+*CHI:	abdik@c .
+*EXP:	abdik@c gibi nasıl konuşuyor ?
 *CHI:	konuşuyor .
 *EXP:	ah , düştü .
 *CHI:	bozuldu bu .

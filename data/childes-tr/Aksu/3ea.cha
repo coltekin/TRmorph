@@ -29,7 +29,7 @@
 *CHI:	şu arabayı da verirmisin ?
 *CHI:	çarptı bunu , gidiyor kamyonet .
 *CHI:	gidiyor otomobillerim .
-*CHI:	gidiyorlar beraber burr burr off .
+*CHI:	gidiyorlar beraber burr@o burr@o off .
 *EXP:	ne oldu ?
 *CHI:	çarptı .
 *CHI:	kaza oldu .
@@ -50,7 +50,7 @@
 *CHI:	bütün şeyleri ver .
 *CHI:	bunları ver , bunları ver .
 *EXP:	otur yerine şimdi .
-*CHI:	burrr xxx .
+*CHI:	burrr@o xxx .
 *EXP:	ne yapıyorsun ?
 *CHI:	parka gelmiş .
 *CHI:	gidiyor .
@@ -62,7 +62,7 @@
 *CHI:	uyutuyor .
 *CHI:	gidiyorlar bunlar .
 *EXP:	nereye gidiyorlar ?
-*CHI:	burr .
+*CHI:	burr@o .
 %com:	to a park
 *CHI:	içine girmişler .
 *EXP:	evet .
@@ -470,7 +470,7 @@
 *CHI:	bıcı bıcı bıcı yapıyor .
 %com:	demonstrating
 *EXP:	ne kullanıyor ?
-*EXP:	nee kullanıyor peki ?
+*EXP:	ne kullanıyor peki ?
 *CHI:	şey kullanıyor .
 *EXP:	sabun kullanıyormu ?
 *CHI:	sabun kullanıyor .

@@ -429,7 +429,7 @@
 *EXP:	kedi var .
 *EXP:	bak bu da köpek .
 *EXP:	köpekler ne yer biliyormusun sen ?
-*CHI:	ıffff .
+*CHI:	ıffff@i .
 %com:	sound gesture expressing boredom
 *EXP:	köpekler limonata içermi ?
 *CHI:	içmez .

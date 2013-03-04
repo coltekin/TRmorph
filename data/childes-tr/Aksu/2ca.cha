@@ -21,7 +21,7 @@
 *CHI:	dört .
 *MOT:	aşağıdaki ablanın ismi neydi ?
 *CHI:	aşağıda Serap .
-*CHI:	aşağıdası [: aşağısı] [?] ablası ge xxx .
+*CHI:	aşağıdası [: aşağısı] [?] ablası ge@a xxx .
 *CHI:	ablası .
 *MOT:	neydi ablasının ismi neydi ?
 *CHI:	Serap ablası .
@@ -71,7 +71,7 @@
 *CHI:	bu kadar .
 *CHI:	oturur bu kadar .
 *CHI:	dur bu kadar .
-*CHI:	o xxx tı .
+*CHI:	o xxx tı@a .
 *MOT:	hadi şarkı söyle bir tane .
 *CHI:	bir iki üç .
 *CHI:	bakayım , bakayım .
@@ -106,15 +106,15 @@
 *CHI:	M kapatıyımmı [: kapatayım mı] canım bunu da ?
 *CHI:	kapat .
 *CHI:	kapat .
-*CHI:	bakıyım .
-*CHI:	kapıyım .
+*CHI:	bakıyım [: bakayım] .
+*CHI:	kapıyım [:: kapatayım] .
 *CHI:	a .
 *CHI:	açtım .
 *CHI:	açtı bak .
 *CHI:	kalsın o .
 *CHI:	bunu açıyım .
 *MOT:	dur kapalı dursun .
-*CHI:	bakıyım , açıyım .
+*CHI:	bakıyım [: bakayım] , açıyım [:: açayım] .
 *CHI:	bak çalışıyor .
 *CHI:	anneanne bak .
 *CHI:	çalıyor , dönüyor , dönüyor .
@@ -238,11 +238,11 @@
 %com:	referring to the interviewer
 *CHI:	burda .
 *MOT:	Tan beni bulamaz .
-*CHI:	up la .
+*CHI:	up@o la@o .
 %com:	sound gesture
 *MOT:	yavaş .
 *CHI:	iki .
-*CHI:	up da .
+*CHI:	up@o da@o .
 %com:	sound gesture again/ throwing toys around now playing with a car
 *CHI:	çıkıyor , çıkıyor bunlar .
 *CHI:	çıktı .
@@ -268,8 +268,8 @@
 *CHI:	kapanmış .
 *CHI:	hadi .
 *CHI:	açmak istemiyorum .
-*CHI:	up ba , up ba .
-*CHI:	ona bakıyım , bakıyım , kapattın .
+*CHI:	up@b ba@b , up@b ba@b .
+*CHI:	ona bakıyım [: bakayım] , bakıyım [: bakayım] , kapattın .
 *MOT:	nedir bu ?
 *CHI:	para .
 *MOT:	senlen beraber başka birşey yapalım biz .
@@ -363,10 +363,10 @@
 %com:	incomprehensible response
 *CHI:	otobüs .
 *EXP:	gel buraya .
-*CHI:	bib .
+*CHI:	bib [: bip] .
 *CHI:	ben kamyonu alıyım .
 *CHI:	bak otobüs .
-*CHI:	alıyım .
+*CHI:	alıyım [:: alayım] .
 *EXP:	hayır bu tarafa gel .
 *CHI:	xxx kapısı da .
 *CHI:	kapıcı döver .
@@ -458,8 +458,8 @@
 *CHI:	ütü .
 *CHI:	böyle .
 *EXP:	böyle ütüyü kim ütülüyor ?
-*CHI:	adida .
-*EXP:	adida yapıyor değilmi ?
+*CHI:	adida@c .
+*EXP:	adida@c yapıyor değilmi ?
 *EXP:	ne zaman ütü yaptı ?
 *CHI:	ütü bezi .
 *EXP:	yerleri süpürdümü ?
@@ -477,7 +477,7 @@
 %com:	the lady is cleaning
 *EXP:	neyle temizliyor ?
 *CHI:	bezlen .
-*CHI:	ay bak buraya ra xxx .
+*CHI:	ay bak buraya ra@a xxx .
 *EXP:	baba eve gelecekmi akşam ?
 *CHI:	gelecek .
 *EXP:	okuyacakmı ?

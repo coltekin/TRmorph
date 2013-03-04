@@ -89,7 +89,7 @@
 *EXP:	kim almış ?
 *CHI:	ondan gidiyormuş , bundan çıkıyormuş , anino@c ona biniyor .
 *CHI:	gidiyormuş .
-*CHI:	iggggg .
+*CHI:	iggggg@o .
 %com:	he is imitating the sound of a train's whistle; talking about the picture of a train .
 *EXP:	nereye gidiyor Burçak , nereye gidiyor canım ?
 *CHI:	evine .
@@ -270,7 +270,7 @@
 *CHI:	çompi@c .
 *CHI:	bak burada bunlar var .
 *EXP:	ne onlar , isimlerini biliyormusun ?
-*CHI:	kerpeten , bu çompsi , bu testere , kesiyorlar .
+*CHI:	kerpeten , bu çompsi@c , bu testere , kesiyorlar .
 *EXP:	bu ne ?
 *CHI:	benim çekicim var .
 *EXP:	ne yapıyorsun çekiçle ?
@@ -295,8 +295,8 @@
 *EXP:	bunlar ne ?
 *CHI:	kağıttan aydede .
 %com:	singing
-*CHI:	aydede durağın nerede söylüyorlar , ca ca .
-*CHI:	ca ba ca xxx .
+*CHI:	aydede durağın nerede söylüyorlar , <ca ca>@si .
+*CHI:	<ca ba ca>@si xxx .
 *EXP:	şarkı mı söylüyorlar ?
 *CHI:	hı .
 %com:	affirmative sound gesture

@@ -131,7 +131,7 @@
 *EXP:	sen süt içermisin ?
 *CHI:	içerim .
 *EXP:	neyle içersin ?
-*CHI:	babam bana her zaman milkshake yapıyor , milkshake de .
+*CHI:	babam bana her zaman milkshake@s:en yapıyor , milkshake@s:en de .
 *CHI:	içerim , süt de içerim .
 *EXP:	neyle içiyorsun sütü ?
 *CHI:	bardağımla .
@@ -216,19 +216,19 @@
 *CHI:	onu söylemem .
 *EXP:	niçin ?
 *CHI:	işte .
-*EXP:	luna parka ne zaman gittiniz ?
+*EXP:	lunaparka ne zaman gittiniz ?
 *CHI:	gitmedik , gittim çok da xxx .
 *CHI:	sonra babam Ankaraya gitti , askerlik işini halletmek için .
 *EXP:	sonra ne oldu ?
 *CHI:	sonra çok kaldı , geldi .
-*EXP:	luna park nerde ?
+*EXP:	lunapark nerde ?
 *CHI:	bir tane Aksarayda var dedim , bir tane Taksimde .
 *EXP:	siz hangisine gidiyorsunuz ?
 *CHI:	hangisini istersem babam beni götürüyor .
 *EXP:	geçen sefer hangisine gittiniz ?
 *CHI:	unuttum .
 *CHI:	galiba uzağına gittik .
-*EXP:	luna parkta neler yapıyorsun ?
+*EXP:	lunaparkta neler yapıyorsun ?
 *CHI:	herşey var .
 *CHI:	dönme dolap da var .
 %com:	dönme dolap ? dönme dolap ?
@@ -360,7 +360,7 @@
 *CHI:	babamlarla bir yere gidiyorlardı onlar .
 *CHI:	izin verdi .
 *CHI:	geldiler beni aldılar .
-*CHI:	bir xxx lar da ordaydı [: oradaydı] .
+*CHI:	bir xxx lar@a da ordaydı [: oradaydı] .
 *CHI:	gitmişti .
 *CHI:	bizden daha evvel gitmişti .
 *CHI:	biz de oraya gittik .
@@ -627,7 +627,7 @@
 *CHI:	bir tane daha batıyor .
 *CHI:	bir tane daha batıyor .
 *CHI:	başka gemi yok diyor , bitiyor .
-*EXP:	Brem [: Bremen] Mızıacıları'nı anlat .
+*EXP:	Brem [: Bremen] Mızıkacıları'nı anlat .
 *CHI:	bir varmış , bir yokmuş .
 *CHI:	bir eşek varmış .
 *EXP:	biraz hızlı anlat .

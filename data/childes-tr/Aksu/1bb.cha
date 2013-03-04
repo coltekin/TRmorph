@@ -444,7 +444,7 @@
 *CHI:	ters mi ?
 *EXP:	hıh hıh xxx .
 %com:	sound gesture
-*CHI:	nasıl t xxx .
+*CHI:	nasıl t@a xxx .
 *CHI:	aa düştü .
 %com:	<1w> an exclamatory sound gesture
 *CHI:	şapkasını ver .
@@ -469,7 +469,7 @@
 *CHI:	yüzer .
 *CHI:	bıcı bıcı xxx .
 %com:	demonstrates sound gesture imitating the sound made in swimming
-*EXP:	anlat acık [= azıcık] bana balıkları .
+*EXP:	anlat acık [: azıcık] bana balıkları .
 *EXP:	siz balık alıyormusunuz ?
 *CHI:	almıyoruz .
 *CHI:	ah , yedi ağzımı be !
@@ -480,7 +480,7 @@
 *EXP:	yemez .
 *CHI:	ne yapar ?
 *EXP:	hiçbirşey yapmaz .
-*CHI:	bakıyım [= bakayım] .
+*CHI:	bakıyım [: bakayım] .
 *CHI:	bak seni yer .
 *CHI:	şimdi ne alalım ?
 *EXP:	şimdi senlen bir oyun oynayalım .

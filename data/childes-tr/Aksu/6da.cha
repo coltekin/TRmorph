@@ -42,7 +42,7 @@
 *CHI:	niçin ?
 *EXP:	e tabii , şimdi konuşuyoruz , ahbaplık ediyoruz .
 *EXP:	Yalçın'la sokağa çıkıyor musunuz siz ?
-*CHI:	ı ıhh .
+*CHI:	ı@i ıhh .
 %com:	the question is repeated . she makes an affirmative gesture
 *EXP:	ne yapıyorsunuz dışarda ?
 *CHI:	sallanıyoruz .
@@ -220,7 +220,7 @@
 %com:	she actually pronounces the syllables sparately as Volkswagen to the interviewer's benefit
 *EXP:	al bakalım .
 *CHI:	o Volkswagen değil (ya) .
-*EXP:	ne yapıyorsun Volswagen'i ?
+*EXP:	ne yapıyorsun Vol(k)swagen'i ?
 *EXP:	ne oluyor öyle ?
 %com:	makes the car run
 *CHI:	şimdi şey ver xxx o kutuları ver .

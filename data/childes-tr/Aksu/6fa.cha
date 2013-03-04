@@ -116,7 +116,7 @@
 *EXP:	niye oynuyorlar .
 *CHI:	işte .
 *EXP:	koşarlarmı çocuklar ?
-*CHI:	rımmmmm .
+*CHI:	rımmmmm@o .
 %com:	car
 *EXP:	çocuklar niye koşarlar ?
 *CHI:	havalar soğuk olursa koşarlar .
@@ -131,7 +131,7 @@
 *EXP:	peki çocuklar ne zaman oynar .
 *CHI:	araba çıktı .
 *EXP:	peki çocuklar ne zaman oynar .
-*CHI:	tamam , rımmmm .
+*CHI:	tamam , rımmmm@o .
 *EXP:	ne zaman oynar çocuklar , geceleyin mi ?
 *CHI:	geceleyin .
 *EXP:	başka ne zaman ?
@@ -334,7 +334,7 @@
 *EXP:	sahi ?
 *CHI:	hayvan köpekler .
 *CHI:	hep akşam havlıyor .
-*CHI:	artık ben bir Meresedes alacam [: alacağım] .
+*CHI:	artık ben bir Meresedes [: Mersedes] alacam [: alacağım] .
 *CHI:	xxx bagajına bindirecem [: bindireceğim] .
 *CHI:	doğru köpekleri Amerikaya götürecem [: götüreceğim] .
 *CHI:	orda [: orada] kesecem [: keseceğim] .

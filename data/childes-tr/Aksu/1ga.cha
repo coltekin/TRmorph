@@ -169,7 +169,7 @@
 *EXP:	kimler ?
 *CHI:	kendi başıları [: başlarına] .
 *EXP:	bugün ne oldu sizin evde , bu sabah ?
-*CHI:	oyuncaklarımla oynu xxx .
+*CHI:	oyuncaklarımla oynu@a xxx .
 *CHI:	arabama bindim o kadar .
 *EXP:	başka ne yaptınız sabahleyin kalkınca ?
 *CHI:	pijamalarımı soyundum , giyindim .
@@ -281,7 +281,7 @@
 *CHI:	bir düşmüş tuzağa .
 *CHI:	ondan sonra bir duvar .
 *CHI:	ondan sonra oraya bir gideyim demiş .
-*CHI:	oop orda horozlar yüzüyormuş .
+*CHI:	oop@o orda horozlar yüzüyormuş .
 *CHI:	horozlar onu bir tutmuş .
 *CHI:	yemiş .
 *CHI:	burda da masal bitmiş .
@@ -474,12 +474,12 @@
 *CHI:	yanlış olunca açıyor tabii .
 *CHI:	hop şimdi horozu alacak .
 *CHI:	yanlış alacak .
-*CHI:	horozu alacak araba , ü ürü ürü üü xxx .
+*CHI:	horozu alacak araba , ü@o ürü@o ürü@o üü@o xxx .
 %com:	ü ürü üü: sound imitation of a rooster in Turkish
 *CHI:	bak araba böyle durdu .
 *CHI:	horoz atladı .
 *CHI:	hop götürüyor onu araba .
-*CHI:	düştü atları , ü ürü üü xxx .
+*CHI:	düştü atları , ü@o ürü@o üü@o xxx .
 *CHI:	peki bunlar ne ?
 *CHI:	tamam tavuk beyaz olur .
 *CHI:	horoz kırmızı .
@@ -503,7 +503,7 @@
 *CHI:	adam inmedi tabii .
 *CHI:	korktu zebradan .
 *CHI:	zebra camını kırar adamın .
-*CHI:	trak !
+*CHI:	trak@o !
 *CHI:	bir vurdu , bam !
 *CHI:	camına damın .
 *CHI:	kırıldı camı .
@@ -519,7 +519,7 @@
 *CHI:	altından .
 *CHI:	çünkü üstünden atlıyamaz [: atlayamaz] zebra da .
 *CHI:	ben bir araba getireyim , dur , ben .
-*CHI:	ufacık bi araba .
+*CHI:	ufacık bi(r) araba .
 *CHI:	koskocaman araba .
 *CHI:	geçebilirmi ?
 *CHI:	geçemez .
@@ -581,7 +581,7 @@
 *CHI:	göstereyimmi bak ?
 *CHI:	azıcık , bir lokmacık kopmuş .
 *EXP:	zavallı tavuk .
-*CHI:	niçin ü ağlıyor ?
+*CHI:	niçin ü@o ağlıyor ?
 *CHI:	bunlar , bu elimi bıraktı .
 *CHI:	çocuk gidiyor şimdi .
 *CHI:	yarı yolda rastlıyacak [: rastlayacak] zebraya .
@@ -591,7 +591,7 @@
 *CHI:	ikisini de yutacak .
 *CHI:	bunları yutamadı çünkü .
 *CHI:	ikisi birdiler .
-*CHI:	oop yuttu zebra çocukları .
+*CHI:	oop@o yuttu zebra çocukları .
 *CHI:	çocuklar hemen çıktı ağzından .
 *CHI:	zebradan kurtuldular .
 *CHI:	birisi buraya , kamyonun burasına .
@@ -599,7 +599,7 @@
 *CHI:	ikiz oldular .
 *CHI:	ikiz kardeş ; ondan sonra xxx .
 *CHI:	öküz nasıl öter anne ?
-*MOT:	moo diye .
+*MOT:	moo@o diye .
 *CHI:	sincap ?
 *MOT:	sincap bağırır .
 %com:	the adult speech and child speech is very mized up in this section of the written text
@@ -610,7 +610,7 @@
 *CHI:	eşek ai ai ai .
 *CHI:	miyav kedi .
 *CHI:	kartal kuşu nasıl ?
-*EXP:	u uu uuu belki .
+*EXP:	u@o uu@o uuu@o belki .
 *CHI:	öyle yapmaz .
 *CHI:	kartal kuşu olduğu için çok kalın ses yapar .
 *CHI:	uçuyor kartal .

@@ -328,7 +328,7 @@
 *CHI:	geçen sene böyle araba .
 *EXP:	neyle resim yaparsın ?
 *CHI:	hiç defterlen resim yaparım .
-*CHI:	gızzzz .
+*CHI:	gızzzz@b .
 %com:	sound gesture
 *MOT:	kalemsiz olurmu ?
 *CHI:	olur .
@@ -461,7 +461,7 @@
 *EXP:	hadi evimize gidelimmi ?
 *CHI:	şimdi değil .
 *CHI:	öğretmen burda benlen konuştu , bunları getirdi .
-*EXP:	Barboros'a uğrıyalım [: uğrayalım] giderken .
+*EXP:	Barboros'a [: Barboros'a] uğrıyalım [: uğrayalım] giderken .
 *CHI:	yo [: yok] şimdi değil .
 *CHI:	şu öğretmen gitsin de öyle gidelim .
 *EXP:	olur .
@@ -492,8 +492,8 @@
 *CHI:	onun üzerine çay dökülürmü ?
 *CHI:	dökülmez onun .
 *CHI:	üzerine .
-*CHI:	vrrr .
-*CHI:	jırrr .
-*CHI:	tırrr .
+*CHI:	vrrr@o .
+*CHI:	jırrr@o .
+*CHI:	tırrr@o .
 %com:	sound gestures imitating the sound cars make while playing with them
 @End

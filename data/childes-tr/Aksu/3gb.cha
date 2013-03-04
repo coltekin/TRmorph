@@ -249,7 +249,7 @@
 *EXP:	kar yiyorsanız helva yapın yiyin karı .
 *CHI:	kardan adam yaptık .
 *EXP:	kimle beraber ?
-*CHI:	xxx le .
+*CHI:	xxx le@a .
 *EXP:	nasıl yaptınız ?
 *CHI:	gagasını yaptı .
 *CHI:	burnunu havuçla yapmadı .
@@ -320,7 +320,7 @@
 *EXP:	sen hiç baston gördünmü ?
 *CHI:	gördüm .
 *CHI:	annemin var .
-*CHI:	tek xxx nın bastonu var .
+*CHI:	tek xxx nın@a bastonu var .
 *EXP:	başka kimse kullanmıyormu ?
 *CHI:	kullanmıyor başka kimse .
 *EXP:	peki canım .

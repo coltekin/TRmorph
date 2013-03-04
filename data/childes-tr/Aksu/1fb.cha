@@ -16,7 +16,7 @@
 *CHI:	sen , şey , bizim evde bunları getirmemiştin .
 *CHI:	bizimkiyle oynuyordun .
 *EXP:	kimi itiyor ?
-*CHI:	çocu xxx , oğlanı itiyor .
+*CHI:	çocu@a xxx , oğlanı itiyor .
 *CHI:	çocuğu itiyor .
 *EXP:	bu kim ?
 *CHI:	anne .
@@ -134,7 +134,7 @@
 *EXP:	orda ne yapıyor annen ?
 *CHI:	annemmi ?
 *EXP:	ha .
-*CHI:	annem hep dolaşıyor beni bırakıpta .
+*CHI:	annem hep dolaşıyor beni bırakıpta [: bırakıp da] .
 *CHI:	beni de götürecek .
 *EXP:	ne zaman ?
 *CHI:	gelince .

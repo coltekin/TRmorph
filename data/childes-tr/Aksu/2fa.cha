@@ -248,7 +248,7 @@
 *EXP:	peki dudağına ne renk sürüyor ?
 *CHI:	ruj sürüyor dudağına .
 *EXP:	koku sürüyormu ?
-*CHI:	no .
+*CHI:	no@a .
 %com:	gestures
 *EXP:	güzel kokusu var mı annenin ?
 *CHI:	var .

@@ -48,7 +48,7 @@
 *CHI:	oynuyoruz .
 *EXP:	dışarıda ne yapıyorsunuz ?
 *CHI:	kuyu kazıyoruz .
-*CHI:	Arif te var .
+*CHI:	Arif te [: de] var .
 *EXP:	efendim ?
 *CHI:	Arif , Arif .
 *EXP:	nasıl kazıyorsunuz kuyuyu ?
@@ -279,7 +279,7 @@
 *CHI:	bu da , atlar da şey yer .
 *CHI:	onlar da ot yiyer [: yer] .
 *CHI:	zürafa da et yemez de şey yer .
-*CHI:	çımlık yer .
+*CHI:	çımlık@c yer .
 *CHI:	şey yer , ceviz yer .
 *EXP:	köpekler niye su içerler ?
 *CHI:	içmezler .
@@ -350,11 +350,11 @@
 *CHI:	okumayı öğrendim .
 *CHI:	senin yazın Atatürk .
 *CHI:	sevindinmi Atatürk ?
-*EXP:	twenty+three Nisan ?
+*EXP:	yirmi üç nisan ?
 %com:	The number twenty+three was actually said in Turkish
 *CHI:	bilmiyorum .
 *CHI:	B hani biliyorsun .
-*CHI:	twenty+three Nisanı bilmiyorum .
+*CHI:	yirmi üç nisanı bilmiyorum .
 %com:	The number twenty+three was actually said in Turkish
 *EXP:	bugün ne oldu , ne yaptık ?
 *CHI:	hayvanlarla oynadım .
@@ -381,8 +381,8 @@
 *CHI:	bak bunlar boncuk .
 *CHI:	ben bunları boyamasını biliyorum .
 *CHI:	bende o renkler var .
-*CHI:	lingo şeyimde var bunlardan .
-*CHI:	lingo şeyimde var .
+*CHI:	lingo [: lego] şeyimde var bunlardan .
+*CHI:	lingo [: lego] şeyimde var .
 *CHI:	bu renklerden vardı .
 *CHI:	sonra şu renk vardı .
 *CHI:	şu renk vardı .
@@ -469,7 +469,7 @@
 *EXP:	ne yapacaklar sinemada ?
 *CHI:	seyredecekler filmleri .
 *EXP:	ne zaman gelecekler ?
-*CHI:	one saat sonra gelecekler .
+*CHI:	bir saat sonra gelecekler .
 %com:	the number "one" was actually said in Turkish
 *EXP:	neyle gittiler sinemaya ?
 *CHI:	yürüyerek gittiler .

@@ -12,7 +12,7 @@
 *CHI:	işte .
 *EXP:	niye Elif doğuracak annen sana ?
 *CHI:	ee , benim kardeşim yok .
-*EXP:	istiyormusun bi [: bir] kardeş ?
+*EXP:	istiyormusun bi(r) kardeş ?
 *CHI:	istiyorum .
 *EXP:	kız mı oğlan mı ?
 *CHI:	Elif , Elif olucak [: olacak] Elif .
@@ -46,7 +46,7 @@
 *EXP:	nereye gidiyorlar ?
 *CHI:	evine .
 *CHI:	bu evine , büyük evine , kocaman .
-*EXP:	xxx veriyorum sana dur bakıyım [: bakalım] .
+*EXP:	xxx veriyorum sana dur bakıyım [: bakayım] .
 *CHI:	onları al ki evine girsin .
 *EXP:	alalım bakalım .
 *EXP:	kimler var evde ?
@@ -101,7 +101,7 @@
 *EXP:	sen koşarmısın ?
 *CHI:	ben koşmam .
 *CHI:	yatıyorlar .
-*CHI:	köpek te yatıyor .
+*CHI:	köpek te [: de] yatıyor .
 *EXP:	niye yatıyorlar ?
 *CHI:	uykuları geldimiş [: gelmiş] .
 *EXP:	bak bebekleri de var bir tane .
@@ -159,7 +159,7 @@
 *EXP:	sen burda uyuyormusun ?
 *CHI:	akşam uyurlar .
 *EXP:	akşam uyurlar tabii .
-*CHI:	araba da vızzz gidiyor .
+*CHI:	araba da vızzz@o gidiyor .
 *EXP:	sen hangi arabaları seviyorsun ?
 *EXP:	sizin arabanız varmı ?
 *CHI:	var ya .
@@ -169,7 +169,7 @@
 *CHI:	ama arkası xxx hani .
 *CHI:	hani ben dün araba gördüm sabahleyin .
 *EXP:	evet .
-*CHI:	o zaman nı nı nı yapıyordu .
+*CHI:	o zaman nı@o nı@o nı@o yapıyordu .
 *EXP:	araba mı ?
 *CHI:	arabanın üstünde ama .
 *CHI:	o zaman ben ondan korktum .
@@ -184,7 +184,7 @@
 *EXP:	açılmazsa binemez ki insanlar içine değil mi ?
 *CHI:	o zaman ben açarım .
 *EXP:	aç açabilirsin tabii , aç bakalım .
-*CHI:	vızz , şimdi alalım içinden .
+*CHI:	vızz@o , şimdi alalım içinden .
 *EXP:	al bakalım yorganını .
 *CHI:	sonra da arabaya bindirelim .
 *EXP:	tabii ya .
@@ -272,7 +272,7 @@
 *CHI:	kızının ismi ?
 *EXP:	hı .
 *CHI:	şey .
-*EXP:	ney [: ne] ?
+*EXP:	ney [:: ne] ?
 *CHI:	bilmiyorum ki kızının ismini .
 *EXP:	senin annen ne zaman uyur ?
 *CHI:	benim annem erkenden uyur .
@@ -283,7 +283,7 @@
 *CHI:	niye açılıyor bu ?
 *EXP:	açılır .
 *EXP:	nasıl süsleniyor senin annen ?
-*EXP:	anlat bana bakıyım [: bakalım] .
+*EXP:	anlat bana bakıyım [: bakayım] .
 *CHI:	bilmiyorum .
 *EXP:	hiç görmedinmi anneni süslenirken ?
 *CHI:	gördüm .
@@ -292,7 +292,7 @@
 *EXP:	süslenirken ne yapıyor ?
 *CHI:	süslenirken saçını tarıyor .
 *EXP:	sen de süsleniyormusun ?
-*CHI:	süsleni xxx , süslenmiyorum .
+*CHI:	süsleni@a xxx , süslenmiyorum .
 *EXP:	hiç süslenmiyormusun ?
 *CHI:	evet .
 *EXP:	saçını tarıyormusun ?
@@ -412,7 +412,7 @@
 *CHI:	kullanmasın .
 *EXP:	sen gülmesini biliyormusun ?
 *CHI:	biliyorum .
-*EXP:	gülebilirmisin bana sen bi [: bir] .
+*EXP:	gülebilirmisin bana sen bi(r) .
 *CHI:	valla biliyorum .
 *EXP:	haa , iyi .
 *EXP:	dur bakalım şimdi başka birşey oynayacağız .
@@ -509,7 +509,7 @@
 *CHI:	ikisini de seviyorum .
 *EXP:	onlar sarılıp öpüyorlarmı seni ?
 *CHI:	öpüyorlar .
-*EXP:	öpp xxx yapıyorlar değilmi ?
+*EXP:	öpp@a xxx yapıyorlar değilmi ?
 *CHI:	hıı .
 *EXP:	başka ne yapıyorlar sana ?
 *CHI:	başka başka sarılıyorlar .
@@ -572,10 +572,10 @@
 *EXP:	söyle annene de götürsün seni .
 *MOT:	geçen sene olsun ki .
 *EXP:	evet .
-*CHI:	o zaman bi [: bir] , bir oraya gidelim .
+*CHI:	o zaman bi(r) , bir oraya gidelim .
 *CHI:	bir de oraya gidelim .
 *EXP:	tabii , denize de gideceksin bu sene dimi [: değil mi] .
-*CHI:	bir kere oturya [?] gidelim , bi [: bir] de xxx .
+*CHI:	bir kere oturya [?] gidelim , bi(r) de xxx .
 *CHI:	Fıstık sinemasına , bir de sinemaya gidelim .
 *EXP:	sinemada gazoz içiyormusun ?
 *CHI:	gazoz içiyorum .
@@ -599,7 +599,7 @@
 *CHI:	ben bu şarkıyı çok seviyorum .
 *EXP:	ne diyor o şarkı ?
 *CHI:	bilmiyorum ki .
-*EXP:	ta ra ra ra .
+*EXP:	ta@si ra@si ra@si ra@si .
 *EXP:	şarkı söyleyelimmi senlen [: senle] .
 *CHI:	söylemiyelim [: söylemeyelim] .
 *EXP:	niçin ?
@@ -622,7 +622,7 @@
 %com:	Alev singsku vak vak vak
 *EXP:	biliyormusun bunu sen ?
 *CHI:	biliyorum .
-*EXP:	bir tane daha vardı , dur bakıyım [: bakalım] .
+*EXP:	bir tane daha vardı , dur bakıyım [: bakayım] .
 *EXP:	sana söyleyim [: söyleyeyim] .
 *CHI:	hep sarıdır söylüyorlardı bir de .
 *EXP:	hangisi o , ben hiç duymadım .
@@ -846,7 +846,7 @@
 *CHI:	gibi Elif .
 *EXP:	Elif makarnası .
 *EXP:	sen makarnamısın ?
-*CHI:	makar .
+*CHI:	makar(na) .
 *CHI:	bir makarna diyorlar , bir de Elif .
 *EXP:	aslında seni yemek lazım galiba .
 *EXP:	sen makarnaysan , öyle mi ?
@@ -900,7 +900,7 @@
 *EXP:	aaa , napıcaklarmış [: ne yapacaklarmış] ?
 *CHI:	olmıyacakmış [: olmayacakmış] doğum günü demek , olmıyacakmış [: olmayacakmış] .
 *EXP:	başkalarının doğum günü oluyormu burda ?
-*CHI:	ı ıh .
+*CHI:	<ı ıh> .
 *EXP:	aa , yazık .
 *CHI:	yazık olmaz ki .
 *EXP:	niye , bir güzel doğum günü olsun .

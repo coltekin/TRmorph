@@ -401,7 +401,7 @@
 *EXP:	yüzünü gözünü boyuyormu ?
 *CHI:	tabii .
 *EXP:	nasıl boyuyor ?
-*EXP:	gel bana anlat bakıyım .
+*EXP:	gel bana anlat bakıyım [: bakayım] .
 *CHI:	patlatayımmı bunu ?
 %com:	he is referring to the bag in his hand .
 *EXP:	evet , canım .
@@ -621,7 +621,7 @@
 *CHI:	vırrr xxx iniyor .
 *CHI:	şimdi .
 *EXP:	o uçak mı ?
-*CHI:	bu abalar böyle vjjj xxx .
+*CHI:	bu abalar böyle vjjj@o xxx .
 *EXP:	ama nasıl uçuyor o araba ?
 *EXP:	uçan araba varmı ?
 *CHI:	uçan ?

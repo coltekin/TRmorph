@@ -371,9 +371,9 @@
 *CHI:	okumayı öğrendim .
 *CHI:	senin yazın Atatürk .
 *CHI:	sevindinmi Atatürk ?
-*BRO:	twenty+three Nisan xxx hani biliyorsun xxx .
+*BRO:	yirmi üç nisan xxx hani biliyorsun xxx .
 *CHI:	bilmiyorum .
-*CHI:	twenty+three Nisanı bilmiyorum .
+*CHI:	yirmi uç nisanı bilmiyorum .
 %com:	the number twenty+three was actually said in Turkish
 *EXP:	bugün ne oldu , ne yaptık ?
 *CHI:	hayvanlarla oynadım .
@@ -400,9 +400,9 @@
 *CHI:	bak , bunlar boncuk .
 *CHI:	ben bunları boyamasını biliyorum .
 *CHI:	bende o renkler var .
-*CHI:	lingo şeyim de var bunlarda .
+*CHI:	lingo [: lego] şeyim de var bunlarda .
 %com:	he is referring to a toy , probably to a lego set .
-*CHI:	lengo şeyim de var .
+*CHI:	lengo [: lego] şeyim de var .
 *CHI:	bu renklerden vardı .
 *CHI:	sonra , şu renk vardı .
 *CHI:	şu renk vardı .

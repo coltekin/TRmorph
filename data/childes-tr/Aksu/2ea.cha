@@ -145,7 +145,7 @@
 *EXP:	kim verdi sana o balığı ?
 *CHI:	annem .
 *CHI:	bak denizde yıkanıyor .
-*CHI:	vrmmm .
+*CHI:	vrmmm@o .
 %com:	sound gesture
 *EXP:	Murat , sen bana söyle bakayım , senin annen ne zaman uyur ?
 *CHI:	şimdi .
@@ -155,8 +155,8 @@
 *CHI:	ha .
 *CHI:	kurt arabaya .
 *CHI:	balığı üstüne koyuyorum .
-*CHI:	bu da kurt adamın üstüne bum .
-*CHI:	bram bram .
+*CHI:	bu da kurt adamın üstüne bum@o .
+*CHI:	bram@o bram@o .
 *EXP:	senin annen süslenirmi ?
 *CHI:	süslenir .
 *EXP:	nasıl süslenir ?
@@ -232,8 +232,8 @@
 *CHI:	ama bu üstünden gidecek .
 *CHI:	bum bum bum .
 *EXP:	ne yaptın ?
-*CHI:	oop burdan girmiş bu .
-*CHI:	op kapandı .
+*CHI:	oop@o burdan girmiş bu .
+*CHI:	op@o kapandı .
 *CHI:	arabayı çekmesin .
 %com:	referring to a bridge
 *CHI:	bunu kapatıyımmı [: kapatayım mı] ?
@@ -407,7 +407,7 @@
 *EXP:	sapı neresi kılıcın ?
 *CHI:	burası .
 *EXP:	Musa oynuyormu bunlarlan [: bunlarla] ?
-*CHI:	no .
+*CHI:	no@a .
 %com:	 ?
 *EXP:	senin mi bunlar , Musa'nın mı ?
 *CHI:	benim .
@@ -458,7 +458,7 @@
 *EXP:	kurtlar ısırırmı ?
 *CHI:	yok .
 *CHI:	boynu var , çok kuvvetli .
-*CHI:	ve basıyorsun yanına , dans ediyorlar nay nay nay .
+*CHI:	ve basıyorsun yanına , dans ediyorlar nay@o nay@o nay@o .
 %com:	nay nay: imitative sound gesture for music and dance
 *EXP:	peki kurtlar ne yapar ?
 *CHI:	oynar .
@@ -475,7 +475,7 @@
 *CHI:	hı , büyük köpek .
 *CHI:	yemek yerler .
 *EXP:	niye su içerler ?
-*CHI:	vuruyorlar fos .
+*CHI:	vuruyorlar fos@o .
 %com:	fos: imitative sound gesture
 *EXP:	bak bu köpek gelse su içse ; niye su içiyor ?
 *EXP:	neden ?
@@ -511,7 +511,7 @@
 *CHI:	su altında ben kalacam [: kalacağım] .
 *CHI:	içine su yapıcam .
 *CHI:	kullanacam [: kullanacağım] , atıcam [: atacağım] içine .
-*CHI:	alıcam [: alacağım] balığı buf .
+*CHI:	alıcam [: alacağım] balığı buf@o .
 %com:	buf: imitative sound gesture for throwing the fish into water
 *EXP:	balıklar nasıl yüzer suyun içinde ?
 *CHI:	böyle gözleri var .

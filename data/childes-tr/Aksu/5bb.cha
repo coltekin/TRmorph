@@ -183,8 +183,8 @@
 %com:	düt: sound imitation of a car's horn
 *CHI:	bilmiyorum ki .
 *FAT:	araba vapuruna nasıl sokuyordun sen arabaları ?
-*EXP:	en iyisi ben biletçi olayım , biletçiyi konuşturayım ; dan dan .
-*EXP:	dan , dan dan dan .
+*EXP:	en iyisi ben biletçi olayım , biletçiyi konuşturayım ; dan@o dan@o .
+*EXP:	dan@o , <dan dan dan>@o .
 *EXP:	kapıları açalım değilmi , açtık kapıları , ondan sonra gelin , gelin , gelin , gelin , çabuk çabuk .
 *CHI:	kimler gelecek ?
 *EXP:	arabalara gelin diyor .
@@ -193,12 +193,12 @@
 *CHI:	a bu , a bu .
 *CHI:	bu buraya .
 *CHI:	bu içeriye .
-*EXP:	gelin gelin çabuk , gemi kalkıyor , vutt vutttttt .
+*EXP:	gelin gelin çabuk , gemi kalkıyor , vutt@o vutttttt@o .
 %com:	vutt vuttttt: she is imitating the sound of a ship's (ferry's) horn
 *CHI:	öyle demiyor .
-*CHI:	buuuu .
+*CHI:	buuuu@o .
 %com:	buuuu: that's the child's version of the sound the ferry makes
-*EXP:	buu diyor değilmi , biletçi de çan çalıyor , çan çan çan çan .
+*EXP:	buu@o diyor değilmi , biletçi de çan çalıyor , çan çan çan çan .
 *EXP:	hadi gelin diyor , gelsinler .
 *CHI:	denize bakıyor .
 %com:	he is referring to a doll
@@ -230,7 +230,7 @@
 *EXP:	hi , kaçacakmı kuşlar ?
 *CHI:	kaçacak .
 *EXP:	nereye kaçıyorlar kuşlar ?
-*CHI:	evine gidiyorlar .
+*CHI:	evine [:: evlerine] gidiyorlar .
 %com:	the above sentence is not correct; correct form: evlerine gid xxx .
 *EXP:	deme !
 *EXP:	nerede oturuyorlar kuşlar ?
@@ -246,7 +246,7 @@
 *CHI:	seni de be vurdum .
 *EXP:	ay yapma , yapma , korkarım , çok korkarım .
 *FAT:	korkuttun Burçak , kuvvetin gelmiş değilmi ?
-*FAT:	Burçak xxx uçağını göstersene , dütdürüt yapıyormusun ?
+*FAT:	Burçak xxx uçağını göstersene , dütdürüt@c yapıyormusun ?
 *CHI:	ha .
 *CHI:	ne ?
 *FAT:	askerler nasıl geçiyor söyle bakayım .
@@ -317,7 +317,7 @@
 %com:	affirmative sound gesture
 *FAT:	peki Burçak , sen Murat'lan [: Murat'la] ne oynuyorsun ?
 *CHI:	koşmuş , koşmuş .
-*CHI:	ondan sonra cumbadak diye düşmüş .
+*CHI:	ondan sonra cumbadak@o diye düşmüş .
 %com:	cumbadak: imitative sound for falling
 *FAT:	peki Burçak sen Murat'lan [: Murat'la] ne zaman oynuyorsun ?
 *CHI:	kapattım kapısını .
@@ -361,10 +361,10 @@
 *CHI:	işte bu vapurdan .
 *CHI:	işte burda var yüzecek .
 *FAT:	bu vapur nasıl yüzüyor ?
-*CHI:	cıpa cıpa .
+*CHI:	cıpa@o cıpa@o .
 %com:	cıpa cıpa/cıbı cıbı: sound imitation of water when swimming
 *FAT:	yüzebiliyormu vapur ?
-*CHI:	vuuttttt .
+*CHI:	vuuttttt@o .
 %com:	vuutttt: sound imitation of a ship's horn
 *FAT:	şu ne , şurası ne vapurun ?
 *CHI:	ordan köpük çıkarıyor .
@@ -372,7 +372,7 @@
 *CHI:	işte .
 *FAT:	ne var burda [: burda] da köpük çıkarıyor ?
 *CHI:	köpük .
-*CHI:	vuttttt .
+*CHI:	vuttttt@o .
 %com:	again imitating the sound of a ship's horn
 *FAT:	Burçak , vapurun nesi var burda ?
 *CHI:	orda altında pervanesi var .
@@ -381,12 +381,12 @@
 *CHI:	kaptan çalıştırıyor .
 *CHI:	açıl dedığı [?] pervane dönüyor .
 *EXP:	sonra ne oluyor ?
-*CHI:	vuttt .
+*CHI:	vuttt@o .
 *EXP:	diye ses çıkarıyor .
 *EXP:	niye düdük çalar vapurlar biliyormusun ?
 *EXP:	niçin düdük çalar vapurlar ?
 *CHI:	işte .
-*CHI:	vutt .
+*CHI:	vutt@o .
 *EXP:	Burçakcım [: Burçak'çığım] annen nerde ?
 *CHI:	gitti .
 *EXP:	nereye gitti ?
@@ -429,7 +429,7 @@
 *FAT:	anlatsana Alev teyzeye , uzaktan nasıl geliyor .
 *FAT:	vapur .
 *FAT:	böyle feneri nasıl yanıyor söyle .
-*CHI:	vutttt .
+*CHI:	vutttt@o .
 *CHI:	yanıyor sönüyor .
 *CHI:	sönüyor yanıyor .
 *CHI:	gine [: yine] yanıyor sönüyor .
@@ -438,7 +438,7 @@
 *FAT:	söndükten sonra ne oluyor ?
 *FAT:	vapur ne yapıyor ?
 *CHI:	vapur geliyor .
-*CHI:	vuttttt diye .
+*CHI:	vuttttt@o diye .
 *EXP:	peki anne ne zaman geliyor canım ?
 *CHI:	vapurla geliyor .
 *EXP:	ama ne zaman ?
@@ -672,10 +672,10 @@
 *FAT:	anneyi alıyoruz , peki anne neylen [: neyle] geliyor ?
 *CHI:	vapurlan [: vapurla] .
 *FAT:	peki nasıl geliyor anne ?
-*CHI:	vuuu yapıyor .
+*CHI:	vuuu@o yapıyor .
 %com:	he is imitating the sound of the ferry's horn
 *FAT:	vapur nasıl geliyor Burçak ?
-*CHI:	vuu yapıyor ?
+*CHI:	vuu@o yapıyor ?
 *FAT:	peki niye geliyor ?
 *CHI:	işte .
 *FAT:	a işte olurmu ?
@@ -750,16 +750,16 @@
 *FAT:	diyormusun ?
 *CHI:	diyorum , çalıştırıyor .
 *FAT:	nasıl çalışıyor vapur ?
-*CHI:	vuuu geliyor , anne de çıkıyor vapurdan .
+*CHI:	vuuu@o geliyor , anne de çıkıyor vapurdan .
 *CHI:	arabaya biniyor , bizim tabışkanımıza .
 *FAT:	peki vapur nasıl çalışıyor Burçak ?
-*CHI:	vuut ben kaptan amcaya çalıştır diyorum .
+*CHI:	vuut@o ben kaptan amcaya çalıştır diyorum .
 *CHI:	çalıştırmış , çalıştırıyor .
 *FAT:	peki Burçak vapurun feneri nasıl yanıyor ?
 *CHI:	fener ?
-*CHI:	cıt cıt diye sönüyor .
-*CHI:	cıt cıt diye sönüyor .
-*CHI:	cıt cıt cıt cıt diye sönüyor .
+*CHI:	cıt@o cıt@o diye sönüyor .
+*CHI:	cıt@o cıt@o diye sönüyor .
+*CHI:	cıt@o cıt@o cıt@o cıt@o diye sönüyor .
 %com:	gestures
 *FAT:	peki Burçak , Kerem niçin ağlıyor ?
 *CHI:	eee diye ağlıyor .
@@ -770,9 +770,9 @@
 *CHI:	ha .
 %com:	affirmative sound gesture
 *FAT:	peki Burçak , helikopter nasıl uçuyor ?
-*CHI:	pıt pıt .
+*CHI:	pıt@o pıt@o .
 %com:	gestures
-*CHI:	gggggggm .
+*CHI:	gggggggm@o .
 *FAT:	peki helikopter niçin uçuyor ?
 *CHI:	bak .
 *CHI:	bak içerde bak .

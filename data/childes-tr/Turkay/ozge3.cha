@@ -38,7 +38,7 @@
 %act:	MOT takes out another pair of toys .
 *MOT:	hatırlandın mı annecim ?
 *MOT:	kimdi bunlar ?
-*MOT:	snoopy .
+*MOT:	Snoopy .
 *MOT:	al bakayım .
 *CHI:	ab:bo !
 %xmor:	INTERJ|abbo .
@@ -156,7 +156,7 @@
 *CHI:	0 .
 %act:	CHI shows the eyes .
 *MOT:	burun .
-*MOT:	buradan geçmez di mi annecim ?
+*MOT:	buradan geçmez <di mi> [: değil mi] annecim ?
 %act:	CHI plays with another toy in which there are holes in different shapes , she makes the different shapes pass thorugh the holes .
 *MOT:	ne geçer buradan ?
 *MOT:	bu geçebilir .
@@ -173,7 +173,7 @@
 *MOT:	sen koy bakayım .
 *MOT:	öbür taraftan .
 %act:	CHI plays with the weather-cock .
-*MOT:	takacaksın ondan sonra di mi annecim ?
+*MOT:	takacaksın ondan sonra <di mi> [: değil mi] annecim ?
 %act:	MOT winds the weather-cock .
 *MOT:	sen bas , tamam .
 *MOT:	<bas> [/] .
@@ -275,7 +275,7 @@
 *MOT:	bunlar kim ?
 *MOT:	baba hani ?
 *MOT:	<hani baba> [//] .
-*MOT:	baba di mi ?
+*MOT:	baba <di mi> [: değil mi] ?
 *MOT:	anne .
 *MOT:	bebek .
 *MOT:	bu bebek kim ?
@@ -309,7 +309,7 @@
 *MOT:	baktım .
 *MOT:	öptün mü ?
 %act:	CHI kisses her , too .
-*MOT:	öptün di mi ?
+*MOT:	öptün <di mi> [: değil mi] ?
 *MOT:	kaldırıyorum bunları bak .
 *MOT:	burada kim var ?
 *MOT:	bebek var .

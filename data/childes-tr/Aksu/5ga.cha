@@ -195,7 +195,7 @@
 *EXP:	at şarap çorbası içermi dersin ?
 *CHI:	içer .
 *EXP:	ya sarhoş olursa ne olacak ?
-*CHI:	şa .
+*CHI:	şa(rap) .
 *CHI:	şarap içirmiyelim [: içirmeyelim] .
 *EXP:	içirmiyelim [: içirmeyelim] şarap .
 *CHI:	şey , şey içirelim .
@@ -287,7 +287,7 @@
 *EXP:	efendim ?
 *CHI:	bunun kirli pantalonu , değilmi ?
 *EXP:	kirli ne olmuş ?
-*CHI:	yı .
+*CHI:	yı@a .
 *CHI:	yıkamış annesi .
 *EXP:	annesi yıkamış .
 *CHI:	hep yere sürüyor değilmi ?
@@ -295,7 +295,7 @@
 %com:	unintelligable
 *EXP:	eskiyormu ?
 *CHI:	pantalonu , benim pantalonum çamur oldu .
-*CHI:	c onu annem yıkadı .
+*CHI:	c@c onu annem yıkadı .
 *CHI:	geçti çamuru .
 *EXP:	hı , geçti değilmi ?
 *EXP:	tabii bazen çamur olur dimi [: değil mi] .
@@ -316,8 +316,8 @@
 *CHI:	bunla [: bununla] gidiyor .
 *CHI:	abisi de , abisinin de onu yakalar .
 *CHI:	evlerine , evlerine götürür .
-*CHI:	buraya , buraya , git bakıyım [: bakalım] eve der .
-*EXP:	niye gönderiyor bakıyım [: bakalım] eve abisi ?
+*CHI:	buraya , buraya , git bakıyım [: bakayım] eve der .
+*EXP:	niye gönderiyor bakıyım [: bakayım] eve abisi ?
 *CHI:	birisi yer diye .
 *EXP:	yer diye , kim yer ?
 *CHI:	havhavlar yer .
@@ -412,7 +412,7 @@
 *EXP:	ne yapıyor sana deden ?
 *CHI:	yalnız giderim .
 *EXP:	yalnız gidermisin ?
-*CHI:	i xxx trenle giderim .
+*CHI:	i@a xxx trenle giderim .
 *EXP:	sahi mi ?
 *EXP:	tek başına ?
 *EXP:	korkmazmısın ?
@@ -430,8 +430,8 @@
 *EXP:	babaannen mi ?
 *CHI:	hı .
 *EXP:	ah yazık , ne zaman ölmüş ?
-*CHI:	hiç konuşamıyor , üük diyor .
-*CHI:	durmadan hırlıyor , khır , khır hırlıyor .
+*CHI:	hiç konuşamıyor , üük@o diyor .
+*CHI:	durmadan hırlıyor , khır@o , khır@o hırlıyor .
 *EXP:	öyle mi yapıyor ?
 *EXP:	senin babaannenin saçları beyaz oldumu ?
 *CHI:	oldu , sarı sarı oldu .
