@@ -1,11 +1,13 @@
-BEGIN {line=""} 
+BEGIN {line="";lineN=0} 
 {
     while (/^\t/) {
         line = (line  $0);
         getline;
    }
    if (line ~ /^\*/) {
-        gsub(/\*...:\t/, "", line); # delete the prefix
+        l = "{" lineN "} "
+        gsub(/\*...:\t/, l, line); # replace the prefix with the line number
+#        gsub(/\*...:\t/, "", line); # delete the prefix
         # insert space before these:
         line = gensub(/([^ \t\[\]])([-+‘”"/*?!;.,]+)/, "\\1 \\2", "g", line);
         # insert space after these:
@@ -19,4 +21,5 @@ BEGIN {line=""}
         if (line) {print line};
    }
    line = $0;
+   lineN = lineN + 1
 }
