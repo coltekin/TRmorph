@@ -32,7 +32,7 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                   %<ngtv%> %<bch%> %<disc_part%> %<pau%> %<ui%>
                   %<punct%>
                   %<redup%>
-                  %<exist%> %<ntexist%> %<not%>
+                  %<exist%> %<notexist%> %<not%>
                   %<alpha%>
                   %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%> %<VJ_%0%>
                   %<dimin%>
@@ -41,15 +41,15 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
                     %<D_yIS%> %<D_mA%>
                   ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
-                  ^pA ^pI ^pO ^pU
+                  ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
                   @RB @MB @dB
-                  @APOS
+                  @APOS @ABBR
                   @tSep @dSep
                   @NCOMP
                   @DEL@ @DUP@ @DELS@
                   @LN @CAUS
                   @miSPC @opt3
-                  ^sFUV ^sFRV ^sBUV ^sBRV %^sVC %^sUC
+                  ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
 !                   e,i   ü,ö   a,ı   o,u   
 
 LEXICON Root
@@ -71,6 +71,8 @@ OnomRoot;
 Exceptions;
 WHwords;
 Alpha;
+Abbreviation;
+!!!__PARTWORDS_true__PartWords;
 
 !
 ! conjunctions
@@ -92,6 +94,18 @@ LEXICON CnjSub
 %<cnjsub%>:@RB      #;
 
 !
+! The following are for multi-word or discontinous conjunctions.
+!
+LEXICON CnjCooPart
+%<cnjcoo%>%<part%>:@RB      #;
+
+LEXICON CnjAdvPart
+%<cnjadv%>%<part%>:@RB      #;
+
+! LEXICON CnjSubPart
+! %<cnjsub%>%<part%>:@RB      #;
+
+!
 ! Postpositions
 !
 ! TODO: the postpositions take different inflections. We allow them 
@@ -111,6 +125,13 @@ LEXICON PostPCont
                     #;
                     Ninfl;
 
+LEXICON PostPKi
+%<postp%>:@RB       PostPKiCont;
+
+LEXICON  PostPKiCont
+                    Ki;
+                    PostPCont;
+
 LEXICON PostPlocation
                 PostPloc;
                 PostPdat;
@@ -127,6 +148,7 @@ LEXICON PostPloc
 
 LEXICON PostPlocCont
 %<loc%>%<postp%>:^D^A@MB     #;
+%<loc%>%<postp%>:^D^A@MB     Ki;
 
 LEXICON PostPdat
 %<n%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
@@ -234,7 +256,10 @@ LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<ncomp%>%<np%>:^(s)^I@NCOMP@RB NPcont;
 
 LEXICON NP
-%<np%>:0@RB   NPcont;
+%<np%>:@RB   NPcont;
+
+LEXICON NP_abbr
+%<np%>%<abbr%>:@ABBR@RB   NPAposCont;
 
 LEXICON NPcont
                 #;
@@ -249,14 +274,14 @@ LEXICON   NPAposCont
                 Ninfl;
 
 LEXICON NPnation
-%<np%>:0@RB   NPnationCont;
+%<np%>:@RB   NPnationCont;
 
 LEXICON NPnationCont
                 NPcont;
                 ND_CAlanguage;
 
 LEXICON NPperson
-%<np%>:0@RB   NPpersonCont;
+%<np%>:@RB   NPpersonCont;
 
 LEXICON NPpersonCont
                 NPcont;
@@ -291,8 +316,8 @@ LEXICON Ninfl
 !
 
 LEXICON Nfamily
-%<n%>:0@RB   Ncont;
-%<n%>:0@RB   NfamCont;
+%<n%>:@RB   Ncont;
+%<n%>:@RB   NfamCont;
 
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
@@ -304,17 +329,42 @@ LEXICON NfamPosCont
                            ! to accept forms like dayı-n-lar-ım
 
 !
-! End of family nouns possessive-plural 
+! Noun abbreviations
+!
+
+LEXICON N_unit  ! we may treat these differntly later
+%<n%>%<abbr%>:@ABBR@RB       Ncont;
+
+LEXICON N_abbr  
+%<n%>%<abbr%>:@ABBR@RB       Ncont;
+
+LEXICON NAbbrCont
+0:@APOS@MB              Ncont;
+
+!
+! End of family nouns + possessive-plural 
 !
 
 LEXICON N
-%<n%>:0@RB   Ncont;
+%<n%>:@RB   Ncont;
+
+LEXICON NPart
+%<n%>%<part%>:@RB   #;
+
+LEXICON NPartLast
+%<n%>%<part%>:@RB   Ncont;
 
 LEXICON Ncont
     Nderiv;
     NcompCont; ! includes final
     NcompInfl;
 
+LEXICON Ntime
+%<n%>:@RB    NtimeCont;
+
+LEXICON NtimeCont
+                    Ki;
+                    Ncont;
 
 LEXICON Nplu
 %<pl%>:l^Ar@MB NpluCont;
@@ -323,7 +373,7 @@ LEXICON NpluCont
    #;
    Npos;
    Ncase;
-   NomPredicate;
+   NomPredicatePLU;
    ND_CA;
 
 LEXICON Npos
@@ -389,12 +439,16 @@ LEXICON KiCont
 ! This part deals with person agreement
 !
 
-LEXICON NomPredicate
+LEXICON NomPredicatePLU
                         NomPredPagr;
-                        NomPredPagr3p;
+                        NomPredPagr3s;
                         NomPredDir;
                         NomPredQ;
                         CplAll;
+
+LEXICON NomPredicate
+                        NomPredPagr3p;
+                        NomPredicatePLU;
 
 LEXICON NomPredicateMAK
                         NomPredPagr3s;
@@ -462,6 +516,12 @@ LEXICON DIrEnd
 LEXICON Adj
 %<adj%>:@RB        AdjCont;
 
+LEXICON AdjPartLast
+%<adj%>%<part%>:@RB        AdjCont;
+
+LEXICON AdjPart
+%<adj%>%<part%>:@RB        #;
+
 LEXICON AdjNcomp
 @NCOMP%<adj%>:^(s)^I@NCOMP@RB AdjCont;
 
@@ -471,6 +531,12 @@ LEXICON  AdjCont
 
 LEXICON Adv
 %<adv%>:@RB         AdvCont;
+
+LEXICON AdvPartLast
+%<adv%>%<part%>:@RB        AdvCont;
+
+LEXICON AdvPart
+%<adv%>%<part%>:@RB        #;
                   
 LEXICON QAdv
 %<adv%>%<qst%>:@RB  AdvCont;
@@ -507,7 +573,7 @@ LEXICON PersPrn
 %<prn%>%<pers%>:@RB PrnCont;
 
 LEXICON PPrnBirBir
-%<prn%>%<pers%>:@RB PrnContNoPlu;
+%<prn%>:@RB PrnContNoPlu;
 
 LEXICON PrnContNoPlu
         Npos;
@@ -533,528 +599,8 @@ LEXICON DetCont
                     #;
                     JP_poss;    ! TODO: not all determiners do this.
 
-!
-! Numbers
-!
 
-LEXICON Number
-    NumberAlpha;
-    NumberNumeric;
-    NumberRoman;
-
-
-!
-! This is rather ugly with a lot of replication. There might be a
-! neater solution here too, but I'm out of clues. It could be a lot
-! neater with xfst (with defines, a single regex in <> is not really 
-! neat), but then, the suffixing would become non-standard/difficult/ugly.
-!
-
-LEXICON NumberAlpha
-    n0;
-    n1;
-    n10;
-    n100;
-    n1k;
-    n1m;
-    n1g;
-    n1t;
-! more ??
-
-LEXICON n0
-sıfır   NumStem;
-
-LEXICON n1 ! 1 to 9
-bir@dB      n1cont;
-iki@dB      n1cont;
-üç@dB       n1cont;
-dör^t@dB   n1cont;
-beş@dB      n1cont;
-altı@dB     n1cont;
-yedi@dB     n1cont;
-sekiz@dB    n1cont;
-dokuz@dB    n1cont;
-
-
-
-LEXICON n1cont
-    NumStem;
-    NumHalf;
-
-LEXICON n10 ! 11 to 99
-on@dB       n10cont;
-yirmi@dB    n10cont;
-otuz@dB     n10cont;
-kırk@dB     n10cont;
-elli@dB     n10cont;
-altmış@dB   n10cont;
-yetmiş@dB   n10cont;
-seksen@dB   n10cont;
-doksan@dB   n10cont;
-
-LEXICON n10cont
-    NumStem;
-    NumHalf;
-    n1;
-
-
-LEXICON n100 ! 100 to 999
-    prefixN100;
-    N100;
-
-LEXICON prefixN100
-iki@dB      N100;
-üç@dB       N100;
-dör^t@dB   N100;
-beş@dB      N100;
-altı@dB     N100;
-yedi@dB     N100;
-sekiz@dB    N100;
-dokuz@dB    N100;
-
-LEXICON N100
-yüz@dB    n100cont;
-
-LEXICON   n100cont
-    NumStem;
-    NumHalf;
-    n10;
-    n1;
-
-
-!--------------------
-
-LEXICON n1k ! 1000 to 999,999
-    prefixN1k;
-    N1k;
-
-LEXICON prefixN1k
-    prefixN1k2;
-    prefixN1k10;
-    prefixN1k100;
-
-LEXICON prefixN1k2
-iki@dB      N1k2cont;
-üç@dB       N1k2cont;
-dör^t@dB   N1k2cont;
-beş@dB      N1k2cont;
-altı@dB     N1k2cont;
-yedi@dB     N1k2cont;
-sekiz@dB    N1k2cont;
-dokuz@dB    N1k2cont;
-
-LEXICON N1k2cont
-    N1k;
-
-LEXICON  prefixN1k10
-on@dB       N1k10cont;
-yirmi@dB    N1k10cont;
-otuz@dB     N1k10cont;
-kırk@dB     N1k10cont;
-elli@dB     N1k10cont;
-altmış@dB   N1k10cont;
-yetmiş@dB   N1k10cont;
-seksen@dB   N1k10cont;
-doksan@dB   N1k10cont;
-
-LEXICON N1k10cont
-    N1k;
-    prefixN1k2;
-
-LEXICON  prefixN1k100
-        N1k100pre;
-        N1k100;
-
-LEXICON   N1k100pre
-iki@dB      N1k100preCont;
-üç@dB       N1k100preCont;
-dör^t@dB   N1k100preCont;
-beş@dB      N1k100preCont;
-altı@dB     N1k100preCont;
-yedi@dB     N1k100preCont;
-sekiz@dB    N1k100preCont;
-dokuz@dB    N1k100preCont;
-
-LEXICON   N1k100preCont
-        N1k100;
-
-LEXICON N1k100
-yüz@dB  N1k100Cont;
-
-LEXICON     N1k100Cont
-    N1k;
-    prefixN1k10;
-
-LEXICON N1k
-bin@dB  n1kCont;
-
-LEXICON     n1kCont
-    NumStem;
-    NumHalf;
-    n100;
-    n10;
-    n1;
-
-!--------------------
-
-LEXICON n1m ! 1,000,000 to 999,999,999
-    prefixN1m;
-    N1mNoPrefix;
-
-LEXICON prefixN1m
-    prefixN1m1;
-    prefixN1m10;
-    prefixN1m100;
-
-LEXICON prefixN1m1
-bir@dB      N1m1cont;
-iki@dB      N1m1cont;
-üç@dB       N1m1cont;
-dör^t@dB   N1m1cont;
-beş@dB      N1m1cont;
-altı@dB     N1m1cont;
-yedi@dB     N1m1cont;
-sekiz@dB    N1m1cont;
-dokuz@dB    N1m1cont;
-
-LEXICON N1m1cont
-    N1m;
-
-LEXICON  prefixN1m10
-on@dB       N1m10cont;
-yirmi@dB    N1m10cont;
-otuz@dB     N1m10cont;
-kırk@dB     N1m10cont;
-elli@dB     N1m10cont;
-altmış@dB   N1m10cont;
-yetmiş@dB   N1m10cont;
-seksen@dB   N1m10cont;
-doksan@dB   N1m10cont;
-
-LEXICON N1m10cont
-    N1m;
-    prefixN1m1;
-
-LEXICON  prefixN1m100
-        N1m100pre;
-        N1m100;
-
-LEXICON   N1m100pre
-iki@dB      N1m100preCont;
-üç@dB       N1m100preCont;
-dör^t@dB   N1m100preCont;
-beş@dB      N1m100preCont;
-altı@dB     N1m100preCont;
-yedi@dB     N1m100preCont;
-sekiz@dB    N1m100preCont;
-dokuz@dB    N1m100preCont;
-
-LEXICON   N1m100preCont
-        N1m100;
-
-LEXICON N1m100
-yüz@dB  N1m100Cont;
-
-LEXICON     N1m100Cont
-    N1m;
-    prefixN1m10;
-
-LEXICON N1m
-milyon@dB   n1mCont;
-
-LEXICON N1mNoPrefix
-milyon@dB   NumStem;
-
-LEXICON     n1mCont
-    NumStem;
-    NumHalf;
-    n1k;
-    n100;
-    n10;
-    n1;
-
-!------------------
-
-LEXICON n1g ! 1,000,000,000 to 999,999,999,999
-    prefixN1g;
-    N1gNoPrefix;
-
-LEXICON prefixN1g
-    prefixN1g1;
-    prefixN1g10;
-    prefixN1g100;
-
-LEXICON prefixN1g1
-bir@dB      N1g1cont;
-iki@dB      N1g1cont;
-üç@dB       N1g1cont;
-dör^t@dB    N1g1cont;
-beş@dB      N1g1cont;
-altı@dB     N1g1cont;
-yedi@dB     N1g1cont;
-sekiz@dB    N1g1cont;
-dokuz@dB    N1g1cont;
-
-LEXICON N1g1cont
-    N1g;
-
-LEXICON  prefixN1g10
-on@dB       N1g10cont;
-yirmi@dB    N1g10cont;
-otuz@dB     N1g10cont;
-kırk@dB     N1g10cont;
-elli@dB     N1g10cont;
-altmış@dB   N1g10cont;
-yetmiş@dB   N1g10cont;
-seksen@dB   N1g10cont;
-doksan@dB   N1g10cont;
-
-LEXICON N1g10cont
-    N1g;
-    prefixN1g1;
-
-LEXICON  prefixN1g100
-        N1g100pre;
-        N1g100;
-
-LEXICON   N1g100pre
-iki@dB      N1g100preCont;
-üç@dB       N1g100preCont;
-dör^t@dB   N1g100preCont;
-beş@dB      N1g100preCont;
-altı@dB     N1g100preCont;
-yedi@dB     N1g100preCont;
-sekiz@dB    N1g100preCont;
-dokuz@dB    N1g100preCont;
-
-LEXICON   N1g100preCont
-        N1g100;
-
-LEXICON N1g100
-yüz@dB  N1g100Cont;
-
-LEXICON     N1g100Cont
-    N1g;
-    prefixN1g10;
-
-LEXICON N1g
-milyar@dB   n1gCont;
-
-LEXICON N1gNoPrefix
-milyar@dB   NumStem;
-
-LEXICON     n1gCont
-    NumStem;
-    NumHalf;
-    n1m;
-    n1k;
-    n100;
-    n10;
-    n1;
-
-!------------------
-
-LEXICON n1t ! 1,000,000,000 to 999,999,999,999
-    prefixN1t;
-    N1tNoPrefix;
-
-LEXICON prefixN1t
-    prefixN1t1;
-    prefixN1t10;
-    prefixN1t100;
-
-LEXICON prefixN1t1
-bir@dB      N1t1cont;
-iki@dB      N1t1cont;
-üç@dB       N1t1cont;
-dör^t@dB   N1t1cont;
-beş@dB      N1t1cont;
-altı@dB     N1t1cont;
-yedi@dB     N1t1cont;
-sekiz@dB    N1t1cont;
-dokuz@dB    N1t1cont;
-
-LEXICON N1t1cont
-    N1t;
-
-LEXICON  prefixN1t10
-on@dB       N1t10cont;
-yirmi@dB    N1t10cont;
-otuz@dB     N1t10cont;
-kırk@dB     N1t10cont;
-elli@dB     N1t10cont;
-altmış@dB   N1t10cont;
-yetmiş@dB   N1t10cont;
-seksen@dB   N1t10cont;
-doksan@dB   N1t10cont;
-
-LEXICON N1t10cont
-    N1t;
-    prefixN1t1;
-
-LEXICON  prefixN1t100
-        N1t100pre;
-        N1t100;
-
-LEXICON   N1t100pre
-iki@dB      N1t100preCont;
-üç@dB       N1t100preCont;
-dör^t@dB   N1t100preCont;
-beş@dB      N1t100preCont;
-altı@dB     N1t100preCont;
-yedi@dB     N1t100preCont;
-sekiz@dB    N1t100preCont;
-dokuz@dB    N1t100preCont;
-
-LEXICON   N1t100preCont
-        N1t100;
-
-LEXICON N1t100
-yüz@dB  N1t100Cont;
-
-LEXICON     N1t100Cont
-    N1t;
-    prefixN1t10;
-
-LEXICON N1t
-trilyon@dB      n1tCont;
-
-LEXICON N1tNoPrefix
-trilyon@dB   NumStem;
-
-LEXICON     n1tCont
-    NumStem;
-    NumHalf;
-    n1g;
-    n1m;
-    n1k;
-    n100;
-    n10;
-    n1;
-
-
-! Numeric digits: we generate numbers of arbitrary length with
-! optional thousand separator and possibly one decimal separator.
-! Thousand separator is not allowed after decimal separator. We
-! insert symbols @tSep and dSep here and replace using xfst. this 
-! makes it easy to (optionally) accept a number of different
-! configuration.
-!
-! The analysis symbols for separators are the official ones (dot for
-! thousand separator, comma for decimal)
-!
-! We have `silent' vowels and consonants here. They serve for the
-! purposes of buffer deletion, vowel harmony and voicing assimilation.
-! They are removed from both surface and analysis.
-
-LEXICON NumberNumeric
-<%0|1|2|3|4|5|6|7|8|9>  FirstNum;
-                        NumPercent;
-
-LEXICON FirstNum
-<%0|1|2|3|4|5|6|7|8|9>  SecondNum;
-                        tSep;
-                        dSep;
-                        NumericStem;
-
-LEXICON SecondNum
-<%0|1|2|3|4|5|6|7|8|9>  ThirdNum;
-                        tSep;
-                        dSep;
-                        NumericStem;
-
-LEXICON ThirdNum
-<%0|1|2|3|4|5|6|7|8|9>  FourthNum;
-                        tSep;
-                        dSep;
-                        NumericStem;
-                        
-LEXICON FourthNum   ! no more thousand separator
-<%0|1|2|3|4|5|6|7|8|9>  FourthNum;
-                        dSep;
-                        NumericStem;
-
-LEXICON dSep 
-,:@dSep                 dSepCont;
-    
-LEXICON dSepCont   ! no more separators
-<%0|1|2|3|4|5|6|7|8|9> dSepCont;
-                       NumericStem;
-
-LEXICON tSep    ! now we have to have tSep after every 3 digits
-.:@tSep         tStep1;
-
-LEXICON tStep1
-<%0|1|2|3|4|5|6|7|8|9>  tStep2;
-
-LEXICON tStep2
-<%0|1|2|3|4|5|6|7|8|9>  tStep3;
-
-LEXICON tStep3
-<%0|1|2|3|4|5|6|7|8|9>  tStep3cont;
-
-LEXICON tStep3cont
-                        tSep;
-                        dSep;
-                        NumericStem;
-
-!
-! One may want to be more restrictive with the percent sign, 
-! but we accept anything, which makes sense for things like %200.
-! It may also be good for generation to restrict the suffixes attached  
-! after a percentage. On the other hand, for most cases, percent 
-! sign will be tokenized separately.
-! 
-LEXICON NumPercent 
-%<perc%>:%%@MB             NumPercentCont;
-
-LEXICON NumPercentCont
-<%0|1|2|3|4|5|6|7|8|9>  FirstNum;
-
-
-!
-! Roman numerals
-!
-! also a bit ugly to do it here, but it is more convenient.
-! We just try to recognize them, no trickery to convert them.
-!
-! We only recognize the modern notation, but we 
-! additionally accept IIII.
-!
-
-LEXICON NumberRoman
-< [MDCLXVI]+ .o.                ! make sure there is at least one character
-  M*                            ! thousands
-  (C [D|M] | (D) C^{0,3})       ! hundreds
-  (X [L|C] | (L) X^{0,3})       ! tens
-  (I [V|X] | (V) I^{0,3} | I^4) >           RomanStem;
-! the following is exactly the same, but with special UNICODE characters
-< [ⅯⅮⅭⅬⅩⅤⅠ]+ .o.
-  Ⅿ*
-  (Ⅽ [Ⅾ|Ⅿ] | (Ⅾ) Ⅽ^{0,3})
-  (Ⅹ [Ⅼ|Ⅽ] | (Ⅼ) Ⅹ^{0,3})
-  (Ⅰ [Ⅴ|Ⅹ] | (Ⅴ) Ⅰ^{0,3} | Ⅰ^4) >           RomanStem;
-! combined unicode characters
-< Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|Ⅺ|Ⅻ >                 RomanStem;
-!
-! and lowercase versions, 
-!
-! TODO: maybe we should do this in morph-phon part
-< [mdclxvi]+ .o.                ! make sure there is at least one
-  m*                            ! thousands
-  (c [d|m] | (d) c^{0,3})       ! hundreds
-  (x [l|c] | (l) x^{0,3})       ! tens
-  (i [v|x] | (v) i^{0,3} | i^4) >           RomanStem;
-! the following is exactly the same, but with special UNICODE characters
-< [ⅿⅾⅽⅼⅹⅴⅰ]+ .o.
-  ⅿ*
-  (ⅽ [ⅾ|ⅿ] | (ⅾ) ⅽ^{0,3})
-  (ⅹ [ⅼ|ⅽ] | (ⅼ) ⅹ^{0,3})
-  (ⅰ [ⅴ|ⅹ] | (ⅴ) ⅰ^{0,3} | ⅰ^4) >           RomanStem;
-< ⅰ|ⅱ|ⅲ|ⅳ|ⅴ|ⅵ|ⅶ|ⅷ|ⅸ|ⅹ|ⅺ|ⅻ >                 RomanStem;
-
-
-! Finally, number inflections and derivations
+! Number inflections and derivations
 
 LEXICON NumStem
 %<num%>:@RB  NumCont;
@@ -1120,8 +666,15 @@ LEXICON NumDistCont
 !  - aorist form is -(I)r
 !  - causative is predictable from the final phoneme
 !  - no reflexive or reciprocal is allowed
-LEXICON V        
+
+LEXICON V
 %<v%>:@RB   VCont;
+
+LEXICON VPartLast
+%<v%>%<part%>:@RB   VCont;
+
+LEXICON VPart
+%<v%>%<part%>:@RB   #;
 
 LEXICON   VCont
                 Vderiv;
@@ -1267,6 +820,7 @@ LEXICON  VAorAr
 LEXICON   AorArCont
                     TAMg1Cont;
                     AorCV;
+                    VerbalAdj;
 
 LEXICON V_Rcp_AorAr
 %<v%>:@RB           VRcpAorArCont;
@@ -1354,9 +908,6 @@ LEXICON VCausItAorArCont
                         VCausIt;
                         VNoCausNoAorCont;
 
-LEXICON VCausIt
-%<caus%>:^Ar@MB        VCont;
-
 !
 LEXICON V_Rcp_CausDir_AorAr
 %<v%>:@RB           VRcpCausDirAorArCont;
@@ -1436,6 +987,7 @@ LEXICON  VPassiveCont
                           VCabilNeg;
                           VNegative;
                           VNegativeCont;
+                          D_yAsI;
 !
 
 LEXICON VCabilNeg
@@ -1538,17 +1090,20 @@ LEXICON TAMg1Cont
 ! This is for cases like: 'birleşmiş milletler', 
 ! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
 ! 'adam olacak çocuk', 'ele gelir sonuç' etd.
-! some of these (-makta -yor) are restircted to be used 
+! some of these (-makta -yor) are restricted to be used 
 ! before an auxiliary verb (ol, bul) but some can stand alone.
-! These are, after all, some sort of sobordination. The result 
+! These are, after all, some sort of subordination. The result 
 ! is something that complements a noun, so we mark it as 
-! an adjectie. Especially -acak is confusing as we also have 
+! an adjective. Especially -acak is confusing as we also have 
 ! an explicit subordinating suffix.
-! We assume that these forms do not get any further suffixes, 
-! until we are proven wrong by data.
+!
+! We assume that these forms behave just like any other adjective, 
+! although they may be more conservative about combining with all
+! suffixes that attach to adjectives (particularly, see the note 
+! above on -makta -yor).
 !
 LEXICON VerbalAdj
-%<VJ_%0%>%<adj%>:@MB       #;
+%<VJ_%0%>%<adj%>:@MB       AdjCont;
 
 !
 !
@@ -1699,6 +1254,8 @@ LEXICON OptQCont
 %<cpl_di%>:^(y)^D^I@MB      PAgrG2End;
 %<cpl_mis%>:^(y)m^Iş@MB     PAgrG1End;
 
+! TODO: opt3s below seems to be a half-implemented feature, but not
+!       clear what...
 
 LEXICON OptPAgr
 %<1s%>:^(y)^Im@MB       OptPAgrCont;
@@ -1706,6 +1263,7 @@ LEXICON OptPAgr
 %<3s%>:@opt3s^In@MB     OptPAgrCont;
 %<1p%>:l^Im@MB          OptPAgrCont;
 %<2p%>:s^In^Iz@MB       #;
+%<3p%>:@opt3s^In@MB     OptPAgrCont;
 %<3p%>:@opt3s^Inl^Ar@MB OptPAgrCont;
 %<3s%>:0@MB             OptPAgrCont; ! these two are 
 %<3p%>:l^Ar@MB          OptPAgrCont; ! colloquial use
@@ -1735,6 +1293,7 @@ LEXICON PAgrIMPEnd
 %<2s%>:s^An^A@MB        #;
 %<2s%>:^(y)^In@MB       #;
 %<3s%>:s^In@MB          #;
+%<3p%>:s^In@MB          #;
 %<2p%>:^(y)^In@MB       #;
 %<2p%>:^(y)^In^Iz@MB    #;
 %<2p%>:s^An^Iz^A@MB  #;
@@ -1957,7 +1516,7 @@ LEXICON CplEvidCont
                 PAgrG1End;
                 CplPAgrG1; ! this is marked/rare usage - gidiyormuşumsa
                 CplCond2;
-                CVcesine;
+                NarrCVcesine;
 ! TODO: In a relatively rare number of cases -DIr may follow if -(I)yor 
 !       precedes the evidential copula.
 
@@ -2108,7 +1667,7 @@ LEXICON PartCont
                    Ncont;
 !                   AdjCont;
 
-! TODO: this part need rework. The list below roughly follows
+! TODO: this part needs rework. The list below roughly follows
 !       G&K and the SFST version.
 !
 LEXICON ConVerb
@@ -2160,29 +1719,12 @@ LEXICON NarrCVcesine
 
 
 !
-! End of morphotactics description. We have some closed class root
-! forms below. Others root lexicons are attached at the end of this
-! file  automatically.
+! The following defines behaviour of a small set of special words
+! (mostly clitics). These are defined in clitics.lexc
 !
-
-LEXICON Clitics
-mı        mI;
-mi        mI;
-mu        mI;
-mü        mI;
-i         V_i;
-! the following three are not techincally clitics, 
-! but they are here for lack of a better place 
-var       var;
-yok       yok;
-değil     degil;
-!
-ile       ileCont;
-! 
-üzer      uzerCont;
 
 ! üzer (somewhat) is like `üst', but does not 
-! occur in bare form. Below we (currently) allow 
+! occur in bare form. Below, we (currently) allow 
 ! it to form pospositional phrases just like üst/alt etc. 
 ! However, we do not allow it to function as adjectives.
 !
@@ -2194,7 +1736,7 @@ LEXICON   uzerCont
             PostPlocation;
 
 LEXICON uzerAdj
-%<adj%>:@RBi    Jderiv;
+%<adj%>:@RB     Jderiv;
 
 LEXICON  ileCont
 %<postp%>:@RB   Case1Cont;
@@ -2204,7 +1746,7 @@ LEXICON var
 %<exist%>:@RB Ncont;
 
 LEXICON yok
-%<ntexist%>:@RB Ncont;
+%<notexist%>:@RB Ncont;
 
 LEXICON degil
 %<not%>:@RB Ncont;
@@ -2237,35 +1779,6 @@ LEXICON degil
 ! Punctuation
 !
 
-LEXICON Punctuation
-%-              Punc;
-%,              Punc;
-%;              Punc;
-%:              Punc;
-%!              Punc;
-%?              Punc;
-%/              Punc;
-%.              Punc;
-%.%.%.          Punc;
-%'              Punc;
-%‘              Punc;
-%’              Punc;
-%"              Punc;
-%"              Punc;
-%“              Punc;
-%”              Punc;
-%«              Punc;
-%»              Punc;
-%(              Punc;
-%)              Punc;
-%*              Punc;
-%‹              Punc;
-%›              Punc;
-%„              Punc;
-%‟              Punc;
-%‚              Punc;
-%‛              Punc;
-
 LEXICON  Punc
 %<punct%>:0     #;
 
@@ -2285,8 +1798,7 @@ LEXICON  Punc
 ! indefinite number of derivations.
 ! 
 !
-! TODO: better handling of derivations. Some combine with each other
-!       productively.
+! TODO: better handling of derivations. 
 !
 
 LEXICON Mderiv
@@ -2333,6 +1845,7 @@ LEXICON Vderiv
             D_yIcI;
             D_yIS;
 !            D_mA;
+            D_yAsI;
 
 LEXICON Oderiv
             OD_lA;
@@ -2359,6 +1872,7 @@ LEXICON Oderiv
 !
 LEXICON   D_lI
 %<D_lI%>:l^I@MB         DerivJCont;
+%<D_lI%>:l^I@MB         DerivACont;
 
 ! -sIz behaves almost exactly like -lI, with the opposite meaning.
 !           şeker `sugar' -> şeker-siz `[something] without sugar' 
@@ -2387,6 +1901,7 @@ LEXICON   D_sIz
 !
 LEXICON   ND_lIk
 %<D_lIk%>:l^I^k@MB       DerivNCont;
+%<D_lIk%>:l^I^k@MB       DerivJCont;
 LEXICON   JD_lIk
 %<D_lIk%>:l^I^k@MB       DerivNCont;
 LEXICON   AD_lIk
@@ -2510,6 +2025,20 @@ LEXICON JD_lAS
 LEXICON D_yIS
 %<D_yIS%>:^(y)^Iş   DerivNCont;
 
+! -(y)AsI makes adjectives, and can be attached afte voice suffixes,
+!  and possibly to any non-finite verbal form.
+!
+!   okuyası, görülesi, getirtesi 
+!
+!  TODO: There may be two different processes that we hide behind this
+!  derivation. The forms without passive does not function like adjectives.
+!  They mostly be used in conditional/existential predicates, 
+!  'uyuyası olsaydı', 'getiresi varsa ...'. But we mark all resulting
+!  forms as adjectives.
+!
+LEXICON D_yAsI
+%<D_yAsI%>:^(y)^As^I   DerivJCont;
+
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
 !    V->J: kıyma, kesme, dökme, bunama
@@ -2559,41 +2088,3 @@ LEXICON DerivACont
 LEXICON DerivVCont
 %<v%>:0@MB      VCont; ! this gives unlimited application of derivation
 !%<v%>:0@MB     Vinfl; ! only one derivation after root.
-
-!
-! The following make wh-question. 
-! 
-
-LEXICON WHwords
-kim         QPrn;
-ne          QPrn;
-hangi       QPrn;
-nere        QPrn;   ! TODO: use of this without inflection is non-standard
-kaç         QNum; ! this behaves like numbers
-ne% zaman   QAdv;
-ne% kadar   QAdvTime;
-niye        QAdv;
-neden       QAdv;
-niçin       QAdv;
-hani        QIntj;
-nasıl       QAdv;
-
-!
-! The following are letters of the alphabet.
-!
-! Q, W and X are not in the TR alphabet, but they show up in various
-! texts.
-LEXICON Alpha
-<A|E|I|İ|O|Ö|U|Ü>                                       AlphaCont;
-<[B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|R|S|Ş|T|V|Y|Z] 0:%^sFUV>  AlphaCont;
-<[H|K|Q|W] 0:%^sBUV>                                    AlphaCont;
-<H 0:%^sBUV 0:%^sVC>                                    AlphaCont;
-<X 0:^sFUV 0:^sUC>                                      AlphaCont; 
-
-!
-! when inflected, we require apostrophe after letters (when required
-! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
-!
-LEXICON AlphaCont
-%<alpha%>:@RB   NPApos;
-%<alpha%>:@RB   #;

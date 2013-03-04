@@ -1,0 +1,40 @@
+!
+! Punctuation
+!
+
+LEXICON Punctuation
+%-              Punc;
+%,              Punc;
+%;              Punc;
+%:              Punc;
+%!              Punc;
+%?              Punc;
+%/              Punc;
+%.              Punc;
+%.%.%.          Punc;
+%'              Punc;
+%‘              Punc;
+%’              Punc;
+%"              Punc;
+%"              Punc;
+%“              Punc;
+%”              Punc;
+%«              Punc;
+%»              Punc;
+%(              Punc;
+%)              Punc;
+%*              Punc;
+%‹              Punc;
+%›              Punc;
+%„              Punc;
+%‟              Punc;
+%‚              Punc;
+%‛              Punc;
+%%              Punc;
+%=              Punc;
+%>              Punc;
+%<              Punc;
+%[              Punc;
+%]              Punc;
+%&              Punc;
+%+              Punc;

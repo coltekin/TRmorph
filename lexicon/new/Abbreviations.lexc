@@ -1,0 +1,126 @@
+! 
+! The words listed below belong to different classes.  The peculiarity
+! for any of these abbreviations are the forms of suffixes attached to
+! them, and  whether they require an apostrophe after them or not.
+! 
+! According to official rules, an abbreviation in all capitals should
+! inflect the way the abbreviation is pronounced (not the way the long
+! form is pronounced). So, the correct form is "KDV'ye", not "KDV'ne".
+! In some cases the official rule and the common use is different,
+! particularly for abbreviations that end with a `K', where it is common
+! to read it as 'ka' not 'ke', as a result, it is probably more common
+! to find "PKK'ya" compared to "PKK'ye".
+! 
+! On the other hand, the suffixes after abbreviations in lower case
+! letters should follow the way the long-form is pronounced. The correct
+! form is "gr'a" and "kg'dan", but not "gr'ye" or "kg'den".
+! 
+! As a result, to correctly recognize the abbreviated forms, we need
+! some additional information in the lexicon. We add 'silent' letters
+! which are dropped from both analysis and surface levels, but used for
+! phonological alternations like vowel harmony, or buffer
+! insertion/deletion. These 'silent' letters are
+! 
+!     - ^sBUV     Back unrounded vowel (aı)
+!     - ^sBRV     Back rounded vowel (ou)
+!     - ^sFUV     Back unrounded vowel (ei)
+!     - ^sFRV     Back rounded vowel (öü)
+!     - ^sVC      Voiced consonant
+!     - ^sUC      Voiceless consonant
+! 
+! Most abbreviations are pronounced with a final `e', as a result, if an
+! abbreviation does not have any silent letters following it, and if
+! there are no vowels in the abbreviation, a ^sFUV is inserted during
+! morphophonological process. So, one does not need to add a ^sFUV after
+! abbreviations like "TBMM" or "KDV", or "ASELSAN". However, this also
+! makes it necessary to ad ^sVC^sFUV for cases like "AB" where despite 
+! the vowel the abbreviations is pronounced as a sequence of letters.
+! 
+
+
+
+LEXICON Abbreviation
+mm                      N_unit;
+cm                      N_unit;
+m                       N_unit;
+km                      N_unit;
+mm²                     N_unit;
+cm²                     N_unit;
+m²                      N_unit;
+km²                     N_unit;
+mm³^sFRV^sUC            N_unit;
+cm³^sFRV^sUC            N_unit;
+m³^sFRV^sUC             N_unit;
+km³^sFRV^sUC            N_unit;
+gr^sBUV^sVC             N_unit;
+kg^sBUV^sVC             N_unit;
+mg^sBUV^sVC             N_unit;
+l                       N_unit;
+ml                      N_unit;
+TV                      N_abbr;
+vb.                     N_abbr; 
+vs.                     N_abbr;
+KDV                     N_abbr;
+CD                      N_abbr;
+ABD                     NP_abbr;
+CHP                     NP_abbr;
+AKP                     NP_abbr;
+TBMM                    NP_abbr;
+DYP                     NP_abbr;
+YSK                     NP_abbr;
+YSK^sBUV                NP_abbr;
+BDDK                    NP_abbr;
+BDDK^sBUV               NP_abbr;
+AB^sVC^sFUV             NP_abbr;
+KKTC                    NP_abbr;
+MHP                     NP_abbr;
+PKK                     NP_abbr;
+PKK^sBUV                NP_abbr;
+MHP                     NP_abbr;
+DGM                     NP_abbr;
+İMKB                    NP_abbr;
+DHA                     NP_abbr;
+ANAP                    NP_abbr;
+TOBB                    NP_abbr;
+YÖK                     NP_abbr;
+IMF                     NP_abbr;
+SPK^sBUV                NP_abbr;
+THY                     NP_abbr;
+TRT                     NP_abbr;
+SHP                     NP_abbr;
+TSK                     NP_abbr;
+TSK^sBUV                NP_abbr;
+TCK                     NP_abbr;
+TCK^sBUV                NP_abbr;
+MKYK                    NP_abbr;
+MKYK^sBUV               NP_abbr;
+AIHM                    NP_abbr;
+ABD^sFUV                NP_abbr;
+TPAO                    NP_abbr;
+TKP                     NP_abbr;
+İMKB                    NP_abbr;
+TL                      NP_abbr;
+SSK                     NP_abbr;
+SİAD                    NP_abbr;
+ÖDP                     NP_abbr;
+DEHAP                   NP_abbr;
+ATO                     NP_abbr;
+YTP                     NP_abbr;
+TÜSİAD                  NP_abbr;
+TC                      NP_abbr;
+SUV                     NP_abbr;
+SP                      NP_abbr;
+RP                      NP_abbr;
+MGK                     NP_abbr;
+LSD                     NP_abbr;
+KOBİ                    NP_abbr;
+KİT                     NP_abbr;
+KADEK                   NP_abbr;
+İTÜ                     NP_abbr;
+ODTÜ                    NP_abbr;
+IMF                     NP_abbr;
+DYP                     NP_abbr;
+DNA                     N_abbr;
+CNN                     NP_abbr;
+CNN^sVC                 NP_abbr;
+BMW                     NP_abbr;

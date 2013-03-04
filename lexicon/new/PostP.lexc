@@ -3,7 +3,7 @@ LEXICON PostPRoot
 gibi                            PostP;
 için                            PostP;
 ile                             PostP;
-kadar                           PostP;
+kadar                           PostPKi;
 göre                            PostP;
 doğru                           PostP;
 rağmen                          PostP;
@@ -16,9 +16,10 @@ dolayı                          PostP;
 itibaren                        PostP;
 önce                            PostP;
 evvel                           PostP;
+ço^k                            PostP;
 sonra                           PostP;
 yana                            PostP;
-karşı                           PostP;
+karşı                           PostPKi;
 
 !--------
 ait                             PostP;
@@ -40,6 +41,7 @@ takdirde                        PostP;
 yerde                           PostP;
 yukarı                          PostP;
 ilgili                          PostP;
+ilişkin                         PostP;
 kere                            PostP;  ! TODO: is this a noun???
 !--------
 ! TODO: these are derived (?) from nouns
@@ -78,6 +80,7 @@ ara                     PostPlocation;
 etraf                   PostPlocation;
 çevre                   PostPlocation;
 öte                     PostPlocation;
+kenar                   PostPlocation;
 
 ! ! these require possessive and ablative case
 açı                     PostPabl; ! açı-sın-dan 

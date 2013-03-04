@@ -1,4 +1,6 @@
-read lexc trmorph.lexc
+#include "options.h"
+
+read lexc guesser.cpp.lexc
 define Lexicon;
 
 source morph-phon.xfst
@@ -7,11 +9,13 @@ source morph-phon.xfst
 ! Put all of them together. The order is important. 
 !
 clear stack
-read regex     AFilter
-           .o. Lexicon 
+read regex Lexicon 
            .o. Abbr
-!!!APOSTROPHE_yes .o. replaceApos
-!!!APOSTROPHE_maybe .o. replaceAposOpt
+#if (GUESSER_APOSTROPHE_OPTIONAL == 1)
+           .o. replaceAposOpt
+#else  // GUESSER_APOSTROPHE_REQUIRED or none set
+           .o. replaceApos
+#endif
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator
@@ -39,9 +43,16 @@ read regex     AFilter
            .o. Redup
            .o. DeleteSilentP
            .o. KiKu
+#if (GUESSER_CIRCUMFLEX_OPTIONAL == 1)
            .o. DeleteCircumflex
+#endif
            .o. DeleteBoundary
+#if (GUESSER_CAPITALIZE == 1)
            .o. Capitalize
+#endif
+#if (GUESSER_ALLCAPS == 1)
+           .o. AllCaps 
+#endif
            ;
 
-save stack trmorph.fst
+save stack guesser.fst
