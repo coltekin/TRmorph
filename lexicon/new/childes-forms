@@ -1,4 +1,5 @@
 mama        N;
+koko        N;  ! some sort of drink
 omo         N;  ! detergent brand
 ham         N;
 atta        N;
@@ -12,7 +13,102 @@ lütfen      Co; ! communicatior
 tamam       Co; ! communicatior
 mersi       Co; ! communicatior
 bilmem      Co; ! communicatior
+baybay	    Co;
 teşekkür% ederim  Co; ! communicatior
-ıhhh        Inerjection;
-heh         Inerjection;
-öbürkünü
+ıhhh        Interjection;
+heh         Interjection;
+aaaa	Interjection;
+abbo	Interjection;
+ahhh	Interjection;
+ayyy	Interjection;
+be	    Interjection;   ! as in `hadi be'.
+haah	Interjection;
+heeh	Interjection;
+hehh	Interjection;
+hi	    Interjection;
+hıhı	Interjection;
+hiii	Interjection;
+hımm	Interjection;
+hımmmm	Interjection;
+hiy	    Interjection;
+hmmm	Interjection;
+hö	    Interjection;
+hoh	    Interjection;
+hophop	Interjection;
+hoppaa	Interjection;
+hoşşt	Interjection;
+huh	    Interjection;
+huhh	Interjection;
+huhhh	Interjection;
+huuh	Interjection;
+ih	    Interjection;
+ııh	    Interjection;
+off	    Interjection;
+ohoo	Interjection;
+oooo	Interjection;
+ooooh	Interjection;
+oooohh	Interjection;
+peh	    Interjection;
+sıssst	Interjection;
+taaa	Interjection;
+uh	    Interjection;
+uhh	    Interjection;
+uuuh	Interjection;
+ai	Onom;   ! donkey sound
+bam	Onom;
+bıcı	Onom;   ! 
+kütür	Onom;
+uuu	    Onom; ! wolf
+bant    N;  ! alternative form of ban^t
+boo	Onom;   ! ??
+böö	Onom;   ! ??
+bum	Onom;
+emmioğlu	Ncomp;      !! family??
+
+Ağalday	NP; ! ??
+Afiy	NP; ! ??
+Mukan	NP;
+Perdo	NP;
+Şapo	NP;
+snoopy	NP;
+Volkswagen	NP;
+aygaz	N;  ! from a brand
+silafon N;
+cırmıkla    V;
+dayday      N; !chi
+milangazı	N;  ! from brand name
+pütürü^k  	Adj;
+teyp 	    N;
+
+xxxince	+?
+xxxlar	+?
+xxxnı	+?
+xxxsı	+?
+xxxyle	+?
+yağıyor'u	+?
+çik	+?
+Alp'ciğim	+?
+Leventciğim	+?
+Teyze'ye	+?
+coca	+?
+cola	+?
+crisps	+?
+gugu	+?
+ıhı	+?
+nanniyi	+?
+nanny	+?
+okay	+?
+şavın	+?
+şavsalın	+?
+yağmurkü	+?
+
+
+fos         Adj;    ! colloquial
+kokoş       Adj;    ! colloquial
+fos% çık    V_AorAr;
+jölele      V;
+tıpış% tıpış Adv;
+
+
+kadarcık	+?
+mapağı	+?
