@@ -77,8 +77,6 @@ art          V_CausIr_AorAr;
 aşağıla      V;
 asıl         V_CausDir; ! as<psv> but lexicalized
 aşın         V;
-aşırt        V;
-aşır         V;
 aslol        V_CausIrreg;
 as           V_AorAr;
 aş           V_CausIr_AorAr;
@@ -2201,3 +2199,6 @@ kullan       V;
 yol% aç      V_AorAr;
 ortaya% çık  V_AorAr;
 işe% yara    V;
+dikil        V;
+kavga% e^t   V_AorAr;
+ziyan% e^t   V_AorAr;
