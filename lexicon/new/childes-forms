@@ -79,6 +79,7 @@ dayday      N; !chi
 milangazı	N;  ! from brand name
 pütürü^k  	Adj;
 teyp 	    N;
+Coca% Cola	NP;
 
 xxxince	+?
 xxxlar	+?
@@ -90,8 +91,6 @@ yağıyor'u	+?
 Alp'ciğim	+?
 Leventciğim	+?
 Teyze'ye	+?
-coca	+?
-cola	+?
 crisps	+?
 gugu	+?
 ıhı	+?
@@ -103,9 +102,9 @@ okay	+?
 yağmurkü	+?
 
 
-fos         Adj;    ! colloquial
-kokoş       Adj;    ! colloquial
-fos% çık    V_AorAr;
+fos         Adj;        ! colloquial
+kokoş       Adj;        ! colloquial
+fos% çık    V_AorAr;    ! colloquial
 jölele      V;
 tıpış% tıpış Adv;
 

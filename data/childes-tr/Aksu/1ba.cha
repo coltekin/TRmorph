@@ -169,7 +169,7 @@
 *EXP:	süt seviyormusun ?
 *CHI:	0 .
 %com:	not clear from the text whether the child made a sound gesture meaning "no" or actually said "no" .
-*EXP:	coca cola ?
+*EXP:	coca+cola ?
 *CHI:	seviyorum .
 *EXP:	pasta filan ?
 *CHI:	sevmiyorum .
