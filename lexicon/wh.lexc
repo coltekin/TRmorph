@@ -5,6 +5,7 @@
 LEXICON WHwords
 kim         QPrn;
 ne          QPrn;
+ne          QAdv;
 hangi       QPrn;
 nere        QPrn; ! TODO: use of this without inflection is non-standard
 kaç         QNum; ! this behaves like numbers
