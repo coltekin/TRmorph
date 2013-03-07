@@ -14,4 +14,4 @@ define stem  ?* ->@ 0 || PoStags _
 
 read regex stem.i .o. @"trmorph.fst";
 
-save stack stemmer.fst
+save stack stem.fst

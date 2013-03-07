@@ -1,7 +1,9 @@
-read lexc trmorph.lexc
+#include "options.h"
+
+read lexc morph.cpp.lexc
 define Lexicon;
 
-source morph-phon.xfst
+source morph-phon.cpp.xfst
 
 !
 ! Put all of them together. The order is important. 
@@ -10,8 +12,11 @@ clear stack
 read regex     AFilter
            .o. Lexicon 
            .o. Abbr
-!!!APOSTROPHE_yes .o. replaceApos
-!!!APOSTROPHE_maybe .o. replaceAposOpt
+#if (ANALYZER_APOSTROPHE_OPTIONAL == 1)
+           .o. replaceAposOpt
+#elif (ANALYZER_APOSTROPHE_REQUIRED == 1)
+           .o. replaceApos
+#endif
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator
@@ -41,8 +46,12 @@ read regex     AFilter
            .o. KiKu
            .o. DeleteCircumflex
            .o. DeleteBoundary
+#if (ANALYZER_CAPITALIZE == 1)
            .o. Capitalize
+#endif
+#if (ANALYZER_ALLCAPS == 1)
            .o. AllCaps 
+#endif
            ;
 
 save stack trmorph.fst

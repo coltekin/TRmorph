@@ -2,6 +2,7 @@ LEXICON ?= new
 COMMONLEX=$(shell ls lexicon/*.lexc)
 ROOTLEX=$(COMMONLEX) $(shell ls lexicon/$(LEXICON)/*.lexc)
 CPP=gcc -E -traditional -P -w -x c
+TARGETS=trmorph.fst segment.fst stem.fst guess.fst hyphenate.fst
 
 %.cpp.lexc: %.lexc
 	$(CPP) -o $@ $^
@@ -9,79 +10,42 @@ CPP=gcc -E -traditional -P -w -x c
 %.cpp.xfst: %.xfst
 	$(CPP) -o $@ $^
 
-#
-# Options
-#
-# Some behavior of the analyzer can be controlled with the options
-# below.
-
-#  APOSTROPHE
-#
-#  Require apostrophe after proper names and numbers.
-#
-#  yes:   apostrophe is obligatory.
-#  maybe: apostrophe is optional.
-#
-#  NOTE: currently,  TRmorph's apostrophe insertion does not 
-#        follow  the official spelling rules.
-
-APOSTROPHE=maybe
-
-#  PARTWORDS
-#
-#  Compile in lexical units that are part-words, like 'argın' in
-#  'yorgun argın', and mark as part of a word. Ideally these words
-#  should be tokenized together, but in case it is not, this gives a
-#  way for later porcessing to combine the pieces.
-#
-#  true: compile part words in.
-#  any other value disables it.
-#
-
-PARTWORDS=true
-#
-# End of options
-#
-
-export APOSTROPHE
-export PARTWORDS
-
 analyzer: trmorph.fst
 
-all: trmorph.fst segment.fst stemmer.fst guesser.fst
+all: analyzer segmenter stemmer guesser
 
-trmorph.fst: trmorph.xfst trmorph.lexc morph-phon.xfst
-	foma -f trmorph.xfst
-
-trmorph.lexc: morph.lexc $(ROOTLEX)
-		./options.sh $^ > $@
-
-trmorph.xfst: analyzer.xfst
-	./options.sh $^ > $@
+trmorph.fst: analyzer.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
+	foma -f analyzer.cpp.xfst
 
 #
 # a simple segmenter
 #
-segment.fst: segment.xfst trmorph.lexc morph-phon.xfst
-	foma -f segment.xfst
+segmenter: segment.fst
+segment.fst: segment.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
+	foma -f segment.cpp.xfst
 
 #
 # stemmer 
 #
+stemmer: stem.fst 
 
-stemmer: stemmer.fst 
-
-stemmer.fst: stemmer.xfst trmorph.fst
-	foma -f stemmer.xfst
+stem.fst: stemmer.cpp.xfst trmorph.fst
+	foma -f stemmer.cpp.xfst
 
 #
 # unknown word guesser
 #
-guesser.fst: guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
+guesser: guess.fst
+
+guess.fst: guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
 	foma -f guesser.cpp.xfst
 
+hyphenate: hyphenate.fst
+
+hyphenate.fst: hyphenate.cpp.xfst
+	foma -f hyphenate.cpp.xfst
 #
 # housekeeping goes below
 #
 clean:
-	rm -f trmorph.xfst trmorph.fst trmorph.lexc
+	rm -f $(TARGETS) *.cpp.*

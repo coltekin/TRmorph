@@ -55,4 +55,4 @@ read regex Lexicon
 #endif
            ;
 
-save stack guesser.fst
+save stack guess.fst
