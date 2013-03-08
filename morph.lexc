@@ -2088,3 +2088,26 @@ LEXICON DerivACont
 LEXICON DerivVCont
 %<v%>:0@MB      VCont; ! this gives unlimited application of derivation
 !%<v%>:0@MB     Vinfl; ! only one derivation after root.
+
+
+#include "lexicon/alpha.lexc"
+#include "lexicon/clitics.lexc"
+#include "lexicon/number.lexc"
+#include "lexicon/punctuation.lexc"
+#include "lexicon/wh.lexc"
+
+#include "lexicon/new/Abbreviations.lexc"
+#include "lexicon/new/Adj.lexc"
+#include "lexicon/new/Adv.lexc"
+#include "lexicon/new/Cnj.lexc"
+#include "lexicon/new/Det.lexc"
+#include "lexicon/new/Exceptions.lexc"
+#include "lexicon/new/Interjection.lexc"
+#include "lexicon/new/N.lexc"
+#include "lexicon/new/NP.lexc"
+#include "lexicon/new/Onom.lexc"
+#include "lexicon/new/PartWords.lexc"
+#include "lexicon/new/PostP.lexc"
+#include "lexicon/new/Pronoun.lexc"
+#include "lexicon/new/Redup.lexc"
+#include "lexicon/new/Verb.lexc"
