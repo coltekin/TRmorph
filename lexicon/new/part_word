@@ -20,49 +20,36 @@
 ! - There is also a related and somewhat productive re-duplication 
 !   process (kafa mafa, okul mokul) where forms that otherwise are not
 !   words independently can be made. We do not cover them in here or
-!   in the analyzer yet.
+!   in the analyzer yet. A small set of the second part of these wrods
+!   are in file 'reduplication'.
 ! 
 
-
-LEXICON PartWords
 abuk        AdjPart;
+abur        AdjPart;
 allak       AdjPart;
-barksız     AdjPartLast;
+apar        AdvPart;
+argın       AdvPartLast;
+bangır      AdvPartLast;
+bar^k       NPartLast;  !in 'ev bark' both parts are likely inflected 
+bitap       AdvPartLast;
+bön         AdvPartLast;
+börtü       NPart;
 bücüş       AdjPartLast;
 büğrü       AdjPartLast;
-bulacalı    AdjPartLast;
+bulaca      AdjPartLast;
 bulla^k     AdjPartLast;
 bullak      AdjPartLast;
+cayır       AdvPartLast;
 cıvıl       AdjPartLast;
+ciyak       AdvPartLast;
+çoluk       NPart;
+çolu^k      NPartLast;
+cubur       AdjPartLast;
 dağın       AdjPartLast;
 darma       AdjPart;
 derli       AdjPart;
 didik       AdjPartLast;
 eciş        AdjPart;
-kıpır       AdjPartLast;
-manik       AdjPart;
-mey^pAl     AdjPartLast;
-parıl       AdjPartLast;
-pörçü^k     AdjPartLast;
-püslü       AdjPartLast;
-sabuk       AdjPartLast;
-saçı^k      AdjPartLast;
-seçik       AdjPartLast;
-tefe^k      AdjPartLast;
-tıklım      AdjPartLast;
-tiril       AdjPartLast;
-vıcık       AdjPartLast;
-
-%açık        AdvPartLast;
-şıklata     AdvPart;
-uzadıya     AdvPart;
-apar        AdvPart;
-argın       AdvPartLast;
-bangır      AdvPartLast;
-bita6p      AdvPartLast;
-bön         AdvPartLast;
-cayır       AdvPartLast;
-ciyak       AdvPartLast;
 fellik      AdvPartLast;
 fıkır       AdvPartLast;
 fıldır      AdvPartLast;
@@ -71,59 +58,68 @@ fısır       AdvPartLast;
 fokur       AdvPartLast;
 gıdım       AdvPartLast;
 gırıl       AdvPartLast;
+gözardı     VPart;       !in 'gözardı et-'
 gümbür      AdvPartLast;
 gürül       AdvPartLast;
 haldır      AdvPartLast;
 %hara^p      AdvPart;
 harıl       AdvPartLast;
-şapırdata   AdvPartLast;
 haşır       AdvPartLast;
 hışır       AdvPartLast;
 hüngür      AdvPartLast;
+ıvır        NPart;
+kâh         CnjAdvPart;
 kikir       AdvPartLast;
 kıkır       AdvPartLast;
+kıpır       AdjPartLast;
 kıvıl       AdvPartLast;
+konu        NPart;      !in `konu komşu'
+kuşam       NPartLast;
+kuşam       NPartLast;
+manik       AdjPart;
+mey^pAl     AdjPartLast;
 mırıl       AdvPartLast;
 mışıl       AdvPartLast;
+parıl       AdjPartLast;
 pırt        AdvPartLast;
 pıtır       AdvPartLast;
+pörçü^k     AdjPartLast;
 püfür       AdvPartLast;
 püklüm      AdvPartLast;
+püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
+püslü       AdjPartLast;
+sabuk       AdjPartLast;
+saçı^k      AdjPartLast;
+saçık       AdvPartLast;
 sapır       AdvPartLast;
 şapır       AdvPartLast;
+şapırdata   AdvPartLast;
 şapur       AdvPartLast;
+seçik       AdjPartLast;
 seçi^k      AdvPartLast;
 şıkır       AdvPartLast;
+şıklata     AdvPart;
 şıngır      AdvPartLast;
 şıpır       AdvPartLast;
 şırıl       AdvPartLast;
+sokum       NPartLast;
 süklüm      AdvPart;
 şupur       AdvPartLast;
 takır       AdvPartLast;
+tefe^k      AdjPartLast;
+tıklım      AdjPartLast;
+tiril       AdjPartLast;
+tolere      VPart;       !in 'tolere et-'
 topar       AdvPartLast;
+uçuç        NPart;
 uğul        AdvPartLast;
+uzadıya     AdvPart;
+vıcık       AdjPartLast;
 vıdı        AdvPartLast;
 vızır       AdvPartLast;
-%yourgun     AdvPart;
+ya          CnjCooPart;
+yourgun     AdvPart;
 zangır      AdvPartLast;
 zır         AdvPartLast;
 zırt        AdvPart;
-abur        AdjPart;
-cubur       AdjPartLast;
-bar^k       NPartLast;  !in 'ev bark' both parts are likely inflected 
-kuşam       NPartLast;
-ıvır        NPart;
-çoluk       NPart;
 zıvır       NPartLast;
-kuşam       NPartLast;
-börtü       NPart;
-çolu^k      NPartLast;
-sokum       NPartLast;
-ayçiçek     NPart;
-uçuç        NPart;
-konu        NPart;      !in `konu komşu'
-püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
-tolere      VPart;       !in 'tolere et-'
-gözardı     VPart;       !in 'gözardı et-'
-ya          CnjCooPart;
-kâh         CnjAdvPart;
