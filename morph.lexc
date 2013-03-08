@@ -85,6 +85,7 @@ Exceptions;
 #include "lexicon/new/abbreviation"
 #include "lexicon/new/part_word"
 
+#include "lexicon/new/childes"
 
 !
 ! Definitions for numbers, including numeric forms (Arabic and Roman numerals)

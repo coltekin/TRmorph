@@ -627,7 +627,7 @@
 *CHI:	bir tane daha batıyor .
 *CHI:	bir tane daha batıyor .
 *CHI:	başka gemi yok diyor , bitiyor .
-*EXP:	Brem [: Bremen] Mızıkacıları'nı anlat .
+*EXP:	Brem+Mızıkacıları'nı [: Bremen+Mızıkacıları'nı] anlat .
 *CHI:	bir varmış , bir yokmuş .
 *CHI:	bir eşek varmış .
 *EXP:	biraz hızlı anlat .
@@ -642,15 +642,15 @@
 *CHI:	sahibi atmış .
 *CHI:	gitmiş , gitmiş , gitmiş , bir köpeğe rastlamış .
 *CHI:	köpek de gelmiş onla .
-*CHI:	Brem [: Bremen] Mızıkacıları .
-*CHI:	onlar Brem [: Bremen] Mızıkacıları .
+*CHI:	Brem+Mızıkacıları [: Bremen+Mızıkacıları] .
+*CHI:	onlar Brem+Mızıkacıları [: Bremen+Mızıkacıları] .
 *CHI:	gitmişler , gitmişler .
 *CHI:	bir tane kediye rastlamışlar .
 *CHI:	kedi de xxx .
 *CHI:	orda benim kitabım vardı .
 *CHI:	kitabımı getiriyorum .
 *EXP:	hangi kitabı ?
-*CHI:	Brem [: Bremen] Mızıkacıları .
+*CHI:	Brem+Mızıkacıları [: Bremen+Mızıkacıları].
 *EXP:	sonra ?
 *CHI:	dur , resmini gösteriyim .
 *CHI:	Saimeye söyleyim [: söyleyeyim] de getirsin kitabı .

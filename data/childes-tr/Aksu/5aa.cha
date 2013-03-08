@@ -175,7 +175,7 @@
 *CHI:	batmış bana .
 *EXP:	batmış .
 *EXP:	sen dün ne yaptın ?
-*CHI:	xxxince .
+*CHI:	xxxince@a .
 *EXP:	dün ne yaptın yavrum ?
 *CHI:	ben oynamışçım [: oynamıştım] .
 *EXP:	kim geldi buraya ?
@@ -345,7 +345,7 @@
 *MOT:	teyze neler getirmiş sana ?
 *CHI:	oyuncaklar getirmiş .
 *MOT:	ne var oyuncakların içinde ?
-*CHI:	xxxlar var içinde .
+*CHI:	xxxlar@a var içinde .
 *CHI:	al bunu .
 *MOT:	anlat , neymiş bunlar ?
 *CHI:	bunlar huu yapar .

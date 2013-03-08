@@ -9,9 +9,9 @@ BEGIN {line="";lineN=0}
         gsub(/\*...:\t/, l, line); # replace the prefix with the line number
 #        gsub(/\*...:\t/, "", line); # delete the prefix
         # insert space before these:
-        line = gensub(/([^ \t\[\]])([-+‘”"/*?!;.,]+)/, "\\1 \\2", "g", line);
+        line = gensub(/([^ \t\[\]])([-‘”"/*?!;.,]+)/, "\\1 \\2", "g", line);
         # insert space after these:
-        line = gensub(/([-/“‘"*?!;.,]+)([^ \t\[\]])/, "\\2 \\1 ", "g", line);
+        line = gensub(/([-/“‘"*?!;.,]+)([^ \t\[\]])/, "\\1 \\2 ", "g", line);
         # replace the alternative spelling with the correct one inside brackets [: ...]
         line = gensub(/<[^>]+> +\[:+ *([^\]]+) *\]/, " \\1 ", "g", line);
         line = gensub(/[[:graph:]]+ +\[:+ *([^\]]+) *\]/, " \\1 ", "g", line);
@@ -23,6 +23,7 @@ BEGIN {line="";lineN=0}
         # replace `+' (marks compounds) and `_' (marks multi words
         # lexical items) with space
         gsub(/[+_]/, " ", line);
+        # print the result
         if (line) {print line};
    }
    line = $0;

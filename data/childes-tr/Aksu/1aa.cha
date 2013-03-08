@@ -410,7 +410,8 @@
 *EXP:	ne renk ?
 *CHI:	hı .
 *EXP:	sarı mı , kırmızı mı , mavi mi ?
-*CHI:	yağmurkü .
+*CHI:	yağmurkü@a .
+%com:	above must be intelligible in the recording, but it does not make sense -cc
 *EXP:	bu araba ne renk ?
 *EXP:	bu kaç ?
 *CHI:	hı .

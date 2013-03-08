@@ -174,7 +174,7 @@
 *CHI:	bak ördek kafası .
 *CHI:	bak ördek xxx .
 *EXP:	ne yapıyor ördek ?
-*CHI:	tıpış tıpış yürüyor .
+*CHI:	tıpış+tıpış yürüyor .
 *CHI:	a xxx evine gittiler .
 *CHI:	bak içinde bak .
 *CHI:	bak döküldü .
@@ -218,7 +218,7 @@
 *CHI:	bunun gözü düşmemiş hiç .
 *CHI:	bak bunun da gözü düşmemiş .
 *EXP:	nesi bu balığın ?
-*CHI:	xxxsı .
+*CHI:	xxxsı@a .
 *EXP:	ne demek ?
 *CHI:	xxx onun için .
 *EXP:	kuyruğu bu balığın .

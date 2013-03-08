@@ -71,6 +71,8 @@ Mukan	NP;
 Perdo	NP;
 Şapo	NP;
 snoopy	NP;
+meysu 	NP; ! brand
+fruko 	NP; ! brand
 Volkswagen	NP;
 aygaz	N;  ! from a brand
 silafon N;
@@ -80,34 +82,48 @@ milangazı	N;  ! from brand name
 pütürü^k  	Adj;
 teyp 	    N;
 Coca% Cola	NP;
-
-xxxince	+?
-xxxlar	+?
-xxxnı	+?
-xxxsı	+?
-xxxyle	+?
-yağıyor'u	+?
-çik	+?
-Alp'ciğim	+?
-Leventciğim	+?
-Teyze'ye	+?
-crisps	+?
-gugu	+?
-ıhı	+?
-nanniyi	+?
-nanny	+?
-okay	+?
-şavın	+?
-şavsalın	+?
-yağmurkü	+?
-
+mapağı	NPartLast;
+silofon     N;  !
+memiş       N;  ! rather childis but more than child-specific
+Bremen% Mızıkacıları    NP; ! TODO: plural, does not take -sI
+yumoş     	NP;
+yağmur% yağıyor    	NP; ! name of a song
+vim         NP; ! detergent brand
+vimle       V; ! from a detergent brand
+teleski     N;
+havhav      N;   ! child-speak stands for `dog'.
+emmioğlu    Nfamily;    ! todo compound.
+Bop         NP;  ! from a single child, likely means `Bob'.
+gugu        NP;  ! from a single child but used productively, likely the name of a toy
 
 fos         Adj;        ! colloquial
 kokoş       Adj;        ! colloquial
 fos% çık    V_AorAr;    ! colloquial
 jölele      V;
 tıpış% tıpış Adv;
+bumbuz      Adj;
+bıcıbıcı    Onom;       ! actually used as a noun
+çik         Interjection;   ! this is a click sound (= no)
+
+! xxxince	+?
+! xxxlar	+?
+! xxxnı	+?
+! xxxsı	+?
+! xxxyle	+?
+! yağıyor'u	+?
+! çik	+?
+! Alp'ciğim	+?
+! Leventciğim	+?
+! Teyze'ye	+?
+! crisps	+?
+! gugu	+?
+! ıhı	+?
+! nanniyi	+?
+! nanny	+?
+! okay	+?
+! şavın	+?
+! şavsalın	+?
+! yağmurkü	+?
 
 
-kadarcık	+?
-mapağı	+?
+! kadarcık	+?

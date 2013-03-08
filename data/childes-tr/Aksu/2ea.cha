@@ -119,7 +119,7 @@
 *EXP:	topu atarmısın sen ?
 *CHI:	atarım .
 *EXP:	nasıl atarsın ?
-*CHI:	xxxyle atarım .
+*CHI:	xxxyle@a atarım .
 *EXP:	nasıl atarsın ?
 *CHI:	anne bana taksın .
 %com:	referring to a toy bridge
