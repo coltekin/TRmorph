@@ -38,8 +38,6 @@
 ! 
 
 
-
-LEXICON Abbreviation
 mm                      N_unit;
 cm                      N_unit;
 m                       N_unit;

@@ -1,4 +1,3 @@
-LEXICON OnomRoot
 bip                             Onom;
 bırrr                           Onom;
 bla                             Onom;
@@ -38,6 +37,7 @@ miyaa                           Onom;
 mö                              Onom;
 möö                             Onom;
 mööö                            Onom;
+pat                             Onom;
 pır                             Onom;
 pırt                            Onom; !from CHILDES
 pırt% pırt                      Onom; !from CHILDES
@@ -60,4 +60,3 @@ vırrr                           Onom; ! from CHILDES: car
 vjjjjj                          Onom; !from CHILDES
 zırt                            Onom;
 zort                            Onom;
-pat                             Onom;

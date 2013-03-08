@@ -53,36 +53,62 @@ Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
 !                   e,i   ü,ö   a,ı   o,u   
 
 LEXICON Root
-NRoot;
-NPRoot;
-AdjRoot;
-AdvRoot;
-PrnRoot;
-DetRoot;
-Number;
-VerbRoot;
-Clitics;
-CnjRoot;
-PostPRoot;
-InterjectionRoot;
-Punctuation;
-RedupRoot;
-OnomRoot;
+Number; ! numbers are special as they are defined through a set of rules.
 Exceptions;
-WHwords;
-Alpha;
-Abbreviation;
-!!!__PARTWORDS_true__PartWords;
+
+!
+! This part is the core lexicon. We do not what to leave any
+! of these out. These files do not have lexicon definitions. 
+! They only list the lexical items and their class.
+!
+#include "lexicon/alpha"
+#include "lexicon/clitics"
+#include "lexicon/punctuation"
+#include "lexicon/qwords"
+#include "lexicon/new/adjective"
+#include "lexicon/new/adverb"
+#include "lexicon/new/conjunction"
+#include "lexicon/new/determiner"
+#include "lexicon/new/interjection"
+#include "lexicon/new/noun"
+#include "lexicon/new/proper_noun"
+#include "lexicon/new/onomatopoeia"
+#include "lexicon/new/postposition"
+#include "lexicon/new/pronoun"
+#include "lexicon/new/verb"
+
+!
+! These may be "optionalized", or replaced by a more rule-governed
+! method in the future.
+!
+
+#include "lexicon/new/abbreviation"
+#include "lexicon/new/part_word"
+
+
+!
+! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
+!
+
+#include "number.lexc"
+#include "exceptions.lexc"
+
+
+!
+! Continuation class for sybols of the alphabet (when they are used
+! literally)
+!
+! when inflected, we require apostrophe after letters (when required
+! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
+!
+LEXICON AlphaCont
+%<alpha%>:@RB   NPApos;
+%<alpha%>:@RB   #;
+
 
 !
 ! conjunctions
 !
-! these do not have to be separate lexicons, but it makes things
-! easier with old lexicon conversion.
-LEXICON CnjRoot
-                    CnjCooRoot;
-                    CnjAdvRoot;
-                    CnjSubRoot;
 
 LEXICON CnjCoo
 %<cnjcoo%>:@RB      #;
@@ -235,17 +261,6 @@ LEXICON Interjection
 LEXICON QIntj   ! this is `hani'.
 %<ij%>%<qst%>:@RB      #;
 
-
-!
-! Reduplication
-!
-! this covers a few non-words that are product of reduplication.
-! TODO: this is far from the real solution. It should be done
-!       properly.
-!
-
-LEXICON Redup
-%<redup%>:@RB      #;
 
 
 !
@@ -2090,24 +2105,3 @@ LEXICON DerivVCont
 !%<v%>:0@MB     Vinfl; ! only one derivation after root.
 
 
-#include "lexicon/alpha.lexc"
-#include "lexicon/clitics.lexc"
-#include "lexicon/number.lexc"
-#include "lexicon/punctuation.lexc"
-#include "lexicon/wh.lexc"
-
-#include "lexicon/new/Abbreviations.lexc"
-#include "lexicon/new/Adj.lexc"
-#include "lexicon/new/Adv.lexc"
-#include "lexicon/new/Cnj.lexc"
-#include "lexicon/new/Det.lexc"
-#include "lexicon/new/Exceptions.lexc"
-#include "lexicon/new/Interjection.lexc"
-#include "lexicon/new/N.lexc"
-#include "lexicon/new/NP.lexc"
-#include "lexicon/new/Onom.lexc"
-#include "lexicon/new/PartWords.lexc"
-#include "lexicon/new/PostP.lexc"
-#include "lexicon/new/Pronoun.lexc"
-#include "lexicon/new/Redup.lexc"
-#include "lexicon/new/Verb.lexc"

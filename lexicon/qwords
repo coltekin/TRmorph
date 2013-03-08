@@ -2,7 +2,6 @@
 ! These closed set of words make wh-questions. 
 ! 
 
-LEXICON WHwords
 kim         QPrn;
 ne          QPrn;
 ne          QAdv;
