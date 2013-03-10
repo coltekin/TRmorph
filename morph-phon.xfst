@@ -1,3 +1,5 @@
+#include "options.h"
+
 !
 ! This file only contains a set of useful definitions. This is sourced
 ! from the other scripts that generate useful automata.
@@ -501,8 +503,17 @@ define FSDevoicing  [%^c -> c,
 ! Voicing assimilation
 !
 
+#if (RELAXED_D_ASSIMILATION == 1)
+define VoicingAssimilation  [ %^D (->) t , 
+#else
 define VoicingAssimilation  [ %^D -> t , 
-                              %^C -> ç  || ConsUV [ IntSym | AposSym]* _ ]
+#endif
+#if (RELAXED_C_ASSIMILATION == 1)
+                              %^C (->) ç  
+#else
+                              %^C -> ç  
+#endif
+                             || ConsUV [ IntSym | AposSym]* _ ]
                        .o.  [ %^D -> d,
                               %^C -> c ];
 

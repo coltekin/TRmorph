@@ -46,6 +46,28 @@
 #define CIRCUMFLEX_OPTIONAL 1
 #define GUESSER_CIRCUMFLEX_OPTIONAL 0
 
+/* 
+ *
+ * RELAXED_C_ASSIMILATION: The underlying C at the beginning of some
+ * of the suffixes such as -CI normally goes through voicing
+ * assimilation, so the correct form is `c' after a voiced consonant
+ * of a vowel `şeker-ci' and `ç' after non-voiced consonant
+ * `şarap-çı'. However, people often seem to omit devoicing, e.g.,
+ * say/write `şarap-cı'. Enabling this options allow analyzing these
+ * words.
+ *
+ * This option is currenly global. It cannot be customized for
+ * differnt components here.
+ *
+ */
+#define RELAXED_C_ASSIMILATION 0
+
+/* 
+ *
+ * RELAXED_D_ASSIMILATION: Similar to RELAXED_C_ASSIMILATION, but this
+ * is more rare, like  'görüşdükten'.
+ */
+#define RELAXED_D_ASSIMILATION 0
 
 /* 
  * These options are only for guesser. The gusser will attempt to
