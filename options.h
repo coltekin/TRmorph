@@ -60,7 +60,7 @@
  * differnt components here.
  *
  */
-#define RELAXED_C_ASSIMILATION 0
+#define RELAXED_C_ASSIMILATION 1
 
 /* 
  *
