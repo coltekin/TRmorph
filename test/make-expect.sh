@@ -32,17 +32,17 @@ IFS='
 '
 for line in `sort $t | sed 's/#.*//;/^$/d'`;do
 IFS=$IFS
-    AG=`echo $line|cut -d: -f1`
-    AR=`echo $line|cut -d: -f2`
-    SND=`echo $line|cut -d: -f3`
-    EXP=`echo $line|cut -d: -f4`
+    AG=`echo $line|cut -d\; -f1`
+    AR=`echo $line|cut -d\; -f2`
+    SND=`echo $line|cut -d\; -f3`
+    EXP=`echo $line|cut -d\; -f4`
     if [[ -z "$EXP" ]]; then
         EXP="$failstring"
         AR="A"
     fi
-echo '# [dbg] line: ' $line
-echo '# [dbg] snd: ' $SND
-echo '# [dbg] exp: ' $EXP
+echo '# [dbg] line: ' $line 
+echo '# [dbg] snd: ' $SND 
+echo '# [dbg] exp: ' $EXP 
 
     if [ $state = "analyze" -a $AG = "G" ]; then
         echo 'send $CTRLd'

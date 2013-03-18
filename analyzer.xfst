@@ -1,6 +1,7 @@
 #include "options.h"
 
 read lexc morph.cpp.lexc
+eliminate flags
 define Lexicon;
 
 source morph-phon.cpp.xfst
@@ -12,11 +13,7 @@ clear stack
 read regex     AFilter
            .o. Lexicon 
            .o. Abbr
-#if (ANALYZER_APOSTROPHE_OPTIONAL == 1)
-           .o. replaceAposOpt
-#elif (ANALYZER_APOSTROPHE_REQUIRED == 1)
            .o. replaceApos
-#endif
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator

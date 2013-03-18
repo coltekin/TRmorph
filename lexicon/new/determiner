@@ -1,38 +1,50 @@
-bir             Det;
-birkaç          Det;
-birkaç% tane    Det;
-birtakım        Det;
-birçok          Det;
-biraz           Det;
-bir% miktar     Det;
-bazı            Det;
-kimi            Det;
-bir% kısım      Det;
-bu% kadar       Det;
-şu% kadar       Det;
-o% kadar        Det;
-ne% kadar       Det;
-çok             Det;
-çoğu            Det;
-az              Det;
-fazla           Det;
-hiçbir          Det;
-hiç% bir        Det;
-herhangi        Det;
-başka           Det;
-herhangi% bir   Det;
-öyle            Det;
-böyle           Det;
-şöyle           Det;
+bir             DetIndef;
+birkaç          DetIndef;
+birkaç% tane    DetIndef;
+birtakım        DetIndef;
+birçok          DetIndef;
+biraz           DetIndef;
+bir% miktar     DetIndef;
+bazı            DetIndef;
+kimi            DetIndef;
+bir% kısım      DetIndef;
+bir% kesim      DetIndef;
+bir% bölüm      DetIndef;
+bu% kadar       DetIndef;
+şu% kadar       DetIndef;
+o% kadar        DetIndef;
+ne% kadar       DetIndef;
+ço^k            DetIndef;
+pek% ço^k       DetIndef;
+çoğu            DetIndef; ! no pronoun
+az              DetIndef;
+fazla           DetIndef;
+hiçbir          DetIndef;
+hiç% bir        DetIndef;
+herhangi        DetIndef;
+herhangi% bir   DetIndef;
+başka           DetIndef;
+bunca           DetIndef;
+öyle            DetIndef;
+böyle           DetIndef;
+şöyle           DetIndef;
+! kaç           DetQIndef; ! we mark this as number
+ne% kadar       DetIndefQ;
 ! definite_determiners_below_this_line#
-o               Det;
-bu              Det;
-şu              Det;
-her             Det;
-bütün           Det;
-tüm             Det;
-aynı            Det;
-öteki           Det;
-öbür            Det;
-diğer           Det;
-tek             Det;
+o               DetDef;
+bu              DetDef;
+şu              DetDef;
+her             DetDef;    !no pronoun
+her% bir        DetDef;
+herbir          DetDef;
+bütün           DetDef;
+tüm             DetDef;
+aynı            DetDef;
+öte             DetDef;    ! somewhat colloquial
+öteki           DetDef;    ! somewhat colloquial
+beri            DetDef;    ! somewhat colloquial
+beriki          DetDef;    ! somewhat colloquial
+öbür            DetDef;
+diğer           DetDef;
+tek             DetDef;
+hangi           DetDefQ;

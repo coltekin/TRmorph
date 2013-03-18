@@ -1,0 +1,26 @@
+\tikzstyle{abovel}=[sloped,yshift=1.1ex]
+\tikzstyle{belowl}=[sloped,yshift=-1.1ex]
+\begin{tikzpicture}[node distance=8mm and 24mm,on grid,
+                    inner sep=2pt,bend angle=30,
+                    minimum size=9mm,font=\footnotesize]
+\node[state,thick]     (N)                          {N};
+\node[state,thick]     (PLU)   [right=of N]         {PLU};
+\node[state,thick]     (POS)   [right=of PLU]       {POSS};
+\node[state,thick]     (CASE1) [above right=of POS]     {CASE1};
+\node[state,thick]     (CASE2) [below right=of POS]      {CASE2};
+\begin{scope}[every node/.style={inner sep=0pt},node distance=1mm and 3mm]
+\path[->,thick,bend angle=20] 
+    (N) edge              node [abovel]         {PLU}          (PLU)
+    (N) edge [bend left]  node [abovel]  {POSS}  (POS);
+\path[->,thick,bend angle=40] 
+    (N)   edge [bend left]  node [belowl] {CASE1}        (CASE1)
+    (N)   edge [bend right] node [abovel] {CASE2}        (CASE2);
+\path[->,thick,bend angle=15] 
+    (PLU) edge              node [abovel] {POSS}    (POS)
+    (PLU) edge [bend left]  node [belowl] {CASE1}        (CASE1)
+    (PLU) edge [bend right] node [abovel] {CASE2}        (CASE2);
+\path[->,thick,bend angle=20]
+    (POS) edge              node [abovel] {CASE1}        (CASE1)
+    (POS) edge              node [abovel] {CASE2}        (CASE2);
+\end{scope}
+\end{tikzpicture}

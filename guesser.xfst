@@ -1,6 +1,7 @@
 #include "options.h"
 
 read lexc guesser.cpp.lexc
+eliminate flags
 define Lexicon;
 
 source morph-phon.xfst
@@ -11,11 +12,7 @@ source morph-phon.xfst
 clear stack
 read regex Lexicon 
            .o. Abbr
-#if (GUESSER_APOSTROPHE_OPTIONAL == 1)
-           .o. replaceAposOpt
-#else  // GUESSER_APOSTROPHE_REQUIRED or none set
            .o. replaceApos
-#endif
            .o. NumberSpace
            .o. NumericInsSilentP
            .o. NumericSeparator
