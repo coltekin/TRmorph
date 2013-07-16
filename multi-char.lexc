@@ -1,0 +1,59 @@
+!
+! multi-char.lexc
+!
+! this file only lists multi-char symbols used in other lexc files,
+! and included from these files.
+!
+Multichar_Symbols %<n%> %<np%> %<adj%> %<adv%> %<num%> %<det%>
+                      %<ncomp%>
+                      %<perc%>
+                      %<pl%>
+                      %<p1s%> %<p2s%> %<p3s%> %<p1p%> %<p2p%> %<p3p%>
+                      %<acc%> %<dat%> %<loc%> %<abl%> %<gen%> %<ins%>
+                      %<ki%>
+                  %<v%>
+                      %<rfl%> %<rcp%> %<caus%> %<pass%>
+                      %<abil%> %<iver%> %<adur%> %<agel%> 
+                      %<agor%> %<akal%> %<akoy%> %<ayaz%>
+                      %<t_past%> %<t_narr%> %<t_fut%> %<t_cond%> %<t_obl%>
+                      %<t_makta%> %<t_opt%> %<t_cont%> %<t_imp%> %<t_aor%>
+                      %<1s%> %<2s%> %<3s%> %<1p%> %<2p%> %<3p%>
+                      %<cpl_di%> %<cpl_mis%> %<cpl_sa%>
+                      %<vinf%>
+                      %<q%>
+                      %<cv_ir%> 
+                        %<cv_zden%> %<cv_den%> 
+                        %<cv_diginda%> %<cv_digindan%> %<cv_digi%> 
+                        %<cv_digina%> %<cv_diktan%> %<cv_acak%> 
+                        %<cv_acagindan%> %<cv_acagina%> %<cv_acak%> 
+                        %<cv_mak%> %<cv_makla%> %<cv_maksizin%> 
+                        %<cv_maktan%> %<cv_maktansa%> %<cv_masi%> 
+                        %<cv_masindan%> %<cv_masina%> %<cv_inca%> 
+                        %<cv_arak%> %<cv_ali%> %<cv_incaya%>
+                        %<cv_ana%> %<cv_ip%> %<cv_miscesine%> %<cv_erekten%>
+                      %<vn_ma%> %<vn_mak%> %<vn_yis%>
+                      %<part_dik%> %<part_acak%> %<part_yan%>
+                  %<cnjsub%> %<cnjcoo%> %<cnjadv%>
+                  %<ij%>
+                  %<ngtv%> %<bch%> %<disc_part%> %<pau%> %<ui%>
+                  %<punct%>
+                  %<redup%>
+                  %<exist%> %<notexist%> %<not%>
+                  %<alpha%>
+                  %<AN_%0%> %<JN_%0%> %<AJ_%0%> %<MN_%0%> %<VJ_%0%>
+                  %<dimin%>
+                  %<D_lI%> %<D_sIz%> %<D_lIk%> %<D_CI%> %<D_CA%>
+                    %<D_cil%> %<D_gil%> %<D_lA%> %<D_lAn%> %<D_lAS%> 
+                    %<D_yIS%> %<D_mA%>
+                  ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
+                  ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
+                  ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
+                  @RB @MB @dB
+                  @APOS @ABBR
+                  @tSep @dSep
+                  @NCOMP
+                  @DEL@ @DUP@ @DELS@
+                  @LN @CAUS
+                  @miSPC @opt3
+                  ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
+!                   e,i   ü,ö   a,ı   o,u   

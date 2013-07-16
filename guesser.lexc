@@ -27,7 +27,6 @@
 !   
 !
 
-#include "morph.lexc"
 #include "options.h"
 
 #define TRUC_V E|İ|Ö|Ü|Î|A|I|O|U|Â|Û
@@ -52,30 +51,30 @@
 #define MAX 9
 #endif
 
+LEXICON Root
 
-LEXICON NRoot
+! LEXICON NRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>   N;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>   Ncomp;
 <\?>       Nfamily;
 <\?>       Ntime;
 
-LEXICON NPRoot
+! LEXICON NPRoot
 <[TRUC][TRLC]^{MIN,MAX}>        NP;
 <[TRUC][TRLC]^{MIN,MAX}>        NPcomp;
 
-LEXICON AdjRoot
+! LEXICON AdjRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>   Adj;
 <\?>    Adj;
 <\?>    AdjNcomp;
 
-LEXICON AdvRoot
+! LEXICON AdvRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>   Adv;
 <\?>    AdvTime;
 
-LEXICON VerbRoot
+! LEXICON VerbRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_AorAr;
-<[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_AorT;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_CausAr_AorAr;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_CausArt_AorAr;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_CausAt_AorAr;
@@ -99,13 +98,13 @@ LEXICON VerbRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_Rfl_Rcp_CausDir_AorAr;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    V_Rfl_Rcp_CausIrreg;
 
-LEXICON InterjectionRoot
+! LEXICON InterjectionRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    Interjection;
 
-LEXICON OnomRoot
+! LEXICON OnomRoot
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>    Onom;
 
-LEXICON Abbreviation
+! LEXICON Abbreviation
 <[TRUC|TRLC][TRLC]^{1,MAX}>     N_unit;
 <[TRUC]^{MIN,MAX}>              N_abbr;
 <[TRUC|\.]^{MIN,MAX}>           NP_abbr;
@@ -116,24 +115,20 @@ LEXICON Abbreviation
 ! are closed-class words.
 !
 
-LEXICON PrnRoot
+! LEXICON PrnRoot
 <\?>    Prn;
 <\?>    DemPrn;
 <\?>    LocPrn;
 <\?>    PersPrn;
 
-LEXICON DetRoot
+! LEXICON DetRoot
 <\?>    Det;
 
 
-LEXICON CnjRoot
+! LEXICON CnjRoot
 <\?>    CnjCoo;
 <\?>    CnjAdv;
 <\?>    CnjSub;
 
-LEXICON PostPRoot
-<\?>    PostP;
-<\?>    PostPKi;
 
-LEXICON RedupRoot
-<\?>    Redup;
+#include "morph.cpp.lexc"
