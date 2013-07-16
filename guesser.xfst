@@ -1,9 +1,10 @@
 #include "options.h"
 
 read lexc guesser.cpp.lexc
+eliminate flags
 define Lexicon;
 
-source morph-phon.xfst
+source morph-phon.cpp.xfst
 
 !
 ! Put all of them together. The order is important. 

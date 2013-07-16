@@ -14,7 +14,7 @@ analyzer: trmorph.fst
 
 all: analyzer segmenter stemmer guesser
 
-trmorph.fst: analyzer.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
+trmorph.fst: analyzer.cpp.xfst analyzer.cpp.lexc morph-phon.cpp.xfst
 	foma -f analyzer.cpp.xfst
 
 #

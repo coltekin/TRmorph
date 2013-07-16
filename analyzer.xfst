@@ -1,6 +1,6 @@
 #include "options.h"
 
-read lexc morph.cpp.lexc
+read lexc analyzer.cpp.lexc
 define Lexicon;
 
 source morph-phon.cpp.xfst

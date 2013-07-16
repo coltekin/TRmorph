@@ -1,0 +1,49 @@
+#include "multi-char.lexc"
+
+LEXICON Root
+Number; ! numbers are special as they are defined through a set of rules.
+Exceptions;
+
+!
+! This part is the core lexicon. We do not what to leave any
+! of these out. These files do not have lexicon definitions. 
+! They only list the lexical items and their class.
+!
+#include "lexicon/alpha"
+#include "lexicon/clitics"
+#include "lexicon/punctuation"
+#include "lexicon/qwords"
+#include "lexicon/new/adjective"
+#include "lexicon/new/adverb"
+#include "lexicon/new/conjunction"
+#include "lexicon/new/determiner"
+#include "lexicon/new/interjection"
+#include "lexicon/new/noun"
+#include "lexicon/new/proper_noun"
+#include "lexicon/new/onomatopoeia"
+#include "lexicon/new/postposition"
+#include "lexicon/new/pronoun"
+#include "lexicon/new/verb"
+
+!
+! These may be "optionalized", or replaced by a more rule-governed
+! method in the future.
+!
+
+#include "lexicon/new/abbreviation"
+#include "lexicon/new/part_word"
+
+
+!
+! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
+!
+
+#include "number.lexc"
+#include "exceptions.lexc"
+
+
+!
+! Include the definition of morphological process
+!
+
+#include "morph.cpp.lexc"
