@@ -71,7 +71,7 @@ arın         V;
 arıt         V;
 artakal      V_CausIrreg;
 art          V_CausIr_AorAr;
-!ar          V_AorT; ! some would use `arttır'
+ar           V_AorAr; ! some would use `arttır'
 aşağıla      V;
 asıl         V_CausDir; ! as<psv> but lexicalized
 aşın         V;
