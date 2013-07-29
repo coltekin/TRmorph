@@ -1,17 +1,14 @@
-Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
-                  ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
-                  ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
-                  @RB @MB @dB
-                  @APOS @ABBR
-                  @tSep @dSep
-                  @NCOMP
-                  @DEL@ @DUP@ @DELS@
-                  @LN @CAUS
-                  @miSPC @opt3
-                  ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
-!                   e,i   ü,ö   a,ı   o,u   
+! morph.lexc
+!
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph and distributed under GNU LGPL.
+! See the file LICENSE or http://www.gnu.org/licenses/lgpl.html 
+! for details.
+!
 
 #include "options.h"
+#include "multi-char.lexc"
 
 LEXICON Root
 Number; ! numbers are special as they are defined through a set of rules.

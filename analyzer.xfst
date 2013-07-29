@@ -1,3 +1,12 @@
+! analyzer.xfst
+!
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph and distributed under GNU LGPL.
+! See the file LICENSE or http://www.gnu.org/licenses/lgpl.html 
+! for details.
+!
+
 #include "options.h"
 
 read lexc morph.cpp.lexc
