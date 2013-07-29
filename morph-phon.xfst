@@ -64,7 +64,7 @@ define IntSym   Boundary | %@NCOMP | %@opt3;
 !
 
 define Abbr     [..] -> %^sFUV  || .#. ConsSurface+ _ %@ABBR
-           .o. %@ABBR -> %@APOS || SurfaceLetter SilentLetter* _
+!           .o. %@APOS -> 0 || \SurfaceLetter SilentLetter* %@ABBR %@MB _
            .o. %@ABBR -> 0;
 
 !
@@ -80,6 +80,7 @@ define replaceApos %@APOS -> 0 || _ Boundary+ .#.
 
 !
 ! The same as above, but also allow forms with no apostrophe
+! This is currently not used, in favor of options in 'options.h'.
 !
 define replaceAposOpt %@APOS -> 0 || _ Boundary+ .#.
                       .o. %@APOS (->) 0
@@ -199,12 +200,12 @@ define DeleteLAR  l %^A r -> 0 || Boundary _ Boundary+ l %^A r
 define InsertN  %^D %^A   -> n %^D %^A,
                 %^D %^A n -> n %^D %^A n,
                 %^%(y%) %^A  -> n %^A,
-                %^%(y%) %^I %@MB -> n %^I %@MB,
+                %^%(y%) %^I -> n %^I ,
                 %^C %^A  -> n %^C %^A
                 || [ %^%(s%) %^I 
                     | Boundary [ l %^A r %^I | k i | k ü]
                     | .#. k e n d i
-                   ] [Boundary|AposSym]+ _ ;
+                   ] [Boundary|AposSym]+ _ %@MB;
 
 !
 ! DelS
@@ -562,7 +563,7 @@ define AFilter    FSDevoicing.i
               .o. 0 <- %@DUP%@
               .o. 0 <- %@dB
               .o. 0 <- (ConsSilent|Vsilent)
-              .o. %<cv%_ir%> <- %<t%_aor%> %<cv%_ir%>;
+              ;
 
 
 define DeleteBoundary ["@MB" | "@RB"] -> 0 ;
@@ -619,13 +620,13 @@ define AllCaps a (->) A, b (->) B, c (->) C, ç (->) Ç, d (->) D,
         j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O, ö (->) Ö, 
         p (->) P, r (->) R, s (->) S, ş (->) Ş, t (->) T, u (->) U, ü (->) Ü, 
         v (->) V, y (->) Y, z (->) Z, î (->) Î, û (->) Û, â (->) Â 
-        // CAP _ 
+        // (AposSym) CAP (AposSym) _ 
     .o. a -> A, b -> B, c -> C, ç -> Ç, d -> D, 
         e -> E, f -> F, g -> G, ğ -> Ğ, h -> H, ı -> I, i -> İ, 
         j -> J, k -> K, l -> L, m -> M, n -> N, o -> O, ö -> Ö, 
         p -> P, r -> R, s -> S, ş -> Ş, t -> T, u -> U, ü -> Ü, 
         v -> V, y -> Y, z -> Z, î -> Î, û -> Û, â -> Â 
-        // CAP CAP _;
+        // CAP (AposSym) CAP _;
 
 !
 ! Accept text written in all or partial ASCII. This is common in

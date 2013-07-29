@@ -2,26 +2,23 @@
  * This file lists some configurable options for building various
  * components of TRmoprh. The file is simply a C preprocessor file
  * with #define directives. The options and their use are specified
- * below. Currently this file is only used by the guesser code.
+ * below. 
  *
  */
 
 /* 
- * APOSTROPHE_REQUIRED Require apostrophe after proper names and
- *                     numbers.
- * APOSTROPHE_OPTIONAL Apostrophe use is optional, analyze/generate
- *                     words where apostrophe is skipped.
- * 
- * Normally you should set one of these to 1. If both are set,
- * APOSTROPHE_OPTIONAL takes precedence, if none set, 
- * APOSTROPHE_REQUIRED is assumed.
+ * APOSTROPHE_OPTIONAL      Relaxed apostrophe behaviour after proper 
+ *                          names and numbers.
+ * APOSTROPHE_OPTIONAL_NUM  Only for numbers.
+ * APOSTROPHE_OPTIONAL_PN   Only for proper names.
  * 
  * NOTE: currently,  TRmorph's apostrophe insertion does not fully
  * comply with the official spelling rules.
  */
 #define APOSTROPHE_OPTIONAL 1
-#define APOSTROPHE_REQUIRED 0
-
+#define APOSTROPHE_OPTIONAL_NUM  APOSTROPHE_OPTIONAL
+#define APOSTROPHE_OPTIONAL_PN   APOSTROPHE_OPTIONAL
+#define APOSTROPHE_OPTIONAL_ABBR APOSTROPHE_OPTIONAL
 
 /*
  * CAPITALIZE: this allows first letter of  any word to be capital. This 
@@ -105,8 +102,12 @@
 /* ---------- */
 
 
-#ifndef ANALYZER_APOSTROPHE_OPTIONAL
-#define ANALYZER_APOSTROPHE_OPTIONAL APOSTROPHE_OPTIONAL
+#ifndef ANALYZER_APOSTROPHE_OPTIONAL_NUM
+#define ANALYZER_APOSTROPHE_OPTIONAL_NUM APOSTROPHE_OPTIONAL_NUM
+#endif
+
+#ifndef ANALYZER_APOSTROPHE_OPTIONAL_PN
+#define ANALYZER_APOSTROPHE_OPTIONAL_NUM APOSTROPHE_OPTIONAL_PN
 #endif
 
 #ifndef ANALYZER_APOSTROPHE_REQUIRED

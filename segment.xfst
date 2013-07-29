@@ -28,6 +28,7 @@
 ! morphemes are removed.
 !
 read lexc trmorph.lexc
+eliminate flags
 define Lexicon;
 
 source morph-phon.xfst

@@ -1,9 +1,58 @@
+Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
+                  ^(A) ^(I) ^(s) ^(n) ^(y) ^(ş)
+                  ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
+                  @RB @MB @dB
+                  @APOS @ABBR
+                  @tSep @dSep
+                  @NCOMP
+                  @DEL@ @DUP@ @DELS@
+                  @LN @CAUS
+                  @miSPC @opt3
+                  ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
+!                   e,i   ü,ö   a,ı   o,u   
+
+#include "options.h"
+
+LEXICON Root
+Number; ! numbers are special as they are defined through a set of rules.
+Exceptions;
+
 !
-! morph.lexc
+! This part is the core lexicon. We do not what to leave any
+! of these out. These files do not have lexicon definitions. 
+! They only list the lexical items and their class.
 !
-! this file contains only the definition of morphological process. 
-! it does not contain any root lexicon.
+#include "lexicon/alpha"
+#include "lexicon/clitics"
+#include "lexicon/punctuation"
+#include "lexicon/qwords"
+#include "lexicon/new/adjective"
+#include "lexicon/new/adverb"
+#include "lexicon/new/conjunction"
+#include "lexicon/new/determiner"
+#include "lexicon/new/interjection"
+#include "lexicon/new/noun"
+#include "lexicon/new/proper_noun"
+#include "lexicon/new/onomatopoeia"
+#include "lexicon/new/postposition"
+#include "lexicon/new/pronoun"
+#include "lexicon/new/verb"
+
 !
+! These may be "optionalized", or replaced by a more rule-governed
+! method in the future.
+!
+
+#include "lexicon/new/abbreviation"
+#include "lexicon/new/part_word"
+
+
+!
+! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
+!
+
+#include "number.lexc"
+#include "exceptions.lexc"
 
 
 !
@@ -14,8 +63,8 @@
 ! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
 !
 LEXICON AlphaCont
-%<alpha%>:@RB   NPApos;
-%<alpha%>:@RB   #;
+%<Alpha%>:@RB   NPApos;
+%<Alpha%>:@RB   #;
 
 
 !
@@ -23,52 +72,145 @@ LEXICON AlphaCont
 !
 
 LEXICON CnjCoo
-%<cnjcoo%>:@RB      #;
+%<Cnj%:coo%>:@RB      #;
 
 LEXICON CnjAdv
-%<cnjadv%>:@RB      #;
+%<Cnj%:adv%>:@RB      #;
 
 LEXICON CnjSub
-%<cnjsub%>:@RB      #;
+%<Cnj%:sub%>:@RB      #;
 
 !
 ! The following are for multi-word or discontinous conjunctions.
 !
 LEXICON CnjCooPart
-%<cnjcoo%>%<part%>:@RB      #;
+%<Cnj%:coo%:partial%>:@RB      #;
 
 LEXICON CnjAdvPart
-%<cnjadv%>%<part%>:@RB      #;
-
-! LEXICON CnjSubPart
-! %<cnjsub%>%<part%>:@RB      #;
+%<Cnj%:adv%:partial%>:@RB      #;
 
 !
 ! Postpositions
 !
-! TODO: the postpositions take different inflections. We allow them 
-!       to take any nominal inflection here. Which certainly
-!       overgenerates.
+
 !
-!       Actually, what happens is that phrases with postpositions
-!       become either adverbials or adjectivals (or both) and the
-!       resulting phrase can get the suffixes that are typically
-!       attached these word classes, however, with many exceptions.
+! non-case-marked complements
 !
 
-LEXICON PostP
-%<postp%>:@RB       PostPCont;
+LEXICON nomPostPadj
+%<Postp%:adj%:nomC%>:@RB    AdjCont;
+                        nomPostP;
 
-LEXICON PostPCont
-                    #;
-                    Ninfl;
+LEXICON nomPostP
+%<Postp%:adv%:nomC%>:@RB    AdvCont;
 
-LEXICON PostPKi
-%<postp%>:@RB       PostPKiCont;
+LEXICON nomPostPadjKi
+%<Postp%:adj%:nomC%>:@RB    AdjCont;
+                        nomPostPKi;
 
-LEXICON  PostPKiCont
-                    Ki;
-                    PostPCont;
+LEXICON nomPostPKi
+%<Postp%:adv%:nomC%>:@RB    AdvCont;
+%<Postp%:adv%:nomC%>:@RB    Ki;
+
+
+!
+! dative complements
+!
+
+LEXICON datPostPadj
+%<Postp%:adj%:datC%>:@RB    AdjCont;
+                        datPostP;
+
+LEXICON datPostP
+%<Postp%:adv%:datC%>:@RB    AdvCont;
+
+LEXICON datPostPadjKi
+%<Postp%:adj%:datC%>:@RB    AdjCont;
+                        datPostPKi;
+
+LEXICON datPostPKi
+%<Postp%:adv%:datC%>:@RB    AdvCont;
+%<Postp%:adv%:datC%>:@RB    Ki;
+
+!
+! ablative complement
+!
+
+LEXICON ablPostPadj
+%<Postp%:adj%:ablC%>:@RB    AdjCont;
+                        ablPostP;
+
+LEXICON ablPostP
+%<Postp%:adv%:ablC%>:@RB    AdvCont;
+
+LEXICON ablPostPadjKi
+%<Postp%:adj%:ablC%>:@RB    AdjCont;
+                        ablPostPKi;
+
+LEXICON ablPostPKi
+%<Postp%:adv%:ablC%>:@RB    AdvCont;
+%<Postp%:adv%:ablC%>:@RB    Ki;
+
+!
+! instrumetnal/commutative complement
+!
+
+LEXICON insPostPadj
+%<Postp%:adj%:insC%>:@RB    AdjCont;
+                        insPostP;
+
+LEXICON insPostP
+%<Postp%:adv%:insC%>:@RB    AdvCont;
+
+LEXICON insPostPadjKi
+%<Postp%:adj%:insC%>:@RB    AdjCont;
+                        insPostPKi;
+
+LEXICON insPostPKi
+%<Postp%:adv%:insC%>:@RB    AdvCont;
+%<Postp%:adv%:insC%>:@RB    Ki;
+
+!
+! these require a complement with either -lI or -sIz
+!
+
+LEXICON liPostPadj
+%<Postp%:adj%:liC%>:@RB    AdjCont;
+                        liPostP;
+
+LEXICON liPostP
+%<Postp%:adv%:liC%>:@RB    AdvCont;
+
+LEXICON liPostPadjKi
+%<Postp%:adj%:liC%>:@RB    AdjCont;
+                        liPostPKi;
+
+LEXICON liPostPKi
+%<Postp%:adv%:liC%>:@RB    AdvCont;
+%<Postp%:adv%:liC%>:@RB    Ki;
+
+!
+! these requrire a cardinal number as complement
+!
+
+LEXICON numPostPadj
+%<Postp%:adj%:numC%>:@RB    AdjCont;
+                        numPostP;
+
+LEXICON numPostP
+%<Postp%:adv%:numC%>:@RB    AdvCont;
+
+LEXICON numPostPadjKi
+%<Postp%:adj%:numC%>:@RB    AdjCont;
+                        numPostPKi;
+
+LEXICON numPostPKi
+%<Postp%:adv%:numC%>:@RB    AdvCont;
+%<Postp%:adv%:numC%>:@RB    Ki;
+
+!
+! The follwing makes complex postpositons.
+!
 
 LEXICON PostPlocation
                 PostPloc;
@@ -76,86 +218,96 @@ LEXICON PostPlocation
                 PostPabl;
 
 LEXICON PostPloc
-%<n%>%<p1s%>:@RB^(I)m@MB      PostPlocCont;
-%<n%>%<p2s%>:@RB^(I)n@MB      PostPlocCont;
-%<n%>%<p3s%>:@RB^(s)^I@MB     PostPlocCont;
-!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPlocCont;
-%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPlocCont;
-%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPlocCont;
-%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
+%<N%>%<p1s%>:@RB^(I)m@MB      PostPlocCont;
+%<N%>%<p2s%>:@RB^(I)n@MB      PostPlocCont;
+%<N%>%<p3s%>:@RB^(s)^I@MB     PostPlocCont;
+!%<N%>%<p3p%>:@RB^(s)^I@MB     PostPlocCont;
+%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPlocCont;
+%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPlocCont;
+%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
 
 LEXICON PostPlocCont
-%<loc%>%<postp%>:^D^A@MB     #;
-%<loc%>%<postp%>:^D^A@MB     Ki;
+%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     AdvCont;
+%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     Ki;
 
 LEXICON PostPdat
-%<n%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
-%<n%>%<p2s%>:@RB^(I)n@MB      PostPdatCont;
-%<n%>%<p3s%>:@RB^(s)^I@MB     PostPdatCont;
-!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPdatCont;
-%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPdatCont;
-%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPdatCont;
-%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
+%<N%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
+%<N%>%<p2s%>:@RB^(I)n@MB      PostPdatCont;
+%<N%>%<p3s%>:@RB^(s)^I@MB     PostPdatCont;
+!%<N%>%<p3p%>:@RB^(s)^I@MB     PostPdatCont;
+%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPdatCont;
+%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPdatCont;
+%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
 
 LEXICON PostPdatCont
-%<dat%>%<postp%>:^(y)^A@MB   #;
+%<dat%>%<Postp%:adv%:nomC%>:^(y)^A@MB   AdvCont;
 
 LEXICON PostPins
-%<n%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
-%<n%>%<p2s%>:@RB^(I)n@MB      PostPinsCont;
-%<n%>%<p3s%>:@RB^(s)^I@MB     PostPinsCont;
-!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPinsCont;
-%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPinsCont;
-%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPinsCont;
-%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
+%<N%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
+%<N%>%<p2s%>:@RB^(I)n@MB      PostPinsCont;
+%<N%>%<p3s%>:@RB^(s)^I@MB     PostPinsCont;
+!%<N%>%<p3p%>:@RB^(s)^I@MB     PostPinsCont;
+%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPinsCont;
+%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPinsCont;
+%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
 
 LEXICON PostPinsCont
-%<ins%>%<postp%>:^(y)l^A@MB  #;
+%<ins%>%<Postp%:adv%:nomC%>:^(y)l^A@MB  AdvCont;
 
 LEXICON PostPabl
-%<n%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
-%<n%>%<p2s%>:@RB^(I)n@MB      PostPablCont;
-%<n%>%<p3s%>:@RB^(s)^I@MB     PostPablCont;
-!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPablCont;
-%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPablCont;
-%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPablCont;
-%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
+%<N%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
+%<N%>%<p2s%>:@RB^(I)n@MB      PostPablCont;
+%<N%>%<p3s%>:@RB^(s)^I@MB     PostPablCont;
+!%<N%>%<p3p%>:@RB^(s)^I@MB     PostPablCont;
+%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPablCont;
+%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPablCont;
+%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
 
 LEXICON PostPablCont
-%<abl%>%<postp%>:^D^An@MB    #;
+%<abl%>%<Postp%:adv%:nomC%>:^D^An@MB    AdvCont;
 
 LEXICON PostPca
-%<n%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
-%<n%>%<p2s%>:@RB^(I)n@MB      PostPcaCont;
-%<n%>%<p3s%>:@RB^(s)^I@MB     PostPcaCont;
-!%<n%>%<p3p%>:@RB^(s)^I@MB     PostPcaCont;
-%<n%>%<p1p%>:@RB^(I)m^Iz@MB   PostPcaCont;
-%<n%>%<p2p%>:@RB^(I)n^Iz@MB   PostPcaCont;
-%<n%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
+%<N%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
+%<N%>%<p2s%>:@RB^(I)n@MB      PostPcaCont;
+%<N%>%<p3s%>:@RB^(s)^I@MB     PostPcaCont;
+!%<N%>%<p3p%>:@RB^(s)^I@MB     PostPcaCont;
+%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPcaCont;
+%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPcaCont;
+%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
 
 LEXICON PostPcaCont
-%<D_CA%>%<postp%>:^C^A@MB       #;
+%<ca%>%<Postp%:adv%:nomC%>:^C^A@MB       AdvCont;
 
 !
 ! Possessive suffixes after adjectives and determiners make pronouns.
 !
+! TODO: The semantic difference between these are generally difficult
+!       to get:
+!
+!       yeni<Adj><p3s><Prn>  `(a) new one'
+!       yeni<Adj><0><N><p3s> `his/her new one = the new thing that he/she owns'
+!       
+!       And becomes more obscure in cases like this:
+!
+!       mavi<Adj><p2s><Prn>    `the thing that is a blue version of you'
+!       mavi<Adj><0><N><p2s>   `the blue thing that you own'
 !
 
 LEXICON JP_poss
-%<p1s%>%<prn%>:^(I)m@MB      NposCont;
-%<p2s%>%<prn%>:^(I)n@MB      NposCont;
-%<p3s%>%<prn%>:^(s)^I@MB     NposCont;
-!%<p3p%>%<prn%>:^(s)^I@MB     NposCont; !TODO: check if this refers to plural
-%<p1p%>%<prn%>:^(I)m^Iz@MB   NposCont;
-%<p2p%>%<prn%>:^(I)n^Iz@MB   NposCont;
-%<p3p%>%<prn%>:l^Ar^I@MB     NposCont;
+%<p1s%>%<Prn%>:^(I)m@MB      NposCont;
+%<p2s%>%<Prn%>:^(I)n@MB      NposCont;
+%<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
+!%<p3p%>%<Prn%>:^(s)^I@MB     NposCont; !TODO: check if this refers to plural
+%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
+%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
+%<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
 
 
 !
 ! onomatopoeic words
 !
 LEXICON Onom
-%<onom%>:@RB        OnomCont;
+%<Onom%>:@RB        OnomCont;
 
 LEXICON  OnomCont
                     #;
@@ -168,10 +320,10 @@ LEXICON  OnomCont
 ! easier with old lexicon conversion.
 
 LEXICON Interjection
-%<ij%>:@RB      #;
+%<Ij%>:@RB      #;
 
-LEXICON QIntj   ! this is `hani'.
-%<ij%>%<qst%>:@RB      #;
+! LEXICON QIntj   ! this used to be `hani'.
+! %<Ij%:qst%>:@RB      #;
 
 
 
@@ -180,18 +332,28 @@ LEXICON QIntj   ! this is `hani'.
 !
 
 LEXICON NPcomp  ! this is only for lexicalized forms with compounding
-@NCOMP%<ncomp%>%<np%>:^(s)^I@NCOMP@RB NPcont;
+@NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;
 
 LEXICON NP
-%<np%>:@RB   NPcont;
+%<N%:prop%>:@RB   NPcont;
 
 LEXICON NP_abbr
-%<np%>%<abbr%>:@ABBR@RB   NPAposCont;
+%<N%:prop%:abbr%>:@ABBR@RB   NPAbbrCont;
+
+LEXICON NPAbbrCont
+                #;
+                NPApos;
+#if (APOSTROPHE_OPTIONAL_ABBR == 1)
+                NPAposCont;
+#endif
 
 LEXICON NPcont
                 #;
                 NPApos;
-!                NPNoApos;
+#if (APOSTROPHE_OPTIONAL_PN == 1) 
+                NPAposCont;
+#endif
+
 
 LEXICON NPApos  
 0:@APOS@MB     NPAposCont;
@@ -201,23 +363,26 @@ LEXICON   NPAposCont
                 Ninfl;
 
 LEXICON NPnation
-%<np%>:@RB   NPnationCont;
+%<N%:prop%>:@RB   NPnationCont;
 
 LEXICON NPnationCont
                 NPcont;
                 ND_CAlanguage;
 
 LEXICON NPperson
-%<np%>:@RB   NPpersonCont;
+%<N%:prop%>:@RB   NPpersonCont;
 
 LEXICON NPpersonCont
                 NPcont;
 0:@APOS@MB      D_gil;
+#if (APOSTROPHE_OPTIONAL_PN == 1) 
+                D_gil;
+#endif
 
 
 
 LEXICON Ncomp ! this is only for lexicalized forms with compounding
-@NCOMP%<ncomp%>%<n%>:^(s)^I@NCOMP@RB NcompCont;
+@NCOMP%<N%>:^(s)^I@NCOMP@RB NcompCont;
 
 LEXICON NcompInfl  ! this is for regular nouns
 %<ncomp%>:^(s)^I@NCOMP@MB    NcompCont;
@@ -243,8 +408,8 @@ LEXICON Ninfl
 !
 
 LEXICON Nfamily
-%<n%>:@RB   Ncont;
-%<n%>:@RB   NfamCont;
+%<N%>:@RB   Ncont;
+%<N%>:@RB   NfamCont;
 
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
@@ -260,26 +425,30 @@ LEXICON NfamPosCont
 !
 
 LEXICON N_unit  ! we may treat these differntly later
-%<n%>%<abbr%>:@ABBR@RB       Ncont;
+%<N%:abbr%>:@ABBR@RB       NAbbrCont;
 
 LEXICON N_abbr  
-%<n%>%<abbr%>:@ABBR@RB       Ncont;
+%<N%:abbr%>:@ABBR@RB       NAbbrCont;
 
 LEXICON NAbbrCont
+                        #;
 0:@APOS@MB              Ncont;
+#if (APOSTROPHE_OPTIONAL_ABBR == 1) 
+                        Ncont;
+#endif
 
 !
 ! End of family nouns + possessive-plural 
 !
 
 LEXICON N
-%<n%>:@RB   Ncont;
+%<N%>:@RB   Ncont;
 
 LEXICON NPart
-%<n%>%<part%>:@RB   #;
+%<N%:partial%>:@RB   #;
 
 LEXICON NPartLast
-%<n%>%<part%>:@RB   Ncont;
+%<N%%:partial%>:@RB   Ncont;
 
 LEXICON Ncont
     Nderiv;
@@ -287,7 +456,7 @@ LEXICON Ncont
     NcompInfl;
 
 LEXICON Ntime
-%<n%>:@RB    NtimeCont;
+%<N%>:@RB    NtimeCont;
 
 LEXICON NtimeCont
                     Ki;
@@ -355,61 +524,57 @@ LEXICON GenCaseCont
             NomPredicate;
 
 LEXICON Ki
-%<ki%>:ki@MB KiCont;
-
-LEXICON KiCont
-    #;
-    Ncont;
-
+%<ki%>:ki@MB DerivJCont;
 
 !
 ! This part deals with person agreement
 !
 
 LEXICON NomPredicatePLU
-                        NomPredPagr;
-                        NomPredPagr3s;
-                        NomPredDir;
-                        NomPredQ;
-                        CplAll;
+%<%0%>%<V%>:@MB                 NomPredPagr;
+%<%0%>%<V%>:@MB                 NomPredPagr3s;
+%<%0%>%<V%>:@MB                 NomPredDir;
+%<%0%>%<V%>:@MB                 CplAll;
+                                NomPredQ;
 
 LEXICON NomPredicate
-                        NomPredPagr3p;
-                        NomPredicatePLU;
+%<%0%>%<V%>:@MB                       NomPredPagr3p;
+                                      NomPredicatePLU;
 
 LEXICON NomPredicateMAK
-                        NomPredPagr3s;
-                        NomPredPagr3p;
-                        NomPredDir;
-                        NomPredQ;
-                        CplAll;
+%<%0%>%<V%>:@MB                        NomPredPagr3s;
+%<%0%>%<V%>:@MB                        NomPredPagr3p;
+%<%0%>%<V%>:@MB                        NomPredDir;
+%<%0%>%<V%>:@MB                        CplAll;
+                                       NomPredQ;
 
 LEXICON NomPredQ
-%<q%>:@miSPCm^I@MB      NomPredQCont;
+%<%0%>%<V%>:@MB                         NomPredQCont;
 
 LEXICON NomPredQCont
-                        NomPredPagr;
-                        NomPredDir;
-                        CplAll;
+%<q%>:@miSPCm^I@MB                        NomPredPagr;
+%<q%>:@miSPCm^I@MB                        NomPredDir;
+%<q%>:@miSPCm^I@MB                        CplAll;
 
 LEXICON NomPredPagr
-%<1s%>:^(y)^Im@MB       NomPredPagrCont;
-%<2s%>:s^In@MB          NomPredPagrCont;
-%<3s%>:0@MB             NomPredPagrCont;
-%<3p%>:0@MB             NomPredPagrCont;
-%<1p%>:^(y)^Iz@MB       NomPredPagrCont;
-%<2p%>:s^In^Iz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<1s%>:^(y)^Im@MB       NomPredPagrCont;
+%<cpl%:pres%>%<2s%>:s^In@MB          NomPredPagrCont;
+%<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
+%<cpl%:pres%>%<3p%>:0@MB             NomPredPagrCont;
+%<cpl%:pres%>%<1p%>:^(y)^Iz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<2p%>:s^In^Iz@MB       NomPredPagrCont;
+
+LEXICON NomPredPagr3s
+%<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
+%<cpl%:pres%>%<3p%>:0@MB             NomPredPagrCont;
 
 LEXICON NomPredPagrCont
                     #;
                     DIrEnd;
 
-LEXICON NomPredPagr3s
-%<3s%>:0@MB             NomPredPagrCont;
-%<3p%>:0@MB             NomPredPagrCont;
 
 LEXICON  NomPredPagr3p
-%<3p%>:l^Ar@MB          NomPredPagr3pCont;
+%<cpl%:pres%>%<3p%>:l^Ar@MB          NomPredPagr3pCont;
 
 LEXICON   NomPredPagr3pCont
         NomPredPagrCont;        ! includes end state
@@ -441,38 +606,38 @@ LEXICON DIrEnd
 !           . -ca -casi etc.
 
 LEXICON Adj
-%<adj%>:@RB        AdjCont;
+%<Adj%>:@RB        AdjCont;
 
 LEXICON AdjPartLast
-%<adj%>%<part%>:@RB        AdjCont;
+%<Adj%:partial%>:@RB        AdjCont;
 
 LEXICON AdjPart
-%<adj%>%<part%>:@RB        #;
+%<Adj%:partial%>:@RB        #;
 
 LEXICON AdjNcomp
-@NCOMP%<adj%>:^(s)^I@NCOMP@RB AdjCont;
+@NCOMP%<Adj%>:^(s)^I@NCOMP@RB AdjCont;
 
 LEXICON  AdjCont
                     #;
                     Jderiv;
 
 LEXICON Adv
-%<adv%>:@RB         AdvCont;
+%<Adv%>:@RB         AdvCont;
 
 LEXICON AdvPartLast
-%<adv%>%<part%>:@RB        AdvCont;
+%<Adv%:partial%>:@RB        AdvCont;
 
 LEXICON AdvPart
-%<adv%>%<part%>:@RB        #;
+%<Adv%:partial%>:@RB        #;
                   
 LEXICON QAdv
-%<adv%>%<qst%>:@RB  AdvCont;
+%<Adv%:qst%>:@RB  AdvCont;
 
 LEXICON AdvTime
-%<adv%>:@RB         AdvTimeCont;
+%<Adv%>:@RB         AdvTimeCont;
 
 LEXICON QAdvTime
-%<adv%>%<qst%>:@RB         AdvTimeCont;
+%<Adv%:qst%>:@RB         AdvTimeCont;
 
 LEXICON AdvTimeCont
                     Ki;
@@ -489,38 +654,67 @@ LEXICON AdvCont
 ! TODO: -(y)ken added to som bare pronouns
 
 LEXICON Prn
-%<prn%>:@RB PrnCont;
+%<Prn%>:@RB PrnCont;
 
 LEXICON PrnCont  ! this is all, except compounding
     #;
     Pderiv;
     NcompCont;
 
+LEXICON PersPrn1s
+%<Prn%:pers%:1s%>:@RB PrnCont;
+LEXICON PersPrn2s
+%<Prn%:pers%:2s%>:@RB PrnCont;
+LEXICON PersPrn3s
+%<Prn%:pers%:3s%>:@RB PrnCont;
+
+LEXICON PersPrn1p
+%<Prn%:pers%:1p%>:@RB PrnCont;
+LEXICON PersPrn2p
+%<Prn%:pers%:2p%>:@RB PrnCont;
+LEXICON PersPrn3p
+%<Prn%:pers%:3p%>:@RB PrnCont;
+
+LEXICON PersPrnRfl
+%<Prn%:pers%:rfl%>:@RB PrnCont;
+
 LEXICON PersPrn
-%<prn%>%<pers%>:@RB PrnCont;
+%<Prn%:pers%>:@RB PrnCont;
 
 LEXICON PPrnBirBir
-%<prn%>:@RB PrnContNoPlu;
+%<Prn%>:@RB PrnContNoPlu;
 
 LEXICON PrnContNoPlu
         Npos;
         Ncase;
 
 LEXICON DemPrn
-%<prn%>%<dem%>:@RB PrnCont;
+%<Prn%:dem%>:@RB PrnCont;
 
 LEXICON QPrn
-%<prn%>%<qst%>:@RB PrnCont;
+%<Prn%:qst%>:@RB PrnCont;
+
+LEXICON QPrnLoc
+%<Prn%:qst%:locp%>:@RB PrnCont;
+
+LEXICON QPrnPers
+%<Prn%:qst%:pers%>:@RB PrnCont;
 
 LEXICON LocPrn  ! TODO: these do not inflect except only in some fixed expressions
-%<prn%>%<locp%>:@RB PrnCont;
+%<Prn%:locp%>:@RB PrnCont;
 
 !
 ! Determiners
 !
 
-LEXICON  Det
-%<det%>:@RB DetCont;
+LEXICON  DetDef
+%<Det%:def%>:@RB DetCont;
+LEXICON  DetIndef
+%<Det%:indef%>:@RB DetCont;
+LEXICON  DetDefQ
+%<Det%:def%:qst%>:@RB DetCont;
+LEXICON  DetIndefQ
+%<Det%:indef%:qst%>:@RB DetCont;
 
 LEXICON DetCont
                     #;
@@ -530,10 +724,10 @@ LEXICON DetCont
 ! Number inflections and derivations
 
 LEXICON NumStem
-%<num%>:@RB  NumCont;
+%<Num%>:@RB  NumCont;
 
 LEXICON QNum
-%<num%>%<qst%>:@RB  NumCont;
+%<Num%:qst%>:@RB  NumCont;
 
 LEXICON  NumHalf
 buçu^k  NumStem;
@@ -541,14 +735,15 @@ buçu^k  NumStem;
 LEXICON NumCont
                 #;
                 NumDeriv;
+                JP_poss;    ! ikimiz, yedisi, yüzünüz
 
 LEXICON NumericStem
-%<num%>:@RB             NumericCont;    
-!%<num%>%<dig%>:@RB     NumericCont;    
+%<Num%:ara%>:@RB             NumericCont;    
+!%<Num%>%<dig%>:@RB     NumericCont;    
 
 LEXICON RomanStem
-%<num%>:@RB             NumericCont;    
-!%<num%>%<rom%>:@RB     NumericCont;    
+%<Num%:rom%>:@RB             NumericCont;    
+!%<Num%>%<rom%>:@RB     NumericCont;    
 
 LEXICON NumericCont
                 #;
@@ -556,6 +751,9 @@ LEXICON NumericCont
 
 LEXICON NumericApos
 0:%@APOS@MB      NumDeriv;
+#if (APOSTROPHE_OPTIONAL_NUM == 1) 
+                 NumDeriv;
+#endif
 
 
 LEXICON NumDeriv
@@ -595,13 +793,13 @@ LEXICON NumDistCont
 !  - no reflexive or reciprocal is allowed
 
 LEXICON V
-%<v%>:@RB   VCont;
+%<V%>:@RB   VCont;
 
 LEXICON VPartLast
-%<v%>%<part%>:@RB   VCont;
+%<V%:partial%>:@RB   VCont;
 
 LEXICON VPart
-%<v%>%<part%>:@RB   #;
+%<V%:partial%>:@RB   #;
 
 LEXICON   VCont
                 Vderiv;
@@ -629,28 +827,28 @@ LEXICON VNoCausNoAorCont
                     NonFiniteVerbNoAor;
 
 LEXICON V_Rcp
-%<v%>:@RB   VRcpCont;
+%<V%>:@RB   VRcpCont;
 
 LEXICON   VRcpCont
                     VCont;
                     VRcp;
 
 LEXICON VRcp
-%<rcp%>:^(I)ş@MB     VCont;
+%<rcp%>%<V%>:^(I)ş@MB     VCont;
 
 
 LEXICON V_Rfl
-%<v%>:@RB   VRflCont;
+%<V%>:@RB   VRflCont;
 
 LEXICON   VRflCont
                     VCont;
                     VRfl;
 LEXICON   VRfl
-%<rfl%>:^(I)n@MB       VCont;
+%<rfl%>%<V%>:^(I)n@MB       VCont;
 
 LEXICON  V_Rfl_Rcp
-%<v%>:@RB   VRflRcpCont;
-%<v%>:@RB   VRflRcpCont;
+%<V%>:@RB   VRflRcpCont;
+%<V%>:@RB   VRflRcpCont;
 
 LEXICON  VRflRcpCont
                     VCont;
@@ -658,40 +856,40 @@ LEXICON  VRflRcpCont
                     VRfl;
 
 LEXICON V_CausDir
-%<v%>:@RB           VCausDirCont;
+%<V%>:@RB           VCausDirCont;
 
 LEXICON VCausDirCont
                     VCausDir;
                     VNoCausCont;
 
 LEXICON VCausDir
-%<caus%>:^D^Ir@MB      VCont;
+%<caus%>%<V%>:^D^Ir@MB      VCont;
 
 !
 LEXICON V_CausIr
-%<v%>:@RB           VCausIrCont;
+%<V%>:@RB           VCausIrCont;
 
 LEXICON VCausIrCont
                     VCausIr;
                     VNoCausCont;
 
 LEXICON VCausIr
-%<caus%>:^Ir@MB        VCont;
+%<caus%>%<V%>:^Ir@MB        VCont;
 
 !
 LEXICON V_CausIt
-%<v%>:@RB           VCausItCont;
+%<V%>:@RB           VCausItCont;
 
 LEXICON VCausItCont
                     VCausIt;
                     VNoCausCont;
 
 LEXICON VCausIt
-%<caus%>:^It@MB        VCont;
+%<caus%>%<V%>:^It@MB        VCont;
 
 !
 LEXICON V_Rcp_CausDir
-%<v%>:@RB           VRcpCausDirCont;
+%<V%>:@RB           VRcpCausDirCont;
 
 LEXICON VRcpCausDirCont
                     VRcp;
@@ -699,7 +897,7 @@ LEXICON VRcpCausDirCont
                     VNoCausCont;
 
 !LEXICON V_Rfl_CausDir
-!%<v%>:@RB           VRflCausDirCont;
+!%<V%>:@RB           VRflCausDirCont;
 
 !LEXICON           VRflCausDirCont
 !                    VRfl;
@@ -713,7 +911,7 @@ LEXICON VRcpCausDirCont
 !                    VNoCausCont;
 
 LEXICON V_CausIrreg
-%<v%>:@RB           VCausIrregCont;
+%<V%>:@RB           VCausIrregCont;
 
 LEXICON VCausIrregCont
                   VNoCausCont;
@@ -727,7 +925,7 @@ LEXICON VCausIrregCont
 !                 VRflCont;
 
 LEXICON V_Rfl_Rcp_CausIrreg
-%<v%>:@RB           VRflRcpCausIrregCont;
+%<V%>:@RB           VRflRcpCausIrregCont;
 
 LEXICON VRflRcpCausIrregCont
                  VRfl;
@@ -735,22 +933,22 @@ LEXICON VRflRcpCausIrregCont
                  VNoCausCont;
 
 LEXICON V_AorAr
-%<v%>:@RB           VAorArCont;
+%<V%>:@RB           VAorArCont;
 
 LEXICON VAorArCont
             VAorAr;
             VNoAorCont;
 
 LEXICON  VAorAr
-%<t_aor%>:^(A)r@MB   AorArCont;
+%<aor%>:^(A)r@MB   AorArCont;
 
 LEXICON   AorArCont
                     TAMg1Cont;
-                    AorCV;
+                    CVcesinePagr;
                     VerbalAdj;
 
 LEXICON V_Rcp_AorAr
-%<v%>:@RB           VRcpAorArCont;
+%<V%>:@RB           VRcpAorArCont;
 
 LEXICON  VRcpAorArCont
             VAorAr;
@@ -758,7 +956,7 @@ LEXICON  VRcpAorArCont
             VNoAorCont;
 
 LEXICON V_Rfl_AorAr
-%<v%>:@RB           VRflAorArCont;
+%<V%>:@RB           VRflAorArCont;
 
 
 LEXICON  VRflAorArCont
@@ -767,7 +965,7 @@ LEXICON  VRflAorArCont
             VNoAorCont;
 
 LEXICON  V_Rfl_Rcp_AorAr
-%<v%>:@RB           VRflRcpAorArCont;
+%<V%>:@RB           VRflRcpAorArCont;
 
 LEXICON  VRflRcpAorArCont
             VAorAr;
@@ -776,7 +974,7 @@ LEXICON  VRflRcpAorArCont
             VNoAorCont;
 
 LEXICON V_CausDir_AorAr
-%<v%>:@RB           VCausDirAorArCont;
+%<V%>:@RB           VCausDirAorArCont;
 
 LEXICON VCausDirAorArCont
                         VAorAr;
@@ -784,7 +982,7 @@ LEXICON VCausDirAorArCont
                         VNoCausNoAorCont;
 
 LEXICON V_CausIr_AorAr
-%<v%>:@RB           VCausIrAorArCont;
+%<V%>:@RB           VCausIrAorArCont;
 
 LEXICON VCausIrAorArCont
                         VAorAr;
@@ -792,7 +990,7 @@ LEXICON VCausIrAorArCont
                         VNoCausNoAorCont;
 
 LEXICON V_CausAt_AorAr
-%<v%>:@RB           VCausAtAorArCont;
+%<V%>:@RB           VCausAtAorArCont;
 
 LEXICON VCausAtAorArCont
                         VAorAr;
@@ -800,11 +998,11 @@ LEXICON VCausAtAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausAt
-%<caus%>:^At@MB        VCont;
+%<caus%>%<V%>:^At@MB        VCont;
 
 !
 LEXICON V_CausAr_AorAr
-%<v%>:@RB           VCausArAorArCont;
+%<V%>:@RB           VCausArAorArCont;
 
 LEXICON VCausArAorArCont
                         VAorAr;
@@ -812,11 +1010,11 @@ LEXICON VCausArAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausAr
-%<caus%>:^Ar@MB        VCont;
+%<caus%>%<V%>:^Ar@MB        VCont;
 
 !
 LEXICON V_CausArt_AorAr
-%<v%>:@RB           VCausArtAorArCont;
+%<V%>:@RB           VCausArtAorArCont;
 
 LEXICON VCausArtAorArCont
                         VAorAr;
@@ -824,11 +1022,11 @@ LEXICON VCausArtAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausArt
-%<caus%>:^Art@MB        VCont;
+%<caus%>%<V%>:^Art@MB        VCont;
 
 !
 LEXICON V_CausIt_AorAr
-%<v%>:@RB           VCausItAorArCont;
+%<V%>:@RB           VCausItAorArCont;
 
 LEXICON VCausItAorArCont
                         VAorAr;
@@ -837,7 +1035,7 @@ LEXICON VCausItAorArCont
 
 !
 LEXICON V_Rcp_CausDir_AorAr
-%<v%>:@RB           VRcpCausDirAorArCont;
+%<V%>:@RB           VRcpCausDirAorArCont;
 
 LEXICON VRcpCausDirAorArCont
                         VAorAr;
@@ -846,7 +1044,7 @@ LEXICON VRcpCausDirAorArCont
                         VNoCausNoAorCont;
 
 LEXICON V_Rfl_CausDir_AorAr
-%<v%>:@RB           VRflCausDirAorArCont;
+%<V%>:@RB           VRflCausDirAorArCont;
 
 LEXICON VRflCausDirAorArCont
                         VAorAr;
@@ -855,7 +1053,7 @@ LEXICON VRflCausDirAorArCont
                         VNoCausNoAorCont;
 
 LEXICON V_Rfl_Rcp_CausDir_AorAr
-%<v%>:@RB           VRflRcpCausDirAorArCont;
+%<V%>:@RB           VRflRcpCausDirAorArCont;
 
 
 LEXICON VRflRcpCausDirAorArCont
@@ -866,17 +1064,17 @@ LEXICON VRflRcpCausDirAorArCont
                         VNoCausNoAorCont;
 
 LEXICON V_CausIrreg_AorAr
-%<v%>:@RB           VCausIrregAorArCont;
+%<V%>:@RB           VCausIrregAorArCont;
 
 LEXICON VCausIrregAorArCont
                         VAorAr;
                         VNoCausNoAorCont;
 
 LEXICON V_Rcp_CausIrreg_AorAr
-%<v%>:@RB           VRcpCausIrregAorArCont;
+%<V%>:@RB           VRcpCausIrregAorArCont;
 
 LEXICON V_Rfl_CausIrreg_AorAr
-%<v%>:@RB           VRflCausIrregAorArCont;
+%<V%>:@RB           VRflCausIrregAorArCont;
 
 LEXICON VRflCausIrregAorArCont
                         VRfl;
@@ -895,7 +1093,7 @@ LEXICON VRcpCausIrregAorArCont
 !
 
 LEXICON VCausRegular
-%<caus%>:@CAUS@MB      VCausLoop;
+%<caus%>%<V%>:@CAUS@MB      VCausLoop;
 
 LEXICON VCausLoop
             VCausRegular;
@@ -908,7 +1106,7 @@ LEXICON VCausRegularCont
             Vderiv;
 
 LEXICON VPassive
-%<pass%>:^(I)@LN@MB       VPassiveCont;
+%<pass%>%<V%>:^(I)@LN@MB       VPassiveCont;
 
 LEXICON  VPassiveCont
                           VCabilNeg;
@@ -940,7 +1138,7 @@ LEXICON VComp
 %<agel%>:^(y)^Agel@MB VCompCont;
 %<agor%>:^(y)^Agör@MB VCompCont;
 %<akal%>:^(y)^Akal@MB VCompCont;
-%<akoy%>:^(y)^Akoy@MB VCompCont;
+! %<akoy%>:^(y)^Akoy@MB VCompCont;
 %<ayaz%>:^(y)^Ayaz@MB VCompCont;
 
 LEXICON VCompCont
@@ -953,43 +1151,34 @@ LEXICON     NonFiniteVerb
                     TAMAor;
 
 LEXICON     NonFiniteVerbNoAor
-                    VInfinitive;
                     VTAM;
                     SubSuffixes;
-
-!
-
-LEXICON     VInfinitive
-%<vinf%>:m^A^K@MB       VInfinitiveCont;
-
-LEXICON VInfinitiveCont
-                        #;
 
 ! Tense / aspec / modality markers
 
 LEXICON VTAM
-%<t_narr%>:m^Iş@MB          TAMNarrCont;
-%<t_fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
-%<t_obl%>:m^Al^I@MB         TAMOblCont;
-%<t_makta%>:m^Akt^A@MB      TAMMaktaCont; ! TODO: -maktayızdır ??
-%<t_cont%>:^(I)yor@MB       TAMContCont;
-%<t_past%>:^D^I@MB          TAMDICont;
-%<t_cond%>:s^A@MB           TAMCondCont;
-%<t_cond%>:^(y)^A@MB        TAMCondYACont; ! this is informal use
-%<t_opt%>:^(y)^A@MB         TAMOptCont;
-%<t_imp%>:0@MB              TAMImpCont;
+%<evid%>:m^Iş@MB          TAMNarrCont;
+%<fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
+%<obl%>:m^Al^I@MB         TAMOblCont;
+%<impf%>:m^Akt^A@MB      TAMMaktaCont; ! TODO: -maktayızdır ??
+%<cont%>:^(I)yor@MB       TAMContCont;
+%<past%>:^D^I@MB          TAMDICont;
+%<cond%>:s^A@MB           TAMCondCont;
+%<cond%>:^(y)^A@MB        TAMCondYACont; ! this is informal use
+%<opt%>:^(y)^A@MB         TAMOptCont;
+%<imp%>:0@MB              TAMImpCont;
 
 LEXICON TAMAor      ! this is the regular one
-%<t_aor%>:^(I)r@MB          AorCont;
+%<aor%>:^(I)r@MB          AorCont;
 
 LEXICON TAMNarrCont
             TAMg1Cont;
-            NarrCVcesine;
+            CVcesinePagr;
             VerbalAdj;
 
 LEXICON AorCont
             TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
-            AorCV;
+            CVcesinePagr;
             VerbalAdj;
 
 LEXICON TAMFutCont
@@ -1030,7 +1219,7 @@ LEXICON TAMg1Cont
 ! above on -makta -yor).
 !
 LEXICON VerbalAdj
-%<VJ_%0%>%<adj%>:@MB       AdjCont;
+%<Adj%>:@MB       AdjCont;
 
 !
 !
@@ -1178,8 +1367,8 @@ LEXICON OptQ
 %<q%>:@miSPCm^I@MB      OptQCont;
 
 LEXICON OptQCont
-%<cpl_di%>:^(y)^D^I@MB      PAgrG2End;
-%<cpl_mis%>:^(y)m^Iş@MB     PAgrG1End;
+%<cpl%:past%>:^(y)^D^I@MB     PAgrG2End;
+%<cpl%:evid%>:^(y)m^Iş@MB     PAgrG1End;
 
 ! TODO: opt3s below seems to be a half-implemented feature, but not
 !       clear what...
@@ -1205,8 +1394,8 @@ LEXICON OptPagrQ
 
 LEXICON OptPagrQCont
                         #;
-                        CplMIsEnd;
-                        CplDIEnd;
+                        PAgrCplEvid2;
+                        PAgrCplPast2;
 
 !
 ! Imperative
@@ -1253,126 +1442,10 @@ LEXICON PAgrG2End
 !
 
 LEXICON V_i
-%<v%>:@RB         iCont;
+%<V%>:@RB         iCont;
 
 LEXICON iCont
             CplAll;
-
-!LEXICON iCont
-!            iCplDI;
-!            iCplMIS;
-!            iCplSA;
-!
-!LEXICON iCplDI
-!%<cpl_di%>:^(y)^D^I@MB   iCplDICont;
-!
-!LEXICON iCplDICont
-!            iCplDIPagr;
-!            iCplDIDI;
-!            iCplDISA;
-!
-!
-!LEXICON iCplDIPagr
-!%<1s%>:m@MB         iCplDIPagrCont;
-!%<2s%>:n@MB         iCplDIPagrCont;
-!%<3s%>:0@MB         iCplDIPagrCont;
-!%<3p%>:0@MB         iCplDIPagrCont;
-!%<1p%>:k@MB         iCplDIPagrCont;
-!%<2p%>:n^Iz@MB      iCplDIPagrCont;
-!%<3p%>:l^Ar@MB      iCplDIPagrCont;
-!
-!LEXICON iCplDIPagrCont
-!                    #;
-!                    iCplDIPagrDI;
-!                    iCplDIPagrSA;
-!
-!LEXICON iCplDIPagrDI
-!                    CplDIEnd;
-!LEXICON iCplDIPagrSA
-!                    CplSAEnd;
-!
-!
-!LEXICON iCplDIDI
-!%<cpl_di%>:^(y)^D^I@MB  PAgrG2End;
-!
-!LEXICON iCplDISA
-!%<cpl_sa%>:^(y)s^A@MB   PAgrG2End;
-
-!
-!
-!LEXICON iCplMIS
-!%<cpl_mis%>:^(y)m^Iş@MB  iCplMISCont;
-!
-!LEXICON iCplMISCont
-!            iCplMISPagr;
-!            iCplMISDI;
-!            iCplMISSA;
-!            iCplMISMIS;
-!
-!LEXICON iCplMISPagr
-!%<1s%>:^(y)^Im@MB  iCplMISPagrCont;
-!%<2s%>:s^In@MB     iCplMISPagrCont;
-!%<3s%>:0@MB        iCplMISPagrCont;
-!%<3p%>:0@MB        iCplMISPagrCont;
-!%<1p%>:^(y)^Iz@MB  iCplMISPagrCont;
-!%<2p%>:s^In^Iz@MB  iCplMISPagrCont;
-!%<3p%>:l^Ar@MB     iCplMISPagrCont;
-!
-!LEXICON iCplMISPagrCont
-!                    #;
-!                    iCplMISPagrDI;
-!                    iCplMISPagrSA;
-!                    iCplMISPagrMIS;
-!
-!LEXICON iCplMISPagrDI
-!                    CplDIEnd;
-!LEXICON iCplMISPagrSA
-!                    CplSAEnd;
-!LEXICON iCplMISPagrMIS
-!                    CplMIsEnd;
-!
-!LEXICON iCplMISDI
-!%<cpl_di%>:^(y)^D^I@MB  PAgrG2End;
-!LEXICON iCplMISSA
-!%<cpl_sa%>:^(y)s^A@MB   PAgrG2End;
-!LEXICON iCplMISMIS
-!%<cpl_mis%>:^(y)m^Iş@MB PAgrG1End;
-!
-!
-
-!LEXICON iCplSA
-!%<cpl_sa%>:^(y)s^A@MB  iCplSACont;
-
-!LEXICON iCplSACont
-!            iCplSAPagr;
-!            iCplSADI;
-!            iCplSAMIS;
-!
-!LEXICON iCplSAPagr
-!%<1s%>:m@MB         iCplSAPagrCont;
-!%<2s%>:n@MB         iCplSAPagrCont;
-!%<3s%>:0@MB         iCplSAPagrCont;
-!%<3p%>:0@MB         iCplSAPagrCont;
-!%<1p%>:k@MB         iCplSAPagrCont;
-!%<2p%>:n^Iz@MB      iCplSAPagrCont;
-!%<3p%>:l^Ar@MB      iCplSAPagrCont;
-!
-!
-!LEXICON iCplSAPagrCont
-!                    #;
-!                    iCplSAPagrDI;
-!                    iCplSAPagrMIS;
-!
-!LEXICON iCplSAPagrDI
-!                    CplDIEnd;
-!LEXICON iCplSAPagrMIS
-!                    CplMIsEnd;
-!
-!LEXICON iCplSADI
-!%<cpl_di%>:^(y)^D^I@MB  PAgrG2End;
-!
-!LEXICON iCplSAMIS
-!%<cpl_mis%>:^(y)m^Iş@MB PAgrG1End;
 
 
 !
@@ -1380,7 +1453,7 @@ LEXICON iCont
 !
 
 LEXICON mI
-%<q%>:@RB             mICont;
+%<Q%>:@RB             mICont;
 
 LEXICON mICont
                         #; ! we have person marker before.   
@@ -1402,10 +1475,10 @@ LEXICON  mIPagrCont
                         mIDIr;
 
 LEXICON mIDI
-%<cpl_di%>:^(y)^D^I@MB  PAgrG2End;
+%<cpl%:past%>:^(y)^D^I@MB  PAgrG2End;
 
 LEXICON mIMIS
-%<cpl_mis%>:^(y)m^Iş@MB PAgrG1End;
+%<cpl%:evid%>:^(y)m^Iş@MB PAgrG1End;
 
 LEXICON mIDIr
 %<dir%>:^D^Ir@MB        mIDIrCont;
@@ -1437,27 +1510,27 @@ LEXICON CplAll
                ! TODO: this may not be the best decision.
 
 LEXICON CplEvid
-%<cpl_mis%>:^(y)m^Iş@MB     CplEvidCont;
+%<cpl%:evid%>:^(y)m^Iş@MB     CplEvidCont;
 
 LEXICON CplEvidCont
                 PAgrG1End;
                 CplPAgrG1; ! this is marked/rare usage - gidiyormuşumsa
                 CplCond2;
-                NarrCVcesine;
+                CVcesinePagr;
 ! TODO: In a relatively rare number of cases -DIr may follow if -(I)yor 
 !       precedes the evidential copula.
 
 LEXICON CplEvid2
-%<cpl_mis%>:^(y)m^Iş@MB     PAgrG1End;
+%<cpl%:evid%>:^(y)m^Iş@MB     PAgrG1End;
     
 LEXICON CplPast2
-%<cpl_di%>:^(y)^D^I@MB      PAgrG2End;
+%<cpl%:past%>:^(y)^D^I@MB      PAgrG2End;
 
 LEXICON CplCond2
-%<cpl_sa%>:^(y)s^A@MB       PAgrG2End;
+%<cpl%:cond%>:^(y)s^A@MB       PAgrG2End;
 
 LEXICON CplCond
-%<cpl_sa%>:^(y)s^A@MB       CplCondCont;
+%<cpl%:cond%>:^(y)s^A@MB       CplCondCont;
 
 LEXICON  CplCondCont
                             PAgrG2End;
@@ -1465,7 +1538,7 @@ LEXICON  CplCondCont
                             CplPast2;
 
 LEXICON  CplPast
-%<cpl_di%>:^(y)^D^I@MB      CplPastCont;
+%<cpl%:past%>:^(y)^D^I@MB      CplPastCont;
 
 LEXICON CplPastCont
                 PAgrG2End;
@@ -1509,21 +1582,21 @@ LEXICON PAgrCplAll
                 PAgrCplCond;
 
 LEXICON PAgrCplEvid
-%<cpl_mis%>:^(y)m^Iş@MB     PAgrCplEvidCont;
+%<cpl%:evid%>:^(y)m^Iş@MB     PAgrCplEvidCont;
 
 LEXICON PAgrCplEvidCont
                             #;
                             PAgrCplCond2;
 
 LEXICON PAgrCplPast
-%<cpl_di%>:^(y)^D^I@MB      PAgrCplPastCont;
+%<cpl%:past%>:^(y)^D^I@MB      PAgrCplPastCont;
 
 LEXICON PAgrCplPastCont
                             PAgrCplCond2;
                             #;
 
 LEXICON PAgrCplCond
-%<cpl_sa%>:^(y)s^A@MB       PAgrCplCondCont;
+%<cpl%:cond%>:^(y)s^A@MB       PAgrCplCondCont;
 
 LEXICON PAgrCplCondCont
                             #;
@@ -1531,22 +1604,13 @@ LEXICON PAgrCplCondCont
                              PAgrCplPast2;
 
 LEXICON PAgrCplEvid2
-%<cpl_mis%>:^(y)m^Iş@MB     #;
+%<cpl%:evid%>:^(y)m^Iş@MB     #;
 
 LEXICON PAgrCplPast2
-%<cpl_di%>:^(y)^D^I@MB      #;
+%<cpl%:past%>:^(y)^D^I@MB      #;
 
 LEXICON PAgrCplCond2
-%<cpl_sa%>:^(y)s^A@MB       #;
-
-LEXICON CplMIsEnd
-%<cpl_mis%>:^(y)m^Iş@MB     #;
-
-LEXICON CplSAEnd
-%<cpl_sa%>:^(y)s^A@MB       #;
-
-LEXICON CplDIEnd
-%<cpl_di%>:^(y)^D^I@MB      #;
+%<cpl%:cond%>:^(y)s^A@MB       #;
 
 
 !
@@ -1559,7 +1623,7 @@ LEXICON lArCplKen
 %<3p%>:l^Ar@MB      CplKen;
 
 LEXICON CplKen
-%<cpl_ken%>:^(y)ken@MB      #; ! TODO: this, in principle, can continue like any other time adverb
+%<cv%:ken%>%<Adv%>:^(y)ken@MB  AdvTimeCont; 
 
 !
 ! Subordinating suffixes
@@ -1572,12 +1636,12 @@ Participle;
 ConVerb;
 
 LEXICON VerbalNoun
-%<vn_ma%>:m^A@MB                Ncont;
-%<vn_mak%>:m^A^K@MB             VNMakCont;
-%<vn_yis%>:^(y)^Iş@MB           Ncont;
-%<vn_dik%>:^D^I^k@MB            Ncont;
-%<vn_acak%>:^(y)^Ac^A^k@MB      Ncont;
-%<vn_yan%>:^(y)^An@MB           Ncont;
+%<vn%:inf%>%<N%>:m^A@MB              Ncont;
+%<vn%:inf%>%<N%>:m^A^K@MB            VNMakCont;
+%<vn%:yis%>%<N%>:^(y)^Iş@MB          Ncont;     !TODO: a better tag name
+%<vn%:past%>%<N%>:^D^I^k@MB          Ncont;
+%<vn%:fut%>%<N%>:^(y)^Ac^A^k@MB      Ncont;
+%<vn%:pres%>%<N%>:^(y)^An@MB         Ncont;
 
 LEXICON VNMakCont
                               #;
@@ -1585,9 +1649,9 @@ LEXICON VNMakCont
                               NomPredicateMAK;
 
 LEXICON Participle
-%<part_dik%>:^D^I^k@MB              PartCont;
-%<part_acak%>:^(y)^Ac^A^k@MB        PartCont;
-%<part_yan%>:^(y)^An@MB             PartCont;
+%<part%:past%>%<Adj%>:^D^I^k@MB              PartCont;
+%<part%:fut%>%<Adj%>:^(y)^Ac^A^k@MB        PartCont;
+%<part%:pres%>%<Adj%>:^(y)^An@MB             PartCont;
 
 LEXICON PartCont
                    #;
@@ -1598,44 +1662,24 @@ LEXICON PartCont
 !       G&K and the SFST version.
 !
 LEXICON ConVerb
-%<cv_diginda%>:^D^Iğ^Ind^A@MB               #;
-%<cv_digindan%>:^D^Iğ^Ind^An@MB             #;
-%<cv_digi%>:^D^Iğ^I@MB                      #;
-%<cv_digina%>:^D^Iğ^In^A@MB                 #;
-%<cv_diktan%>:^D^Ikt^An@MB                  #;
-%<cv_acak%>:^(y)^Ac^Ağ^I@MB                 #;
-%<cv_acagindan%>:^(y)^Ac^Ağ^Ind^An@MB       #;
-%<cv_acagina%>:^(y)^Ac^Ağ^In^A@MB           #;
-%<cv_acak%>:^(y)^Ac^Ak@MB                   #;
-%<cv_mak%>:m^Ak@MB                          #;
-%<cv_makla%>:m^Akl^A@MB                     #;
-%<cv_maksizin%>:m^Aks^Iz^In@MB              #;
-%<cv_maktan%>:m^Akt^An@MB                   #;
-%<cv_maktansa%>:m^Akt^Ans^A@MB              #;
-%<cv_masi%>:m^As^I@MB                       #;
-%<cv_masindan%>:m^As^Ind^An@MB              #;
-%<cv_masina%>:m^As^In^A@MB                  #;
-%<cv_inca%>:^(y)^Inc^A@MB                   #;
-%<cv_arak%>:^(y)^Ar^Ak@MB                   #;
-%<cv_ali%>:^(y)^Al^I@MB                     #;
-%<cv_incaya%>:^(y)^Inc^Ay^A@MB              #;
-%<cv_ana%>:^(y)^An^A@MB                     #;
-%<cv_ip%>:^(y)^Ip@MB                        #;
-!%<cv_miscesine%>:m^Işc^As^In^A@MB          #;
-%<cv_erekten%>:^(y)^Ar^Akt^An@MB            #;
+
+%<cv%:ip%>:^(y)^Ip@MB                       DerivACont;
+%<cv%:meksizin%>:m^Aks^Iz^In@MB             DerivACont;
+%<cv%:ince%>:^(y)^Inc^A@MB                  DerivACont;
+%<cv%:erek%>:^(y)^Ar^Ak@MB                  DerivACont;
+%<cv%:eli%>:^(y)^Al^I@MB                    DerivACont;
+%<cv%:dikce%>:^D^Ik^C^A@MB                  DerivACont;
+%<cv%:esiye%>:^(y)^As^Iy^A@MB               DerivACont;
+%<cv%:ye%>:^(y)^A@MB                        DerivACont;
 
 LEXICON CVNeg
-%<cv_den%>:d^An@MB              #;
-%<cv_zden%>:zd^An@MB          #;
-
-LEXICON AorCV      ! this is a trick for -(I/A)rcasina
-%<cv_ir%>:0                     #;
-                                CVcesine;
+%<cv%:den%>:d^An@MB             DerivACont;
+%<cv%:den%>:zd^An@MB            DerivACont; ! this is informal
 
 LEXICON CVcesine
-%<cv_cesine%>:^C^As^In^A@MB     #;
+%<cv%:cesine%>:^C^As^In^A@MB     DerivACont;
 
-LEXICON NarrCVcesine
+LEXICON CVcesinePagr
 %<1s%>:^(y)^Im@MB  CVcesine;
 %<2s%>:s^In@MB     CVcesine;
 %<3s%>:0@MB        CVcesine;
@@ -1663,20 +1707,16 @@ LEXICON   uzerCont
             PostPlocation;
 
 LEXICON uzerAdj
-%<adj%>:@RB     Jderiv;
-
-LEXICON  ileCont
-%<postp%>:@RB   Case1Cont;
-!TODO: better word class??
+%<Adj%>:@RB     Jderiv;
 
 LEXICON var
-%<exist%>:@RB Ncont;
+%<Exist%>:@RB Ncont;
 
 LEXICON yok
-%<notexist%>:@RB Ncont;
+%<Exist%:neg%>:@RB Ncont;
 
 LEXICON degil
-%<not%>:@RB Ncont;
+%<Not%>:@RB Ncont;
 
 !LEXICON VYDCont
 !            VYDPAgr;
@@ -1707,7 +1747,7 @@ LEXICON degil
 !
 
 LEXICON  Punc
-%<punct%>:0     #;
+%<Punc%>:0     #;
 
 !
 ! Derivational process.
@@ -1798,8 +1838,8 @@ LEXICON Oderiv
 !   the adjective.
 !
 LEXICON   D_lI
-%<D_lI%>:l^I@MB         DerivJCont;
-%<D_lI%>:l^I@MB         DerivACont;
+%<li%>:l^I@MB         DerivJCont;
+%<li%>:l^I@MB         DerivACont;
 
 ! -sIz behaves almost exactly like -lI, with the opposite meaning.
 !           şeker `sugar' -> şeker-siz `[something] without sugar' 
@@ -1818,8 +1858,8 @@ LEXICON   D_lI
 !       N -> J : akılsız 
 !       N -> A : arabasız
 LEXICON   D_sIz
-%<D_sIz%>:s^Iz@MB       DerivJCont;
-%<D_sIz%>:s^Iz@MB       DerivACont;
+%<siz%>:s^Iz@MB       DerivJCont;
+%<siz%>:s^Iz@MB       DerivACont;
 
 ! -lIK makes nouns from nouns, adjectives adverbs
 !       N -> N: kitap-lık, kral-lık
@@ -1827,12 +1867,12 @@ LEXICON   D_sIz
 !       A -> N: yavaş-lık
 !
 LEXICON   ND_lIk
-%<D_lIk%>:l^I^k@MB       DerivNCont;
-%<D_lIk%>:l^I^k@MB       DerivJCont;
+%<lik%>:l^I^k@MB       DerivNCont;
+%<lik%>:l^I^k@MB       DerivJCont;
 LEXICON   JD_lIk
-%<D_lIk%>:l^I^k@MB       DerivNCont;
+%<lik%>:l^I^k@MB       DerivNCont;
 LEXICON   AD_lIk
-%<D_lIk%>:l^I^k@MB       DerivNCont;
+%<lik%>:l^I^k@MB       DerivNCont;
 
 ! Dimunitive suffixes.
 !
@@ -1840,11 +1880,11 @@ LEXICON   AD_lIk
 ! TODO: some cases like 'küçücük'.
 !
 LEXICON   Dimin
-%<dimin%>:^C^I^k@MB        DerivNCont;
-%<dimin%>:c^A^k@MB         DerivNCont;
-%<dimin%>:^(I)c^A^k@MB     DerivNCont;
-%<dimin%>:^(A)c^A^k@MB     DerivNCont;
-%<dimin%>:c^Ağ^Iz@MB       DerivNCont;
+%<dim%>:^C^I^k@MB        DerivNCont;
+%<dim%>:c^A^k@MB         DerivNCont;
+%<dim%>:^(I)c^A^k@MB     DerivNCont;
+%<dim%>:^(A)c^A^k@MB     DerivNCont;
+%<dim%>:c^Ağ^Iz@MB       DerivNCont;
 
 ! -CI generally marks occupation, "someone who does or sells something"
 !      N->N : şeker-ci , 
@@ -1855,8 +1895,8 @@ LEXICON   Dimin
 !   TODO/CHECK: it also derives nouns from verbs (e.g., ögrenci) but
 !               these should be lexicalized.
 LEXICON   D_CI
-%<D_CI%>:^C^I@MB   DerivNCont;
-%<D_CI%>:^C^I@MB   DerivJCont;
+%<ci%>:^C^I@MB     DerivNCont;
+%<ci%>:^C^I@MB   DerivJCont;
 
 ! -CA makes adverbs from nouns, pronouns, adjectives and adverbs, and in a 
 !     restrictive case it derives adjectives from numbers.
@@ -1871,18 +1911,18 @@ LEXICON   D_CI
 !
 !
 LEXICON   ND_CAlanguage
-%<D_CA%>:^C^A@MB DerivNCont;
+%<ca%>:^C^A@MB DerivNCont;
 LEXICON   ND_CA
-%<D_CA%>:^C^A@MB DerivACont;
+%<ca%>:^C^A@MB DerivACont;
 LEXICON   JD_CA
-%<D_CA%>:^C^A@MB DerivJCont;
-%<D_CA%>:^C^A@MB DerivACont;
+%<ca%>:^C^A@MB DerivJCont;
+%<ca%>:^C^A@MB DerivACont;
 LEXICON   AD_CA
-%<D_CA%>:^C^A@MB DerivACont;
+%<ca%>:^C^A@MB DerivACont;
 LEXICON   MD_CA
-%<D_CA%>:^C^A@MB DerivJCont;
+%<ca%>:^C^A@MB DerivJCont;
 LEXICON   PD_CA
-%<D_CA%>:^C^A@MB DerivACont;
+%<ca%>:^C^A@MB DerivACont;
 
 ! -(y)IcI makes adjectives (and nouns) from verbs.
 !       bulaşıcı, görücü, yapıcı
@@ -1890,7 +1930,7 @@ LEXICON   PD_CA
 !   TODO/CHECK: these may all be lexicalized.
 !
 LEXICON D_yIcI
-%<D_yIcI%>:^(y)^Ic^I      DerivJCont;
+%<yici%>:^(y)^Ic^I      DerivJCont;
 
 ! -CIl makes adjectives from nouns
 !       N->J insancıl,
@@ -1901,7 +1941,7 @@ LEXICON D_yIcI
 !  N->N 
 
 LEXICON D_CIl
-%<D_cil%>:^C^Il              DerivJCont;
+%<cil%>:^C^Il              DerivJCont;
 
 ! -gil makes nouns from nouns. 
 !   `  it is normally attached to proper names (Ahmet-gil) and nouns 
@@ -1910,7 +1950,7 @@ LEXICON D_CIl
 !      al be lexicalized.
 !
 LEXICON D_gil
-%<D_gil%>:gil       DerivNCont;
+%<gil%>:gil       DerivNCont;
 
 ! -lA is productive, and makes verbs from nouns
 !
@@ -1921,18 +1961,18 @@ LEXICON D_gil
 !        of ambiguous analyses. it is commented out.
 !
 !LEXICON ND_lA
-!%<D_lA%>:l^A       DerivVCont;
+!%<la%>:l^A       DerivVCont;
 LEXICON OD_lA
-%<D_lA%>:l^A       DerivVCont;
+%<la%>:l^A       DerivVCont;
 
 ! -lAn makes verbs from nouns and adjectives
 !
 !       N->V: av-lan, N->J: kuru-lan
 !
 LEXICON ND_lAn
-%<D_lAn%>:l^An       DerivVCont;
+%<lan%>:l^An       DerivVCont;
 LEXICON JD_lAn
-%<D_lAn%>:l^An       DerivVCont;
+%<lan%>:l^An       DerivVCont;
 
 ! -lAş makes verbs from nouns and adjectives
 !
@@ -1940,9 +1980,9 @@ LEXICON JD_lAn
 !
 !   TODO/CHECK: these may all be lexicalized verbs
 LEXICON ND_lAS
-%<D_lAS%>:l^Aş       DerivVCont;
+%<las%>:l^Aş       DerivVCont;
 LEXICON JD_lAS
-%<D_lAS%>:l^Aş       DerivVCont;
+%<las%>:l^Aş       DerivVCont;
 
 ! -(y)Iş makes nouns from verbs
 !       yürüyüş, duruş, bakış
@@ -1950,7 +1990,7 @@ LEXICON JD_lAS
 !   TODO: these probably are also lexicalized
 !
 LEXICON D_yIS
-%<D_yIS%>:^(y)^Iş   DerivNCont;
+%<yis%>:^(y)^Iş   DerivNCont;
 
 ! -(y)AsI makes adjectives, and can be attached afte voice suffixes,
 !  and possibly to any non-finite verbal form.
@@ -1964,7 +2004,7 @@ LEXICON D_yIS
 !  forms as adjectives.
 !
 LEXICON D_yAsI
-%<D_yAsI%>:^(y)^As^I   DerivJCont;
+%<esi%>:^(y)^As^I   DerivJCont;
 
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
@@ -1973,47 +2013,47 @@ LEXICON D_yAsI
 ! ambiguity (-mA is also a subordinating suffix). So it's out.
 !
 !LEXICON D_mA
-!%<D_mA%>:m^A   DerivNCont;
-!%<D_mA%>:m^A   DerivJCont;
+!%<ma%>:m^A   DerivNCont;
+!%<ma%>:m^A   DerivJCont;
 
 ! -sAl makes adjectives from nouns
 !       bilimsel, tarihsel, duşsel...
 !
 LEXICON D_sAl
-%<D_sAl%>:s^Al  DerivJCont;
+%<sal%>:s^Al  DerivJCont;
 
 
 LEXICON JN_zero
-%<JN_%0%>%<n%>:@MB   Ncont;
+%<%0%>%<N%>:@MB   Ncont;
 
 LEXICON AN_zero
-%<AN_%0%>%<n%>:@MB   Ncont;
+%<%0%>%<N%>:@MB   Ncont;
 
 ! This may be a way for avoiding duplicated adj/adv entries int he
 ! lexicon
 !LEXICON AJ_zero
-!%<AJ_%0%>%<adj%>:@MB   AdjCont;
+!%<%0%>%<Adj%>:@MB   AdjCont;
 
 LEXICON MN_zero
-%<MN_%0%>%<n%>:@MB   Ncont;
+%<%0%>%<N%>:@MB   Ncont;
 
 !
 !
 !
 LEXICON DerivNCont
-%<n%>:0@MB       Ncont; ! this gives unlimited application of derivation
-!%<n%>:0@MB      Ninfl;   ! only one derivation after root.
+%<N%>:0@MB       Ncont; ! this gives unlimited application of derivation
+!%<N%>:0@MB      Ninfl;   ! only one derivation after root.
 
 LEXICON DerivJCont
-%<adj%>:0@MB    AdjCont; ! this gives unlimited application of derivation
-!%<adj%>:0@MB   #;   ! only one derivation after root.
+%<Adj%>:0@MB    AdjCont; ! this gives unlimited application of derivation
+!%<Adj%>:0@MB   #;   ! only one derivation after root.
 
 LEXICON DerivACont
-%<adv%>:0@MB    AdvCont; ! this gives unlimited application of derivation
-!%<adv%>:0@MB   #;   ! only one derivation after root.
+%<Adv%>:0@MB    AdvCont; ! this gives unlimited application of derivation
+!%<Adv%>:0@MB   #;   ! only one derivation after root.
 
 LEXICON DerivVCont
-%<v%>:0@MB      VCont; ! this gives unlimited application of derivation
-!%<v%>:0@MB     Vinfl; ! only one derivation after root.
+%<V%>:0@MB      VCont; ! this gives unlimited application of derivation
+!%<V%>:0@MB     Vinfl; ! only one derivation after root.
 
 

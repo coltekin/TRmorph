@@ -12,7 +12,6 @@
     kalk  -> kaldır
     öğren -> öğret
 - Derivational morphemes need review
-- Postpositions 
 - Apostrophe insertion does not currently comply with official spelling
   rules.
 - <acr> is not analyzed
@@ -29,14 +28,8 @@
 -   apply up> okuyorsak mı
     ???
 - yan- and yak- relation
-- compound noun roots does not really need the <ncomp> tag. First, it
-  is not very informative. Second, the compounds in the lexicon
-  without -(s)I is not marked. The marking in the lexicon is for 
-  internal use rather than specifying a subclass.
 - Use a more natural lexical representation for compound noun roots.
   Now, we require the -(s)I at the end to be removed, which can be
   done by xfst rules just fine.
-- lexical class <cnjsub> is somewhat related to <cv_arak> (e.g., in
-  olarak).
-- için <cnjcoo> ??
-- remove multi-char analyais symbols, they do not need to be multichar.
+- Optional apostrophe choice is buggy, it seems to be always
+  compulsory.

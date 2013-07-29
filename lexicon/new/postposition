@@ -1,61 +1,81 @@
-! these can stand alone
-gibi                            PostP;
-için                            PostP;
-ile                             PostP;
-kadar                           PostPKi;
-göre                            PostP;
-doğru                           PostP;
-rağmen                          PostP;
-karşın                          PostP;
-başka                           PostP;
-gayrı                           PostP;
-beri                            PostP;
-bu% yana                        PostP;
-dolayı                          PostP;
-itibaren                        PostP;
-önce                            PostP;
-evvel                           PostP;
-ço^k                            PostP;
-sonra                           PostP;
-yana                            PostP;
-karşı                           PostPKi;
+!
+! These postpostions require either non-case-marked complements
+! or genitive case only with a limited set of pronouns.
+!
+
+gibi                            nomPostPadj;
+için                            nomPostP;
+ile                             nomPostP;
+kadar                           nomPostPadjKi;
+bile                            nomPostP;
+
+! the folllowing only (?) combine with verbal nouns, when they are not
+! case marked.
+halinde                         nomPostP;
+takdirde                        nomPostP;
+yerde                           nomPostP;
+durumunda                       nomPostP;
+halinde                         nomPostP;
+nispette                        nomPostP;
+oranda                          nomPostP;
+ölçude                          nomPostP;
+zaman                           nomPostP;
+
+! These require dative
+göre                            datPostP;
+doğru                           datPostPKi;
+kadar                           datPostPKi;
+dek                             datPostPKi;
+karşı                           datPostPKi;
+rağmen                          datPostP;
+karşın                          datPostP;
+değin                           datPostP;
+
+ait                             datPostPadj;
+dair                            datPostPadj;
+ilişkin                         datPostPadj;
+yönelik                         datPostPadj;
+
+! These take ablative
+
+başka                           ablPostP;
+gayrı                           ablPostP;
+beri                            ablPostP;
+bu% yana                        ablPostP;
+dolayı                          ablPostP;
+itibaren                        ablPostP;
+önce                            ablPostPKi;
+evvel                           ablPostPKi;
+sonra                           ablPostPKi;
+yana                            ablPostP;
+
+ço^k                            ablPostP;      !as in 'benden çok' this is not in G&K
+aşağı                           ablPostPKi;
+bile                            ablPostP;
+fazla                           ablPostP;
+öte                             ablPostPKi;
+ötürü                           ablPostP;
+yukarı                          ablPostP;
+
+! These take instrumental/commutative
+
+beraber                         insPostP; ! Not in G&K
+birlikte                        insPostP;
+
+
+! These require -lI/-sIz
+halde                           liPostP;
+ilgili                          liPostP;
+
+! These work with numbers
+kere                            numPostP;  ! TODO: is this a noun???
+kez                             numPostP;  ! TODO: is this a noun???
+defa                            numPostP;  ! TODO: is this a noun???
+
+! TODO: tane ??
 
 !--------
-ait                             PostP;
-aşağı                           PostP;
-bile                            PostP;
-birlikte                        PostP;
-boyunca                         PostP;
-dair                            PostP;
-değin                           PostP;
-dek                             PostP;
-halde                           PostP;
-halinde                         PostP;
-öte                             PostP;
-ötürü                           PostP;
-süresince                       PostP;
-takdirde                        PostP;
-üzere                           PostP;
-üzerine                         PostP;
-yerde                           PostP;
-yukarı                          PostP;
-ilgili                          PostP;
-ilişkin                         PostP;
-kere                            PostP;  ! TODO: is this a noun???
-!--------
-! TODO: these are derived (?) from nouns
-!tarafından                      PostP;
-!aracılığıyla                    PostP;
-!vasıtasıyla                     PostP;  ! old/rare
-!boyunca                         PostP;
-!gereğince                       PostP;
-!süresınce                       PostP;
-!yüzünden                        PostP;
-!nedeniyle                       PostP;
-!uğrüna                          PostP;
-!sayesinde                       PostP;
-!açısından                       PostP;
-!açısından                       PostP;
+
 
 
 ! The rest of the postpostions are derived from other 
@@ -64,14 +84,19 @@ kere                            PostP;  ! TODO: is this a noun???
 ! moprhotactics which may also be helpful for 
 ! syntactic analysis.
 !
-! these need possesive + dative/locative/ablative
+! these need possesive + dative/locative/ablative suffixes to become 
+! postpositions.
+!
+! they require their complements to be in genitive case (evin önünde)
+! or not case marked (okul dışında). It is unclear (to me) what makes 
+! these different from noun compounds with case marking.
 !
 ön                      PostPlocation;
 arka                    PostPlocation;
 iç                      PostPlocation;
 dış                     PostPlocation;
 üst                     PostPlocation;
-! üzer                    PostPlocation; ! this one is a bound root and listed in morph.lexc
+üzer                    uzerCont;! this one is a bound root
 alt                     PostPlocation;
 yan                     PostPlocation;
 karşı                   PostPlocation;
@@ -80,14 +105,19 @@ etraf                   PostPlocation;
 çevre                   PostPlocation;
 öte                     PostPlocation;
 kenar                   PostPlocation;
+dışarı                  PostPlocation;
 
-! ! these require possessive and ablative case
+!
+! these require possessive and ablative case
+! complement should be in genitive or 'bare'.
+! most of these prefer bare complement
 açı                     PostPabl; ! açı-sın-dan 
-bakım                   PostPabl; ! bakım-ın-dan 
 yüz                     PostPabl; ! yüz-ün-den 
 taraf                   PostPabl; ! taraf-ın-dan 
+bakım                   PostPabl; ! bakım-ın-dan
 
-! ! these require possessive and instrumental
+! these require possessive and instrumental suffixes.
+!
 aracılı^k               PostPins; ! aracılığ-ı-yla 
 itibar                  PostPins;! itibar-i-yla 
 itib^pAr                PostPins;! itibar-i-yla 

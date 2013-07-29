@@ -1,8 +1,8 @@
-A:A:dünkü:dün<adv><ki>
-A:A:dünki:dün<adv><ki>
-A:A:gülünki:gül<n><gen><ki>
-A:A:gülünkü:gül<n><gen><ki>
-A:A:evdeki:ev<n><loc><ki>
-A:R:evdekü:
-A:A:odanınki:oda<n><gen><ki>
-A:R:odanınkü:
+A;A;dünkü;dün<Adv><ki><Adj>
+A;A;dünki;dün<Adv><ki><Adj>
+A;A;gülünki;gül<N><gen><ki><Adj>
+A;A;gülünkü;gül<N><gen><ki><Adj>
+A;A;evdeki;ev<N><loc><ki><Adj>
+A;R;evdekü;
+A;A;odanınki;oda<N><gen><ki><Adj>
+A;R;odanınkü;

@@ -1,134 +1,134 @@
-A:A:sıfır:sıfır<num>
-A:A:bir:bir<num>
-A:A:dört:dört<num>
-A:A:on:on<num>
-A:A:on beş:onbeş<num>
-A:A:onbeş:onbeş<num>
-A:A:yirmi:yirmi<num>
-A:A:yirmi altı:yirmialtı<num>
-A:A:doksandokuz:doksandokuz<num>
-A:A:yüz:yüz<num>
-A:R:bir yüz:
-A:A:yüzbir:yüzbir<num>
-A:A:yüz sekiz:yüzsekiz<num>
-A:A:yüz elli sekiz:yüzellisekiz<num>
-A:A:iki yüz:ikiyüz<num>
-A:A:iki yüz otuz üç:ikiyüzotuzüç<num>
-A:A:dokuz yüz doksan dokuz:dokuzyüzdoksandokuz<num>
-A:A:bin:bin<num>
-A:R:bir bin:
-A:A:binbir:binbir<num>
-A:A:bin bir:binbir<num>
-A:A:bin kırk:binkırk<num>
-A:A:bin kırk iki:binkırkiki<num>
-A:A:bin yüz altmış:binyüzaltmış<num>
-A:A:bin yüz yetmiş altı:binyüzyetmişaltı<num>
-A:A:bin dört yüz yetmiş altı:bindörtyüzyetmişaltı<num>
-A:A:iki bin:ikibin<num>
-A:A:iki bin beş yüz otuz sekiz:ikibinbeşyüzotuzsekiz<num>
-A:A:yirmi bin beş yüz otuz sekiz:yirmibinbeşyüzotuzsekiz<num>
-A:A:yirmi iki bin beş yüz otuz sekiz:yirmiikibinbeşyüzotuzsekiz<num>
-A:A:dokuz yüz doksan dokuz bin dokuz yüz doksan dokuz:dokuzyüzdoksandokuzbindokuzyüzdoksandokuz<num>
-A:A:milyon:milyon<num>
-A:A:bir milyon:birmilyon<num>
-A:A:bir milyon iki yüz otuz dört bin beş yüz altmış yedi:birmilyonikiyüzotuzdörtbinbeşyüzaltmışyedi<num>
-A:A:üç milyon dört yüz elli altı bin yedi yüz seksen dokuz:üçmilyondörtyüzellialtıbinyediyüzseksendokuz<num>
-A:A:milyon:milyon<num>
-A:R:milyon bir:
-A:A:milyar:milyar<num>
-A:R:milyar bir:
-A:A:trilyon:trilyon<num>
-A:R:trilyon bir:
-A:A:dokuz yüz doksan dokuz trilyon sekiz yüz seksen sekiz milyar yedi yüz yetmiş yedi milyon altı yüz altmış altı bin beş yüz elli beş:dokuzyüzdoksandokuztrilyonsekizyüzseksensekizmilyaryediyüzyetmişyedimilyonaltıyüzaltmışaltıbinbeşyüzellibeş<num>
+A;A;sıfır;sıfır<Num>
+A;A;bir;bir<Num>
+A;A;dört;dört<Num>
+A;A;on;on<Num>
+A;A;on beş;onbeş<Num>
+A;A;onbeş;onbeş<Num>
+A;A;yirmi;yirmi<Num>
+A;A;yirmi altı;yirmialtı<Num>
+A;A;doksandokuz;doksandokuz<Num>
+A;A;yüz;yüz<Num>
+A;R;bir yüz;
+A;A;yüzbir;yüzbir<Num>
+A;A;yüz sekiz;yüzsekiz<Num>
+A;A;yüz elli sekiz;yüzellisekiz<Num>
+A;A;iki yüz;ikiyüz<Num>
+A;A;iki yüz otuz üç;ikiyüzotuzüç<Num>
+A;A;dokuz yüz doksan dokuz;dokuzyüzdoksandokuz<Num>
+A;A;bin;bin<Num>
+A;R;bir bin;
+A;A;binbir;binbir<Num>
+A;A;bin bir;binbir<Num>
+A;A;bin kırk;binkırk<Num>
+A;A;bin kırk iki;binkırkiki<Num>
+A;A;bin yüz altmış;binyüzaltmış<Num>
+A;A;bin yüz yetmiş altı;binyüzyetmişaltı<Num>
+A;A;bin dört yüz yetmiş altı;bindörtyüzyetmişaltı<Num>
+A;A;iki bin;ikibin<Num>
+A;A;iki bin beş yüz otuz sekiz;ikibinbeşyüzotuzsekiz<Num>
+A;A;yirmi bin beş yüz otuz sekiz;yirmibinbeşyüzotuzsekiz<Num>
+A;A;yirmi iki bin beş yüz otuz sekiz;yirmiikibinbeşyüzotuzsekiz<Num>
+A;A;dokuz yüz doksan dokuz bin dokuz yüz doksan dokuz;dokuzyüzdoksandokuzbindokuzyüzdoksandokuz<Num>
+A;A;milyon;milyon<Num>
+A;A;bir milyon;birmilyon<Num>
+A;A;bir milyon iki yüz otuz dört bin beş yüz altmış yedi;birmilyonikiyüzotuzdörtbinbeşyüzaltmışyedi<Num>
+A;A;üç milyon dört yüz elli altı bin yedi yüz seksen dokuz;üçmilyondörtyüzellialtıbinyediyüzseksendokuz<Num>
+A;A;milyon;milyon<Num>
+A;R;milyon bir;
+A;A;milyar;milyar<Num>
+A;R;milyar bir;
+A;A;trilyon;trilyon<Num>
+A;R;trilyon bir;
+A;A;dokuz yüz doksan dokuz trilyon sekiz yüz seksen sekiz milyar yedi yüz yetmiş yedi milyon altı yüz altmış altı bin beş yüz elli beş;dokuzyüzdoksandokuztrilyonsekizyüzseksensekizmilyaryediyüzyetmişyedimilyonaltıyüzaltmışaltıbinbeşyüzellibeş<Num>
 #
 #
 #
-A:A:1:1<num>
-A:A:1:1<num>
-A:A:2:2<num>
-A:A:3:3<num>
-A:A:4:4<num>
-A:A:5:5<num>
-A:A:6:6<num>
-A:A:7:7<num>
-A:A:8:8<num>
-A:A:9:9<num>
-A:A:0:0<num>
-A:A:10:10<num>
-A:A:11:11<num>
-A:A:12:12<num>
-A:A:79821379821371:79821379821371<num>
-A:R:1.:
-A:R:1.00:
-A:R:1.000.1:
-A:R:1.000.50:
-A:R:1.0:
-A:A:1.000:1.000<num>
-A:A:1,000:1,000<num>
-A:A:1,:1,<num>
-A:R:1,2,3:
-A:R:1,2,3:
-A:A:1.000,04:1.000,04<num>
-A:A:%10:<perc>10<num>
-A:A:%1032:<perc>1032<num>
-A:A:%1,032:<perc>1,032<num>
-A:A:1'inci:1<num><ord>
-A:R:1'nci:
-A:R:1'ncü:
-A:R:1'üncü:
-A:R:1'ncı:
-A:R:1'ıncı:
-A:R:1'uncu:
-A:R:1'ncu:
-A:A:2'nci:2<num><ord>
-A:A:2'inci:
-A:R:2'ncü:
-A:R:2'üncü:
-A:R:2'ncı:
-A:R:2'ıncı:
-A:R:2'uncu:
-A:R:2'ncu:
-A:A:3'üncü:3<num><ord>
-A:A:4'üncü:4<num><ord>
-A:A:5'inci:5<num><ord>
-A:A:6'ncı:6<num><ord>
-A:A:7'nci:7<num><ord>
-A:A:8'inci:8<num><ord>
-A:A:9'uncu:9<num><ord>
-A:A:10'uncu:10<num><ord>
-A:A:20'nci:20<num><ord>
-A:A:30'uncu:30<num><ord>
-A:A:40'ıncı:40<num><ord>
-A:A:50'nci:50<num><ord>
-A:A:60'ıncı:60<num><ord>
-A:A:70'inci:70<num><ord>
-A:A:80'inci:80<num><ord>
-A:A:90'ıncı:90<num><ord>
-A:A:100'üncü:100<num><ord>
-A:A:400'üncü:400<num><ord>
-A:A:1000'inci:1000<num><ord>
-A:A:1.000'inci:1.000<num><ord>
-A:A:100.000'inci:100.000<num><ord>
-A:A:100000'inci:100000<num><ord>
-A:A:1000000'uncu:1000000<num><ord>
-A:A:3000000'uncu:3000000<num><ord>
-A:A:30000000'uncu:30000000<num><ord>
-A:A:30.000.000'uncu:30.000.000<num><ord>
-A:A:30.000.000.000'ıncı:30.000.000.000<num><ord>
-A:A:1'er:1<num><dist>
-A:A:2'şer:2<num><dist>
-A:A:3'er:3<num><dist>
-A:A:4'er:4<num><dist>
-A:A:5'er:5<num><dist>
-A:A:6'şar:6<num><dist>
-A:A:7'şer:7<num><dist>
-A:A:8'er:8<num><dist>
-A:A:9'ar:9<num><dist>
-A:A:10'ar:10<num><dist>
-A:A:11'er:11<num><dist>
-A:A:12'şer:12<num><dist>
-A:A:18'er:18<num><dist>
-A:A:20'şer:20<num><dist>
-A:A:100'er:100<num><dist>
-A:A:1000'er:1000<num><dist>
-A:A:1002'şer:1002<num><dist>
+A;A;1;1<Num:ara>
+A;A;1;1<Num:ara>
+A;A;2;2<Num:ara>
+A;A;3;3<Num:ara>
+A;A;4;4<Num:ara>
+A;A;5;5<Num:ara>
+A;A;6;6<Num:ara>
+A;A;7;7<Num:ara>
+A;A;8;8<Num:ara>
+A;A;9;9<Num:ara>
+A;A;0;0<Num:ara>
+A;A;10;10<Num:ara>
+A;A;11;11<Num:ara>
+A;A;12;12<Num:ara>
+A;A;79821379821371;79821379821371<Num:ara>
+A;R;1.;
+A;R;1.00;
+A;R;1.000.1;
+A;R;1.000.50;
+A;R;1.0;
+A;A;1.000;1.000<Num:ara>
+A;A;1,000;1,000<Num:ara>
+A;A;1,;1,<Num:ara>
+A;R;1,2,3;
+A;R;1,2,3;
+A;A;1.000,04;1.000,04<Num:ara>
+A;A;%10;<perc>10<Num:ara>
+A;A;%1032;<perc>1032<Num:ara>
+A;A;%1,032;<perc>1,032<Num:ara>
+A;A;1'inci;1<Num:ara><ord>
+A;R;1'nci;
+A;R;1'ncü;
+A;R;1'üncü;
+A;R;1'ncı;
+A;R;1'ıncı;
+A;R;1'uncu;
+A;R;1'ncu;
+A;A;2'nci;2<Num:ara><ord>
+A;A;2'inci;
+A;R;2'ncü;
+A;R;2'üncü;
+A;R;2'ncı;
+A;R;2'ıncı;
+A;R;2'uncu;
+A;R;2'ncu;
+A;A;3'üncü;3<Num:ara><ord>
+A;A;4'üncü;4<Num:ara><ord>
+A;A;5'inci;5<Num:ara><ord>
+A;A;6'ncı;6<Num:ara><ord>
+A;A;7'nci;7<Num:ara><ord>
+A;A;8'inci;8<Num:ara><ord>
+A;A;9'uncu;9<Num:ara><ord>
+A;A;10'uncu;10<Num:ara><ord>
+A;A;20'nci;20<Num:ara><ord>
+A;A;30'uncu;30<Num:ara><ord>
+A;A;40'ıncı;40<Num:ara><ord>
+A;A;50'nci;50<Num:ara><ord>
+A;A;60'ıncı;60<Num:ara><ord>
+A;A;70'inci;70<Num:ara><ord>
+A;A;80'inci;80<Num:ara><ord>
+A;A;90'ıncı;90<Num:ara><ord>
+A;A;100'üncü;100<Num:ara><ord>
+A;A;400'üncü;400<Num:ara><ord>
+A;A;1000'inci;1000<Num:ara><ord>
+A;A;1.000'inci;1.000<Num:ara><ord>
+A;A;100.000'inci;100.000<Num:ara><ord>
+A;A;100000'inci;100000<Num:ara><ord>
+A;A;1000000'uncu;1000000<Num:ara><ord>
+A;A;3000000'uncu;3000000<Num:ara><ord>
+A;A;30000000'uncu;30000000<Num:ara><ord>
+A;A;30.000.000'uncu;30.000.000<Num:ara><ord>
+A;A;30.000.000.000'ıncı;30.000.000.000<Num:ara><ord>
+A;A;1'er;1<Num:ara><dist>
+A;A;2'şer;2<Num:ara><dist>
+A;A;3'er;3<Num:ara><dist>
+A;A;4'er;4<Num:ara><dist>
+A;A;5'er;5<Num:ara><dist>
+A;A;6'şar;6<Num:ara><dist>
+A;A;7'şer;7<Num:ara><dist>
+A;A;8'er;8<Num:ara><dist>
+A;A;9'ar;9<Num:ara><dist>
+A;A;10'ar;10<Num:ara><dist>
+A;A;11'er;11<Num:ara><dist>
+A;A;12'şer;12<Num:ara><dist>
+A;A;18'er;18<Num:ara><dist>
+A;A;20'şer;20<Num:ara><dist>
+A;A;100'er;100<Num:ara><dist>
+A;A;1000'er;1000<Num:ara><dist>
+A;A;1002'şer;1002<Num:ara><dist>

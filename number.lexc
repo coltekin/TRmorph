@@ -498,34 +498,33 @@ LEXICON NumPercentCont
 !
 
 LEXICON NumberRoman
-< [MDCLXVI]+ .o.                ! make sure there is at least one character
+< [M|D|C|L|X|V|I]+ .o.          ! make sure there is at least one character
   M*                            ! thousands
   (C [D|M] | (D) C^{0,3})       ! hundreds
   (X [L|C] | (L) X^{0,3})       ! tens
   (I [V|X] | (V) I^{0,3} | I^4) >           RomanStem;
 ! the following is exactly the same, but with special UNICODE characters
-< [ⅯⅮⅭⅬⅩⅤⅠ]+ .o.
+< [Ⅿ|Ⅾ|Ⅽ|Ⅼ|Ⅹ|Ⅴ|Ⅰ]+ .o.
   Ⅿ*
   (Ⅽ [Ⅾ|Ⅿ] | (Ⅾ) Ⅽ^{0,3})
   (Ⅹ [Ⅼ|Ⅽ] | (Ⅼ) Ⅹ^{0,3})
   (Ⅰ [Ⅴ|Ⅹ] | (Ⅴ) Ⅰ^{0,3} | Ⅰ^4) >           RomanStem;
-! combined unicode characters
-< Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|Ⅺ|Ⅻ >                 RomanStem;
 !
 ! and lowercase versions, 
 !
 ! TODO: maybe we should do this in morph-phon part
-< [mdclxvi]+ .o.                ! make sure there is at least one
-  m*                            ! thousands
-  (c [d|m] | (d) c^{0,3})       ! hundreds
-  (x [l|c] | (l) x^{0,3})       ! tens
+< [m|d|c|l|x|v|i]+ .o.
+  m*
+  (c [d|m] | (d) c^{0,3})
+  (x [l|c] | (l) x^{0,3})
   (i [v|x] | (v) i^{0,3} | i^4) >           RomanStem;
-! the following is exactly the same, but with special UNICODE characters
-< [ⅿⅾⅽⅼⅹⅴⅰ]+ .o.
+! the following is exactly the same, but with lowercase characters
+< [ⅿ|ⅾ|ⅽ|ⅼ|ⅹ|ⅴ|ⅰ]+ .o.
   ⅿ*
   (ⅽ [ⅾ|ⅿ] | (ⅾ) ⅽ^{0,3})
   (ⅹ [ⅼ|ⅽ] | (ⅼ) ⅹ^{0,3})
   (ⅰ [ⅴ|ⅹ] | (ⅴ) ⅰ^{0,3} | ⅰ^4) >           RomanStem;
+
+! combined unicode characters
+< Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|Ⅺ|Ⅻ >                 RomanStem;
 < ⅰ|ⅱ|ⅲ|ⅳ|ⅴ|ⅵ|ⅶ|ⅷ|ⅸ|ⅹ|ⅺ|ⅻ >                 RomanStem;
-
-

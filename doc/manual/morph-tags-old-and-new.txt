@@ -1,0 +1,162 @@
+old                 new                 oflazer         gk?
+----                ---                 ------- 
+<n>                 <N>                 +Noun
+<np>                <N:prop>                +Prop
+<prn>               <Prn>               +Pron
+    <locp>          <Prn:loc>               +?
+    <dem>           <Prn:dem>               +DemonsP
+    <pers>          <Prn:pers>              +PersP
+    <qst>           <Prn:qst>               +QuesP
+                                            +ReflexP
+                                            +QuantP
+<adj>               <Adj>               +Adj
+<det>               <Det>               +Det
+<num>               <Num>               +Num
+    <ord>               <num:ord>           +Ord
+                        <num:dist>          +Distrib
+                                            +Range
+                                            +Real
+                                            +Ratio
+<adv>               <Adv>               +Adv
+    <qst>           <Adv:qst>
+<v>                 <V>                 +Verb
+<punct>             <Punct>             +Punc
+<cnjcoo>            <Cnj:coo>           +Conj
+<cnjadv>            <Cnj:adv>           +Conj
+<cnjsub>            <Cnj:sub>           +Conj
+<postp>             <Postp>             +Postp
+<onom>              <Onom>              +?
+<ij>                <Ij>                +Interj
+<q>                 <Q>                 +Ques ?
+<exist>             <Exist>             +Adj ??
+<notexist>          <Exist:neg>         +Adj ??
+<not>               <Not>               +Verb
+<alpha>             <Alpha>             +?
+
+<abbr>              <..:abbr>           +?
+<part>              <..:split>          +Dup (only some)
+
+<perc>
+
+<VJ_0>              <0><Adj>            +Adj+Zero
+<JN_0>              <0><N>              +Noun+Zero
+<MN_0>              <0><N>              +Noun+Zero
+<AN_0>              <0><N>              +Noun+Zero
+
+<D_CA>              <ca><...>           +Equ   | +Adv+Ly
+<D_CI>              <cı><...>           +Noun+Agt
+<D_cil>             <cıl><Adj>          +?
+<D_gil>             <gil><N>            +?
+<D_lA>              <la><V>             +?
+<D_lAn>             <lan><V>            +Verb+Acquire
+<D_lAS>             <laş><V>            +Verb+Become
+<D_lI>              <lı><Adj>           +Adj+With
+<D_lIk>             <lık><N>            +Noun+Ness
+<D_sAl>             <sal><Adj>          +Adj+Related
+<D_sIz>             <sız><Adv>          +Adv+Without
+<D_yAsI>            <yası><Adj>         +?
+<D_yIcI>            <yıcı><Adj>         +Adj+Agt
+<D_yIS>             <yış><N>            +Noun+Inf
+<dimin>             <dimin><N>          +?
+<ki>
+--- -(y)AsIyA: oflazer: Adv+AsIf
+
+<rcp>               <rcp><V>            +Verb+Recip
+<rfl>               <rfl><V>            +Verb+Reflex
+<caus>              <caus><V>           +Verb+Caus
+<pass>              <pass><V>           +Verb+Pass
+
+-----------------------------------------------
+<pl>                <pl>                +A3pl
+<p1p>               <p1p>               +P1pl
+<p1s>               <p1s>               +P1sg
+<p2p>               <p2p>               +P2pl
+<p2s>               <p2s>               +P2sg
+<p3p>               <p3p>               +P3pl
+<p3s>               <p3s>               +P3sg
+<abl>               <abl>               +Abl
+<acc>               <acc>               +Acc
+<dat>               <dat>               +Dat
+<gen>               <gen>               +Gen
+<ins>               <ins>               +Ins
+<loc>               <loc>               +Loc
+<ncomp>             <ncomp>             +?
+
+-------------------------------------------------
+<abil>             <abil><V>            +Able
+<iver>             <iver><V>            +Hastily
+<akal>             <akal><V>            +Stay
+<ayaz>             <ayaz><V>            +Almost
+<akoy>             <akoy><V>            +Start
+<adur>             <adur><V>            +Repeat
+<agel>             <agel><V>            +EverSince
+
+<t_aor>             <aor>               +Aor
+<t_fut>             <fut>               +Fut
+<t_narr>            <evid>              +Narr
+<t_cont>            <cont>              +Prog1
+<t_makta>           <impf>              +Prog2
+<t_imp>             <imp>               +Imp
+<t_opt>             <opt>               +Opt
+<t_obl>             <obl>               +Neces
+<t_cond>            <cond>              +Cond
+<t_past>            <past>              +Past
+
+<neg>               <neg>               +Neg
+
+<1p>                <1p>                +A1pl
+<1s>                <1s>                +A1sg
+<2p>                <2p>                +A2pl
+<2s>                <2s>                +A2sg
+<3p>                <3p>                +A3pl
+<3s>                <3s>                +A3sg
+
+<part_acak>         <part:fut><Adj>     +Adj+FutPart
+<part_dik>          <part:past><Adj>    +Adj+PastPart
+<part_yan>          <part:pres><Adj>    +Adj+PresPart
+<vn_acak>           <vn:fut><N>         +Noun+FutPart
+<vn_dik>            <vn:past><N>        +Noun+PastPart       
+<vn_yan>            <vn:pres><N>        +Noun+PresPart
+<vn_ma>             <vn:inf><N>         +Noun+Inf
+<vn_mak>            <vn:inf><N>         +Noun+Inf
+<vn_yis>            <vn:yis><N>         +Adj+Inf
+
+<dir>
+
+<cpl_di>            <cpl:past>          +Past
+<cpl_mis>           <cpl:evid>          +Narr
+<cpl_sa>            <cpl:cond>          +Cond
+<cpl_ken>           <cv:ken><Adv>       +Adv+While
+
+<cv>                <cv:ip><Adv>        +Adv+AfterDoingSo
+<cv_ip>             <cv:ip><Adv>        +Adv+AfterDoingSo
+-<vn_dik><D_CA>     <cv:dikca><Adv>     +Adv+As
+<cv_maksizin>       <cv:maksizin><Adv>  +Adv+WithoutHavingDoneSo
+<cv_inca>           <cv:inca><Adv>      +Adv+When
+<cv_arak>           <cv:erek><Adv>      +Adv+ByDoingSo
+<cv_ali>            <cv:eli><Adv>       +Adv+SinceDoingSo
+<cv_cesine>         <cv:cesine><Adv>    +Adv+AsIf
+
+<cv_incaya>         <cv:inca><Adv><0><N><dat>           -- ??
+<cv_acagina>        <vn:fut><N><p3s><dat>
+<cv_acagindan>      <vn:fut><N><p3s><abl>
+<cv_acak>           <vn:fut><N>
+<cv_zden>           <neg><t_aor><0><Adj><0><N><abl>
+<cv_ana>            <vn:pres><N><dat>
+<cv_den>            <vn:inf><N><abl>
+<cv_digi>           <vn:past><N><p3s>                  -- requires için/zaman... 
+<cv_digina>         <vn:past><N><p3s><dat>             -- requires göre to become adv
+<cv_diginda>        <vn:past><N><p3s><loc>   --        -- becomes adverb wit -LOC
+<cv_digindan>       <vn:past><N><p3s><abl>             -- requires beri/dolayi/oturu
+<cv_diktan>         <vn:past><N><abl>                  -- requires sonra
+<cv_ir>             <aor><0><Adj>
+<cv_mak>            <vn:inf><N>
+<cv_makla>          <vn:inf><N><ins>
+<cv_maktan>         <vn:inf><N><abl>
+<cv_maktansa>       <vn:inf><N><abl><cpl:cond>
+<cv_masi>           <vn:inf><N><p3s>
+<cv_masina>         <vn:inf><N><p3s><dat>
+<cv_masindan>       <vn:inf><N><p3s><abl>
+<cv_erekten>        <cv:erek><Adv><0><n><abl>
+
+<vinf>
