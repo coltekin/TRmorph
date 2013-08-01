@@ -75,6 +75,22 @@
 #define GUESSER_MIN_LENGTH 3
 #define GUESSER_MAX_LENGTH 10
 
+/* 
+ * These options are only for the stemmer. 
+ *
+ * Stemmer will normally output only the stem. 
+ * Setting STEMMER_KEEP_ROOT_POS to 1 will cause stemmer to keep 
+ * the POS tag of the root form. Note that this is not necessarily the
+ * final syntactic function of the word.
+ *
+ * Setting STEMMER_LEMMATIZE to 1 will result in replacing verbs with
+ * their dictionary citation form (infinitive) with additional -mek or
+ * -mak suffix.
+ *
+ */
+#define STEMMER_KEEP_ROOT_POS 1
+#define STEMMER_LEMMATIZE 0
+
 /* ----------------- end of configurable options -------------- */
 
 

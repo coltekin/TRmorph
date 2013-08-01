@@ -8,19 +8,49 @@
 !
 
 !
+! This atomata is used for stemming. It uses the analyzer FST to to
+! analyze the given word, but it strips all tags in the analyzer
+! output, leaving only the stem.
 !
+! It can optinally keep the POS tag of the stem, and may add the
+! infinitive suffix to the verbs so that the output is the dictionary 
+! citation form. Both options can be set in the file options.h.
 !
 
-define PoStags "<n>" | "<np>" | "<adj>" | "<adv>" | "<num>" | "<det>" 
-             | "<v>" | "<cnjsub>" | "<cnjcoo>" | "<cnjadv>" | "<ij>" 
-             | "<ngtv>" | "<bch>" | "<disc_part>" | "<pau>" | "<ui>" 
-             | "<punct>" | "<redup>" | "<exist>" | "<ntexist>" 
-             | "<not>" | "<alpha>";
+#include "options.h"
+
+define ASCIIupper [A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|T|U|V|Y|Z];
+define Vf   e | i | ö | ü | E | İ | Ö | Ü | î | Î | %^sFRV | %^sFUV;
+define Vb   a | ı | o | u | A | I | O | U | â | Â | û | Û | %^sBRV | %^sBUV;
+define ConsV b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | B | D | C | G | V | Z | J | F | Ğ | L | M | N | R | W | Y | %^sVC;
+define ConsUV p | t | ç | k | f | s | ş | h | P | T | Ç | K | F | S | Ş | H | %^sUC;
+define Cons  ConsV | ConsUV;
 
 
-define stem  ?* ->@ 0 || PoStags _  
-        .o. PoStags -> 0;
 
-read regex stem.i .o. @"trmorph.fst";
+define PoStag "<" ASCIIupper ?*  ">";
+
+
+define stem  ?* ->@ 0 || PoStag _  
+#if (STEMMER_KEEP_ROOT_POS == 0 && STEMMER_LEMMATIZE == 0)
+         .o. PoStag -> 0
+#endif
+        ;
+
+define stems stem.i .o. @"trmorph.fst";
+
+#if (STEMMER_LEMMATIZE == 1)
+    define stemmer  ?* 
+#if (STEMMER_KEEP_ROOT_POS == 0)
+               .o. [ 0 <- %< \">"+ %> ] 
+#endif
+               .o. [ mek %< V %> <- %< V %> || Vf Cons* _ ] 
+               .o. [ mak %< V %> <- %< V %> || Vb Cons* _ ] 
+               .o. stems;
+#else
+    define stemmer stems;
+#endif 
+
+regex stemmer;
 
 save stack stem.fst
