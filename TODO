@@ -33,3 +33,8 @@
   done by xfst rules just fine.
 - Optional apostrophe choice is buggy, it seems to be always
   compulsory.
+- -ken is allowed all all verbal noun suffixes. Not quite correct.
+    . gelmişken is ok 
+    . geldikken is not
+    . gelişken is not
+    ....

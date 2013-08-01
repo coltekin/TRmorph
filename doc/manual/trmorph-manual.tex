@@ -1,4 +1,5 @@
 \documentclass[twocolumn]{article}
+%\documentclass{article}
 \usepackage{etex}\reserveinserts{28}
 \usepackage{listings}
 \usepackage{ifxetex}
@@ -41,6 +42,7 @@
 
 
 
+
 \title{TRmorph: A morphological analyzer for Turkish}
 \author{Çağrı Çöltekin}
 \date{\textbf{Draft:} \today}
@@ -50,7 +52,7 @@
 \begin{@twocolumnfalse}
 \maketitle
 \textcolor{red}{%
-\textbf{A word of warning:} This document describes the new/development version
+This document describes the new/development version
 of TRmorph. As such, there may be some mismatches between what is
 documented here and how the analyzer behaves. This version is a
 complete overwrite of the previous version reported in
@@ -69,52 +71,51 @@ TRmorph is an open-source\footnote{Current version of TRmorph is
 licensed under \href{http://www.gnu.org/licenses/lgpl.html}{GNU Lesser
 General Public License}. See README file in the TRmorph distribution
 for more information.} finite-state morphological analyzer for
-Turkish. The official web site of the analyzer is
-\url{http://www.let.rug.nl/coltekin/trmorph}. Since it's release and
-introduction in \cite{coltekin2010}, it has been used by many
-researchers and NLP practitioners. This document gives a brief
-description of how to use the tools that comes with this package, as
-well as some implementation details that may be helpful for people
-customizing this open-source tool for their own needs.
+Turkish.  This document describes how to use the tools that comes with
+this package, as well as some implementation details that may be
+helpful for people who want to customize this open-source tool for
+their own needs.  The complete source of the analyzer and a web-based
+demo can be accessed through \url{http://www.let.rug.nl/coltekin/trmorph}. 
 
-Earlier versions of trmorph was implemented using SFST
-\parencite{schmid2005}, current version is implemented  more
-wide-spread finite state description languages \emph{lexc} and
+This document describes the current version of the analyzer.  This
+version is a complete rewrite of the earlier version report in
+\cite{coltekin2010}.  The earlier version of TRmorph was implemented
+using SFST \parencite{schmid2005}, the current version is implemented
+with more popular finite state description languages \emph{lexc} and
 \emph{xfst} from Xerox \parencite{beesley2003}, using Foma
 \parencite{hulden2009} as the main development tool. 
 
 The lexc/xfst implementation of TRmorph should compile with any
 lexc/xfst compiler without much additional effort.  The only
 foma-specific notation used in the morphology description is about
-handling duplication, which can also be handled with twolc rules, or
-compile-replace \parencite{beesley2003}.\footnote{Compilation with
-HFST tools \parencite{linden2009} without modification is not a
-problem since HFST uses foma as back end for parsing xfst files.}
+handling simple reduplication, which can also be handled with twolc
+rules, or compile-replace \parencite{beesley2003}.\footnote{TRmorph
+can be compiled with HFST \parencite{linden2009} without modification
+since HFST uses foma as the back end for parsing xfst files.}
 
 \section{How to use it}
 
 \subsection{Compilation from the source}
 
-To compile TRmorph from sources, besides a lexc/xfst compiler such as
-foma, you will need a C preprocessor, GNU make on a UNIX-like system
-for compiling TRmorph.
+To compile TRmorph from the source, you need a lexc/xfst compiler such
+as foma, a C preprocessor, GNU make and some standard UNIX utilities.
 
-If you meet all requirements to build analyzer/generator FST, you
-should type \lstinline{make} in the main TRmorph distribution to get
-the compiled automaton file \lstinline{trmorph.fst}.
+If all requirements are in place, to build analyzer/generator FST, you
+should type \lstinline{make} in the main TRmorph distribution
+directory. The resulting binary automaton file will be
+\lstinline{trmorph.fst}.
 
-Trmorph also comes with a set of other finite-state tools that can be
-useful in various tasks. Currently, tolls for the following is
+Trmorph comes with a set of other finite-state tools that are useful
+in various NLP tasks. Currently, tolls for the following tasks are
 distributed together with TRmorph.
-
-\begin{itemize}
+\begin{itemize}\addtolength{\itemsep}{-0.5\baselineskip}
 \item stemming/lemmatization
 \item morphological segmentation
 \item hyphenation
 \item guessing unknown words
 \end{itemize}
 
-To compile these tools, you should type specify the FST you want to
+To compile these tools, you should specify the FST you want to
 build as an argument to \lstinline{make}, e.g., 
 \lstinline{make stemmer} 
 will build an binary automaton called \lstinline{stem.fst}.
@@ -129,13 +130,19 @@ be customized for some common choices during the compilation. These
 options are typically related to more relaxed analysis. For example
 whether to allow non-capitalized proper names, or analyze (and
 generate) text written in all capitals, or set the decimal and
-thousand separator in numbers. These options are set in file
-\lstinline{options.h}. The file contains necessary documentation, and
-new options are being added based on user requests.
+thousand separator in numbers. These options are set in the file
+\lstinline{options.h}. The file contains documentation along with the
+existing options. This feature is under development (as of July 2013),
+new options are currently being added, and existing options may not
+fully work as intended yet.
+
+Another common need for customizing a morphological analyzer is to add
+or modify the lexical entries. The lexicon structure and format of the
+lexical entries are described in Section~\ref{sec:lexicon}.
 
 \subsection{Trying it out}
 
-Assuming you build the analyzer \lstinline{trmorph.fst} using foma,
+Assuming you have built the binary \lstinline{trmorph.fst} using foma,
 you can simply start foma and use xfst commands implemented in foma to
 analyze and generate the words. Here is an example session:
 
@@ -145,50 +152,56 @@ foma[0]: regex @"trmorph.fst";
 2.1 MB. 62236 states, 135237 arcs, Cyclic.
 foma[1]: up okudum
 oku<V><past><1s>
-foma[1]: down oku<V><past><1s>
-okudum
+foma[1]: down oku<V><past><2s>
+okudun
 \end{lstlisting}%stopzone 
 
-The first line is from shell starting foma, the command to foma on the
-second line reads file \lstinline{trmorph.fst}. The fourth line asks
-for analysis of the verb \xmplt{okudum}{I read-PAST} and the fifth
-line is the output of the analysis. The sixth line asks for the
-generation of the analysis string obtained, and not surprisingly the
-result is the same.
+The first line is  typed at the shell prompt to start foma.  The
+second line reads the FST specified in \lstinline{trmorph.fst} into
+the foma environment. The fourth line asks for the analysis of the verb
+\xmplt{okudum}{I read-PAST}, and the fifth line is the output of the
+analysis. The sixth line asks for the generation of the analysis string
+produced earlier, modifying the agreement marker to  second person
+singular agreement.
 
-Note that some of the output is suppressed for readability, and this
-is one of the rare cases where the analysis is unambiguous. Turkish
-morphological analysis is an ambiguous process, and TRmorph does not
-try to avoid it during the analysis.\footnote{For most purposes, the
-output of the morphological analyzer has little use without
-disambiguation. There are quite a few disambiguators reported in the
-literature, but, as yet, there are no disambiguators that work with
-TRmorph output.}
+Note that part of the output is removed for readability. We should
+also note that this example presents one of the rare cases where the
+analysis is unambiguous. Turkish morphological analysis is an
+ambiguous process, and TRmorph does not try to avoid it during the
+analysis (see Section~\ref{sec:ambiguity}).\footnote{For most
+purposes, the output of the morphological analyzer needs to be
+disambiguated.  There are quite a few morphological disambiguators for
+Turkish reported in the literature, but, as yet, there are no 
+disambiguators that work with TRmorph output.}
 
 Once you are convinced that the output may be useful for your
-purposes, you will probably want to use it analyzing large amount of
-text. For batch analysis tasks  foma's \lstinline{flookup} utility may
-fit better.
+purposes, you will probably want to use it for analyzing large amount
+of text. For batch analysis tasks  foma's \lstinline{flookup} utility
+is a better fit. 
 
-To use the analyzer with HFST, you need to compile the source
+To use the analyzer with the HFST, you need to compile the source
 automaton with HFST tools. 
 
 \section{The tagset}
 
-Since the first SFST version, the tagset of TRmorph evolved
-considerably, mostly as response to user requests. The description of
-the morphology mostly follows  \cite{goksel2005}. However, there are
-frequent divergences. This section describes the tags used in TRmorph.
-The aim of this section is to help users understand the output of the
-system. Occasional discussion of the morphological process is also
-included, but this section documents neither the morphology of the
-language nor the way it is implemented in TRmorph. The index at the
-end of the document also allows easy access to the points where a
-particular tag is defined or mentioned in this document.
+
+The description of the morphology in TRmorph mostly follows
+\cite{goksel2005}. However, there are some divergences, and tags used
+in TRmorph analyses does not necessarily match with any of the tags
+used in any grammar book. This section describes the tags used in the
+current version of TRmorph.  The aim of this section is to help users
+understand the output of the system. Occasional discussion of the
+morphological process is included, but this section documents neither
+the morphology of the language nor the way it is implemented in
+TRmorph.  Our focus in this section is to describe the tags one finds
+in the analysis strings produced by the analyzer (or tags one
+needs to use for generation).  The index at the end of the document
+also allows easy access to the points where a particular tag is
+defined or mentioned in this document.
 
 A clarification of the notation for the surface forms is in order
 before starting the documentation of the tagset and related suffixes.
-Suffixes in Turkish typically contain under-specified vowels and
+Suffixes in Turkish often contain under-specified vowels and
 consonants that are resolved according to morphophonological rules,
 like vowel harmony. These vowels and consonants are indicated with
 capital letters listed below.
@@ -198,7 +211,7 @@ capital letters listed below.
 \item[I] is realized as either `ı', `i', `u' or  `ü'.
 \item[D] is realized as either `d' or  `t'.
 \item[P] is realized as either `p' or  `b'.
-\item[K] is realized as either `k', 'ğ' or  `y'.
+\item[K] is realized as either `k', `ğ' or  `y'.
 \item[C] is realized as either `c' or  `ç'.
 \end{description}
 
@@ -207,84 +220,118 @@ be dropped in certain contexts.
 
 \subsection{Part-of-speech tags}
 
-All words at least one POS tag. A word may get multiple POS tags, and
-even the same tag repetitively. This tracks the changes to POS during
-suffixation. This process follows the idea of \emph{inflectional
-groups} \parencite[IGs,][]{oflazer1999,oflazer2003}, that are
-typically used in Turkish NLP literature. The idea is that a word in
-Turkish may start with a particular part of speech due to lexical
-properties of the root, may get some inflectional suffixes that modify
-this POS, then may get a derivational suffix which changes its POS,
-and may again take additional inflections. This process may continue
-theoretically indefinitely. Logically, the POS tag of the final word
-is the last POS tag in the sequence. However, the other intermediate
-forms are also important, and, at least in typical dependency parsing,
-can participate in dependency relations with other words by
-themselves. For example the analysis of the word
-\xmpl{evdekilerinki}\footnote{Rough translation: `the \emph{ones} that belong
-to the \emph{ones} in the house', as in `the \emph{books} that belong
-to the \emph{people} in the house'.} in example~\ref{ig-example}.
+All analysis strings include at least one POS tag. A word may get
+multiple POS tags, and even the same POS tag repeatedly. This process
+tracks the changes to the syntactic function of a word with
+suffixation.  It follows the idea of \emph{inflectional groups}
+\parencite[IGs,][]{oflazer1999,oflazer2003}  used in the Turkish NLP
+literature. In a nutshell, the suffixation process may result in
+changes to the syntactic function of a word, and each of these
+functions may have their own `inflectional' features.  The POS tag of
+the whole word is the final POS tag in the sequence. However, the
+other intermediate IGs are also important, and, at least in typical
+dependency parsing, these IGs may participate in dependency relations
+with the other words in the sentence.  Example~(\ref{ig-example})
+demonstrates this process with the analysis of of the word
+\xmpl{evdekilerinki}.\footnote{Rough translation: `the \emph{ones} that
+belong to the \emph{ones} in the house', as in `the \emph{books} that
+belong to the \emph{people} in the house'.}
 
 \enumsentence{\label{ig-example}ev\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
 
-The example analysis in (\ref{ig-example}) includes the following IGs
+The example analysis in (\ref{ig-example}) includes the following IGs.
 
 \begin{enumerate}
-\item The initial noun `ev' with locative maker.
+\item The initial noun `ev' with the locative maker.
 \item Addition of the suffix \sffx{ki} makes an adjective.
-\item The adjective becomes a (pro)nominal with a zero derivation, which takes
-plural suffix and genitive marker.
+\item The adjective becomes a (pro)nominal with a zero derivation,
+which is inflected for plural and genitive case.
 \item Yet another \sffx{ki} is suffixed, and the word becomes an
 adjective again.\footnote{More likely reading of this example
 includes another zero derivation causing final POS to be again noun.}
 \end{enumerate}
 
-TRmorph, by default, does not mark IG boundaries explicitly. However,
+By default, TRmorph does not mark IG boundaries explicitly. However,
 one can easily trace the IG changes following the POS tags. All POS
 tag names start with a capital letter, while other tags always start
-with a lowercase letter or number.
+with a lowercase letter or number. The tag before a new POS tag is
+always preceded with the tag of the suffix that cause the derivation.
+When there is no surface suffix, a zero-derivation tag \mtag[def]{0} is
+inserted before the POS tag.
 
-All part-of speech tags used in TRmorph are listed in
-Table~\ref{tbl:pos-tags}.
+The example in (\ref{ig-example}) is also interesting because of the
+fact the suffix \sffx{ki} may result indefinitely long words (see
+Section~\ref{ssec:ki}).
+
+
+%\begin{table}[t]
+%\caption{\label{tbl:pos-tags}The list of part of speech tags in
+%TRmorph along with the corresponding tags in some of the output
+%produced by in \citeauthor{oflazer1994}'s (\citeyear{oflazer1994})
+%morphological analyzer.}
+%\begin{center}
+%\begin{tabular}{lll}\toprule
+%Tag          & Description       & Oflazer's tag \\
+%\toprule
+%\mtagD{Alpha} & Symbols of alphabet & ?\\
+%\mtagD{Adj}   & Adjective         & +Adj\\
+%\mtagD{Adv}   & Adverb            & +Adverb\\
+%\mtagD{Cnj}   & Conjunction       & +Conjunction\\
+%\mtagD{Det}   & Determiner        & +Det\\
+%\mtagD{Exist} & \xmpl{var} and \xmpl{yok}    & +Adj\\
+%\mtagD{Ij}    & Interjection      & +Interj \\
+%\mtagD{N}     & Noun              & +Noun\\
+%\mtagD{Not}   & \xmpl{değil}      & +Verb\\
+%\mtagD{Num}   & Number            & +Num\\
+%\mtagD{Onom}  & Onomatopoeia      & ?\\
+%\mtagD{Postp} & Postposition      & +Postp\\
+%\mtagD{Prn}   & Pronoun           & +Pron\\
+%\mtagD{Punc}  & Punctuation       & +Punc\\
+%\mtagD{Q}     & Question particle & +Ques, also +QuesP\\
+%\mtagD{V}     & Verb              & +Verb\\
+%\bottomrule
+%\end{tabular}
+%\end{center}
+%\end{table}
 
 \begin{table}[t]
 \caption{\label{tbl:pos-tags}The list of part of speech tags in
-TRmorph along with the corresponding tags in some of the output
-produced by in \citeauthor{oflazer1994}'s (\citeyear{oflazer1994})
-morphological analyzer.}
+TRmorph.}
 \begin{center}
-\begin{tabular}{lll}\toprule
-Tag          & Description       & Oflazer's tag \\
+\begin{tabular}{ll}\toprule
+Tag          & Description        \\
 \toprule
-\mtagD{Alpha} & Symbols of alphabet & ?\\
-\mtagD{Adj}   & Adjective         & +Adj\\
-\mtagD{Adv}   & Adverb            & +Adverb\\
-\mtagD{Cnj}   & Conjunction       & +Conjunction\\
-\mtagD{Det}   & Determiner        & +Det\\
-\mtagD{Exist} & \xmpl{var} and \xmpl{yok}    & +Adj\\
-\mtagD{Ij}    & Interjection      & +Interj \\
-\mtagD{N}     & Noun              & +Noun\\
-\mtagD{Not}   & \xmpl{değil}      & +Verb\\
-\mtagD{Num}   & Number            & +Num\\
-\mtagD{Onom}  & Onomatopoeia      & ?\\
-\mtagD{Postp} & Postposition      & +Postp\\
-\mtagD{Prn}   & Pronoun           & +Pron\\
-\mtagD{Punc}  & Punctuation       & +Punc\\
-\mtagD{Q}     & Question particle & +Ques, also +QuesP\\
-\mtagD{V}     & Verb              & +Verb\\
+\mtagD{Alpha} & Symbols of the alphabet \\
+\mtagD{Adj}   & Adjective         \\
+\mtagD{Adv}   & Adverb            \\
+\mtagD{Cnj}   & Conjunction       \\
+\mtagD{Det}   & Determiner        \\
+\mtagD{Exist} & The words \xmpl{var} and \xmpl{yok}    \\
+\mtagD{Ij}    & Interjection      \\
+\mtagD{N}     & Noun              \\
+\mtagD{Not}   & The word \xmpl{değil}      \\
+\mtagD{Num}   & Number            \\
+\mtagD{Onom}  & Onomatopoeia      \\
+\mtagD{Postp} & Postposition      \\
+\mtagD{Prn}   & Pronoun           \\
+\mtagD{Punc}  & Punctuation       \\
+\mtagD{Q}     & Question particle \xmpl{mI}\\
+\mtagD{V}     & Verb              \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-Most POS tags are self explanatory, and does not require much
-explanation. The following part of speech tags are somewhat unusual
-and deserves some explanation.
+All part-of speech tags used in TRmorph are listed in
+Table~\ref{tbl:pos-tags}.  Most POS tags are self explanatory, and
+does not require much explanation. The following part of speech tags
+are somewhat unusual and deserves some explanation.
 
 \begin{description}
 \item[\mtag{Exist}] is used for two words
 \xmplt{var}{existent/present} and  \xmplt{yok}{non-existent/absent},
-where the latter is marked as \mtag{neg}.
+where the latter is marked as \mtag{Exist:neg}, indicating that it is the
+negative form (see Section~\ref{ssec:subcat}, for the details of this notation).
 These words behave mostly like nouns in their predicate function (with
 zero copula), but marking them simply as nouns does blur their
 function.  
@@ -292,51 +339,53 @@ function.
 and \xmpl{yok}, \xmpl{değil} also behaves like nominal predicates. But
 again, marking it as noun or verb hides the fact that it has a special
 function.
+
+%%% Other functions of degil??
+
 \item[\mtag{Q}] is used for the question particle \sffx{mI}. The
 question particle is written separately from the predicate it
-modifies. However, the preferred analysis of question particle 
-in TRmorph is together with the predicate. This ensures that 
-it follows a correct form of the predicate and vowel harmony is
-applied correctly. However, since we do not assume that the input is
-tokenized with this assumption, this form make sure that the input is
-analyzed.
+modifies. However, the preferred analysis of question particle in
+TRmorph is together with the predicate. This ensures that it follows
+the correct form of the predicate it is attached to, and vowel harmony
+is applied correctly. However, since we do not assume that the input
+is tokenized with this assumption, this form make sure that the input
+is analyzed with the cost of precision. The question particle is
+discussed further in Section~\ref{ssec:question}.
 
-This tag is related to the lowercase \mtag{q} tag, which is used if
-input is tokenized such that the predicate and the question particle
-form a single token. The question words corresponding to wh-words in
-English are marked with the corresponding POS tag together with the
-tag \mtag{qst}.
 \end{description}
 
-\subsection{Subcategorization of lexemes}
+\subsection{\label{ssec:subcat}Subcategorization of lexemes}
 
-Besides the major major POS tags or word classes discussed above, we
-often we assign subcategories to a lexeme. Typically the
+Besides the major major POS tags or word classes discussed above,
+TRmorph makes use of a set of subcategory tags to mark features that
+are part of a lexeme. Typically the
 subcategorization is applied to a root form in the lexicon, but some
 morphemes and POS tags after a derivation may also receive a
-subcategory. Subcategories defined here are features of a morpheme
-that do not have a surface realization. Representing these using a
-different notation allows to make this distinction, and a
-surface--analysis mapping that is (almost) one-to-one.  However, these
-tags can be viewed as any other feature of a word (or IG), and the
-notation can be replaced with more uniform notation easily.
+subcategory tags. Subcategories defined here are features of a morpheme
+that do not have a surface realization. Representing these features using a
+different notation allows one to make this distinction, and the
+surface--analysis mapping becomes (almost) one-to-one.  If a 
+representation where all tags have a uniform notation is desired, 
+the analyzer source can be modified accordingly, or easier, a simple
+regular expression based converter can be used.
 
 The subcategories generally mark semantic differences, but they may
 also result in morphosyntactic differences. Lexical subcategorization
 in TRmorph output is marked using the syntax
 \formattag{Cat:subcat$_1$:subcat$_2$:\ldots}, where `Cat' is a major
 category and `subcat$_1$', `subcat$_2$' and so on are sub categories.
-A typical example of a subcategory is the \emph{proper} nouns, which
-are tagged as \mtag{N:prop}. 
+The order of subcategory tags are not important (although they are
+produced in a consistent order).  A typical example of a subcategory is
+\emph{proper} nouns, which are tagged as \mtag{N:prop}. 
 
-The following lists subcategories in used in TRmorph for all POS tags
-that may receive a subcategory.
+The following lists subcategories used in TRmorph for all word classes
+that may be specified together with a subcategory.
 
 \begin{description}
-\item[Nouns] besides the tag \mtag[def]{N:prop} marking proper names, 
-abbreviated nouns are marked with the tag \mtag[def]{N:abbr}. If the 
-lexeme is an abbreviated proper name, then the tag would be 
-\mtag[def]{N:prop:abbr}. 
+
+\item[Nouns] Besides the tag \mtag[def]{N:prop} marking proper names,
+abbreviated nouns are marked with the tag \mtag[def]{N:abbr}. For an
+abbreviated proper name, the tag is \mtag[def]{N:prop:abbr}. 
 
 \item[Conjunctions] are subcategorized as
 \emph{coordinating}, \emph{adverbial} or \emph{subordinating} 
@@ -345,86 +394,91 @@ conjunctions, marked using tags \mtag[def]{Cnj:coo}, \mtag[def]{Cnj:adv},
 
 The last one of these categories, \mtag{Cnj:sub}, include only a
 limited set of conjunctions which come first in a subordinate clause.
-These words currently are \xmpl{ki}, \xmpl{eğer} and \xmpl{şayet}, all
-borrowings from Persian. The other subordinating particles/words occur
-at the end of the subordinate clause, and they are marked as
+These words currently are \xmpl{ki}, \xmpl{eğer} and \xmpl{şayet} (all
+borrowings from Persian). The other subordinating particles/words occur
+at the end of subordinate clauses, and they are marked as
 postpositions (\mtag{Postp}) described below.  Furthermore, most
-of the subordination is in Turkish is done through suffixation which
+of the subordination in Turkish is done through suffixation which
 is described in Section~\ref{ssec:subordination}.
 
 \item[Pronouns] Pronouns are further categorized as \emph{personal},
 \emph{demonstrative} and \emph{locative} pronouns, marked using
 \mtag[def]{Prn:pers}, \mtag[def]{Prn:dem}, \mtag[def]{Prn:locp} 
-respectively. Furthermore, the pronouns that question that form
+respectively. Furthermore, the pronouns that form
 questions, like \xmplt{kim}{who}, and \xmplt{ne}{what}, are
-marked as \mtag[def]{Prn:qst}. Like in conjunctions both subcategory
-markers can be present. For example \xmplt{kim}{who} would be marked
+marked as \mtag[def]{Prn:qst}. Subcategory
+markers for both aspects can be present. For example \xmplt{kim}{who} would be marked
 as \mtag{Prn:pers:qst}.
 
-Besides the above subcategories, pronouns get number and person
+Besides the above subcategories, personal pronouns get person-number 
 agreement markers. These markers can be useful in subject-predicate
-agreement as well as some other constructions (such as
+agreement as well as in other constructions (such as
 genitive-possessive construction involving pronouns). However, the
-agreement in Turkish is far from being trivial (see
+agreement in Turkish is far from trivially determined (see
 \cite[pp.116--122]{goksel2005}). The markers 
 \mtag[def]{Prn:pers:1s},
 \mtag[def]{Prn:pers:2s},
 \mtag[def]{Prn:pers:3s},
 \mtag[def]{Prn:pers:1p},
 \mtag[def]{Prn:pers:2p} and
-\mtag[def]{Prn:pers:3p} are tags used for the person and number the
-pronominal will agree. The reflexive pronoun \xmpl{kendi(si)} is
-marked as \mtag[def]{Prn:pers:refl}
+\mtag[def]{Prn:pers:3p} are tags used for the personal pronouns with 
+person-number agreement. The agreement markers are further
+discussed in Section~\ref{ssec:pagr}. 
+
+The reflexive pronoun \xmpl{kendi(si)} is marked as
+\mtag[def]{Prn:pers:refl}.
 
 Subcategorization of pronouns, particularly as personal pronouns, are
-sometimes not a clear decision. Subcategories of pronouns are left
-unspecified even though they are primarily used as personal pronouns,
-and some pronoun marked as personal pronouns may refer to entities
-other than people.
+sometimes not a clear decision. Subcategories of some pronouns are
+left unspecified even though they are often used as personal
+pronouns, and some pronoun marked as personal pronouns may refer to
+entities other than people.
 
-\item[Determiners] are marked based on their definiteness. 
-\emph{Demonstrative} determiners are marked \mtag[def]{Det:def} and
-indefinite determiners are marked \mtag[def]{Det:indef}. The question
-words that take place of determiners \xmplt{ne kadar}{how much} and
+\item[Determiners] are marked for definiteness. 
+\emph{Definite} determiners are marked \mtag[def]{Det:def} and
+\emph{indefinite} determiners are marked \mtag[def]{Det:indef}. The question
+words that fill the same syntactic slot as determiners \xmplt{ne kadar}{how much} and
 \xmplt{hangi}{which} are tagged with \mtag{Det:qst}. 
 
 Further subcategorization of determiners (for example 
 quantifiers) can be implemented in the future.
 
 \item[Postpositions] are always subcategorized in two dimensions.
-First subcategory is the category of the resulting postpositional
-phrase, either an \emph{adjectival} or \emph{adverbial} phrase, marked
-as \mtag[def]{Postp:adj} and \mtag[def]{Postp:adv} respectively.
+First subcategory is the syntactic category (POS) of the resulting
+postpositional phrase, either an \emph{adjectival} or \emph{adverbial}
+phrase, marked as \mtag[def]{Postp:adj} and \mtag[def]{Postp:adv}
+respectively. Note that unlike other POS tags, these subcategory
+markers start with a lowercase letter.
 
-Postpositions choose the noun phrase complements.
-Besides the category of the resulting phrase, postpositions also
-include a tag specifying the requirement for the complement noun
-phrase. The complement requirement tag is formed a concise description of the
-requirement followed by capital letter `C'. The postpositions that require 
-the complement to be in \emph{ablative}, \emph{dative} and
-\emph{instrumental} cases are marked 
+Postpositions choose their noun phrase complements.  Besides the
+category of the resulting phrase, postpositions also include a tag
+specifying the requirement for the complement noun phrase. The tag
+marking required complement type is formed by a concise
+description of the requirement followed by the capital letter `C'. The
+postpositions that require the complement to be in \emph{ablative},
+\emph{dative} and \emph{instrumental} cases are marked 
 \mtag[def]{Postp:ablC},
 \mtag[def]{Postp:datC},
 and \mtag[def]{Postp:insC} respectively. Postpositions that require
-non-case marked complement receives \mtag[def]{Postp:nomC}. The
-postpositions that require the noun phrase to be suffixes with either
+non-case marked complement are tagged \mtag[def]{Postp:nomC}. The
+postpositions that require the noun phrase to be suffixed with either
 \sffx{lI} or \sffx{sIz} are marked with
 \mtag[def]{Postp:liC}.\footnote{Like \sffx{(y)lA} that we mark as
 \mtag{ins}, these suffixes are typically considered derivational suffixes, 
 however their use resemble case markers.}
-Finally, postpositions that require a number as their complement are
-marked with \mtag[def]{Postp:numC}
+Finally, postpositions that require numeric expressions as their
+complements are marked with \mtag[def]{Postp:numC}.
 
 \item[Numbers] are tagged as \mtag[def]{Num:ara} for Arabic numerals,
 and \mtag[def]{Num:rom} for Roman numerals. Numbers that are spelled
 out are not marked with a subcategory marker (but still marked as
-\mtag{Num}). Besides numbers the question word \xmplt{kaç}{how many}
+\mtag{Num}). Besides numbers, the question word \xmplt{kaç}{how many}
 is also tagged as a number with a sub tag specifying that it is a
 question word, resulting in \mtag[def]{Num:qst}.
 
 \item[Verbs] are currently not subcategorized in TRmorph. 
 
-Subcategorizing verbs \emph{transitive} and \emph{intransitive}, or
+Subcategorizing verbs as \emph{transitive} and \emph{intransitive}, or
 marking all types (cases) of noun phrase complements a verb can take
 is planned and some early steps are underway as of this writing (July
 2013).
@@ -440,39 +494,41 @@ Since \xmpl{yok} is the negative of \xmpl{var}, it is tagged as
 negative: \mtag[def]{Exist:neg}.
 \end{description}
 
-Some verbs, nouns, adjectives, adverbs and conjunctions are formed
-from more than one written words. Some of these are local, like the
-adverb \xmplt{apar topar}{hurriedly}, but some may be split like the
-conjunction \xmpl{ya} \xmplt{ya evdedir ya iş yerinde}{s/he is either
-at home or the office}. Furthermore, some of individual `words' in
-such constructions cannot be used by themselves, like \xmpl{topar}
-above. If the non-split multi-word expressions are input to the
-analyzer together, they are analyzes like other words of the same
-class. However, if they are input word-by-word a sub tag
+Some verbs, nouns, adjectives, adverbs and conjunctions are formed by
+more than one written words. Some of these are adjacent words, like
+the adverb \xmplt{apar topar}{hurriedly}, but some may be split like
+the conjunction \xmpl{ya}, as in \xmplt{ya evdedir ya iş yerinde}{s/he
+is either at home or the office}. Furthermore, some of individual
+`words' in such constructions cannot be used by themselves, like
+\xmpl{topar} above. If the non-split multi-word expressions are input
+to the analyzer together, they are analyzed like other words of the
+same class. However, if they are input word-by-word, a sub tag
 \formattag{:partial} is added to the main POS tag. For example
-\xmpl{apar} and \xmpl{topar} is be tagged as \mtag[def]{Adv:partial}
-and \xmpl{ya} is tagged as \mtag[def]{Cnj:partial} (more precisely
-\mtag[def]{Cnj:coo:partial}). Similarly, currently the tags 
-\mtag[def]{N:partial}, 
-\mtag[def]{Adj:partial} and
-\mtag[def]{V:partial} are used for nouns, adjectives and verbs
-respectively.
+\xmpl{apar} and \xmpl{topar} are tagged as \mtag[def]{Adv:partial} and
+\xmpl{ya} is tagged as \mtag[def]{Cnj:partial} (more precisely
+\mtag[def]{Cnj:coo:partial}). Currently, the tags
+\mtag[def]{N:partial}, \mtag[def]{Adj:partial} and
+\mtag[def]{V:partial} are used for parts of nouns, adjectives and
+verbs respectively.
 
 \subsection{Nominal morphology and noun inflections}
 
-Nouns, pronouns, adjectives and adverbs in Turkish are considered
-nominals. Most adverbs and adjectives can function as nouns (or
+Nouns, pronouns, adjectives and adverbs in Turkish form the larger
+class of nominals. Most adverbs and adjectives can function as nouns (or
 pronouns). For example \xmplt{mavi}{blue} may mean `the blue one', or
 \xmplt{hızlı}{fast} may mean `the fast one'. In TRmorph this is
 handled by allowing any adjective or adverb to become an noun with a
-\emph{zero derivation}. A zero derivation is always marked with tag
-\mtag{0} and followed by the new POS tag, in this case \mtag{N}. 
+\emph{zero derivation}. A zero derivation is always marked with the tag
+\mtag{0} followed by the new POS tag, in this case \mtag{N}. 
 
-Nouns can receive plural suffix, one of the possessive suffixes and
-one of the case suffixes. All of these inflections are optional.
-However, when they co-occur, they have to occur in this order. Full
-list of noun inflections are presented in
-Table~\ref{tbl:noun-inflections}.
+Nouns can be suffixed with the plural suffix, one of the possessive
+suffixes and one of the case suffixes. All of these inflections are
+optional. When not marked with any of these suffixes, the default is  singular, 
+no possessive marking, an no case marking (or nominal), respectively.
+When these suffixes  co-occur, they
+have to occur in the order listed, shown in 
+Figure~\ref{fig:noun-inflections}. The full list of noun inflections are
+presented in Table~\ref{tbl:noun-inflections}.
 
 \begin{figure}
 \resizebox{\linewidth}{!}{%
@@ -481,8 +537,8 @@ Table~\ref{tbl:noun-inflections}.
 \caption{\label{fig:noun-inflections}Automata depicting noun
 inflections. The edge CASE1 represents the locative and 
 ablative suffixes, CASE2 represents all other case-like suffixes. The
-reason for for differentiation is due to the fact that the state
-CASE1 can be followed by \sffx{ki}.}
+reason for the differentiation is due to the fact that the state
+CASE1 can be followed by the suffix \sffx{ki}.}
 \end{figure}
 
 \begin{table}[t]
@@ -513,92 +569,103 @@ CASE1 can be followed by \sffx{ki}.}
 \end{center}
 \end{table}
 
-If there is a plural marker analysis symbol after the \mtag{N} will
-include a \mtag{pl}. TRmorph does not mark for singular. If a noun is
-not marked for plural, it is assumed to be singular. 
+If there is a plural marker, analysis string after the \mtag{N} will
+include the tag \mtag{pl}. TRmorph does not mark for singular. If a
+noun is not marked for plural, it is assumed to be singular. 
 
 %There are a small number of loan words that are plural in their
 %language of origin, e.g., \xmplt{eşya}{belongings}. ...
 
-Possessive markers follow either nominal stem, or the plural marker.
-Besides marking for possession, these suffixes derive pronouns when
-attached to adjectivals(e.g., determiners or adjectives).
+Possessive markers follow either the nominal stem, or the plural
+marker. Besides marking for possession, these suffixes have a number
+of other functions, such as deriving pronouns when attached to
+adjectivals (e.g., determiners or adjectives).
 
-The first five cases in Table~\ref{tbl:noun-inflections} are commonly
+The first five suffixes in Table~\ref{tbl:noun-inflections} are commonly
 recognized cases in Turkish. The \emph{instrumental/commutative}
-marker also behaves like case suffixes. There are two more suffixes
-\sffx{lI} and \sffx{sIz} (resembling to abessive case in its
-function), that can occupy the same slot, which are marked with tags
+marker also behaves like case suffixes. There are two more suffixes,
+namely \sffx{lI} and \sffx{sIz} 
+%(resembling to abessive case in its function), 
+that can occupy the same slot, which are marked with tags
 \mtag[def]{li} and \mtag[def]{siz} respectively.
 
 The \sffx{(s)I} suffix, listed as \mtag{p3s} in
 Table~\ref{tbl:noun-inflections}, is highly ambiguous. One of its many
-functions that can be confused with the possessive suffix is forming
-noun compounds. TRmorph marks this usage of the suffix \sffx{(s)I} as
-\mtag[def]{ncomp}. In this use, this suffix always causes ambiguities.
-Besides the fact that a noun suffixed with \sffx{(s)I} can be 
-either marked for possession or head of a noun compound, since
-one of the two \sffx{(s)I} suffixes following each other is deleted
-from the surface, it can be both (a noun compound marked for
-possession).
+functions that may be confused with the possessive suffix is forming
+noun compounds. One of types of noun compounds in Turkish is formed by
+a bare noun and a (head) noun with suffix \sffx{(s)I}, for example
+\xmplt{at araba\emph{sı}}{horse carriage}.\footnote{Even though one
+can assume that this use is somewhat related to possession, it is not
+strictly possessive marking (the horse does not own the carriage).
+Furthermore, although the surface suffix is skipped after a compound
+marker, a compound of this form may also be in possessive form (e.g.,
+`someone's horse carriage').} TRmorph marks this usage of the suffix
+\sffx{(s)I} as \mtag[def]{ncomp}. In this use, this suffix always
+causes ambiguities.  Besides the fact that a noun suffixed with
+\sffx{(s)I} can either be marked for possession or as the head of a noun
+compound, since one of the two \sffx{(s)I} suffixes following each
+other is deleted from the surface form, it can also be both (a noun
+compound marked for possession).
 
 The case (or case-like) suffixes change the role of the noun (or the
 noun phrase headed by the noun) in the sentence. For example a
 locative marked noun phrase may function as an adverb (\xmpl{saat
-dokuz\emph{da} görüşurüz}) or an adjective (\xmpl{yedi yaşında
+dokuz\emph{da} görüşurüz}) or an adjective (\xmpl{yedi yaşın\emph{da}
 çocuk}). However, following the common practice in the literature we
 do not attempt to mark possible POS changes after case-like markers.
 
-\subsection{The suffix \sffx{ki}}
+\subsection{\label{ssec:ki}The suffix \sffx{ki}}
 
-The suffix \sffx{ki}, tagged as \mtag[def]{ki}, attaches to a locative
+The suffix \sffx{ki}, tagged as \mtag[def]{ki}, attaches to locative
 or ablative marked nouns.  The resulting word functions as an
-adjective or pronoun. In both cases, TRmorph marks the transition to
-adjective. For example, \xmpl{evdeki} is analyzed as
+adjective or a pronoun. In both cases, TRmorph marks the transition to
+an adjective. For example, \xmpl{evdeki} is analyzed as
 `ev\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}'. Since all adjectives are
 allowed to become a noun through a zero derivation, the pronoun
 reading is intended to be represented by this change. For example, the
 intended analysis for \xmplt{evdeki kitap}{the book in the house} is
 `ev\mtag[noindex]{N}\mtag[noindex]{loc}\mtag[noindex]{ki}\mtag[noindex]{Adj}',
 while analysis for \xmplt{evdeki uyuyor}{the one/person in the house is
-sleeping} suffixes `\mtag{0}\mtag{N}' to this analysis.
+sleeping} appends `\mtag{0}\mtag{N}' at the end of the analysis
+string.
 
 The (pro)noun formed by \sffx{ki} can further be suffixed with other
-nominal suffixes. Although the number of iterations using multiple
-\sffx{ki} suffixes are limited in practice, there is no principle
-limit, causing in-principle unbounded length for a word in Turkish.
+nominal suffixes. Although the number of iterations using \sffx{ki}
+rarely exceed 2 in practice, there is no principled limit.  As a
+result, length of a Turkish word is unbounded in-principle.
 
 \subsection{\label{ssec:nompred}Tags related to nominal predicates}
 
-Any nominal in Turkish may become a predicate by attaching one of the
+Any nominal in Turkish may become a predicate with one of the
 copular suffixes \sffx{(y)DI}, \sffx{(y)mIş}, \sffx{(y)sA} or
 \sffx{(y)}. These suffixes correspond to \emph{past},
 \emph{evidential}, \emph{conditional}, and \emph{present} predicates
-involving the copula `be'. The copular markers has to follow one of
+involving the copula `be'. The copular markers has to precede one of
 the verbal person agreement markers. For example
-\xmplt{öğrenciy\emph{di}k}{We were students}),
-\xmplt{öğrenciy\emph{miş}ler}{They were (evidentially) students}),
-\xmplt{öğrenciy\emph{se}n}{If you are/were a student},
-\xmplt{öğrenci\emph{y}im}{I’m a student}). Since the third person
-singular agreement suffix has no surface form and the buffer
+\xmplt{öğrenciy\emph{di}k}{we were students},
+\xmplt{öğrenciy\emph{miş}ler}{they were [evidentially] students},
+\xmplt{öğrenciy\emph{se}n}{if you are/were a student},
+\xmplt{öğrenci\emph{y}im}{i’m a student}. Since the third person
+singular agreement suffix is null on the surface and the buffer
 \sffx{(y)-} does not surface in this case, any nominal without
 additional copular or person suffixes serve as a nominal predicate
 with present copula and third person singular agreement. Additionally,
 since a predicate with third person singular agreement also agrees
-with a third person plural agreement, we additionally mark such a noun
+with a third person plural subject, we additionally mark such a noun
 as having present copula and third person plural agreement (for
 example, \xmplt{babam öğretmen, annem ve ablam doktor}{my father is a
 teacher, my mother and older sister are doctors}). 
 
 TRmorph handles this process by allowing any noun to first became a
-verb by a zero derivation, and then marking them verb with the
+verb by a zero derivation, and then marking it with the
 appropriate copula and the person agreement marker. The tags for
 copula are \mtag[def]{cpl:pres}, \mtag[def]{cpl:past},
-\mtag[def]{cpl:evid} and \mtag[def]{cpl:cond} for , \emph{present},
+\mtag[def]{cpl:evid} and \mtag[def]{cpl:cond} for \emph{present},
 \emph{past}, \emph{evidential} and \emph{conditional} copula
 respectively. Last three tags are also possible after a verb with a
-tense/aspect/modality suffix, and will be discussed further below.
-Example analyses (without root) for the examples above would be as
+tense/aspect/modality suffix, and is discussed further in
+Section~\ref{ssec:verbal-copula}.
+Example analyses  for the examples discussed above would be as
 follows:\\
 \begin{tabular}{ll}
 \xmpl{öğrenciydik}&\mtag{N}\mtag{0}\mtag{V}\mtag{cpl:past}\mtag{1p}\\
@@ -611,13 +678,15 @@ follows:\\
 
 
 Besides copular suffixes, the suffix \sffx{(y)ken} (making adverbials
-from verbs, discussed below) may occupy the same slot as the copular
-suffixes.
+from verbs, discussed in Section~\ref{ssec:subordination}) may occupy
+the same slot as the copular suffixes, although its use is more
+restricted.
 
 The nominal predicate with a copula and person agreement may be
-followed by marker \cite{goksel2005} call `generalizing modality
+followed by the marker \cite{goksel2005} call `generalizing modality
 marker', the suffix \sffx{DIr}. It is particularly common with
-\mtag[noindex]{3s} case. The tag for this marker in TRmorph is
+\mtag[noindex]{3s} as it disambiguates between the noun and the
+predicate reading. The tag for this marker in TRmorph is
 \mtag[def]{dir}.
 
 \subsection{Number inflections}
@@ -628,25 +697,27 @@ numerals or spelled out), question word \xmplt{kaç}{how many} may also
 get this suffix, and tagged with \mtag{dist}.
 
 The ordinal numerals are formed using the suffix \sffx{-(I)ncI}, and
-tagged as \mtag[def]{ord}.
+tagged as \mtag[def]{ord}. Ordinals are also specified by a `dot'
+after Arabic or Roman numerals. TRmorph currently does not handle this
+notation.
 
-Percent sign before numerals are treated like a prefix, and tagged as
+Percent sign before a numeral is treated like a prefix, and tagged as
 \mtag[def]{perc}.
 
 \subsection{Verbal voice suffixes}
 
-Turkish verbs can be marked as \emph{reflexive}, \emph{reciprocal},
-\emph{causative} and \emph{passive} voice. The tags used for these
-functions are 
+Turkish verbs can be suffixed with one or more of the voice suffixes
+\emph{reflexive}, \emph{reciprocal}, \emph{causative} and
+\emph{passive}. The tags used for these functions are 
 \mtag[def]{rfl},
 \mtag[def]{rcp},
 \mtag[def]{caus} and
 \mtag[def]{pass}, respectively. The first two are rather unproductive
 while causative and passive forms are productive. Furthermore,
 causative suffix can be used repetitively.\footnote{Again, although this is
-limited in practice there is no principled limit on how many causative
-suffixes one can string on after another.} With some verbs, double
-causative suffix has the same semantics as single suffix. TRmorph does
+limited in practice, there is no principled limit on the number of causative
+suffixes that one can string one after another.} With some verbs, use of double
+causative suffix yields the same semantics as a single causative suffix. TRmorph does
 not treat these cases separately. If surface string has double
 causative suffixes, the analysis will include two \mtag{caus} tags,
 regardless of its semantics.
@@ -658,7 +729,8 @@ inflectional morphology, TRmorph treats them as derivations, i.e., a
 \subsection{Compound verbs}
 
 A verbal stem (possibly including voice suffixes) may be followed by a
-set of suffixes which are forms of other verbs. These suffixes are
+set of suffixes that form compound verbs. These suffixes are related
+to some stand-alone verbs. These suffixes are
 listed in Table~\ref{tbl:compound-verb}.
 
 \begin{table}[t]
@@ -681,16 +753,18 @@ Suffix        & Tag             & Expresses\\
 \end{table}
 
 The first three suffixes in this Table~\ref{tbl:compound-verb} are
-relatively productive, the others are rare or their use are
-lexicalized. Although rare, more than one these suffixes may attach to
-the same stem. 
+relatively productive, the others are rare or their use are mostly
+lexicalized. Although not frequent in use, more than one these
+suffixes may attach to the same stem, for example
+\xmplt{çıkıverebilir}{he/sh/it may possibly come out/show up} analyzed
+as `çık\mtag{V}\mtag{iver}\mtag{abil}\mtag{aor}\mtag{3s}'.
 
 The form of \mtag{abil} in a negative verb is \sffx{(y)A}, and unlike
 the rest of the suffixes listed in Table~\ref{tbl:compound-verb} it
 follows the negative marker. 
 
-Currently, these suffixes are not marked as derivations (causing an IG
-change).
+Currently, these suffixes are not marked as derivations (they do not
+cause an IG change).
 
 \subsection{Negative marker}
 
@@ -700,10 +774,10 @@ get this suffix, instead the particle \xmpl{değil} is used.
 
 \subsection{Tense/aspect/modality markers}
 
-The verbal suffixes and tags described so far forms a non-finite verb.
 A verb with a set of suffixes described above either becomes a finite
-word by taking one of the tense, aspect and modality (TAM) markers or
-can be subject to subordination and becomes nominalized.
+verb by taking one of the tense, aspect and modality (TAM) markers
+followed by a person-number agreement suffix, or it can be subject to
+subordination and becomes nominalized.
 
 The list of TAM suffixes, the corresponding tags and brief
 descriptions are given in Table~\ref{tbl:tam}. 
@@ -711,7 +785,7 @@ descriptions are given in Table~\ref{tbl:tam}.
 \begin{table}[t]
 \caption{\label{tbl:tam} Tense/aspect/modality markers. The usage of
 suffix \sffx{(y)A} to express conditional aspect is informal, and
-rather restrictive. Aorist suffix is highly irregular. The choice of
+rather restricted. Aorist suffix is highly irregular. The choice of
 \sffx{Ar} and \sffx{Ir} depends on the stem. The \sffx{z} form occurs
 only after negative marker, and it is not realized on the surface if
 it precedes first person agreement suffixes.}
@@ -725,33 +799,35 @@ Tag & Suffix & Description \\
 \mtag[def]{impf} &\sffx{mAktA}   & imperfective \\
 \mtag[def]{cont} &\sffx{(I)yor}  & imperfective \\
 \mtag[def]{past} &\sffx{DI}      & past (perfective)\\
-\mtag[def]{cond} &\sffx{sA},\sffx{(y)A},\sffx{} & conditional \\
+\mtag[def]{cond} &\sffx{sA},\sffx{(y)A} & conditional \\
 \mtag[def]{opt}  &\sffx{(y)A}    & optative \\
 \mtag[def]{imp}  &\sffx{}        & imperative \\
-\mtag[def]{aor}  &\sffx{Ar},\sffx{Ir},\sffx{z} & aorist \\
+\mtag[def]{aor}  &\sffx{Ar},\sffx{Ir},\sffx{z},\sffx{} & aorist \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-\subsection{Person and number agreement}
+\subsection{\label{ssec:pagr}Person and number agreement}
 
 After TAM markers a finite verb requires one of the person and number
-agreement markers. The surface form of the person agreement markers
+agreement markers. The surface form of the person-number agreement markers
 change depending on the suffixes they follow.
 Table~\ref{tbl:agreement} lists the person agreement markers and their
 surface form according the TAM of the verb they attach to.
 
 \begin{table}[t]
 \caption{\label{tbl:agreement}Verbal person agreement markers. The
-first character of the person agreement marker indicates the person,
-and second one indicates number (\emph{s}ingular or \emph{p}lural).
-The suffixes listed in the column column marked `TAM1' follow the TAM markers
+first character of the person agreement tags is a number indicating
+the person (\emph{1}$^\textrm{st}$, \emph{2}$^\textrm{nd}$ or
+\emph{3}$^\textrm{rd}$),
+and second one indicates the number (\emph{s}ingular or \emph{p}lural).
+The suffixes listed in the column marked `TAM1' follow the TAM markers
 \mtag{evid},\mtag{fut},\mtag{obl},\mtag{impf} and \mtag{cont} as well
 as the evidential copula \mtag{cpl:evid} and nominal predicates. 
 The same set of suffixes also follow positive verbs with \mtag{aor}
 without a negative marker. 
-The suffixes on column marked `TAM2' are used after \mtag{past} and
+The suffixes on the column marked `TAM2' are used after \mtag{past} and
 \mtag{cond} as well as the corresponding copular markers
 \mtag{cpl:past} and \mtag{cpl:cond}.}
 \begin{center}
@@ -779,61 +855,67 @@ Tag  & TAM1 & TAM2 & optative & imperative \\
 %subject--predicate agreement require more than just looking for the
 %matching tag.
 
-\subsection{Copular markers and \sffx{DIr}}
+\subsection{\label{ssec:verbal-copula}Copular markers and \sffx{DIr}}
 
 The copular suffixes discussed in Section~\ref{ssec:nompred} can also
-be attached to a tensed verb, typically forming complex tenses. These
+be attached to a verb after a TAM marker, typically forming complex tenses. These
 suffixes are \sffx{(y)DI}, \sffx{(y)mIş} and \sffx{(y)sA}, tagged as
 \mtag[def]{cpl:past},
 \mtag[def]{cpl:evid} and
 \mtag[def]{cpl:cond}, respectively.
 
 The conditional copula \sffx{(y)sA} can co-occur with other copular
-markers. When there is a copular suffix, person agreement suffixes
+markers. When there is a copular suffix, person-number agreement suffixes
 normally attach after the first copula. However the third person
 plural suffix may be after the TAM marker or second copular suffix as
 well.
 
 Similar to the nominal predicates with a copula, copular suffixes may
-follow the `generalizing modality marker' \sffx{DIr} tagged as
+be followed the `generalizing modality marker' \sffx{DIr} tagged as
 \mtag[def]{dir}.
 
-\subsection{Question particle}
+\subsection{\label{ssec:qestion}The question particle}
 
 Question particle \sffx{mI}, tagged as \mtag[def]{Q}, is normally
 written separately. However, it has an intimate relationship between
-the verb or the nominal predicate it attaches to. First, it typically
-is attached to a tensed verb without a person agreement. In which
-case, the person agreement and the suffixes that may follow are
-attached to the question particle. Second, it follows the vowel
-harmony rules, and the underspecified vowel on \sffx{mI} is realized
-based on the last vowel of the verb.   As a result the question particle can only be
-analyzed (and generated) precisely together with the word it is
-attached to.
+the verb or the nominal predicate it attaches to. First, a few
+exceptions aside, it is attached to a tensed verb without a person
+agreement. In this case, the person agreement and the suffixes that
+may follow must be attached to the question particle. In this
+particular case, the verb will often be analyzed wrongly as having the
+agreement marker \mtag{3s} or \mtag{3p}, since a predicate with null
+person agreement suffix may agree with third person singular or plural
+subjects. Second, the question particle follows the vowel harmony
+rules, and the underspecified vowel on \sffx{mI} is realized based on
+the last vowel of the verb.  As a result the question particle can
+only be analyzed (and generated) with precision only together with the
+word it is attached to.
 
 If tokenized together with the predicate, TRmorph will swallow the
 space in between the predicate and the \sffx{mI} and analyze it
-altogether. In this case the tag \mtag[def]{q} is used. Furthermore,
-it is a common spelling mistakes to write the question particle
-together with the related word. TRmorph can instructed to 
-to accept this common mistake during compile time, in which case the
-tag will again be \mtag{q}.
+altogether. In this case the lowercase tag \mtag[def]{q} is used.
+Furthermore, it is a common spelling mistakes to write the question
+particle together with the related word. TRmorph can be instructed to to
+accept this common mistake during compile time, in which case the tag
+will again be \mtag{q}.
 
 \subsection{\label{ssec:subordination}Subordination}
 
 A set of suffixes attached to an `untensed' verb, a verb without any
-TAM markers, results in the phrase headed by the verb to become a
+TAM markers, result in the phrase headed by the verb to become a
 subordinate clause. TRmorph follows the description in
 \cite{goksel2005}, and makes the distinction between three different
 forms of subordination. First, a set of suffixes produce \emph{verbal
-noun}s from a non-finite verb. The resulting words function as nouns,
+noun}s from a non-finite verb. The resulting words function as the
+head of the noun phrases,
 and with some limitation they can receive all nominal inflections. The
-second group form \emph{participles}, which form relative clauses.
-Participles can also take any of the nominal inflections with few
+second group forms \emph{participles}, which form relative clauses.
+Participles can also take nominal inflections with few
 restrictions. The last group, \emph{converbs}, form adverbials and
-they are much more restricted in terms of the morphemes attached to
-them. The suffixes that for any of these nominal forms overlap
-significantly.
+they are more restricted in terms of the morphemes attached to
+them. The suffixes that form forms different types of subordinating
+suffixes overlap significantly. As a result, producing ambiguous
+analyses.
 
 TRmorph uses the tag structure \formattag{type:subtype} for marking
 subordinating suffixes. The first part, \texttt{type}, is one of
@@ -844,7 +926,7 @@ a relevant linguistic abbreviation, but sometimes a version of the
 surface form of the suffix. The tags used for all three types of
 subordinating suffixes are listed in Table~\ref{tbl:subord}.
 
-Since verbal nouns participles and converbs derive nominal, adjectival
+Since verbal nouns, participles and converbs derive nominal, adjectival
 and adverbial phrases, respectively, POS tags, \mtag{N}, \mtag{Adj}
 and \mtag{Adv}, follow these tags.
 
@@ -884,15 +966,21 @@ Tag         & Suffix     \\
 \end{table}
 
 Some of the suffixes have multiple functions and may derive more than
-one type of subordinated clauses. Furthermore TRmorph will have some
+one type of subordinate clauses. Furthermore, TRmorph will produce some
 spurious ambiguity because of the fact that any adjective, hence a
 word suffixed with an participle, is allowed to become a noun with a
 zero derivation.
 
-The list in Table~\ref{tbl:subord} follows \cite{goksel2005}, except
-the suffixes listed by them as converbial suffixes that require a
-postposition. The postposition in these cases will signal the
-adverbial function of postpositional phrase.
+The list in Table~\ref{tbl:subord} follows \cite{goksel2005}. The main
+exception is the suffixes listed by \cite{goksel2005} as converbial
+suffixes that require a postposition. Since the postposition in these
+cases will signal the adverbial function of postpositional phrase,
+TRmorph does not mark the complement of the postposition as a converb.
+
+%
+% TODO: another review to see if all of them are accepted as they
+% should be.
+%
 
 Most of these suffixes attach to an untensed verb. Except, the suffix
 \sffx{(y)ken} which behaves much like the copular suffixes discussed
@@ -903,14 +991,15 @@ koşa}{run-(y)A run-(y)A = hurriedly}, but also occurs in words like
 also analyze \xmpl{diye} as a postposition, as it's use as
 subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 
-Besides, some of the TAM markers, namely \mtag{aor}, \mtag{evid},
-\mtag{fut}, \mtag{makta} and less commonly \mtag{cont}, derive
-adjectivals resembling relative clauses. TRmorph handles this by
-analyzing any verb with one of these TAM markers without further
-suffixes (e.g., agreement markers) as an adjective. For example, the
-word \xmpl{okunmuş} in \xmplt{okunmuş kitap}{red book = the book that
-was read} is analyzed as
-`oku\mtag{V}\mtag{pass}\mtag{V}\mtag{evid}\mtag{Adj}'.
+Besides the subordinating suffixes (participles) discussed above, some
+of the TAM markers, namely \mtag{aor}, \mtag{evid}, \mtag{fut},
+\mtag{makta} and less commonly \mtag{cont}, derive adjectivals
+resembling relative clauses. TRmorph handles this by analyzing any
+verb with one of these TAM markers without further suffixes (e.g.,
+agreement markers) as an adjective. For example, the word
+\xmpl{görülmüş} in \xmplt{görülmüş mektup}{see-PASV-EVID letter = the
+letter that was seen} is analyzed as
+`gör\mtag{V}\mtag{pass}\mtag{V}\mtag{evid}\mtag{Adj}'.
 
 \subsection{Productive derivational morphemes}
 
@@ -925,29 +1014,27 @@ only to the stem and produce another stem.
 Of these suffixes, the noun--verb derivation suffix \sffx{lA} causes a
 large number of ambiguous analyses since it is part of many other
 suffixes. These, for example, include the plural suffix \sffx{lAr}
-whose remainder \sffx{r} is also match with a verbal suffix (aorist).
+whose remainder \sffx{r} also matches a verbal suffix (aorist).
 Hence, including \sffx{lA} in the analysis causes an increase in the
 analyses of any plural noun. Currently, TRmorph analyzes \sffx{lA}
 only after onomatopoeia. The rest of the verbs derived from nouns
 using this suffix are lexically specified.
 
-Besides these sources of possible erroneous over-analyses, the
-derivational morphology specification in TRmorph over-generates in
-some cases. In particular, any form of the diminutive suffix is
-allowed to attach to any noun. The nouns typically do select for which
-suffix to use. However, there is no clear-cut way of predicting this.
-As a result, if used for generation, TRmorph will generate all
-diminutive suffixes for any noun, most likely only one of them being
-correct. 
+TRmorph does not limit the number of derivational suffixes that can be
+stringed one after another other, even though multiple derivations of
+this sort is a lot more restricted. 
 
-Furthermore, TRmorph does not limit the number of derivational
-suffixes that can be stringed one after another other. In reality this
-is a lot more restricted. 
+Besides the sources of possible erroneous over-analyses listed above,
+the derivational morphology specification in TRmorph over-generates in
+some cases. In particular, any form of the diminutive suffix is
+allowed to attach to any noun, although most nouns are used only one
+of the diminutive suffixes. The ambiguity and overgeneration are
+discussed in Section~\ref{sec:ambiguity}.
 
 \begin{table}[t]
 \caption{\label{tbl:deriv}Derivational morphemes analyzed by TRmorph.
-The column `Derivation' lists the POS changes using two letter
-codes the first letter is the original POS, and the second one is the
+The column `Derivation' lists the POS changes using a two letter
+symbols. The first letter is the original POS, and the second one is the
 POS after the suffixation. Here, N means noun, J means adjective, A
 means adverb, V means verb and O is onomatopoeia.}
 \begin{center}
@@ -962,7 +1049,7 @@ Tag              & Suffix        & Derivation \\
                  & \sffx{(I)cAk} & \\
                  & \sffx{cAğIz}  & \\
 \mtag[def]{ci}   & \sffx{CI}     & NN NJ \\
-\mtag[def]{ca}   & \sffx{CA}     & NA AA JJ MJ \\
+\mtag[def]{ca}   & \sffx{CA}     & NA AA JJ MJ \\ % \mtag{N}{Adv} \mtag{Adv}{Adv} \mtag{Adj}{Adj} \mtag{Num}{Adj} \\ 
 \mtag[def]{yici} & \sffx{(y)IcI} & VJ \\
 \mtag[def]{cil}  & \sffx{CIl}    & NJ \\
 \mtag[def]{gil}  & \sffx{gil}    & NN \\
@@ -977,22 +1064,326 @@ Tag              & Suffix        & Derivation \\
 \end{center}
 \end{table}
 
+\section{\label{sec:lexicon}The lexicon}
 
-\section{About ambiguity and overgeneration}
+TODO.
 
-TRmorph produces more ambiguous analyses than the others (mainly based
-on \cite{oflazer1994}) reported in the literature. This is partially
-because of the 
+\section{\label{sec:ambiguity}Ambiguity and overgeneration}
+
+This section
+discusses the ambiguous analyses in TRmorph, and also touches upon a
+related but different problem, overgeneration.
+
+The morphological analysis of Turkish text is an inherently ambiguous
+process. However, the design choices made in a morphological analyzer
+affects the number of ambiguous analyses produced per word.  TRmorph,
+by design, does not try to reduce the number of ambiguous analyses. In
+general, TRmorph produces more ambiguous analyses than the others
+(mainly based on \cite{oflazer1994}) reported in the literature. 
+
+The following is a list of cases where one finds ambiguous
+morphological analyses in TRmorph. Some of these cases are not
+specific to TRmorph, and for example, noted by \cite{oflazer1997} as
+well. This list may be useful for the users who may wish to
+disambiguate the output of the analysis using rule-based methods, or
+it may also be useful in the process of designing statistical
+disambiguators.
+
+\begin{enumerate}
+\item Ambiguous root forms, for example \emph{yüz} can be analyzed as:
+    \begin{enumerate}
+    \item yüz\mtag{N} `face'
+    \item yüz\mtag{Num} `hundred'
+    \item yüz\mtag{V}\mtag{imp}\mtag{2s} `swim'
+    \end{enumerate}
+\item\label{itm:buna} A root form is the same as a shorter root and one or more
+suffixes, for example \emph{buna} can be analyzed as
+    \begin{enumerate}
+    \item bu\mtag{Prn:dem}\mtag{dat} `this-DAT'
+    \item buna\mtag{V}\mtag{imp}\mtag{2s} `become senile-IMP'
+    \item bun\mtag{N}\mtag{dat}   `trouble-DAT'
+    \end{enumerate}
+Note that the root `bun' is a very rare/regional word, and the imperative
+verb reading is also very unlikely. However the best option
+for the analyzer is to produce all these analyses, and let the later
+stages disambiguate between them.
+
+\item\label{itm:sub-suffix} The surface form of a suffix is a combination of two other suffixes. For example, the word \xmpl{evleri} can be
+    \begin{enumerate}
+    \item ev\sffx{leri} `ev\mtag{N}\mtag{p3p} = their house'
+    \item ev\sffx{ler}\sffx{i} `ev\mtag{N}\mtag{pl}\mtag{acc} = houses-ACC'
+    \end{enumerate}
+Furthermore, the same word can also be analyzed as 
+    \begin{enumerate}
+    \item `ev\mtag{N}\mtag{pl}\mtag{p3s}' 
+    \item `ev\mtag{N}\mtag{pl}\mtag{p3p}'  
+    \item `ev\mtag{N}\mtag{ncomp}\mtag{p3p}'
+    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}'
+    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}'
+    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3s}' 
+    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}'
+    \end{enumerate}
+The reason for these analyses has to do with the sources of ambiguity explained in items \ref{itm:different-func} and \ref{itm:null-suffix}.
+\item An analysis with multiple morphemes is also a (derived) lexicalized form. For example the word \xmpl{konuşma} can be analyzed as 
+    \begin{enumerate}
+    \item konuşma\mtag{N} `speech'
+    \item konuş\mtag{V}\mtag{vn:inf}\mtag{N}  infinitive `to speak', e.g., as in \xmplt{konuşmamızı isemiyorlar}{The do not want us \emph{to speak}}
+    \item konuş\mtag{V}\mtag{neg}\mtag{imp}\mtag{2s} `speak-NEG-IMP = don't talk'
+    \end{enumerate}
+\item\label{itm:same-surface} different affixes surfacing the same way, \emph{evin} can be
+    \begin{enumerate}
+    \item ev\sffx{(n)In} `ev\mtag{N}\mtag{gen} =of the house'
+    \item ev\sffx{(I)n}  `ev\mtag{N}\mtag{p2s} =your house'
+    \end{enumerate}
+\item\label{itm:different-func} The same surface suffix has multiple
+functions. For example, the word \xmpl{doktorlar} can be,
+    \begin{enumerate}
+    \item doktor\mtag{N}\mtag{pl} `doctors'
+    \item doktor\mtag{N}\mtag{0}\mtag{V}\mtag{cpl:pres}\mtag{3p} `they are doctors'
+    \end{enumerate}
+\item\label{itm:null-suffix} Some suffixes are not realized on the surface in the neighborhood of some other suffixes. These are generally, but not always, the suffixes having the same or similar surface forms. For example, \xmpl{evleri} (the example in item \ref{itm:sub-suffix}) may be analyzed as
+    \begin{enumerate}
+    \item ev\mtag{N}\mtag{p3p}  as in \xmplt{Annem ve babamın evleri Istanbul'da}{My parents' house is in Istanbul}
+    \item ev\mtag{N}\mtag{pl}\mtag{p3p} as in \xmplt{Annem ve babamın bütün evleri deniz manzaralı}{All houses of my parents have a see view}.
+    \end{enumerate}
+since in case of \mtag{pl} (\sffx{lAr}) and \mtag{p3p} (\sffx{lArI})
+are combined, the plural suffix \sffx{lAr} does not realized on the
+surface.\footnote{One can also explain this as \mtag{p3p} being
+realized as \sffx{I} in this particular context.}
+
+This particular source causes an extremely large number of ambiguous
+analyses because the multi functional suffix \sffx{(s)I} is omitted in
+case it precedes (or follows) another \sffx{(s)I}, but also a
+\sffx{lArI}, \sffx{lI}, \sffx{lIk}, \sffx{sIz}, \sffx{CI} or
+\sffx{CIk}. Since some of these suffixes may follow each other, and
+\sffx{(s)I} itself has multiple functions, a word like
+\xmpl{bağım-sız-lık-çı-lığ-ı-nı} causes a combinatorial expansion of
+ambiguous analyses because of the fact that at every suffix boundary
+marked with a dash in the example there may be a \sffx{(s)I} suffix
+being deleted. This is further amplified by the fact that \sffx{(s)I}
+may express \mtag{ncomp} or \mtag{p3s} and any of the resulting
+words may also have a null suffix expressing third person singular or
+plural agreement on a nominal predicate.\footnote{Most straightforward
+reading of the word is dative form of the noun phrase can roughly be
+translated as `his/her state of being a supporter of independence'.
+With this root, The total number of analyses is 25560.} Most of
+these analyses will be semantically not plausible. However, there is
+no clear way of ruling them out at the analysis stage. The following
+illustrates the problem with a more tangible example, using the word
+\emph{arabasız} which can be analyzed as one of the following (and
+more).
+
+\begin{enumerate}
+\item[(c)] araba\mtag{N}\mtag{siz}\mtag{Adj} `without a car'
+\item[(d)] araba\mtag{N}\mtag{p3s}\mtag{siz}\mtag{Adv} `without a his/her car'
+\item[(e)] araba\mtag{N}\mtag{ncomp}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without a horse carriage}
+\item[(f)] araba\mtag{N}\mtag{ncomp}\mtag{p3s}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without his/her horse carriage}
+\end{enumerate}
+
+\end{enumerate}
+
+Besides the ambiguity described above, overgeneration is another
+problem that one faces when the FST is used for generating surface
+forms. Unlike analysis, generation is almost always deterministic in
+Turkish.
+Nevertheless, there are a few cases where TRmorph produces multiple
+surface strings for a single analysis string. The following provides a
+(likely incomplete) list of cases where TRmorph is expected
+to overgenerate, i.e., either produce multiple (correct) surface
+strings for the same input, or produce incorrect surface strings in
+generation mode.
+
+\begin{enumerate}
+\item One of the clear cases where overgeneration occurs is
+the diminutive, \mtag{dim}. The diminutive suffix in Turkish is one of
+\sffx{CIk}, \sffx{cAk}, \sffx{(I)cAk}, \sffx{cAğIz}. TRmorph allows
+attaching any of these suffixes to any noun. This is
+unlikely to cause problems during the analysis. However, it will
+certainly produce incorrect surface forms.
+
+\item The \mtag{p3s} suffix \sffx{(s)I} may also be used for marking
+third person plural possessive (\mtag{p3p}). For example \xmpl{ev-i}
+in \xmplt{Ali ve Ayşe'nin evi}{The house of Ali and Ayşe} should be
+tagged as \mtag{p3p}. On the other hand, the suffix \sffx{lArI} is
+also used to express \mtag{p3p}. As a result any analysis string with
+the symbol \mtag{p3p} will generate both surface options.
+
+\item A similar case of overgeneration is with the null agreement
+suffix which should generally be tagged as \mtag{3s}. However, such a predicate may
+also agree with a \mtag{3p} subject. Consequently, a null-agreement
+suffix on a predicate is tagged as both \mtag{3s} and \mtag{3p}. Since
+\mtag{3p} can also be expressed with the suffix \sffx{lAr}, a analysis
+string with \mtag{3p} also generates multiple surface forms.
+
+\item Another known case of overgeneration is related to the relaxed
+analysis of alternative spellings or common misspellings. In the simplest case, every
+word will be generated once capitalized and once all lowercase. If
+`all capitals' option is enabled, another surface form which is in all
+capital letters will be produced. 
+
+\item Similarly, if the analyzer is instructed to accept the proper
+noun suffixes without an apostrophe, in the generation mode the surface
+form with and without apostrophe will be included. As a result, some
+of the options may need to be tuned if the FST is to be used for
+generation.
+
+\item Some symbols, like apostrophe have multiple representations in
+Unicode definition. As a result any word that require an apostrophe
+will result in surface form for each alternative symbol.
+
+\item After a small set of borrowings like \xmplt{cami}{mosque}, the
+`s' in the suffix \sffx{(s)I} is deleted according to official rules.
+However, this seems to be out of fashion in current use, and use of
+`s' (even in text) is more common that its deletion. Since TRmorph
+accepts both surface strings, this will cause generating multiple
+strings.
+
+There are also a few other cases where some (sizable number of)
+speakers diverge from the canonical forms. An example is the redundant
+use of genitive suffix after a pronoun, before the suffix
+\sffx{(y)lA}, e.g., the surface form of
+`sen\mtag{Prn:pers:1s}\mtag{ins}' should be \xmpl{sen-in-le} where the
+suffix \sffx{in} is redundant. Some speakers tend not to use \sffx{in}
+int such constructions. TRmorph accepts both use, hence the generation
+will be ambiguous.
+
+\item Some borrowed words include a few vowels with circumflex, namely
+\xmpl{â},
+\xmpl{û} and
+\xmpl{î}. Except for a few words where use of circumflex help
+disambiguation between different words, these vowels have been replaced by their
+non-circumflexed version in modern use. TRmorph allows this
+replacement even if the lexical form of the word should include a
+circumflex.\footnote{One can also allow circumflexed vowels
+to be used for their non-circumflexed counterparts in the lexicon. This is useful if one needs to
+analyze somewhat older text. Enabling this option will also cause
+overgeneration.} This also results in overgeneration, since any
+analysis string with a circumflexed vowel will have a surface form
+with and without circumflex.
+
+\end{enumerate}
+
 
 \section{\label{sec:other-tools}Other tools}
 
 \subsection{Stemming and lemmatization}
 
+In morphologically complex languages like Turkish, proper stemming
+requires analyzing the given word and stripping off the analysis
+symbols such that only the stem remains.
+
+Although one can do this easily by filtering analyzer output, TRmorph
+includes a simple wrapper automaton for convenience. The
+automaton is defined in the file \lstinline{stemmer.fst}. You need to
+type \lstinline{make stemmer} to produce the binary
+\lstinline{stem.fst}. This binary file can be used the way analyzer is
+used. Given a surface word, this automaton will produce the lexical
+form as the analysis string.
+
+Optionally, one can keep the first tag, which is the syntactic
+category of the stem. Note that stemmer takes the lexical form as the
+`stem', even if the lexical form has derivational suffixes immediately
+following the root form.
+Another compile time option related to stemmer causes the verbs to be
+suffixed with correct form of infinitive marker \sffx{mAk}. This form
+of the verbs are what the dictionaries use as head words. Both options
+can be set in the file \lstinline{options.h}.
+
+Note that ambiguity is less of a problem for the stemmer. However,
+in examples like \xmpl{buna} discussed on page~\pageref{itm:buna},
+there will be multiple stem forms produced (\xmpl{bu}, \xmpl{bun} and
+\xmpl{buna} in this case).
+
 \subsection{Unknown word guesser}
 
-\subsection{Hyphenation}
+TRmorph includes a rudimentary guesser for guessing unknown words. To
+produce the automaton for this function, you should type
+\lstinline{make guesser}, which would produce the file
+\lstinline{guess.fst}. The usage of the automaton is again similar to
+the others. The surface strings of the FST is the (unknown) words,
+while analysis level is either the full analysis strings with possibly
+unknown root words that may lead to the surface form, or only the root
+word and its part of speech tag.
+
+The guesser uses the same machinery as the analyzer, except the
+lexicon is replaced with a FSA that accepts a somewhat restricted set
+of strings as potential words. Since unknown words will likely include
+affixes, one may have a better chance of determining the root form of
+the word, and in most cases the class of the root word.
+
+Depending on its application, the guesser be restricted further
+according to features of the words that can be coded into a finite
+state lexicon. For example, one may check whether the words fit into
+the syllable structure of the language, but this may miss the words of
+foreign origin, which are likely candidates for being unknown words.
+Currently only general restriction the guesser include the minimum
+and maximum root-word length that can be set in the file
+\lstinline{options.h}.
+
+The guesser may also be adjusted to
+return full analysis string(s) or only the root form followed by the
+POS tag. Again, these options can be set in \lstinline{options.h}.
+Other customizations can be achieved by adjusting the file
+\lstinline{guesser.lexc}.
+
+The guesser is a standalone FST, to use it in combination with the
+analyzer, two automata can be combined with \emph{priority union} such
+that guesser is only invoked if the analyzer fails. This can be
+achieved either as a simple wrapper xfst file, or if you are using
+foma's \lstinline{flookup} utility specifying both FST files on the
+command line like \lstinline{flookup -a trmorph.fst guesser.fst}.
 
 \subsection{Morphological segmentation}
+
+Morphological segmentation is the task of finding morpheme boundaries
+on the surface strings. TRmorph distribution includes an automaton
+description for segmenting the words into their morphemes.  To build
+the segmenter you need to type \lstinline{make segmenter} and the
+resulting binary will be called \lstinline{segment.fst}.
+
+TRmorph marks the root and morpheme boundaries on the surface string
+to aid morpho-phonological rules. These boundaries are deleted from
+the surface string in the normal analyzer FST. The segmentation FST
+relies on this and the following trick for segmenting a given word to
+its surface morphemes: The given input string is first analyzed with
+the regular analyzer FST. Then the analysis strings are passed to a
+slightly modified FST in generation mode, which does not delete the
+boundary markers from the surface string. 
+
+It should be noted that the surface morpheme boundaries are not always
+determined uniquely. It is especially difficult to decide whether some
+buffer vowels or consonants belong to the morpheme preceding or
+following them. TRmorph consistently attaches these buffer letters to
+the morpheme that follow the boundary.
+
+Because of the way it is implemented currently, the segmenter output needs to be post
+processed to obtain the desired result. The segmenter will produce
+multiple identical segmented strings, and there will also be some
+incorrect segmentations due to overgeneration discussed in
+Section~\ref{sec:ambiguity}. The output should be post-processed to
+remove multiple identical segmentations.
+The incorrect segmentations due to 
+overgeneration can be eliminated by comparing the segmented string
+with the original one. An example post processing script is provided
+as \lstinline{scripts/segment-filter.py}.
+
+
+\subsection{Hyphenation and syllabification}
+
+Hyphens in Turkish are inserted at the syllable boundaries.  Because
+of the regular syllable structure and transparency of the orthography,
+this process does not require any dictionary lookup, or morphological
+analysis. Since the hyphenation problem is easy to solve with a FST, a
+stand alone FST defined in xfst language included in the TRmorph
+distribution.
+
+To build the hyphenation FST you need to type 
+\lstinline{make hyphenate} and the resulting binary will be called
+\lstinline{hyphenate.fst}.
+
+The surface string of the FST is Turkish words (or strings resembling
+words) and analysis string is the words where a hyphen `-' is inserted
+between the syllables, or at the points where one can insert a hyphen.
 
 \printbibliography
 
