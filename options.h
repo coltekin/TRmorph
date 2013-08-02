@@ -70,10 +70,15 @@
  * These options are only for guesser. The gusser will attempt to
  * guess the words whose length is in range GUESSER_MIN_LENGTH -
  * GUESSER_MAX_LENGTH.
+ *
+ * If GUESSER_STEM is set to 1, the result of the guesser will be the
+ * stem(s), not full analyses.
+ *
  */
 
 #define GUESSER_MIN_LENGTH 3
 #define GUESSER_MAX_LENGTH 10
+#define GUESSER_STEM 1
 
 /* 
  * These options are only for the stemmer. 
@@ -91,53 +96,3 @@
 #define STEMMER_KEEP_ROOT_POS 1
 #define STEMMER_LEMMATIZE 0
 
-/* ----------------- end of configurable options -------------- */
-
-
-#ifndef GUESSER_APOSTROPHE_OPTIONAL
-#define GUESSER_APOSTROPHE_OPTIONAL APOSTROPHE_OPTIONAL
-#endif
-
-#ifndef GUESSER_APOSTROPHE_REQUIRED
-#define GUESSER_APOSTROPHE_REQUIRED APOSTROPHE_REQUIRED
-#endif
-
-#ifndef GUESSER_ALLCAPS
-#define GUESSER_ALLCAPS ALLCAPS
-#endif
-
-#ifndef GUESSER_CAPITALIZE
-#define GUESSER_CAPITALIZE CAPITALIZE
-#endif
-
-#ifndef GUESSER_CIRCUMFLEX_OPTIONAL
-#define GUESSER_CIRCUMFLEX_OPTIONAL CIRCUMFLEX_OPTIONAL
-#endif
-
-
-/* ---------- */
-
-
-#ifndef ANALYZER_APOSTROPHE_OPTIONAL_NUM
-#define ANALYZER_APOSTROPHE_OPTIONAL_NUM APOSTROPHE_OPTIONAL_NUM
-#endif
-
-#ifndef ANALYZER_APOSTROPHE_OPTIONAL_PN
-#define ANALYZER_APOSTROPHE_OPTIONAL_NUM APOSTROPHE_OPTIONAL_PN
-#endif
-
-#ifndef ANALYZER_APOSTROPHE_REQUIRED
-#define ANALYZER_APOSTROPHE_REQUIRED APOSTROPHE_REQUIRED
-#endif
-
-#ifndef ANALYZER_ALLCAPS
-#define ANALYZER_ALLCAPS ALLCAPS
-#endif
-
-#ifndef ANALYZER_CAPITALIZE
-#define ANALYZER_CAPITALIZE CAPITALIZE
-#endif
-
-#ifndef ANALYZER_CIRCUMFLEX_OPTIONAL
-#define ANALYZER_CIRCUMFLEX_OPTIONAL CIRCUMFLEX_OPTIONAL
-#endif

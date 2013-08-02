@@ -19,7 +19,7 @@ source morph-phon.cpp.xfst
 ! Put all of them together. The order is important. 
 !
 clear stack
-read regex Lexicon 
+define guess Lexicon 
            .o. Abbr
            .o. replaceApos
            .o. NumberSpace
@@ -60,5 +60,16 @@ read regex Lexicon
            .o. AllCaps 
 #endif
            ;
+
+#if (GUESSER_STEM == 1)  
+    define ASCIIupper [A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|T|U|V|Y|Z];
+    define PoStag "<" ASCIIupper ?*  ">";
+    define stem  ?* ->@ 0 || PoStag _;
+    define guesser stem.i .o. guess;
+#else 
+    define guesser guess;
+#endif
+
+regex guesser;
 
 save stack guess.fst
