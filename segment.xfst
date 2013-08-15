@@ -36,11 +36,11 @@
 ! The consecutive boundaries that may happen because of the null
 ! morphemes are removed.
 !
-read lexc trmorph.lexc
+read lexc analyzer.cpp.lexc
 eliminate flags
 define Lexicon;
 
-source morph-phon.xfst
+source morph-phon.cpp.xfst
 
 define analyze AFilter
            .o. Lexicon 

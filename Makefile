@@ -2,13 +2,27 @@ LEXICON ?= new
 COMMONLEX=$(shell ls lexicon/*.lexc)
 ROOTLEX=$(COMMONLEX) $(shell ls lexicon/$(LEXICON)/*.lexc)
 CPP=gcc -E -traditional -P -w -x c
+MAKEDEP=gcc -MD
+MAKEDEP=./makedepend.sh
 TARGETS=trmorph.fst segment.fst stem.fst guess.fst hyphenate.fst
+LEXCSRC=analyzer.lexc guesser.lexc morph.lexc number.lexc exceptions.lexc
+XFSTSRC=analyzer.xfst guesser.xfst hyphenate.xfst morph-phon.xfst segment.xfst stemmer.xfst
+DEPDIR=.dep
 
-%.cpp.lexc: %.lexc
-	$(CPP) -o $@ $^
+%.cpp.lexc: %.lexc $(DEPDIR)/%.lexc.P
+	$(CPP) -o $@ $<
 
-%.cpp.xfst: %.xfst
-	$(CPP) -o $@ $^
+%.cpp.xfst: %.xfst $(DEPDIR)/%.xfst.P
+	$(CPP) -o $@ $<
+
+$(DEPDIR)/%.lexc.P: %.lexc
+	mkdir -p $(DEPDIR)
+	$(MAKEDEP) $< $@
+
+$(DEPDIR)/%.xfst.P: %.xfst
+	mkdir -p $(DEPDIR)
+	$(MAKEDEP) $< $@
+
 
 analyzer: trmorph.fst
 
@@ -48,4 +62,6 @@ hyphenate.fst: hyphenate.cpp.xfst
 # housekeeping goes below
 #
 clean:
-	rm -f $(TARGETS) *.cpp.*
+	rm -rf $(TARGETS) *.cpp.* .dep
+
+-include $(LEXCSRC:%.lexc=$(DEPDIR)/%.lexc.P) $(XFSTSRC:%.xfst=$(DEPDIR)/%.xfst.P)

@@ -14,3 +14,4 @@ trmorph.xfst
 .foma_history
 *.cpp.lexc
 *.cpp.xfst
+.dep

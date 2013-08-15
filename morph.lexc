@@ -23,25 +23,25 @@ Exceptions;
 #include "lexicon/clitics"
 #include "lexicon/punctuation"
 #include "lexicon/qwords"
-#include "lexicon/new/adjective"
-#include "lexicon/new/adverb"
-#include "lexicon/new/conjunction"
-#include "lexicon/new/determiner"
-#include "lexicon/new/interjection"
-#include "lexicon/new/noun"
-#include "lexicon/new/proper_noun"
-#include "lexicon/new/onomatopoeia"
-#include "lexicon/new/postposition"
-#include "lexicon/new/pronoun"
-#include "lexicon/new/verb"
+#include "lexicon/adjective"
+#include "lexicon/adverb"
+#include "lexicon/conjunction"
+#include "lexicon/determiner"
+#include "lexicon/interjection"
+#include "lexicon/noun"
+#include "lexicon/proper_noun"
+#include "lexicon/onomatopoeia"
+#include "lexicon/postposition"
+#include "lexicon/pronoun"
+#include "lexicon/verb"
 
 !
 ! These may be "optionalized", or replaced by a more rule-governed
 ! method in the future.
 !
 
-#include "lexicon/new/abbreviation"
-#include "lexicon/new/part_word"
+#include "lexicon/abbreviation"
+#include "lexicon/part_word"
 
 
 !
