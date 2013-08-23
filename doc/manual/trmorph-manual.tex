@@ -993,7 +993,7 @@ subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 
 Besides the subordinating suffixes (participles) discussed above, some
 of the TAM markers, namely \mtag{aor}, \mtag{evid}, \mtag{fut},
-\mtag{makta} and less commonly \mtag{cont}, derive adjectivals
+\mtag{impf} and less commonly \mtag{cont}, derive adjectivals
 resembling relative clauses. TRmorph handles this by analyzing any
 verb with one of these TAM markers without further suffixes (e.g.,
 agreement markers) as an adjective. For example, the word
@@ -1035,8 +1035,14 @@ discussed in Section~\ref{sec:ambiguity}.
 \caption{\label{tbl:deriv}Derivational morphemes analyzed by TRmorph.
 The column `Derivation' lists the POS changes using a two letter
 symbols. The first letter is the original POS, and the second one is the
-POS after the suffixation. Here, N means noun, J means adjective, A
-means adverb, V means verb and O is onomatopoeia.}
+POS after the suffixation. Here, 
+\texttt{N},
+\texttt{J},
+\texttt{A},
+\texttt{M},
+\texttt{V} and 
+\texttt{O} 
+stand for noun, adjective, adverb, number, verb and onomatopoeia, respectively.}
 \begin{center}
 \begin{tabular}{lll}\toprule
 Tag              & Suffix        & Derivation \\
@@ -1066,7 +1072,78 @@ Tag              & Suffix        & Derivation \\
 
 \section{\label{sec:lexicon}The lexicon}
 
-TODO.
+TRmorph contains a root lexicon which is created extracting root forms
+from a large web corpora, and checking the possible forms against
+online dictionaries, and the lexicon of the earlier version which was
+based on Zemberek \parencite{akin2007}. The result is also checked and
+corrected manually as part of the development process. 
+
+The lexicon files are located under the directory \lstinline{lexicon}
+and included (through C preprocessor) as a single root lexicon. The
+files under \lstinline{lexicon/} are simply a list of root forms and
+their \emph{continuation classes}. Continuation classes can be any
+\lstinline{LEXICON} declaration in the file \lstinline{morph.lexc},
+but typical continuation classes are the main word (POS) categories,
+such as \texttt{N}, \texttt{Adj} and \texttt{V}. The lexical
+exceptions are specified after the main category information. For
+example, \texttt{V\_AorAr} for verbal roots that take the exceptional
+\sffx{Ar} form of the aorist suffix. Likewise, \texttt{N\_comp} is
+used for lexicalized nominal \sffx{sI} compounds since when these
+words are pluralized the plural marker is inserted between the word
+and the suffix \sffx{sI}.
+
+The lexical forms are similar to the written forms of the relevant
+stem. However, a set of special `multi-character' symbols are used for
+providing information necessary for morphophonological processing.  A
+large group of these symbols are concerned with `final stop devoicing'
+(or voicing depending on your view point). The consonants \texttt{ç},
+\texttt{t}, \texttt{k}, \texttt{p} and \texttt{g} at the end of some
+of the roots are replaced with their voiced counterparts if they
+precede a suffix that starts with a vowel. These root forms are
+lexically marked by replacing the consonants above with
+multi-character symbols \texttt{\^{}c}, \texttt{\^{}t}, \texttt{\^{}k},
+\texttt{\^{}p} and \texttt{\^{}g}, respectively. 
+
+%\texttt{\^{}K}, \texttt{\^{}C}, \texttt{\^{}D}
+
+Besides the voicing changes of consonants, some borrowings end with a
+`palatalized' consonant that affects vowel harmony process. For
+example \xmplt{saat}{watch/clock} is inflected as
+\xmplt{saat-i}{watch-ACC} instead of \xmpl{saat-ı} as vowel harmony
+suggests. These words are indicated by the vowel before such a
+consonant by a three-letter multi-character symbol. These symbols
+always start with \texttt{\^{}p} and a capitalized version of the
+relevant vowel. For example, the word \xmpl{saat} is listed as
+\texttt{sa\^{}pAt} in the lexicon.
+
+One last class of similar special symbols are so-called \emph{silent
+vowels and consonants}. These are particularly useful for
+abbreviations and numerals, but also some names of foreign origin. The
+suffixes that follow such words are also subject to
+morpho-phonological process like vowel harmony. However, this cannot
+be derived from their written form. For example correct inflected form
+of \xmplt{ABD-DAT}{USA-DAT} is \xmpl{ABD'ye}, not \xmpl{ABD'ya}. The
+way to solve this problem is to insert a silent (front-unrounded)
+vowel after the abbreviated form. The multi-character symbols
+\texttt{\^{}sBUV} \texttt{\^{}sBRV} \texttt{\^{}sFUV} \texttt{\^{}sFRV}
+\texttt{\^{}sVC} and \texttt{\^{}sUC} are used for silent vowels and
+consonants (see the comments in file \lstinline{lexicon/abbreviation}
+for more information).
+
+A somewhat inconsistent notation is used for three morphological
+processes. First, the multi character symbol \texttt{@DEL@} is
+inserted before a vowel that is deleted if a suffix starting with a
+vowel follows. Second, the last consonant in some borrowings are
+duplicated if they follow a suffix that start with a vowel. These root
+forms are marked by inserting the multi-character symbol
+\texttt{@DUP@} before the duplicated consonant. And the last symbol
+\texttt{@DELS@} is used in lexical entries of a few borrowed words
+which delete \texttt{s} in the suffix \sffx{sI}.\footnote{These
+multi-character symbols are both inconsistent with the others, and
+they may be confused with `flag diacritics' at first sight (TRmorph 
+does not use any flag diacritics). This notation in the lexicon may
+change in the future version of TRmorph.}
+
 
 \section{\label{sec:ambiguity}Ambiguity and overgeneration}
 
