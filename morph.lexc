@@ -659,21 +659,47 @@ LEXICON PrnCont  ! this is all, except compounding
     NcompCont;
 
 LEXICON PersPrn1s
-%<Prn%:pers%:1s%>:@RB PrnCont;
+%<Prn%:pers%:1s%>:@RB PersPrnCont;
 LEXICON PersPrn2s
-%<Prn%:pers%:2s%>:@RB PrnCont;
+%<Prn%:pers%:2s%>:@RB PersPrnCont;
 LEXICON PersPrn3s
-%<Prn%:pers%:3s%>:@RB PrnCont;
+%<Prn%:pers%:3s%>:@RB PersPrnCont;
 
 LEXICON PersPrn1p
-%<Prn%:pers%:1p%>:@RB PrnCont;
+%<Prn%:pers%:1p%>:@RB PersPrnContPL;
 LEXICON PersPrn2p
-%<Prn%:pers%:2p%>:@RB PrnCont;
+%<Prn%:pers%:2p%>:@RB PersPrnContPL;
 LEXICON PersPrn3p
-%<Prn%:pers%:3p%>:@RB PrnCont;
+%<Prn%:pers%:3p%>:@RB PersPrnContPL;
 
-LEXICON PersPrnRfl
-%<Prn%:pers%:rfl%>:@RB PrnCont;
+LEXICON PersPrnRfl1s
+%<Prn%:refl%:1s%>:@RB PersPrnCont;
+LEXICON PersPrnRfl2s
+%<Prn%:refl%:2s%>:@RB PersPrnCont;
+LEXICON PersPrnRfl3s
+%<Prn%:refl%:3s%>:@RB PersPrnCont;
+
+LEXICON PersPrnRfl1p
+%<Prn%:refl%:1p%>:@RB PersPrnContPL;
+LEXICON PersPrnRfl2p
+%<Prn%:refl%:2p%>:@RB PersPrnContPL;
+LEXICON PersPrnRfl3p
+%<Prn%:refl%:3p%>:@RB PersPrnContPL;
+
+LEXICON PersPrnCont
+                    #;
+                    Ncase;
+                    ND_CA;
+                    D_lI;
+                    NomPredicate;
+
+! TODO: replication ...
+LEXICON PersPrnContPL
+                    #;
+                    Ncase;
+                    ND_CA;
+                    D_lI;
+                    NomPredicatePLU;
 
 LEXICON PersPrn
 %<Prn%:pers%>:@RB PrnCont;

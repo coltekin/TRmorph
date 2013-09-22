@@ -425,8 +425,9 @@ agreement in Turkish is far from trivially determined (see
 person-number agreement. The agreement markers are further
 discussed in Section~\ref{ssec:pagr}. 
 
-The reflexive pronoun \xmpl{kendi(si)} is marked as
-\mtag[def]{Prn:pers:refl}.
+The reflexive pronoun \xmpl{kendi} and its different person forms are
+marked as \mtag[def]{Prn:refl}. Like other personal pronouns,
+reflexive pronouns are also marked with a person agreement marker.
 
 Subcategorization of pronouns, particularly as personal pronouns, are
 sometimes not a clear decision. Subcategories of some pronouns are
@@ -514,11 +515,15 @@ verbs respectively.
 \subsection{Nominal morphology and noun inflections}
 
 Nouns, pronouns, adjectives and adverbs in Turkish form the larger
-class of nominals. Most adverbs and adjectives can function as nouns (or
-pronouns). For example \xmplt{mavi}{blue} may mean `the blue one', or
-\xmplt{hızlı}{fast} may mean `the fast one'. In TRmorph this is
-handled by allowing any adjective or adverb to become an noun with a
-\emph{zero derivation}. A zero derivation is always marked with the tag
+class of nominals. Most adjectives, and some adverbs can function as
+nouns (or pronouns). For example, \xmplt{mavi}{blue} may have a noun
+reading `the blue one'. Similarly, some adverbs like
+\xmplt{şimdi}{now} may take nominal inflections
+\xmplt{şimdilerde}{now-PL-LOC = (literally) in current times}. In
+TRmorph this is handled by allowing any adjective or adverb to become
+an noun with a \emph{zero derivation}.\footnote{This certainly
+generates incorrect analyses for a large number of adverbs which do
+not `nominalize'.} A zero derivation is always marked with the tag
 \mtag{0} followed by the new POS tag, in this case \mtag{N}. 
 
 Nouns can be suffixed with the plural suffix, one of the possessive
@@ -1305,7 +1310,7 @@ of the options may need to be tuned if the FST is to be used for
 generation.
 
 \item Some symbols, like apostrophe have multiple representations in
-Unicode definition. As a result any word that require an apostrophe
+Unicode definition. As a result, any word that require an apostrophe
 will result in surface form for each alternative symbol.
 
 \item After a small set of borrowings like \xmplt{cami}{mosque}, the
@@ -1321,13 +1326,13 @@ use of genitive suffix after a pronoun, before the suffix
 \sffx{(y)lA}, e.g., the surface form of
 `sen\mtag{Prn:pers:1s}\mtag{ins}' should be \xmpl{sen-in-le} where the
 suffix \sffx{in} is redundant. Some speakers tend not to use \sffx{in}
-int such constructions. TRmorph accepts both use, hence the generation
+in such constructions. TRmorph accepts both use, hence the generation
 will be ambiguous.
 
 \item Some borrowed words include a few vowels with circumflex, namely
 \xmpl{â},
 \xmpl{û} and
-\xmpl{î}. Except for a few words where use of circumflex help
+\xmpl{î}. Except for a few words where use of circumflex helps
 disambiguation between different words, these vowels have been replaced by their
 non-circumflexed version in modern use. TRmorph allows this
 replacement even if the lexical form of the word should include a

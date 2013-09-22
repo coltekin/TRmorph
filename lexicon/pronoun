@@ -12,8 +12,13 @@ siz               PersPrn2p;
 onlar             PersPrn3p;
 bizler            PersPrn1p;
 sizler            PersPrn2p;
-kendi             PersPrnRfl;
-kendisi           PersPrnRfl;
+kendi             PersPrnRfl3s;
+kendim            PersPrnRfl1s;
+kendin            PersPrnRfl2s;
+kendisi           PersPrnRfl3s;
+kendimiz          PersPrnRfl1p;
+kendiniz          PersPrnRfl2p;
+kendileri         PersPrnRfl3p;
 birbir            PPrnBirBir; ! this has to be inflected
 
 bu                DemPrn;
@@ -24,29 +29,29 @@ bura              LocPrn;
 şura              LocPrn;
 ora               LocPrn;
 
-âlem              PersPrn;
-cümle% âlem       PersPrn;
-dünya% âlem       PersPrn;
-dost% düşman      PersPrn;
+âlem              PersPrn3p;
+cümle% âlem       PersPrn3p;
+dünya% âlem       PersPrn3p;
+dost% düşman      PersPrn3p;
 bir% şey          Prn;
 birşey            Prn;
 cümle             Prn;
-dünya             PersPrn;
+dünya             PersPrn3p;
 
-falanca           PersPrn;
-falan             PersPrn;
-felan             PersPrn;
-filan             PersPrn;
-herkes            PersPrn;  !TODO: this does not take all nominal inflections
+falanca           PersPrn3s;
+falan             PersPrn3s;
+felan             PersPrn3s;
+filan             PersPrn3s;
+herkes            PersPrn3p;
 herşey            Prn;  
 her% şey          Prn;
 hiçbirşey         Prn;
-hiç% kimse        PersPrn;
-hiçkimse          PersPrn;
-insan             PersPrn;
+hiç% kimse        PersPrn3s;    ! is this singular?
+hiçkimse          PersPrn3s;    ! is this singular?
+insan             PersPrn3s;
 kimi              Prn;
 kimseci^k         Prn;
-kimse             PersPrn;
+kimse             PersPrn3s;    ! is this singular?
 o% bu             Prn;
 öbürkü            Prn;
 öteki% beriki     Prn;
@@ -58,14 +63,14 @@ umum              Prn;
 yediden% yetmişe  Prn;
 yedi% mahalle     Prn;
 
-birisi            PersPrn;
-birileri          PersPrn;
+birisi            PersPrn3s;
+birileri          PersPrn3s;
 böylesi           Prn;
 buncası           Prn;
 cümlesi           Prn;
 hepsi             Prn;
 hiçbirisi         Prn;
-kimisi            PersPrn;
+kimisi            Prn;
 oncası            Prn;
 ötekisi           Prn;
 şuncası           Prn;
