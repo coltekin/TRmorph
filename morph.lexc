@@ -1659,12 +1659,22 @@ Participle;
 ConVerb;
 
 LEXICON VerbalNoun
-%<vn%:inf%>%<N%>:m^A@MB              Ncont;
+%<vn%:inf%>%<N%>:m^A@MB              VNMaCont;
 %<vn%:inf%>%<N%>:m^A^K@MB            VNMakCont;
 %<vn%:yis%>%<N%>:^(y)^Iş@MB          Ncont;     !TODO: a better tag name
 %<vn%:past%>%<N%>:^D^I^k@MB          Ncont;
 %<vn%:fut%>%<N%>:^(y)^Ac^A^k@MB      Ncont;
 %<vn%:pres%>%<N%>:^(y)^An@MB         Ncont;
+
+LEXICON VNMaCont
+    NcompCont; ! includes final
+    NcompInfl;
+    D_lI;
+    ND_lIk;
+    Deriv_MACA;
+    D_CI;
+    D_CIl; ! not likely
+    D_sAl; ! not likely
 
 LEXICON VNMakCont
                               #;
@@ -1933,6 +1943,8 @@ LEXICON   D_CI
 !  adverbs, where it changes the degree
 !
 !
+LEXICON   Deriv_MACA
+%<ca%>:^C^A@MB DerivNCont;
 LEXICON   ND_CAlanguage
 %<ca%>:^C^A@MB DerivNCont;
 LEXICON   ND_CA
