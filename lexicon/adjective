@@ -1127,7 +1127,6 @@ mikroskobi^k        Adj;
 miladi              Adj;
 militan             Adj;
 militarist          Adj;
-milletlerara        AdjNcomp;  !  milletlerarası
 milli               Adj;
 millî               Adj;
 milyarder           Adj;
@@ -1561,7 +1560,6 @@ seferi              Adj;
 şeffaf              Adj;
 sefil               Adj;
 şehiriçi            Adj;
-şehirlerara         AdjNcomp;
 şehla               Adj;
 sek                 Adj;
 sektörel            Adj;
@@ -1849,7 +1847,6 @@ uhrevi              Adj;
 ukala               Adj;
 ulu                 Adj;
 ulusal              Adj;
-uluslarara          AdjNcomp;  !  uluslararası
 ulussever           Adj;
 ummadı^k            Adj;
 umum                Adj;

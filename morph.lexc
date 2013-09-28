@@ -468,6 +468,7 @@ LEXICON NpluCont
    Ncase;
    NomPredicatePLU;
    ND_CA;
+   D_arasi;
 
 LEXICON Npos
 %<p1s%>:^(I)m@MB      NposCont;
@@ -1906,6 +1907,14 @@ LEXICON   JD_lIk
 %<lik%>:l^I^k@MB       DerivNCont;
 LEXICON   AD_lIk
 %<lik%>:l^I^k@MB       DerivNCont;
+
+! -arası `between' forms some compund adjectives from 
+!        plural nouns this is quite productive.
+!        uluslar-arası, bölgeler-arası, ilkokullar-arası
+!
+!
+LEXICON   D_arasi
+%<arasi%>:arası            DerivJCont;
 
 ! Dimunitive suffixes.
 !
