@@ -1817,6 +1817,7 @@ LEXICON Nderiv
             ND_lAn;
             ND_lAS;
             D_sAl;
+            D_imsi;
 !            D_gil; ! this works only in special cases.
 
 LEXICON Pderiv
@@ -1835,6 +1836,7 @@ LEXICON Jderiv
             JD_lAS;
             JN_zero;
             JP_poss;
+            D_imsi;
 
 LEXICON Aderiv
             AD_lIk;
@@ -1915,6 +1917,12 @@ LEXICON   AD_lIk
 !
 LEXICON   D_arasi
 %<arasi%>:arası            DerivJCont;
+
+! -(I)ms(I) also makes adjectives from nouns and adjectives.
+!           mavi-msi, tatlı-msı, gül-ümsü
+!
+LEXICON   D_imsi
+%<imsi%>:^(I)ms^I     DerivJCont;
 
 ! Dimunitive suffixes.
 !
