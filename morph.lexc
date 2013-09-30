@@ -1141,7 +1141,7 @@ LEXICON  VPassiveCont
 !
 
 LEXICON VCabilNeg
-%<abil%>:^(y)^A@MB     VNegative;
+%<abil%>%<V%>:^(y)^A@MB     VNegative;
 
 !
 
@@ -1157,14 +1157,14 @@ LEXICON VNegativeCont
 
 
 LEXICON VComp
-%<abil%>:^(y)^Abil@MB VCompCont;
-%<iver%>:^(y)^Iver@MB VCompCont;
-%<adur%>:^(y)^Adur@MB VCompCont;
-%<agel%>:^(y)^Agel@MB VCompCont;
-%<agor%>:^(y)^Agör@MB VCompCont;
-%<akal%>:^(y)^Akal@MB VCompCont;
-! %<akoy%>:^(y)^Akoy@MB VCompCont;
-%<ayaz%>:^(y)^Ayaz@MB VCompCont;
+%<abil%>%<V%>:^(y)^Abil@MB VCompCont;
+%<iver%>%<V%>:^(y)^Iver@MB VCompCont;
+%<adur%>%<V%>:^(y)^Adur@MB VCompCont;
+%<agel%>%<V%>:^(y)^Agel@MB VCompCont;
+%<agor%>%<V%>:^(y)^Agör@MB VCompCont;
+%<akal%>%<V%>:^(y)^Akal@MB VCompCont;
+%<ayaz%>%<V%>:^(y)^Ayaz@MB VCompCont;
+! %<akoy%>%<V%>:^(y)^Akoy@MB VCompCont;
 
 LEXICON VCompCont
                     VCausRegular;
