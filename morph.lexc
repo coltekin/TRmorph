@@ -573,12 +573,12 @@ LEXICON NomPredPagrCont
 
 
 LEXICON  NomPredPagr3p
-%<cpl%:pres%>%<3p%>:l^Ar@MB          NomPredPagr3pCont;
+%<cpl%:pres%>%<3p%>:l^Ar@MB         NomPredPagr3pCont;
+%<3p%>:l^Ar@MB                      PAgrCplAll;
 
 LEXICON   NomPredPagr3pCont
         NomPredPagrCont;        ! includes end state
         NomPred3pQ;
-        PAgrCplAll;
 
 LEXICON NomPred3pQ
 %<q%>:@miSPCm^I@MB      NomPred3pQCont;
