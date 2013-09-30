@@ -457,6 +457,7 @@ LEXICON Ntime
 
 LEXICON NtimeCont
                     Ki;
+                    D_dir;
                     Ncont;
 
 LEXICON Nplu
@@ -2003,6 +2004,15 @@ LEXICON D_CIl
 !
 LEXICON D_gil
 %<gil%>:gil       DerivNCont;
+
+! -DIr  makes adverbial phrases from quantified nouns specifying time 
+!       üç gündür, bir zamandır ....
+!
+! TODO: tag is the same as other <dir>
+!
+LEXICON D_dir
+%<dir%>:^D^Ir      DerivACont;
+
 
 ! -lA is productive, and makes verbs from nouns
 !
