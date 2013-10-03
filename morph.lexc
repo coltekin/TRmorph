@@ -1,10 +1,23 @@
-! morph.lexc
+! morph.lexc - main morphotactic description
 !
+!-----------------------------------------------------------------------
 ! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
 !
-! This file is part of TRmorph and distributed under GNU LGPL.
-! See the file LICENSE or http://www.gnu.org/licenses/lgpl.html 
-! for details.
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
 !
 
 #include "options.h"
@@ -318,6 +331,21 @@ LEXICON JP_poss
 %<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
 
+! besides adjectivals, the adverb `hep' also makes pronominals
+! the same way. Instead of <p3s> version `hepi', the correct 
+! form is `hepsi'. We allow `hepi', too, as it is used colloquially.
+!
+! The 1p and 2p singular forms are unusual (likely not possible),
+! although we allow them here.
+!
+LEXICON HepPrn
+%<p3s%>%<Prn%>:s^I@MB     NposCont;
+%<p3p%>%<Prn%>:s^I@MB     NposCont;
+%<p1s%>%<Prn%>:^(I)m@MB      NposCont;
+%<p2s%>%<Prn%>:^(I)n@MB      NposCont;
+%<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
+%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
+%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
 
 !
 ! onomatopoeic words
@@ -638,6 +666,10 @@ LEXICON AdjNcomp
 LEXICON  AdjCont
                     #;
                     Jderiv;
+
+LEXICON AdvHep
+%<Adv%>:@RB         HepPrn;
+                    AdvCont;
 
 LEXICON Adv
 %<Adv%>:@RB         AdvCont;
