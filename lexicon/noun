@@ -1,9 +1,31 @@
+! This file contains the basic noun lexicon of TRmorph.
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
 ben                   N;
-masaüst               N_comp;
+masaüst               Ncomp;
 sensör                N;
-köyişler              N_comp;
+köyişler              Ncomp;
 nevi                  N;
-başkanvekil           N_comp;
+başkanvekil           Ncomp;
 oto                   N;    ! this is abbr. form of otomobil
 anabilim              N;
 yeniçağ               N;
