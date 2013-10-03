@@ -457,17 +457,20 @@ specifying the requirement for the complement noun phrase. The tag
 marking required complement type is formed by a concise
 description of the requirement followed by the capital letter `C'. The
 postpositions that require the complement to be in \emph{ablative},
-\emph{dative} and \emph{instrumental} cases are marked 
+\emph{accusative}, \emph{dative}, \emph{genitive} and \emph{instrumental} cases are marked 
 \mtag[def]{Postp:ablC},
+\mtag[def]{Postp:accC},
 \mtag[def]{Postp:datC},
-and \mtag[def]{Postp:insC} respectively. Postpositions that require
-non-case marked complement are tagged \mtag[def]{Postp:nomC}. The
+\mtag[def]{Postp:genC},
+and \mtag[def]{Postp:insC} respectively. The
 postpositions that require the noun phrase to be suffixed with either
 \sffx{lI} or \sffx{sIz} are marked with
-\mtag[def]{Postp:liC}.\footnote{Like \sffx{(y)lA} that we mark as
-\mtag{ins}, these suffixes are typically considered derivational suffixes, 
+\mtag[def]{Postp:liC}.\footnote{These suffixes are typically considered derivational suffixes, 
 however their use resemble case markers.}
-Finally, postpositions that require numeric expressions as their
+Postpositions that require
+non-case marked complement are tagged \mtag[def]{Postp:nomC}. The
+postpositions that require non-case-marked complements also take
+genitive marked pronouns as their complements. Finally, postpositions that require numeric expressions as their
 complements are marked with \mtag[def]{Postp:numC}.
 
 \item[Numbers] are tagged as \mtag[def]{Num:ara} for Arabic numerals,
@@ -994,7 +997,7 @@ Most of these suffixes attach to an untensed verb. Except, the suffix
 above. Furthermore, the \sffx{(y)A} in its subordinating function
 is typically used together with reduplication, e.g., \xmplt{koşa
 koşa}{run-(y)A run-(y)A = hurriedly}, but also occurs in words like
-\xmpl{diye}, where it does not need reduplication.\footnote{One may
+\xmpl{diye}, where it does not need reduplication.\footnote{We
 also analyze \xmpl{diye} as a postposition, as it's use as
 subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 
@@ -1072,7 +1075,7 @@ Tag              & Suffix        & Derivation \\
 \mtag[def]{las}  & \sffx{lAş}    & NV JV \\
 \mtag[def]{yis}  & \sffx{yIş}    & VN \\
 \mtag[def]{esi}  & \sffx{(y)AsI} & VJ \\
-\mtag[def]{sal}  & \sffx{sAl}    & VJ \\
+\mtag[def]{sal}  & \sffx{sAl}    & NJ \\
 \mtag[def]{la}   & \sffx{lA}     & NV  OV \\
 \mtag[def]{dir}  & \sffx{DIr}    & NA \\
 \bottomrule

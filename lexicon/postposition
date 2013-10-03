@@ -1,5 +1,35 @@
+! This file contains the postposition lexicon of TRmorph.
 !
-! These postpostions require either non-case-marked complements
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! Postpositions are subcategorized according to the case of the
+! nominal complement the take. Furthermore, we mark whether the
+! resulting phrase acts as an adverbial or and adjectival. Most 
+! make adverbials, but some do both (and possibly some like `aşkın'
+! make exclusively adjectives).
+!
+
+!
+! These postpositions require either non-case-marked complements
 ! or genitive case only with a limited set of pronouns.
 !
 
@@ -8,8 +38,26 @@ için                            nomPostP;
 ile                             nomPostP;
 kadar                           nomPostPadjKi;
 bile                            nomPostP;
+boyunca                         nomPostP;   ! maç boyunca
+boyu                            nomPostP;   ! gün boyu
 
-! the folllowing only (?) combine with verbal nouns, when they are not
+kala                            nomPostP;
+geçe                            nomPostP;
+üzere                           nomPostP;
+
+! genitive case only.
+
+yanısıra                        genPostP;   
+
+!
+! 'diye' is (somewhat special). it can take full sentences as
+! complements. It mostly makes adverbs, but also adjectivals 
+! like `Ali diye biri ..'.
+!
+diye                            nomPostPadj;
+
+
+! the following only (?) combine with verbal nouns, when they are not
 ! case marked.
 halinde                         nomPostP;
 takdirde                        nomPostP;
@@ -22,7 +70,7 @@ oranda                          nomPostP;
 zaman                           nomPostP;
 
 ! These require dative
-göre                            datPostP;
+göre                            datPostPadj; ! bana göre kitap
 doğru                           datPostPKi;
 kadar                           datPostPKi;
 dek                             datPostPKi;
@@ -35,6 +83,15 @@ ait                             datPostPadj;
 dair                            datPostPadj;
 ilişkin                         datPostPadj;
 yönelik                         datPostPadj;
+
+atfen                           datPostP;
+binaen                          datPostP;
+hitaben                         datPostP;
+ilaveten                        datPostP;
+istinaden                       datPostP;
+ithafen                         datPostP;
+mahsuben                        datPostP;
+nazaran                         datPostP;
 
 ! These take ablative
 
@@ -49,13 +106,16 @@ evvel                           ablPostPKi;
 sonra                           ablPostPKi;
 yana                            ablPostP;
 
-ço^k                            ablPostP;      !as in 'benden çok' this is not in G&K
-aşağı                           ablPostPKi;
+ço^k                            ablPostP;      !as in 'benden çok' not in G&K
+az                              ablPostP;      !as in 'benden çok' not in G&K
 bile                            ablPostP;
 fazla                           ablPostP;
-öte                             ablPostPKi;
+öte                             ablPostPadjKi; ! adj: 'komediden öte bir karar'
 ötürü                           ablPostP;
-yukarı                          ablPostP;
+yukarı                          ablPostPKi;
+aşağı                           ablPostPKi;
+içeri                           ablPostP;
+dışarı                          ablPostP;
 
 ! These take instrumental/commutative
 
@@ -72,19 +132,23 @@ kere                            numPostP;  ! TODO: is this a noun???
 kez                             numPostP;  ! TODO: is this a noun???
 defa                            numPostP;  ! TODO: is this a noun???
 
+! These combine with accusative nominals
+aşkın                           accPostPadj;
+takiben                         accPostP;
+
 ! TODO: tane ??
 
 !--------
 
 
 
-! The rest of the postpostions are derived from other 
+! The rest of the postpositions are derived from other 
 ! word classes (mostly nouns)
 ! Instead of enumerating them here, we do it in 
-! moprhotactics which may also be helpful for 
+! morphotactics which may also be helpful for 
 ! syntactic analysis.
 !
-! these need possesive + dative/locative/ablative suffixes to become 
+! these need possessive + dative/locative/ablative suffixes to become 
 ! postpositions.
 !
 ! they require their complements to be in genitive case (evin önünde)

@@ -109,6 +109,25 @@ LEXICON nomPostPKi
 %<Postp%:adv%:nomC%>:@RB    AdvCont;
 %<Postp%:adv%:nomC%>:@RB    Ki;
 
+!
+! genitive complements (note: this is different than the nominal
+! complement case, where they are fine with genitive pronouns, but no
+! other genitive complements)
+!
+
+LEXICON genPostP
+%<Postp%:adj%:nomC%>:@RB    AdvCont;
+
+
+!
+! accusative complements
+!
+LEXICON accPostPadj
+%<Postp%:adv%:accC%>:@RB    AdjCont;
+                            accPostP;
+
+LEXICON accPostP
+%<Postp%:adv%:accC%>:@RB    AdvCont;
 
 !
 ! dative complements
@@ -2054,7 +2073,7 @@ LEXICON JD_lAS
 LEXICON D_yIS
 %<yis%>:^(y)^Iş   DerivNCont;
 
-! -(y)AsI makes adjectives, and can be attached afte voice suffixes,
+! -(y)AsI makes adjectives, and can be attached after voice suffixes,
 !  and possibly to any non-finite verbal form.
 !
 !   okuyası, görülesi, getirtesi 
