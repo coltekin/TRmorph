@@ -5,6 +5,7 @@ Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   @APOS @ABBR
                   @tSep @dSep
                   @NCOMP
+                  @PRN
                   @DEL@ @DUP@ @DELS@
                   @LN @CAUS
                   @miSPC @opt3

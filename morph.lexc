@@ -712,14 +712,14 @@ LEXICON PrnCont  ! this is all, except compounding
     NcompCont;
 
 LEXICON PersPrn1s
-%<Prn%:pers%:1s%>:@RB PersPrnCont;
+%<Prn%:pers%:1s%>:@PRN@RB PersPrnCont;
 LEXICON PersPrn2s
 %<Prn%:pers%:2s%>:@RB PersPrnCont;
 LEXICON PersPrn3s
 %<Prn%:pers%:3s%>:@RB PersPrnCont;
 
 LEXICON PersPrn1p
-%<Prn%:pers%:1p%>:@RB PersPrnContPL;
+%<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
 LEXICON PersPrn2p
 %<Prn%:pers%:2p%>:@RB PersPrnContPL;
 LEXICON PersPrn3p

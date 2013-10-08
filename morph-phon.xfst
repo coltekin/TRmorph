@@ -277,17 +277,19 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB
                                              %^%(I%) m %^I z |
                                              %^%(I%) n %^I z 
                                            ] %@MB
-                      .o. [..] (->) %^%(n%) %^I n || .#. [ {ben} | 
-                                                           {sen} |
+                      .o. [..] (->) %^%(n%) %^I n || .#. [ [{ben} | 
+                                                            {siz} ] %@PRN |
                                                            {o}   | 
-                                                           {biz} | 
+                                                           {sen} | 
                                                            {siz} | 
                                                            {bu}  | 
                                                            {şu}
                                                          ] Boundary+ (n)
                                                      _
                                                         %^%(y%) l %^A %@MB
-                      .o. n -> m || .#. [{ben}|{biz}] Boundary+ %^%(n%) %^I _  
+                      .o. n -> m 
+                        || .#. [{ben}|{biz}] %@PRN Boundary+ %^%(n%) %^I _  
+                      .o. %@PRN -> 0
                       .o. [a|e] (->) 0 || .#. [{bur}|{şur}|{or}|{ner}] _
                                         %@RB [%^D %^A (n) | %^%(y%) %^A] %@MB 
                       .o. %^%(y%) -> y || .#. [{bur}|{şur}|{or}|{ner}] %@RB _ %^A %@MB
