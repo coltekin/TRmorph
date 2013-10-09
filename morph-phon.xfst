@@ -310,8 +310,10 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB
 define insertYwords     {su}|{özsu}|{karasu} ;
 define insertYoptional  {ne}|{akarsu}|{Akarsu} ;
 
-define InsertY  [..] -> y || insertYwords %@RB _ [%^%(I%) | %^%(n%) | %^%(s%)]
-            .o. [..] (->) y || insertYoptional %@RB _ [ %^%(I%) | %^%(n%) | %^%(s%)] ;
+define InsertY  [..] -> y 
+                || .#. insertYwords %@RB _ [%^%(I%) | %^%(n%) | %^%(s%)]
+            .o. [..] (->) y 
+                || .#. insertYoptional %@RB _ [ %^%(I%) | %^%(n%) | %^%(s%)] ;
 
 
 !
