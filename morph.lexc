@@ -23,46 +23,46 @@
 #include "options.h"
 #include "multi-char.lexc"
 
-LEXICON Root
-Number; ! numbers are special as they are defined through a set of rules.
-Exceptions;
-
+! LEXICON Root
+! Number; ! numbers are special as they are defined through a set of rules.
+! Exceptions;
+! 
 !
 ! This part is the core lexicon. We do not what to leave any
 ! of these out. These files do not have lexicon definitions. 
 ! They only list the lexical items and their class.
 !
-#include "lexicon/alpha"
-#include "lexicon/clitics"
-#include "lexicon/punctuation"
-#include "lexicon/qwords"
-#include "lexicon/adjective"
-#include "lexicon/adverb"
-#include "lexicon/conjunction"
-#include "lexicon/determiner"
-#include "lexicon/interjection"
-#include "lexicon/noun"
-#include "lexicon/proper_noun"
-#include "lexicon/onomatopoeia"
-#include "lexicon/postposition"
-#include "lexicon/pronoun"
-#include "lexicon/verb"
-
-!
-! These may be "optionalized", or replaced by a more rule-governed
-! method in the future.
-!
-
-#include "lexicon/abbreviation"
-#include "lexicon/part_word"
-
-
-!
-! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
-!
-
-#include "number.lexc"
-#include "exceptions.lexc"
+! #include "lexicon/alpha"
+! #include "lexicon/clitics"
+! #include "lexicon/punctuation"
+! #include "lexicon/qwords"
+! #include "lexicon/adjective"
+! #include "lexicon/adverb"
+! #include "lexicon/conjunction"
+! #include "lexicon/determiner"
+! #include "lexicon/interjection"
+! #include "lexicon/noun"
+! #include "lexicon/proper_noun"
+! #include "lexicon/onomatopoeia"
+! #include "lexicon/postposition"
+! #include "lexicon/pronoun"
+! #include "lexicon/verb"
+! 
+! !
+! ! These may be "optionalized", or replaced by a more rule-governed
+! ! method in the future.
+! !
+! 
+! #include "lexicon/abbreviation"
+! #include "lexicon/part_word"
+! 
+! 
+! !
+! ! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
+! !
+! 
+! #include "number.lexc"
+! #include "exceptions.lexc"
 
 
 !
