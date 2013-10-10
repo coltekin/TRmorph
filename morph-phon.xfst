@@ -252,7 +252,7 @@ define DelS %^%(s%) (->) 0 || %@DELS%@ IntSym* _
 !     içeri and dışarı before -dA and -dAN (e.g., içerden, dışarda).
 !     
 
-define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB 
+define PronounExceptions  e -> a || .#. [b|s] _ n (%@PRN) %@RB %^%(y%) %^A %@MB 
                       .o. [..] -> n || .#. [ {o}  |
                                              {bu} |
                                              {şu}
@@ -278,7 +278,7 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@RB %^%(y%) %^A %@MB
                                              %^%(I%) n %^I z 
                                            ] %@MB
                       .o. [..] (->) %^%(n%) %^I n || .#. [ [{ben} | 
-                                                            {siz} ] %@PRN |
+                                                            {biz} ] %@PRN |
                                                            {o}   | 
                                                            {sen} | 
                                                            {siz} | 
