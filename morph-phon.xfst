@@ -214,7 +214,6 @@ define InsertN  %^D %^A   -> n %^D %^A,
                 %^C %^A  -> n %^C %^A
                 || [ %^%(s%) %^I 
                     | Boundary [ l %^A r %^I | k i | k ü]
-                    | .#. k e n d i
                    ] [Boundary|AposSym]+ _ %@MB;
 
 !
@@ -255,7 +254,10 @@ define DelS %^%(s%) (->) 0 || %@DELS%@ IntSym* _
 define PronounExceptions  e -> a || .#. [b|s] _ n (%@PRN) %@RB %^%(y%) %^A %@MB 
                       .o. [..] -> n || .#. [ {o}  |
                                              {bu} |
-                                             {şu}
+                                             {şu} |
+                                             {kendi} |
+                                             {kendisi} |
+                                             {kendileri}
                                            ] %@RB Boundary*
                                        _
                                            [ l %^A (r)          |
