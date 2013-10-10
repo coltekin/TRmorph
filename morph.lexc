@@ -669,7 +669,7 @@ LEXICON  AdjCont
 
 LEXICON AdvHep
 %<Adv%>:@RB         HepPrn;
-                    AdvCont;
+                    Adv;
 
 LEXICON Adv
 %<Adv%>:@RB         AdvCont;
