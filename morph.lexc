@@ -497,7 +497,9 @@ LEXICON NPartLast
 LEXICON Ncont
     Nderiv;
     NcompCont; ! includes final
+#if (MARK_NCOMP == 1) 
     NcompInfl;
+#endif
 
 LEXICON Ntime
 %<N%>:@RB    NtimeCont;
@@ -1721,13 +1723,15 @@ LEXICON VerbalNoun
 
 LEXICON VNMaCont
     NcompCont; ! includes final
-    NcompInfl;
     D_lI;
     ND_lIk;
     Deriv_MACA;
     D_CI;
     D_CIl; ! not likely
     D_sAl; ! not likely
+#if (MARK_NCOMP == 1) 
+    NcompInfl;
+#endif
 
 LEXICON VNMakCont
                               #;

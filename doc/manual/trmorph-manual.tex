@@ -600,20 +600,37 @@ that can occupy the same slot, which are marked with tags
 The \sffx{(s)I} suffix, listed as \mtag{p3s} in
 Table~\ref{tbl:noun-inflections}, is highly ambiguous. One of its many
 functions that may be confused with the possessive suffix is forming
-noun compounds. One of types of noun compounds in Turkish is formed by
-a bare noun and a (head) noun with suffix \sffx{(s)I}, for example
-\xmplt{at araba\emph{sı}}{horse carriage}.\footnote{Even though one
-can assume that this use is somewhat related to possession, it is not
-strictly possessive marking (the horse does not own the carriage).
-Furthermore, although the surface suffix is skipped after a compound
-marker, a compound of this form may also be in possessive form (e.g.,
-`someone's horse carriage').} TRmorph marks this usage of the suffix
-\sffx{(s)I} as \mtag[def]{ncomp}. In this use, this suffix always
-causes ambiguities.  Besides the fact that a noun suffixed with
-\sffx{(s)I} can either be marked for possession or as the head of a noun
-compound, since one of the two \sffx{(s)I} suffixes following each
-other is deleted from the surface form, it can also be both (a noun
-compound marked for possession).
+noun compounds. In earlier versions of TRmorph, this function of
+\sffx{(s)I} was always marked with the tag \mtag[def]{ncomp}. This
+marker can be useful for marking noun compounds like \xmplt{at
+araba\emph{sı}}{horse carriage}.\footnote{Even though one can assume
+that this use is somewhat related to possession, it is not strictly
+possessive marking (the horse does not own the carriage).
+Furthermore, since a \sffx{(s)I} after another one is deleted on the
+surface, a single \sffx{(s)I} suffix may also indicate a nominal
+compound in possessive form (e.g., `someone's horse carriage').} In
+this use, this tag always causes ambiguities. Besides the fact that a
+noun suffixed with \sffx{(s)I} can either be marked for possession or
+as the head of a noun compound, since one of the two \sffx{(s)I}
+suffixes following each other is deleted from the surface form, it can
+also be both (a noun compound marked for possession, \xmplt{at
+araba\emph{sı}}{\emph{his} horse carriage}). In case any or the other
+possessive markers are used with a noun compound, the suffix
+\sffx{(s)I} is again deleted (e.g., \xmplt{at
+araba\emph{nız}}{\emph{your} horse carriage}). In summary, marking
+heads of nominal compounds are not straightforward during the
+analysis. As a result this marker is a compile time option in the
+current version (disabled by default). If not enabled, one should note
+that the tag \mtag{p3s} may indicate a compound head with or without
+third person singular possessive marking (see also the discussion of
+ambiguity regarding \mtag{p3s} and \mtag{p3p} tags below).
+
+Another issue with the \sffx{(s)I} suffix is that a noun marked with
+\sffx{(s)I} may also indicate a third person plural possessor, e.g.,
+\xmplt{onların araba\emph{sı}}{\emph{their} car}. In general, if there
+is an overt possessor, the preferred third person plural marker is
+\sffx{(s)I}, rather than \sffx{lArI}. TRmorph marks \sffx{(s)I} both
+as \mtag{p3s} and \mtag{p3p}.
 
 The case (or case-like) suffixes change the role of the noun (or the
 noun phrase headed by the noun) in the sentence. For example a
@@ -1196,7 +1213,7 @@ suffixes, for example \emph{buna} can be analyzed as
 Note that the root `bun' is a very rare/regional word, and the imperative
 verb reading is also very unlikely. However the best option
 for the analyzer is to produce all these analyses, and let the later
-stages disambiguate between them.
+stages analysis disambiguate between them.
 
 \item\label{itm:sub-suffix} The surface form of a suffix is a combination of two other suffixes. For example, the word \xmpl{evleri} can be
     \begin{enumerate}
@@ -1231,6 +1248,28 @@ functions. For example, the word \xmpl{doktorlar} can be,
     \item doktor\mtag{N}\mtag{pl} `doctors'
     \item doktor\mtag{N}\mtag{0}\mtag{V}\mtag{cpl:pres}\mtag{3p} `they are doctors'
     \end{enumerate}
+\item\label{itm:3p-3s} The suffix \sffx{(s)I} that marks third person
+singular possessive and the null suffix that marks third person
+singular subject--predicate agreement may also have third person
+plural readings. For example,
+    \begin{enumerate}
+    \item The word \xmpl{ev-i} can both mean `his/her house'
+    (ev\mtag{N}\mtag{p3s}) as well as `their house' (ev\mtag{N}\mtag{p3p}).
+    \item A verb like \xmplt{okudu}{read-PAST} with no overt
+    agreement marker may agree with a third person singular or plural
+    subject. Hence, it is analyzed with 
+    both singular (`he/she read-PAST' oku\mtag{V}\mtag{past}\mtag{3s}) 
+    and plural (`he/she read-PAST' oku\mtag{V}\mtag{past}\mtag{3p}) 
+    third person agreement markers.
+    \end{enumerate}
+
+As a result, any predicate with a null agreement will have two
+analyses one with  \mtag{3s} and the other with \mtag{3p} agreement
+tags. Similarly any noun with suffix \sffx{(s)I} will have two
+analyses, one with \mtag{p3s} and the other with \mtag{p3p}. These
+analyses will be multiplied with \mtag{ncomp} if the optional noun
+compound head marker is enabled during the compile time.
+
 \item\label{itm:null-suffix} Some suffixes are not realized on the surface in the neighborhood of some other suffixes. These are generally, but not always, the suffixes having the same or similar surface forms. For example, \xmpl{evleri} (the example in item \ref{itm:sub-suffix}) may be analyzed as
     \begin{enumerate}
     \item ev\mtag{N}\mtag{p3p}  as in \xmplt{Annem ve babamın evleri Istanbul'da}{My parents' house is in Istanbul}

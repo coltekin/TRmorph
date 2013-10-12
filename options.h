@@ -6,6 +6,19 @@
  *
  */
 
+/* MARK_NCOMP   Use the <ncomp> tag to mark potential heads of nominal
+ *              compounds.
+ *              This tag creates a lot of ambiguity because it
+ *              has the same form as the <p3s>, and it occupies the
+ *              same slot as the possessive markers (it cannot coexist
+ *              with any of them). If marking nominal compounds is
+ *              important the tag may be useful. but it is disabled by
+ *              default here since it dobles the number of analyses
+ *              of any word with a -sI (and other posssesive markers)
+ */
+
+#define MARK_NCOMP 0
+
 /* 
  * APOSTROPHE_OPTIONAL      Relaxed apostrophe behaviour after proper 
  *                          names and numbers.
