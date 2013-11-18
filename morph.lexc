@@ -827,6 +827,7 @@ LEXICON RomanStem
 LEXICON NumericCont
                 #;
                 NumericApos;
+                NumericDotOrd;
 
 LEXICON NumericApos
 0:%@APOS@MB      NumDeriv;
@@ -834,6 +835,15 @@ LEXICON NumericApos
                  NumDeriv;
 #endif
 
+LEXICON NumericDotOrd
+%<ord%>:%.@MB      NumericDotOrdCont;
+
+LEXICON   NumericDotOrdCont
+                 #;
+0:%@APOS@MB      AdjCont;
+#if (APOSTROPHE_OPTIONAL_NUM == 1) 
+                 AdjCont;
+#endif
 
 LEXICON NumDeriv
                         NumOrd; 
