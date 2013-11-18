@@ -667,6 +667,7 @@ LEXICON AdjNcomp
 
 LEXICON  AdjCont
                     #;
+                    NomPredicate;
                     Jderiv;
 
 LEXICON AdvHep
