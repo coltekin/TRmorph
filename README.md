@@ -66,7 +66,7 @@ for batch processing (both are part of foma). Here are some examples:
     $ echo "okudum" |flookup trmorph.fst 
     okudu   oku<v><past><1s>
 
-There are also separate automata you can compile for _segmentation_,
+There are also separate automata for _segmentation_,
 _stemming_ (or _lemmatization_) and _hyphenation_ that you can compile
 and use. 
 
