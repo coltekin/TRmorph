@@ -109,3 +109,17 @@
 #define STEMMER_KEEP_ROOT_POS 1
 #define STEMMER_LEMMATIZE 0
 
+/*
+ * DECIMAL_SEPARATOR, THOUSAND_SEPARATOR 
+ * These options allow arbitrary symbols to be assigned to decimal and
+ * thousand separators. According to the official rules, comma `,' is
+ * decimal separator, and `.' is the thousand separator. But this is
+ * rarely followed in practice.
+ */
+
+/* #define DECIMAL_SEPARATOR "%,"
+ * #define THOUSAND_SEPARATOR "%."
+ */
+
+#define DECIMAL_SEPARATOR %,|%.
+#define THOUSAND_SEPARATOR %.|%,

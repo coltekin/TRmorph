@@ -140,16 +140,13 @@ define NumericInsSilentP [..] -> %^sBRV %^sVC || %0^{12,14} ./. %@tSep  _ %@RB
                      .o. [..] -> %^sBRV %^sVC || 9         _ %@RB ;
 
 !
-!   Numeric separator
+! Numeric separator
 !
-! For now, the following is the official rules, inserting comma for
-! decimal separator and dot for thousand separator. These are likely
-! to be wrong for not-so-official documents, such as scientific texts
-! and web corpora.
+! The behaviour of the following is defined in options.h
 !
 
-define NumericSeparator     %@tSep -> "."   
-                        .o. %@dSep -> "," ;
+define NumericSeparator     %@tSep -> THOUSAND_SEPARATOR   
+                        .o. %@dSep -> DECIMAL_SEPARATOR ;
 
 !
 ! This part deals with the intermediate symbol @NCOMP inserted 
