@@ -59,10 +59,11 @@ A;A;11;11<Num:ara>
 A;A;12;12<Num:ara>
 A;A;79821379821371;79821379821371<Num:ara>
 A;R;1.;1.<Num:ara>
-A;R;1.00;
-A;R;1.000.1;
-A;R;1.000.50;
-A;R;1.0;
+# the following are ok if number format is more relaxed
+#A;R;1.00;
+#A;R;1.000.1;
+#A;R;1.000.50;
+#A;R;1.0;
 A;A;1.000;1.000<Num:ara>
 A;A;1,000;1,000<Num:ara>
 A;A;1,;1,<Num:ara>
