@@ -13,14 +13,14 @@
  *              same slot as the possessive markers (it cannot coexist
  *              with any of them). If marking nominal compounds is
  *              important the tag may be useful. but it is disabled by
- *              default here since it dobles the number of analyses
- *              of any word with a -sI (and other posssesive markers)
+ *              default here since it doubles the number of analyses
+ *              of any word with a -sI (and other possessive markers)
  */
 
 #define MARK_NCOMP 0
 
 /* 
- * APOSTROPHE_OPTIONAL      Relaxed apostrophe behaviour after proper 
+ * APOSTROPHE_OPTIONAL      Relaxed apostrophe behavior after proper 
  *                          names and numbers.
  * APOSTROPHE_OPTIONAL_NUM  Only for numbers.
  * APOSTROPHE_OPTIONAL_PN   Only for proper names.
@@ -32,6 +32,18 @@
 #define APOSTROPHE_OPTIONAL_NUM  APOSTROPHE_OPTIONAL
 #define APOSTROPHE_OPTIONAL_PN   APOSTROPHE_OPTIONAL
 #define APOSTROPHE_OPTIONAL_ABBR APOSTROPHE_OPTIONAL
+
+/* 
+ * NOUN_APOSTROPHE  Whether to allow an optional apostrophe after
+ *                  common nouns. This allows analysis of
+ *                  compounds forming proper names like 'Türkiye
+ *                  Büyük Millet Meclisi', 'Ağrı Dağı' etc.
+ *                  Ideally these names should be tokenized
+ *                  together, but if not, this option will allow
+ *                  last part of these compounds to be analyzed if
+ *                  they have further suffixes (after an apostrophe)
+ */
+#define NOUN_APOSTROPHE 1
 
 /*
  * CAPITALIZE: this allows first letter of  any word to be capital. This 
@@ -67,7 +79,7 @@
  * words.
  *
  * This option is currenly global. It cannot be customized for
- * differnt components here.
+ * different components here.
  *
  */
 #define RELAXED_C_ASSIMILATION 0
@@ -80,7 +92,7 @@
 #define RELAXED_D_ASSIMILATION 0
 
 /* 
- * These options are only for guesser. The gusser will attempt to
+ * These options are only for guesser. The guesser will attempt to
  * guess the words whose length is in range GUESSER_MIN_LENGTH -
  * GUESSER_MAX_LENGTH.
  *
@@ -107,7 +119,7 @@
  *
  */
 #define STEMMER_KEEP_ROOT_POS 1
-#define STEMMER_LEMMATIZE 0
+#define STEMMER_LEMMATIZE 1
 
 /*
  * DECIMAL_SEPARATOR, THOUSAND_SEPARATOR 

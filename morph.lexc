@@ -431,8 +431,15 @@ LEXICON Ncomp ! this is only for lexicalized forms with compounding
 LEXICON NcompInfl  ! this is for regular nouns
 %<ncomp%>:^(s)^I@NCOMP@MB    NcompCont;
 
+
 LEXICON NcompCont
-                #;
+#if (NOUN_APOSTROPHE == 1)
+0:@APOS@MB  NcompAposCont;
+#endif
+            #;
+            NcompAposCont;
+
+LEXICON NcompAposCont
                 Nderiv;
                 Ninfl;
 
@@ -523,11 +530,18 @@ LEXICON NpluCont
 LEXICON Npos
 %<p1s%>:^(I)m@MB      NposCont;
 %<p2s%>:^(I)n@MB      NposCont;
-%<p3s%>:^(s)^I@MB     NposCont;
+%<p3s%>:^(s)^I@MB     Npos3sCont;
 %<p3p%>:^(s)^I@MB     NposCont; ! burasi Ali'lerin ev-i
 %<p1p%>:^(I)m^Iz@MB   NposCont;
 %<p2p%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>:l^Ar^I@MB     NposCont;
+
+LEXICON Npos3sCont
+        NposCont;
+#if (MARK_NCOMP == 0 && NOUN_APOSTROPHE == 1) 
+0:@APOS@MB  NposCont;
+#endif
+
 
 LEXICON  NposCont
     #;
