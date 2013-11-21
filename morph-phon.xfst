@@ -137,7 +137,36 @@ define NumericInsSilentP [..] -> %^sBRV %^sVC || %0^{12,14} ./. %@tSep  _ %@RB
                      .o. [..] -> %^sBUV       || 6         _ %@RB
                      .o. [..] -> %^sFUV       || 7         _ %@RB
                      .o. [..] -> %^sFUV %^sVC || 8         _ %@RB
-                     .o. [..] -> %^sBRV %^sVC || 9         _ %@RB ;
+                     .o. [..] -> %^sBRV %^sVC || 9         _ %@RB 
+    .o. [..] -> %^sFUV %^sVC || [Ⅰ|I|ⅰ|i][v|ⅴ|V|Ⅴ]      _ %@RomNum ! 4
+    .o. [..] -> %^sFUV %^sUC || [v|ⅴ|V|Ⅴ]               _ %@RomNum ! 5
+    .o. [..] -> %^sBUV       || [v|ⅴ|V|Ⅴ][Ⅰ|I|ⅰ|i]      _ %@RomNum ! 6
+    .o. [..] -> %^sFUV       || [v|ⅴ|V|Ⅴ][Ⅰ|I|ⅰ|i]^{2}  _ %@RomNum ! 7
+    .o. [..] -> %^sFUV %^sVC || [v|ⅴ|V|Ⅴ][Ⅰ|I|ⅰ|i]^{3}  _ %@RomNum ! 8
+    .o. [..] -> %^sFRV %^sUC || [Ⅰ|I|ⅰ|i]^{3,4}         _ %@RomNum ! 3,4
+    .o. [..] -> %^sFUV       || [Ⅰ|I|ⅰ|i]^{2}           _ %@RomNum ! 2
+    .o. [..] -> %^sFUV %^sVC || [Ⅰ|I|ⅰ|i]               _ %@RomNum ! 1
+    .o. [..] -> %^sBRV %^sVC || [Ⅰ|I|ⅰ|i][X|Ⅹ|x|ⅹ]      _ %@RomNum ! 9
+    .o. [..] -> %^sBUV %^sUC || [X|Ⅹ|x|ⅹ][L|Ⅼ|l|ⅼ]      _ %@RomNum ! 40
+    .o. [..] -> %^sFUV       || [L|Ⅼ|l|ⅼ]               _ %@RomNum ! 50
+    .o. [..] -> %^sBUV %^sUC || [L|Ⅼ|l|ⅼ][X|Ⅹ|x|ⅹ]      _ %@RomNum ! 60
+    .o. [..] -> %^sFUV %^sUC || [L|Ⅼ|l|ⅼ][X|Ⅹ|x|ⅹ]^{2}  _ %@RomNum ! 70
+    .o. [..] -> %^sFUV %^sVC || [L|Ⅼ|l|ⅼ][X|Ⅹ|x|ⅹ]^{3}  _ %@RomNum ! 80
+    .o. [..] -> %^sFUV       || [X|Ⅹ|x|ⅹ]^{2}           _ %@RomNum ! 20
+    .o. [..] -> %^sBRV %^sVC || [X|Ⅹ|x|ⅹ]^{3}           _ %@RomNum ! 30
+    .o. [..] -> %^sBUV %^sVC || [X|Ⅹ|x|ⅹ][C|Ⅽ|c|ⅽ]      _ %@RomNum ! 90
+    .o. [..] -> %^sFRV %^sVC || [C|Ⅽ|c|ⅽ]               _ %@RomNum ! 100
+    .o. [..] -> %^sFRV %^sVC || [D|Ⅾ|d|ⅾ]               _ %@RomNum ! 500
+    .o. [..] -> %^sFRV %^sVC || [C|Ⅽ|c|ⅽ][M|Ⅿ|m|ⅿ]      _ %@RomNum ! 900
+    .o. [..] -> %^sFUV %^sVC || [M|Ⅿ|m|ⅿ]               _ %@RomNum ! 1000
+    .o. [..] -> %^sFUV       || [Ⅱ|ⅱ|Ⅶ|ⅶ|Ⅻ|ⅻ]           _ %@RomNum ! 2,7,12
+    .o. [..] -> %^sFRV %^sUC || [Ⅲ|ⅲ|Ⅳ|ⅳ]               _ %@RomNum ! 3,4
+    .o. [..] -> %^sBUV       || [Ⅵ|ⅵ]                   _ %@RomNum ! 6
+    .o. [..] -> %^sBUV       || [Ⅵ|ⅵ]                   _ %@RomNum ! 6
+    .o. [..] -> %^sFUV %^sVC || [Ⅷ|ⅷ]                   _ %@RomNum ! 8
+    .o. [..] -> %^sBRV %^sVC || [Ⅸ|ⅸ]                   _ %@RomNum ! 9
+    .o. [..] -> %^sFUV %^sVC || [Ⅺ|ⅺ]                   _ %@RomNum ! 11
+    .o. %@RomNum -> 0 ;
 
 !
 ! Numeric separator

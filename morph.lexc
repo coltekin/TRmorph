@@ -835,7 +835,7 @@ LEXICON NumericStem
 !%<Num%>%<dig%>:@RB     NumericCont;    
 
 LEXICON RomanStem
-%<Num%:rom%>:@RB             NumericCont;    
+%<Num%:rom%>:@RomNum@RB      NumericCont;
 !%<Num%>%<rom%>:@RB     NumericCont;    
 
 LEXICON NumericCont

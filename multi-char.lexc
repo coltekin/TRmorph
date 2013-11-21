@@ -4,6 +4,7 @@ Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   @RB @MB @dB
                   @APOS @ABBR
                   @tSep @dSep
+                  @RomNum
                   @NCOMP
                   @PRN
                   @DEL@ @DUP@ @DELS@
