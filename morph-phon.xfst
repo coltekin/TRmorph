@@ -426,7 +426,11 @@ define Optative3  %^%(y%) %^A -> 0 || Boundary _ %@MB %@opt3
 ! making this insertion optional allows us to analyze less formal
 ! writing like blog posts or internet forums.
 
+#if (MI_NOSPACE == 1)
 define SpaceBeforeMI    %@miSPC -> [0|" "];
+#else
+define SpaceBeforeMI    %@miSPC -> " ";
+#endif
 
 !
 ! Negative Aorist

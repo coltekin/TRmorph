@@ -121,8 +121,8 @@
 #define STEMMER_KEEP_ROOT_POS 1
 #define STEMMER_LEMMATIZE 1
 
-/*
- * DECIMAL_SEPARATOR, THOUSAND_SEPARATOR 
+/* DECIMAL_SEPARATOR, THOUSAND_SEPARATOR 
+ * 
  * These options allow arbitrary symbols to be assigned to decimal and
  * thousand separators. According to the official rules, comma `,' is
  * decimal separator, and `.' is the thousand separator. But this is
@@ -135,3 +135,13 @@
 
 #define DECIMAL_SEPARATOR %,|%.
 #define THOUSAND_SEPARATOR %.|%,
+
+/* MI_NOSPACE
+ *
+ * If this option is set to 1, the question particle -mI will be
+ * allowed to be written together with the predicate it attaches to.
+ * This is inccorrect spelling, but a very common mistake in informal
+ * writing.
+ */
+
+#define MI_NOSPACE 1
