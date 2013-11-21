@@ -254,6 +254,8 @@ define PronounExceptions  e -> a || .#. [b|s] _ n (%@PRN) %@RB %^%(y%) %^A %@MB
                                              {şu} |
                                              {kendi} |
                                              {kendisi} |
+                                             {biri} |
+                                             {birisi} |
                                              {kendileri}
                                            ] %@RB Boundary*
                                        _
