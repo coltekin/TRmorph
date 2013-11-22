@@ -31,6 +31,7 @@ read regex     AFilter
            .o. DeleteLAR
            .o. InsertN
            .o. DelS
+           .o. InsertS
            .o. PronounExceptions
            .o. InsertY
            .o. iDeleteY

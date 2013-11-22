@@ -99,7 +99,7 @@ define replaceAposOpt %@APOS -> 0 || _ Boundary+ .#.
 !
 ! Replace @dB `digit boundary' with space or nothing
 !
-! we allow insertion of spce anywhere, or lack of it between the
+! we allow insertion of space anywhere, or lack of it between the
 ! `digits'.
 !
 
@@ -254,6 +254,14 @@ define InsertN  %^D %^A   -> n %^D %^A,
 
 define DelS %^%(s%) (->) 0 || %@DELS%@ IntSym* _ 
     .o. %@DELS%@ -> 0;
+
+!
+! InsertS
+!
+! for now this handles only a single exception with the root 'güvey'.
+!
+
+define InsertS [..] (->) s || .#. (i ç) g ü v e y IntSym* _ %^%(s%) %^I;
 
 !
 ! Pronoun Exceptions
