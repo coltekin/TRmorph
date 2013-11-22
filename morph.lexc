@@ -326,7 +326,7 @@ LEXICON JP_poss
 %<p1s%>%<Prn%>:^(I)m@MB      NposCont;
 %<p2s%>%<Prn%>:^(I)n@MB      NposCont;
 %<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
-!%<p3p%>%<Prn%>:^(s)^I@MB     NposCont; !TODO: check if this refers to plural
+%<p3p%>%<Prn%>:^(s)^I@MB     NposCont;
 %<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
 %<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
@@ -845,8 +845,10 @@ LEXICON NumericCont
 
 LEXICON NumericApos
 0:%@APOS@MB      NumDeriv;
+0:%@APOS@MB      JP_poss;
 #if (APOSTROPHE_OPTIONAL_NUM == 1) 
                  NumDeriv;
+                 JP_poss;
 #endif
 
 LEXICON NumericDotOrd
