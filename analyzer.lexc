@@ -34,12 +34,15 @@ Exceptions;
 #include "lexicon/postposition"
 #include "lexicon/pronoun"
 #include "lexicon/verb"
+#include "lexicon/person_names"
+#include "lexicon/person_names.foreign"
 
 !
 ! These may be "optionalized", or replaced by a more rule-governed
 ! method in the future.
 !
 
+#include "lexicon/tinglish"
 #include "lexicon/abbreviation"
 #include "lexicon/part_word"
 
