@@ -731,7 +731,7 @@ LEXICON PrnCont  ! this is all, except compounding
 LEXICON PersPrn1s
 %<Prn%:pers%:1s%>:@PRN@RB PersPrnCont;
 LEXICON PersPrn2s
-%<Prn%:pers%:2s%>:@RB PersPrnCont;
+%<Prn%:pers%:2s%>:@PRN@RB PersPrnCont;
 LEXICON PersPrn3s
 %<Prn%:pers%:3s%>:@RB PersPrnCont;
 
