@@ -25,6 +25,7 @@
 ! 
 
 abuk        AdjPart;
+fosur       AdjPartLast;
 abur        AdjPart;
 allak       AdjPart;
 apar        AdvPart;
@@ -122,5 +123,13 @@ da          CnjCooPart;
 yourgun     AdvPart;
 zangır      AdvPartLast;
 zır         AdvPartLast;
+tir         AdvPartLast;
+tük         AdjPartLast;
+tük         AdvPartLast;
+tungur      AdvPartLast;
 zırt        AdvPart;
 zıvır       NPartLast;
+çurpu^k     NPartLast;
+vurdu       NPartLast;
+kırdı       NPartLast;
+müpe        NPartLast;

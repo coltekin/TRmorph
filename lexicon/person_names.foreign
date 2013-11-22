@@ -1,0 +1,84 @@
+! This file contains the basic noun lexicon of TRmorph.
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This file lexicon lists foreign person names.
+! Some of these names will require "silent" vowels/consonants for
+! proper inflection. Here is the list of symbols for reference.
+!
+!     - ^sBUV     Back unrounded vowel (aı)
+!     - ^sBRV     Back rounded vowel (ou)
+!     - ^sFUV     Back unrounded vowel (ei)
+!     - ^sFRV     Back rounded vowel (öü)
+!     - ^sVC      Voiced consonant
+!     - ^sUC      Voiceless consonant
+
+!
+! TODO: This file can be generated automaticall (e.g., from Wikipedia). 
+! For now it only contains names that are observed in test material.
+!
+
+Alfred                               NP;
+Buffon                               NP;
+Charles                              NP;
+Darwin                               NP;
+Dobzhansky^sFUV                      NP;
+Ernst                                NP;
+Gregor                               NP;
+Lamarck                              NP;
+Mayr                                 NP;
+Mendel                               NP;
+Russe^sBUVll                         NP;
+Sewall                               NP;
+Steve                                NP;
+Theodosius                           NP;
+Wallace^sBUV^sUC                     NP;
+Wright                               NP;
+Weinberg                             NP;
+Vesalius                             NP;
+Thomas                               NP;
+Malthus                              NP;
+Linnaeus                             NP;
+Julian                               NP;
+Huxley                               NP;
+Harvey                               NP;
+Hardy                                NP;
+Haldane                              NP;
+Gause                                NP;
+Dover                                NP;
+Danua                                NP;
+Cuvier                               NP;
+Fisher                               NP;
+William                              NP;
+Ronald                               NP;
+Rechenberg                           NP;
+Eldredge                             NP;
+Eugene                               NP;
+Isaac                                NP;
+James                                NP;
+Jean                                 NP;
+Jay                                  NP;
+Holland                              NP;
+Andreas                              NP;
+Carl                                 NP;
+Epperson                             NP;
+Nicolas                              NP;

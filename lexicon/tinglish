@@ -1,0 +1,39 @@
+! This file contains the basic noun lexicon of TRmorph.
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This file lexicon contains words that are generally direct
+! transliteration of (mostly) English words. These are seen in
+! translations of (scientific) text a lot, but they are not made 
+! their way into the lexicons of most speakers.  One may not want to
+! exclude these if the aim is to analyze only "proper" Turkish.
+! 
+
+enterferans             N;
+populasyon              N;
+varyans                 N;
+nötral                  Adj;
+nötral                  Adj;
+duplikasyon             N;
+delesyon                N;
+obsesyon                N;
+kompulsiyon             N;

@@ -46,12 +46,12 @@ herkes            PersPrn3p;
 herşey            Prn;  
 her% şey          Prn;
 hiçbirşey         Prn;
-hiç% kimse        PersPrn3s;    ! is this singular?
-hiçkimse          PersPrn3s;    ! is this singular?
+hiç% kimse        Prn;
+hiçkimse          Prn;    ! is this singular?
 insan             PersPrn3s;
 kimi              Prn;
 kimseci^k         Prn;
-kimse             PersPrn3s;    ! is this singular?
+kimse             Prn;
 o% bu             Prn;
 öbürkü            Prn;
 öteki% beriki     Prn;
