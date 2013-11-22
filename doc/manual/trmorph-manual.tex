@@ -584,18 +584,48 @@ noun is not marked for plural, it is assumed to be singular.
 %There are a small number of loan words that are plural in their
 %language of origin, e.g., \xmplt{eşya}{belongings}. ...
 
-Possessive markers follow either the nominal stem, or the plural
-marker. Besides marking for possession, these suffixes have a number
-of other functions, such as deriving pronouns when attached to
-adjectivals (e.g., determiners or adjectives).
-
-The first five suffixes in Table~\ref{tbl:noun-inflections} are commonly
+The first five suffixes in the lower part of Table~\ref{tbl:noun-inflections} are commonly
 recognized cases in Turkish. The \emph{instrumental/commutative}
 marker also behaves like case suffixes. There are two more suffixes,
 namely \sffx{lI} and \sffx{sIz} 
 %(resembling to abessive case in its function), 
 that can occupy the same slot, which are marked with tags
 \mtag[def]{li} and \mtag[def]{siz} respectively.
+
+Possessive markers follow either the nominal stem, or the plural marker. 
+The basic function of the possessive markers are to mark a noun for possession.
+That is a noun belonging to some entity, e.g., \xmplt{evi-m}{\emph{my} house} or \xmplt{ev-i}{\emph{his/her} house}.
+Besides marking for possession, 
+these suffixes, particularly the third person possessive suffix, 
+have a number of other functions. 
+The rest of this section explains some of these usage patterns, 
+and how TRmorph represents them.
+
+TRmorph normally does not allow adjectivals (adjectives, determiners and numbers) to take any of the possessive suffixes directly.
+However an adjectival suffixed one the possessive suffixes may function as a pronoun. 
+Examples include, 
+\xmplt{üç-ümüz}{three of us}, 
+\xmplt{bazı(lar)-ınız}{some of you} and
+\xmplt{eski-si}{the old one (of them)}.
+Note that this usage is different than possessively marked adjective 
+with the noun interpretation, 
+e.g., not `the 'three' that belongs to us' but `three of us'.
+In this use, possessive markers are treated like a derivational suffix.
+The examples above would be analyzed as 
+\xmpl{üç\mtag{Num}\mtag{p1p}\mtag{Prn}},
+\xmpl{bazı\mtag{Det:indef}\mtag{p1p}\mtag{Prn}} and
+\xmpl{eski\mtag{Adj}\mtag{p3s}\mtag{Prn}},
+respectively.
+
+
+A similar usage is observed with verbal nouns and participles (see Section~\ref{ssec:subordination}).
+In these cases the possessive marker marks the subject of the verb.
+For example, in participle use of 
+\xmplt{oku-yacağ-ım}{(the book) that I will read},
+the possessive suffix marks who does the reading, 
+and not a possession relation in the usual sense.
+Currently trmorph analyzes this word as
+\xmpl{oku\mtag{V}\mtag{part:fut}\mtag{Adj}\mtag{p1s}}
 
 The \sffx{(s)I} suffix, listed as \mtag{p3s} in
 Table~\ref{tbl:noun-inflections}, is highly ambiguous. One of its many
