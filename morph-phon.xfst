@@ -238,7 +238,7 @@ define InsertN  %^D %^A   -> n %^D %^A,
                 %^%(y%) %^A  -> n %^A,
                 %^%(y%) %^I -> n %^I ,
                 %^C %^A  -> n %^C %^A
-                || [ %^%(s%) %^I 
+                || [ [%^%(s%)|s] %^I 
                     | Boundary [ l %^A r %^I | k i | k ü]
                    ] [Boundary|AposSym]+ _ %@MB;
 
