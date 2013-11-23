@@ -614,6 +614,9 @@ LEXICON NomPredQ
 %<%0%>%<V%>:@MB                         NomPredQCont;
 
 LEXICON NomPredQCont
+#if (PREDICATE_WITHOUT_PAGR == 1)
+                                          #;
+#endif
 %<q%>:@miSPCm^I@MB                        NomPredPagr;
 %<q%>:@miSPCm^I@MB                        NomPredDir;
 %<q%>:@miSPCm^I@MB                        CplAll;
@@ -639,11 +642,8 @@ LEXICON  NomPredPagr3p
 %<cpl%:pres%>%<3p%>:l^Ar@MB         NomPredPagr3pCont;
 %<3p%>:l^Ar@MB                      PAgrCplAll;
 
-LEXICON   NomPredPagr3pCont
-        NomPredPagrCont;        ! includes end state
-        NomPred3pQ;
-
-LEXICON NomPred3pQ
+LEXICON NomPredPagr3pCont
+                        NomPredPagrCont;        ! includes end state
 %<q%>:@miSPCm^I@MB      NomPred3pQCont;
 
 LEXICON  NomPred3pQCont
@@ -1302,11 +1302,14 @@ LEXICON TAMContCont
             VerbalAdj;
 
 LEXICON TAMg1Cont
-            PAgrG1;
-            PAgrG1p3;
-            TAMG1Q;
-            TAMg1DIr;
-            CplAll;
+                        PAgrG1;
+                        PAgrG1p3;
+                        TAMg1DIr;
+                        CplAll;
+%<q%>:@miSPCm^I@MB      TAMG1QCont;
+#if (PREDICATE_WITHOUT_PAGR == 1)
+                        #;
+#endif
 
 ! This is for cases like: 'birleşmiş milletler', 
 ! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
@@ -1326,12 +1329,6 @@ LEXICON TAMg1Cont
 LEXICON VerbalAdj
 %<Adj%>:@MB       AdjCont;
 
-!
-!
-
-
-LEXICON TAMG1Q
-%<q%>:@miSPCm^I@MB      TAMG1QCont;
 
 LEXICON TAMG1QCont
                 PAgrG1;
@@ -1365,11 +1362,8 @@ LEXICON  PAgrG1p3
 %<3p%>:l^Ar@MB   PAgrG1p3Cont;
 
 LEXICON PAgrG1p3Cont
-        PAgrG1Cont;        ! includes end state
-        PAgrCplAll;
-        PAgrG1p3Q;
-
-LEXICON PAgrG1p3Q
+                        PAgrG1Cont;        ! includes end state
+                        PAgrCplAll;
 %<q%>:@miSPCm^I@MB      PAgrG1p3QCont;
 
 LEXICON PAgrG1p3QCont
@@ -1403,12 +1397,9 @@ LEXICON PAgrDI
 %<3p%>:l^Ar@MB      PAgrDICont;
 
 LEXICON PAgrDICont
-                    #;
-                    PAgrCplCond;
-                    PAgrCplPast;
-                    PAgrDIQ;
-
-LEXICON PAgrDIQ
+                        #;
+                        PAgrCplCond;
+                        PAgrCplPast;
 %<q%>:@miSPCm^I@MB      PAgrDIQCont;
 
 LEXICON PAgrDIQCont
@@ -1421,13 +1412,13 @@ LEXICON PAgrDIQCont
 !
 
 LEXICON TAMCondCont
-            TAMCondPAgr;
-            TAMCondQ;
-            CplPast2;   ! no double copula sa-di-sa
-            CplEvid2;   !                  sa-mis-sa
-
-LEXICON TAMCondQ
-%<q%>:@miSPCm^I@MB       TAMCondQCpl;
+                        TAMCondPAgr;
+                        CplPast2;   ! no double copula sa-di-sa
+                        CplEvid2;   !                  sa-mis-sa
+%<q%>:@miSPCm^I@MB      TAMCondQCpl;
+#if (PREDICATE_WITHOUT_PAGR == 1)
+                        #;
+#endif
 
 LEXICON TAMCondQCpl
             CplPast2;
@@ -1444,11 +1435,8 @@ LEXICON TAMCondPAgr
 
 LEXICON TAMCondPAgrCont
                         #;
-                        TAMCondQPAgrQ;
                         PAgrCplPast2;
                         PAgrCplEvid2;
-
-LEXICON TAMCondQPAgrQ
 %<q%>:@miSPCm^I@MB      TAMCondQPAgrCont;
 
 LEXICON TAMCondQPAgrCont
@@ -1465,11 +1453,11 @@ LEXICON TAMCondYACont ! this is informal: gel-e-ydi
 !
 
 LEXICON TAMOptCont
-                    OptPAgr;
-                    OptQ;
-
-LEXICON OptQ
+                        OptPAgr;
 %<q%>:@miSPCm^I@MB      OptQCont;
+#if (PREDICATE_WITHOUT_PAGR == 1)
+                        #;
+#endif
 
 LEXICON OptQCont
 %<cpl%:past%>:^(y)^D^I@MB     PAgrG2End;
@@ -1492,9 +1480,6 @@ LEXICON OptPAgr
 
 LEXICON OptPAgrCont
                         #;
-                        OptPagrQ;
-
-LEXICON OptPagrQ
 %<q%>:@miSPCm^I@MB      OptPagrQCont;
 
 LEXICON OptPagrQCont

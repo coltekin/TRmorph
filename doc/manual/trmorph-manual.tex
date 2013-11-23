@@ -887,11 +887,19 @@ Tag & Suffix & Description \\
 
 \subsection{\label{ssec:pagr}Person and number agreement}
 
-After TAM markers a finite verb requires one of the person and number
-agreement markers. The surface form of the person-number agreement markers
-change depending on the suffixes they follow.
-Table~\ref{tbl:agreement} lists the person agreement markers and their
-surface form according the TAM of the verb they attach to.
+After TAM markers a finite verb requires one of the person and number agreement markers. 
+For any finite predicate an agreement marker is compulsory.
+However, by default TRmorph accepts a predicate with a TAM marker but no agreement marker,
+since in some cases, the agreement marker can be attached after the question particle (see Section~\ref{ssec:question}).
+This behavior can be disabled in compile time.
+
+
+The surface form of the person-number agreement markers change depending on the suffixes they follow.  
+Table~\ref{tbl:agreement} lists the person agreement markers and their surface form according the TAM of the verb they attach to.
+Note that the third person singular marker is null on the surface 
+after most TAM markers.
+Furthermore, since a predicate with third person singular marker will also agree with third person plural subject, 
+all forms that are marked with a \mtag{3s} tag will also be marked with a \mtag{3p} tag.
 
 \begin{table}[t]
 \caption{\label{tbl:agreement}Verbal person agreement markers. The
@@ -951,7 +959,7 @@ Similar to the nominal predicates with a copula, copular suffixes may
 be followed the `generalizing modality marker' \sffx{DIr} tagged as
 \mtag[def]{dir}.
 
-\subsection{\label{ssec:qestion}The question particle}
+\subsection{\label{ssec:question}The question particle}
 
 Question particle \sffx{mI}, tagged as \mtag[def]{Q}, is normally
 written separately. However, it has an intimate relationship between

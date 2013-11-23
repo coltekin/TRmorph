@@ -145,3 +145,23 @@
  */
 
 #define MI_NOSPACE 1
+
+/* PREDICATE_WITHOUT_PAGR
+ *
+ * Enabling this options allows the analyzer to accept incomplete
+ * predicate forms, that precede the question suffix -mI. Otherwise
+ * the predicates before -mI would be analyzed with a (most probably)
+ * wrong third person singular/plural (null surface) agreement.
+ *
+ * disabled:   okumuş muyuz -> oku<V><evid><3s> mu<Q><1p>
+ * enabled:                 -> oku<V><evid> mu<Q><1p>
+ *
+ * When disabled, one needs to postprocess the analyses to remove the
+ * wrong <3s> tag.
+ *
+ * Enabling this option increases number of analyses for any
+ * predicate, including nominal predicates.
+ *
+ */
+
+#define PREDICATE_WITHOUT_PAGR 1
