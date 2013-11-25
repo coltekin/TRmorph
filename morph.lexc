@@ -1431,13 +1431,16 @@ LEXICON TAMCondPAgr
 %<3p%>:0@MB         TAMCondPAgrCont;
 %<1p%>:k@MB         TAMCondPAgrCont;
 %<2p%>:n^Iz@MB      TAMCondPAgrCont;
-%<3p%>:l^Ar@MB      TAMCondPAgrCont;
+%<3p%>:l^Ar@MB      TAMCond3pCont;
 
 LEXICON TAMCondPAgrCont
                         #;
+%<q%>:@miSPCm^I@MB      TAMCondQPAgrCont; ! this is somewhat odd: oku-sa-k mı
+
+LEXICON TAMCond3pCont
+                        TAMCondPAgrCont;
                         PAgrCplPast2;
                         PAgrCplEvid2;
-%<q%>:@miSPCm^I@MB      TAMCondQPAgrCont;
 
 LEXICON TAMCondQPAgrCont
                 #;
