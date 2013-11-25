@@ -1902,6 +1902,7 @@ LEXICON Pderiv
 
 LEXICON Jderiv
             JD_lIk;
+            D_lI;
             JD_CA;
             JD_lAn;
             JD_lAS;
