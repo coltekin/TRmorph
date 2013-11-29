@@ -700,11 +700,14 @@ LEXICON AdvPart
 LEXICON QAdv
 %<Adv%:qst%>:@RB  AdvCont;
 
+LEXICON QAdj
+%<Adj%:qst%>:@RB  AdjCont;
+
 LEXICON AdvTime
 %<Adv%>:@RB         AdvTimeCont;
 
 LEXICON QAdvTime
-%<Adv%:qst%>:@RB         AdvTimeCont;
+%<Adv%:qst%>:@RB    AdvTimeCont;
 
 LEXICON AdvTimeCont
                     Ki;
