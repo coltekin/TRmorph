@@ -1808,11 +1808,21 @@ LEXICON CVcesinePagr
 ! TODO: check whether this is too restrictive or not. 
 !
 LEXICON   uzerCont 
-            uzerAdj;
+            uzerN;
             PostPlocation;
 
-LEXICON uzerAdj
-%<Adj%>:@RB     Jderiv;
+LEXICON uzerN
+%<N%>:@RB     uzerNcont; 
+
+LEXICON uzerNcont
+                            Nplu;
+                            Npos;
+                            Ncase;
+                            Nderiv;
+#if (MARK_NCOMP == 1)
+                            NcompInfl;
+#endif
+
 
 LEXICON var
 %<Exist%>:@RB Ncont;
