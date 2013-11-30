@@ -67,15 +67,13 @@ define IntSym   Boundary | %@NCOMP | %@opt3;
 ! to abbreviation which does not have any vowel, or any silent 
 ! letters added in the lexicon.
 !
-! The second rule replaces the @ABBR symbol with apostrophe 
-! if the surface form ends with a regular letter. In other cases, 
-! like where the abberviation ends with a superscript or dot 
-! apostrophe is not used.
+! The second rule inserts an optional dot `.' if there isn't one
+! already.
 !
 
-define Abbr     [..] -> %^sFUV  || .#. ConsSurface+ _ %@ABBR
-!           .o. %@APOS -> 0 || \SurfaceLetter SilentLetter* %@ABBR %@MB _
-           .o. %@ABBR -> 0;
+define Abbr     [..] -> %^sFUV    || .#. ConsSurface+ _ %@ABBR
+            .o. [..] (->) %.      || \%. _ %@ABBR
+            .o. %@ABBR -> 0;
 
 !
 ! Delete apostrophe  if it is followed by null morphemes
