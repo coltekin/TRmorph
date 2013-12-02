@@ -153,6 +153,7 @@ beler        V;
 belgele      V;
 belirle      V;
 belir        V;
+belirt       V; ! this is not just causative of 'belir'
 belle        V;
 benilde      V;
 benimse      V;
@@ -2223,3 +2224,5 @@ tıpırda      V;
 tırla        V;
 vızılda      V;
 vakfe^t      V_AorAr;
+evlen        V;
+aldır        V;

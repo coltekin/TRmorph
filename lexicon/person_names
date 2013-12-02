@@ -1,4 +1,4 @@
-! This file contains the basic noun lexicon of TRmorph.
+! This file is part of TRmorph.
 !
 !-----------------------------------------------------------------------
 ! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
@@ -27,8 +27,8 @@
 ! extended as needed.
 !
 ! Currently TRmorph does not distinguish male/female names or given
-! and family names. However, the list below is organized a possible
-! distincition easier later.
+! and family names. However, the list below is organized to make a 
+! possible distincition easier later.
 !
 !
 
@@ -564,6 +564,9 @@ Zihni    NP;
 Ziya    NP;
 Zülfü    NP;
 İlter    NP;
+Şamil    NP;
+Kamil    NP;
+Kâmil    NP;
 
 !
 ! These are (mostly) unisex.
@@ -1494,3 +1497,5 @@ Zeybek    NP;
 Zorlu    NP;
 Özdalga    NP;
 Öztop      NP;
+Sel        NP;
+Kızılcı^k  NP;

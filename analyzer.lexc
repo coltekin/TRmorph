@@ -36,6 +36,7 @@ Exceptions;
 #include "lexicon/verb"
 #include "lexicon/person_names"
 #include "lexicon/person_names.foreign"
+#include "lexicon/location_names"
 
 !
 ! These may be "optionalized", or replaced by a more rule-governed

@@ -38,6 +38,7 @@ için                            nomPostP;
 ile                             nomPostP;
 kadar                           nomPostPadjKi;
 bile                            nomPostP;
+dahi                            nomPostP;
 boyunca                         nomPostP;   ! maç boyunca
 boyu                            nomPostP;   ! gün boyu
 
@@ -109,6 +110,7 @@ yana                            ablPostP;
 ço^k                            ablPostP;      !as in 'benden çok' not in G&K
 az                              ablPostP;      !as in 'benden çok' not in G&K
 bile                            ablPostP;
+dahi                            ablPostP;
 fazla                           ablPostP;
 öte                             ablPostPadjKi; ! adj: 'komediden öte bir karar'
 ötürü                           ablPostP;
@@ -170,6 +172,7 @@ etraf                   PostPlocation;
 öte                     PostPlocation;
 kenar                   PostPlocation;
 dışarı                  PostPlocation;
+ar^t                    PostPlocation;
 
 !
 ! these require possessive and ablative case

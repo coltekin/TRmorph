@@ -1,0 +1,89 @@
+! This file is part of TRmorph.
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This lexicon lists geogrphic names.
+!
+! Currently we have an ad-hoc list, which should probably be replaced
+! with data that can be obtained from sources like geonames, or
+! Wikpedia.
+!
+! Currently TRmorph does not distinguish subcategories of proper nouns
+! However, the list below is organized to make a potential fine-grained 
+! distincition easier later.
+!
+!
+
+! 
+! Country names
+!
+
+Katar           NP;
+Hersek          NP;
+Bosna-Hersek    NP;
+Bosna           NP;
+Burkina% Faso   NP;
+
+
+! these should be turned into 'partial' tokens.
+Faso            NP;
+Burkina         NP;
+
+! 
+! City/town/village names
+!
+Bahçeci^k       NP;
+Adrasan         NP;
+Olimpos         NP;
+Çıralı          NP;
+
+
+!
+! Non-TR city names that are written differently than their original names
+!
+Atina           NP;
+Barselona       NP;
+Belgrad         NP;
+brüksel         NP;
+Bükreş          NP;
+Cenevre         NP;
+Floransa        NP;
+Göteborg        NP;
+Kaliforniya     NP;
+Lizbon          NP;
+Londra          NP;
+Marsilya        NP;
+Moskova         NP;
+Münih           NP;
+Paris           NP;
+Pekin           NP;
+Roma            NP;
+Şangay          NP;
+Saraybosna      NP;
+Selanik         NP;
+Varşova         NP;
+Vaşington       NP;
+Venedik         NP;
+Viyana          NP;
+Yemen           NP;
+Zürih           NP;
+Doha            NP;
