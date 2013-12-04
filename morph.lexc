@@ -1268,7 +1268,7 @@ LEXICON VTAM
 %<evid%>:m^Iş@MB          TAMNarrCont;
 %<fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
 %<obl%>:m^Al^I@MB         TAMOblCont;
-%<impf%>:m^Akt^A@MB      TAMMaktaCont; ! TODO: -maktayızdır ??
+%<impf%>:m^Akt^A@MB       TAMMaktaCont; ! TODO: -maktayızdır ??
 %<cont%>:^(I)yor@MB       TAMContCont;
 %<past%>:^D^I@MB          TAMDICont;
 %<cond%>:s^A@MB           TAMCondCont;
@@ -1298,11 +1298,11 @@ LEXICON TAMOblCont
 
 LEXICON TAMMaktaCont
             TAMg1Cont;
-            VerbalAdj;
+!            VerbalAdj;
 
 LEXICON TAMContCont
             TAMg1Cont;
-            VerbalAdj;
+!            VerbalAdj;
 
 LEXICON TAMg1Cont
                         PAgrG1;
