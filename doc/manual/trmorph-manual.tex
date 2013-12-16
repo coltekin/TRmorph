@@ -140,7 +140,7 @@ Another common need for customizing a morphological analyzer is to add
 or modify the lexical entries. The lexicon structure and format of the
 lexical entries are described in Section~\ref{sec:lexicon}.
 
-\subsection{Trying it out}
+\subsection{\label{sec:try}Trying it out}
 
 Assuming you have built the binary \lstinline{trmorph.fst} using foma,
 you can simply start foma and use xfst commands implemented in foma to
@@ -218,31 +218,33 @@ capital letters listed below.
 A letter in parentheses indicate a buffer consonant or vowel, that may
 be dropped in certain contexts.
 
-\subsection{Part-of-speech tags}
+\subsection{General structure of analysis strings}
 
-All analysis strings include at least one POS tag. A word may get
-multiple POS tags, and even the same POS tag repeatedly. This process
-tracks the changes to the syntactic function of a word with
-suffixation.  It follows the idea of \emph{inflectional groups}
-\parencite[IGs,][]{oflazer1999,oflazer2003}  used in the Turkish NLP
-literature. In a nutshell, the suffixation process may result in
-changes to the syntactic function of a word, and each of these
-functions may have their own `inflectional' features.  The POS tag of
-the whole word is the final POS tag in the sequence. However, the
-other intermediate IGs are also important, and, at least in typical
-dependency parsing, these IGs may participate in dependency relations
-with the other words in the sentence.  Example~(\ref{ig-example})
-demonstrates this process with the analysis of of the word
-\xmpl{evdekilerinki}.\footnote{Rough translation: `the \emph{ones} that
-belong to the \emph{ones} in the house', as in `the \emph{books} that
-belong to the \emph{people} in the house'.}
+Before describing individual morphological tags used in analysis strings, 
+this section briefly describes the general structure of the analysis strings
+produced (or accepted in the generation model) by TRmorph.
+In this document we use the term \emph{morphological tag} for symbols such as \mtag{V}, or \mtag{past}.
+The term \emph{morphological analysis} (or \emph{analysis}) is used for a root word followed by a sequence of morphological tags. 
+In the example presented in Section~\ref{sec:try}, 
+the analysis \texttt{oku}\mtag{V}\mtag{past}\mtag{1s} (for the word \xmplt{okudum}{I read-PAST}) consists of the root word \xmplt{oku}{read} 
+and morphological tags \mtag{V}, \mtag{past} and \mtag{1s} 
+that correspond to part-of-speech category of the root (verb), past tense marker
+and first person singular subject--predicate agreement marker.
+The inflections that are default for a word category, 
+such as the fact that the word above positive (or is not negated), 
+are not indicated in the analyses.
+
+An interesting aspect of Turkish morphology is that 
+the words cannot just be analyzed as belonging to a syntactic category and having a set of inflections based on a category.
+An inflected word may change its part of speech and may also get further inflections.
+Example~(\ref{ig-example}) demonstrates this process with the analysis of of the word \xmpl{evdekilerinki}{the \emph{ones} that belong to the \emph{ones} in the house}, as in `the \emph{book} that belong to the \emph{people} in the house'.
 
 \enumsentence{\label{ig-example}ev\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
 
-The example analysis in (\ref{ig-example}) includes the following IGs.
+The example analysis in (\ref{ig-example}) can be broken down int following steps.
 
 \begin{enumerate}
-\item The initial noun `ev' with the locative maker.
+\item The initial noun \xmpl{ev} with the locative maker.
 \item Addition of the suffix \sffx{ki} makes an adjective.
 \item The adjective becomes a (pro)nominal with a zero derivation,
 which is inflected for plural and genitive case.
@@ -251,17 +253,28 @@ adjective again.\footnote{More likely reading of this example
 includes another zero derivation causing final POS to be again noun.}
 \end{enumerate}
 
-By default, TRmorph does not mark IG boundaries explicitly. However,
-one can easily trace the IG changes following the POS tags. All POS
-tag names start with a capital letter, while other tags always start
-with a lowercase letter or number. The tag before a new POS tag is
-always preceded with the tag of the suffix that cause the derivation.
-When there is no surface suffix, a zero-derivation tag \mtag[def]{0} is
-inserted before the POS tag.
+The example in (\ref{ig-example}) is also interesting because of the fact the suffix \sffx{ki} may result indefinitely long words (see Section~\ref{ssec:ki}).
 
-The example in (\ref{ig-example}) is also interesting because of the
-fact the suffix \sffx{ki} may result indefinitely long words (see
-Section~\ref{ssec:ki}).
+
+In Turkish NLP literature, this process is reflected by so-called \emph{inflectional groups} (IGs) that,
+for example, can participate in dependency relations.
+In one sense each step in the above description describes a different inflectional group.
+The analysis strings produced (or accepted in the generation model) by TRmorph follow the idea of inflectional groups with a slight difference than the examples in the literature.
+TRmorph makes a distinction between the derivational marker that leads to the POS tag of a IG from the inflectional features of the IG,  
+and the derivational marker is always precedes the POS tag.
+For example, the second inflectional group in (\ref{ig-example}) is \mtag{ki}\mtag{Adj},
+indicating the adjective derived by \mtag{ki} has not (non-default) inflections.
+
+By default, TRmorph does not mark IG boundaries explicitly. 
+However, one can easily trace the IG changes following the POS tags. 
+All POS tag names start with a capital letter, 
+while other tags always start with a lowercase letter or number. 
+The tag immediately before a new POS tag is always the derivational marker that lead to the new POS tag.
+If the derivation does not have a corresponding surface affix, 
+a zero-derivation tag \mtag[def]{0} is inserted before the POS tag.
+
+\subsection{Part-of-speech tags}
+
 
 
 %\begin{table}[t]
@@ -448,10 +461,10 @@ quantifiers) can be implemented in the future.
 First subcategory is the syntactic category (POS) of the resulting
 postpositional phrase, either an \emph{adjectival} or \emph{adverbial}
 phrase, marked as \mtag[def]{Postp:adj} and \mtag[def]{Postp:adv}
-respectively. Note that unlike other POS tags, these subcategory
+respectively. Note that unlike other POS tags, these category
 markers start with a lowercase letter.
 
-Postpositions choose their noun phrase complements.  Besides the
+Postpositions choose their noun phrase complements. Besides the
 category of the resulting phrase, postpositions also include a tag
 specifying the requirement for the complement noun phrase. The tag
 marking required complement type is formed by a concise
@@ -468,10 +481,14 @@ postpositions that require the noun phrase to be suffixed with either
 \mtag[def]{Postp:liC}.\footnote{These suffixes are typically considered derivational suffixes, 
 however their use resemble case markers.}
 Postpositions that require
-non-case marked complement are tagged \mtag[def]{Postp:nomC}. The
-postpositions that require non-case-marked complements also take
-genitive marked pronouns as their complements. Finally, postpositions that require numeric expressions as their
+non-case marked complement are tagged \mtag[def]{Postp:nomC}.  Finally, postpositions that require numeric expressions as their
 complements are marked with \mtag[def]{Postp:numC}.
+For some the postpositions that take more than one type of noun complements,
+TRmorph produces only the (presumably) most common option.
+For example, the postpositions that are marked as \mtag{nomC} also take genitive marked pronouns as complements.
+Similarly, postpositions \xmpl{önce} and \xmpl{sonra} that normally take ablative complements,
+can also take bare (non-case-marked) numbers or time expressions.
+
 
 \item[Numbers] are tagged as \mtag[def]{Num:ara} for Arabic numerals,
 and \mtag[def]{Num:rom} for Roman numerals. Numbers that are spelled
