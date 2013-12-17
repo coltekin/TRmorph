@@ -78,7 +78,7 @@
  * say/write `şarap-cı'. Enabling this options allow analyzing these
  * words.
  *
- * This option is currenly global. It cannot be customized for
+ * This option is currently global. It cannot be customized for
  * different components here.
  *
  */
@@ -140,7 +140,7 @@
  *
  * If this option is set to 1, the question particle -mI will be
  * allowed to be written together with the predicate it attaches to.
- * This is inccorrect spelling, but a very common mistake in informal
+ * This is incorrect spelling, but a very common mistake in informal
  * writing.
  */
 
@@ -165,3 +165,22 @@
  */
 
 #define PREDICATE_WITHOUT_PAGR 1
+
+/* ALLOW_COMMON_TYPOS
+ *
+ * Analyze common typos listed in lexicon/common_typos
+ *
+ * Note that this does not change common typos regarding some suffixes
+ * and clitics. 
+ *  - For -mI written together with the predicate, see the
+ *    option MI_NOSPACE above. 
+ *  - Currently we do not allow -dA to be written together with the
+ *    preceding word---which we should probably allow optionally.
+ *
+ * MARK_TYPOS will mark the root forms that resulted from a typo in
+ * the output of the analyzer, 
+ *
+ */
+
+#define ALLOW_COMMON_TYPOS 1
+#define MARK_TYPOS 1

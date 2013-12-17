@@ -495,6 +495,13 @@ LEXICON NAbbrCont
 LEXICON N
 %<N%>:@RB   Ncont;
 
+LEXICON N_typo
+#if (MARK_TYPOS == 1) 
+%<N%:typo%>:@RB     Ncont;
+#else
+                    N;
+#endif
+
 LEXICON NPart
 %<N%:partial%>:@RB   #;
 
@@ -670,6 +677,13 @@ LEXICON DIrEnd
 LEXICON Adj
 %<Adj%>:@RB        AdjCont;
 
+LEXICON Adj_typo
+#if (MARK_TYPOS == 1) 
+%<Adj%:typo%>:@RB     AdjCont;
+#else
+                    Adj;
+#endif
+
 LEXICON AdjPartLast
 %<Adj%:partial%>:@RB        AdjCont;
 
@@ -690,6 +704,14 @@ LEXICON AdvHep
 
 LEXICON Adv
 %<Adv%>:@RB         AdvCont;
+
+
+LEXICON Adv_typo
+#if (MARK_TYPOS == 1) 
+%<Adv%:typo%>:@RB     AdjCont;
+#else
+                    Adv;
+#endif
 
 LEXICON AdvPartLast
 %<Adv%:partial%>:@RB        AdvCont;

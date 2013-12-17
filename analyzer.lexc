@@ -55,6 +55,9 @@ Exceptions;
 #include "number.lexc"
 #include "exceptions.lexc"
 
+#if (ALLOW_COMMON_TYPOS == 1)
+#include "lexicon/common_typos"
+#endif
 
 !
 ! Include the definition of morphological process
