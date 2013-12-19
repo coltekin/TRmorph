@@ -84,6 +84,7 @@ ait                             datPostPadj;
 dair                            datPostPadj;
 ilişkin                         datPostPadj;
 yönelik                         datPostPadj;
+yakın                           datPostPadj; ! iki bine yakın aile
 
 atfen                           datPostP;
 binaen                          datPostP;

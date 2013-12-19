@@ -52,6 +52,9 @@ bunca           DetIndef;
 öyle            DetIndef;
 böyle           DetIndef;
 şöyle           DetIndef;
+öyle% bir       DetIndef;
+böyle% bir      DetIndef;
+şöyle% bir      DetIndef;
 ! kaç           DetQIndef; ! we mark this as number
 ne% kadar       DetIndefQ;
 ! definite_determiners_below_this_line#

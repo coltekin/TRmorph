@@ -1183,7 +1183,7 @@ Kaya    NPperson;
 Kayhan    NPperson;
 Kaymak    NPperson;
 Kaynarca    NPperson;
-Kayyali    NPperson;
+Kayyalı    NPperson;
 Kazak    NPperson;
 Kekilli    NPperson;
 Keleş    NPperson;
@@ -1194,7 +1194,7 @@ Keskin    NPperson;
 Kılıç    NPperson;
 Kılıçlı    NPperson;
 Kimyacıoğlu    NPperson;
-Kinali    NPperson;
+Kınalı    NPperson;
 Kıraç    NPperson;
 Kiraz    NPperson;
 Kirdar    NPperson;
@@ -1254,10 +1254,10 @@ Nadi    NPperson;
 Nalband    NPperson;
 Nalci    NPperson;
 Namik    NPperson;
-Namli    NPperson;
+Namlı    NPperson;
 Nas    NPperson;
 Nazif    NPperson;
-Nazli    NPperson;
+Nazlı    NPperson;
 Nazmi    NPperson;
 Necmi    NPperson;
 Neftçi    NPperson;
@@ -1499,3 +1499,15 @@ Zorlu    NPperson;
 Öztop      NPperson;
 Sel        NPperson;
 Kızılcı^k  NPperson;
+
+!
+! TODO: we better analyze produce all surnames with -lI suffix from
+! location names.
+!
+Ilıcalı     NPperson;
+
+! similarly, maybe surnames with -oğlu
+Konukoğlu   NPperson;
+
+! similarly, maybe surnames with -CI
+Kavakçı     NPperson;

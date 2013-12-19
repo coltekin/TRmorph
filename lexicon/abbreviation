@@ -209,6 +209,7 @@ VA                      NP_abbr;
 AŞ                      N_abbr;
 A.Ş                     N_abbr;
 TEDAŞ                   NP_abbr;
+YKM                     NP_abbr;
 !
 ! The following are From Taner Sezer. Not fully checked.
 ! Some may need silent phonemes to be inflected correctly.
