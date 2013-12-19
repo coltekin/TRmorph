@@ -226,7 +226,7 @@ produced (or accepted in the generation model) by TRmorph.
 In this document we use the term \emph{morphological tag} for symbols such as \mtag{V}, or \mtag{past}.
 The term \emph{morphological analysis} (or \emph{analysis}) is used for a root word followed by a sequence of morphological tags. 
 In the example presented in Section~\ref{sec:try}, 
-the analysis \texttt{oku}\mtag{V}\mtag{past}\mtag{1s} (for the word \xmplt{okudum}{I read-PAST}) consists of the root word \xmplt{oku}{read} 
+the analysis \mroot{oku}\mtag{V}\mtag{past}\mtag{1s} (for the word \xmplt{okudum}{I read-PAST}) consists of the root word \xmplt{oku}{read} 
 and morphological tags \mtag{V}, \mtag{past} and \mtag{1s} 
 that correspond to part-of-speech category of the root (verb), past tense marker
 and first person singular subject--predicate agreement marker.
@@ -236,10 +236,12 @@ are not indicated in the analyses.
 
 An interesting aspect of Turkish morphology is that 
 the words cannot just be analyzed as belonging to a syntactic category and having a set of inflections based on a category.
-An inflected word may change its part of speech and may also get further inflections.
+Due to productive derivational process, 
+an inflected word may change its part of speech and may also get further inflections.
 Example~(\ref{ig-example}) demonstrates this process with the analysis of of the word \xmpl{evdekilerinki}{the \emph{ones} that belong to the \emph{ones} in the house}, as in `the \emph{book} that belong to the \emph{people} in the house'.
 
-\enumsentence{\label{ig-example}ev\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
+\enumsentence{\label{ig-example}%
+\mroot{ev}\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
 
 The example analysis in (\ref{ig-example}) can be broken down int following steps.
 
@@ -629,9 +631,9 @@ with the noun interpretation,
 e.g., not `the 'three' that belongs to us' but `three of us'.
 In this use, possessive markers are treated like a derivational suffix.
 The examples above would be analyzed as 
-\xmpl{üç\mtag{Num}\mtag{p1p}\mtag{Prn}},
-\xmpl{bazı\mtag{Det:indef}\mtag{p1p}\mtag{Prn}} and
-\xmpl{eski\mtag{Adj}\mtag{p3s}\mtag{Prn}},
+\mroot{üç}\mtag{Num}\mtag{p1p}\mtag{Prn},
+\mroot{bazı}\mtag{Det:indef}\mtag{p1p}\mtag{Prn} and
+\mroot{eski}\mtag{Adj}\mtag{p3s}\mtag{Prn},
 respectively.
 
 
@@ -642,7 +644,7 @@ For example, in participle use of
 the possessive suffix marks who does the reading, 
 and not a possession relation in the usual sense.
 Currently trmorph analyzes this word as
-\xmpl{oku\mtag{V}\mtag{part:fut}\mtag{Adj}\mtag{p1s}}
+\xmpl{\mroot{oku}\mtag{V}\mtag{part:fut}\mtag{Adj}\mtag{p1s}}
 
 The \sffx{(s)I} suffix, listed as \mtag{p3s} in
 Table~\ref{tbl:noun-inflections}, is highly ambiguous. One of its many
@@ -695,13 +697,13 @@ the suffix affects a larger `time phrase', like \xmplt{bu yılki
 üretim}{this-year's production}.} The resulting word functions as an
 adjective or a pronoun. In both cases, TRmorph marks the transition to
 an adjective. For example, \xmpl{evdeki} is analyzed as
-`ev\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}'. Since all adjectives are
+`\mroot{ev}\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}'. Since all adjectives are
 allowed to become a noun through a zero derivation, the pronoun
 reading is intended to be represented by this change. For example, the
 intended analysis for \xmplt{evdeki kitap}{the book in the house} is
-`ev\mtag[noindex]{N}\mtag[noindex]{loc}\mtag[noindex]{ki}\mtag[noindex]{Adj}',
+`\mroot{ev}\mtag[noindex]{N}\mtag[noindex]{loc}\mtag[noindex]{ki}\mtag[noindex]{Adj}',
 while analysis for \xmplt{evdeki uyuyor}{the one/person in the house is
-sleeping} appends `\mtag{0}\mtag{N}' at the end of the analysis
+sleeping} appends \mtag{0}\mtag{N} at the end of the analysis
 string.
 
 The (pro)noun formed by \sffx{ki} can further be suffixed with other
@@ -851,7 +853,7 @@ relatively productive, the others are rare or their use are mostly
 lexicalized. Although not frequent in use, more than one these
 suffixes may attach to the same stem, for example
 \xmplt{çıkıverebilir}{he/she/it may possibly come out/show up} analyzed
-as `çık\mtag{V}\mtag{iver}\mtag{V}\mtag{abil}\mtag{V}\mtag{aor}\mtag{3s}'.
+as `\mroot{çık}\mtag{V}\mtag{iver}\mtag{V}\mtag{abil}\mtag{V}\mtag{aor}\mtag{3s}'.
 
 The form of \mtag{abil} in a negative verb is \sffx{(y)A}, and unlike
 the rest of the suffixes listed in Table~\ref{tbl:compound-verb} it
@@ -906,26 +908,25 @@ Tag & Suffix & Description \\
 
 After TAM markers a finite verb requires one of the person and number agreement markers. 
 For any finite predicate an agreement marker is compulsory.
-However, by default TRmorph accepts a predicate with a TAM marker but no agreement marker,
-since in some cases, the agreement marker can be attached after the question particle (see Section~\ref{ssec:question}).
-This behavior can be disabled in compile time.
 
-
+Morphological tags for the agreement markers are composed of two characters, e.g., \mtag{1s} or \mtag{3p}.
+The first character is a number indicating the person 
+(\textbf{1}$^\textrm{st}$, 
+\textbf{2}$^\textrm{nd}$ 
+or \textbf{3}$^\textrm{rd}$),
+and second one indicates the number (\textbf{s}ingular or \textbf{p}lural).
 The surface form of the person-number agreement markers change depending on the suffixes they follow.  
-Table~\ref{tbl:agreement} lists the person agreement markers and their surface form according the TAM of the verb they attach to.
-Note that the third person singular marker is null on the surface 
-after most TAM markers.
+Table~\ref{tbl:agreement} lists the person agreement markers and their surface forms according the TAM of the verb they attach to.
+Note that the third person singular marker is null on the surface after most TAM markers.
 Furthermore, since a predicate with third person singular marker will also agree with third person plural subject, 
 all forms that are marked with a \mtag{3s} tag will also be marked with a \mtag{3p} tag.
+A predicate with plural agreement marker may also indicate or agree with a singular subject in polite/formal speech.
+However, TRmorph does not mark predicates with plural agreement markers with the \mtag{3s} tag.
+
 
 \begin{table}[t]
-\caption{\label{tbl:agreement}Verbal person agreement markers. The
-first character of the person agreement tags is a number indicating
-the person (\emph{1}$^\textrm{st}$, \emph{2}$^\textrm{nd}$ or
-\emph{3}$^\textrm{rd}$),
-and second one indicates the number (\emph{s}ingular or \emph{p}lural).
-The suffixes listed in the column marked `TAM1' follow the TAM markers
-\mtag{evid},\mtag{fut},\mtag{obl},\mtag{impf} and \mtag{cont} as well
+\caption{\label{tbl:agreement}Person-number agreement markers. The suffixes listed in the column marked `TAM1' follow the TAM markers
+\mtag{evid}, \mtag{fut}, \mtag{obl}, \mtag{impf} and \mtag{cont} as well
 as the evidential copula \mtag{cpl:evid} and nominal predicates. 
 The same set of suffixes also follow positive verbs with \mtag{aor}
 without a negative marker. 
@@ -953,9 +954,31 @@ Tag  & TAM1 & TAM2 & optative & imperative \\
 \end{center}
 \end{table}
 
-%The use of these agreement markers for the purposes of
-%subject--predicate agreement require more than just looking for the
-%matching tag.
+Although an agreement marker is required for a predicate,
+TRmorph accepts a predicate with a TAM marker but without an agreement marker.
+There are a few cases where the agreement marker can be attached somewhere else.
+In a relatively common case, 
+the agreement marker be on the question particle 
+(see Section~\ref{ssec:question}), as in 
+\mtag{2s} suffix \sffx{sIn} in 
+\xmplt{uyuyacak- mı\textbf{sın}?}{are you going to sleep?} 
+(dash `-' in the example marks the expected position of the suffix).
+Another case for predicates without agreement markers is `delayed suffixation' of coordinated predicates,
+where only last predicate may have the agreement marker.
+For example \xmplt{kahvaltı eder-, oltalarımızı alır-, balığa gider\textbf{iz}}{We have breakfast, take our hooks, an go fishing}.
+Note that the predicates without agreement markers will also receive \mtag{3s} and \mtag{3s} analyses,
+since a predicate with a null agreement suffix agrees with third person singular and plural subjects.
+The agreement marker can be made compulsory during the compile time.
+
+One final note on agreement markers is that 
+the subject--predicate agreement in Turkish is more complicated than simply matching agreement markers on subject noun phrase and the predicate
+\parencite[see][chapter~5]{goksel2005}.
+TRmorph marks nominals for number (if it is plural), but not for person, 
+except in a few lexically specified cases, e.g., personal pronouns.
+It would be easy to modify TRmorph to mark any noun that can become a subject
+(typically no case marked nouns, but also genitive in some cases)
+with third-person agreement.
+However, utility of such a marker is not clear.
 
 \subsection{\label{ssec:verbal-copula}Copular markers and \sffx{DIr}}
 
@@ -1104,7 +1127,7 @@ For example, the word
 \xmpl{görülmüş} in 
 \xmplt{görülmüş mektup}{see-PASV-EVID letter = the letter that was seen} 
 is analyzed as
-`gör\mtag{V}\mtag{pass}\mtag{V}\mtag{evid}\mtag{Adj}'.
+`\mroot{gör}\mtag{V}\mtag{pass}\mtag{V}\mtag{evid}\mtag{Adj}'.
 
 \subsection{Productive derivational morphemes}
 
@@ -1277,16 +1300,16 @@ disambiguators.
 \begin{enumerate}
 \item Ambiguous root forms, for example \emph{yüz} can be analyzed as:
     \begin{enumerate}
-    \item yüz\mtag{N} `face'
-    \item yüz\mtag{Num} `hundred'
-    \item yüz\mtag{V}\mtag{imp}\mtag{2s} `swim'
+        \item \mroot{yüz}\mtag{N} `face'
+        \item \mroot{yüz}\mtag{Num} `hundred'
+        \item \mroot{yüz}\mtag{V}\mtag{imp}\mtag{2s} `swim'
     \end{enumerate}
 \item\label{itm:buna} A root form is the same as a shorter root and one or more
 suffixes, for example \emph{buna} can be analyzed as
     \begin{enumerate}
-    \item bu\mtag{Prn:dem}\mtag{dat} `this-DAT'
-    \item buna\mtag{V}\mtag{imp}\mtag{2s} `become senile-IMP'
-    \item bun\mtag{N}\mtag{dat}   `trouble-DAT'
+        \item \mroot{bu}\mtag{Prn:dem}\mtag{dat} `this-DAT'
+        \item \mroot{buna}\mtag{V}\mtag{imp}\mtag{2s} `become senile-IMP'
+        \item \mroot{bun}\mtag{N}\mtag{dat}   `trouble-DAT'
     \end{enumerate}
 Note that the root `bun' is a very rare/regional word, and the imperative
 verb reading is also very unlikely. However the best option
@@ -1295,36 +1318,36 @@ stages analysis disambiguate between them.
 
 \item\label{itm:sub-suffix} The surface form of a suffix is a combination of two other suffixes. For example, the word \xmpl{evleri} can be
     \begin{enumerate}
-    \item ev\sffx{leri} `ev\mtag{N}\mtag{p3p} = their house'
-    \item ev\sffx{ler}\sffx{i} `ev\mtag{N}\mtag{pl}\mtag{acc} = houses-ACC'
+        \item ev\sffx{leri} `\mroot{ev}\mtag{N}\mtag{p3p} = their house'
+        \item ev\sffx{ler}\sffx{i} `\mroot{ev}\mtag{N}\mtag{pl}\mtag{acc} = houses-ACC'
     \end{enumerate}
 Furthermore, the same word can also be analyzed as 
     \begin{enumerate}
-    \item `ev\mtag{N}\mtag{pl}\mtag{p3s}' 
-    \item `ev\mtag{N}\mtag{pl}\mtag{p3p}'  
-    \item `ev\mtag{N}\mtag{ncomp}\mtag{p3p}'
-    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}'
-    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}'
-    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3s}' 
-    \item `ev\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}'
+        \item \mroot{ev}\mtag{N}\mtag{pl}\mtag{p3s}
+    \item \mroot{ev}\mtag{N}\mtag{pl}\mtag{p3p}
+    \item \mroot{ev}\mtag{N}\mtag{ncomp}\mtag{p3p}
+    \item \mroot{ev}\mtag{N}\mtag{ncomp}\mtag{pl}
+    \item \mroot{ev}\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}
+    \item \mroot{ev}\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3s} 
+    \item \mroot{ev}\mtag{N}\mtag{ncomp}\mtag{pl}\mtag{p3p}
     \end{enumerate}
 The reason for these analyses has to do with the sources of ambiguity explained in items \ref{itm:different-func} and \ref{itm:null-suffix}.
 \item An analysis with multiple morphemes is also a (derived) lexicalized form. For example the word \xmpl{konuşma} can be analyzed as 
     \begin{enumerate}
-    \item konuşma\mtag{N} `speech'
-    \item konuş\mtag{V}\mtag{vn:inf}\mtag{N}  infinitive `to speak', e.g., as in \xmplt{konuşmamızı isemiyorlar}{The do not want us \emph{to speak}}
-    \item konuş\mtag{V}\mtag{neg}\mtag{imp}\mtag{2s} `speak-NEG-IMP = don't talk'
+        \item \mroot{konuşma}\mtag{N} `speech'
+        \item \mroot{konuş}\mtag{V}\mtag{vn:inf}\mtag{N}  infinitive `to speak', e.g., as in \xmplt{konuşmamızı isemiyorlar}{The do not want us \emph{to speak}}
+        \item \mroot{konuş}\mtag{V}\mtag{neg}\mtag{imp}\mtag{2s} `speak-NEG-IMP = don't talk'
     \end{enumerate}
 \item\label{itm:same-surface} different affixes surfacing the same way, \emph{evin} can be
     \begin{enumerate}
-    \item ev\sffx{(n)In} `ev\mtag{N}\mtag{gen} =of the house'
-    \item ev\sffx{(I)n}  `ev\mtag{N}\mtag{p2s} =your house'
+        \item ev\sffx{(n)In} `\mroot{ev}\mtag{N}\mtag{gen} =of the house'
+        \item ev\sffx{(I)n}  `\mroot{ev}\mtag{N}\mtag{p2s} =your house'
     \end{enumerate}
 \item\label{itm:different-func} The same surface suffix has multiple
 functions. For example, the word \xmpl{doktorlar} can be,
     \begin{enumerate}
-    \item doktor\mtag{N}\mtag{pl} `doctors'
-    \item doktor\mtag{N}\mtag{0}\mtag{V}\mtag{cpl:pres}\mtag{3p} `they are doctors'
+        \item \mroot{doktor}\mtag{N}\mtag{pl} `doctors'
+        \item \mroot{doktor}\mtag{N}\mtag{0}\mtag{V}\mtag{cpl:pres}\mtag{3p} `they are doctors'
     \end{enumerate}
 \item\label{itm:3p-3s} The suffix \sffx{(s)I} that marks third person
 singular possessive and the null suffix that marks third person
@@ -1332,12 +1355,12 @@ singular subject--predicate agreement may also have third person
 plural readings. For example,
     \begin{enumerate}
     \item The word \xmpl{ev-i} can both mean `his/her house'
-    (ev\mtag{N}\mtag{p3s}) as well as `their house' (ev\mtag{N}\mtag{p3p}).
+        (\mroot{ev}\mtag{N}\mtag{p3s}) as well as `their house' (\mroot{ev}\mtag{N}\mtag{p3p}).
     \item A verb like \xmplt{okudu}{read-PAST} with no overt
     agreement marker may agree with a third person singular or plural
     subject. Hence, it is analyzed with 
-    both singular (`he/she read-PAST' oku\mtag{V}\mtag{past}\mtag{3s}) 
-    and plural (`he/she read-PAST' oku\mtag{V}\mtag{past}\mtag{3p}) 
+    both singular (`he/she read-PAST' \mroot{oku}\mtag{V}\mtag{past}\mtag{3s}) 
+    and plural (`he/she read-PAST' \mroot{oku}\mtag{V}\mtag{past}\mtag{3p}) 
     third person agreement markers.
     \end{enumerate}
 
@@ -1350,8 +1373,8 @@ compound head marker is enabled during the compile time.
 
 \item\label{itm:null-suffix} Some suffixes are not realized on the surface in the neighborhood of some other suffixes. These are generally, but not always, the suffixes having the same or similar surface forms. For example, \xmpl{evleri} (the example in item \ref{itm:sub-suffix}) may be analyzed as
     \begin{enumerate}
-    \item ev\mtag{N}\mtag{p3p}  as in \xmplt{Annem ve babamın evleri Istanbul'da}{My parents' house is in Istanbul}
-    \item ev\mtag{N}\mtag{pl}\mtag{p3p} as in \xmplt{Annem ve babamın bütün evleri deniz manzaralı}{All houses of my parents have a see view}.
+        \item \mroot{ev}\mtag{N}\mtag{p3p}  as in \xmplt{Annem ve babamın evleri Istanbul'da}{My parents' house is in Istanbul}
+        \item \mroot{ev}\mtag{N}\mtag{pl}\mtag{p3p} as in \xmplt{Annem ve babamın bütün evleri deniz manzaralı}{All houses of my parents have a see view}.
     \end{enumerate}
 since in case of \mtag{pl} (\sffx{lAr}) and \mtag{p3p} (\sffx{lArI})
 are combined, the plural suffix \sffx{lAr} does not realized on the
@@ -1381,10 +1404,10 @@ illustrates the problem with a more tangible example, using the word
 more).
 
 \begin{enumerate}
-\item[(c)] araba\mtag{N}\mtag{siz}\mtag{Adj} `without a car'
-\item[(d)] araba\mtag{N}\mtag{p3s}\mtag{siz}\mtag{Adv} `without a his/her car'
-\item[(e)] araba\mtag{N}\mtag{ncomp}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without a horse carriage}
-\item[(f)] araba\mtag{N}\mtag{ncomp}\mtag{p3s}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without his/her horse carriage}
+    \item[(c)] \mroot{araba}\mtag{N}\mtag{siz}\mtag{Adj} `without a car'
+    \item[(d)] \mroot{araba}\mtag{N}\mtag{p3s}\mtag{siz}\mtag{Adv} `without a his/her car'
+    \item[(e)] \mroot{araba}\mtag{N}\mtag{ncomp}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without a horse carriage}
+    \item[(f)] \mroot{araba}\mtag{N}\mtag{ncomp}\mtag{p3s}\mtag{siz}\mtag{Adv}, e.g., in \xmplt{at arabasız}{without his/her horse carriage}
 \end{enumerate}
 
 \end{enumerate}
@@ -1449,7 +1472,7 @@ There are also a few other cases where some (sizable number of)
 speakers diverge from the canonical forms. An example is the redundant
 use of genitive suffix after a pronoun, before the suffix
 \sffx{(y)lA}, e.g., the surface form of
-`sen\mtag{Prn:pers:1s}\mtag{ins}' should be \xmpl{sen-in-le} where the
+`\mroot{sen}\mtag{Prn:pers:1s}\mtag{ins}' should be \xmpl{sen-in-le} where the
 suffix \sffx{in} is redundant. Some speakers tend not to use \sffx{in}
 in such constructions. TRmorph accepts both use, hence the generation
 will be ambiguous.
