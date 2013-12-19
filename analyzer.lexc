@@ -34,6 +34,7 @@ Exceptions;
 #include "lexicon/postposition"
 #include "lexicon/pronoun"
 #include "lexicon/verb"
+#include "lexicon/verb_la"
 #include "lexicon/person_names"
 #include "lexicon/person_names.foreign"
 #include "lexicon/location_names"
