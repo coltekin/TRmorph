@@ -64,7 +64,6 @@ halinde                         nomPostP;
 takdirde                        nomPostP;
 yerde                           nomPostP;
 durumunda                       nomPostP;
-halinde                         nomPostP;
 nispette                        nomPostP;
 oranda                          nomPostP;
 ölçude                          nomPostP;
@@ -84,7 +83,7 @@ ait                             datPostPadj;
 dair                            datPostPadj;
 ilişkin                         datPostPadj;
 yönelik                         datPostPadj;
-yakın                           datPostPadj; ! iki bine yakın aile
+yakın                           datPostPadj; ! iki bine yakın aile -- not in G&K
 
 atfen                           datPostP;
 binaen                          datPostP;
@@ -190,6 +189,7 @@ aracılı^k               PostPins; ! aracılığ-ı-yla
 itibar                  PostPins;! itibar-i-yla 
 itib^pAr                PostPins;! itibar-i-yla 
 vasıta                  PostPins;! vasita-si-yla
+suret                   PostPins;! suret-si-yla -- not in G&K
 neden                   PostPins;! neden-i-yle 
 yol                     PostPins;! yol-u-yla 
 
@@ -202,7 +202,7 @@ yer                     PostPdat;! yer-in-e
 saye                    PostPloc;! ‘shadow’ 
 boy                     PostPloc;! boy-un-ca 
 konu                    PostPloc;! konu-sun-da 
-hak                     PostPloc;! hakk-ın-da 
+ha@DUP@k                PostPloc;! hakk-ın-da 
 sıra                    PostPloc;! sıra-sın-de 
 
 ! these require possessive and and -cA

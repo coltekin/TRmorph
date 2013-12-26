@@ -58,6 +58,7 @@ böyle% bir      DetIndef;
 ! kaç           DetQIndef; ! we mark this as number
 ne% kadar       DetIndefQ;
 ! definite_determiners_below_this_line#
+iki             DetDef;     ! both
 o               DetDef;
 bu              DetDef;
 şu              DetDef;

@@ -26,6 +26,7 @@
 ! main verb lexicon
 !
 
+bildir       V;
 kate^t       V_AorAr;
 aban         V;
 abart        V;

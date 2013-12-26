@@ -1494,11 +1494,20 @@ Zaimoğlu    NPperson;
 Zarakolu    NPperson;
 Zengin    NPperson;
 Zeybek    NPperson;
-Zorlu    NPperson;
+Zorlu      NPperson;
 Özdalga    NPperson;
 Öztop      NPperson;
 Sel        NPperson;
 Kızılcı^k  NPperson;
+Çubukcu    NPperson;
+Buğday     NPperson;
+Bilmez     NPperson;
+Koru       NPperson;
+Uzan       NPperson;
+Koçibey    NPperson;
+Özlü       NPperson;
+Dağlarca   NPperson;
+Binyazar   NPperson;
 
 !
 ! TODO: we better analyze produce all surnames with -lI suffix from
@@ -1511,3 +1520,7 @@ Konukoğlu   NPperson;
 
 ! similarly, maybe surnames with -CI
 Kavakçı     NPperson;
+
+
+! transliterated foreign names
+Hipokrat        NP;
