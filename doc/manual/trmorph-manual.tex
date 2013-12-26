@@ -955,20 +955,28 @@ Tag  & TAM1 & TAM2 & optative & imperative \\
 \end{table}
 
 Although an agreement marker is required for a predicate,
-TRmorph accepts a predicate with a TAM marker but without an agreement marker.
-There are a few cases where the agreement marker can be attached somewhere else.
+TRmorph accepts a predicate with a TAM marker but without an agreement marker.%
+\footnote{The agreement marker can be made compulsory through compile time options.}
+There are a few cases where the agreement marker can be attached to somewhere else.
 In a relatively common case, 
-the agreement marker be on the question particle 
+the agreement marker may be on the question particle 
 (see Section~\ref{ssec:question}), as in 
 \mtag{2s} suffix \sffx{sIn} in 
-\xmplt{uyuyacak- mı\textbf{sın}?}{are you going to sleep?} 
-(dash `-' in the example marks the expected position of the suffix).
+\xmplt{(partiye) gidecek- mı\textbf{sın}?}{will you go (to the party)?} 
+(dash `-' indicates the expected position of the suffix in bold case).
+Similarly, a verb may lack an agreement marker if it is part of a compound verb formed by free auxiliaries \xmpl{ol} and \xmpl{bulun}, 
+for example \xmplt{gitmiş- bulun\textbf{duk}}{we happened to go},
+or \xmplt{gidecek- olursa\textbf{nız} (üzülürüm)}{if you were to go (I'd be upset)}).%
+\footnote{TRmorph currently does not treat or mark auxiliary verbs differently.
+Although, there are some restrictions on the suffixes that can be attached to auxiliaries.
+These two auxiliaries making verb-verb compounds, 
+and another (about) 10 auxiliaries that make nominal-verb compounds may be marked as auxiliary in the future.}
 Another case for predicates without agreement markers is `delayed suffixation' of coordinated predicates,
 where only last predicate may have the agreement marker.
-For example \xmplt{kahvaltı eder-, oltalarımızı alır-, balığa gider\textbf{iz}}{We have breakfast, take our hooks, an go fishing}.
+For example \xmplt{kahvaltı eder-, oltalarımızı alır-, balığa gider\textbf{iz}}{We have breakfast, take our hooks, and go fishing}.
 Note that the predicates without agreement markers will also receive \mtag{3s} and \mtag{3s} analyses,
 since a predicate with a null agreement suffix agrees with third person singular and plural subjects.
-The agreement marker can be made compulsory during the compile time.
+However, in all the examples above, tagging the main the predicates with third person markers would be incorrect.
 
 One final note on agreement markers is that 
 the subject--predicate agreement in Turkish is more complicated than simply matching agreement markers on subject noun phrase and the predicate
@@ -1119,8 +1127,9 @@ subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 Besides the subordinating suffixes (participles) discussed above, 
 some of the TAM markers, 
 namely \mtag{aor} (\sffx{Ar}/\sffx{Ir}), \mtag{evid} (\sffx{mIş}) and \mtag{fut} (\sffx{AcAk}).%
-\footnote{These forms are related to a semantically similar construction, 
-where they precede the auxiliary verb \xmpl{ol} with present participle suffix (\xmpl{ol-an}).}
+\footnote{Although they differ in usage, 
+these forms have the same semantics as 
+the verb-verb compounds formed by the auxiliary auxiliary verb \xmpl{ol} with present participle suffix (\xmpl{ol-an}).}
 TRmorph handles this by analyzing any verb with one of these TAM markers without further suffixes 
 (e.g., agreement markers) as an adjective. 
 For example, the word 
@@ -1492,7 +1501,6 @@ analysis string with a circumflexed vowel will have a surface form
 with and without circumflex.
 
 \end{enumerate}
-
 
 \section{\label{sec:other-tools}Other tools}
 
