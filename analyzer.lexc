@@ -34,7 +34,9 @@ Exceptions;
 #include "lexicon/postposition"
 #include "lexicon/pronoun"
 #include "lexicon/verb"
-#include "lexicon/verb_la"
+#if (ANALYZE_lA == 0)
+    #include "lexicon/verb_la"
+#endif
 #include "lexicon/person_names"
 #include "lexicon/person_names.foreign"
 #include "lexicon/location_names"

@@ -184,3 +184,22 @@
 
 #define ALLOW_COMMON_TYPOS 1
 #define MARK_TYPOS 1
+
+/* ANALYZE_lA
+ *
+ * Analyze the suffix -lA in all contexts.
+ *
+ * -lA is a productive derivational suffix that makes verbs from noun,
+ * adjectives, onomatopoeia, and interjections.
+ * However, it also increases the number of analyses per word
+ * drastically. 
+ *
+ * If this option is enabled, lA will be analyzed and the set of stems
+ * defined in lexicon/verb_la will be excluded from the root lexicon.
+ * Otherwise, -lA will only be analyzed for the onomatopoeic roots,
+ * and only the stems in lexicon/verb_la will be include din the
+ * analysis.
+ *
+ */
+
+#define ANALYZE_lA 1

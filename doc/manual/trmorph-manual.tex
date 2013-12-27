@@ -628,7 +628,7 @@ Examples include,
 \xmplt{eski-si}{the old one (of them)}.
 Note that this usage is different than possessively marked adjective 
 with the noun interpretation, 
-e.g., not `the 'three' that belongs to us' but `three of us'.
+e.g., not `the three that belongs to us' but `three of us'.
 In this use, possessive markers are treated like a derivational suffix.
 The examples above would be analyzed as 
 \mroot{üç}\mtag{Num}\mtag{p1p}\mtag{Prn},
@@ -644,7 +644,7 @@ For example, in participle use of
 the possessive suffix marks who does the reading, 
 and not a possession relation in the usual sense.
 Currently trmorph analyzes this word as
-\xmpl{\mroot{oku}\mtag{V}\mtag{part:fut}\mtag{Adj}\mtag{p1s}}
+\mroot{oku}\mtag{V}\mtag{part:fut}\mtag{Adj}\mtag{p1s}.
 
 The \sffx{(s)I} suffix, listed as \mtag{p3s} in
 Table~\ref{tbl:noun-inflections}, is highly ambiguous. One of its many
@@ -1126,7 +1126,8 @@ subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 
 Besides the subordinating suffixes (participles) discussed above, 
 some of the TAM markers, 
-namely \mtag{aor} (\sffx{Ar}/\sffx{Ir}), \mtag{evid} (\sffx{mIş}) and \mtag{fut} (\sffx{AcAk}).%
+namely \mtag{aor} (\sffx{Ar}/\sffx{Ir}), \mtag{evid} (\sffx{mIş}) and \mtag{fut} (\sffx{AcAk}),
+derive adjectives from verbs.%
 \footnote{Although they differ in usage, 
 these forms have the same semantics as 
 the verb-verb compounds formed by the auxiliary auxiliary verb \xmpl{ol} with present participle suffix (\xmpl{ol-an}).}
@@ -1148,18 +1149,21 @@ considered derivational suffixes. Some of these suffixes, for example
 that are already inflected by other suffixes. Others normally attach
 only to the stem and produce another stem.
 
-Of these suffixes, the noun--verb derivation suffix \sffx{lA} causes a
-large number of ambiguous analyses since it is part of many other
-suffixes. These, for example, include the plural suffix \sffx{lAr}
-whose remainder \sffx{r} also matches a verbal suffix (aorist).
-Hence, including \sffx{lA} in the analysis causes an increase in the
-analyses of any plural noun. Currently, TRmorph analyzes \sffx{lA}
-only after onomatopoeia. The rest of the verbs derived from nouns
-using this suffix are lexically specified.
+Of these suffixes, \sffx{lA} causes a large number of ambiguous analyses 
+since it is part of a few other suffixes, 
+for example, the plural suffix \sffx{lAr}.
+In case of \sffx{lAr}, whose remainder \sffx{r} also matches a verbal suffix (aorist marker),
+any plural noun is analyzed as a verb as well.
+For example, the word \xmpl{kanıtlar} is analyzed as \mroot{kanıt}\mtag{N}\mtag{pl} `evidence-PLU', or \mroot{kanıt}\mroot{N}\mtag{la}\mtag{V}\mtag{aor}\mtag{3s} `(s)he proves (it)'.
+Hence, including \sffx{lA} in the analysis causes an increase in the number of analyses produced by TRmorph.
+The analysis of the suffix \sffx{lA} can be disabled during the compile time.
+In this case, a separate lexicon containing verbs with derivational suffix \sffx{lA} will be included in the root lexicon.
+Some of the `lexicalized' verbal stems that end in \sffx{lA} are included in the main lexicon,
+and will result in an analysis with a stem including \sffx{lA} regardless of this option.
+Similarly, \sffx{lA} is always accepted on onomatopoeic roots and interjections.
 
-TRmorph does not limit the number of derivational suffixes that can be
-stringed one after another other, even though multiple derivations of
-this sort is a lot more restricted. 
+TRmorph does not limit the number of derivational suffixes that can be stringed one after another other, 
+even though multiple derivations of this sort is a lot more restricted. 
 
 Besides the sources of possible erroneous over-analyses listed above,
 the derivational morphology specification in TRmorph over-generates in
@@ -1177,9 +1181,11 @@ POS after the suffixation. Here,
 \texttt{J},
 \texttt{A},
 \texttt{M},
-\texttt{V} and 
+\texttt{V},
+\texttt{I} 
+and 
 \texttt{O} 
-stand for noun, adjective, adverb, number, verb and onomatopoeia, respectively.}
+stand for noun, adjective, adverb, number, verb interjection and onomatopoeia, respectively.}
 \begin{center}
 \begin{tabular}{lll}\toprule
 Tag              & Suffix        & Derivation \\
@@ -1203,7 +1209,7 @@ Tag              & Suffix        & Derivation \\
 \mtag[def]{yis}  & \sffx{yIş}    & VN \\
 \mtag[def]{esi}  & \sffx{(y)AsI} & VJ \\
 \mtag[def]{sal}  & \sffx{sAl}    & NJ \\
-\mtag[def]{la}   & \sffx{lA}     & NV  OV \\
+\mtag[def]{la}   & \sffx{lA}     & NV  JV OV IV\\
 \mtag[def]{dir}  & \sffx{DIr}    & NA \\
 \bottomrule
 \end{tabular}

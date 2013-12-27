@@ -364,7 +364,11 @@ LEXICON  OnomCont
 ! easier with old lexicon conversion.
 
 LEXICON Interjection
-%<Ij%>:@RB      #;
+%<Ij%>:@RB      InterjectionCont;
+
+LEXICON InterjectionCont
+                  #;
+                  D_lA;
 
 ! LEXICON QIntj   ! this used to be `hani'.
 ! %<Ij%:qst%>:@RB      #;
@@ -1919,7 +1923,9 @@ LEXICON Nderiv
             ND_CA;
             D_CI;
             D_CIl;
-!            ND_lA;
+#if (ANALYZE_lA == 1)
+            D_lA;
+#endif
             ND_lAn;
             ND_lAS;
             D_sAl;
@@ -1938,6 +1944,9 @@ LEXICON Pderiv
 LEXICON Jderiv
             JD_lIk;
             D_lI;
+#if (ANALYZE_lA == 1)
+            D_lA;
+#endif
             JD_CA;
             JD_lAn;
             JD_lAS;
@@ -1958,7 +1967,7 @@ LEXICON Vderiv
             D_yAsI;
 
 LEXICON Oderiv
-            OD_lA;
+            D_lA;
 
 ! -lI is productive. The simple example is 
 !           şeker `sugar' -> şeker-li `[something] with sugar' 
@@ -2130,7 +2139,7 @@ LEXICON D_dir
 !
 !LEXICON ND_lA
 !%<la%>:l^A       DerivVCont;
-LEXICON OD_lA
+LEXICON D_lA
 %<la%>:l^A       DerivVCont;
 
 ! -lAn makes verbs from nouns and adjectives
