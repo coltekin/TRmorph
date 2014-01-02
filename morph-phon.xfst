@@ -544,6 +544,9 @@ define VowelHarmony [ %^I -> ı  //  Vbu          \Vall* _  ,,
 
 define FSDevoicing  [%^c -> c,
                      %^g -> ğ,
+#if (ALLOW_mAG == 1)
+                     %^K (->) ğ,
+#endif
                      %^K -> y,
                      %^p -> b,
                      %^t -> d ||    _ IntSym* [ Vowel | Vxx ]  ]

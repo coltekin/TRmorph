@@ -203,3 +203,15 @@
  */
 
 #define ANALYZE_lA 1
+
+/* AlLOW_mAG
+ *
+ * If the suffix -mAK precedes another suffix (typically dative
+ * -(y)A or accusative -(y)I) `K' is realized as `y'. However,
+ * in some (older?) texts it may be spelled with a `ğ' instead.
+ * When enabled, this option allows the forms with `ğ'. Otherwise only
+ * the standard (y) form is accepted.
+ *
+ */
+
+#define ALLOW_mAG 1
