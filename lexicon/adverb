@@ -1,3 +1,9 @@
+herhalde            Adv;
+kesinlikle          Adv;
+inşallah            Adv;
+hayırdır            Adv;
+umarım              Adv;
+maddeten            Adv;    ! old/rare
 tamamıyla           Adv;
 ayrı                Adv;
 ayrı% ayrı          Adv;
@@ -75,7 +81,6 @@ beyhude             Adv;
 bilahare            Adv;
 bilakis             Adv;
 bilcümle            Adv;
-bile                Adv;
 bile% bile          Adv;
 bilfarz             Adv;
 bilfiil             Adv;
@@ -257,7 +262,6 @@ henüz               Adv;
 hep                 AdvHep;
 hepten              Adv;
 hergün              AdvTime;
-herhalde            Adv;
 her% yer            Adv;
 heryer              Adv;    ! This is incorrect but a common spelling
 hiç                 Adv;

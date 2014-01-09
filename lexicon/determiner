@@ -51,6 +51,8 @@ başka           DetIndef;
 bunca           DetIndef;
 öyle            DetIndef;
 böyle           DetIndef;
+böylesi         DetIndef; ! no pronoun 
+böylesine       DetIndef; ! no pronoun -- this is rather non-standard 
 şöyle           DetIndef;
 öyle% bir       DetIndef;
 böyle% bir      DetIndef;

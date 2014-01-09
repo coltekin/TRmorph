@@ -42,6 +42,7 @@ Hersek          NP;
 Bosna-Hersek    NP;
 Bosna           NP;
 Burkina% Faso   NP;
+Polonya         NP;
 
 
 ! these should be turned into 'partial' tokens.
@@ -51,41 +52,60 @@ Burkina         NP;
 ! 
 ! City/town/village names
 !
-Bahçeci^k       NP;
-Adrasan         NP;
-Olimpos         NP;
-Çıralı          NP;
-Beytepe         NP;
+Bahçeci^k               NP;
+Adrasan                 NP;
+Olimpos                 NP;
+Çıralı                  NP;
+Beytepe                 NP;
+Adana                   NP;
+Adapazarı               NP;
+Adıyaman                NP;
+Afyonkarahisar          NP;
+Afyon                   NP;
 
 
 !
 ! Non-TR city names that are written differently than their original names
 !
-Atina           NP;
-Barselona       NP;
-Belgrad         NP;
-brüksel         NP;
-Bükreş          NP;
-Cenevre         NP;
-Floransa        NP;
-Göteborg        NP;
-Göteburg        NP;
-Kaliforniya     NP;
-Lizbon          NP;
-Londra          NP;
-Marsilya        NP;
-Moskova         NP;
-Münih           NP;
-Paris           NP;
-Pekin           NP;
-Roma            NP;
-Şangay          NP;
-Saraybosna      NP;
-Selanik         NP;
-Varşova         NP;
-Vaşington       NP;
-Venedik         NP;
-Viyana          NP;
-Yemen           NP;
-Zürih           NP;
-Doha            NP;
+Atina                   NP;
+Barselona               NP;
+Belgrad                 NP;
+Brüksel                 NP;
+Bükreş                  NP;
+Cenevre                 NP;
+Floransa                NP;
+Göteborg                NP;
+Göteburg                NP;
+Kaliforniya             NP;
+Lizbon                  NP;
+Londra                  NP;
+Marsilya                NP;
+Moskova                 NP;
+Münih                   NP;
+Paris                   NP;
+Pekin                   NP;
+Roma                    NP;
+Şangay                  NP;
+Saraybosna              NP;
+Selanik                 NP;
+Varşova                 NP;
+Vaşington               NP;
+Venedik                 NP;
+Viyana                  NP;
+Yemen                   NP;
+Zürih                   NP;
+Doha                    NP;
+Prag                    NP;
+
+!
+! Non-TR city names, written as in the original language (these should be
+! auto-generated)
+!
+Toulouse                NP;
+
+!
+! Rivers/mountains/islands etc.
+!
+
+Kaf% Dağ                NPcomp;
+Kaf                     NP;

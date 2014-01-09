@@ -21,13 +21,65 @@
 !
 
 !
-! This lexicon is an unorganized list of proper names.
+! This lexicon is for proper names.
 !
-! In the long run we intend to classify these words as 
-! person names, locations etc. For now this is a complete 
-! mix of many things.
+! Most of this lexicon file consist of unorgonized proper nouns of any
+! type (as of Dec. 2013). In the long run these names are intended to
+! be classified in subcategories.
+! Person names and locateion (geo) names have their own lexicon files
+! (person_names, person_names.foreign and location_names). Initial
+! part of the file also contains some sections that start and end with
+! comments that indicate the category of the nouns following the
+! comment. The bottom part is unorganized.
 !
 
+
+!
+! Organization names
+! Note that there are a relatively large number of abbreviated
+! organiztion names in the lexicon file `abbreviation'.
+!
+
+Google^sBUV^sVC         NP;
+Facebook                NP;
+Apple^sBUV^sVC          NP;
+Femen                   NP;
+Çaykur                  NP;
+Kiptaş                  NP;
+Akuvatur                NP;
+Memur-Sen               NP;
+Eğitim-Bir-Sen          NP;
+Göç-Türk                NP;
+Bal-Göç                 NP;
+Citibank                NP;
+
+
+!
+! Product/brand/trade names
+! There may be some overlap with the organization names above
+!
+
+Windows                 NP;
+Linux                   NP;
+iPhone                  NP;
+iPhone^sBRV^sVC         NP;
+Android                 NP;
+Samsung                 NP;
+Aygaz                   NP;     ! N ??
+Baytur                  NP;
+Tekfen                  NP;
+Profilo                 NP;
+Computerw^pOrld         NP;     ! Computerworld'e
+Lida                    NP;
+JavaScript              NP;
+Canon                   NP;
+Nikon                   NP;
+
+
+!
+! Sport clubs/organizations
+! TODO: some of these can be derived from place_name-spor
+!
 
 Adanaspor              NP;
 Antalyaspor            NP;
@@ -49,7 +101,15 @@ Silivrispor            NP;
 Sivasspor              NP;
 Trabzonspor            NP;
 Vanspor                NP;
+
+!
+! The rest of the names below are mostly unorganized.
+!
+
 Marmaray               NP;
+Stoch                  NP;
+Abuttekkesi            NP;
+Anafartalar            NP;
 Artukoğulları          NP; ! TODO: these need special attention: pl & compound.
 Balakgazi              NP;
 Hamas                  NP;
@@ -61,16 +121,12 @@ Beatriz                NP;
 Leuven                 NP;
 Nahima                 NP;
 Lanjri                 NP;
-Baytur                 NP;
-Tekfen                 NP;
 Yattara                NP;
 Bugün                  NP;
 Evora                  NP;
 Dostoyevski            NP;
 Galapagos              NP;
-Konfüçyüs              NP;
 Everest                NP;
-Boliç                  NP;
 Kırcı                  NP;
 Sever                  NP;
 Evita                  NP;
@@ -81,13 +137,7 @@ Kohen                  NP;
 Miloseviç              NP;
 Paul                   NP;
 Akbel                  NP;
-Çakıroğlu              NP;
-Ensarioğlu             NP;
-Erzik                  NP;
-Noyan                  NP;
-Esengün                NP;
 Francis                NP;
-Gölhan                 NP;
 İbo                    NP;
 Tom                    NP;
 David                  NP;
@@ -101,17 +151,13 @@ Milliyet               NP;
 Özbay                  NP;
 Lütfü                  NP;
 Lazaroni               NP;
-Beyazlı                NP;
 Focan                  NP;
 Kordsa                 NP;
 Rum                    NP;
 Güneydoğu              NP;
-Menzir                 NP;
 Netanyahu              NP;
-Kıratlıoğlu            NP;
 John                   NP;
 York                   NP;
-Subaşı                 NP;
 Kinkel                 NP;
 Klerides               NP;
 Nevzat                 NP;
@@ -120,29 +166,17 @@ Mashadov               NP;
 Tayan                  NP;
 Donat                  NP;
 Simitis                NP;
-Pulur                  NP;
-Gülen                  NP;
 Robert                 NP;
 Hagi                   NP;
 Elkatmış               NP;
-Adak                   NP;
-Kalkancı               NP;
-Duyar                  NP;
 Sarkozy                NP;
 Kosova                 NP;
 Obama                  NP;
 Barack                 NP;
 Bozdağ                 NP;
-Google^sBUV^sVC        NP;
-Facebook               NP;
-Çaykur                 NP;
-Apple^sBUV^sVC         NP;
-iPhone                 NP;
-iPhone^sBRV^sVC        NP;
-Android                NP;
-Samsung                NP;
+
+
 Sovyetler              NP;
-Linux                  NP;
 Ataşehir               NP;
 Beylikdüzü             NP;
 Acıbadem               NP;
@@ -152,22 +186,18 @@ Dilovası               NP;
 İstikl^pAl             NP;
 Hrant                  NP;
 Ergenekon              NP;
-Kılıçdaroğlu           NP;
 Abadi                  NP;
 Abad                   NP;
-Abalıoğlu              NP;
 Abana                  NP;
 Abant                  NP;
 Abasıyanık             NP;
 Abasızoğulları         NP;
 Abazaca                NP;
 Abaza                  NP;
-Abazoğlu               NP;
 Abbad                  NP;
 Abbase                 NP;
 Abbasi                 NP;
 Abbas                  NP;
-Abbasoğlu              NP;
 Abbaz                  NP;
 Abdal                  NP;
 Abdelfattah            NP;
@@ -211,7 +241,6 @@ Abdulhaluk             NP;
 Abdülhaluk             NP;
 Abdülhamid             NP;
 Abdülhamit             NP;
-Abdülhamitoğlu         NP;
 Abdülhasib             NP;
 Abdülhay               NP;
 Abdülillah             NP;
@@ -281,7 +310,6 @@ Abhazya                NP;
 Abher                  NP;
 Abhiz                  NP;
 Abide                  NP;
-Abidinoğlu             NP;
 Abid                   NP;
 Aborijin               NP;
 Aborjin                NP;
@@ -328,9 +356,6 @@ Adalar                 NP;
 Adaleddin              NP;
 Adalet                 NP;
 Adal                   NP;
-Adanalı                NP;
-Adana                  NP;
-Adapazarı              NP;
 Âdem                   NP;
 Adetullah              NP;
 Adidas                 NP;
@@ -338,8 +363,6 @@ Adıgüzel               NP;
 Adilcevaz              NP;
 Adilhan                NP;
 Adil                   NP;
-Adıyamanlı             NP;
-Adıyaman               NP;
 Adniye                 NP;
 Adriyatik              NP;
 Adviye                 NP;
@@ -354,22 +377,14 @@ Afil                   NP;
 Afitab                 NP;
 Afitap                 NP;
 Afra                   NP;
-Afrikalı               NP;
 Afrika                 NP;
 Afşar                  NP;
 Afşin                  NP;
 Aftabe                 NP;
 Afuv                   NP;
-Afyonkarahisarlı       NP;
-Afyonkarahisar         NP;
-Afyon                  NP;
-Afyonoğlu              NP;
-Ağaçören               NP;
-Ağahan                 NP;
 Agah                   NP;
 Ağaner                 NP;
 Ağan                   NP;
-Ağar                   NP;
 Ager                   NP;
 Ağgül                  NP;
 Ağın                   NP;
@@ -378,8 +393,6 @@ Ağlasun                NP;
 Ağlı                   NP;
 Ago^p                  NP;
 Agra                   NP;
-Ağrılı                 NP;
-Ağrı                   NP;
 Ahad                   NP;
 Ahavi                  NP;
 Ahbari                 NP;
@@ -471,7 +484,6 @@ Akhan                  NP;
 Akhisar                NP;
 Akife                  NP;
 Akile                  NP;
-Akıllıoğlu             NP;
 Akil                   NP;
 Akıman                 NP;
 Akınalp                NP;
@@ -484,7 +496,6 @@ Akkaynak               NP;
 Akkışla                NP;
 Akkız                  NP;
 Akkoca                 NP;
-Akköprülü              NP;
 Akkor                  NP;
 Akköy                  NP;
 Akkuş                  NP;
@@ -499,10 +510,6 @@ Akreb                  NP;
 Akre^p                 NP;
 Akşam% Yıldızı         NP;
 Aksan                  NP;
-Aksaraylı              NP;
-Aksaray                NP;
-Akşehir                NP;
-Akseki                 NP;
 Akşemseddin            NP;
 Akşener                NP;
 Aksen                  NP;
@@ -559,8 +566,6 @@ Alayuntlu              NP;
 Alcan                  NP;
 Aldinç                 NP;
 Aldoğan                NP;
-Alemdar                NP;
-Alemdaroğlu            NP;
 Alevi                  NP;
 Alexander              NP;
 Algan                  NP;
@@ -658,9 +663,6 @@ Alucra                 NP;
 Alyanak                NP;
 Alya                   NP;
 Amanullah              NP;
-Amasra                 NP;
-Amasyalı               NP;
-Amasya                 NP;
 Amazonlar              NP;
 Amerikalı              NP;
 Amerikanca             NP;
@@ -969,8 +971,6 @@ Aydıntepe              NP;
 Aydıntuğ               NP;
 Aydolun                NP;
 Ayetullah              NP;
-Aygaz                  NP;
-Aygaz                  NP;     ! N ??
 Aygen                  NP;
 Aygül                  NP;
 Aygutalp               NP;
@@ -6306,8 +6306,6 @@ Portekiz               NP;
 Posof                  NP;
 Pozan                  NP;
 Pozantı                NP;
-Prag                   NP;
-Profilo                NP;
 Protestan              NP;
 Prusya                 NP;
 Pülümür                NP;
@@ -9241,8 +9239,6 @@ Ziynet                 NP;
 Zobu                   NP;
 Zodya^k                NP;
 Zombie                 NP; ! dog's name (CHILDES)
-Zonguldaklı            NP;
-Zongulda^k             NP;
 Zoral                  NP;
 Zübeyde                NP;
 Zübeyir                NP;
@@ -9274,5 +9270,5 @@ Zümra                  NP;
 Zümrüdüanka            NP;
 Zümrüt                 NP;
 Zürare                 NP;
-Zürih                  NP;
 Zaman                  NP;
+Oraj                   NP;

@@ -43,3 +43,6 @@ online                  Adj;
 cafe                    N;
 total                   Adj;
 komplement              N;
+ablasyon                N;
+kojenerasyon            N;
+mod                     N;  ! from `mode' and `mood'.

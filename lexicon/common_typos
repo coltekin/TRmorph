@@ -29,9 +29,10 @@
 ! we can mark these as ':typo' in the analyzer output.
 !
 
-Kür^t:Kürd      NP_typo;
-tabii:tabi      Adj_typo;
-tabii:tabi      Adv_typo;
-diyalog         N_typo; ! normally dialo^g (inflects dialoğu)
-mütalaa:mütala  N_typo;
+Kürt^sVC:Kürd       NP_typo;
+tabii:tabi          Adj_typo;
+tabii:tabi          Adv_typo;
+diyalog             N_typo; ! normally dialo^g (inflects dialoğu)
+mütalaa:mütala      N_typo;
 konservatuvar:konservatuar  N_typo;
+laboratuvar:laboratuar      N_typo;

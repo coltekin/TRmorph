@@ -385,6 +385,9 @@ LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 LEXICON NP
 %<N%:prop%>:@RB   NPcont;
 
+LEXICON NP_typo
+%<N%:prop%:typo%>:@RB   NPcont;
+
 LEXICON NP_abbr
 %<N%:prop%:abbr%>:@ABBR@RB   NPAbbrCont;
 

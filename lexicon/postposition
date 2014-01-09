@@ -1,4 +1,5 @@
 ! This file contains the postposition lexicon of TRmorph.
+! vim: filetype=lexc
 !
 !-----------------------------------------------------------------------
 ! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
@@ -37,7 +38,6 @@ gibi                            nomPostPadj;
 için                            nomPostP;
 ile                             nomPostP;
 kadar                           nomPostPadjKi;
-bile                            nomPostP;
 dahi                            nomPostP;
 boyunca                         nomPostP;   ! maç boyunca
 boyu                            nomPostP;   ! gün boyu
@@ -45,6 +45,11 @@ boyu                            nomPostP;   ! gün boyu
 kala                            nomPostP;
 geçe                            nomPostP;
 üzere                           nomPostP;
+
+öncesi                          nomPostP;  ! yemek öncesi/sonrası
+sonrası                         nomPostP;
+
+dolayısıyla                     nomPostP;   ! tören dolayısıyla -- not in G&K
 
 ! genitive case only.
 
@@ -83,7 +88,7 @@ ait                             datPostPadj;
 dair                            datPostPadj;
 ilişkin                         datPostPadj;
 yönelik                         datPostPadj;
-yakın                           datPostPadj; ! iki bine yakın aile -- not in G&K
+yakın                           datPostPadj; ! iki bine yakın aile --not in G&K
 
 atfen                           datPostP;
 binaen                          datPostP;
@@ -98,10 +103,10 @@ nazaran                         datPostP;
 
 başka                           ablPostP;
 gayrı                           ablPostP;
-beri                            ablPostP;
+beri                            ablPostPKi;
 bu% yana                        ablPostP;
 dolayı                          ablPostP;
-itibaren                        ablPostP;
+itibaren                        ablPostPKi;
 önce                            ablPostPKi;
 evvel                           ablPostPKi;
 sonra                           ablPostPKi;
@@ -109,7 +114,6 @@ yana                            ablPostP;
 
 ço^k                            ablPostP;      !as in 'benden çok' not in G&K
 az                              ablPostP;      !as in 'benden çok' not in G&K
-bile                            ablPostP;
 dahi                            ablPostP;
 fazla                           ablPostP;
 öte                             ablPostPadjKi; ! adj: 'komediden öte bir karar'
@@ -125,9 +129,10 @@ beraber                         insPostP; ! Not in G&K
 birlikte                        insPostP;
 
 
-! These require -lI/-sIz
-halde                           liPostP;
-ilgili                          liPostP;
+! `halde' works with adjectivals (mostly with -lI and -sIz, but also
+! others), but it also makes converbials with -DIğI/-AcAğI
+! TODO: find a beter way to mark the complement requirement
+halde                           liPostP;    
 
 ! These work with numbers
 kere                            numPostP;  ! TODO: is this a noun???
@@ -173,6 +178,7 @@ etraf                   PostPlocation;
 kenar                   PostPlocation;
 dışarı                  PostPlocation;
 ar^t                    PostPlocation;
+son                     PostPlocation;
 
 !
 ! these require possessive and ablative case
@@ -185,7 +191,7 @@ bakım                   PostPabl; ! bakım-ın-dan
 
 ! these require possessive and instrumental suffixes.
 !
-aracılı^k               PostPins; ! aracılığ-ı-yla 
+aracılı^k               PostPins;! aracılığ-ı-yla 
 itibar                  PostPins;! itibar-i-yla 
 itib^pAr                PostPins;! itibar-i-yla 
 vasıta                  PostPins;! vasita-si-yla
@@ -199,13 +205,17 @@ uğu@DEL@r               PostPdat;! uğr-un-a
 yer                     PostPdat;! yer-in-e 
 
 ! these require possessive and locative
-saye                    PostPloc;! ‘shadow’ 
-boy                     PostPloc;! boy-un-ca 
+saye                    PostPloc;! saye-sin-de
 konu                    PostPloc;! konu-sun-da 
 ha@DUP@k                PostPloc;! hakk-ın-da 
+şeki@DEL@l              PostPloc;! şekl-in-de
 sıra                    PostPloc;! sıra-sın-de 
+biçim                   PostPloc;! biçim-in-de  -- this one can also 
+                                 !  take whole sentence complements
+                                 !  (someshat like `diye')
 
 ! these require possessive and and -cA
 ! TODO/CHECK: these do not seem to combine with other possessive suffixes
 gerek                   PostPca;! gereğ-in-ce 
 süre                    PostPca;! süre-sin-ce 
+boy                     PostPca;! boy-un-ca 

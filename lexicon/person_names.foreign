@@ -33,53 +33,68 @@
 !     - ^sUC      Voiceless consonant
 
 !
-! TODO: This file can be generated automaticall (e.g., from Wikipedia). 
+! TODO: This file can be generated automatically (e.g., from Wikipedia). 
 ! For now it only contains names that are observed in test material.
 !
+! Transliterated names, names that are `turkified' are in the files
+! proper_names.
+!
 
-Alfred                               NP;
-Buffon                               NP;
-Charles                              NP;
-Darwin                               NP;
-Dobzhansky^sFUV                      NP;
-Ernst                                NP;
-Gregor                               NP;
-Lamarck                              NP;
-Mayr                                 NP;
-Mendel                               NP;
-Russe^sBUVll                         NP;
-Sewall                               NP;
-Steve                                NP;
-Theodosius                           NP;
-Wallace^sBUV^sUC                     NP;
-Wright                               NP;
-Weinberg                             NP;
-Vesalius                             NP;
-Thomas                               NP;
-Malthus                              NP;
-Linnaeus                             NP;
-Julian                               NP;
-Huxley                               NP;
-Harvey                               NP;
-Hardy                                NP;
-Haldane                              NP;
-Gause                                NP;
-Dover                                NP;
-Danua                                NP;
-Cuvier                               NP;
-Fisher                               NP;
-William                              NP;
-Ronald                               NP;
-Rechenberg                           NP;
-Eldredge                             NP;
-Eugene                               NP;
-Isaac                                NP;
-James                                NP;
-Jean                                 NP;
-Jay                                  NP;
-Holland                              NP;
-Andreas                              NP;
-Carl                                 NP;
-Epperson                             NP;
-Nicolas                              NP;
-Danielle                             NP;
+Alfred                               NPperson;
+Buffon                               NPperson;
+Charles                              NPperson;
+Darwin                               NPperson;
+Dobzhansky^sFUV                      NPperson;
+Ernst                                NPperson;
+Gregor                               NPperson;
+Lamarck                              NPperson;
+Mayr                                 NPperson;
+Mendel                               NPperson;
+Russe^sBUVll                         NPperson;
+Sewall                               NPperson;
+Steve                                NPperson;
+Theodosius                           NPperson;
+Wallace^sBUV^sUC                     NPperson;
+Wright                               NPperson;
+Weinberg                             NPperson;
+Vesalius                             NPperson;
+Thomas                               NPperson;
+Malthus                              NPperson;
+Linnaeus                             NPperson;
+Julian                               NPperson;
+Huxley                               NPperson;
+Harvey                               NPperson;
+Hardy                                NPperson;
+Haldane                              NPperson;
+Gause                                NPperson;
+Dover                                NPperson;
+Danua                                NPperson;
+Cuvier                               NPperson;
+Fisher                               NPperson;
+William                              NPperson;
+Ronald                               NPperson;
+Rechenberg                           NPperson;
+Eldredge                             NPperson;
+Eugene                               NPperson;
+Isaac                                NPperson;
+James                                NPperson;
+Jean                                 NPperson;
+Jay                                  NPperson;
+Holland                              NPperson;
+Andreas                              NPperson;
+Carl                                 NPperson;
+Epperson                             NPperson;
+Nicolas                              NPperson;
+Danielle                             NPperson;
+Martinigol                           NPperson;
+Gunnar                               NPperson;
+Samuelsson                           NPperson;
+Terence                              NPperson;
+McDonagh                             NPperson;
+Maurice                              NPperson;
+Sendak                               NPperson;
+Amicis                               NPperson;
+Octa                                 NPperson;
+Jovan                                NPperson;
+Kostovski                            NPperson;
+Crowe                                NPperson;
