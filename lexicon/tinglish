@@ -46,3 +46,69 @@ komplement              N;
 ablasyon                N;
 kojenerasyon            N;
 mod                     N;  ! from `mode' and `mood'.
+
+
+!
+! Some of the following are terms, and some may already be considered
+! part of the language, but they are here for now.
+!
+kardiyovasküler         Adj;
+inovasyon               N;
+hiperaktivite           N;
+provokatif              Adj;
+megapiksel              N;
+skorer                  Adj;
+dolarizasyon            N;
+akredite                N;
+segment                 N;
+kolonoskopi             N;
+ultrasonografi          N;
+twitt                   N;
+tweet                   N;
+retrospektif            N;
+biyomühendislik         N;
+konjonktivit            N;
+kondisyoner             N;
+magnetoplasma           N;
+komponent               N;
+volatilite              N;
+reanimasyon             N;
+deafolimpik             N;
+lansman                 N;
+inflamasyon             N;
+motto                   N;
+kapasitif               N;
+penetrasyonu            N;
+stratejist              N;
+epidemiyolojik          N;
+etnisite                N;
+generasyon              N;
+kompozit                N;
+antivüritik             Adj;
+randomize               Adj;
+rejenerasyon            N;
+santigrad               N;
+inaktif                 Adj;
+inovatif                Adj;
+grafiker                N;
+lokasyon                N;
+proaktif                Adj;
+distile                 Adj;
+mental                  Adj;
+navigasyon              N;
+minimalist              Adj;
+lokalize                Adj;
+termostatik             Adj;
+mobilite                N;
+dezenfermasyon          N;
+logla                   V;
+fotonik                 Adj;
+enfekte                 Adj;
+poetik                  Adj;
+illüstratör             N;
+şematize                Adj;
+hegemonik               Adj;
+fokus                   N;
+
+!
+!
