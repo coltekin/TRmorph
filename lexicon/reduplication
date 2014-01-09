@@ -1,11 +1,295 @@
+! This file is part of TRmorph.
+! vim: filetype=lexc
 !
-! the following is acutally part of a rather productive construction.
-! we list these 
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
 !
-maşkım      NPartLast;
-meklam      NPartLast;
-mergen      AdjPartLast;
-mibne       AdjPartLast;
-miyatro     NPartLast;
-momşu       NPartLast;
-monuş       VPartLast;
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This file lists reduplicated lexical items. 
+! The first group lists, emphatic reduplication, ! the second group is 
+! multi-word lexical items where part of the lexicl item is not a word itself.
+!
+! We do not list simple reduplication of nouns adjectives, and adverbs 
+! (generally resulting in adverbials) like 'rahat rahat', 'kapı kapı'.
+! 
+! Similarly, we do not also list m-reduplacitons, 'okul mokul', 'hızlı mızlı' ...
+!
+
+
+! 
+! Emphatic reduplication (see G&K chpater 9).
+!
+! This form of reduplication is lexicalized.
+! The words below are adjectives and/or adverbs, but listed separately
+! since they differ in some respects (for example most of these words
+! are stressed on the first syllable).
+! The list is mainly based on G&K appendix 1, with some modificaitons/additiosn.
+!
+
+bambaşka            Adj;
+basyabağı           Adj;
+besbedava           Adj;
+besbelli            Adj;
+besbelli            Adv;
+besbeter            Adj;
+bembeyaz            Adj;
+bomboş              Adj;
+bombok              Adj;
+bumburuşu^k         Adj;
+büsbütün            Adv;
+capcanlı            Adj;
+capacanlı           Adj;
+cascavla^k          Adj;
+cıscıbılda^k        Adj;
+cıscıvı^k           Adj;
+çarçabu^k           Adv;
+çepeçevre           Adv;
+çepçevre            Adv;
+çırçıpla^k          Adj;
+çırılçıpla^k        Adj;
+dapdar              Adj;
+depderin            Adj;
+dapdaracı^k         Adj;
+dimdik              Adj;
+dimdik              Adv;
+dipdiri             Adj;
+dosdoğru            Adj;
+dosdoğru            Adv;
+dopdolu             Adj;
+dupduru             Adj;
+dümdüz              Adj;
+düpdüzgün           Adj;
+gepgenç             Adj;
+gepgeniş            Adj;
+güpegündüz          Adv;
+güpgüzel            Adj;
+kapkalın            Adj;
+kapkara             Adj;
+kapkaranlı^k        Adj;
+kaskatı             Adj;
+kıpkırmızı          Adj;
+kıpkısa             Adj;
+kıskıvra^k          Adv;
+kıpkızıl            Adj;
+kipkirli            Adj;
+koskoca             Adj;
+koskocaman          Adj;
+köskötürüm          Adj;
+kopkoyu             Adj;
+kupkuru             Adj;
+masmavi             Adj;
+mosmor              Adj;
+paramparça          Adj;
+pespembe            Adj;
+perperişan          Adj;
+sapasağlam          Adj;
+sapsarı             Adj;
+sersebil            Adj;
+sersefil            Adj;
+sepserin            Adj;
+sımsıcak            Adj;
+sımsıcacı^k         Adj;
+sımsıkı             Adv;
+sımsıkı             Adj;
+sipsili^k           Adj;
+sipsivri            Adj;
+simsiyah            Adj;
+sopsoğu^k           Adj;
+şipşirin            Adj;
+tastamam            Adj;
+taptaze             Adj;
+tertemiz            Adj;
+tostoparlak         Adj;
+yapyanlış           Adj;
+yapayanlış          Ajd;
+yapayanlız          Adj;
+yapyanlız           Adj;
+yamyassı            Adj;
+yamyaş              Adj;
+yepyeni             Adj;
+yemyeşil            Adj;
+yusyumru            Adj;
+yusyuvarla^k        Adj;
+zapsayıf            Adj;
+
+
+!
+! Multi-word reduplicated lexical items.
+!
+! parts of these words are extracted with a script (part-words.sh)
+! 
+!
+
+abidik% gubidik     Adj;
+abuk% subu^k        Adj;
+abur% cubur         Adj;
+açık% saçık         Adj;
+açık% seçik         Adj;
+afralı% tafralı     Adj;
+ahım% şahım         Adj;
+akşamlı% sabahlı    Adj;
+alacalı% bulacalı   Adj;
+alımlı% çalımlı     Adj;
+allak% bullak       Adj;
+anlı% şanlı         Adj;
+aygın% baygın       Adj;
+bıcır% bıcır        Adj;
+bölük% pörçük       Adj;
+buruş% buruş        Adj;
+çarpık% çurpuk      Adj;
+cicili% bicili      Adj;
+cıvıl% cıvıl        Adj;
+darma% dağın        Adj;
+delik% deşik        Adj;
+derli% toplu        Adj;
+didik% didik        Adj;
+eciş% bücüş         Adj;
+efil% üfül          Adj; !?
+eften% püften       Adj;
+eğri% büğrü         Adj;
+eski% püskü         Adj;
+estek% köstek       Adj; !?
+evsiz% barksız      Adj;
+fasa% fiso          Adj;
+fıkır% fıkır        Adj;
+hadsiz% hesapsız    Adj;
+hayal% meyal        Adj;
+irili% ufaklı       Adj;
+ıvır% zıvır         Adj;
+kargacık% burgacık  Adj;
+karman% çorman      Adj;
+kıpır% kıpır        Adj;
+parıl% parıl        Adj;
+pırıl% pırıl        Adj;
+saçma% sapan        Adj;
+sağlı% sollu        Adj;
+sıkı% fıkı          Adj;
+süslü% püslü        Adj;
+tıklım% tıklım      Adj;
+tini% mini          Adj;
+tiril% tiril        Adj;
+ufak% tefe^k        Adj;
+vıcık% vıcık        Adj;
+yalap% yalap        Adj;
+yamru% yumru        Adj;
+yapış% yapış        Adj;
+
+abuk% subuk         Adv;
+açık% seçik         Adv;
+apar% topar         Adv;
+art% arda           Adv;
+bangır% bangır      Adv;
+bata% çıka          Adv;
+bile% bile          Adv;
+bölük% pörçük       Adv;
+bön% bön            Adv;
+çatır% çatır        Adv;
+cayır% cayır        Adv;
+ciyak% ciyak        Adv;
+cümbür% cemaat      Adv;
+el% ele             Adv;
+fellik% fellik      Adv;
+fıkır% fıkır        Adv;
+fıldır% fıldır      Adv;
+fırıl% fırıl        Adv;
+fısır% fısır        Adv;
+fokur% fokur        Adv;
+gıdım% gıdım        Adv;
+gırıl% gırıl        Adv;
+göz% göze           Adv;
+güle% güle          Adv;
+gümbür% gümbür      Adv;
+gürül% gürül        Adv;
+haldır% haldır      Adv;
+haldır% huldur      Adv;
+harap% bitap        Adv;
+harıl% harıl        Adv;
+haşır% haşır        Adv;
+haşır% hışır        Adv;
+hışır% hışır        Adv;
+hüngür% hüngür      Adv;
+kem% küm            Adv;
+kikir% kikir        Adv;
+kıkır% kıkır        Adv;
+kıvıl% kıvıl        Adv;
+kütür% kütür        Adv;
+mırıl% mırıl        Adv;
+mırın% kırın        Adv;
+mışıl% mışıl        Adv;
+paldır% küldür      Adv;
+parıl% parıl        Adv;
+patlata% patlata    Adv;
+peş% peşe           Adv;
+pırıl% pırıl        Adv;
+pıtır% pıtır        Adv;
+püfür% püfür        Adv;
+sallana% sallana    Adv;
+şapırdata% şapırdata Adv;
+sapır% sapır        Adv;
+şapır% şapır        Adv;
+şapır% şapur        Adv;
+şapır% şupur        Adv;
+savura% savura      Adv;
+sere% serpe         Adv;
+seve% seve          Adv;
+şıkır% şıkır        Adv;
+şıklata% şıklata    Adv;
+sıklım% sıklım      Adv;
+şıngır% şıngır      Adv;
+şıpır% şıpır        Adv;
+şırıl% şırıl        Adv;
+soluk% soluğa       Adv;
+süklüm% püklüm      Adv;
+takım% taklavat     Adv;
+takır% takır        Adv;
+takır% tukur        Adv;
+teker% teker        Adv;
+tek% tük            Adv;
+ters% pers          Adv;
+tıka% basa          Adv;
+tin% tin            Adv;
+tıpış% tıpış        Adv;
+uğul% uğul          Adv;
+uzun% uzadıya       Adv;
+vıdı% vıdı          Adv;
+vızır% vızır        Adv;
+yana% yakıla        Adv;
+yan% yana           Adv;
+yarım% yamalak      Adv;
+yourgun% argın      Adv;
+yüz% yüze           Adv;
+zangır% zangır      Adv;
+zırıl% zırıl        Adv;
+zırt% pırt          Adv;
+zır% zır            Adv;
+
+allem% kallem       N;  !Adj??
+bakkal% çakkal      N;
+bet% beniz          N;
+bet% bereket        N;
+boy% pos            N;
+edi% büdü           N;
+ev% bark            N;
+falan% filan        N;
+incik% boncuk       N;
+kap% kaçak          N;
+pılı% pırtı         N;
+salkım% saçak       N;
+soy% sop            N;

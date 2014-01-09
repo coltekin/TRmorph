@@ -40,6 +40,8 @@ Exceptions;
 #include "lexicon/person_names"
 #include "lexicon/person_names.foreign"
 #include "lexicon/location_names"
+#include "lexicon/reduplication"
+#include "lexicon/reduplication.part"
 
 !
 ! These may be "optionalized", or replaced by a more rule-governed

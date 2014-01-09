@@ -25,7 +25,6 @@
 ! 
 
 bıcır       AdjPart;
-abuk        AdjPart;
 fosur       AdjPartLast;
 abur        AdjPart;
 allak       AdjPart;
@@ -90,7 +89,6 @@ püfür       AdvPartLast;
 püklüm      AdvPartLast;
 püslen      VPartLast;   !in 'süslen püslen' this is difficult to catch: both parts are likely inflected 
 püslü       AdjPartLast;
-sabuk       AdjPartLast;
 saçı^k      AdjPartLast;
 saçık       AdvPartLast;
 sapır       AdvPartLast;
