@@ -294,7 +294,7 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@PRN %@RB %^%(y%) %^A %@MB
                                              {birileri} |
                                              {üzeri} |
                                              {kendileri}
-                                           ] %@RB Boundary*
+                                           ] %@RB (AposSym) Boundary*
                                        _
                                            [ l %^A (r)          |
                                              %^%(y%) %^I        |
@@ -308,8 +308,8 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@PRN %@RB %^%(y%) %^A %@MB
                       .o. [..] -> y || .#. [ {o}  |
                                              {bu} |
                                              {şu}
-                                           ] Boundary+
-                                       _
+                                           ] 
+                                       _ %@RB (AposSym) Boundary*
                                            [ %^%(I%) m       |
                                              %^%(I%) n       |
                                              %^%(I%) m %^I z |
@@ -322,8 +322,7 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@PRN %@RB %^%(y%) %^A %@MB
                                                            {siz} | 
                                                            {bu}  | 
                                                            {şu}
-                                                         ] Boundary+ (n)
-                                                     _
+                                                         ] %@RB (AposSym) Boundary* (n) _
                                                         %^%(y%) l %^A %@MB
                       .o. n -> m 
                         || .#. [{ben}|{biz}] %@PRN Boundary+ %^%(n%) %^I _  
