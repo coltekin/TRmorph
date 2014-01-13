@@ -528,6 +528,7 @@ LEXICON Ntime
 LEXICON NtimeCont
                     Ki;
                     D_dir;
+%<pl%>:l^Ar@MB      D_dir;
                     Ncont;
 
 LEXICON Nplu
