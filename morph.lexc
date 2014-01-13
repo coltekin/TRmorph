@@ -66,7 +66,7 @@
 
 
 !
-! Continuation class for sybols of the alphabet (when they are used
+! Continuation class for symbols of the alphabet (when they are used
 ! literally)
 !
 ! when inflected, we require apostrophe after letters (when required
@@ -91,7 +91,7 @@ LEXICON CnjSub
 %<Cnj%:sub%>:@RB      #;
 
 !
-! The following are for multi-word or discontinous conjunctions.
+! The following are for multi-word or discontinuous conjunctions.
 !
 LEXICON CnjCooPart
 %<Cnj%:coo%:partial%>:@RB      #;
@@ -466,8 +466,11 @@ LEXICON Ninfl
 ! teyze-m-ler, dayın-n-lar ..
 ! -lAr here works like a derivational morpheme that derives another
 ! (plural) noun. However, it is at best odd to have another possessive
-! suffix, so, we do not allow another possessive suffix afater -lAr.
+! suffix, so, we do not allow another possessive suffix after -lAr.
 !
+! These may also be treated as a proper noun in combination with the
+! person's name, needing an apostrophe after the possessive suffix.
+! E.g., "Ahmet Amcam'ın"
 
 LEXICON Nfamily
 %<N%>:@RB   Ncont;
@@ -476,6 +479,11 @@ LEXICON Nfamily
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
 %<p2s%>:^(I)n@MB      NfamPosCont;
+%<p1s%>:^(I)m@MB@APOS@MB      NfamPosCont;
+%<p2s%>:^(I)n@MB@APOS@MB      NfamPosCont;
+%<p1s%>:^(I)m@MB@APOS@MB      NposCont;
+%<p2s%>:^(I)n@MB@APOS@MB      NposCont;
+%<p3s%>:^(s)^I@MB@APOS@MB     NposCont;
 
 LEXICON NfamPosCont
 %<pl%>:l^Ar@MB NposCont;
@@ -1855,7 +1863,7 @@ LEXICON CVcesinePagr
 
 ! üzer (somewhat) is like `üst', but does not 
 ! occur in bare form. Below, we (currently) allow 
-! it to form pospositional phrases just like üst/alt etc. 
+! it to form postpositional phrases just like üst/alt etc. 
 ! However, we do not allow it to function as adjectives.
 !
 !
