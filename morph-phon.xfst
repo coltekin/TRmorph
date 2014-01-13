@@ -476,11 +476,13 @@ define DeleteBuffer DelBufCons .o. DelBufVow ;
 ! de/ye exception
 !
 !
-! final `e' becomes `i' in some verbal roots before a suffix starting
+! final `e' becomes `i' in `de' and `ye' before a suffix starting
 ! with  `y'.
+! Second line addes an exception to the exception optionally allowing 'deyiş'.
 !
 
-define DeYeException e -> i || .#. [d|y] _ %@RB Boundary* y ;
+define DeYeException e -> i || .#. [d|y] _ %@RB Boundary* y 
+                .o. i (->) e || .#. d _ %@RB Boundary* y %^I ş ;
 
 !
 ! -yor exception
