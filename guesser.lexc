@@ -115,8 +115,8 @@ LEXICON Root
 
 ! LEXICON Abbreviation
 <[TRUC|TRLC][TRLC]^{1,MAX}>     N_unit;
-<[TRUC]^{MIN,MAX}>              N_abbr;
-<[TRUC|\.]^{MIN,MAX}>           NP_abbr;
+<[TRUC]^{1,MAX}>                N_abbr;
+<[TRUC|%.]^{1,MAX}>             NP_abbr;
 
 
 !

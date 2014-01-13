@@ -55,8 +55,8 @@
 
 #define ALLCAPS 1
 #define CAPITALIZE 1
-#define GUESSER_ALLCAPS 0
-#define GUESSER_CAPITALIZE 0
+#define GUESSER_ALLCAPS 1
+#define GUESSER_CAPITALIZE 1
 
 /*
  * SURFACE_CIRCUMFLEX: The vowels with circumflex î, û, â are written 
@@ -101,7 +101,7 @@
  *
  */
 
-#define GUESSER_MIN_LENGTH 3
+#define GUESSER_MIN_LENGTH 1
 #define GUESSER_MAX_LENGTH 10
 #define GUESSER_STEM 1
 
@@ -202,7 +202,7 @@
  *
  */
 
-#define ANALYZE_lA 1
+#define ANALYZE_lA 0
 
 /* AlLOW_mAG
  *
