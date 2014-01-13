@@ -129,7 +129,7 @@ LEXICON nomPostPKi
 !
 
 LEXICON genPostP
-%<Postp%:adj%:nomC%>:@RB    AdvCont;
+%<Postp%:adv%:genC%>:@RB    AdvCont;
 
 
 !
@@ -386,7 +386,11 @@ LEXICON NP
 %<N%:prop%>:@RB   NPcont;
 
 LEXICON NP_typo
+#if (MARK_TYPOS == 1) 
 %<N%:prop%:typo%>:@RB   NPcont;
+#else
+                        NP;
+#endif
 
 LEXICON NP_abbr
 %<N%:prop%:abbr%>:@ABBR@RB   NPAbbrCont;
@@ -513,7 +517,7 @@ LEXICON NPart
 %<N%:partial%>:@RB   #;
 
 LEXICON NPartLast
-%<N%%:partial%>:@RB   Ncont;
+%<N%:partial%>:@RB   Ncont;
 
 LEXICON Ncont
     Nderiv;
@@ -835,10 +839,20 @@ LEXICON LocPrn  ! TODO: these do not inflect except only in some fixed expressio
 
 LEXICON  DetDef
 %<Det%:def%>:@RB DetCont;
+
 LEXICON  DetIndef
 %<Det%:indef%>:@RB DetCont;
+
+LEXICON  DetIndef_typo
+#if (MARK_TYPOS == 1) 
+%<Det%:indef%:typo%>:@RB    DetCont;
+#else
+                            DetIndef;
+#endif
+
 LEXICON  DetDefQ
 %<Det%:def%:qst%>:@RB DetCont;
+
 LEXICON  DetIndefQ
 %<Det%:indef%:qst%>:@RB DetCont;
 
@@ -851,6 +865,13 @@ LEXICON DetCont
 
 LEXICON NumStem
 %<Num%>:@RB  NumCont;
+
+LEXICON Num_typo
+#if (MARK_TYPOS == 1) 
+%<Num%:typo%>:@RB   NumCont;
+#else
+                    NumStem;
+#endif
 
 LEXICON QNum
 %<Num%:qst%>:@RB  NumCont;

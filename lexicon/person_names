@@ -1,4 +1,5 @@
 ! This file is part of TRmorph.
+! vim: filetype=lexc
 !
 !-----------------------------------------------------------------------
 ! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
@@ -31,6 +32,13 @@
 ! possible distincition easier later.
 !
 !
+
+!
+! Initials. This covers the cases wehere an initial is used with a
+! following dot.
+!
+
+<[A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|X|Q|W]%.>  NPperson;
 
 ! 
 ! Male given names
@@ -567,6 +575,7 @@ Zülfü                   NPperson;
 Şamil                   NPperson;
 Kamil                   NPperson;
 Kâmil                   NPperson;
+İmdat                   NPperson;
 
 !
 ! These are (mostly) unisex.
@@ -1550,6 +1559,7 @@ Karlahan                NPperson;
 Yurtbay                 NPperson;
 Demirbilek              NPperson;
 Yarılgaç                NPperson;
+Edes                    NPperson;
 
 !
 ! TODO: we better analyze produce all surnames with -lI suffix from
@@ -1557,8 +1567,11 @@ Yarılgaç                NPperson;
 !
 Ilıcalı                 NPperson;
 
+Keçili                  NPperson;
+
 ! similarly, maybe surnames with -oğlu
 Konukoğlu               NPperson;
+Sütlüoğlu               NPperson;
 
 ! similarly, maybe surnames with -CI
 Kavakçı                 NPperson;

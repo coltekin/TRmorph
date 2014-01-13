@@ -36,3 +36,5 @@ diyalog             N_typo; ! normally dialo^g (inflects dialoğu)
 mütalaa:mütala      N_typo;
 konservatuvar:konservatuar  N_typo;
 laboratuvar:laboratuar      N_typo;
+bir:bi              DetIndef_typo;
+bir:bi              Num_typo;

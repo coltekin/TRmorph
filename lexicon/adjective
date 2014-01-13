@@ -1,3 +1,6 @@
+dışı                Adj; ! this take complements (evlilik/kurum/sınır dışı)
+içi                 Adj; ! this take complements (kampus/kurum/aile içi)
+kırıtkan            Adj;
 sahi^p              Adj;
 sayın               Adj;
 kalıtsal            Adj;
@@ -544,7 +547,7 @@ geçmiş              Adj;
 geleğen             Adj;
 gelişigüzel         Adj;
 gelişkin            Adj;
-genç                Adj;
+gen^c               Adj;
 genceci^k           Adj;
 genel               Adj;
 geniş               Adj;
@@ -763,7 +766,6 @@ kabarık             Adj;
 kabartma            Adj;
 kabîl               Adj;  ! old
 kaça^k              Adj;
-kaçınılmaz          Adj;
 kaçkın              Adj;
 kadi@DEL@r          Adj;
 kadim               Adj;
@@ -1652,7 +1654,6 @@ tarihi              Adj;
 tarihî              Adj;
 tartışmalı          Adj;
 tarumar             Adj;  !old/rare
-taşınmaz            Adj;
 taşkın              Adj;
 taşralı             Adj;
 tatlı               Adj;
@@ -1729,7 +1730,6 @@ tropi^k             Adj;
 tropikal            Adj;
 tufeyli             Adj;
 tuhaf               Adj;
-tükenmez            Adj;
 tül                 Adj;
 tüm                 Adj;
 tümleşik            Adj;
@@ -1770,7 +1770,6 @@ ulussever           Adj;
 ummadı^k            Adj;
 umum                Adj;
 umumî               Adj;
-umursamaz           Adj;
 üniter              Adj;
 ünlü                Adj;
 ünsüz               Adj;
@@ -1806,7 +1805,6 @@ uyuşu^k             Adj;
 uyuz                Adj;
 uza^k               Adj;
 üzgün               Adj;
-uzlaşmaz            Adj;
 uzun                Adj;
 vaci^p              Adj;
 vahim               Adj;

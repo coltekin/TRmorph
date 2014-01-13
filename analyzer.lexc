@@ -35,7 +35,7 @@ Exceptions;
 #include "lexicon/pronoun"
 #include "lexicon/verb"
 #if (ANALYZE_lA == 0)
-    #include "lexicon/verb_la"
+#include "lexicon/verb_la"
 #endif
 #include "lexicon/person_names"
 #include "lexicon/person_names.foreign"

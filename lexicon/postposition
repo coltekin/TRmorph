@@ -39,7 +39,6 @@ için                            nomPostP;
 ile                             nomPostP;
 kadar                           nomPostPadjKi;
 dahi                            nomPostP;
-boyunca                         nomPostP;   ! maç boyunca
 boyu                            nomPostP;   ! gün boyu
 
 kala                            nomPostP;
@@ -165,7 +164,9 @@ takiben                         accPostP;
 ön                      PostPlocation;
 arka                    PostPlocation;
 iç                      PostPlocation;
+içeri                   PostPlocation;
 dış                     PostPlocation;
+hari^c                  PostPlocation;
 üst                     PostPlocation;
 üzer                    uzerCont;! this one is a bound root
 alt                     PostPlocation;
@@ -179,6 +180,7 @@ kenar                   PostPlocation;
 dışarı                  PostPlocation;
 ar^t                    PostPlocation;
 son                     PostPlocation;
+u^c                     PostPlocation;  ! not in G&K
 
 !
 ! these require possessive and ablative case

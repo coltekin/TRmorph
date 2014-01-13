@@ -52,6 +52,8 @@ Eğitim-Bir-Sen          NP;
 Göç-Türk                NP;
 Bal-Göç                 NP;
 Citibank                NP;
+Cabot                   NP;
+Divan                   NP;
 
 
 !
@@ -74,6 +76,7 @@ Lida                    NP;
 JavaScript              NP;
 Canon                   NP;
 Nikon                   NP;
+Barbaresco              NP;
 
 
 !
@@ -9272,3 +9275,5 @@ Zümrüt                 NP;
 Zürare                 NP;
 Zaman                  NP;
 Oraj                   NP;
+Mandel                 NP;
+Ada                    NP;

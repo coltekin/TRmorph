@@ -1,3 +1,4 @@
+tıpkı               Adv;
 herhalde            Adv;
 kesinlikle          Adv;
 inşallah            Adv;
@@ -45,7 +46,6 @@ aslen               Adv;
 aslında             Adv;
 atfen               Adv;
 ayaküstü            Adv;
-aylarca             Adv;       !AdvTime?
 aynen               Adv;
 ayrıca              Adv;
 ayrıyeten           Adv;
@@ -115,7 +115,6 @@ cümleten            Adv;
 daha                AdvTime;
 daha% çok           Adv;
 daima               Adv;       ! this does not nominalize
-defalarca           Adv;
 defaten             Adv;
 demin               AdvTime;
 demince^k           Adv;
@@ -186,8 +185,6 @@ gümbedek            Adv;
 gündüz              AdvTime;
 gündüzleyin         Adv;
 gündüzün            Adv;
-günlerce            Adv;       !Advtime?
-günlerdir           Adv;
 güya                Adv;
 güzün               AdvTime;
 habire              Adv;
@@ -421,7 +418,6 @@ yeni                Adv;
 yeni% baştan        Adv;
 yeniden             Adv;
 yeterince           Adv;
-yıllarca            Adv;
 yine                Adv;
 yo^k                Adv;
 yukarı              Adv;
