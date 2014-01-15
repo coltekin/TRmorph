@@ -370,14 +370,88 @@ LEXICON InterjectionCont
                   #;
                   D_lA;
 
-! LEXICON QIntj   ! this used to be `hani'.
-! %<Ij%:qst%>:@RB      #;
+#if (ENDQUOTE_AS_NOUN == 1)
+!
+! This part handles the (nominal) suffixes following the quotation
+! marks. This happens when a word, or even a complete sentence is put
+! in quotation marks, and inflected as if it is a noun.
+!   Examples:
+!       ``Manisa  dosyası''nı
+!       ``Çeşitli Kanunlarda Değişiklik Yapılmasına İlişkin Kanun''u
+!
 
+LEXICON EndQuote
+%'^sFUV             EndQuoteCont;
+%'^sFRV             EndQuoteCont;
+%'^sBUV             EndQuoteCont;
+%'^sBRV             EndQuoteCont;
+%'^sFUV^sVC         EndQuoteCont;
+%'^sFRV^sVC         EndQuoteCont;
+%'^sBUV^sVC         EndQuoteCont;
+%'^sBRV^sVC         EndQuoteCont;
+%'^sFUV^sUC         EndQuoteCont;
+%'^sFRV^sUC         EndQuoteCont;
+%'^sBUV^sUC         EndQuoteCont;
+%'^sBRV^sUC         EndQuoteCont;
+%'%'^sFUV           EndQuoteCont;
+%'%'^sFRV           EndQuoteCont;
+%'%'^sBUV           EndQuoteCont;
+%'%'^sBRV           EndQuoteCont;
+%'%'^sFUV^sVC       EndQuoteCont;
+%'%'^sFRV^sVC       EndQuoteCont;
+%'%'^sBUV^sVC       EndQuoteCont;
+%'%'^sBRV^sVC       EndQuoteCont;
+%'%'^sFUV^sUC       EndQuoteCont;
+%'%'^sFRV^sUC       EndQuoteCont;
+%'%'^sBUV^sUC       EndQuoteCont;
+%'%'^sBRV^sUC       EndQuoteCont;
+%"^sFUV             EndQuoteCont;
+%"^sFRV             EndQuoteCont;
+%"^sBUV             EndQuoteCont;
+%"^sBRV             EndQuoteCont;
+%"^sFUV^sVC         EndQuoteCont;
+%"^sFRV^sVC         EndQuoteCont;
+%"^sBUV^sVC         EndQuoteCont;
+%"^sBRV^sVC         EndQuoteCont;
+%"^sFUV^sUC         EndQuoteCont;
+%"^sFRV^sUC         EndQuoteCont;
+%"^sBUV^sUC         EndQuoteCont;
+%"^sBRV^sUC         EndQuoteCont;
+%’^sFUV             EndQuoteCont;
+%’^sFRV             EndQuoteCont;
+%’^sBUV             EndQuoteCont;
+%’^sBRV             EndQuoteCont;
+%’^sFUV^sVC         EndQuoteCont;
+%’^sFRV^sVC         EndQuoteCont;
+%’^sBUV^sVC         EndQuoteCont;
+%’^sBRV^sVC         EndQuoteCont;
+%’^sFUV^sUC         EndQuoteCont;
+%’^sFRV^sUC         EndQuoteCont;
+%’^sBUV^sUC         EndQuoteCont;
+%’^sBRV^sUC         EndQuoteCont;
+%”^sFUV             EndQuoteCont;
+%”^sFRV             EndQuoteCont;
+%”^sBUV             EndQuoteCont;
+%”^sBRV             EndQuoteCont;
+%”^sFUV^sVC         EndQuoteCont;
+%”^sFRV^sVC         EndQuoteCont;
+%”^sBUV^sVC         EndQuoteCont;
+%”^sBRV^sVC         EndQuoteCont;
+%”^sFUV^sUC         EndQuoteCont;
+%”^sFRV^sUC         EndQuoteCont;
+%”^sBUV^sUC         EndQuoteCont;
+%”^sBRV^sUC         EndQuoteCont;
 
+LEXICON EndQuoteCont
+                 N;
+!%<N%>:@RB       Nderiv;    ! these are useful in case we want this to 
+!%<N%>:@RB       Ninfl;     ! apply only if there are inflections.
+#endif
 
 !
 ! Rules governing nouns, including proper names and compounding
 !
+
 
 LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;

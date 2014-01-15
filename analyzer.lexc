@@ -13,6 +13,10 @@
 LEXICON Root
 Number; ! numbers are special as they are defined through a set of rules.
 Exceptions;
+#if (ENDQUOTE_AS_NOUN == 1)
+EndQuote;
+#endif
+
 
 !
 ! This part is the core lexicon. We do not what to leave any

@@ -103,7 +103,7 @@
 
 #define GUESSER_MIN_LENGTH 1
 #define GUESSER_MAX_LENGTH 10
-#define GUESSER_STEM 1
+#define GUESSER_STEM 0
 
 /* 
  * These options are only for the stemmer. 
@@ -215,3 +215,21 @@
  */
 
 #define ALLOW_mAG 1
+
+/* ENDQUOTE_AS_NOUN
+ *
+ * If set, this option allows interpretation of quotation marks as
+ * nouns. This is useful in cases where nouns/noun phrases, and
+ * sometimes other words or even complete sentences are used in quotes
+ * (meta linguistically). It also helps where foreign words are used
+ * in quotation marks or follow suffixes after an apostrophe.
+ *
+ * This is intended for the cases where quotation symbol or the
+ * apostrophe is tokenized apart from the last word of the quoted
+ * phrase. If not, the guesser should produce a more informed guess
+ * (following the vowel harmony and the other morphophonological
+ * processes).
+ *
+ */
+
+#define ENDQUOTE_AS_NOUN 1
