@@ -15,3 +15,4 @@ trmorph.xfst
 *.cpp.lexc
 *.cpp.xfst
 .dep
+.junk
