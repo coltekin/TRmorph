@@ -499,6 +499,13 @@ out are not marked with a subcategory marker (but still marked as
 is also tagged as a number with a sub tag specifying that it is a
 question word, resulting in \mtag[def]{Num:qst}.
 
+A rudimentary date/time recongnition is also supported.
+Time expressions in 24-hour format with optional `seconds' field, 
+i.e,  hh:mm(:ss) (also with separator `.'), 
+and date formats of DD/MM/YYYY (also with separators `.' and `-' 
+and YYYY-MM-DD are recognized as dates and times, 
+and tagged as \mtag[def]{Num:time} and \mtag[def]{Num:date}, respectively.
+
 \item[Verbs] are currently not subcategorized in TRmorph. 
 
 Subcategorizing verbs as \emph{transitive} and \emph{intransitive}, or

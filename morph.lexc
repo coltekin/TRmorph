@@ -942,6 +942,18 @@ LEXICON DetCont
                     #;
                     JP_poss;    ! TODO: not all determiners do this.
 
+! Date/time
+
+LEXICON DateStem
+%<Num%:date%>:@RB             DateTimeCont;
+LEXICON TimeStem
+%<Num%:time%>:@RB             DateTimeCont;
+
+LEXICON DateTimeCont
+0:%@APOS@MB         Ncont;
+#if (APOSTROPHE_OPTIONAL_NUM == 1) 
+                    Ncont;
+#endif
 
 ! Number inflections and derivations
 
