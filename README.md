@@ -5,7 +5,7 @@ This is the README file for the new version of TRmorph (updated 2013-07)
 TRmorph is a open source/free morphological analyzer for Turkish. The
 current version is a complete rewrite of the (earlier) SFST[2] version
 of TRmorph using xfst/lexc. This version is in active development,
-which may cause soem problem and incompatibilities between updates.
+which may cause some problem and incompatibilities between updates.
 However, the status is a lot better than the older SFST version, and
 you are recommended to use the new version.  The SFST version is still
 available through the web page above, but it is not developed any
