@@ -233,3 +233,17 @@
  */
 
 #define ENDQUOTE_AS_NOUN 1
+
+/* PERCENT_AS_PREFIX
+ *
+ * The percent sign is put before the nouns in Turkish, like %1 or
+ * %10.3. Enabling this option puts the pecent sign as a prefix,
+ * producing analysis strings like <perc>1<Num:ara>. Since TRmorph
+ * does not include any other prefixes with this notation, this might
+ * be confusing. By default this option is disabled.
+ *
+ * (The actual implementation produces <perc> as a prefix in any case, but
+ * we move it after the pos tag if this option is disabled).
+ */
+
+#define PERCENT_AS_PREFIX 0

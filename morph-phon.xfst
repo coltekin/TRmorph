@@ -625,6 +625,20 @@ define KiKu i (->)  ü || ü [\Vall]* Boundary k _ %@MB ;
 ! 
 !
 
+#if (PERCENT_AS_PREFIX == 0)
+!
+! move the prefix percent after the number.
+! this feels more readable witho right-arrow rules.
+! we'll use the inverse of it
+!
+define percfilter [ [..] -> {<perc>} || .#. 
+                                      {<perc>}  
+                                      [%0|1|2|3|4|5|6|7|8|9]
+                                      {<Num} \">"* %> _ ]
+                  .o. {<perc>} -> 0 || .#. _ ;
+#endif
+
+
 define AFilter    FSDevoicing.i 
               .o. VowelHarmony.i 
               .o. DeleteBuffer.i
@@ -634,6 +648,9 @@ define AFilter    FSDevoicing.i
               .o. 0 <- %@DUP%@
               .o. 0 <- %@dB
               .o. 0 <- (ConsSilent|Vsilent)
+#if (PERCENT_AS_PREFIX == 0)
+              .o. percfilter.i
+#endif
               ;
 
 
