@@ -19,9 +19,13 @@ $(MAIN).aux:
 	$(LATEX) $(MAIN)
 
 $(MAIN).bib: $(BIBSRC) $(MAIN).aux
-	bibtool -q -i $(BIBSRC) \
+	test -r $(BIBSRC) && \
+		(bibtool -q -i $(BIBSRC) \
    		$$(grep '@cite{' $(MAIN).aux |sed 's/.*@cite{/ -X /;s/}.*//'|sort|uniq) \
-       	> $(MAIN).bib
+       	> $(MAIN).bib) || echo "No $(BIBSRC)."
+
+$(BIBSRC):
+	echo "We do not have $(BIBSRC) but this should be OK."
 
 view:
 	okular $(MAIN).pdf >/dev/null 2>&1 &
