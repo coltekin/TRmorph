@@ -49,10 +49,13 @@ stem.fst: stemmer.cpp.xfst trmorph.fst
 #
 # unknown word guesser
 #
-guesser: guess.fst
+guesser: guess.fst analyze_guess.fst
 
 guess.fst: guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
 	foma -f guesser.cpp.xfst
+
+analyze_guess.fst: analyze_guess.xfst guess.fst trmorph.fst
+	foma -f analyze_guess.xfst
 
 hyphenate: hyphenate.fst
 

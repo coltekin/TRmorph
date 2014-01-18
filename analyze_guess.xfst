@@ -1,0 +1,46 @@
+! This file is part of TRmorph.
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This script puts analyzer and the guesser on the same binary FST
+! file, so that one can fall back to guesser in case analysis fails.
+!
+! TODO: choose one of these options from options.h.
+
+!
+! First option is to rely on 'flookup's -a option
+! Both analyzer and guesser will be written to the same binary file.
+! To use this you should run something like:
+!   echo Fomayla | flookup -a analyze_guess.fst
+!
+regex @"trmorph.fst";
+regex @"guess.fst";
+
+!
+! Somewhat slower, but the following combines analyzer and guesser
+! into a single FST. Comment out the above and remove the comment
+! character from the following to enable it. It should be used like
+! any other single-automaton binary file.
+!
+!regex @"trmorph.fst" .P. @"guess.fst";
+
+save stack analyze_guess.fst

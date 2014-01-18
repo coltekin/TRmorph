@@ -1577,12 +1577,15 @@ POS tag. Again, these options can be set in \lstinline{options.h}.
 Other customizations can be achieved by adjusting the file
 \lstinline{guesser.lexc}.
 
-The guesser is a standalone FST, to use it in combination with the
-analyzer, two automata can be combined with \emph{priority union} such
-that guesser is only invoked if the analyzer fails. This can be
-achieved either as a simple wrapper xfst file, or if you are using
-foma's \lstinline{flookup} utility specifying both FST files on the
-command line like \lstinline{flookup -a trmorph.fst guesser.fst}.
+The guesser is a standalone FST, 
+to use it in combination with the analyzer, 
+two automata can be combined with \emph{priority union} such that guesser is only invoked if the analyzer fails. 
+An example script that combines analyzer and guesser is provided with the name \lstinline{anlyze_guess.xfst}.
+The resulting binary will be called \lstinline{anlyze_guess.fst}.
+This binary is also built by default if the guesser is build by \lstinline{make guesser}.
+By default the script puts two FST's without priority union to a single file.
+Hence, a command line like \lstinline{flookup -a analyze_guess.fst} will simulate the priority union.
+Example command for building a single automaton combining the analyzer and the guesser with priority union is provided in \lstinline{anlyze_guess.xfst}.
 
 \subsection{Morphological segmentation}
 
