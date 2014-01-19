@@ -1148,38 +1148,7 @@ is analyzed as
 
 \subsection{Productive derivational morphemes}
 
-Almost all the tags and relevant morphological process above are
-described as part of inflectional morphology in most grammar books.
-The suffixes described here are the ones that are traditionally
-considered derivational suffixes. Some of these suffixes, for example
-\sffx{lI} and \sffx{sIz} discussed earlier, may attach to word forms
-that are already inflected by other suffixes. Others normally attach
-only to the stem and produce another stem.
-
-Of these suffixes, \sffx{lA} causes a large number of ambiguous analyses 
-since it is part of a few other suffixes, 
-for example, the plural suffix \sffx{lAr}.
-In case of \sffx{lAr}, whose remainder \sffx{r} also matches a verbal suffix (aorist marker),
-any plural noun is analyzed as a verb as well.
-For example, the word \xmpl{kanıtlar} is analyzed as \mroot{kanıt}\mtag{N}\mtag{pl} `evidence-PLU', or \mroot{kanıt}\mroot{N}\mtag{la}\mtag{V}\mtag{aor}\mtag{3s} `(s)he proves (it)'.
-Hence, including \sffx{lA} in the analysis causes an increase in the number of analyses produced by TRmorph.
-The analysis of the suffix \sffx{lA} can be disabled during the compile time.
-In this case, a separate lexicon containing verbs with derivational suffix \sffx{lA} will be included in the root lexicon.
-Some of the `lexicalized' verbal stems that end in \sffx{lA} are included in the main lexicon,
-and will result in an analysis with a stem including \sffx{lA} regardless of this option.
-Similarly, \sffx{lA} is always accepted on onomatopoeic roots and interjections.
-
-TRmorph does not limit the number of derivational suffixes that can be stringed one after another other, 
-even though multiple derivations of this sort is a lot more restricted. 
-
-Besides the sources of possible erroneous over-analyses listed above,
-the derivational morphology specification in TRmorph over-generates in
-some cases. In particular, any form of the diminutive suffix is
-allowed to attach to any noun, although most nouns are used only one
-of the diminutive suffixes. The ambiguity and overgeneration are
-discussed in Section~\ref{sec:ambiguity}.
-
-\begin{table}[t]
+\begin{table}[h]
 \caption{\label{tbl:deriv}Derivational morphemes analyzed by TRmorph.
 The column `Derivation' lists the POS changes using a two letter
 symbols. The first letter is the original POS, and the second one is the
@@ -1206,7 +1175,9 @@ Tag              & Suffix        & Derivation \\
                  & \sffx{cAğIz}  & \\
 \mtag[def]{ci}   & \sffx{CI}     & NN NJ \\
 \mtag[def]{arasi}& \sffx{arası}  & NJ \\
-\mtag[def]{imsi} & \sffx{(I)msI} & NJ \\
+\mtag[def]{imsi} & \sffx{(I)msI} & NJ JJ\\
+\mtag[def]{imtrak} & \sffx{(I)mtrak} & NJ JJ\\
+\mtag[def]{si}   & \sffx{sI}     & NJ \\
 \mtag[def]{ca}   & \sffx{CA}     & NA AA JJ MJ \\ % \mtag{N}{Adv} \mtag{Adv}{Adv} \mtag{Adj}{Adj} \mtag{Num}{Adj} \\ 
 \mtag[def]{yici} & \sffx{(y)IcI} & VJ \\
 \mtag[def]{cil}  & \sffx{CIl}    & NJ \\
@@ -1222,6 +1193,42 @@ Tag              & Suffix        & Derivation \\
 \end{tabular}
 \end{center}
 \end{table}
+
+Almost all the tags and relevant morphological process above are
+described as part of inflectional morphology in most grammar books.
+The suffixes described here are the ones that are traditionally
+considered derivational suffixes. Some of these suffixes, for example
+\sffx{lI} and \sffx{sIz} discussed earlier, may attach to word forms
+that are already inflected by other suffixes. Others normally attach
+only to the stem and produce another stem.
+
+The derivational suffixes analyzed by TRmorph are listed in Table~{tbl:deriv}.
+Of these suffixes, \sffx{lA} causes a large number of ambiguous analyses 
+since it is part of a few other suffixes, 
+for example, the plural suffix \sffx{lAr}.
+In case of \sffx{lAr}, whose remainder \sffx{r} also matches a verbal suffix (aorist marker),
+any plural noun is analyzed as a verb as well.
+For example, the word \xmpl{kanıtlar} is analyzed as \mroot{kanıt}\mtag{N}\mtag{pl} `evidence-PLU', or \mroot{kanıt}\mroot{N}\mtag{la}\mtag{V}\mtag{aor}\mtag{3s} `(s)he proves (it)'.
+Hence, including \sffx{lA} in the analysis causes an increase in the number of analyses produced by TRmorph.
+The analysis of the suffix \sffx{lA} can be disabled during the compile time.
+In this case, a separate lexicon containing verbs with derivational suffix \sffx{lA} will be included in the root lexicon.
+Some of the `lexicalized' verbal stems that end in \sffx{lA} are included in the main lexicon,
+and will result in an analysis with a stem including \sffx{lA} regardless of this option.
+Similarly, \sffx{lA} is always accepted on onomatopoeic roots and interjections.
+
+In some cases the derivational suffixes can only be attached to a subset of the words within the word class.
+Not all these cases are easy to identify, 
+and TRmorph will analyze combinations of stems and suffixes that are not in the language.
+Furthermore, TRmorph does not limit the number of derivational suffixes that can be stringed one after another other, 
+even though multiple derivations of this sort is a lot more restricted. 
+
+Besides the sources of possible erroneous over-analyses listed above,
+the derivational morphology specification in TRmorph over-generates in
+some cases. In particular, any form of the diminutive suffix is
+allowed to attach to any noun, although most nouns are used only one
+of the diminutive suffixes. The ambiguity and overgeneration are
+discussed in Section~\ref{sec:ambiguity}.
+
 
 \section{\label{sec:lexicon}The lexicon}
 
@@ -1638,6 +1645,20 @@ To build the hyphenation FST you need to type
 The surface string of the FST is Turkish words (or strings resembling
 words) and analysis string is the words where a hyphen `-' is inserted
 between the syllables, or at the points where one can insert a hyphen.
+
+% \section*{Acknowledgements}
+% 
+% The following is an incomplete list of people (not in a particular order) 
+% that I got ideas, comments, corrections, patches or encouragement:%
+% \footnote{I started making this list 8 years after first attempts at building TRmorph, so it is necessarily incomplete. I appreciate any reminders or corrections.}
+% Can Bruce, 
+% Güliz Güneş, 
+% Taner Sezer, 
+% Ahmet Arslan, 
+% Cem Bozşahin, 
+% Şükriye Ruhi, 
+% folks working on Apertium-Turkic,
+% and definitely more.
 
 \printbibliography
 

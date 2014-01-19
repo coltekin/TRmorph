@@ -2049,6 +2049,8 @@ LEXICON Nderiv
             ND_lAS;
             D_sAl;
             D_imsi;
+            D_si;
+            D_mtrak;
 !            D_gil; ! this works only in special cases.
 
 LEXICON Pderiv
@@ -2072,6 +2074,7 @@ LEXICON Jderiv
             JN_zero;
             JP_poss;
             D_imsi;
+            D_mtrak;
 
 LEXICON Aderiv
             AD_lIk;
@@ -2153,8 +2156,29 @@ LEXICON   AD_lIk
 LEXICON   D_arasi
 %<arasi%>:arası            DerivJCont;
 
-! -(I)ms(I) also makes adjectives from nouns and adjectives.
+! -(I)mtrak mainly attaches adjectives relating to colors and
+! tastes, but it may also attach to other adjectives an nouns.
+! Unusual examples from the web: devlet-imtrak, gizem-li-mtrak
+!
+! TODO: It seems if the stem ends with `m' the suffix may become -trak.
+!       film-trak, sağlam-trak
+
+LEXICON D_mtrak
+%<imtrak%>:^(I)mtrak              DerivJCont;
+
+! -(I)msI also makes adjectives from nouns and adjectives.
 !           mavi-msi, tatlı-msı, gül-ümsü
+!
+LEXICON   D_imsi
+%<imsi%>:^(I)ms^I     DerivJCont;
+
+! -sI also makes adjectives from nouns.
+!           ot-su, sümük-sü, kadın-sı etc.
+! This seems to be used only with nouns ending with a consononant.
+!
+LEXICON   D_si
+%<si%>:s^I     DerivJCont;
+
 !
 LEXICON   D_imsi
 %<imsi%>:^(I)ms^I     DerivJCont;
@@ -2229,6 +2253,7 @@ LEXICON D_yIcI
 
 LEXICON D_CIl
 %<cil%>:^C^Il              DerivJCont;
+
 
 ! -gil makes nouns from nouns. 
 !   `  it is normally attached to proper names (Ahmet-gil) and nouns 

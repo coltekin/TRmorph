@@ -651,6 +651,8 @@ define AFilter    FSDevoicing.i
 #if (PERCENT_AS_PREFIX == 0)
               .o. percfilter.i
 #endif
+            ! Disallow derivational suffix -sI with stems ending with a vowel
+              .o. ~[?*] <- Vall {<N><si>} 
               ;
 
 
