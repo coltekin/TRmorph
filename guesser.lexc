@@ -43,6 +43,8 @@
 #define TRUC_C B|D|C|G|V|Z|J|F|Ğ|L|M|N|R|Y|P|T|Ç|K|F|S|Ş|H
 #define TRLC_C b|d|c|g|v|z|j|f|ğ|l|m|n|r|y|p|t|ç|k|f|s|ş|h
 
+#define DIGIT %0|1|2|3|4|5|6|7|8|9
+
 #define TRUC TRUC_V|TRUC_C
 #define TRLC TRLC_V|TRLC_C
 #define TRXUC TRUC|Q|W|X
@@ -63,13 +65,15 @@
 LEXICON Root
 
 ! LEXICON NRoot
-<[TRUC|TRLC][TRLC]^{MIN,MAX}>   N;
+!<[TRUC|TRLC][TRLC]^{MIN,MAX}>   N;
+<[LATUC|LATLC|DIGIT|%-|%+]^{MIN,MAX}>   N;
 <[TRUC|TRLC][TRLC]^{MIN,MAX}>   Ncomp;
 <\?>       Nfamily;
 <\?>       Ntime;
 
 ! LEXICON NPRoot
-<[TRUC][TRLC]^{MIN,MAX}>        NP;
+!<[TRUC][TRLC]^{MIN,MAX}>        NP;
+<[LATUC|LATLC|DIGIT|%-|%+]^{MIN,MAX}>   NP;
 <[TRUC][TRLC]^{MIN,MAX}>        NPcomp;
 
 ! LEXICON AdjRoot
