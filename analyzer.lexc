@@ -32,6 +32,7 @@ EndQuote;
 #include "lexicon/conjunction"
 #include "lexicon/determiner"
 #include "lexicon/interjection"
+#include "lexicon/emoticon"
 #include "lexicon/noun"
 #include "lexicon/proper_noun"
 #include "lexicon/onomatopoeia"

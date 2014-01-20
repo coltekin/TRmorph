@@ -1,0 +1,246 @@
+! This file is part of TRmorph.
+! vim: filetype=lexc
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This lexicon lists common `emoticons', or `smiley's.
+!
+! The list is essentially  taken from Wikipedia
+! (http://en.wikipedia.org/wiki/List_of_emoticons, 
+!  except `eastern emoticons') with minor modifications.
+!
+! We currently analyze these as 'Ij', but it may be changed to
+! <Ij:smiley> or something similar.
+!
+
+
+%:-)           Interjection;
+%:)            Interjection;
+%:o)           Interjection;
+%:]            Interjection;
+%:3            Interjection;
+%:c)           Interjection;
+%:%>           Interjection;
+=]             Interjection;
+8)             Interjection;
+=)             Interjection;
+%:}            Interjection;
+%:^)           Interjection;
+%:っ)          Interjection;
+%:-D           Interjection;
+%:D            Interjection;
+8-D            Interjection;
+8D             Interjection;
+x-D            Interjection;
+xD             Interjection;
+X-D            Interjection;
+XD             Interjection;
+=-D            Interjection;
+=D             Interjection;
+=-3            Interjection;
+=3             Interjection;
+B^D            Interjection;
+%:-))          Interjection;
+%>%:[          Interjection;
+%:-(           Interjection;
+%:(            Interjection;
+%:-c           Interjection;
+%:c            Interjection;
+%:-%<          Interjection;
+%:っc          Interjection;
+%:%<           Interjection;
+%:-[           Interjection;
+%:[            Interjection;
+%:{            Interjection;
+%;(            Interjection;
+%:-||          Interjection;
+%:@            Interjection;
+%>%:(          Interjection;
+%:'-(          Interjection;
+%:'(           Interjection;
+%:'-)          Interjection;
+%:')           Interjection;
+D%:%<          Interjection;
+D%:            Interjection;
+D8             Interjection;
+D%;            Interjection;
+D=             Interjection;
+DX             Interjection;
+v.v            Interjection;
+d-'%:          Interjection;
+%>%:o          Interjection;
+%:-o           Interjection;
+%:o            Interjection;
+8-0            Interjection;
+%:*            Interjection;
+%:^*           Interjection;
+'}{'           Interjection;
+%;-)           Interjection;
+%;)            Interjection;
+*-)            Interjection;
+*)             Interjection;
+%;-]           Interjection;
+%;]            Interjection;
+%;d            Interjection;
+%;^)           Interjection;
+%:-,           Interjection;
+%>%:P          Interjection;
+%:-P           Interjection;
+%:P            Interjection;
+x-P            Interjection;
+x-p            Interjection;
+xP             Interjection;
+xp             Interjection;
+%:-p           Interjection;
+%:p            Interjection;
+=p             Interjection;
+%:-þ           Interjection;
+%:þ            Interjection;
+%:þ            Interjection;
+%:-þ           Interjection;
+%:-b           Interjection;
+%:b            Interjection;
+%>%:\          Interjection;
+%>%:/          Interjection;
+%:-/           Interjection;
+%:-.           Interjection;
+%:/            Interjection;
+%:\            Interjection;
+=/             Interjection;
+=\             Interjection;
+%:L            Interjection;
+=L             Interjection;
+%:S            Interjection;
+%>.%<          Interjection;
+%:|            Interjection;
+%:-|           Interjection;
+%:$            Interjection;
+%:-X           Interjection;
+%:X            Interjection;
+%:-%#          Interjection;
+%:%#           Interjection;
+o%:-)          Interjection;
+0%:-3          Interjection;
+0%:3           Interjection;
+0%:-)          Interjection;
+0%:)           Interjection;
+0%;^)          Interjection;
+%>%:)          Interjection;
+%>%;)          Interjection;
+%>%:-)         Interjection;
+%>}%:-)        Interjection;
+}%:)           Interjection;
+3%:-)          Interjection;
+3%:)           Interjection;
+o/\o           Interjection;
+^5             Interjection;
+%>_%>^         Interjection;
+^%<_%<         Interjection;
+|%;-)          Interjection;
+|-o            Interjection;
+%:-&           Interjection;
+%:&            Interjection;
+%#-)           Interjection;
+%%-)           Interjection;
+%%)            Interjection;
+%>%:-%#%#%#..  Interjection;
+%:%#%#%#..     Interjection;
+%<%:-|         Interjection;
+ಠ_ಠ            Interjection;
+%<*)))-{       Interjection;
+%>%<(((*%>     Interjection;
+%>%<%>         Interjection;
+\o/            Interjection;
+%*%\0%/%*      Interjection;
+@}-%;-'---     Interjection;
+%>@%>--%>--    Interjection;
+%<3            Interjection;
+%</3           Interjection;
+! special unicode symbols
+☹              Interjection;
+☺              Interjection;
+☻              Interjection;
+😀               Interjection;
+😁               Interjection;
+😂               Interjection;
+😃               Interjection;
+😄               Interjection;
+😅               Interjection;
+😆               Interjection;
+😇               Interjection;
+😈               Interjection;
+😉               Interjection;
+😊               Interjection;
+😋               Interjection;
+😌               Interjection;
+😍               Interjection;
+😎               Interjection;
+😏               Interjection;
+😐               Interjection;
+😑               Interjection;
+😒               Interjection;
+😓               Interjection;
+😔               Interjection;
+😕               Interjection;
+😖               Interjection;
+😗               Interjection;
+😘               Interjection;
+😙               Interjection;
+😚               Interjection;
+😛               Interjection;
+😜               Interjection;
+😝               Interjection;
+😞               Interjection;
+😟               Interjection;
+😠               Interjection;
+😡               Interjection;
+😢               Interjection;
+😣               Interjection;
+😤               Interjection;
+😥               Interjection;
+😦               Interjection;
+😧               Interjection;
+😨               Interjection;
+😩               Interjection;
+😪               Interjection;
+😫               Interjection;
+😬               Interjection;
+😭               Interjection;
+😮               Interjection;
+😯               Interjection;
+😰               Interjection;
+😱               Interjection;
+😲               Interjection;
+😳               Interjection;
+😴               Interjection;
+😵               Interjection;
+😶               Interjection;
+😷               Interjection;
+😸               Interjection;
+😹               Interjection;
+😺               Interjection;
+😻               Interjection;
+😼               Interjection;
+😽               Interjection;
+😾               Interjection;
+😿               Interjection;
+🙀               Interjection;
