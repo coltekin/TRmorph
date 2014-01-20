@@ -1523,7 +1523,7 @@ bay                   N;
 bayrakaltı            N;
 bayra^k               N;
 bayraktar             N;
-bayram                N;
+bayram                Ntime;
 baysungur             N;
 baytar                N;
 bazalt                N;
@@ -9324,7 +9324,7 @@ mevla                 N;
 mevlithan             N;
 mevli^t               N;
 mevlü^t               N;    ! TDK spelling: mevlut
-mevsim                N;
+mevsim                Ntime;
 mevsuf                N;
 mevta                 N;
 mevt                  N;
@@ -12369,7 +12369,7 @@ sendika               N;
 sendi^k               N;
 sendrom               N;
 sene^k                N;
-sene                  N;
+sene                  Ntime;
 sene^t                N;
 senfoni               N;
 senir                 N;
@@ -15751,3 +15751,8 @@ sıradüzen             N;    ! term ?
 yolsuzlu^k            N;
 taşınmaz              N;
 amalgam               N;
+C                     N;    ! programming language
+C++^sBUV^sUC          N;    ! programming language
+Java                  N;    ! programming language
+ra^sFUVp              N;    ! music genre
+rap                   N;    ! music genre

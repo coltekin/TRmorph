@@ -379,6 +379,9 @@ LEXICON InterjectionCont
 !       ``Manisa  dosyası''nı
 !       ``Çeşitli Kanunlarda Değişiklik Yapılmasına İlişkin Kanun''u
 !
+! TODO: the first example above does not work correctly (due to y -> n
+!       alternation after -sI
+!
 
 LEXICON EndQuote
 %'^sFUV             EndQuoteCont;
