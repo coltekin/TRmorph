@@ -247,3 +247,13 @@
  */
 
 #define PERCENT_AS_PREFIX 0
+
+/* LOWERCASE_ALPHA
+ *
+ * This option enables recognizing lowercase letters as <Alpha>.
+ *
+ * Since we allow <Alpha> to inflect just like nouns, this creates
+ * increases the number of analyses. 
+ */
+
+#define LOWERCASE_ALPHA 1
