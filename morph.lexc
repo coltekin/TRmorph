@@ -831,6 +831,7 @@ LEXICON QAdvTime
 LEXICON AdvTimeCont
                     Ki;
                     AdvCont;
+                    D_lArI;
 
 LEXICON AdvCont
                 #;
@@ -2275,6 +2276,16 @@ LEXICON D_gil
 LEXICON D_dir
 %<dir%>:^D^Ir      DerivACont;
 
+
+! -lArI makes adverbs from time adverbials `akşamları', `hafta
+! sonları' ...
+!
+! We currently allow any adverb marked as AdvTime to be used with this
+! derivation, although the set of adverbs that combines with this is 
+! slightly different than the ones that combines with -ki
+!
+LEXICON D_lArI
+%<leri%>:l^Ar^I      DerivACont;
 
 ! -lA is productive, and makes verbs from nouns
 !

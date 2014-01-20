@@ -358,7 +358,7 @@ sırf                Adv;
 şırfıntı            Adv;
 sittinsene          Adv;
 siyaseten           Adv;
-son                 Adv;
+son                 AdvTime;    ! son-ki is odd, but 'son-ları' is fine
 sonra               AdvTime;
 sonradan            Adv;
 sonunda             Adv;
