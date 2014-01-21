@@ -200,6 +200,7 @@ define CompNoun [ %^%(s%) %^I -> 0 || _ %@NCOMP Boundary l %^A r ]
 ! - before another (s)I
 ! - before lArI
 ! - after lI, lIk, sIz, CI
+! - and optionally after aynı and before a case suffix 
 ! 
 ! TODO/CHECK: It seems not to be deleted afater -lIk in some cases. 
 !  `ev hayvanılık??'
@@ -211,7 +212,14 @@ define DeleteSI  %^%(s%) %^I -> 0 ||          _ Boundary %^%(s%) %^I Boundary,
                                                            l %^I k | 
                                                            s %^I z | 
                                                            %^C %^I ],
-                                     %^%(s%) %^I %@RB AposSym _ %@MB;
+                                     %^%(s%) %^I %@RB AposSym _ %@MB
+         .o.     %^%(s%) %^I (->) 0 ||
+                           .#. {aynı} %@RB _ %@MB [ %^%(y%) %^A
+                                                   |%^%(y%) %^I
+                                                   |%^%(n%) %^I n
+                                                   |%^D %^A
+                                                   |%^D %^A n
+                                                   |%^%(y%) l %^A ];
 !
 ! lAr deletion
 !
@@ -228,8 +236,8 @@ define DeleteLAR  l %^A r -> 0 || Boundary _ Boundary+ l %^A r
 !
 ! `n' insertion after (s) / larI (y) -> (n)
 !
-!
 ! After (s)I and larI -DA -DAn become -nDA -nDAn, (y)A becomes nA
+! Last line is about -(s)I deleted after root 'aynı"
 
 define InsertN  %^D %^A   -> n %^D %^A,
                 %^D %^A n -> n %^D %^A n,
@@ -238,7 +246,8 @@ define InsertN  %^D %^A   -> n %^D %^A,
                 %^C %^A  -> n %^C %^A
                 || [ [%^%(s%)|s] %^I 
                     | Boundary [ l %^A r %^I | k i | k ü]
-                   ] [Boundary|AposSym]+ _ %@MB;
+                   ] [Boundary|AposSym]+ _ %@MB,
+                   .#. {aynı} %@RB %@MB _;
 
 !
 ! DelS
