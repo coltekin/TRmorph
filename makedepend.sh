@@ -16,9 +16,9 @@ if [ -z "$depfile" ]; then
     depfile=${source}.d
 fi
 
-echo -n "${target}: " >$depfile
+echo "${target}: \c" >$depfile
 for d in $DEPS;do
-    echo -n " $d"  >>$depfile
+    echo " $d\c"  >>$depfile
 done
 echo>>$depfile;echo>>$depfile
 
