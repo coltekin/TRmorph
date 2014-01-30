@@ -6,7 +6,7 @@ depfile=$2
 
 DEPS=`grep '^#include' $source |sed 's/#include[ ]*"\([^"][^"]*\)".*/\1/'`
 if echo $source |grep '\.xfst' > /dev/null 2>&1; then
-    DEPS=`grep '^source' $source |sed 's/source[ ]*\([^ 	][^ 	]*\).*/\1/'`
+    DEPS+=" "`grep '^source' $source |sed 's/source[ ]*\([^ 	][^ 	]*\).*/\1/'`
     target=`basename $source .xfst`.cpp.xfst
 else 
     target=`basename $source .lexc`.cpp.lexc
