@@ -168,16 +168,15 @@ Note that part of the output is removed for readability. We should
 also note that this example presents one of the rare cases where the
 analysis is unambiguous. Turkish morphological analysis is an
 ambiguous process, and TRmorph does not try to avoid it during the
-analysis (see Section~\ref{sec:ambiguity}).\footnote{For most
-purposes, the output of the morphological analyzer needs to be
-disambiguated.  There are quite a few morphological disambiguators for
-Turkish reported in the literature, but, as yet, there are no 
-disambiguators that work with TRmorph output.}
+analysis. 
+Section~\ref{sec:ambiguity}) lists some of the potential sources of ambiguity. 
+For most purposes, the output of the morphological analyzer needs to be disambiguated. 
+A simple morphological disambiguator is included in TRmorph distribution (see Section~\ref{sec:disambiguation}).
 
-Once you are convinced that the output may be useful for your
-purposes, you will probably want to use it for analyzing large amount
-of text. For batch analysis tasks  foma's \lstinline{flookup} utility
-is a better fit. 
+
+Once you are convinced that the output may be useful for your purposes, 
+you will probably want to use it for analyzing large amount of text. 
+For batch analysis tasks \lstinline{flookup} utility distributed with foma is a better fit. 
 
 To use the analyzer with the HFST, you need to compile the source
 automaton with HFST tools. 
@@ -1662,7 +1661,7 @@ The resulting binary will be called \lstinline{o2t.fst}.
 Another conversion utility that converts TRmorph output to a format similar to the output of MOR utility of CHILDES \parencite{macwhinney1985,macwhinney1990} is currently in development,
 will be made part of the standard TRmorph distribution soon.
 
-\section{Morphological disambiguator}
+\section{\label{sec:disambiguation}Morphological disambiguator}
 
 TRmorph distribution currently includes a simple `zero-context' disambiguator written in python.
 Work on disambiguation is still under way. 
