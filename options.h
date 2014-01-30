@@ -257,3 +257,24 @@
  */
 
 #define LOWERCASE_ALPHA 1
+
+/* SEPARATOR_PLUS
+ *
+ * Use `+' as the separator between the analysis sybols.
+ * This seems to be the Xerox convention, and followed by some other
+ * analyzers as well.  
+ *
+ * It may also be useful in case the analyses are to be used in some
+ * sort of XML without re-coding the angle brackets.
+ */
+
+#define  SEPARATOR_PLUS 0
+
+/* MARK_SUBCATEGORIES 
+ *
+ * By default we mark subcategoris within angle brackets, using the
+ * separator `:'. Disabling this option causes subcatogory markers
+ * tobe treated as any other morphological feature.
+ */
+
+#define MARK_SUBCATEGORIES 1
