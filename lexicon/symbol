@@ -1,0 +1,33 @@
+!
+! This file contains a list of sybols, such as currency symbols or the
+! symbols used in mathematics. Some of these symbols are also used as
+! punctuation.
+! The punctuation symbols should go into 'punctuation'
+! We also have a file for emoticon, or simileys: 'emoticon'
+!
+! For now, we tag these as punctuation, but they should get their own
+! tag, with possibly subcategories.
+
+%-              Punc;
+%/              Punc;
+%«              Punc;
+%»              Punc;
+%(              Punc;
+%)              Punc;
+%*              Punc;
+%‹              Punc;
+%›              Punc;
+%%              Punc;
+%=              Punc;
+%>              Punc;
+%<              Punc;
+%[              Punc;
+%]              Punc;
+%&              Punc;
+%+              Punc;
+%#              Punc;
+
+! Currency symbols
+€               Punc;
+£               Punc;
+%$              Punc;

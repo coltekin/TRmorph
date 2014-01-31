@@ -26,6 +26,7 @@ EndQuote;
 #include "lexicon/alpha"
 #include "lexicon/clitics"
 #include "lexicon/punctuation"
+#include "lexicon/symbol"
 #include "lexicon/qwords"
 #include "lexicon/adjective"
 #include "lexicon/adverb"
