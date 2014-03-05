@@ -2222,6 +2222,10 @@ LEXICON   D_CI
 !  It also derives adjectives from adjectives and adverbs from
 !  adverbs, where it changes the degree
 !
+! Additionally, -CAnA is a colloquial form of -CA,
+!  but it seems to attach to only adverbs and adjectives to make
+!  mainly adverbs 'hızlıcana okudu', 'güzelcene uyu şimdi', but also
+!  adjectives in some cases 'kalıncana bir kitap', 'karışıkçana birşey'
 !
 LEXICON   Deriv_MACA
 %<ca%>:^C^A@MB DerivNCont;
@@ -2232,12 +2236,17 @@ LEXICON   ND_CA
 LEXICON   JD_CA
 %<ca%>:^C^A@MB DerivJCont;
 %<ca%>:^C^A@MB DerivACont;
+%<cana%>:^C^An^A@MB DerivJCont;
+%<cana%>:^C^An^A@MB DerivACont;
 LEXICON   AD_CA
 %<ca%>:^C^A@MB DerivACont;
+%<cana%>:^C^An^A@MB DerivACont;
 LEXICON   MD_CA
 %<ca%>:^C^A@MB DerivJCont;
 LEXICON   PD_CA
 %<ca%>:^C^A@MB DerivACont;
+
+
 
 ! -(y)IcI makes adjectives (and nouns) from verbs.
 !       bulaşıcı, görücü, yapıcı
