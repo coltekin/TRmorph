@@ -56,8 +56,8 @@ define SilentLetter Vsilent | ConsSilent;
 define SurfaceLetter ConsSurface | Vsurface;
 
 ! Intermediate symbols with no surface forms
-define Boundary %@MB | %@RB | %@dB %@APOS; 
-define IntSym   Boundary | %@NCOMP | %@opt3;
+define Boundary %@MB | %@RB | %@dB ;
+define IntSym   Boundary | %@NCOMP | %@opt3 | %@APOS;
 
 
 !
@@ -642,7 +642,7 @@ define KiKu i (->)  ü || ü [\Vall]* Boundary k _ %@MB ;
 !
 define percfilter [ [..] -> {<perc>} || .#. 
                                       {<perc>}  
-                                      [%0|1|2|3|4|5|6|7|8|9]
+                                      [%0|1|2|3|4|5|6|7|8|9|%.|%,]+
                                       {<Num} \">"* %> _ ]
                   .o. {<perc>} -> 0 || .#. _ ;
 #endif

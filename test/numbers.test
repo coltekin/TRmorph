@@ -70,9 +70,9 @@ A;A;1,;1,<Num:ara>
 A;R;1,2,3;
 A;R;1,2,3;
 A;A;1.000,04;1.000,04<Num:ara>
-A;A;%10;<perc>10<Num:ara>
-A;A;%1032;<perc>1032<Num:ara>
-A;A;%1,032;<perc>1,032<Num:ara>
+A;A;%10;10<Num:ara><perc>
+A;A;%1032;1032<Num:ara><perc>
+A;A;%1,032;1,032<Num:ara><perc>
 A;A;1'inci;1<Num:ara><ord>
 A;R;1'nci;
 A;R;1'ncü;
