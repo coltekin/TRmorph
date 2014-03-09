@@ -739,6 +739,7 @@ LEXICON NomPredPagr3s
 
 LEXICON NomPredPagrCont
                     #;
+                    CVcesine;
                     DIrEnd;
 
 
