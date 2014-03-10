@@ -1,0 +1,297 @@
+! g2p.xfst -- a grapheme to phoneme conversion tool for Turkish
+!
+!-----------------------------------------------------------------------
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph.
+!
+! TRmorph is free software: you can redistribute it and/or modify
+! it under the terms of the GNU Lesser Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! TRmorph is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Lesser Public License for more details.
+!
+! You should have received a copy of the GNU Lesser Public License
+! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
+!-----------------------------------------------------------------------
+!
+
+!
+! This FST converts given *analysis string* to a phonetic form in IPA.
+! 
+!
+
+read lexc analyzer.cpp.lexc
+eliminate flags
+define Lexicon;
+
+
+#include "morph-phon.cpp.xfst"
+
+! Vowels
+define lcVfront e | i | ö | ü | î ;
+define lcVback  a | ı | o | u | â | û ;
+define lcVpal   lcVfront | â | û ;
+define lcVround ö | ü  | o | u | û;
+define lcVowel  lcVfront|lcVback;
+
+define VIPA ạ | ɑ |
+            e | ɛ  | æ |
+            i | ɪ |
+            ɯ |
+            œ |
+            o | ọ |
+            Y | y |
+            u | ʊ | ụ ;
+
+
+! Consonants
+define lcCons   b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y |
+                p | t | ç | k | f | s | ş | h ;
+
+define ConsIPA  b
+              | dʒ | dʒʰ
+              | tʃ | tʃʰ
+              | d
+              | f  | Φ
+              | g  | ɟ
+              | γ
+              | h  | ç | x
+              | ʒ
+              | k  | c | kʰ | cʰ
+              | l  | ł
+              | m
+              | n  | ŋ | ɲ
+              | p  | pʰ
+              | ɾ  | ɾ̥
+              | s
+              | ∫
+              | t  | tʰ
+              | v  | ω | β
+              | j
+              | z ;
+
+
+
+define toLower   A -> a, B -> b, C -> c, Ç -> ç, D -> d,
+                 E -> e, F -> f, G -> g, Ğ -> ğ, H -> h, I -> ı, İ -> i,
+                 J -> j, K -> k, L -> l, M -> m, N -> n, O -> o, Ö -> ö,
+                 P -> p, R -> r, S -> s, Ş -> ş, T -> t, U -> u, Ü -> ü,
+                 V -> v, Y -> y, Z -> z, Î -> î, Û -> û, Â -> â ;
+
+define noPhon %'|%@RB|%@MB;
+define SylB %-;
+define Syllabify  lcVowel  -> ... SylB  || _  noPhon* lcVowel
+             .o.  [\lcVowel]* lcVowel [\lcVowel]* @> ... SylB
+                                      || _  noPhon* lcCons noPhon* lcVowel;
+
+! consonant alternations due to backness/frontness of the vowels
+
+! b -> b  - always
+! p -> p  - always
+
+
+define toipa c -> dʒ,
+             ç -> tʃ,
+             ş -> ∫,
+             j -> ʒ,
+             y -> j;
+
+define palatalize k -> c ,  ! more palatalized in some loan words: kağıt
+                  g -> ɟ ,  ! more palatalized in some loan words: dergah
+                  l -> ł    ! 
+                         || _ [\SylB]* lcVpal, lcVpal [\SylB]* _ ;
+
+define aspirate  p  -> pʰ,
+                 t  -> tʰ,
+                 k  -> kʰ,
+                 c  -> cʰ,
+                 tʃ -> tʃʰ,
+                 dʒ -> dʒʰ
+                        ||  _ noPhon* lcVowel , _ noPhon* .#.  ;
+
+define vforms   v -> β || lcVround [\lcVowel]* _ .#. ,
+                          .#. _ [\lcVowel]* lcVround
+           .o.  v -> ω || lcVround [\lcVowel]* _,
+                          _ [\lcVowel]* lcVround;
+
+! TODO: h may disappear, or lenghen the vowels kahve, Ahmet, pastahane
+define hforms   h -> ç  || _ lcVfront, lcVfront _ lcCons, lcVfront _ .#.
+           .o.  h -> x  || lcVback _ lcCons, lcVback _ .#.;
+
+! TODO: Enver, amfi : nasaliztion before f and v
+define nforms   n -> ŋ  || lcVback _ [k|g|kʰ]
+        .o.     n -> ɲ  || lcVfront _ [c|ɟ|cʰ] ;
+
+define finalr   r -> ɾ  || _ .#.;
+
+! TODO:  More to be done here!
+!    - deeltion of one of the vowels in v _ v context.
+!    - alternatively/optionally ğ -> j between front vowels
+!    - soωan / soωuk ??
+!    - both vowels surface as 'a' betwen a _ ı and ı _ a 
+!    - j between i _ e 
+define yumusakg  ğ -> %: || _ SylB,
+                            _ .#. ,
+                            a _ a,
+                            â _ â,
+                            ı _ ı,
+                            o _ o,
+                            u _ u,
+                            û _ û,
+                            e _ e,
+                            i _ i,
+                            ö _ ö,
+                            ü _ ü,
+                            î _ î
+        .o. ğ -> 0     || lcVowel _ lcVowel
+        .o. ğ -> γ; !! TODO: ???
+
+define optionalF1 f -> Φ ||  _ [\SylB]* Vround; ! G&K: some speaker only
+define optionalF2 f -> Φ ||  Vround [\Vowel]* _ .#.; ! G&K: even to a lesser extent
+!define k -> c || _ Vfront, Vfront _
+!      .o.
+!       
+
+define toIPAcons  toipa .o. palatalize .o. aspirate .o. vforms .o. hforms .o. nforms .o. finalr .o. yumusakg .o. optionalF1 .o. optionalF2;
+
+
+!
+! Vowels
+
+! TODO: the circumflexed vowels need attention
+
+define circumflex â -> ạ, î -> i , û -> u;
+
+define aforms   a -> ɑ ; ! it should be a (or ạ according to G&K, maybe ä)
+                         ! with some of the borrowings, but we do not have them 
+                         ! marked in the lexicon yet.
+
+define eforms   e -> ɛ   || _ [noPhon|SylB]* .#.
+         .o.    e -> æ   || _ [l|ł|m|n|ŋ|ɲ|r|ɾ] [noPhon|SylB]* [\Vowel|.#.];
+         ! e otherwise
+
+define iforms   i -> ɪ   || _ [noPhon|SylB]* .#. ;
+         ! i otherwise
+
+define Iforms   ı -> ɯ  ; ! everywhere
+
+! o -> ọ in loan words before /l/ (G&K)
+
+define Oforms   ö -> œ ; ! everywhere
+
+
+
+define uforms   u -> ʊ   || _ [noPhon|SylB]* .#. ;
+         ! ụ after (before?) loan words with /ɟ/, /c/ and /l/
+         ! u otherwise
+
+define Uforms   ü -> Y   || _ [noPhon|SylB]* .#.
+       .o.      ü -> y ;
+
+!
+! TODO: parallel replacement here may minimize the FST
+!
+define toIPAvowels circumflex
+        .o. aforms
+        .o. eforms
+        .o. iforms
+        .o. Iforms
+        .o. Oforms
+        .o. uforms
+        .o. Uforms;
+
+
+!
+! Stress related rules
+!
+! - If there is no stress mark (no irregular stress from the lexicon):
+!    - Mark the stress     
+! 
+!
+!
+
+! default final stress
+!
+!define defaultStress SylB -> ... ˈ ||   _ [\SylB]* .#.;
+! or if we mark before the vowel:
+!
+
+define stressMark "^S";
+
+define deleteBoundary noPhon|SylB|"^NS"|"^NNS"|"^S" -> 0;
+
+define toIPA toLower
+         .o. Syllabify
+         .o. toIPAcons
+         .o. toIPAvowels
+         .o. [ "^NS" | "^NNS" ]  -> 0 || ["^NS"|"^NNS"] \["^NS"|"^NNS"]* _ 
+;
+
+define defaultStress 
+          \[stressMark|"^NS"|"^NNS"]*
+         .o. VIPA -> ˈ ...  ||  _ [\SylB]* .#.;
+
+define negStress ?* "^NNS" ?*
+         .o. VIPA -> ˈ ...  ||  _ [\SylB]* "^NNS";
+
+define moveStress \"^S"* "^NS" ?*
+         .o. VIPA -> ˈ ...  ||  _ [\SylB]* "^NS";
+
+define irregStress \"^NNS"* "^S" \"^NNS"* .o. "^S" -> ˈ ;
+
+define stress defaultStress | negStress | moveStress | irregStress ;
+
+define stressBeforeSyl SylB -> ... ˈ || _ \SylB* ˈ .o. ˈ -> 0 || ˈ ?* _;
+
+regex AFilter
+        .o. delStressMarks
+        .o. Abbr
+        .o. Lexicon 
+        .o. replaceApos
+        .o. NumberSpace
+        .o. NumericInsSilentP
+        .o. NumericSeparator
+        .o. CompNoun
+        .o. DeleteSI
+        .o. DeleteLAR
+        .o. InsertN
+        .o. InsertS
+        .o. DelS
+        .o. PronounExceptions
+        .o. InsertY
+        .o. iDeleteY
+        .o. NbeforePassive
+        .o. PassiveLN
+        .o. Causative
+        .o. Optative3
+        .o. SpaceBeforeMI
+        .o. NegAorist
+        .o. DeleteBuffer
+        .o. DeYeException
+        .o. YorException
+        .o. VowelEpenthesis
+        .o. VowelHarmony 
+        .o. VowelEpenthesis
+        .o. FSDevoicing
+        .o. VoicingAssimilation
+        .o. Redup
+        .o. DeleteSilentP
+        .o. KiKu
+        .o. DeleteCircumflex
+        .o. toIPA 
+        .o. stress 
+        .o. deleteBoundary ;
+
+! regex toLower
+!   .o. Syllabify
+!   .o. toIPAcons
+!   .o. toIPAvowels
+!   .o. stressRule
+!   .o. deleteBoundary;
+
+save stack g2p.fst

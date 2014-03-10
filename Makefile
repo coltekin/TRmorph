@@ -61,6 +61,16 @@ hyphenate: hyphenate.fst
 
 hyphenate.fst: hyphenate.cpp.xfst
 	foma -f hyphenate.cpp.xfst
+
+#
+# g2p - grapheme to phoneme conversion
+#
+g2p: g2p.fst 
+
+g2p.fst: morph-phon.cpp.xfst g2p.cpp.xfst
+	foma -f g2p.cpp.xfst
+
+
 #
 # housekeeping goes below
 #

@@ -281,7 +281,7 @@ LEXICON PostPins
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
 
 LEXICON PostPinsCont
-%<ins%>%<Postp%:adv%:nomC%>:^(y)l^A@MB  AdvCont;
+%<ins%>%<Postp%:adv%:nomC%>:^(y)l^NS^A@MB  AdvCont;
 
 LEXICON PostPabl
 %<N%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
@@ -659,7 +659,7 @@ LEXICON  NCaseNoGen
 %<acc%>:^(y)^I@MB   AccCaseCont;
 %<dat%>:^(y)^A@MB   Case1Cont;
 %<abl%>:^D^An@MB    Case1Cont;
-%<ins%>:^(y)l^A@MB  Case1Cont;
+%<ins%>:^(y)l^NS^A@MB  Case1Cont;
 %<loc%>:^D^A@MB     LocCaseCont;
 
 LEXICON  Ncase
@@ -726,12 +726,12 @@ LEXICON NomPredQCont
 %<q%>:@miSPCm^I@MB                        CplAll;
 
 LEXICON NomPredPagr
-%<cpl%:pres%>%<1s%>:^(y)^Im@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2s%>:s^In@MB          NomPredPagrCont;
+%<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
+%<cpl%:pres%>%<2s%>:s^^NSIn@MB          NomPredPagrCont;
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
 %<cpl%:pres%>%<3p%>:0@MB             NomPredPagrCont;
-%<cpl%:pres%>%<1p%>:^(y)^Iz@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2p%>:s^In^Iz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<1p%>:^(y)^^NSIz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<2p%>:s^^NSIn^Iz@MB       NomPredPagrCont;
 
 LEXICON NomPredPagr3s
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
@@ -744,8 +744,8 @@ LEXICON NomPredPagrCont
 
 
 LEXICON  NomPredPagr3p
-%<cpl%:pres%>%<3p%>:l^Ar@MB         NomPredPagr3pCont;
-%<3p%>:l^Ar@MB                      PAgrCplAll;
+%<cpl%:pres%>%<3p%>:l^NS^Ar@MB         NomPredPagr3pCont;
+%<3p%>:l^NS^Ar@MB                      PAgrCplAll;
 
 LEXICON NomPredPagr3pCont
                         NomPredPagrCont;        ! includes end state
@@ -756,13 +756,13 @@ LEXICON  NomPred3pQCont
                         PAgrCplAll;
 
 LEXICON NomPredDir
-%<dir%>:^D^Ir@MB  NomPredDirCont;
+%<dir%>:^D^NS^Ir@MB  NomPredDirCont;
 
 LEXICON NomPredDirCont
 %<3p%>:l^Ar@MB    #;
 
 LEXICON DIrEnd
-%<dir%>:^D^Ir@MB  #;
+%<dir%>:^D^NS^Ir@MB  #;
 
 !
 ! Rules governing adjectives and adverbs
@@ -1379,8 +1379,8 @@ LEXICON VCabilNeg
 !
 
 LEXICON VNegative
-%<neg%>:m^A@MB      VNegativeCont;
-%<neg%>:m^A@MB      CVNeg;
+%<neg%>:m^NNS^A@MB      VNegativeCont;
+%<neg%>:m^NNS^A@MB      CVNeg;
 
 LEXICON VNegativeCont
                     VComp;
@@ -1391,12 +1391,12 @@ LEXICON VNegativeCont
 
 LEXICON VComp
 %<abil%>%<V%>:^(y)^Abil@MB VCompCont;
-%<iver%>%<V%>:^(y)^Iver@MB VCompCont;
-%<adur%>%<V%>:^(y)^Adur@MB VCompCont;
-%<agel%>%<V%>:^(y)^Agel@MB VCompCont;
+%<iver%>%<V%>:^(y)^Iv^NSer@MB VCompCont;
+%<adur%>%<V%>:^(y)^Ad^NSur@MB VCompCont;
+%<agel%>%<V%>:^(y)^Ag^NSel@MB VCompCont;
 %<agor%>%<V%>:^(y)^Agör@MB VCompCont;
-%<akal%>%<V%>:^(y)^Akal@MB VCompCont;
-%<ayaz%>%<V%>:^(y)^Ayaz@MB VCompCont;
+%<akal%>%<V%>:^(y)^Ak^NSal@MB VCompCont;
+%<ayaz%>%<V%>:^(y)^Ay^NSaz@MB VCompCont;
 ! %<akoy%>%<V%>:^(y)^Akoy@MB VCompCont;
 
 LEXICON VCompCont
@@ -1419,7 +1419,7 @@ LEXICON VTAM
 %<fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
 %<obl%>:m^Al^I@MB         TAMOblCont;
 %<impf%>:m^Akt^A@MB       TAMMaktaCont; ! TODO: -maktayızdır ??
-%<cont%>:^(I)yor@MB       TAMContCont;
+%<cont%>:^(I)y^NSor@MB       TAMContCont;
 %<past%>:^D^I@MB          TAMDICont;
 %<cond%>:s^A@MB           TAMCondCont;
 %<cond%>:^(y)^A@MB        TAMCondYACont; ! this is informal use
@@ -1466,7 +1466,7 @@ LEXICON TAMg1Cont
 
 ! This is for cases like: 'birleşmiş milletler', 
 ! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
-! 'adam olacak çocuk', 'ele gelir sonuç' etd.
+! 'adam olacak çocuk', 'ele gelir sonuç' etc.
 ! some of these (-makta -yor) are restricted to be used 
 ! before an auxiliary verb (ol, bul) but some can stand alone.
 ! These are, after all, some sort of subordination. The result 
@@ -1490,7 +1490,7 @@ LEXICON TAMG1QCont
                 TAMG1QDIr;
 
 LEXICON TAMG1QDIr
-%<dir%>:^D^Ir@MB            TAMG1QDIrCont;
+%<dir%>:^D^NS^Ir@MB            TAMG1QDIrCont;
 
 LEXICON TAMG1QDIrCont
 %<3p%>:l^Ar@MB              #;
@@ -1498,17 +1498,17 @@ LEXICON TAMG1QDIrCont
 
 
 LEXICON PAgrG1     ! <3p>:lAr is treated separately
-%<1s%>:^(y)^Im@MB       PAgrG1Cont;
-%<2s%>:s^In@MB          PAgrG1Cont;
+%<1s%>:^(y)^NS^Im@MB       PAgrG1Cont;
+%<2s%>:s^NS^In@MB          PAgrG1Cont;
 %<3s%>:0@MB             PAgrG1Cont;
 %<3p%>:0@MB             PAgrG1Cont;
-%<1p%>:^(y)^Iz@MB       PAgrG1Cont;
-%<2p%>:s^In^Iz@MB       PAgrG1Cont;
+%<1p%>:^(y)^NS^Iz@MB       PAgrG1Cont;
+%<2p%>:s^NS^In^Iz@MB       PAgrG1Cont;
 
 
 LEXICON PAgrG1Cont
                     #;
-%<dir%>:^D^Ir@MB    #;
+%<dir%>:^D^NS^Ir@MB    #;
 
 
 LEXICON  PAgrG1p3
@@ -1526,7 +1526,7 @@ LEXICON PAgrG1p3QCont
 
 
 LEXICON TAMg1DIr
-%<dir%>:^D^Ir@MB TAMg1DIrCont;
+%<dir%>:^D^NS^Ir@MB TAMg1DIrCont;
 
 LEXICON TAMg1DIrCont
 %<3p%>:s^Inl^Ar@MB     #;
@@ -1616,18 +1616,18 @@ LEXICON TAMOptCont
 #endif
 
 LEXICON OptQCont
-%<cpl%:past%>:^(y)^D^I@MB     PAgrG2End;
-%<cpl%:evid%>:^(y)m^Iş@MB     PAgrG1End;
+%<cpl%:past%>:^(y)^D^NS^I@MB     PAgrG2End;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrG1End;
 
 ! TODO: opt3s below seems to be a half-implemented feature, but not
 !       clear what...
 
 LEXICON OptPAgr
-%<1s%>:^(y)^Im@MB       OptPAgrCont;
+%<1s%>:^(y)^NS^Im@MB    OptPAgrCont;
 %<2s%>:s^In@MB          #;
 %<3s%>:@opt3s^In@MB     OptPAgrCont;
 %<1p%>:l^Im@MB          OptPAgrCont;
-%<2p%>:s^In^Iz@MB       #;
+%<2p%>:s^NS^In^Iz@MB    #;
 %<3p%>:@opt3s^In@MB     OptPAgrCont;
 %<3p%>:@opt3s^Inl^Ar@MB OptPAgrCont;
 %<3s%>:0@MB             OptPAgrCont; ! these two are 
@@ -1652,13 +1652,13 @@ LEXICON TAMImpCont
 
 LEXICON PAgrIMPEnd
 %<2s%>:0@MB             #;
-%<2s%>:s^An^A@MB        #;
+%<2s%>:s^An^NS^A@M      #;
 %<2s%>:^(y)^In@MB       #;
-%<3s%>:s^In@MB          #;
-%<3p%>:s^In@MB          #;
+%<3s%>:s^NS^In@MB       #;
+%<3p%>:s^NS^In@MB       #;
 %<2p%>:^(y)^In@MB       #;
-%<2p%>:^(y)^In^Iz@MB    #;
-%<2p%>:s^An^Iz^A@MB  #;
+%<2p%>:^(y)^NS^In^Iz@MB #;
+%<2p%>:s^An^NS^Iz^A@MB  #;
 %<3p%>:s^Inl^Ar@MB      #;
 
 !
@@ -1721,13 +1721,13 @@ LEXICON  mIPagrCont
                         mIDIr;
 
 LEXICON mIDI
-%<cpl%:past%>:^(y)^D^I@MB  PAgrG2End;
+%<cpl%:past%>:^(y)^D^NS^I@MB  PAgrG2End;
 
 LEXICON mIMIS
-%<cpl%:evid%>:^(y)m^Iş@MB PAgrG1End;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB PAgrG1End;
 
 LEXICON mIDIr
-%<dir%>:^D^Ir@MB        mIDIrCont;
+%<dir%>:^D^NS^Ir@MB        mIDIrCont;
 
 LEXICON  mIDIrCont
                         #;
@@ -1756,7 +1756,7 @@ LEXICON CplAll
                ! TODO: this may not be the best decision.
 
 LEXICON CplEvid
-%<cpl%:evid%>:^(y)m^Iş@MB     CplEvidCont;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     CplEvidCont;
 
 LEXICON CplEvidCont
                 PAgrG1End;
@@ -1767,16 +1767,16 @@ LEXICON CplEvidCont
 !       precedes the evidential copula.
 
 LEXICON CplEvid2
-%<cpl%:evid%>:^(y)m^Iş@MB     PAgrG1End;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrG1End;
     
 LEXICON CplPast2
-%<cpl%:past%>:^(y)^D^I@MB      PAgrG2End;
+%<cpl%:past%>:^(y)^D^NS^I@MB      PAgrG2End;
 
 LEXICON CplCond2
-%<cpl%:cond%>:^(y)s^A@MB       PAgrG2End;
+%<cpl%:cond%>:^(y)s^NS^A@MB       PAgrG2End;
 
 LEXICON CplCond
-%<cpl%:cond%>:^(y)s^A@MB       CplCondCont;
+%<cpl%:cond%>:^(y)s^NS^A@MB       CplCondCont;
 
 LEXICON  CplCondCont
                             PAgrG2End;
@@ -1784,7 +1784,7 @@ LEXICON  CplCondCont
                             CplPast2;
 
 LEXICON  CplPast
-%<cpl%:past%>:^(y)^D^I@MB      CplPastCont;
+%<cpl%:past%>:^(y)^D^NS^I@MB      CplPastCont;
 
 LEXICON CplPastCont
                 PAgrG2End;
@@ -1828,21 +1828,21 @@ LEXICON PAgrCplAll
                 PAgrCplCond;
 
 LEXICON PAgrCplEvid
-%<cpl%:evid%>:^(y)m^Iş@MB     PAgrCplEvidCont;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrCplEvidCont;
 
 LEXICON PAgrCplEvidCont
                             #;
                             PAgrCplCond2;
 
 LEXICON PAgrCplPast
-%<cpl%:past%>:^(y)^D^I@MB      PAgrCplPastCont;
+%<cpl%:past%>:^(y)^D^NS^I@MB      PAgrCplPastCont;
 
 LEXICON PAgrCplPastCont
                             PAgrCplCond2;
                             #;
 
 LEXICON PAgrCplCond
-%<cpl%:cond%>:^(y)s^A@MB       PAgrCplCondCont;
+%<cpl%:cond%>:^(y)s^NS^A@MB       PAgrCplCondCont;
 
 LEXICON PAgrCplCondCont
                             #;
@@ -1850,13 +1850,13 @@ LEXICON PAgrCplCondCont
                              PAgrCplPast2;
 
 LEXICON PAgrCplEvid2
-%<cpl%:evid%>:^(y)m^Iş@MB     #;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     #;
 
 LEXICON PAgrCplPast2
-%<cpl%:past%>:^(y)^D^I@MB      #;
+%<cpl%:past%>:^(y)^D^NS^I@MB      #;
 
 LEXICON PAgrCplCond2
-%<cpl%:cond%>:^(y)s^A@MB       #;
+%<cpl%:cond%>:^(y)s^NS^A@MB       #;
 
 
 !
@@ -1869,7 +1869,7 @@ LEXICON lArCplKen
 %<3p%>:l^Ar@MB      CplKen;
 
 LEXICON CplKen
-%<cv%:ken%>%<Adv%>:^(y)ken@MB  AdvTimeCont; 
+%<cv%:ken%>%<Adv%>:^(y)k^NSen@MB  AdvTimeCont; 
 
 !
 ! Subordinating suffixes
@@ -1922,9 +1922,9 @@ LEXICON PartCont
 LEXICON ConVerb
 
 %<cv%:ip%>:^(y)^Ip@MB                       DerivACont;
-%<cv%:meksizin%>:m^Aks^Iz^In@MB             DerivACont;
+%<cv%:meksizin%>:m^Aks^NS^Iz^In@MB             DerivACont;
 %<cv%:ince%>:^(y)^Inc^A@MB                  DerivACont;
-%<cv%:erek%>:^(y)^Ar^Ak@MB                  DerivACont;
+%<cv%:erek%>:^(y)^Ar^NS^Ak@MB                  DerivACont;
 %<cv%:eli%>:^(y)^Al^I@MB                    DerivACont;
 %<cv%:dikce%>:^D^Ik^C^A@MB                  DerivACont;
 %<cv%:esiye%>:^(y)^As^Iy^A@MB               DerivACont;
@@ -2194,10 +2194,10 @@ LEXICON   D_imsi
 ! TODO: some cases like 'küçücük'.
 !
 LEXICON   Dimin
-%<dim%>:^C^I^k@MB        DerivNCont;
-%<dim%>:c^A^k@MB         DerivNCont;
-%<dim%>:^(I)c^A^k@MB     DerivNCont;
-%<dim%>:^(A)c^A^k@MB     DerivNCont;
+%<dim%>:^C^NS^I^k@MB        DerivNCont;
+%<dim%>:c^NS^A^k@MB         DerivNCont;
+%<dim%>:^NS^(I)c^NS^A^k@MB     DerivNCont;
+%<dim%>:^NS^(A)c^NS^A^k@MB     DerivNCont;
 %<dim%>:c^Ağ^Iz@MB       DerivNCont;
 
 ! -CI generally marks occupation, "someone who does or sells something"
@@ -2284,7 +2284,7 @@ LEXICON D_gil
 ! TODO: tag is the same as other <dir>
 !
 LEXICON D_dir
-%<dir%>:^D^Ir      DerivACont;
+%<dir%>:^D^NS^Ir      DerivACont;
 
 
 ! -lArI makes adverbs from time adverbials `akşamları', `hafta

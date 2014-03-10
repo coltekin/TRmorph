@@ -21,6 +21,7 @@ source morph-phon.cpp.xfst
 clear stack
 read regex     AFilter
            .o. Lexicon 
+           .o. delStressMarks
            .o. Abbr
            .o. replaceApos
            .o. NumberSpace

@@ -61,6 +61,13 @@ define IntSym   Boundary | %@NCOMP | %@opt3 | %@APOS;
 
 
 !
+! Delete the stress-related intermediate symbols
+!
+
+define delStressMarks    ["^NS"|"^NNS"] -> 0;
+
+
+!
 ! Abbreviation handling
 !
 ! The first rule adds the default silent front/unronded vowel 
