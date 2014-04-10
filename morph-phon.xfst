@@ -59,6 +59,7 @@ define SurfaceLetter ConsSurface | Vsurface;
 define Boundary %@MB | %@RB | %@dB ;
 define IntSym   Boundary | %@NCOMP | %@opt3 | %@APOS;
 
+define Digit %0|1|2|3|4|5|6|7|8|9;
 
 !
 ! Delete the stress-related intermediate symbols
@@ -125,7 +126,8 @@ define NumericInsSilentP [..] -> %^sBRV %^sVC || %0^{12,14} ./. %@tSep  _ %@RB
                      .o. [..] -> %^sBUV %^sVC || %0^{9,11}  ./. %@tSep  _ %@RB
                      .o. [..] -> %^sBRV %^sVC || %0^{6,8}   ./. %@tSep  _ %@RB
                      .o. [..] -> %^sFUV %^sVC || %0^{3,5}   ./. %@tSep  _ %@RB
-                     .o. [..] -> %^sFRV %^sVC || %0^2      _ %@RB
+                     .o. [..] -> %^sFRV %^sVC || Digit %0^2      _ %@RB
+                     .o. [..] -> %^sBUV %^sVC || \Digit %0^2     _ %@RB
                      .o. [..] -> %^sBRV %^sVC || [1|3] %0  _ %@RB
                      .o. [..] -> %^sFUV       || 2 %0      _ %@RB
                      .o. [..] -> %^sBUV %^sUC || 4 %0      _ %@RB

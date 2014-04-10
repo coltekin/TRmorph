@@ -955,7 +955,7 @@ LEXICON TimeStem
 %<Num%:time%>:@RB             DateTimeCont;
 
 LEXICON DateTimeCont
-0:%@APOS@MB         Ncont;
+0:@APOS@MB         Ncont;
 #if (APOSTROPHE_OPTIONAL_NUM == 1) 
                     Ncont;
 #endif
