@@ -194,3 +194,4 @@ for line in input_stream:
             print('{:.2f}: {}{}'.format(sc, ww, a), file=output_stream)
         else:
             print('{}{}'.format(ww, a), file=output_stream)
+    print(file=output_stream)
