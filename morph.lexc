@@ -727,11 +727,11 @@ LEXICON NomPredQCont
 
 LEXICON NomPredPagr
 %<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2s%>:s^^NSIn@MB          NomPredPagrCont;
+%<cpl%:pres%>%<2s%>:s^NS^In@MB          NomPredPagrCont;
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
 %<cpl%:pres%>%<3p%>:0@MB             NomPredPagrCont;
-%<cpl%:pres%>%<1p%>:^(y)^^NSIz@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2p%>:s^^NSIn^Iz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<1p%>:^(y)^NS^Iz@MB       NomPredPagrCont;
+%<cpl%:pres%>%<2p%>:s^NS^In^Iz@MB       NomPredPagrCont;
 
 LEXICON NomPredPagr3s
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
