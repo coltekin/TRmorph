@@ -16,3 +16,5 @@ trmorph.xfst
 *.cpp.xfst
 .dep
 .junk
+*.md5
+*.att
