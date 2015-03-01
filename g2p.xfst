@@ -248,6 +248,8 @@ define stress defaultStress | negStress | moveStress | irregStress ;
 
 define stressBeforeSyl SylB -> ... ˈ || _ \SylB* ˈ .o. ˈ -> 0 || ˈ ?* _;
 
+define deleteApoSym AposSym -> 0;
+
 regex AFilter
         .o. delStressMarks
         .o. Abbr
@@ -283,6 +285,7 @@ regex AFilter
         .o. DeleteSilentP
         .o. KiKu
         .o. DeleteCircumflex
+        .o. deleteApoSym
         .o. toIPA 
         .o. stress 
         .o. deleteBoundary ;
