@@ -42,8 +42,10 @@ define Lexicon;
 
 source morph-phon.cpp.xfst
 
-define analyze AFilter
+define analyzeBasic AFilter
            .o. Lexicon 
+           .o. delStressMarks
+           .o. Abbr
            .o. replaceApos
            .o. NumberSpace
            .o. NumericInsSilentP
@@ -53,6 +55,7 @@ define analyze AFilter
            .o. DeleteLAR
            .o. InsertN
            .o. DelS
+           .o. InsertS
            .o. PronounExceptions
            .o. InsertY
            .o. iDeleteY
@@ -65,53 +68,21 @@ define analyze AFilter
            .o. DeleteBuffer
            .o. DeYeException
            .o. YorException
-           .o. VowelEpenthesis
            .o. VowelHarmony 
+           .o. VowelEpenthesis
            .o. FSDevoicing
            .o. VoicingAssimilation
            .o. Redup
            .o. DeleteSilentP
            .o. KiKu
-           .o. DeleteCircumflex
-           .o. DeleteBoundary
-           .o. Capitalize
-           .o. AllCaps ;
+           .o. DeleteCircumflex;
+define analyze analyzeBasic .o. DeleteBoundary .o. Capitalize .o.  Capitalize.i;
 !
 ! This is the same analyzer. Except, it leaves the boundaries 
 ! intact at the surface level
 ! TODO: this can be made more strict/unambigous.
 !
-define analyzeBM AFilter
-           .o. Lexicon 
-           .o. replaceApos
-           .o. NumberSpace
-           .o. NumericInsSilentP
-           .o. NumericSeparator
-           .o. CompNoun
-           .o. DeleteSI
-           .o. DeleteLAR
-           .o. InsertN
-           .o. DelS
-           .o. PronounExceptions
-           .o. InsertY
-           .o. iDeleteY
-           .o. NbeforePassive
-           .o. PassiveLN
-           .o. Causative
-           .o. Optative3
-           .o. SpaceBeforeMI
-           .o. NegAorist
-           .o. DeleteBuffer
-           .o. DeYeException
-           .o. YorException
-           .o. VowelEpenthesis
-           .o. VowelHarmony 
-           .o. FSDevoicing
-           .o. VoicingAssimilation
-           .o. Redup
-           .o. DeleteSilentP
-           .o. KiKu
-           .o. DeleteCircumflex
+define analyzeBM  analyzeBasic
            .o. %@RB|%@MB -> "-"
            .o. "-" -> 0 // "-" _
            .o. "-" -> 0 ||  _ .#.;
