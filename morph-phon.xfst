@@ -687,6 +687,30 @@ define AFilter    FSDevoicing.i
               .o. ~[?*] <- Vall {<N><si>} 
               ;
 
+! A few analysis symbols may result from different surface forms.
+! In the morphological description, we keep theme saparate so that
+! they can be distinguished when needed. However, we do not want them
+! as different symbols in normal analysis strings, so we collapse them
+! here.
+! 
+define collapseAsymbols %: %0          -> 0 || %< p 3 p _ %> 
+                    .o. %: s I n l A r -> 0 || %< 3 p _ %>
+                    .o. %: s I n       -> 0 || %< 3 p _ %>
+                    .o. %: %0          -> 0 || %< 3 p _ %>
+                    .o. %: %0          -> 0 || %< 3 s _ %>
+                    .o. %: s A n A     -> 0 || %< 2 s _ %>
+                    .o. %: y I n       -> 0 || %< 2 s _ %>
+                    .o. %: y I n       -> 0 || %< 2 p _ %>
+                    .o. %: y I n I z   -> 0 || %< 2 p _ %>
+                    .o. %: s A n I z   -> 0 || %< 2 p _ %>
+                    .o. m A (K)        -> 0 || %< v n %: i n f _ %>
+                    .o. %: z           -> 0 || %< c v %: d e n _ %>
+                    .o. %: c I k       -> 0 || %< d i m _ %>
+                    .o. %: c A k       -> 0 || %< d i m _ %>
+                    .o. %: I c A k     -> 0 || %< d i m _ %>
+                    .o. %: A c A k     -> 0 || %< d i m _ %>
+                    .o. %: c A g I z   -> 0 || %< d i m _ %>
+                    ;
 
 define DeleteBoundary ["@MB" | "@RB"] -> 0 ;
 

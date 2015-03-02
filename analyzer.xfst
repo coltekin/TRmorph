@@ -19,7 +19,8 @@ source morph-phon.cpp.xfst
 ! Put all of them together. The order is important. 
 !
 clear stack
-read regex     AFilter
+read regex     collapseAsymbols.i
+           .o. AFilter 
            .o. Lexicon 
            .o. delStressMarks
            .o. Abbr
