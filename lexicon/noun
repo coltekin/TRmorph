@@ -1803,6 +1803,8 @@ birsam                N;
 biryancı              N;
 bisiklet              N;
 bisküvi               N;
+biskuit               N;     ! common unofficial (mis)spelling
+bisküvit              N;     ! common unofficial (mis)spelling
 bistro                N;
 bisturi               N;
 bitelge               N;
@@ -2421,6 +2423,7 @@ cerbeze               N;
 cereme                N;
 ceren                 N;
 cereyan               N;
+ceryan                N;    ! common unofficial (mis)spelling
 çerez                 N;
 çerge                 N;
 cerh                  N;
@@ -2541,6 +2544,7 @@ cihet                 N;
 ciklet                N;    ! maybe merge with çiklet
 çıkmaz                N;    !! from adj
 çikolata              N;
+çukulata              N;     ! common unofficial (mis)spelling
 çıkra                 N;
 çıkrı^k               N;
 çıktı                 N;
@@ -2822,6 +2826,7 @@ dahi@DEL@l            N;
 dahil                 N;
 daire                 N;
 dakika                Ntime;
+dakka                 Ntime;    ! common unofficial (mis)spelling
 daktilografi          N;
 daktilograf           N;
 daktilo               N;
@@ -6389,6 +6394,7 @@ iteği                 N;
 itene^k               N;
 iterbiyum             N;
 itfaiye               N;
+itfaye                N; ! common (alt/mis?)spelling
 itfa                  N;
 ithaf                 N;
 ithalat               N;
@@ -8167,6 +8173,8 @@ krupiye               N;
 kruvazör              N;
 ksenon                N;
 ksilofon              N;
+silafon               N; ! alt./wrong spelling: (ksilofon) seems to be common
+silofon               N; ! alt./wrong spelling: (ksilofon) seems to be common
 kuaför                N;
 kuantum               N;
 kuartet               N;
@@ -11030,6 +11038,7 @@ pide                  N;
 pigment               N;
 pıhtı                 N;
 pijama                N;
+picama                N;     ! common unofficial (mis)spelling
 pikaj                 N;
 pika^p                N;
 pike                  N;
@@ -11981,6 +11990,7 @@ sandı^k               N;
 sanduka               N;
 sandvi^c              N;
 sandviç               N;
+sandöviç              N;     ! common unofficial (mis)spelling
 sanem                 N;
 şangırtı              N;
 sanidin               N;
@@ -15758,3 +15768,4 @@ C++^sBUV^sUC          N;    ! programming language
 Java                  N;    ! programming language
 ra^sFUVp              N;    ! music genre
 rap                   N;    ! music genre
+zombi                 N;
