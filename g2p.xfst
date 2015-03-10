@@ -251,7 +251,6 @@ define stressBeforeSyl SylB -> ... ˈ || _ \SylB* ˈ .o. ˈ -> 0 || ˈ ?* _;
 define deleteApoSym AposSym -> 0;
 
 regex AFilter
-        .o. delStressMarks
         .o. Abbr
         .o. Lexicon 
         .o. replaceApos
@@ -264,6 +263,7 @@ regex AFilter
         .o. InsertN
         .o. InsertS
         .o. DelS
+        .o. InsertS
         .o. PronounExceptions
         .o. InsertY
         .o. iDeleteY
@@ -276,7 +276,6 @@ regex AFilter
         .o. DeleteBuffer
         .o. DeYeException
         .o. YorException
-        .o. VowelEpenthesis
         .o. VowelHarmony 
         .o. VowelEpenthesis
         .o. FSDevoicing

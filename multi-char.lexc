@@ -10,6 +10,6 @@ Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   @DEL@ @DUP@ @DELS@
                   @LN @CAUS
                   @miSPC @opt3
-                  ^NS ^NNS
+                  ^NS ^NNS ^S
                   ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
 !                   e,i   ü,ö   a,ı   o,u   

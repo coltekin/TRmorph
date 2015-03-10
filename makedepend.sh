@@ -4,7 +4,8 @@ source=$1
 depfile=$2
 
 
-DEPS=`grep '^#include' $source |sed 's/#include[ ]*"\([^"][^"]*\)".*/\1/'`
+DEPS="$(grep '^#include' $source |sed 's/#include[ ]*"\([^"][^"]*\)".*/\1/')"
+DEPS="$DEPS $(grep '^read lexc' $source | sed 's/^read lexc[ ]*//')"
 if echo $source |grep '\.xfst' > /dev/null 2>&1; then
     DEPS+=" "`grep '^source' $source |sed 's/source[ ]*\([^ 	][^ 	]*\).*/\1/'`
     target=`basename $source .xfst`.cpp.xfst
