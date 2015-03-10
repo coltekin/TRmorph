@@ -49,6 +49,7 @@ aberasyon             N;
 abide                 N;
 abıhayat              N;
 abi                   Nfamily; ! officially this is wrong
+ağbi                  Nfamily; ! officially this is wrong
 abis                  N;
 abiye                 N;
 abla                  Nfamily;
@@ -1803,6 +1804,7 @@ birsam                N;
 biryancı              N;
 bisiklet              N;
 bisküvi               N;
+bisküvit              N;    ! common misspelling / alt. form
 bistro                N;
 bisturi               N;
 bitelge               N;
@@ -2421,6 +2423,7 @@ cerbeze               N;
 cereme                N;
 ceren                 N;
 cereyan               N;
+ceryan                N;  ! common misspelling
 çerez                 N;
 çerge                 N;
 cerh                  N;
@@ -2541,6 +2544,7 @@ cihet                 N;
 ciklet                N;    ! maybe merge with çiklet
 çıkmaz                N;    !! from adj
 çikolata              N;
+çukulata              N;    ! common missipelling/alt. form
 çıkra                 N;
 çıkrı^k               N;
 çıktı                 N;
@@ -3348,6 +3352,7 @@ dolaşım               N;
 dolay                 N;
 dolgu                 N;
 dolma                 N;
+dolmakalem            N;
 dolmen                N;
 dolmuşçu              N;
 dolmuş                N;
@@ -5281,6 +5286,7 @@ hassasiyet            N;
 hasse                 N;
 hastalı^k             N;
 hastane               N;
+hastahane             N;    ! common misspelling / alt. form
 haşviyat              N;
 haşyet                N;
 hata                  N;
@@ -9345,6 +9351,7 @@ mey                   N;
 meyusiyet             N;
 meyvehoş              N;
 meyve                 N;
+meyva                 N;    ! common misspelling
 meyyit                N;
 mezalim               N;
 mezamir               N;
@@ -10834,6 +10841,7 @@ paspas                N;
 pastal                N;
 pasta                 N;
 pastane               N;
+pastahane             N;    ! common misspelling / atl. form
 pastav                N;
 pastel                N;
 pastil                N;
@@ -11030,6 +11038,7 @@ pide                  N;
 pigment               N;
 pıhtı                 N;
 pijama                N;
+picama                N;    ! common misspelling / alt. form
 pikaj                 N;
 pika^p                N;
 pike                  N;
