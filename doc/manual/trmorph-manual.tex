@@ -45,23 +45,23 @@
 
 \title{TRmorph: A morphological analyzer for Turkish}
 \author{Çağrı Çöltekin}
-\date{\textbf{Draft:} \today}
+\date{\today (\textbf{draft!})}
 
 \begin{document}
-\twocolumn[
-\begin{@twocolumnfalse}
-\maketitle
-\textcolor{red}{%
-This document describes the new/development version
-of TRmorph. As such, there may be some mismatches between what is
-documented here and how the analyzer behaves. This version is a
-complete overwrite of the previous version reported in
-\cite{coltekin2010}. If you are using the older version (you
-shouldn't), this document is probably useless for you.
-}
-\vspace{1cm}
-\end{@twocolumnfalse}
-]
+% \twocolumn[
+% \begin{@twocolumnfalse}
+% \maketitle
+% \textcolor{red}{%
+% This document describes the new/development version
+% of TRmorph. As such, there may be some mismatches between what is
+% documented here and how the analyzer behaves. This version is a
+% complete overwrite of the previous version reported in
+% \cite{coltekin2010}. If you are using the older version (you
+% shouldn't), this document is probably useless for you.
+% }
+% \vspace{1cm}
+% \end{@twocolumnfalse}
+% ]
 
 %\pdfbookmark[0]{TRmorph}{TRmorph}
 
@@ -75,7 +75,7 @@ Turkish.  This document describes how to use the tools that comes with
 this package, as well as some implementation details that may be
 helpful for people who want to customize this open-source tool for
 their own needs.  The complete source of the analyzer and a web-based
-demo can be accessed through \url{http://www.let.rug.nl/coltekin/trmorph}. 
+demo can be accessed through \url{http://coltekin.net/cagri/trmorph}. 
 
 This document describes the current version of the analyzer.  This
 version is a complete rewrite of the earlier version report in
@@ -1662,6 +1662,14 @@ The resulting binary will be called \lstinline{o2t.fst}.
 Another conversion utility that converts TRmorph output to a format similar to the output of MOR utility of CHILDES \parencite{macwhinney1985,macwhinney1990} is currently in development,
 will be made part of the standard TRmorph distribution soon.
 
+\subsection{Grapheme to phoneme conversion (g2p)}
+
+TRmorph includes an (experimental) grapheme to phoneme converter.
+The converter takes an analysis string and converts it to a phonemic representation in IPA.
+The implementation here also follows \textcite{goksel2005}.
+The machinery needed for g2p is in place and functional,
+but marking exceptional cases in the lexicon is far from complete.
+
 \section{\label{sec:disambiguation}Morphological disambiguator}
 
 TRmorph distribution currently includes a simple `zero-context' disambiguator written in python.
@@ -1675,7 +1683,7 @@ For details see the explanation on top of the script or
 the help text produced when run with the command line argument \lstinline{--help}.
 The disambiguation script uses an external `model file'
 An example model trained on the data set used by \cite{yuret2006} (originated from \cite{hakkani-tur2002}) can be found at
-\url{http://www.let.rug.nl/coltekin/trmorph/1M.m2}.
+\url{http://coltekin.net/cagri/trmorph/1M.m2}.
 With this setting, the expected accuracy of the disambiguator is about 85\%.
 In other words, expect an error in every 7 tokens or so.
 The details on the method used for disambiguation and tools for training custom models will follow.

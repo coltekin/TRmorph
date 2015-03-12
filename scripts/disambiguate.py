@@ -130,7 +130,7 @@ def usage():
                             you only analyze a single word. Can be
                             confusing if multiple words are analyzed.
         -f, --flookup-cmd   Command to run for obtaining alternative
-                            analses. default="./flookup -b -x ./trmorph.fst"
+                            analses. default="flookup -b -x ./trmorph.fst"
         -m, --model-file    The file with the trained model. default='1M.m2'
         """.format(sys.argv[0]))
 
@@ -143,7 +143,7 @@ onlybest = False
 model_file = '1M.m2'
 print_score = True
 print_word = True
-flookup_cmd="./flookup -b -x ./trmorph.fst"
+flookup_cmd="flookup -b -x ./trmorph.fst"
 for opt, arg in opts:
     if opt in ("-1", "--best-parse"):
         onlybest = True

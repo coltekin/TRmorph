@@ -678,6 +678,7 @@ define AFilter    FSDevoicing.i
               .o. 0 <- %@DEL%@ 
               .o. 0 <- %@DELS%@ 
               .o. 0 <- %@DUP%@
+              .o. 0 <- %^S
               .o. 0 <- %@dB
               .o. 0 <- (ConsSilent|Vsilent)
 #if (PERCENT_AS_PREFIX == 0)

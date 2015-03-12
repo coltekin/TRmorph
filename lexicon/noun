@@ -49,6 +49,7 @@ aberasyon             N;
 abide                 N;
 abıhayat              N;
 abi                   Nfamily; ! officially this is wrong
+ağbi                  Nfamily; ! officially this is wrong
 abis                  N;
 abiye                 N;
 abla                  Nfamily;
@@ -3353,6 +3354,7 @@ dolaşım               N;
 dolay                 N;
 dolgu                 N;
 dolma                 N;
+dolmakalem            N;
 dolmen                N;
 dolmuşçu              N;
 dolmuş                N;
@@ -5286,6 +5288,7 @@ hassasiyet            N;
 hasse                 N;
 hastalı^k             N;
 hastane               N;
+hastahane             N;    ! common misspelling / alt. form
 haşviyat              N;
 haşyet                N;
 hata                  N;
@@ -9353,6 +9356,7 @@ mey                   N;
 meyusiyet             N;
 meyvehoş              N;
 meyve                 N;
+meyva                 N;    ! common misspelling
 meyyit                N;
 mezalim               N;
 mezamir               N;
@@ -10842,6 +10846,7 @@ paspas                N;
 pastal                N;
 pasta                 N;
 pastane               N;
+pastahane             N;    ! common misspelling / atl. form
 pastav                N;
 pastel                N;
 pastil                N;
