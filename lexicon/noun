@@ -20,6 +20,13 @@
 !-----------------------------------------------------------------------
 !
 
+trampolin             N;    ! non-standard/alternative
+trambolin             N;
+teleski               N;
+pütürü^k              N;    ! non-standard ?
+kokoş                 N;    ! non-standard
+omo                   N;    ! non-standard, brand-derived word for 'deterjan'
+
 ben                   N;
 masaüst               Ncomp;
 sensör                N;

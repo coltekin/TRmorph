@@ -24,17 +24,17 @@
 !
 ! This lexicon lists person names.
 !
-! The list is initially obtained from Wikipedia and hand-editted and
+! The list is initially obtained from Wikipedia and hand-edited and
 ! extended as needed.
 !
 ! Currently TRmorph does not distinguish male/female names or given
 ! and family names. However, the list below is organized to make a 
-! possible distincition easier later.
+! possible distinction easier later.
 !
 !
 
 !
-! Initials. This covers the cases wehere an initial is used with a
+! Initials. This covers the cases where an initial is used with a
 ! following dot.
 !
 
@@ -44,6 +44,8 @@
 ! Male given names
 !
 
+Şavsal                  NPperson;
+Abdik                   NPperson; ! diminutive or special use
 Abdulaziz               NPperson;
 Abdulhalim              NPperson;
 Abdullatif              NPperson;
@@ -1564,6 +1566,7 @@ Demirbilek              NPperson;
 Yarılgaç                NPperson;
 Edes                    NPperson;
 Nazlıaka                NPperson;
+Ağalday                 NPperson;
 
 !
 ! TODO: we better analyze produce all surnames with -lI suffix from
