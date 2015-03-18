@@ -21,6 +21,8 @@
         fontadjust=true,
 }
 
+\newfontfamily\doulos[Mapping=tex-text]{Doulos SIL}
+\DeclareTextFontCommand{\textIPA}{\doulos}
 
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -45,25 +47,25 @@
 
 \title{TRmorph: A morphological analyzer for Turkish}
 \author{Çağrı Çöltekin}
-\date{\today (\textbf{draft!})}
+\date{\today{} (\textbf{draft!})}
 
 \begin{document}
-% \twocolumn[
-% \begin{@twocolumnfalse}
-% \maketitle
+\twocolumn[
+\begin{@twocolumnfalse}
+\maketitle
 % \textcolor{red}{%
 % This document describes the new/development version
 % of TRmorph. As such, there may be some mismatches between what is
 % documented here and how the analyzer behaves. This version is a
 % complete overwrite of the previous version reported in
-% \cite{coltekin2010}. If you are using the older version (you
+% \textcite{coltekin2010}. If you are using the older version (you
 % shouldn't), this document is probably useless for you.
 % }
 % \vspace{1cm}
-% \end{@twocolumnfalse}
-% ]
+\end{@twocolumnfalse}
+]
 
-%\pdfbookmark[0]{TRmorph}{TRmorph}
+\pdfbookmark[0]{TRmorph}{TRmorph}
 
 \section{Introduction}
 
@@ -74,16 +76,15 @@ for more information.} finite-state morphological analyzer for
 Turkish.  This document describes how to use the tools that comes with
 this package, as well as some implementation details that may be
 helpful for people who want to customize this open-source tool for
-their own needs.  The complete source of the analyzer and a web-based
-demo can be accessed through \url{http://coltekin.net/cagri/trmorph}. 
+their own needs.
+The source code is available at \url{https://github.com/coltekin/TRmorph},
+and of  the analyzer and a web-based demo can be accessed at \url{http://coltekin.net/cagri/trmorph}. 
 
-This document describes the current version of the analyzer.  This
-version is a complete rewrite of the earlier version report in
-\cite{coltekin2010}.  The earlier version of TRmorph was implemented
-using SFST \parencite{schmid2005}, the current version is implemented
-with more popular finite state description languages \emph{lexc} and
-\emph{xfst} from Xerox \parencite{beesley2003}, using Foma
-\parencite{hulden2009} as the main development tool. 
+This document describes the current version of the analyzer and additional tools described in \textcite{coltekin2014lrec}.
+This version is a complete rewrite of the earlier version report in \textcite{coltekin2010}.  
+The earlier version of TRmorph was implemented using SFST \parencite{schmid2005}, 
+the current version is implemented with more popular finite state description languages \emph{lexc} and \emph{xfst} from Xerox \parencite{beesley2003}, 
+using Foma \parencite{hulden2009} as the main development tool. 
 
 The lexc/xfst implementation of TRmorph should compile with any
 lexc/xfst compiler without much additional effort.  The only
@@ -100,10 +101,9 @@ since HFST uses foma as the back end for parsing xfst files.}
 To compile TRmorph from the source, you need a lexc/xfst compiler such
 as foma, a C preprocessor, GNU make and some standard UNIX utilities.
 
-If all requirements are in place, to build analyzer/generator FST, you
-should type \lstinline{make} in the main TRmorph distribution
-directory. The resulting binary automaton file will be
-\lstinline{trmorph.fst}.
+If all requirements are in place, to build analyzer/generator FST, 
+you should type \lstinline{make} in the main TRmorph distribution directory. 
+The resulting binary automaton file will be \lstinline{trmorph.fst}.
 
 Trmorph comes with a set of other finite-state tools that are useful
 in various NLP tasks. Currently, tolls for the following tasks are
@@ -185,7 +185,7 @@ automaton with HFST tools.
 
 
 The description of the morphology in TRmorph mostly follows
-\cite{goksel2005}. However, there are some divergences, and tags used
+\textcite{goksel2005}. However, there are some divergences, and tags used
 in TRmorph analyses does not necessarily match with any of the tags
 used in any grammar book. This section describes the tags used in the
 current version of TRmorph.  The aim of this section is to help users
@@ -429,7 +429,7 @@ agreement markers. These markers can be useful in subject-predicate
 agreement as well as in other constructions (such as
 genitive-possessive construction involving pronouns). However, the
 agreement in Turkish is far from trivially determined (see
-\cite[pp.116--122]{goksel2005}). The markers 
+\textcite[pp.116--122]{goksel2005}). The markers 
 \mtag[def]{Prn:pers:1s},
 \mtag[def]{Prn:pers:2s},
 \mtag[def]{Prn:pers:3s},
@@ -765,7 +765,7 @@ the same slot as the copular suffixes, although its use is more
 restricted.
 
 The nominal predicate with a copula and person agreement may be
-followed by the marker \cite{goksel2005} call `generalizing modality
+followed by the marker \textcite{goksel2005} call `generalizing modality
 marker', the suffix \sffx{DIr}. It is particularly common with
 \mtag[noindex]{3s} as it disambiguates between the noun and the
 predicate reading. The tag for this marker in TRmorph is
@@ -1043,7 +1043,7 @@ will again be \mtag{q}.
 A set of suffixes attached to an `untensed' verb, a verb without any
 TAM markers, result in the phrase headed by the verb to become a
 subordinate clause. TRmorph follows the description in
-\cite{goksel2005}, and makes the distinction between three different
+\textcite{goksel2005}, and makes the distinction between three different
 forms of subordination. First, a set of suffixes produce \emph{verbal
 noun}s from a non-finite verb. The resulting words function as the
 head of the noun phrases,
@@ -1110,8 +1110,8 @@ spurious ambiguity because of the fact that any adjective, hence a
 word suffixed with an participle, is allowed to become a noun with a
 zero derivation.
 
-The list in Table~\ref{tbl:subord} follows \cite{goksel2005}. The main
-exception is the suffixes listed by \cite{goksel2005} as converbial
+The list in Table~\ref{tbl:subord} follows \textcite{goksel2005}. The main
+exception is the suffixes listed by \textcite{goksel2005} as converbial
 suffixes that require a postposition. Since the postposition in these
 cases will signal the adverbial function of postpositional phrase,
 TRmorph does not mark the complement of the postposition as a converb.
@@ -1317,11 +1317,11 @@ process. However, the design choices made in a morphological analyzer
 affects the number of ambiguous analyses produced per word.  TRmorph,
 by design, does not try to reduce the number of ambiguous analyses. In
 general, TRmorph produces more ambiguous analyses than the others
-(mainly based on \cite{oflazer1994}) reported in the literature. 
+(mainly based on \textcite{oflazer1994}) reported in the literature. 
 
 The following is a list of cases where one finds ambiguous
 morphological analyses in TRmorph. Some of these cases are not
-specific to TRmorph, and for example, noted by \cite{oflazer1997} as
+specific to TRmorph, and for example, noted by \textcite{oflazer1997} as
 well. This list may be useful for the users who may wish to
 disambiguate the output of the analysis using rule-based methods, or
 it may also be useful in the process of designing statistical
@@ -1649,8 +1649,8 @@ between the syllables, or at the points where one can insert a hyphen.
 
 \subsection{Analysis string converters}
 
-The distribution also includes a converter that does a best-effort conversion from the tagset generated by \cite{oflazer1994}. 
-It is a simple xfst script that takes \cite{oflazer1994} as surface,
+The distribution also includes a converter that does a best-effort conversion from the tagset generated by \textcite{oflazer1994}. 
+It is a simple xfst script that takes \textcite{oflazer1994} as surface,
 and generates TRmorph tags as the surface string.
 It was used/tested in in analysis mode (converting \emph{to} TRmorph tags).
 However, it will produce multiple strings in the other direction,
@@ -1666,9 +1666,69 @@ will be made part of the standard TRmorph distribution soon.
 
 TRmorph includes an (experimental) grapheme to phoneme converter.
 The converter takes an analysis string and converts it to a phonemic representation in IPA.
-The implementation here also follows \textcite{goksel2005}.
-The machinery needed for g2p is in place and functional,
-but marking exceptional cases in the lexicon is far from complete.
+The grapheme to phoneme conversion is (almost) trivial, 
+the orthographic symbols map to phonetic symbols almost in a one-to-one fashion with simple context effects in some cases.
+The implementation here follows \textcite{goksel2005}.
+The tricky part is determining the location of stress.
+
+In summary, the regular stress falls on the last syllable of a root form.
+With most suffixes, the stress moves to the last syllable as new suffixes are added.
+For example the regular root \xmplt{oku}{read} followed by future TAM marker and first person singular agreement will result in IPA conversion \textIPA{okʰujɑdʒʰɑγˈɯm}.
+Some suffixes contain non-stressable syllables.
+In those cases, stress moves to the syllable preceding the non-stressable syllable.
+For example, \sffx{yor} in \xmpl{okuyabiliyorum} will result in the IPA string \textIPA{okʰujɑbiłˈijorum}.
+Some root forms, notably palace names, compounds and some foreign borrowings show irregular stress.
+If a root is irregular, stress is on a non-final syllable, 
+and stays at the same place with further suffixation with the exception of the negative suffix \sffx{mA}.
+For example, for the irregular root \xmplt{nitele}{characterize/describe}, 
+the suffixation without a negative suffix will leave the stress on the first syllable 
+(\xmpl{niteliyorum} is pronounced \textIPA{nˈitʰełijorum}), 
+but negative marker move the stress to the syllable before itself
+(\xmpl{nitelemiyourm} is pronounced \textIPA{nitʰełˈemijorum}). 
+Note that this will cause disambiguated surface forms to have ambiguous g2p conversions. 
+For example the word \xmpl{okuma} will be converted to both 
+\xmplt{\textIPA{okʰumˈɑ}}{\mroot{oku}\mtag{V}\mtag{vn:inf}\mtag{N}, meaning reading} and
+\xmplt{\textIPA{okʰˈumɑ}}{\mroot{oku}\mtag{V}\mtag{neg}\mtag{imp}\mtag{2s}, don't read}.
+
+TRmorph g2p component takes an analysis string and produces an IPA string in the generation mode.
+If the word does not have an exceptional stress marker in the lexicon,
+stress symbol is before the last vowel or the vowel that precedes a non-stressable syllable.
+The regular roots should not have any stress marking in the lexicon.
+If the exceptional stress is indicated in the lexicon,
+the affixes other than the negative marker do not change its location.
+Currently, the stress marker is placed before the vowel.
+The code for inserting syllable boundaries and the shifting the stress marker before the syllable is present in the file \lstinline{g2p.xfst},
+but it is not used by default.
+
+As of this writing, g2p is is still experimental, and not tested throughly.
+Here are a list of things you should keep in mind while using this utility.
+
+\begin{itemize}
+    \item The exceptional stress marking in the lexicon is far from complete.
+        Especially, not all place names and compound forms are adequately marked.
+    \item The foreign words, mainly proper names,  
+        that are written as in their origin are mispronounced
+        (e.g., `Coca Cola').
+        Currently there is no mechanism to mark these, 
+        or to specify an alternative pronunciation. 
+    \item Similar to the negative marker, 
+        \textcite[p.30]{goksel2005} list a number of other (polysyllabic) suffixes that cause some speakers to shift the stress to the preceding syllable regardless of the root form.
+        Trmorph g2p does not produce multiple pronunciations for these suffixes.
+    \item Since TRmorph only deals with the `written words', 
+        the stress computation for compound words written separately,
+        and clitics altering stress in the preceding word are not dealt with.
+    \item Although TRmorph lexicon includes some exceptional stress marking,
+        these are not checked well.
+        The current markings are mainly based on \href{http://en.wiktionary.org/wiki/Wiktionary:Main_Page}{Wiktionary} definitions.
+        Most of them are also checked automatically on  online dictionary of \href{http://en.wiktionary.org/wiki/Wiktionary:Main_Page}{Dil Derneği}.
+
+        It also seems some of these are difficult determine.
+        For example the word \xmplt{zatüre}{pneumonia} is marked as stressed on the first syllable in the dictionary of \href{http://www.dildernegi.org.tr/}{Dil Derneği}, 
+        but marked as finally stressed by \textcite{ergenc2002}.
+        To add to the mix, my first intuition would be for medial stress.
+\end{itemize}
+
+
 
 \section{\label{sec:disambiguation}Morphological disambiguator}
 
@@ -1682,7 +1742,7 @@ and prints a ranked list, by default with their scores (log probabilities).
 For details see the explanation on top of the script or
 the help text produced when run with the command line argument \lstinline{--help}.
 The disambiguation script uses an external `model file'
-An example model trained on the data set used by \cite{yuret2006} (originated from \cite{hakkani-tur2002}) can be found at
+An example model trained on the data set used by \textcite{yuret2006} (originated from \textcite{hakkani-tur2002}) can be found at
 \url{http://coltekin.net/cagri/trmorph/1M.m2}.
 With this setting, the expected accuracy of the disambiguator is about 85\%.
 In other words, expect an error in every 7 tokens or so.

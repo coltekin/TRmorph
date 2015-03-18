@@ -84,7 +84,7 @@ define toLower   A -> a, B -> b, C -> c, Ç -> ç, D -> d,
                  V -> v, Y -> y, Z -> z, Î -> î, Û -> û, Â -> â ;
 
 define noPhon %'|%@RB|%@MB;
-define SylB %-;
+define SylB %.;
 define Syllabify  lcVowel  -> ... SylB  || _  noPhon* lcVowel
              .o.  [\lcVowel]* lcVowel [\lcVowel]* @> ... SylB
                                       || _  noPhon* lcCons noPhon* lcVowel;
@@ -221,9 +221,9 @@ define toIPAvowels circumflex
 ! or if we mark before the vowel:
 !
 
-define stressMark "^S";
+define stressMark "ˈ";
 
-define deleteBoundary noPhon|SylB|"^NS"|"^NNS"|"^S" -> 0;
+define deleteBoundary noPhon|SylB|"^NS"|"^NNS" -> 0;
 
 define toIPA toLower
          .o. Syllabify
@@ -237,12 +237,13 @@ define defaultStress
          .o. VIPA -> ˈ ...  ||  _ [\SylB]* .#.;
 
 define negStress ?* "^NNS" ?*
+         .o. ˈ -> 0 
          .o. VIPA -> ˈ ...  ||  _ [\SylB]* "^NNS";
 
-define moveStress \"^S"* "^NS" ?*
+define moveStress \"ˈ"* "^NS" ?*
          .o. VIPA -> ˈ ...  ||  _ [\SylB]* "^NS";
 
-define irregStress \"^NNS"* "^S" \"^NNS"* .o. "^S" -> ˈ ;
+define irregStress \"^NNS"* "ˈ" \"^NNS"* ;
 
 define stress defaultStress | negStress | moveStress | irregStress ;
 
@@ -250,7 +251,8 @@ define stressBeforeSyl SylB -> ... ˈ || _ \SylB* ˈ .o. ˈ -> 0 || ˈ ?* _;
 
 define deleteApoSym AposSym -> 0;
 
-regex AFilter
+regex collapseAsymbols.i
+        .o. AFilter
         .o. Abbr
         .o. Lexicon 
         .o. replaceApos

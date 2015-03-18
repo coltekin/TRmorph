@@ -45,8 +45,8 @@ kala                            nomPostP;
 geçe                            nomPostP;
 üzere                           nomPostP;
 
-öncesi                          nomPostP;  ! yemek öncesi/sonrası
-sonrası                         nomPostP;
+ˈöncesi                          nomPostP;  ! yemek öncesi/sonrası
+sˈonrası                         nomPostP;
 
 dolayısıyla                     nomPostP;   ! tören dolayısıyla -- not in G&K
 
@@ -79,7 +79,7 @@ doğru                           datPostPKi;
 kadar                           datPostPKi;
 dek                             datPostPKi;
 karşı                           datPostPKi;
-rağmen                          datPostP;
+rˈağmen                          datPostP;
 karşın                          datPostP;
 değin                           datPostP;
 
@@ -90,13 +90,13 @@ yönelik                         datPostPadj;
 yakın                           datPostPadj; ! iki bine yakın aile --not in G&K
 
 atfen                           datPostP;
-binaen                          datPostP;
+binˈaen                          datPostP;
 hitaben                         datPostP;
 ilaveten                        datPostP;
 istinaden                       datPostP;
 ithafen                         datPostP;
-mahsuben                        datPostP;
-nazaran                         datPostP;
+mahsˈuben                        datPostP;
+nˈazaran                         datPostP;
 
 ! These take ablative
 
@@ -106,9 +106,9 @@ beri                            ablPostPKi;
 bu% yana                        ablPostP;
 dolayı                          ablPostP;
 itibaren                        ablPostPKi;
-önce                            ablPostPKi;
+ˈönce                            ablPostPKi;
 evvel                           ablPostPKi;
-sonra                           ablPostPKi;
+sˈonra                           ablPostPKi;
 yana                            ablPostP;
 
 ço^k                            ablPostP;      !as in 'benden çok' not in G&K

@@ -53,7 +53,7 @@
  *
  */
 
-#define ALLCAPS 1
+#define ALLCAPS 0
 #define CAPITALIZE 1
 #define GUESSER_ALLCAPS 1
 #define GUESSER_CAPITALIZE 1
