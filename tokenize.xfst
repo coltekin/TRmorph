@@ -1,0 +1,72 @@
+! tokenize.xfst
+!
+! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
+!
+! This file is part of TRmorph and distributed under GNU LGPL.
+! See the file LICENSE or http://www.gnu.org/licenses/lgpl.html 
+! for details.
+!
+! This FST is a *very* simple tokenizer that splits given input to
+! tokens and sentences. 
+
+
+
+! White space
+define WS " "|"\u0009"|"\u000a"|"\u000d"|
+          "\u00a0"|"\u1680"|
+          "\u2000"|"\u2001"|"\u2002"|"\u2003"|"\u2004"|"\u2005"| 
+          "\u2006"|"\u2007"|"\u2008"|"\u2009"|"\u200a"|
+          "\u2028"|"\u2029"|"\u202f"|"\u205f"|"\u3000";
+
+! Punctuation that ends sentences
+define SP "..."|"."|"?"|"!"|"…";
+
+! Left punctuation
+define LP   "("|"["|"{"|
+            "“"|"‘"|"‹"|"«"|
+            "'"|%"|"''";
+
+! Right punctuation - excluding the characters that can be used as apostrophe
+define RP   SP|","|";"|":"|
+            ")"|"]"|"{"|
+            "”"|"›"|"»"|
+            %"|"''";
+
+
+define Sym "-"|"+"|"<"|">"|"*"|"/";
+
+define Punct LP|RP|Sym;
+
+define Apos %'|%’;
+
+!define TB "\u000a";
+!define SB "\u000a\u000a";
+
+define TB "<tb>";
+define SB "<sb>";
+
+define Digit [%0|1|2|3|4|5|6|7|8|9];
+define define CAP [A|B|C|Ç|D|E|F|G|Ğ|H|I|İ|J|K|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Z|Î|Û|Â|X|W|Q];
+define define LC [a|b|c|ç|d|e|f|g|ğ|h|i|i|j|k|l|m|n|o|ö|p|r|s|ş|t|u|ü|v|y|z|î|û|â|x|w|q];
+
+
+define nonSym \[WS|LP|RP|Sym];
+
+define Word nonSym+ [(["."|"-"|Apos] nonSym+)*];
+define Initial  \[WS|LP|RP|Sym] ".";
+define Number Digit+ [([%.|%,] Digit+)*];
+
+define Abbr @txt"abbr.txt";
+
+define T    [Word|Punct|Initial|Number] @-> ... TB 
+        .o. Apos @-> TB ... || _ TB
+        .o. TB -> SB || [SP|.#.] _ 
+        .o. SB -> TB || [Abbr|Digit+] SP _
+        .o. SB -> TB || LP .* SP _ RP 
+        .o. WS+ -> 0
+        .o. TB -> " "
+        .o. SB -> "\u000a";
+
+regex T.i;
+
+save stack tokenize.fst
