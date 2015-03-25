@@ -1,0 +1,79 @@
+The source lexicon is now maintained as YAML files. At the top level,
+a lexicon file is a mapping (or dictionary) where the key is the
+headword. Each lexical "entry" is also a mapping where the following
+top level keys are recognized:
+
+- 'class' is a mapping from continuation classes defined in
+  morphological description to class-specific settings. The value of a
+  of a key in class is another mapping which allows all keys of the
+  top level entry except for 'class', and some class-specific keys
+  described below. For example, the entry for a simple entry for word
+  'yüz' which can be a noun, a verb or a number should be similar to
+  the following. 
+
+    yüz:
+        class:
+            N:
+            V: {flags: [aorAr]}
+            Num:
+
+- 'feat' is a list of additional features of the lexical item.
+  Features are class specific, and should be listed under the class
+  definition (rather than at the top level). The continuation class
+  for the lexc lexicon will be the combination of class, features, and
+  the some of the flags. The class specific 'features' are listed
+  below:
+        - Prn:
+            - Pers: personal
+            - Dem: demonstrative
+            - Rfl: reflexive
+            - Loc: locative
+            - 1s,2s,3s,1p,2p,3p the person/number agreement of the
+              pronoun.
+
+- 'notes' are a list of free-form notes. It is not used by TRmorph
+  lexicon construction, but may be useful for other purposes.
+
+- 'flags' contain a set of flags that affects the final lexicon
+  definition (the word form and the continuation class) in TRmorph
+  lexicon. The class-specific flags should be defined under the
+  relevant class, top level flags should be used for general flags for
+  the headword. Here is an inventory of the flags in use:
+    - 'nonstd': non-standard use, should be avoided in a strict written
+      language, e.g., in a spell checker. Ideally, the standard form
+      should be specified with the top-level key 'stdForm'.
+    - 'boundRoot': the root form is bound, it needs to be inflected to
+      be a word. This is currently is not used directly.
+    - 'fsd' final stop devoicing. The final stop in the headword is
+      devoiced when it precedes a suffix starting a consonant or if it
+      is in the bare form (or, one can see this as 'voicing', as the
+      base form of the form will include a devoiced consonant).
+    - 'fsdOpt' the final stop devoicing is optional, some speakers do
+      it some do not. This option will result in two entries in the
+      lexc lexicon and the lexical items with this flag will always be
+      analyzed with and without (de)voicing.
+    - 'aorAr', aorist for of the verb takes -Ar form of the suffix.
+      This flag is part of the lexc continuation class definition.
+
+- 'stress' indicates the location of exceptional stress. This
+  should only be used if the root form has exceptional stress. Roots
+  with regular, final stress should not be marked. Otherwise, the
+  inflected forms will have wrong stress marking in g2p conversion.
+
+- 'stdForm' lists the standard form of the given non-standard
+  word.
+
+- 'source' a list that indicates the source(s) of the lexical entry.
+  This does not necessarily indicate actual source, but a resource
+  that the entry is present. If the entry is checked on multiple 
+  sources, the list lists them all. The source marking is currently
+  scarce, and not used for the analyzer. It can, in principle, be used
+  for building a more or less reliable lexicon. The following are 
+  recognized:
+    - DD: Dil Derneği
+    - TDK: Türk Dil Kurumu
+    - wiktionary: Turkish Wiktionary
+    - WP: Wikipedia
+    - WN: Turkish WordNet
+
+- 
