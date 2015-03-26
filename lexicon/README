@@ -30,6 +30,12 @@ top level keys are recognized:
             - Loc: locative
             - 1s,2s,3s,1p,2p,3p the person/number agreement of the
               pronoun.
+        - Det:
+            - Def: definite
+            - Indef: indefinite
+            - noPrn: Deriving pronouns by attaching possessive
+              suffixes is not possible.
+            - Q: question
 
 - 'notes' are a list of free-form notes. It is not used by TRmorph
   lexicon construction, but may be useful for other purposes.

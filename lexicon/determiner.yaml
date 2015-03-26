@@ -1,0 +1,187 @@
+bir:
+    class: 
+        Det: {feat: [Indef]}
+birkaç:
+    class: 
+        Det: {feat: [Indef]}
+birkaç tane:
+    class:
+        Det: {feat: [Indef]}
+birtakım:
+    class:
+        Det: {feat: [Indef]}
+birçok:
+    flags: [fsd]
+    class:
+        Det: {feat: [Indef]}
+biraz:
+    stress: 1
+    class:
+        Det: {feat: [Indef]}
+bir miktar:
+    class: 
+        Det: {feat: [Indef]}
+bazı:
+    stress: 1
+    class: 
+        Det: {feat: [Indef]}
+kimi:
+    class: 
+        Det: {feat: [Indef]}
+bir kısım:
+    class: 
+        Det: {feat: [Indef]}
+bir kesim:
+    class: 
+        Det: {feat: [Indef]}
+bir bölüm:
+    class: 
+        Det: {feat: [Indef]}
+bu kadar:
+    class: 
+        Det: {feat: [Indef]}
+şu kadar:
+    class: 
+        Det: {feat: [Indef]}
+o kadar:
+    class: 
+        Det: {feat: [Indef]}
+okadar:
+    flags: [nonstd]
+    stdForm: o kadar
+    class: 
+        Det: {feat: [Indef]}
+ne kadar:
+    class: 
+        Det: {feat: [Indef]}
+# ne kadar:
+#     class:
+#         Det: {feat: [Indef, Q]}
+nekadar:
+    flags: [nonstd]
+    stdForm: ne kadar
+    class: 
+        Det: {feat: [Indef]}
+çok:
+    flags: [fsd]
+    class:
+        Det: {feat: [Indef]}
+pek çok:
+    flags: [fsd]
+    class:
+        Det: {feat: [Indef]}
+pekçok:
+    flags: [fsd, nonstd]
+    stdForm: pek çok
+    class:
+        Det: {feat: [Indef]}
+çoğu:
+    class:
+        Det: {feat: [Indef,noPrn]}
+az:
+    class:
+        Det: {feat: [Indef]}
+fazla:
+    class:
+        Det: {feat: [Indef]}
+hiçbir:
+    class:
+        Det: {feat: [Indef]}
+hiç bir:
+    class:
+        Det: {feat: [Indef]}
+herhangi:
+    class:
+        Det: {feat: [Indef]}
+herhangi bir:
+    class:
+        Det: {feat: [Indef]}
+başka:
+    class:
+        Det: {feat: [Indef]}
+bunca:
+    stress: 1
+    class:
+        Det: {feat: [Indef]}
+öyle:
+    class:
+        Det: {feat: [Indef]}
+böyle:
+    class:
+        Det: {feat: [Indef]}
+böylesi:
+    class:
+        Det: {feat: [Indef,noPrn]}
+şöyle:
+    class:
+        Det: {feat: [Indef]}
+öyle bir:
+    class:
+        Det: {feat: [Indef]}
+böyle bir:
+    class:
+        Det: {feat: [Indef]}
+şöyle bir:
+    class:
+        Det: {feat: [Indef]}
+kaç:
+    class:
+        Det: {feat: [Q, Indef]}
+    notes: 
+        - Is this really a determiner?
+iki:
+    class: 
+        Det: {feat: [Def]}
+o:
+    class: 
+        Det: {feat: [Def]}
+bu:
+    class: 
+        Det: {feat: [Def]}
+şu:
+    class: 
+        Det: {feat: [Def]}
+her:
+    class: 
+        Det: {feat: [Def,noPrn]}
+her bir:
+    class: 
+        Det: {feat: [Def]}
+herbir:
+    flags: [nonstd]
+    stdForm: her bir
+    class: 
+        Det: {feat: [Def]}
+bütün:
+    class: 
+        Det: {feat: [Def]}
+tüm:
+    class: 
+        Det: {feat: [Def]}
+aynı:
+    class: 
+        Det: {feat: [Def]}
+öte:
+    class: 
+        Det: {feat: [Def]}
+öteki:
+    class: 
+        Det: {feat: [Def]}
+beri:
+    class: 
+        Det: {feat: [Def]}
+beriki:
+    class: 
+        Det: {feat: [Def]}
+öbür:
+    class: 
+        Det: {feat: [Def]}
+diğer:
+    class: 
+        Det: {feat: [Def]}
+tek:
+    class: 
+        Det: {feat: [Def]}
+hangi:
+    class: 
+        Det: {feat: [Def, Q]}
