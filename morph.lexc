@@ -1253,9 +1253,18 @@ LEXICON VCausAtAorArCont
 LEXICON VCausAt
 %<caus%>%<V%>:^At@MB        VCont;
 
+LEXICON V_Rcp_CausAr_AorAr
+%<V%>:@RB           VRcpCausArAorArCont;
+
+LEXICON VRcpCausArAorArCont
+                        VRcp;
+                        VAorAr;
+                        VCausAr;
+                        VNoCausNoAorCont;
 !
 LEXICON V_CausAr_AorAr
 %<V%>:@RB           VCausArAorArCont;
+
 
 LEXICON VCausArAorArCont
                         VAorAr;
