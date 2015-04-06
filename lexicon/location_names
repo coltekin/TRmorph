@@ -43,6 +43,7 @@ Bosna-Hersek    NP;
 Bosna           NP;
 Burkina% Faso   NP;
 Polonya         NP;
+Yakutistan      NP;
 
 
 ! these should be turned into 'partial' tokens.
@@ -64,6 +65,7 @@ Adıyaman                NP;
 ˈAfyon                   NP;
 Aksaray                 NP;
 Aşiyan                  NP;
+Değirmendere            NP;
 
 
 !
@@ -112,3 +114,8 @@ Molise                  NP;
 
 Kaf% Dağ                NPcomp;
 Kaf                     NP;
+
+! misc
+Sibirya                 NP;
+Erhaç                   NP;
+Köstence                NP;

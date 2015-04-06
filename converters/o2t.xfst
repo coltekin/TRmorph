@@ -380,7 +380,7 @@ define o2t %+Punc      ->  %<Punc%>
 
         .o. %<Adj%> -> %<Exist%> || .#. {var} _ 
         .o. %<Adj%> -> %<Exist%:neg%> || .#. {yok} _ 
-        .o. %<V%>   -> %<Not%> %<0%> %<V%> || .#. {değil} _
+        .o. %<V%>   -> %<Not%> %<%0%> %<V%> || .#. {değil} _
 
         .o. {birinci} %<Num%> %<ord%> -> {bir} %<Num%> %<ord%>
         .o. {ikinci} %<Num%> %<ord%> -> {iki} %<Num%> %<ord%>
@@ -556,10 +556,13 @@ define o2t %+Punc      ->  %<Punc%>
 
         .o. %<Prn%:qst%> -> %<Prn%:qst%:pers%> || .#. {kim} _
         .o. %<Prn%:qst%> -> %<Prn%:qst%:pers%> || .#. {hangi} _
-        .o. %<N%> -> %<Adj%> %<0%> %<N%> || .#. {hangi} _
-        .o. %<V%> %<part%:pres%> %<Adj%> %<0%> %<N%> -> %<vn%:pres%> %<N%>
+        .o. %<N%> -> %<Adj%> %<%0%> %<N%> || .#. {hangi} _
+        .o. %<V%> %<part%:pres%> %<Adj%> %<%0%> %<N%> -> %<V%> %<vn%:pres%> %<N%>
         .o. s [e|a] l %<Adj%> -> %<N%> %<sal%> %<Adj%>
-        .o. %<0%> %<N%> -> 0 || %<N%:prop%> _ 
+        .o. %<%0%> %<N%> -> 0 || %<N%:prop%> _ 
+        .o. %<%0%> %<V%> -> %<%0%> %<cpl%:pres%> %<V%> || 
+                [%<Exist%>|%<Exist%:neg%>] _ %<3s%> .#.
+        .o. %<Exist%:neg%> -> %<Adj%> || y o k _ %<%0%> %<N%>
         ;
 
 

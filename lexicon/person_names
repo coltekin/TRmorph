@@ -146,6 +146,7 @@ Candan                  NPperson;
 Caner                   NPperson;
 Cavit                   NPperson;
 Celal                   NPperson;
+Cel^pAl                 NPperson;
 Çelik                   NPperson;
 Cem                     NPperson;
 Cemal                   NPperson;
@@ -603,6 +604,7 @@ Firuz                   NPperson;
 İzzettin                NPperson;
 Engincan                NPperson;
 Sulhi                   NPperson;
+Osmantan                NPperson;
 
 !
 ! These are (mostly) unisex.
@@ -1673,6 +1675,42 @@ Araç                    NPperson;
 Güre                    NPperson;
 Aksüt                   NPperson;
 Kayalar                 NPperson;
+Külür                   NPperson;
+Kıran                   NPperson;
+Sezginler               NPperson;
+Aksüt                   NPperson;
+Aydınlık                NPperson;
+Unakıtan                NPperson;
+Sin                     NPperson;
+Ray                     NPperson;
+Baytaş                  NPperson;
+Biriçim                 NPperson;
+Bila                    NPperson;
+Erkır                   NPperson;
+Çelikkale               NPperson;
+Güreş                   NPperson;
+Akgüney                 NPperson;
+Gülce                   NPperson;
+Hablemitoğlu            NPperson;
+Nursi                   NPperson;
+Nurcu                   NPperson;
+Şahinbaş                NPperson;
+Vahdettin               NPperson;
+İnkaya                  NPperson;
+Karamutlu               NPperson;
+Kütük                   NPperson;
+Kocabeyoğlu             NPperson;
+Büyükhanlı              NPperson;
+Teliorman               NPperson;
+Dişli                   NPperson;
+Azadi                   NPperson;
+Hacaloğlu               NPperson;
+Canatan                 NPperson;
+Destecioğlu             NPperson;
+Kulur                   NPperson;
+Tunaoğlu                NPperson;
+Çaycı                   NPperson;
+Cankurtaran             NPperson;
 
 !
 ! TODO: we better analyze produce all surnames with -lI suffix from
@@ -1692,10 +1730,18 @@ Kavakçı                 NPperson;
 
 ! transliterated foreign names
 Hipokrat                NPperson;
+Arşimed                 NPperson;
+Siraküza                NPperson;
 Konfüçyüs               NPperson;
 Boliç                   NPperson;
 Kristof                 NPperson;
 Kolomb                  NPperson;
 Karl                    NPperson;
 Marks                   NPperson;
+Zago                    NPperson;
 
+
+! misc.
+Ciguli                  NPperson;
+Selo                    NPperson;
+Katana                  NPperson;
