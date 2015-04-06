@@ -774,6 +774,7 @@ olagel       V;
 ölç          V_AorAr;
 oluş         V;
 ol           V_CausDir;
+oaralı% ol   V_CausDir;
 öl           V_CausDir;
 onar         V;
 ona          V;
