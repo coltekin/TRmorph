@@ -217,7 +217,7 @@ capital letters listed below.
 A letter in parentheses indicate a buffer consonant or vowel, that may
 be dropped in certain contexts.
 
-\subsection{General structure of analysis strings}
+\subsection{General structure of the analysis strings}
 
 Before describing individual morphological tags used in analysis strings, 
 this section briefly describes the general structure of the analysis strings
@@ -246,7 +246,7 @@ The example analysis in (\ref{ig-example}) can be broken down into the following
 
 \begin{enumerate}
 \item The initial noun \xmpl{ev} with the locative maker.
-\item Addition of the suffix \sffx{ki} makes an adjective.
+\item Addition of the suffix \sffx{ki} derives an adjective.
 \item The adjective becomes a (pro)nominal with a zero derivation,
 which is inflected for plural and genitive case.
 \item Yet another \sffx{ki} is suffixed, and the word becomes an
@@ -790,11 +790,11 @@ Percent sign before a numeral is treated like a prefix, and tagged as
 
 In written text an apostrophe is required after proper nouns and numbers
 (official rules are more complicated).
-However, the real-world use is rather relaxed, and people tend to omit apostrophe.
+However, the real-world use is rather relaxed, and people tend to omit the apostrophe.
 
 Another difficult case for apostrophe is after the compound proper nouns, 
-like 
-\xmplt{Türkiye Büyük Millet Meclisi}{Grand National Assembly of Turkey}, \xmplt{Ağrı Dağı}{Mount Ararat} or 
+like \xmplt{Türkiye Büyük Millet Meclisi}{Grand National Assembly of Turkey}, 
+\xmplt{Ağrı Dağı}{Mount Ararat} or 
 \xmplt{Öfkeli Şirin}{Grouchy Smurf}.
 Unless tokenized together, 
 the analyzer cannot know that these words are part of a proper noun,
@@ -1123,9 +1123,9 @@ Most of these suffixes attach to an untensed verb. Except, the suffix
 above. Furthermore, the \sffx{(y)A} in its subordinating function
 is typically used together with reduplication, e.g., \xmplt{koşa
 koşa}{run-(y)A run-(y)A = hurriedly}, but also occurs in words like
-\xmpl{diye}, where it does not need reduplication.\footnote{We
-also analyze \xmpl{diye} as a postposition, as it's use as
-subordinator is semantically unlike the others uses of \sffx{(y)A}.}
+\xmpl{diye}, where it does not need reduplication.%
+\footnote{We also analyze \xmpl{diye} as a postposition, 
+as its use as subordinator is semantically unlike the others uses of \sffx{(y)A}.}
 
 Besides the subordinating suffixes (participles) discussed above, 
 some of the TAM markers, 
@@ -1200,7 +1200,7 @@ considered derivational suffixes. Some of these suffixes, for example
 that are already inflected by other suffixes. Others normally attach
 only to the stem and produce another stem.
 
-The derivational suffixes analyzed by TRmorph are listed in Table~{tbl:deriv}.
+The derivational suffixes analyzed by TRmorph are listed in Table~\ref{tbl:deriv}.
 Of these suffixes, \sffx{lA} causes a large number of ambiguous analyses 
 since it is part of a few other suffixes, 
 for example, the plural suffix \sffx{lAr}.
@@ -1663,9 +1663,9 @@ will be made part of the standard TRmorph distribution soon.
 
 TRmorph includes an (experimental) grapheme to phoneme converter.
 The converter takes an analysis string and converts it to a phonemic representation in IPA.
-The grapheme to phoneme conversion is (almost) trivial, 
-the orthographic symbols map to phonetic symbols almost in a one-to-one fashion with simple context effects in some cases.
-The implementation here follows \textcite{goksel2005}.
+Turkish grapheme-to-phoneme conversion is (almost) trivial, 
+the orthographic symbols map to phonetic symbols in a one-to-one fashion with simple context effects and a few exceptions.
+The conversion of orthographic symbols to the corresponding IPA symbols follows \textcite{goksel2005}.
 The tricky part is determining the location of stress.
 
 In summary, the regular stress falls on the last syllable of a root form.
