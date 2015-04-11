@@ -1,12 +1,13 @@
-The source lexicon is now maintained as YAML files. At the top level,
+T
+e source lexicon is now maintained as YAML files. At the top level,
 a lexicon file is a mapping (or dictionary) where the key is the
 headword. Each lexical "entry" is also a mapping where the following
 top level keys are recognized:
 
 - 'class' is a mapping from continuation classes defined in
   morphological description to class-specific settings. The value of a
-  of a key in class is another mapping which allows all keys of the
-  top level entry except for 'class', and some class-specific keys
+  of a key in class is a list of mapping which allows all keys of the
+  top-level entry (except for 'class'), and some class-specific keys
   described below. For example, the entry for a simple entry for word
   'yüz' which can be a noun, a verb or a number should be similar to
   the following. 
@@ -14,7 +15,7 @@ top level keys are recognized:
     yüz:
         class:
             N:
-            V: {flags: [aorAr]}
+            V: [{flags: [aorAr]}]
             Num:
 
 - 'feat' is a list of additional features of the lexical item.
@@ -36,18 +37,28 @@ top level keys are recognized:
             - noPrn: Deriving pronouns by attaching possessive
               suffixes is not possible.
             - Q: question
+        - Cnj:
+            - Coo
+            - Adv
+            - Sub
 
 - 'notes' are a list of free-form notes. It is not used by TRmorph
   lexicon construction, but may be useful for other purposes.
 
 - 'flags' contain a set of flags that affects the final lexicon
   definition (the word form and the continuation class) in TRmorph
-  lexicon. The class-specific flags should be defined under the
-  relevant class, top level flags should be used for general flags for
-  the headword. Here is an inventory of the flags in use:
-    - 'nonstd': non-standard use, should be avoided in a strict written
-      language, e.g., in a spell checker. Ideally, the standard form
-      should be specified with the top-level key 'stdForm'.
+  lexicon. If there are class-specific flags, they  should be defined
+  under the relevant class, top level flags should be used for general
+  flags for the headword. The difference between a 'flag' and a 'feat'
+  is that feats are related to the morphosyntactic features of a
+  word, while flags either are related to the words use, or aspects of
+  the surface form.
+
+  Here is an inventory of the flags in use:
+    - 'nonstd': non-standard use, should be avoided in a strict
+      written language, e.g., in a spell checker. Ideally, the
+      standard form should be specified with the top-level key
+      'stdForm'. 'stdFrom' implies 'nonStd'.
     - 'boundRoot': the root form is bound, it needs to be inflected to
       be a word. This is currently is not used directly.
     - 'fsd' final stop devoicing. The final stop in the headword is
@@ -60,6 +71,8 @@ top level keys are recognized:
       analyzed with and without (de)voicing.
     - 'aorAr', aorist for of the verb takes -Ar form of the suffix.
       This flag is part of the lexc continuation class definition.
+    - 'obs' obsolescent: most speakers would understand but would not
+      use.
 
 - 'stress' indicates the location of exceptional stress. This
   should only be used if the root form has exceptional stress. Roots
@@ -81,5 +94,4 @@ top level keys are recognized:
     - wiktionary: Turkish Wiktionary
     - WP: Wikipedia
     - WN: Turkish WordNet
-
 - 

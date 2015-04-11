@@ -1,108 +1,107 @@
 bu:
     class: 
-        Prn: {feat: [Dem]}
+        Prn: [{feat: [Dem]}]
 şu:
     class: 
-        Prn: {feat: [Dem]}
+        Prn: [{feat: [Dem]}]
 o:
     class: 
-        Prn: {feat: [Dem]}
+        Prn: 
+        - {feat: [Dem]}
+        - {feat: [Pers,'3s']}
 bura:
     stress: 1
     class: 
-        Prn: {feat: [Loc]}
+        Prn: [{feat: [Loc]}]
 şura:
     stress: 1
     class: 
-        Prn: {feat: [Loc]}
+        Prn: [{feat: [Loc]}]
 ora:
     class: 
-        Prn: {feat: [Loc]}
+        Prn: [{feat: [Loc]}]
 ben:
     class: 
-        Prn: {feat: [Pers,'1s']}
+        Prn: [{feat: [Pers,'1s']}]
 sen:
     class: 
-        Prn: {feat: [Pers, '2s']}
-o:
-    class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers, '2s']}]
 biz:
     class: 
-        Prn: {feat: [Pers,'1p']}
+        Prn: [{feat: [Pers,'1p']}]
 siz:
     class: 
-        Prn: {feat: [Pers,'2p']}
+        Prn: [{feat: [Pers,'2p']}]
 onlar:
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 bizler:
     class: 
-        Prn: {feat: [Pers,'1p']}
+        Prn: [{feat: [Pers,'1p']}]
 sizler:
     class: 
-        Prn: {feat: [Pers,'2p']}
+        Prn: [{feat: [Pers,'2p']}]
 kendi:
     class: 
-        Prn: {feat: [Pers,Rfl,'3s']}
+        Prn: [{feat: [Pers,Rfl,'3s']}]
 kendim:
     class: 
-        Prn: {feat: [Pers,Rfl,'1s']}
+        Prn: [{feat: [Pers,Rfl,'1s']}]
 kendin:
     class: 
-        Prn: {feat: [Pers,Rfl,'2s']}
+        Prn: [{feat: [Pers,Rfl,'2s']}]
 kendisi:
     class: 
-        Prn: {feat: [Pers,Rfl,'3s']}
+        Prn: [{feat: [Pers,Rfl,'3s']}]
 kendimiz:
     class: 
-        Prn: {feat: [Pers,Rfl,'1p']}
+        Prn: [{feat: [Pers,Rfl,'1p']}]
 kendiniz:
     class: 
-        Prn: {feat: [Pers,Rfl,'2p']}
+        Prn: [{feat: [Pers,Rfl,'2p']}]
 kendileri:
     class: 
-        Prn: {feat: [Pers,Rfl,'3p']}
+        Prn: [{feat: [Pers,Rfl,'3p']}]
 âlem:
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 cümle âlem:
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 dünya âlem:
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 dost düşman: 
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 dünya:
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 falanca:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 falan:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 felan:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 filan:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 herkes:
     stress: 1
     class: 
-        Prn: {feat: [Pers,'3p']}
+        Prn: [{feat: [Pers,'3p']}]
 insan:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 birisi:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 birileri:
     class: 
-        Prn: {feat: [Pers,'3s']}
+        Prn: [{feat: [Pers,'3s']}]
 birşey:
     flags: [nonstd]
     class: 
@@ -200,11 +199,11 @@ bir diğeri:
 bazılarınız:
     stress: 1
     class: 
-        Prn: {feat: [Pers,1p]}
+        Prn: [{feat: [Pers,1p]}]
 bazılarımız:
     stress: 1
     class: 
-        Prn: {feat: [Pers,2p]}
+        Prn: [{feat: [Pers,2p]}]
 her biri: 
     class: 
         Prn:

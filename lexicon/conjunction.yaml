@@ -1,0 +1,537 @@
+böylece:
+    stress: 1
+    class:
+        Cnj: 
+        - {feat: [[Adv]]}
+ayrıca:
+    class:
+        Cnj: 
+        - {feat: [[Adv]]}
+aslında:
+    class:
+        Cnj: 
+        - {feat: [[Adv]]}
+gerçi:
+    class:
+        Cnj: 
+        - {feat: [[Adv]]}
+aksine:
+    class:
+        Cnj: 
+        - {feat: [[Adv]]}
+ama:
+    class:
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+ancak:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+ardından:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bari:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+başka bir deyişle:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+belki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bilakis:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bile:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bir de:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+bir kere:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bir yana:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+böylelikle:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bundan dolayı:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+bunun üzerine:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+çünkü:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+#        - {feat: [Coo]} # ???
+da:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Sub]}
+de:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Sub]}
+daha doğrusu:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+dahası:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+dahi:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+değil:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+demek:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+demek ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+diye:
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+diğer taraftan:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+dolayısıyla:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+eğer:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+    notes:
+    - This is used in part of a conditional (subordinate) clause. Not a connective by itself.
+fakat:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+gerek:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+gerekse:
+    class: 
+        Cnj: 
+        - {feat: [Coo;]}
+ha:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+halbuki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+hani:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+hatta:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+hele:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+hem:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+hiç olmazsa:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+hoş:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+için:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+ila:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+ile:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+işte:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ister:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ister:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+kah:
+    stdForm: kâh
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+kâh:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+keşke:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+kim ki:
+    flags: [obs]
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+keza:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Sub]}
+kimbilir:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+kısacası:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+lakin:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+lâkin:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+madem:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+madem ki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+mamafih:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+meğer:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+meğerki:
+    stress: 1
+    flags: [obs,nonStd]
+    stdFrom: meğer ki
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+meğer ki:
+    stress: 1
+    flags: [obs]
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+meğerse:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+mesela:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+nasıl:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+nasıl ki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+nasılsa:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ne:
+    class: 
+        Cnj: 
+        - {feat: [Coo]}
+ne de olsa:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ne var ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ne zaman ki:
+    flags: [obs]
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+neyse:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+nitekim:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+o halde:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ola ki:
+    flags: [obs]
+    class: 
+        Cnj: 
+        - {feat: [Sub]}
+olsun:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+örneğin:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+öyle ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+öyleyse:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+oysa:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+oysa ki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+oysaki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+pekala:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+pekâlâ:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+peki:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+şayet:
+    stress: 1
+    flags: [obs]
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+    notes:
+        - This is used in part of a conditional (subordinate) clause. Not a connective by itself.
+sonra:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+şöyle dursun:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+şöyle ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+sözgelişi:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+tabii ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+tabi ki:
+    flags: [nonStd]
+    stdForm: tabii ki
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ta:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+tersine:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+üstelik:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+var ya:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+ve:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+velev ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+velhasıl:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+veya:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+veyahut:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+ya:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+ya da:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+yahut:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yalnız:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yani:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yeter:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yeter ki:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yok:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yok mu:
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yoksa:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+yoksa:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+        - {feat: [Coo]}
+yo:
+    feat: [nonStd]
+    stdFrom: yok
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+zaten:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
+zira:
+    stress: 1
+    class: 
+        Cnj: 
+        - {feat: [Adv]}
