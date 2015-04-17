@@ -210,8 +210,8 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %+Adj %+PresPart  -> %<part%:pres%> %<Adj%>
         .o. %+Adj %+FutPart   -> %<part%:fut%> %<Adj%>
         .o. %+Adj %+PastPart  -> %<part%:past%> %<Adj%>
+        .o. %+Adj %+Related   -> %<sal%> %<Adj%>
         .o. %+Adj %+Rel       -> %<ki%> %<Adj%>
-!        .o. %+Adj %+Related   -> %<sal%> %<Adj%>
         .o. %+Adj %+With      -> %<li%> %<Adj%>
         .o. %+Adj %+Without   -> %<siz%> %<Adj%>
         .o. %+Adj %+Zero      -> %<%0%> %<Adj%>
