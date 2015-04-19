@@ -319,6 +319,7 @@ akonitin              N;
 akont                 N;
 akordeon              N;
 akor^t                N;
+akord                 N;    ! non-standard
 akpas                 N;
 akraba                N;
 akran                 N;
@@ -3719,6 +3720,7 @@ elektrokardiyogram    N;
 elektrolit            N;
 elektroliz            N;
 elektromanyetizma     N;
+elektromagnetizma     N;    ! non-standard: elektromanyetizma
 elektromekani^k       N;
 elektrometalürji      N;
 elektrometre          N;
@@ -4572,6 +4574,7 @@ galvanotip            N;
 galyot                N;
 galyum                N;
 gama                  N;
+gamma                 N;
 gambot                N;
 gamet                 N;
 gam                   N;
@@ -4639,6 +4642,7 @@ gazi                  N;
 gazino                N;
 gazışı                N;
 gaz                   N;
+gazoca^k              Ncomp;
 gazojen               N;
 gazölçer              N;
 gazolin               N;
@@ -4867,6 +4871,7 @@ gon^k                 N;
 gön                   N;
 gonokok               N;
 gönü@DEL@l            N;
+gönül                 N;
 gönüldaş              N;
 gönye                 N;
 görde^k               N;
@@ -6069,7 +6074,7 @@ insaniçincili^k       N;
 insanımsılar          N;
 insaniyet             N;
 insan                 N;
-insanoğu@del@l        Ncomp;
+insanoğu@DEL@l        Ncomp;
 insansılar            N;
 inşa^t                N;
 insektaryum           N;
@@ -7959,6 +7964,7 @@ kontrpuan             N;
 kontur                N;
 kontuvar              N;
 konu^k                N;
+konukev               Ncomp;
 konu% komşu           N;
 konum                 N;
 konu                  N;
@@ -15781,3 +15787,40 @@ ra^sFUVp              N;    ! music genre
 rap                   N;    ! music genre
 zombi                 N;
 doğru                 N;
+valium                N;
+diazem                N;
+anfi                  N;    ! common misspelling: amfi
+antroploji            N;
+entropi               N;
+faranjit              N;
+kanepe                N;
+kanape                N;    ! common misspelling: kanape
+emmioğlu              Nfamily;
+emmioğlu              Nfamily;
+kacak                 N;
+kap% kacak            N;
+cemev                 Ncomp;
+doğumev               Ncomp;
+bişop                 N;
+bişo^p                N;
+bordel                N;
+bourbon               N;
+cuk                   N;    ! only in: cuk otur- ??
+etü^t                 N;
+etüd                  N;    ! non-standard: etü^t
+evye                  N;
+feth                  N;    ! only in: feth et-
+garni                 N;    ! non-std ??
+gorgonzola            N;
+graten                N;
+lord                  N;
+lupus                 N;
+önyüz                 N;
+papiş                 N;    ! non-std - child talk
+pelüş                 N;
+peluş                 N;    ! non-std: pelüş
+plonjon               N;
+planjon               N;    ! non-std: plonjon
+reenkarnasyon         N;
+selahiyetsyon         N;
+skoç                  N;

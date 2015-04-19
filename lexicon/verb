@@ -620,7 +620,7 @@ karşıla      V_Rcp;
 kartal       V; !dialectal
 kar          V_CausDir_AorAr;
 kaşan        V;
-kaşı         V;
+kaşı         V_Rfl;
 kaste^t      V_AorAr;
 kas          V_AorAr;
 katıl        V_CausIrreg;
@@ -1220,8 +1220,8 @@ kavga% e^t   V_AorAr;
 ziyan% e^t   V_AorAr;
 evril        V;
 arze^t       V_AorAr;
-feshze^t     V_AorAr;
-fesh% ze^t   V_AorAr;
+feshe^t      V_AorAr;
+fesh% e^t    V_AorAr;
 arz% e^t     V_AorAr;
 aşer         V;
 çıtırda      V;
@@ -1426,4 +1426,7 @@ turfala      V;
 sağla        V; 
 açıkla       V; 
 hatırla      V; 
+kıtırda      V; 
+sarıl        V; ! this is not only passive form of `sar'.
+mızıklan     V; 
 sarıl        V; ! this is not only passive form of `sar'.

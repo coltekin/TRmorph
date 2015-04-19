@@ -40,6 +40,7 @@
 ! organiztion names in the lexicon file `abbreviation'.
 !
 
+Boeing                  NP;
 Google^sBUV^sVC         NP;
 Facebook                NP;
 Apple^sBUV^sVC          NP;
@@ -55,6 +56,7 @@ Citibank                NP;
 Cabot                   NP;
 Divan                   NP;
 Suişler                 NPcomp;
+Bağ-Kur                 NP;
 
 
 !
@@ -62,6 +64,9 @@ Suişler                 NPcomp;
 ! There may be some overlap with the organization names above
 !
 
+Yaris                   NP;
+Chevrolet               NP;
+Chevrolet^sVC           NP;
 Windows                 NP;
 Linux                   NP;
 iPhone                  NP;
@@ -9297,3 +9302,25 @@ Lamut                  NP;
 Akçaalan               NP;
 Aztek                  NP;
 Koha                   NP;
+Amatem                 NP;  ! normally abbreviation
+Amur                   NP;
+Çukotka                NP;
+Koryak                 NP;
+Dolgan                 NP;
+Tofa                   NP;
+Evenkler               NP;
+Yukagirler             NP;
+Gaveau                 NP;
+Habarovsk              NP;
+Ohotsk                 NP;
+Koryak                 NP;
+Kamçatka               NP;
+Kitaylar               NP;
+Magadan                NP;
+Mançurya               NP;
+Midouze                NP;
+Mihalıcık              NP;
+Montenapoleone         NP;
+Nahuatl                NP;
+Singapur               NP;
+Tunalıhilmi            NP;

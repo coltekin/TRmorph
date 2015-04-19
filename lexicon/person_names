@@ -10020,6 +10020,7 @@ Adin              NPperson;
 Adıvar            NPperson;
 Adıyaman          NPperson;
 Afyonoğlu         NPperson;
+Ağabaloğlu        NPperson;
 Ağabeyoğlu        NPperson;
 Ağacık            NPperson;
 Ağacıkoğlu        NPperson;
@@ -10596,6 +10597,7 @@ Bengü             NPperson;
 Benice            NPperson;
 Benker            NPperson;
 Benli             NPperson;
+Benokan           NPperson;
 Berber            NPperson;
 Berberoğlu        NPperson;
 Bereket           NPperson;
@@ -10700,6 +10702,7 @@ Bosna             NPperson;
 Bostancı          NPperson;
 Bostancıoğlu      NPperson;
 Bosuter           NPperson;
+Botel             NPperson;
 Boyacıgiller      NPperson;
 Boyacıoğlu        NPperson;
 Boya              NPperson;
@@ -13659,9 +13662,21 @@ Karl                    NPperson;
 Marks                   NPperson;
 Zago                    NPperson;
 Karanina                NPperson;
+Aleksiyev               NPperson;
+Alekseyev               NPperson;
+Çernomirdin             NPperson;
+Hanzel                  NPperson;
+Polyanna                NPperson;
+Şostakoviç              NPperson;
+Süpermen                NPperson;
 
 
 ! misc.
 Ciguli                  NPperson;
 Selo                    NPperson;
 Katana                  NPperson;
+Ayhen                   NPperson; ! from M/S treebank
+Kirkor                  NPperson;
+Kuve                    NPperson;
+Miskoye                 NPperson;
+Tontoş                  NPperson;
