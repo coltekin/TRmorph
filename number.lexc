@@ -116,6 +116,10 @@ LEXICON prefixN1k
     prefixN1k10;
     prefixN1k100;
 
+LEXICON prefixN1k1
+bir@dB      N1k2cont;
+            prefixN1k2;
+
 LEXICON prefixN1k2
 iki@dB      N1k2cont;
 üç@dB       N1k2cont;
@@ -142,7 +146,7 @@ doksan@dB   N1k10cont;
 
 LEXICON N1k10cont
     N1k;
-    prefixN1k2;
+    prefixN1k1;
 
 LEXICON  prefixN1k100
         N1k100pre;
