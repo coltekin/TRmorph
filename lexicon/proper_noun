@@ -57,6 +57,7 @@ Cabot                   NP;
 Divan                   NP;
 Suişler                 NPcomp;
 Bağ-Kur                 NP;
+CASA                    NP;
 
 
 !
@@ -9324,3 +9325,4 @@ Montenapoleone         NP;
 Nahuatl                NP;
 Singapur               NP;
 Tunalıhilmi            NP;
+Yakutsk                NP;

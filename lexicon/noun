@@ -14258,6 +14258,8 @@ tipografi             N;
 tipografya            N;
 tipoloji              N;
 tırabzan              N;
+tira^t                N;
+tirad                 N;    ! non-std: tira^t
 tiraj                 N;
 tiramisu              N;
 tiramola              N;
@@ -15822,5 +15824,10 @@ peluş                 N;    ! non-std: pelüş
 plonjon               N;
 planjon               N;    ! non-std: plonjon
 reenkarnasyon         N;
-selahiyetsyon         N;
+selahiyet             N;
 skoç                  N;
+şˈahmeran             N;
+aga                   N;    ! non-std: ağa
+türetim               N;
+tasannu@DELS@         N;    ! old/rare
+düşkırıklı^k          Ncomp; ! non-std: düş kırıklığı
