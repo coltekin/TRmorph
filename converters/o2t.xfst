@@ -208,6 +208,7 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %+Adj %+InBetween -> %<arasi%> %<Adj%>
         .o. %+Adj %+JustLike  -> %<imsi%> %<Adj%>
         .o. %+Adj %+PresPart  -> %<part%:pres%> %<Adj%>
+        .o. %+Noun %+PresPart  -> %<part%:pres%> %<N%>
         .o. %+Adj %+FutPart   -> %<part%:fut%> %<Adj%>
         .o. %+Adj %+PastPart  -> %<part%:past%> %<Adj%>
         .o. %+Adj %+Related   -> %<sal%> %<Adj%>
@@ -560,7 +561,7 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %<V%> %<part%:pres%> %<Adj%> %<%0%> %<N%> -> %<V%> %<vn%:pres%> %<N%>
         .o. s [e|a] l %<Adj%> -> %<N%> %<sal%> %<Adj%>
         .o. %<%0%> %<N%> -> 0 || %<N%:prop%> _ 
-        .o. %<%0%> %<V%> -> %<%0%> %<cpl%:pres%> %<V%> || 
+        .o. %<%0%> %<V%> -> %<%0%> %<V%> %<cpl%:pres%> || 
                 [%<Exist%>|%<Exist%:neg%>] _ %<3s%> .#.
         .o. %<Exist%:neg%> -> %<Adj%> || y o k _ %<%0%> %<N%>
         ;
