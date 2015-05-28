@@ -70,6 +70,11 @@ g2p: g2p.fst
 g2p.fst: morph-phon.cpp.xfst g2p.cpp.xfst
 	foma -f g2p.cpp.xfst
 
+#
+#
+#
+options.h: options.h-default
+	test -e $@ && echo "your $@ may be out of date" || cp $< $@ 
 
 #
 # housekeeping goes below

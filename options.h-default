@@ -53,7 +53,7 @@
  *
  */
 
-#define ALLCAPS 0
+#define ALLCAPS 1
 #define CAPITALIZE 1
 #define GUESSER_ALLCAPS 1
 #define GUESSER_CAPITALIZE 1
@@ -101,7 +101,7 @@
  *
  */
 
-#define GUESSER_MIN_LENGTH 1
+#define GUESSER_MIN_LENGTH 2
 #define GUESSER_MAX_LENGTH 10
 #define GUESSER_STEM 0
 
@@ -202,7 +202,7 @@
  *
  */
 
-#define ANALYZE_lA 0
+#define ANALYZE_lA 1
 
 /* AlLOW_mAG
  *
