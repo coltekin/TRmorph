@@ -124,12 +124,13 @@ define abbrfilter A -> a, B -> b, C -> c, Ç -> ç, D -> d, E -> e,
 
 define o2t %+Punc      ->  %<Punc%> 
 
-        .o. %+Noun %+NotAbleState   -> %<abil%> %<neg%> %<aor%> %<Adj%> %<lik%> %<N%>
+        .o. %+Noun %+NotAbleState   -> %<abil%> %<V%> %<neg%> %<aor%> %<Adj%> %<lik%> %<N%>
         .o. %+Noun %+NotState       -> %<neg%> %<aor%> %<Adj%> %<lik%> %<N%>
         .o. %+Noun %+ActOf          -> %<vn%:inf%> %<N%> %<ca%> %<N%>
         .o. %+Noun %+Agt -> %<yici%> %<Adj%>    || %+Verb \%^DB* %^DB _
         .o. %+Noun %+Agt %+Prop     -> %<ci%> %<N%:prop%>      
         .o. %+Noun %+Agt            -> %<ci%> %<N%>      
+        .o. %+Dim %+Noun            -> %+Dim
         .o. %+Noun %+Dim            -> %<dim%> %<N%>     
         .o. %+Noun %+FeelLike       -> %<esi%> %<Adj%>   
         .o. %+Noun %+FutPart        -> %<vn%:fut%> %<N%> 
@@ -141,6 +142,7 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %+Noun %+Inf3 %+Prop    -> %<vn%:yis%> %<N%:prop%> 
         .o. %+Noun %+Inf3           -> %<vn%:yis%> %<N%> 
         .o. %+Noun %+PastPart       -> %<vn%:past%> %<N%>
+        .o. %+Noun %+PresPart       -> %<vn%:pres%> %<N%>
         .o. %+Noun %+Ness           -> %<lik%> %<N%>     
         .o. %+Noun %+Zero           -> %<%0%> %<N%>      
         .o. %+Noun %+Prop           -> %<N%:prop%>       
@@ -208,7 +210,6 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %+Adj %+InBetween -> %<arasi%> %<Adj%>
         .o. %+Adj %+JustLike  -> %<imsi%> %<Adj%>
         .o. %+Adj %+PresPart  -> %<part%:pres%> %<Adj%>
-        .o. %+Noun %+PresPart  -> %<part%:pres%> %<N%>
         .o. %+Adj %+FutPart   -> %<part%:fut%> %<Adj%>
         .o. %+Adj %+PastPart  -> %<part%:past%> %<Adj%>
         .o. %+Adj %+Related   -> %<sal%> %<Adj%>
@@ -242,7 +243,7 @@ define o2t %+Punc      ->  %<Punc%>
         .o. %+Adverb %+ByDoingSo     -> %<cv%:erek%> %<Adv%>
         .o. %+Adverb %+Since         -> %<dir%> %<Adv%>
 
-        .o. %+Adverb %+WithoutBeingAbleToHaveDoneSo -> %<abil%> %<neg%> %<cv%:den%> %<Adv%>
+        .o. %+Adverb %+WithoutBeingAbleToHaveDoneSo -> %<neg%> %<abil%> %<V%> %<cv%:den%> %<Adv%>
         .o. %+Adverb %+WithoutHavingDoneSo  -> %<neg%> %<cv%:den%> %<Adv%>
 
         .o. %+Adverb -> %<Adv%>
