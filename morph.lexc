@@ -1766,6 +1766,8 @@ LEXICON CplEvidCont
                 PAgrG1End;
                 CplPAgrG1; ! this is marked/rare usage - gidiyormuşumsa
                 CplCond2;
+                CplEvid2;
+                CplPast2;
                 CVcesinePagr;
 ! TODO: In a relatively rare number of cases -DIr may follow if -(I)yor 
 !       precedes the evidential copula.
@@ -1792,8 +1794,9 @@ LEXICON  CplPast
 
 LEXICON CplPastCont
                 PAgrG2End;
-                CplPAgrG2; ! this is marked/rare usage - gidiyordumsa
                 CplCond2;
+                CplPAgrG2; ! this is marked/rare usage - gidiyordumsa
+                CplPast2; ! this is also borderline case: 'yapacaktıydı'
 
 LEXICON CplPAgrG1
 %<1s%>:^(y)^Im@MB  CplPAgrG1Cont;
