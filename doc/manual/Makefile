@@ -20,9 +20,9 @@ $(MAIN).aux:
 
 $(MAIN).bib: $(BIBSRC) $(MAIN).aux
 	test -r $(BIBSRC) && \
-		(bibtool -q -i $(BIBSRC) \
+		(bibtool -q -- 'new.entry.type {Online}' -i $(BIBSRC) \
    		$$(grep '@cite{' $(MAIN).aux |sed 's/.*@cite{/ -X /;s/}.*//'|sort|uniq) \
-       	> $(MAIN).bib) || echo "No $(BIBSRC)."
+       	> $(MAIN).bib) || echo ""
 
 $(BIBSRC):
 	echo "We do not have $(BIBSRC) but this should be OK."

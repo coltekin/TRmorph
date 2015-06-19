@@ -1,6 +1,6 @@
 TRmorph (http://www.let.rug.nl/coltekin/trmorph/)
 
-This is the README file for the new version of TRmorph (updated 2013-07)
+This is the README file introduces TRmorph version 0.9
 
 TRmorph is a open source/free morphological analyzer for Turkish. The
 current version is a complete rewrite of the (earlier) SFST[2] version
@@ -33,11 +33,10 @@ What is new in this version:
       LICENSE).
 
 If you use this analyzer in your research, and want to cite it, please
-(still) cite the following paper:
+cite the relevant paper(s) from the following list:
 
-Çağrı Çöltekin (2010). A Freely Available Morphological Analyzer for
-Turkish In Proceedings of the 7th International Conference on Language
-Resources and Evaluation (LREC2010), Valletta, Malta, May 2010. (pdf). 
+* Çağrı Çöltekin (2010) A Freely Available Morphological Analyzer for Turkish In: Proceedings of the 7th International Conference on Language Resources and Evaluation (LREC 2010) 820–827 [pdf](http://coltekin.net/cagri/papers/coltekin2010lrec.pdf)
+* Çağrı Çöltekin (2014) A Set of Open Source Tools for Turkish Natural Language Processing In: Proceedings of the Ninth International Conference on Language Resources and Evaluation (LREC'14) 1079–1086 [pdf](http://coltekin.net/cagri/papers/coltekin2014lrec.pdf)
 
 # Getting started
 
@@ -70,10 +69,10 @@ There are also separate automata for _segmentation_,
 _stemming_ (or _lemmatization_) and _hyphenation_ that you can compile
 and use. 
 
-See doc/trmorph-manual.pdf for more information.
+See (doc/trmorph-manual.pdf) for more information.
 
 # References
 
-[1] https://code.google.com/p/foma/
-[2] http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html
-[3] http://www.gnu.org/licenses/lgpl.html
+- [1] https://code.google.com/p/foma/
+- [2] http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html
+- [3] http://www.gnu.org/licenses/lgpl.html
