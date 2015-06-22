@@ -1087,7 +1087,7 @@ LEXICON   VRcpCont
                     VRcp;
 
 LEXICON VRcp
-%<rcp%>%<V%>:^(I)ş@MB     VCont;
+%<rcp%>:^(I)ş@MB     VCont;
 
 
 LEXICON V_Rfl
@@ -1097,7 +1097,7 @@ LEXICON   VRflCont
                     VCont;
                     VRfl;
 LEXICON   VRfl
-%<rfl%>%<V%>:^(I)n@MB       VCont;
+%<rfl%>:^(I)n@MB       VCont;
 
 LEXICON  V_Rfl_Rcp
 %<V%>:@RB   VRflRcpCont;
@@ -1116,7 +1116,7 @@ LEXICON VCausDirCont
                     VNoCausCont;
 
 LEXICON VCausDir
-%<caus%>%<V%>:^D^Ir@MB      VCont;
+%<caus%>:^D^Ir@MB      VCont;
 
 !
 LEXICON V_CausIr
@@ -1127,7 +1127,7 @@ LEXICON VCausIrCont
                     VNoCausCont;
 
 LEXICON VCausIr
-%<caus%>%<V%>:^Ir@MB        VCont;
+%<caus%>:^Ir@MB        VCont;
 
 !
 LEXICON V_CausIt
@@ -1138,7 +1138,7 @@ LEXICON VCausItCont
                     VNoCausCont;
 
 LEXICON VCausIt
-%<caus%>%<V%>:^It@MB        VCont;
+%<caus%>:^It@MB        VCont;
 
 !
 LEXICON V_Rcp_CausDir
@@ -1251,7 +1251,7 @@ LEXICON VCausAtAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausAt
-%<caus%>%<V%>:^At@MB        VCont;
+%<caus%>:^At@MB        VCont;
 
 LEXICON V_Rcp_CausAr_AorAr
 %<V%>:@RB           VRcpCausArAorArCont;
@@ -1272,7 +1272,7 @@ LEXICON VCausArAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausAr
-%<caus%>%<V%>:^Ar@MB        VCont;
+%<caus%>:^Ar@MB        VCont;
 
 !
 LEXICON V_CausArt_AorAr
@@ -1284,7 +1284,7 @@ LEXICON VCausArtAorArCont
                         VNoCausNoAorCont;
 
 LEXICON VCausArt
-%<caus%>%<V%>:^Art@MB        VCont;
+%<caus%>:^Art@MB        VCont;
 
 !
 LEXICON V_CausIt_AorAr
@@ -1355,7 +1355,7 @@ LEXICON VRcpCausIrregAorArCont
 !
 
 LEXICON VCausRegular
-%<caus%>%<V%>:@CAUS@MB      VCausLoop;
+%<caus%>:@CAUS@MB      VCausLoop;
 
 LEXICON VCausLoop
             VCausRegular;
@@ -1368,7 +1368,7 @@ LEXICON VCausRegularCont
             Vderiv;
 
 LEXICON VPassive
-%<pass%>%<V%>:^(I)@LN@MB       VPassiveCont;
+%<pass%>:^(I)@LN@MB       VPassiveCont;
 
 LEXICON  VPassiveCont
                           VCabilNeg;
