@@ -724,13 +724,11 @@ LEXICON NomPredPagr
 %<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2s%>:s^NS^In@MB          NomPredPagrCont;
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
-%<cpl%:pres%>%<3p%:%0%>:0@MB             NomPredPagrCont;
 %<cpl%:pres%>%<1p%>:^(y)^NS^Iz@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2p%>:s^NS^In^Iz@MB       NomPredPagrCont;
 
 LEXICON NomPredPagr3s
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
-%<cpl%:pres%>%<3p%:%0%>:0@MB             NomPredPagrCont;
 
 LEXICON NomPredPagrCont
                     #;
@@ -1505,7 +1503,6 @@ LEXICON PAgrG1     ! <3p>:lAr is treated separately
 %<1s%>:^(y)^NS^Im@MB       PAgrG1Cont;
 %<2s%>:s^NS^In@MB          PAgrG1Cont;
 %<3s%>:0@MB             PAgrG1Cont;
-%<3p%:%0%>:0@MB             PAgrG1Cont;
 %<1p%>:^(y)^NS^Iz@MB       PAgrG1Cont;
 %<2p%>:s^NS^In^Iz@MB       PAgrG1Cont;
 
@@ -1548,7 +1545,6 @@ LEXICON PAgrDI
 %<1s%>:m@MB         PAgrDICont;
 %<2s%>:n@MB         PAgrDICont;
 %<3s%>:0@MB         PAgrDICont;
-%<3p%:%0%>:0@MB         PAgrDICont;
 %<1p%>:k@MB         PAgrDICont;
 %<2p%>:n^Iz@MB      PAgrDICont;
 %<3p%>:l^Ar@MB      PAgrDICont;
@@ -1585,7 +1581,6 @@ LEXICON TAMCondPAgr
 %<1s%>:m@MB         TAMCondPAgrCont;
 %<2s%>:n@MB         TAMCondPAgrCont;
 %<3s%>:0@MB         TAMCondPAgrCont;
-%<3p%:%0%>:0@MB         TAMCondPAgrCont;
 %<1p%>:k@MB         TAMCondPAgrCont;
 %<2p%>:n^Iz@MB      TAMCondPAgrCont;
 %<3p%>:l^Ar@MB      TAMCond3pCont;
@@ -1632,11 +1627,9 @@ LEXICON OptPAgr
 %<3s%>:@opt3s^In@MB     OptPAgrCont;
 %<1p%>:l^Im@MB          OptPAgrCont;
 %<2p%>:s^NS^In^Iz@MB    #;
-%<3p%:sIn%>:@opt3s^In@MB     OptPAgrCont;
 %<3p%:sInlAr%>:@opt3s^Inl^Ar@MB OptPAgrCont;
 %<3s%:%0%>:0@MB             OptPAgrCont; ! these two are 
 %<3p%>:l^Ar@MB          OptPAgrCont; ! colloquial use
-%<3p%:%0%>:0@MB             OptPAgrCont; ! ... or maybe 3
 
 LEXICON OptPAgrCont
                         #;
@@ -1659,7 +1652,6 @@ LEXICON PAgrIMPEnd
 %<2s%:sAnA%>:s^An^NS^A@MB     #;
 %<2s%:yIn%>:^(y)^In@MB       #;
 %<3s%>:s^NS^In@MB       #;
-%<3p%:%0%>:s^NS^In@MB       #;
 %<2p%:yIn%>:^(y)^In@MB       #;
 %<2p%:yInIz%>:^(y)^NS^In^Iz@MB #;
 %<2p%:sAnIz%>:s^An^NS^Iz^A@MB  #;
@@ -1672,7 +1664,6 @@ LEXICON PAgrG1End
 %<1s%>:^(y)^Im@MB  #;
 %<2s%>:s^In@MB     #;
 %<3s%>:0@MB        #;
-%<3p%:%0%>:0@MB        #;
 %<1p%>:^(y)^Iz@MB  #;
 %<2p%>:s^In^Iz@MB  #;
 %<3p%>:l^Ar@MB     #;
@@ -1681,7 +1672,6 @@ LEXICON PAgrG2End
 %<1s%>:m@MB         #;
 %<2s%>:n@MB         #;
 %<3s%>:0@MB         #;
-%<3p%:%0%>:0@MB         #;
 %<1p%>:k@MB         #;
 %<2p%>:n^Iz@MB      #;
 %<3p%>:l^Ar@MB      #;
@@ -1716,7 +1706,6 @@ LEXICON mIPagr
 %<1s%>:^(y)^Im@MB      mIPagrCont;
 %<2s%>:s^In@MB         mIPagrCont;
 %<3s%>:0@MB            mIPagrCont;
-%<3p%:%0%>:0@MB            mIPagrCont;
 %<1p%>:^(y)^Iz@MB      mIPagrCont;
 %<2p%>:s^In^Iz@MB      mIPagrCont;
 
@@ -1802,7 +1791,6 @@ LEXICON CplPAgrG1
 %<1s%>:^(y)^Im@MB  CplPAgrG1Cont;
 %<2s%>:s^In@MB     CplPAgrG1Cont;
 %<3s%>:0@MB        CplPAgrG1Cont;
-%<3p%:%0%>:0@MB        CplPAgrG1Cont;
 %<1p%>:^(y)^Iz@MB  CplPAgrG1Cont;
 %<2p%>:s^In^Iz@MB  CplPAgrG1Cont;
 %<3p%>:l^Ar@MB     CplPAgrG1Cont;
@@ -1816,7 +1804,6 @@ LEXICON CplPAgrG2
 %<1s%>:m@MB         CplPAgrG2Cont;
 %<2s%>:n@MB         CplPAgrG2Cont;
 %<3s%>:0@MB         CplPAgrG2Cont;
-%<3p%:%0%>:0@MB         CplPAgrG2Cont;
 %<1p%>:k@MB         CplPAgrG2Cont;
 %<2p%>:n^Iz@MB      CplPAgrG2Cont;
 %<3p%>:l^Ar@MB      CplPAgrG2Cont;
@@ -1948,7 +1935,6 @@ LEXICON CVcesinePagr
 %<1s%>:^(y)^Im@MB  CVcesine;
 %<2s%>:s^In@MB     CVcesine;
 %<3s%>:0@MB        CVcesine;
-%<3p%:%0%>:0@MB        CVcesine;
 %<1p%>:^(y)^Iz@MB  CVcesine;
 %<2p%>:s^In^Iz@MB  CVcesine;
 %<3p%>:l^Ar@MB     CVcesine;
