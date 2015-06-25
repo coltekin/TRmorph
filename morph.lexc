@@ -321,7 +321,6 @@ LEXICON JP_poss
 %<p1s%>%<Prn%>:^(I)m@MB      NposCont;
 %<p2s%>%<Prn%>:^(I)n@MB      NposCont;
 %<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
-%<p3p%:%0%>%<Prn%>:^(s)^I@MB     NposCont;
 %<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
 %<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
@@ -335,7 +334,6 @@ LEXICON JP_poss
 !
 LEXICON HepPrn
 %<p3s%>%<Prn%>:s^I@MB     NposCont;
-%<p3p%:%0%>%<Prn%>:s^I@MB     NposCont;
 %<p1s%>%<Prn%>:^(I)m@MB      NposCont;
 %<p2s%>%<Prn%>:^(I)n@MB      NposCont;
 %<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
@@ -630,7 +628,6 @@ LEXICON Npos
 %<p1s%>:^(I)m@MB      NposCont;
 %<p2s%>:^(I)n@MB      NposCont;
 %<p3s%>:^(s)^I@MB     Npos3sCont;
-%<p3p%:%0%>:^(s)^I@MB     NposCont; ! burasi Ali'lerin ev-i
 %<p1p%>:^(I)m^Iz@MB   NposCont;
 %<p2p%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>:l^Ar^I@MB     NposCont;
