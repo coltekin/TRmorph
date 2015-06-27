@@ -415,6 +415,7 @@ define NbeforePassive [..] (->) n ||  .#. wordsPassiveN %@RB
 !                 option
 !       - the passive form of `anla' is `anlaşıl'
 !
+! TODO: LN2 repetition is ugly, it could be done nicer.
 !
 
 define PassiveLN  y (->) n  || k o _ %@RB  %^%(I%) %@LN %@MB
@@ -422,7 +423,10 @@ define PassiveLN  y (->) n  || k o _ %@RB  %^%(I%) %@LN %@MB
               .o. [..] -> t || .#. {kapa} %@RB _ %^%(I%) %@LN %@MB
               .o. [..] -> ş || .#. {anla} %@RB _ %^%(I%) %@LN %@MB
               .o. %@LN -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
-              .o. %@LN -> l ;
+              .o. %@LN -> l 
+              .o. %@LN2 -> n || [Vall | l] IntSym* %^%(I%) _ %@MB
+              .o. %@LN2 -> l
+              ;
 
 !
 ! Replace intermediate symbol @CAUS with the correct form of causative suffix
