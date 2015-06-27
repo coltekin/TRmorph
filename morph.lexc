@@ -329,16 +329,18 @@ LEXICON JP_poss
 ! the same way. Instead of <p3s> version `hepi', the correct 
 ! form is `hepsi'. We allow `hepi', too, as it is used colloquially.
 !
-! The 1p and 2p singular forms are unusual (likely not possible),
-! although we allow them here.
+! The 1p and 2p singular forms are probably not possible.
+! We allow them here.
 !
 LEXICON HepPrn
-%<p3s%>%<Prn%>:s^I@MB     NposCont;
-%<p1s%>%<Prn%>:^(I)m@MB      NposCont;
-%<p2s%>%<Prn%>:^(I)n@MB      NposCont;
-%<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
-%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
-%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
+%<Adv%>%<p3s%>%<Prn%>:s^I@MB       NposCont;
+%<Adv%>%<p3s%>%<Prn%>:^(s)^I@MB    NposCont;
+%<Adv%>%<p1p%>%<Prn%>:^(I)m^Iz@MB  NposCont;
+%<Adv%>%<p2p%>%<Prn%>:^(I)n^Iz@MB  NposCont;
+%<N%>%<p3s%>:s^I@MB         NposCont;
+%<N%>%<p3s%>:^(s)^I@MB      NposCont;
+%<N%>%<p1p%>:^(I)m^Iz@MB    NposCont;
+%<N%>%<p2p%>:^(I)n^Iz@MB    NposCont;
 
 !
 ! onomatopoeic words
@@ -787,7 +789,7 @@ LEXICON  AdjCont
                     Jderiv;
 
 LEXICON AdvHep
-%<Adv%>:@RB         HepPrn;
+                    HepPrn;
                     Adv;
 
 LEXICON Adv
