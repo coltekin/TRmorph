@@ -1366,6 +1366,13 @@ LEXICON VCausRegularCont
 
 LEXICON VPassive
 %<pass%>:^(I)@LN@MB       VPassiveCont;
+%<pass%>:^(I)@LN@MB       VPassive2;
+
+! Double passive. TODO: This should only be allowed for transitive verbs.
+! currently we do not mark the verbs for transitivity.
+!
+LEXICON VPassive2
+%<pass%>:^(I)@LN2@MB       VPassiveCont;
 
 LEXICON  VPassiveCont
                           VCabilNeg;

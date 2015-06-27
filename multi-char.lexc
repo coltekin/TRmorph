@@ -8,7 +8,7 @@ Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   @NCOMP
                   @PRN
                   @DEL@ @DUP@ @DELS@
-                  @LN @CAUS
+                  @LN @LN2 @CAUS
                   @miSPC @opt3
                   ^NS ^NNS ^S
                   ^sFUV ^sFRV ^sBUV ^sBRV ^sVC ^sUC
