@@ -117,6 +117,8 @@ cˈümleten            Adv;
 daha                AdvTime;
 daha% çok           Adv;
 daima               Adv;       ! this does not nominalize
+de                  Adv;    ! when de/da are used as intesifiers
+da                  Adv;    !
 defaten             Adv;
 demin               AdvTime;
 demince^k           Adv;
@@ -291,7 +293,7 @@ nˈakden              Adv;
 nˈaklen              Adv;
 nˈazaran             Adv;
 nazikane            Adv;
-ne                  Adv;
+ne                  QAdv;
 nˈerdeyse            Adv;
 nˈeredeyse           Adv;
 nezdinde            AdvTime;
@@ -456,3 +458,4 @@ her% daim           Adv;
 kıçüstü             Adv;
 abuk                Adv;    ! only in: abuk sabuk
 sabuk               Adv;    ! only in: abuk sabuk
+birazdan            Adv;
