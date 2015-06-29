@@ -89,7 +89,7 @@ define Abbr     [..] -> %^sFUV    || .#. ConsSurface+ _ %@ABBR
 ! 
 ! NOTE: for generation it is better to limit these to only one.
 !
-define AposSym %'|%’|%´|%′;
+define AposSym APOSTROPHE_SYMS ;
 
 define replaceApos %@APOS -> 0 || _ Boundary+ .#.
                .o. %@APOS -> AposSym;

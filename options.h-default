@@ -45,6 +45,15 @@
  */
 #define NOUN_APOSTROPHE 1
 
+
+/* APOSTROPHE_SYMS
+ *
+ * The symbols that are accepted as apostrophe. This will increase
+ * ambiguity in expressions involving apostrophe.
+ */
+
+#define APOSTROPHE_SYMS %'|%’|%´|%′|%ʼ
+
 /*
  * CAPITALIZE: this allows first letter of  any word to be capital. This 
  *             is fits typical use case of an analyzer. One may want to 
