@@ -708,7 +708,9 @@ define collapseAsymbols %: %0          -> 0 || %< p 3 p _ %>
                     .o. %: y I n       -> 0 || %< 2 p _ %>
                     .o. %: y I n I z   -> 0 || %< 2 p _ %>
                     .o. %: s A n I z   -> 0 || %< 2 p _ %>
+#if (COLLAPSE_MA_MAK == 1)
                     .o. m A (K)        -> 0 || %< v n %: i n f _ %>
+#endif
                     .o. %: z           -> 0 || %< c v %: d e n _ %>
                     .o. %: c I k       -> 0 || %< d i m _ %>
                     .o. %: c A k       -> 0 || %< d i m _ %>

@@ -287,3 +287,14 @@
  */
 
 #define MARK_SUBCATEGORIES 1
+
+
+/* COLLAPSE_MA_MAK
+ *
+ * We normally collapse the infinitive forms with -mA and -mAk to a
+ * single analysis symbol <vn:inf>. This option allows them to be
+ * analyzed separately as <vn:infMA> and <vn:infMAK>. It may be handy
+ * for generation.
+ */
+
+#define COLLAPSE_MA_MAK 1
