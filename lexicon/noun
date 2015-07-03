@@ -15832,3 +15832,4 @@ türetim               N;
 tasannu@DELS@         N;    ! old/rare
 düşkırıklı^k          Ncomp; ! non-std: düş kırıklığı
 yürüyüş               N;
+gönüllü               N;    ! derived but lexicalized
