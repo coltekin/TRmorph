@@ -1054,6 +1054,7 @@ LEXICON VPart
 LEXICON   VCont
                 Vderiv;
                 Vinfl;
+                AbilPartial;
 
 LEXICON   Vinfl
                     VCausRegular;
@@ -1063,10 +1064,12 @@ LEXICON VNoCausCont
                     Vderiv;
                     VPassive;
                     VPassiveCont;
+                    AbilPartial;
         
 LEXICON VNoAorCont
                     VCausRegular;
                     VNoCausNoAorCont;
+                    AbilPartial;
 
 LEXICON VNoCausNoAorCont
                     Vderiv;
@@ -1075,6 +1078,7 @@ LEXICON VNoCausNoAorCont
                     VNegative;
                     VComp;
                     NonFiniteVerbNoAor;
+                    AbilPartial;
 
 LEXICON V_Rcp
 %<V%>:@RB   VRcpCont;
@@ -1082,6 +1086,7 @@ LEXICON V_Rcp
 LEXICON   VRcpCont
                     VCont;
                     VRcp;
+                    AbilPartial;
 
 LEXICON VRcp
 %<rcp%>:^(I)ş@MB     VCont;
@@ -1093,6 +1098,7 @@ LEXICON V_Rfl
 LEXICON   VRflCont
                     VCont;
                     VRfl;
+                    AbilPartial;
 LEXICON   VRfl
 %<rfl%>:^(I)n@MB       VCont;
 
@@ -1104,6 +1110,7 @@ LEXICON  VRflRcpCont
                     VCont;
                     VRcp;
                     VRfl;
+                    AbilPartial;
 
 LEXICON V_CausDir
 %<V%>:@RB           VCausDirCont;
@@ -1111,6 +1118,7 @@ LEXICON V_CausDir
 LEXICON VCausDirCont
                     VCausDir;
                     VNoCausCont;
+                    AbilPartial;
 
 LEXICON VCausDir
 %<caus%>:^D^Ir@MB      VCont;
@@ -1122,6 +1130,7 @@ LEXICON V_CausIr
 LEXICON VCausIrCont
                     VCausIr;
                     VNoCausCont;
+                    AbilPartial;
 
 LEXICON VCausIr
 %<caus%>:^Ir@MB        VCont;
@@ -1133,6 +1142,7 @@ LEXICON V_CausIt
 LEXICON VCausItCont
                     VCausIt;
                     VNoCausCont;
+                    AbilPartial;
 
 LEXICON VCausIt
 %<caus%>:^It@MB        VCont;
@@ -1145,6 +1155,7 @@ LEXICON VRcpCausDirCont
                     VRcp;
                     VCausDir;
                     VNoCausCont;
+                    AbilPartial;
 
 !LEXICON V_Rfl_CausDir
 !%<V%>:@RB           VRflCausDirCont;
@@ -1165,6 +1176,7 @@ LEXICON V_CausIrreg
 
 LEXICON VCausIrregCont
                   VNoCausCont;
+                  AbilPartial;
 
 ! LEXICON V_Rcp_CausIrreg
 !                 VNoCausCont;
@@ -1181,6 +1193,7 @@ LEXICON VRflRcpCausIrregCont
                  VRfl;
                  VRcp;
                  VNoCausCont;
+                 AbilPartial;
 
 LEXICON V_AorAr
 %<V%>:@RB           VAorArCont;
@@ -1188,6 +1201,7 @@ LEXICON V_AorAr
 LEXICON VAorArCont
             VAorAr;
             VNoAorCont;
+            AbilPartial;
 
 LEXICON  VAorAr
 %<aor%>:^(A)r@MB   AorArCont;
@@ -1196,6 +1210,7 @@ LEXICON   AorArCont
                     TAMg1Cont;
                     CVcesinePagr;
                     VerbalAdj;
+                    AbilPartial;
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
@@ -1204,6 +1219,7 @@ LEXICON  VRcpAorArCont
             VAorAr;
             VRcp;
             VNoAorCont;
+            AbilPartial;
 
 LEXICON V_Rfl_AorAr
 %<V%>:@RB           VRflAorArCont;
@@ -1213,6 +1229,7 @@ LEXICON  VRflAorArCont
             VAorAr;
             VRfl;
             VNoAorCont;
+            AbilPartial;
 
 LEXICON  V_Rfl_Rcp_AorAr
 %<V%>:@RB           VRflRcpAorArCont;
@@ -1222,6 +1239,7 @@ LEXICON  VRflRcpAorArCont
             VRfl;
             VRcp;
             VNoAorCont;
+            AbilPartial;
 
 LEXICON V_CausDir_AorAr
 %<V%>:@RB           VCausDirAorArCont;
@@ -1230,6 +1248,7 @@ LEXICON VCausDirAorArCont
                         VAorAr;
                         VCausDir;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_CausIr_AorAr
 %<V%>:@RB           VCausIrAorArCont;
@@ -1238,6 +1257,7 @@ LEXICON VCausIrAorArCont
                         VAorAr;
                         VCausIr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_CausAt_AorAr
 %<V%>:@RB           VCausAtAorArCont;
@@ -1246,6 +1266,7 @@ LEXICON VCausAtAorArCont
                         VAorAr;
                         VCausAt;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON VCausAt
 %<caus%>:^At@MB        VCont;
@@ -1258,6 +1279,7 @@ LEXICON VRcpCausArAorArCont
                         VAorAr;
                         VCausAr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 !
 LEXICON V_CausAr_AorAr
 %<V%>:@RB           VCausArAorArCont;
@@ -1267,6 +1289,7 @@ LEXICON VCausArAorArCont
                         VAorAr;
                         VCausAr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON VCausAr
 %<caus%>:^Ar@MB        VCont;
@@ -1279,6 +1302,7 @@ LEXICON VCausArtAorArCont
                         VAorAr;
                         VCausArt;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON VCausArt
 %<caus%>:^Art@MB        VCont;
@@ -1291,6 +1315,7 @@ LEXICON VCausItAorArCont
                         VAorAr;
                         VCausIt;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 !
 LEXICON V_Rcp_CausDir_AorAr
@@ -1301,6 +1326,7 @@ LEXICON VRcpCausDirAorArCont
                         VCausDir;
                         VRcp;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_Rfl_CausDir_AorAr
 %<V%>:@RB           VRflCausDirAorArCont;
@@ -1310,6 +1336,7 @@ LEXICON VRflCausDirAorArCont
                         VCausDir;
                         VRfl;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_Rfl_Rcp_CausDir_AorAr
 %<V%>:@RB           VRflRcpCausDirAorArCont;
@@ -1321,6 +1348,7 @@ LEXICON VRflRcpCausDirAorArCont
                         VRcp;
                         VRfl;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_CausIrreg_AorAr
 %<V%>:@RB           VCausIrregAorArCont;
@@ -1328,6 +1356,7 @@ LEXICON V_CausIrreg_AorAr
 LEXICON VCausIrregAorArCont
                         VAorAr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON V_Rcp_CausIrreg_AorAr
 %<V%>:@RB           VRcpCausIrregAorArCont;
@@ -1339,11 +1368,13 @@ LEXICON VRflCausIrregAorArCont
                         VRfl;
                         VAorAr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 LEXICON VRcpCausIrregAorArCont
                         VRcp;
                         VAorAr;
                         VNoCausNoAorCont;
+                        AbilPartial;
 
 ! LEXICON V_Rfl_Rcp_CausIrreg_AorAr
 
@@ -1363,6 +1394,7 @@ LEXICON VCausRegularCont
             VPassiveCont;
             VNegative;
             Vderiv;
+            AbilPartial;
 
 LEXICON VPassive
 %<pass%>:^(I)@LN@MB       VPassiveCont;
@@ -1378,6 +1410,7 @@ LEXICON  VPassiveCont
                           VCabilNeg;
                           VNegative;
                           VNegativeCont;
+                          AbilPartial;
                           D_yAsI;
 !
 
@@ -1392,9 +1425,18 @@ LEXICON VNegative
 
 LEXICON VNegativeCont
                     VComp;
+                    AbilPartial;
                     NonFiniteVerb;
 
+! This is a very rare case, where the clictc dA intervenes between the
+! main verb and the VComp -(y)Abil. In this case main verb is suffixed
+! with -(y)A, the rest 'bil-' follows the clitic. For example,
+! 'Görüştürüleme-ye de biliyor muydunuz ?'
 !
+LEXICON AbilPartial
+%<partial%>:^(y)^A@MB #;
+! 0:^(y)^A@MB #;
+
 
 
 LEXICON VComp
