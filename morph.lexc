@@ -1530,7 +1530,7 @@ LEXICON TAMg1Cont
 ! above on -makta -yor).
 !
 LEXICON VerbalAdj
-%<Adj%>:@MB       AdjCont;
+%<%0%>%<Adj%>:@MB       AdjCont;
 
 
 LEXICON TAMG1QCont
