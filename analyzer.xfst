@@ -53,6 +53,10 @@ read regex     collapseAsymbols.i
            .o. Redup
            .o. DeleteSilentP
            .o. KiKu
+#if (ALLOW_MREDUP == 1)
+           .o. Mredup
+#endif
+           .o. DeleteMredup
            .o. DeleteCircumflex
            .o. DeleteBoundary
 #if (CAPITALIZE == 1)

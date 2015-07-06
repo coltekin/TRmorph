@@ -57,7 +57,7 @@ define SurfaceLetter ConsSurface | Vsurface;
 
 ! Intermediate symbols with no surface forms
 define Boundary %@MB | %@RB | %@dB ;
-define IntSym   Boundary | %@NCOMP | %@opt3 | %@APOS | %^NS | %^NNS;
+define IntSym   Boundary | %@M | %@MREDUP | %@NCOMP | %@opt3 | %@APOS | %^NS | %^NNS;
 
 define Digit %0|1|2|3|4|5|6|7|8|9;
 
@@ -639,6 +639,24 @@ define DeleteSilentP [ Vsilent | ConsSilent ] -> 0;
 ! more likely to hear 'dünkü' but 'gülünki'.
 
 define KiKu i (->)  ü || ü [\Vall]* Boundary k _ %@MB ;
+
+
+!
+! m-reduplication
+!
+! This, in fact, is not reduplication in morphology, but reduplication
+! of words with a phonetic alternation. In a nutshell: replicated words
+! follow the original word, but the first letter/phoneme is replaced
+! with 'm' if the original word starts with a consonant, or an 'm' is
+! prepended to the original word if it starts with a vowel.
+!
+! For example, 'gözü mözü (şişmiş)', 'arabası marabası varmış'
+!
+
+define Mredup [..] -> m    || .#. _ [Vall] ?* %@MREDUP
+          .o. [Cons] ->  m  || .#. _ ?+ %@MREDUP;
+
+define DeleteMredup  %@MREDUP -> 0;
 
 !
 ! Filter for cleaning up the intermediate symbols in the analysis level

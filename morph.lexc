@@ -347,6 +347,7 @@ LEXICON HepPrn
 !
 LEXICON Onom
 %<Onom%>:@RB        OnomCont;
+%<Onom%:mredup%>:@MREDUP@RB    OnomCont;
 
 LEXICON  OnomCont
                     #;
@@ -360,6 +361,7 @@ LEXICON  OnomCont
 
 LEXICON Interjection
 %<Ij%>:@RB      InterjectionCont;
+%<Ij%:mredup%>:@MREDUP@RB    InterjectionCont;
 
 LEXICON InterjectionCont
                   #;
@@ -453,13 +455,16 @@ LEXICON EndQuoteCont
 
 LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;
+@NCOMP%<N%:prop%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NPcont;
 
 LEXICON NP
 %<N%:prop%>:@RB   NPcont;
+%<N%:prop%:mredup%>:@MREDUP@RB    NPcont;
 
 LEXICON NP_typo
 #if (MARK_TYPOS == 1) 
 %<N%:prop%:typo%>:@RB   NPcont;
+%<N%:prop%:mredup%:typo%>:@MREDUP@RB    NPcont;
 #else
                         NP;
 #endif
@@ -491,6 +496,7 @@ LEXICON   NPAposCont
 
 LEXICON NPnation
 %<N%:prop%>:@RB   NPnationCont;
+%<N%:prop%:mredup%>:@MREDUP@RB    NPnationCont;
 
 LEXICON NPnationCont
                 NPcont;
@@ -498,6 +504,7 @@ LEXICON NPnationCont
 
 LEXICON NPperson
 %<N%:prop%>:@RB   NPpersonCont;
+%<N%:prop%:mredup%>:@MREDUP@RB    NPpersonCont;
 
 LEXICON NPpersonCont
                 NPcont;
@@ -510,6 +517,7 @@ LEXICON NPpersonCont
 
 LEXICON Ncomp ! this is only for lexicalized forms with compounding
 @NCOMP%<N%>:^(s)^I@NCOMP@RB NcompCont;
+@NCOMP%<N%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NcompCont;
 
 LEXICON NcompInfl  ! this is for regular nouns
 %<ncomp%>:^(s)^I@NCOMP@MB    NcompCont;
@@ -546,7 +554,9 @@ LEXICON Ninfl
 
 LEXICON Nfamily
 %<N%>:@RB   Ncont;
+%<N%::mredup%>:@MREDUP@RB    Ncont;
 %<N%>:@RB   NfamCont;
+%<N%::mredup%>:@MREDUP@RB    NfamCont;
 
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
@@ -584,7 +594,8 @@ LEXICON NAbbrCont
 !
 
 LEXICON N
-%<N%>:@RB   Ncont;
+%<N%>:@RB       Ncont;
+%<N%:mredup%>:@MREDUP@RB    Ncont;
 
 LEXICON N_typo
 #if (MARK_TYPOS == 1) 
@@ -766,10 +777,12 @@ LEXICON DIrEnd
 
 LEXICON Adj
 %<Adj%>:@RB        AdjCont;
+%<Adj%:mredup%>:@MREDUP@RB    AdjCont;
 
 LEXICON Adj_typo
 #if (MARK_TYPOS == 1) 
 %<Adj%:typo%>:@RB     AdjCont;
+%<Adj%:type%:mredup%>:@MREDUP@RB    AdjCont;
 #else
                     Adj;
 #endif
@@ -794,11 +807,13 @@ LEXICON AdvHep
 
 LEXICON Adv
 %<Adv%>:@RB         AdvCont;
+%<Adv%:mredup%>:@MREDUP@RB    AdvCont;
 
 
 LEXICON Adv_typo
 #if (MARK_TYPOS == 1) 
 %<Adv%:typo%>:@RB     AdjCont;
+%<Adv%:mredup%:typo%>:@MREDUP@RB    AdvCont;
 #else
                     Adv;
 #endif
@@ -811,15 +826,19 @@ LEXICON AdvPart
                   
 LEXICON QAdv
 %<Adv%:qst%>:@RB  AdvCont;
+%<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
 
 LEXICON QAdj
 %<Adj%:qst%>:@RB  AdjCont;
+%<Adj%:mredup%:qst%>:@MREFUP@RB  AdjCont;
 
 LEXICON AdvTime
 %<Adv%>:@RB         AdvTimeCont;
+%<Adv%:mredup%>:@MREFUP@RB  AdvTimeCont;
 
 LEXICON QAdvTime
 %<Adv%:qst%>:@RB    AdvTimeCont;
+%<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
 
 LEXICON AdvTimeCont
                     Ki;
@@ -956,16 +975,19 @@ LEXICON DateTimeCont
 
 LEXICON NumStem
 %<Num%>:@RB  NumCont;
+%<Num%:mredup%>:@MREDUP@RB  NumCont;
 
 LEXICON Num_typo
 #if (MARK_TYPOS == 1) 
 %<Num%:typo%>:@RB   NumCont;
+%<Num%:mredup%:typo%>:@MREDUP@RB  NumCont;
 #else
                     NumStem;
 #endif
 
 LEXICON QNum
 %<Num%:qst%>:@RB  NumCont;
+%<Num%:qst%>:@MREDUP@RB  NumCont;
 
 LEXICON  NumHalf
 buçu^k  NumStem;
@@ -1044,6 +1066,7 @@ LEXICON NumDistCont
 
 LEXICON V
 %<V%>:@RB   VCont;
+%<V%:mredup%>:@MREDUP@RB   VCont;
 
 LEXICON VPartLast
 %<V%:partial%>:@RB   VCont;
@@ -1082,6 +1105,7 @@ LEXICON VNoCausNoAorCont
 
 LEXICON V_Rcp
 %<V%>:@RB   VRcpCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpCont;
 
 LEXICON   VRcpCont
                     VCont;
@@ -1094,6 +1118,7 @@ LEXICON VRcp
 
 LEXICON V_Rfl
 %<V%>:@RB   VRflCont;
+%<V%:mredup%>:@MREDUP@RB   VRflCont;
 
 LEXICON   VRflCont
                     VCont;
@@ -1114,6 +1139,7 @@ LEXICON  VRflRcpCont
 
 LEXICON V_CausDir
 %<V%>:@RB           VCausDirCont;
+%<V%:mredup%>:@MREDUP@RB   VCausDirCont;
 
 LEXICON VCausDirCont
                     VCausDir;
@@ -1126,6 +1152,7 @@ LEXICON VCausDir
 !
 LEXICON V_CausIr
 %<V%>:@RB           VCausIrCont;
+%<V%:mredup%>:@MREDUP@RB   VCausIrCont;
 
 LEXICON VCausIrCont
                     VCausIr;
@@ -1138,6 +1165,7 @@ LEXICON VCausIr
 !
 LEXICON V_CausIt
 %<V%>:@RB           VCausItCont;
+%<V%:mredup%>:@MREDUP@RB   VCausItCont;
 
 LEXICON VCausItCont
                     VCausIt;
@@ -1150,6 +1178,7 @@ LEXICON VCausIt
 !
 LEXICON V_Rcp_CausDir
 %<V%>:@RB           VRcpCausDirCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpCausDirCont;
 
 LEXICON VRcpCausDirCont
                     VRcp;
@@ -1173,6 +1202,7 @@ LEXICON VRcpCausDirCont
 
 LEXICON V_CausIrreg
 %<V%>:@RB           VCausIrregCont;
+%<V%:mredup%>:@MREDUP@RB   VCausIrregCont;
 
 LEXICON VCausIrregCont
                   VNoCausCont;
@@ -1188,6 +1218,7 @@ LEXICON VCausIrregCont
 
 LEXICON V_Rfl_Rcp_CausIrreg
 %<V%>:@RB           VRflRcpCausIrregCont;
+%<V%:mredup%>:@MREDUP@RB   VRflRcpCausIrregCont;
 
 LEXICON VRflRcpCausIrregCont
                  VRfl;
@@ -1197,6 +1228,7 @@ LEXICON VRflRcpCausIrregCont
 
 LEXICON V_AorAr
 %<V%>:@RB           VAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VAorArCont;
 
 LEXICON VAorArCont
             VAorAr;
@@ -1214,6 +1246,7 @@ LEXICON   AorArCont
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpAorArCont;
 
 LEXICON  VRcpAorArCont
             VAorAr;
@@ -1223,6 +1256,7 @@ LEXICON  VRcpAorArCont
 
 LEXICON V_Rfl_AorAr
 %<V%>:@RB           VRflAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRflAorArCont;
 
 
 LEXICON  VRflAorArCont
@@ -1233,6 +1267,8 @@ LEXICON  VRflAorArCont
 
 LEXICON  V_Rfl_Rcp_AorAr
 %<V%>:@RB           VRflRcpAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRflRcpAorArCont;
+
 
 LEXICON  VRflRcpAorArCont
             VAorAr;
@@ -1243,6 +1279,7 @@ LEXICON  VRflRcpAorArCont
 
 LEXICON V_CausDir_AorAr
 %<V%>:@RB           VCausDirAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausDirAorArCont;
 
 LEXICON VCausDirAorArCont
                         VAorAr;
@@ -1252,6 +1289,7 @@ LEXICON VCausDirAorArCont
 
 LEXICON V_CausIr_AorAr
 %<V%>:@RB           VCausIrAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausIrAorArCont;
 
 LEXICON VCausIrAorArCont
                         VAorAr;
@@ -1261,6 +1299,7 @@ LEXICON VCausIrAorArCont
 
 LEXICON V_CausAt_AorAr
 %<V%>:@RB           VCausAtAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausAtAorArCont;
 
 LEXICON VCausAtAorArCont
                         VAorAr;
@@ -1273,6 +1312,7 @@ LEXICON VCausAt
 
 LEXICON V_Rcp_CausAr_AorAr
 %<V%>:@RB           VRcpCausArAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpCausArAorArCont;
 
 LEXICON VRcpCausArAorArCont
                         VRcp;
@@ -1283,6 +1323,7 @@ LEXICON VRcpCausArAorArCont
 !
 LEXICON V_CausAr_AorAr
 %<V%>:@RB           VCausArAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausArAorArCont;
 
 
 LEXICON VCausArAorArCont
@@ -1297,6 +1338,7 @@ LEXICON VCausAr
 !
 LEXICON V_CausArt_AorAr
 %<V%>:@RB           VCausArtAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausArtAorArCont;
 
 LEXICON VCausArtAorArCont
                         VAorAr;
@@ -1310,6 +1352,7 @@ LEXICON VCausArt
 !
 LEXICON V_CausIt_AorAr
 %<V%>:@RB           VCausItAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausItAorArCont;
 
 LEXICON VCausItAorArCont
                         VAorAr;
@@ -1320,6 +1363,7 @@ LEXICON VCausItAorArCont
 !
 LEXICON V_Rcp_CausDir_AorAr
 %<V%>:@RB           VRcpCausDirAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpCausDirAorArCont;
 
 LEXICON VRcpCausDirAorArCont
                         VAorAr;
@@ -1330,6 +1374,7 @@ LEXICON VRcpCausDirAorArCont
 
 LEXICON V_Rfl_CausDir_AorAr
 %<V%>:@RB           VRflCausDirAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRflCausDirAorArCont;
 
 LEXICON VRflCausDirAorArCont
                         VAorAr;
@@ -1340,6 +1385,7 @@ LEXICON VRflCausDirAorArCont
 
 LEXICON V_Rfl_Rcp_CausDir_AorAr
 %<V%>:@RB           VRflRcpCausDirAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRflRcpCausDirAorArCont;
 
 
 LEXICON VRflRcpCausDirAorArCont
@@ -1352,6 +1398,7 @@ LEXICON VRflRcpCausDirAorArCont
 
 LEXICON V_CausIrreg_AorAr
 %<V%>:@RB           VCausIrregAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VCausIrregAorArCont;
 
 LEXICON VCausIrregAorArCont
                         VAorAr;
@@ -1360,9 +1407,11 @@ LEXICON VCausIrregAorArCont
 
 LEXICON V_Rcp_CausIrreg_AorAr
 %<V%>:@RB           VRcpCausIrregAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRcpCausIrregAorArCont;
 
 LEXICON V_Rfl_CausIrreg_AorAr
 %<V%>:@RB           VRflCausIrregAorArCont;
+%<V%:mredup%>:@MREDUP@RB   VRflCausIrregAorArCont;
 
 LEXICON VRflCausIrregAorArCont
                         VRfl;
