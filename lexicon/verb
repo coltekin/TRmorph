@@ -368,6 +368,7 @@ dönüş        V;
 don          V_AorAr;
 dön          V_AorAr;
 döşe         V;
+döv:döğ      V_Rfl_Rcp_AorAr;   ! common usage
 döv          V_Rfl_Rcp_AorAr;
 doyur        V;
 doy          V_AorAr;

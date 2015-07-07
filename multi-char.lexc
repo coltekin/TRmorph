@@ -3,6 +3,7 @@ Multichar_Symbols ^A ^I ^K ^C ^c ^p ^k ^D ^t ^g
                   ^pA ^pI ^pO ^pU ^pÂ ^pÔ ^pÛ ^pÎ
                   @RB @MB @dB
                   @APOS @ABBR
+                  @M @MREDUP
                   @tSep @dSep
                   @RomNum
                   @NCOMP

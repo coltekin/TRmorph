@@ -298,3 +298,17 @@
  */
 
 #define COLLAPSE_MA_MAK 1
+
+
+/* ALLOW_MREDUP
+ *
+ * Allow m-reduplication. This allows analysis of second components of
+ * reduplicated forms like 'araba maraba' and 'kitap mitap'.
+ *
+ * This is a mostly colloquial use, and one may want to disable in
+ * some cases. It also increases the ambiguous analysis of words that
+ * start with 'm'.
+ *
+ */
+
+#define ALLOW_MREDUP 1
