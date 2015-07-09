@@ -49,6 +49,8 @@ Yakutistan      NP;
 ! these should be turned into 'partial' tokens.
 Faso            NP;
 Burkina         NP;
+Sierra          NP;
+Leone           NP;
 
 ! 
 ! City/town/village names
