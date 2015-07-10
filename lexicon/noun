@@ -523,7 +523,8 @@ amberbaris            N;
 amberbu               N;
 amber                 N;
 amblem                N;
-ambulans              N;
+ambülans              N;
+ambülans:ambulans     N;
 amca                  Nfamily;
 amcazade              N;
 amele                 N;
@@ -6660,7 +6661,6 @@ kakofoni              N;
 kˈaktüsgiller          N;
 kˈaktüs                N;
 kakule                N;
-kalabalı^k            N;
 kalaba                N;
 kalafat               N;
 kala^k                N;
@@ -15835,3 +15835,4 @@ düşkırıklı^k          Ncomp; ! non-std: düş kırıklığı
 yürüyüş               N;
 gönüllü               N;    ! derived but lexicalized
 kızarkadaş            N;
+silahşör              N;
