@@ -12,13 +12,7 @@ siz               PersPrn2p;
 ! onlar             PersPrn3p;
 bizler            PersPrn1p;
 sizler            PersPrn2p;
-kendi             PersPrnRfl3s;
-kendim            PersPrnRfl1s;
-kendin            PersPrnRfl2s;
-kendisi           PersPrnRfl3s;
-kendimiz          PersPrnRfl1p;
-kendiniz          PersPrnRfl2p;
-kendileri         PersPrnRfl3p;
+kendi             PrnRfl;
 birbir            PPrnBirBir; ! this has to be inflected
 
 bu                DemPrn;

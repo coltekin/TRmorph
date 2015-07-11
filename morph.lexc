@@ -877,20 +877,18 @@ LEXICON PersPrn2p
 LEXICON PersPrn3p
 %<Prn%:pers%:3p%>:@RB PersPrnContPL;
 
-LEXICON PersPrnRfl1s
-%<Prn%:refl%:1s%>:@RB PersPrnCont;
-LEXICON PersPrnRfl2s
-%<Prn%:refl%:2s%>:@RB PersPrnCont;
-LEXICON PersPrnRfl3s
-%<Prn%:refl%:3s%>:@RB PersPrnCont;
+! this is only 'kendi'
+LEXICON PrnRfl
+%<Prn%:refl%>:@RB PrnRflCont;
 
-LEXICON PersPrnRfl1p
-%<Prn%:refl%:1p%>:@RB PersPrnContPL;
-LEXICON PersPrnRfl2p
-%<Prn%:refl%:2p%>:@RB PersPrnContPL;
-LEXICON PersPrnRfl3p
-%<Prn%:refl%:3p%>:@RB PersPrnContPL;
-
+LEXICON PrnRflCont
+%<1s%>:^(I)m@MB       PersPrnCont;
+%<2s%>:^(I)n@MB       PersPrnCont;
+%<3s%>:^(s)^I@MB      PersPrnCont;
+%<1p%>:^(I)m^Iz@MB    PersPrnCont;
+%<2p%>:^(I)n^Iz@MB    PersPrnCont;
+%<3p%>:l^Ar^I@MB      PersPrnCont;
+                      PersPrnCont;
 LEXICON PersPrnCont
                     #;
                     Ncase;
