@@ -9,7 +9,7 @@ sen               PersPrn2s;
 o                 PersPrn3s;
 biz               PersPrn1p;
 siz               PersPrn2p;
-onlar             PersPrn3p;
+! onlar             PersPrn3p;
 bizler            PersPrn1p;
 sizler            PersPrn2p;
 kendi             PersPrnRfl3s;
