@@ -879,16 +879,16 @@ LEXICON PersPrn3p
 
 ! this is only 'kendi'
 LEXICON PrnRfl
-%<Prn%:refl%>:@RB PrnRflCont;
+%<Prn%:refl%>:@RB PrnPagr;
+                  PersPrnCont;
 
-LEXICON PrnRflCont
+LEXICON PrnPagr
 %<1s%>:^(I)m@MB       PersPrnCont;
 %<2s%>:^(I)n@MB       PersPrnCont;
 %<3s%>:^(s)^I@MB      PersPrnCont;
 %<1p%>:^(I)m^Iz@MB    PersPrnCont;
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
 %<3p%>:l^Ar^I@MB      PersPrnCont;
-                      PersPrnCont;
 LEXICON PersPrnCont
                     #;
                     Ncase;
@@ -908,7 +908,7 @@ LEXICON PersPrn
 %<Prn%:pers%>:@RB PrnCont;
 
 LEXICON PPrnBirBir
-%<Prn%>:@RB PrnContNoPlu;
+%<Prn%>:@RB PrnPagr;
 
 LEXICON PrnContNoPlu
         Npos;
