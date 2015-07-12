@@ -350,7 +350,8 @@ define PronounExceptions  e -> a || .#. [b|s] _ n %@PRN %@RB %^%(y%) %^A %@MB
                                                            {o}   | 
                                                            {siz} | 
                                                            {bu}  | 
-                                                           {şu}
+                                                           {şu}  |
+                                                           {kim}
                                                          ] %@RB (AposSym) Boundary* (n) _
                                                         %^%(y%) l %^A %@MB
                       .o. n -> m 
