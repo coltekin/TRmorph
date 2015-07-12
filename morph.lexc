@@ -2106,6 +2106,13 @@ LEXICON  Punc
 %<Punc%>:0     #;
 
 !
+! non-puctuation symbols
+!
+
+LEXICON  Sym
+%<Sym%>:0     #;
+
+!
 ! Derivational process.
 !
 ! We include only a select set of relatively productive derivational

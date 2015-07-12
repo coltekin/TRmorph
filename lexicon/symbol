@@ -8,26 +8,32 @@
 ! For now, we tag these as punctuation, but they should get their own
 ! tag, with possibly subcategories.
 
-%-              Punc;
-%/              Punc;
-%«              Punc;
-%»              Punc;
-%(              Punc;
-%)              Punc;
-%*              Punc;
-%‹              Punc;
-%›              Punc;
-%%              Punc;
-%=              Punc;
-%>              Punc;
-%<              Punc;
-%[              Punc;
-%]              Punc;
-%&              Punc;
-%+              Punc;
-%#              Punc;
+%-              Sym;
+%/              Sym;
+%«              Sym;
+%»              Sym;
+%(              Sym;
+%)              Sym;
+%*              Sym;
+%‹              Sym;
+%›              Sym;
+%%              Sym;
+%=              Sym;
+%>              Sym;
+%<              Sym;
+%[              Sym;
+%]              Sym;
+%&              Sym;
+%+              Sym;
+%#              Sym;
+
+—               Sym;
+–               Sym;
+
 
 ! Currency symbols
-€               Punc;
-£               Punc;
-%$              Punc;
+€               Sym;
+£               Sym;
+%$              Sym;
+₺               Sym;
+₺               Sym;
