@@ -151,7 +151,6 @@ erken               Adv;
 esˈasen              Adv;
 eskiden             Adv;       !AdvTime?
 evce^k              Adv;
-evet                Adv; ! TODO: better analysis?
 ˈevvela              Adv;
 evvel               AdvTime;
 ezbere              Adv;
@@ -204,7 +203,6 @@ hˈaricen             Adv;
 hasbelkader         Adv;
 hasılı              Adv;
 hˈayhay              Adv;
-hˈayır               Adv; ! TODO: better analysis?
 hˈayli               Adv;
 hem                 Adv;
 hemen               Adv;
@@ -423,7 +421,6 @@ yeni% baştan        Adv;
 yˈeniden             Adv;
 yeterince           Adv;
 yine                Adv;
-yo^k                Adv;
 yukarı              Adv;
 yukarı:yukar        Adv;
 yüzükoyun           Adv;
