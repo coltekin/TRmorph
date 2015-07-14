@@ -880,7 +880,7 @@ LEXICON PersPrn3p
 ! this is only 'kendi'
 LEXICON PrnRfl
 %<Prn%:refl%>:@RB PrnPagr;
-                  PersPrnCont;
+%<Prn%:refl%>:@RB PersPrnCont;
 
 LEXICON PrnPagr
 %<1s%>:^(I)m@MB       PersPrnCont;
