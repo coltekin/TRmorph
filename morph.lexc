@@ -1826,8 +1826,7 @@ LEXICON mIPagr
 
 LEXICON  mIPagrCont
                         #;
-                        mIDIr;
-
+                        DIrEnd;
 LEXICON mIDI
 %<cpl%:past%>:^(y)^D^NS^I@MB  PAgrG2End;
 
