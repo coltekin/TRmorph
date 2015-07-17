@@ -1338,6 +1338,19 @@ LEXICON VRcpCausArAorArCont
                         VCausAr;
                         VNoCausNoAorCont;
                         AbilPartial;
+
+LEXICON V_Rcp_CausIr_AorAr
+%<V%>:@RB                   VRcpAorArCausIrCont;
+%<V%:mredup%>:@MREDUP@RB    VRcpAorArCausIrCont;
+
+LEXICON VRcpAorArCausIrCont
+            VAorAr;
+            VRcp;
+            VCausIr;
+            VNoCausNoAorCont;
+            VNoAorCont;
+            AbilPartial;
+
 !
 LEXICON V_CausAr_AorAr
 %<V%>:@RB           VCausArAorArCont;
