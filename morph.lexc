@@ -897,7 +897,7 @@ LEXICON PrnPagr
 %<3s%>:^(s)^I@MB      PersPrnCont;
 %<1p%>:^(I)m^Iz@MB    PersPrnCont;
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
-%<3p%>:l^Ar@MB      PersPrnCont;
+%<3p%>:l^Ar^I@MB      PersPrnCont;
 
 LEXICON PersPrnCont
                     #;
