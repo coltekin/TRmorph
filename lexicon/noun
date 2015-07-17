@@ -86,6 +86,7 @@ kış                   Ntime;
 yaz                   Ntime;
 bahar                 Ntime;
 ilkbahar              Ntime;
+son                   Ntime; ! this does not get -ki, but gets -lArI
 
 
 trampolin             N;    ! non-standard/alternative
@@ -12942,7 +12943,6 @@ sˈondaj                N;
 sˈonda                 N;
 sone                  N;
 sonlama               N;
-son                   N;
 sonsuz                N;
 sonu^c                N;
 sonuç                 N;
@@ -15849,3 +15849,9 @@ yürüyüş               N;
 gönüllü               N;    ! derived but lexicalized
 kızarkadaş            N;
 silahşör              N;
+kapıcı                N;
+yetkili               N;
+suluboya              N;
+gerginlik             N;
+sahi^p                N;
+yazıcı                N;

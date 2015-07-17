@@ -4,6 +4,7 @@
 
 kim         QPrnPers;
 ne          QPrn;
+ne          QAdj;
 nˈere        QPrnLoc; ! TODO: use of this without inflection is non-standard
 kaç         QNum; ! this behaves like numbers
 ne% zaman   QAdv;
