@@ -869,6 +869,9 @@ LEXICON PersPrn2s
 %<Prn%:pers%:2s%>:@PRN@RB PersPrnCont;
 LEXICON PersPrn3s
 %<Prn%:pers%:3s%>:@RB PersPrnCont;
+%<Prn%:pers%>:@RB PersPrn3sLar;
+LEXICON PersPrn3sLar
+%<3p%>:l^Ar@MB      PersPrnCont;
 
 LEXICON PersPrn1p
 %<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
@@ -888,7 +891,7 @@ LEXICON PrnPagr
 %<3s%>:^(s)^I@MB      PersPrnCont;
 %<1p%>:^(I)m^Iz@MB    PersPrnCont;
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
-%<3p%>:l^Ar^I@MB      PersPrnCont;
+%<3p%>:l^Ar@MB      PersPrnCont;
 LEXICON PersPrnCont
                     #;
                     Ncase;
