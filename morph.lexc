@@ -898,6 +898,7 @@ LEXICON PrnPagr
 %<1p%>:^(I)m^Iz@MB    PersPrnCont;
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
 %<3p%>:l^Ar@MB      PersPrnCont;
+
 LEXICON PersPrnCont
                     #;
                     Ncase;
@@ -913,7 +914,21 @@ LEXICON PersPrn
 %<Prn%:pers%>:@RB PrnCont;
 
 LEXICON PPrnBirBir
-%<Prn%>:@RB PrnPagr;
+%<Prn%:rcp%>:@RB BirBirCont;
+
+LEXICON BirBirCont
+%<1p%>:^(I)m^Iz@MB      PersPrnCont;
+%<2p%>:^(I)n^Iz@MB      PersPrnCont;
+%<3p%>:^(s)^I@MB        PersPrnCont;
+%<3p%>:l^Ar@MB          PersPrnCont;
+
+!
+! plural marker on the following does not have a meaning, and probably
+! not standard language, but seems to be used rather frequently. 
+! This is likely similar to the 'biz-ler' 'siz-ler' forms of 'biz' and 'siz'.
+!
+%<1p%>%<pl%>:l^Ar^@MB(I)m^Iz@MB           PersPrnCont;
+%<2p%>%<pl%>:l^Ar^@MB(I)m^(I)n^Iz@MB      PersPrnCont;
 
 LEXICON PrnContNoPlu
         Npos;
