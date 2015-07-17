@@ -864,14 +864,20 @@ LEXICON PrnCont  ! this is all, except compounding
     NcompCont;
 
 LEXICON PersPrn1s
+%<Prn%:pers%:1s%>:@PRN@RB PersPrnPlu;
 %<Prn%:pers%:1s%>:@PRN@RB PersPrnCont;
 LEXICON PersPrn2s
+%<Prn%:pers%:2s%>:@PRN@RB PersPrnPlu;
 %<Prn%:pers%:2s%>:@PRN@RB PersPrnCont;
+LEXICON PersPrnPlu
+%<pl%>:l^Ar@MB      PersPrnCont;
+
 LEXICON PersPrn3s
 %<Prn%:pers%:3s%>:@RB PersPrnCont;
-%<Prn%:pers%>:@RB PersPrn3sLar;
-LEXICON PersPrn3sLar
+%<Prn%:pers%>:@RB PersPrn3sPlu;
+LEXICON PersPrn3sPlu
 %<3p%>:l^Ar@MB      PersPrnCont;
+
 
 LEXICON PersPrn1p
 %<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
@@ -899,13 +905,9 @@ LEXICON PersPrnCont
                     D_lI;
                     NomPredicate;
 
-! TODO: replication ...
 LEXICON PersPrnContPL
-                    #;
-                    Ncase;
-                    ND_CA;
-                    D_lI;
-                    NomPredicatePLU;
+                Nplu;
+                PersPrnCont;
 
 LEXICON PersPrn
 %<Prn%:pers%>:@RB PrnCont;
