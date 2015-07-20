@@ -74,7 +74,8 @@ g2p.fst: morph-phon.cpp.xfst g2p.cpp.xfst
 #
 #
 options.h: options.h-default
-	test -e $@ && echo "your $@ may be out of date" || cp $< $@ 
+	test -e $@ && echo "your $@ may be out of date, you need to update it manually." \
+		|| cp $< $@ 
 
 #
 # housekeeping goes below

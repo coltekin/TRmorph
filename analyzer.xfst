@@ -43,6 +43,9 @@ read regex     collapseAsymbols.i
            .o. Optative3
            .o. SpaceBeforeMI
            .o. NegAorist
+#if (DOUBLE_NEGATIVE == 1)
+           .o. DoubleNegative
+#endif
            .o. DeleteBuffer
            .o. DeYeException
            .o. YorException

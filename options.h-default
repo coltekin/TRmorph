@@ -312,3 +312,13 @@
  */
 
 #define ALLOW_MREDUP 1
+
+/* DOUBLE_NEGATIVE
+ *
+ * This enables analysis of words with non-standard redundant
+ * duplication of negative suffix -mA in words like
+ * 'görmeMEzlikten/duymaMAzlıktan gel-'.
+ *
+ */
+
+#define DOUBLE_NEGATIVE 1

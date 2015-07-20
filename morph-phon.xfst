@@ -489,6 +489,20 @@ define NegAorist  %^%(I%) r -> z || Boundary m (%^NNS) %^A %@MB
                                    _ m %@MB;
 
 !
+! Insertion of a redundant negative marker -mA in 'duyMAmazlıktan', 
+! 'görMEmezlikten', etc. This happens only with a few verb roots, 
+! but we allow for all here. The suffix sequence is also rather 
+! specific, and does not occur (much) in other contexts.
+!
+! This is non-standard.
+!
+
+define DoubleNegative [..] (->) %@MB m %^A || Boundary m (%^NNS) %^A _ 
+                                              %@MB z [%@MB]+
+                                              ( l %^I %^k ) [%@MB]*
+                                              %^D %^A n ;
+
+!
 ! Buffer deletion
 !
 
@@ -530,10 +544,10 @@ define DeYeException e -> i || .#. [d|y] _ %@RB Boundary* y
 define YorException [a|e|%^A] -> %^I || _ Boundary (%^I) y IntSym* o r %@MB;
 
 !
-! Clitic mI
+! Question particle mI
 !
 !
-! We analyze question particle mI as a clitic. It normally follows
+! We analyze question particle mI as a free morpheme. It normally follows
 ! vowel harmony according to the preceding word. But we allow all
 ! combinations here. This option overgenerates.
 !
