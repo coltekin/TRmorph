@@ -318,12 +318,22 @@ LEXICON PostPcaCont
 !
 
 LEXICON JP_poss
+            JP_plu;
+            JP_possessive;
+
+LEXICON JP_plu
+%<pl%>:l^Ar@MB              JP_possessive12p;
+
+LEXICON     JP_possessive12p
+%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
+%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
+
+LEXICON     JP_possessive
 %<p1s%>%<Prn%>:^(I)m@MB      NposCont;
 %<p2s%>%<Prn%>:^(I)n@MB      NposCont;
 %<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
-%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
-%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
 %<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
+                             JP_possessive12p;
 
 ! besides adjectivals, the adverb `hep' also makes pronominals
 ! the same way. Instead of <p3s> version `hepi', the correct 
