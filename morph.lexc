@@ -758,7 +758,7 @@ LEXICON NomPredQ
 
 LEXICON NomPredQCont
 #if (PREDICATE_WITHOUT_PAGR == 1)
-                                          #;
+%<cpl%:pres%>:@MB                         #;
 #endif
 %<q%>:@miSPCm^I@MB                        NomPredPagr;
 %<q%>:@miSPCm^I@MB                        NomPredDir;
