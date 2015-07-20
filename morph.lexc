@@ -626,6 +626,7 @@ LEXICON NtimeCont
 %<pl%>:l^Ar@MB      D_dir;
                     Ncont;
                     D_lArI;
+                    D_lIGInA;
 
 LEXICON Nplu
 %<pl%>:l^Ar@MB NpluCont;
@@ -845,6 +846,7 @@ LEXICON AdvTimeCont
                     Ki;
                     AdvCont;
                     D_lArI;
+                    D_lIGInA;
 
 LEXICON AdvCont
                 #;
@@ -2424,6 +2426,13 @@ LEXICON D_dir
 !
 LEXICON D_lArI
 %<leri%>:l^Ar^I      DerivACont;
+
+
+! -lIğInA is another suffix that attaches to the time expressions. It
+! roughly translates to 'for', 'birkaç günlüğüne' (for a few days)
+!
+LEXICON D_lIGInA
+%<ligine%>%<Adv%>:l^Iğ^In^A@MB    #;
 
 ! -lA is productive, and makes verbs from nouns
 !
