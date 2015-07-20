@@ -1881,11 +1881,17 @@ LEXICON iCont
 
 
 !
-! -mI is the question particle. We mark it as <Q>.
+! -mI is the question particle. In its main use, we mark it as <Q>.
+! For other uses we also analyze it as an adverb (when used for 
+! emphasizing: 'güzel mi güzel bir kız') or subordinating conjunction
+! for the cases where it is used as such (Ever vardınız mı bana
+! telefon edin')
 !
 
 LEXICON mI
 %<Q%>:@RB             mICont;
+%<Cnj%:sub%>:@RB      #;
+%<Adv%>:@RB           #;
 
 LEXICON mICont
                         #; ! we have person marker before.   
