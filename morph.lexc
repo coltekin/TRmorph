@@ -158,8 +158,17 @@ LEXICON datPostPadjKi
                         datPostPKi;
 
 LEXICON datPostPKi
-%<Postp%:adv%:datC%>:@RB    AdvCont;
-%<Postp%:adv%:datC%>:@RB    Ki;
+%<Postp%:adv%:datC%>:@RB    datPostPKiCont;
+
+LEXICON datPostPKiCont
+                            AdvCont;
+                            Ki;
+                            PostPTimeCont;
+
+LEXICON PostPTimeCont
+                            D_dir;
+                            D_lArI;
+                            D_lIGInA;
 
 !
 ! ablative complement
@@ -176,9 +185,11 @@ LEXICON ablPostPadjKi
 %<Postp%:adj%:ablC%>:@RB    AdjCont;
                         ablPostPKi;
 
+
 LEXICON ablPostPKi
 %<Postp%:adv%:ablC%>:@RB    AdvCont;
 %<Postp%:adv%:ablC%>:@RB    Ki;
+%<Postp%:adv%:ablC%>:@RB    PostPTimeCont;
 
 !
 ! instrumetnal/commutative complement
@@ -194,6 +205,17 @@ LEXICON insPostP
 LEXICON insPostPadjKi
 %<Postp%:adj%:insC%>:@RB    AdjCont;
                         insPostPKi;
+
+!
+! instrumetnal/commutative complement
+!
+
+LEXICON insPostPadj
+%<Postp%:adj%:insC%>:@RB    AdjCont;
+                        insPostP;
+
+LEXICON insPostP
+%<Postp%:adv%:insC%>:@RB    AdvCont;
 
 LEXICON insPostPKi
 %<Postp%:adv%:insC%>:@RB    AdvCont;
