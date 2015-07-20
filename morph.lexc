@@ -913,7 +913,6 @@ LEXICON PersPrn3s
 LEXICON PersPrn3sPlu
 %<3p%>:l^Ar@MB      PersPrnCont;
 
-
 LEXICON PersPrn1p
 %<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
 LEXICON PersPrn2p
@@ -921,18 +920,56 @@ LEXICON PersPrn2p
 LEXICON PersPrn3p
 %<Prn%:pers%:3p%>:@RB PersPrnContPL;
 
+LEXICON PrnBiri
+%<Prn%:pers%>:@RB       PrnBiriCont;
+
+LEXICON PrnBiriCont
+                        PrnPagr3s;
+                        PrnPagr3p;
+                        PrnPagr1p2p;
+                        PersPrnCont;
+                        PrnPlu;
+
+LEXICON PrnHicbiri
+%<Prn%>:@RB             PrnHicbiriCont;
+
+LEXICON PrnHicbiriCont
+                        PrnPagr3s;
+                        PrnPagr1p2p;
+                        PersPrnCont;
+                        PrnPlu;
+
 ! this is only 'kendi'
 LEXICON PrnRfl
-%<Prn%:refl%>:@RB PrnPagr;
-%<Prn%:refl%>:@RB PersPrnCont;
+%<Prn%:refl%>:@RB PrnRflCont;
+
+LEXICON PrnRflCont
+                    PrnPagr;
+                    PersPrnCont;
+                    PrnPlu;
+
+LEXICON PrnPlu
+%<pl%>:l^Ar@MB      PrnPagr1p2p;
 
 LEXICON PrnPagr
+            PrnPagr3p;
+            PrnPagr3s;
+            PrnPagr1p2p;
+            PrnPagr1s2s;
+
+LEXICON PrnPagr3p
+%<3p%>:l^Ar^I@MB      PersPrnCont;
+
+LEXICON PrnPagr3s
+%<3s%>:^(s)^I@MB      PersPrnCont;
+
+LEXICON PrnPagr1s2s
 %<1s%>:^(I)m@MB       PersPrnCont;
 %<2s%>:^(I)n@MB       PersPrnCont;
-%<3s%>:^(s)^I@MB      PersPrnCont;
+
+LEXICON PrnPagr1p2p
 %<1p%>:^(I)m^Iz@MB    PersPrnCont;
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
-%<3p%>:l^Ar^I@MB      PersPrnCont;
 
 LEXICON PersPrnCont
                     #;
@@ -952,18 +989,10 @@ LEXICON PPrnBirBir
 %<Prn%:rcp%>:@RB BirBirCont;
 
 LEXICON BirBirCont
-%<1p%>:^(I)m^Iz@MB      PersPrnCont;
-%<2p%>:^(I)n^Iz@MB      PersPrnCont;
+                        PrnPagr3p;
+                        PrnPagr1p2p;
 %<3p%>:^(s)^I@MB        PersPrnCont;
-%<3p%>:l^Ar@MB          PersPrnCont;
-
-!
-! plural marker on the following does not have a meaning, and probably
-! not standard language, but seems to be used rather frequently. 
-! This is likely similar to the 'biz-ler' 'siz-ler' forms of 'biz' and 'siz'.
-!
-%<1p%>%<pl%>:l^Ar^@MB(I)m^Iz@MB           PersPrnCont;
-%<2p%>%<pl%>:l^Ar^@MB(I)m^(I)n^Iz@MB      PersPrnCont;
+                        PrnPlu;
 
 LEXICON PrnContNoPlu
         Npos;
@@ -1852,7 +1881,7 @@ LEXICON iCont
 
 
 !
-! -mI : this is `clitic' -mI with all possible preceding context
+! -mI is the question particle. We mark it as <Q>.
 !
 
 LEXICON mI
