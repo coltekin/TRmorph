@@ -1,3 +1,54 @@
+yˈarın               AdvTime;
+yakında             AdvTime;
+son                 AdvTime;    ! son-ki is odd, but 'son-ları' is fine
+şˈimdi               AdvTime;
+o% zaman            AdvTime;
+ˈönce                AdvTime;
+nezdinde            AdvTime;
+kış                 AdvTime;
+ˈilkin               AdvTime;
+hergün              AdvTime;
+güzün               AdvTime;
+gündüz              AdvTime;
+gece                AdvTime;
+evvel               AdvTime;
+öğle                AdvTime;
+öğlen               AdvTime;
+öğleüstü            AdvTime;
+öğlenüstü           AdvTime;
+sabah               AdvTime;
+sabahları           AdvTime;
+sabahleyin          AdvTime;
+sˈonra               AdvTime;
+yaz                 AdvTime;
+yazın               AdvTime;
+akşam               AdvTime;
+akşˈamleyin          AdvTime;
+akşamüstü           AdvTime;
+ardından            AdvTime;
+aşağı               AdvTime;   ! location
+bazan               AdvTime;! -ki after this is a bit odd
+bazen               AdvTime;! -ki after this is a bit odd
+bir% an             AdvTime;
+bir% daha           AdvTime;
+birgün              AdvTime;
+bugün               AdvTime;
+daha                AdvTime;
+demin               AdvTime;
+dün                 AdvTime;
+birazdan            Adv;
+şˈimdiden            Adv;
+sˈonradan            Adv;
+ˈönceden             Adv;
+birden              Adv;
+aniden              Adv;
+erkenden            Adv;
+eskiden             Adv;       !AdvTime?
+artı^k              Adv;       ! AdvTime, but does not cobine with ki
+
+
+
+
 illaki              Adv;
 güzel               Adv;
 tˈıpkı               Adv;
@@ -22,9 +73,6 @@ ağır                Adv;
 ailece^k            Adv;    ! colloqual
 akabinde            Adv;
 akilane             Adv;
-akşam               AdvTime;
-akşˈamleyin          AdvTime;
-akşamüstü           AdvTime;
 aksine              Adv;
 alˈelacele           Adv;
 ˈalenen              Adv;
@@ -32,7 +80,6 @@ anbean              Adv;
 anca                Adv;
 anca^k              Adv;
 ancak               Adv;
-aniden              Adv;
 ansızın             Adv;
 apaçı^k             Adv;
 ˈapansız             Adv;
@@ -40,9 +87,6 @@ apaçı^k             Adv;
 apriori             Adv;
 arasıra             Adv;
 ardarda             Adv;
-ardından            AdvTime;
-artı^k              Adv;       ! AdvTime, but does not cobine with ki
-aşağı               AdvTime;   ! location
 ˈasla                Adv;
 aslen               Adv;
 aslında             Adv;
@@ -60,8 +104,6 @@ başbaşa             Adv;
 basbayağı           Adv;
 baştan              Adv;
 baştanbaşa          Adv;
-bazan               AdvTime;! -ki after this is a bit odd
-bazen               AdvTime;! -ki after this is a bit odd
 behˈemehal           Adv;
 bˈelki               Adv;
 beraber             Adv;
@@ -77,15 +119,11 @@ bˈilumum             Adv;
 binˈaen              Adv;
 binˈaenaleyh         Adv;
 bir                 Adv;
-bir% an             AdvTime;
 bir% ara            Adv;
 birara              Adv;
 bˈiraz               Adv;
 bˈirazcı^k           Adv;
-bir% daha           AdvTime;
-birden              Adv;
 birdˈenbire          Adv;
-birgün              AdvTime;
 birlikte            Adv;
 bir% nebze          Adv;
 bir% tek            Adv;
@@ -95,7 +133,6 @@ bˈizzat              Adv;       ! this does not nominalize
 boş                 Adv;
 boşuna              Adv;
 böyle               Adv;
-bugün               AdvTime;
 bütünüyle           Adv;
 çabucacı^k          Adv;
 çabuca^k            Adv;
@@ -114,13 +151,11 @@ cˈidden              Adv;
 çöğunlükla          Adv;
 ço^k                Adv;
 cˈümleten            Adv;
-daha                AdvTime;
 daha% çok           Adv;
 daima               Adv;       ! this does not nominalize
 de                  Adv;    ! when de/da are used as intesifiers
 da                  Adv;    !
 defaten             Adv;
-demin               AdvTime;
 demince^k           Adv;
 derhal              Adv;
 derinlemesine       Adv;
@@ -132,7 +167,6 @@ doludizgin          Adv;
 dörtnala            Adv;
 dostane             Adv;
 doyasıya            Adv;
-dün                 AdvTime;
 düpedüz             Adv;
 ebediyen            Adv;
 ebediyyen           Adv;
@@ -149,10 +183,8 @@ enikonu             Adv;
 ˈepeydir             Adv;
 erken               Adv;
 esˈasen              Adv;
-eskiden             Adv;       !AdvTime?
 evce^k              Adv;
 ˈevvela              Adv;
-evvel               AdvTime;
 ezbere              Adv;
 ezkaza              Adv;
 fˈaraza              Adv;
@@ -167,7 +199,6 @@ gˈayet               Adv;
 gayri               Adv;       ! this does not nominalize
 gayrı               Adv;       ! this does not nominalize
 ge^c                Adv;
-gece                AdvTime;
 geceleyin           Adv;
 gene                Adv;
 genelde             Adv;
@@ -185,11 +216,9 @@ görmece             Adv;
 gözgöze             Adv;
 güçbela             Adv;
 gümbedek            Adv;
-gündüz              AdvTime;
 gündüzleyin         Adv;
 gündüzün            Adv;
 gˈüya                Adv;
-güzün               AdvTime;
 habire              Adv;
 hakˈikaten           Adv;
 hakˈikaten:hakkaten  Adv;
@@ -210,7 +239,6 @@ hemenceci^k         Adv;
 henüz               Adv;
 hep                 AdvHep;
 hepten              Adv;
-hergün              AdvTime;
 hiç                 Adv;
 hitaben             Adv;
 hˈükmen              Adv;
@@ -220,7 +248,6 @@ ikindileri          Adv;
 ilˈelebet            Adv;
 ileri               Adv;
 ilk                 Adv;
-ˈilkin               AdvTime;
 ilkönce             Adv;
 ille                Adv;
 ˈismen               Adv;
@@ -252,7 +279,6 @@ kesmece             Adv;
 kimi                Adv;
 kimileyin           Adv;
 kırtlama            Adv;
-kış                 AdvTime;
 kˈışın               Adv;
 kˈısmen              Adv;
 kıtlama             Adv;
@@ -294,14 +320,9 @@ nazikane            Adv;
 ne                  QAdv;
 nˈerdeyse            Adv;
 nˈeredeyse           Adv;
-nezdinde            AdvTime;
 nice                Adv;
 nˈispeten            Adv;
 nöbetleşe           Adv;
-öğle                AdvTime;
-öğlen               AdvTime;
-öğleüstü            AdvTime;
-öğlenüstü           AdvTime;
 öğlenleri           Adv;
 öğlenleyin          Adv;
 ˈöğleyin             Adv;
@@ -310,14 +331,11 @@ olduğunca           Adv;
 öldüresiye          Adv;
 ölesiye             Adv;
 ˈonca                Adv;
-ˈönce                AdvTime;
-ˈönceden             Adv;
 örfen               Adv;
 ortaklaşa           Adv;
 otomatikman         Adv;    ! ?colloquial
 öyle                Adv;
 ˈoysa                Adv;
-o% zaman            AdvTime;
 özellikle           Adv;
 pattada^k           Adv;    ! colloquial
 pek                 Adv;
@@ -328,9 +346,6 @@ pürdikkat           Adv;    !old
 resen               Adv;
 rˈesmen              Adv;
 ruhen               Adv;
-sabah               AdvTime;
-sabahları           AdvTime;
-sabahleyin          AdvTime;
 sadece              Adv;
 sağlıcakla          Adv;
 sahi                Adv;
@@ -352,7 +367,6 @@ sereserpe           Adv;
 seyre^k             Adv;
 sı^k                Adv;
 sık                 Adv;
-şˈimdi               AdvTime;
 şˈimdili^k           Adv;
 şıppada^k           Adv;
 şipşa^k             Adv;
@@ -360,9 +374,6 @@ sırf                Adv;
 şırfıntı            Adv;
 sittˈinsene          Adv;
 sˈiyaseten           Adv;
-son                 AdvTime;    ! son-ki is odd, but 'son-ları' is fine
-sˈonra               AdvTime;
-sˈonradan            Adv;
 sonunda             Adv;
 şorolop             Adv;
 şöyle               Adv;
@@ -404,17 +415,13 @@ vekâleten           Adv;
 veresiye            Adv;
 vicdanen            Adv;
 vˈira                Adv;
-yakında             AdvTime;
 yalancıktan         Adv;
 yalınkılı^c         Adv;
 yalnız              Adv;
 yanısıra            Adv;
-yˈarın               AdvTime;
 yavaş               Adv;
 yavˈaşçacı^k         Adv;
 yayan               Adv;
-yaz                 AdvTime;
-yazın               AdvTime;
 yˈekten              Adv;
 yeni                Adv;
 yeni% baştan        Adv;
@@ -446,7 +453,6 @@ sonuçta             Adv;
 adeta               Adv;
 yalnızca            Adv;
 üsteli^k            Adv;
-şˈimdiden            Adv;
 oldˈukça             Adv;
 tabii               Adv;
 cır% cır            Adv;    ! redup
@@ -455,7 +461,6 @@ her% daim           Adv;
 kıçüstü             Adv;
 abuk                Adv;    ! only in: abuk sabuk
 sabuk               Adv;    ! only in: abuk sabuk
-birazdan            Adv;
 hızlı               Adv;
 bile                Adv;
 çoktandır           Adv;    ! this could be analyzed
@@ -473,4 +478,3 @@ rahat               Adv;
 uzun                Adv;
 yanlış              Adv;
 düz                 Adv;
-erkenden            Adv;

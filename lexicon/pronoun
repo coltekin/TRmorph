@@ -57,11 +57,11 @@ umum              Prn;
 yediden% yetmişe  Prn;
 yedi% mahalle     Prn;
 
-birisi            PersPrn3s;
-birileri          PersPrn3p;
+biri                PrnBiri;
+hiçbiri             PrnHicbiri;
+
 bˈuncası           Prn;
 cümlesi           Prn;
-hiçbirisi         Prn;
 kimisi            Prn;
 ˈoncası            Prn;
 ötekisi           Prn;
