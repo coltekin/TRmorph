@@ -912,6 +912,7 @@ LEXICON PersPrn3s
 %<Prn%:pers%>:@RB PersPrn3sPlu;
 LEXICON PersPrn3sPlu
 %<3p%>:l^Ar@MB      PersPrnCont;
+                    #;
 
 LEXICON PersPrn1p
 %<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
