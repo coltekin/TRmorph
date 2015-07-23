@@ -45,8 +45,7 @@ aniden              Adv;
 erkenden            Adv;
 eskiden             Adv;       !AdvTime?
 artı^k              Adv;       ! AdvTime, but does not cobine with ki
-
-
+durmadan            Adv;
 
 
 illaki              Adv;
@@ -478,3 +477,5 @@ rahat               Adv;
 uzun                Adv;
 yanlış              Adv;
 düz                 Adv;
+çocukça             Adv;    ! derived
+yanlışlıkla         Adv;    ! derived

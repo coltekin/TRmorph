@@ -15856,3 +15856,8 @@ suluboya              N;
 gerginlik             N;
 sahi^p                N;
 yazıcı                N;
+suçlu                 N; ! derived
+suçlulu^k             N; ! derived
+tatsızlı^k            N; ! derived
+yanlışlı^k            N; ! derived
+tutulma               N; ! derived
