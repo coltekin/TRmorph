@@ -740,7 +740,8 @@ LEXICON NomPredicatePLU
 %<%0%>%<V%>:@MB                 NomPredPagr3s;
 %<%0%>%<V%>:@MB                 NomPredDir;
 %<%0%>%<V%>:@MB                 CplAll;
-                                NomPredQ;
+%<%0%>%<V%>:@MB                 #;
+                                       NomPredQ;
 
 LEXICON NomPredicate
 %<%0%>%<V%>:@MB                       NomPredPagr3p;
@@ -1896,6 +1897,7 @@ LEXICON mI
 
 LEXICON mICont
                         #; ! we have person marker before.   
+%<cpl%:pres%>:0         mIPagr; ! in case predicate is not marked for tense
                         mIPagr;
                         mIDI;
                         mIMIS;
