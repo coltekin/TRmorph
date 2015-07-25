@@ -209,18 +209,20 @@ define CompNoun [ %^%(s%) %^I -> 0 || _ %@NCOMP Boundary l (IntSym) %^A r ]
 ! - before another (s)I
 ! - before lArI
 ! - after lI, lIk, sIz, CI
+! - after  -(y)AsI
 ! - and optionally after aynı and before a case suffix 
 ! 
 ! TODO/CHECK: It seems not to be deleted afater -lIk in some cases. 
 !  `ev hayvanılık??'
 !
 
-define DeleteSI  %^%(s%) %^I -> 0 ||          _ Boundary %^%(s%) %^I Boundary,
-                                              _ Boundary l %^A r %^I Boundary,
-                                              _ Boundary [ l %^I | 
-                                                           l %^I k | 
-                                                           s %^I z | 
-                                                           %^C %^I ],
+define DeleteSI  %^%(s%) %^I -> 0 ||     _ Boundary+ %^%(s%) %^I Boundary,
+                                         _ Boundary+ l %^A r %^I Boundary,
+                                         _ Boundary+ [ l %^I | 
+                                                       l %^I k | 
+                                                       s %^I z | 
+                                                       %^C %^I ],
+                                     %^%(y%) %^A s %^I Boundary+ _ %Boundary,
                                      %^%(s%) %^I %@RB AposSym _ %@MB
          .o.     %^%(s%) %^I (->) 0 ||
                            .#. {aynı} %@RB _ %@MB [ %^%(y%) %^A

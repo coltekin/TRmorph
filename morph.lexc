@@ -2078,10 +2078,11 @@ ConVerb;
 LEXICON VerbalNoun
 %<vn%:infmA%>%<N%>:m^A@MB            VNMaCont;
 %<vn%:infmAK%>%<N%>:m^A^K@MB         VNMakCont;
-%<vn%:yis%>%<N%>:^(y)^Iş@MB          Ncont;     !TODO: a better tag name
 %<vn%:past%>%<N%>:^D^I^k@MB          Ncont;
 %<vn%:fut%>%<N%>:^(y)^Ac^A^k@MB      Ncont;
 %<vn%:pres%>%<N%>:^(y)^An@MB         Ncont;
+%<vn%:yis%>%<N%>:^(y)^Iş@MB          Ncont;     !TODO: a better tag name
+%<vn%:esi%>%<N%>:^(y)^As^I@MB        Ncont;     !TODO: a better tag name
 
 LEXICON VNMaCont
     NcompCont; ! includes final
@@ -2101,9 +2102,10 @@ LEXICON VNMakCont
                               NomPredicateMAK;
 
 LEXICON Participle
-%<part%:past%>%<Adj%>:^D^I^k@MB              PartCont;
-%<part%:fut%>%<Adj%>:^(y)^Ac^A^k@MB        PartCont;
-%<part%:pres%>%<Adj%>:^(y)^An@MB             PartCont;
+%<part%:past%>%<Adj%>:^D^I^k@MB         PartCont;
+%<part%:fut%>%<Adj%>:^(y)^Ac^A^k@MB     PartCont;
+%<part%:pres%>%<Adj%>:^(y)^An@MB        PartCont;
+%<part%:esi%>%<Adj%>:^(y)^As^I@MB       #;  !TODO: a better tag name
 
 LEXICON PartCont
                    #;
@@ -2543,20 +2545,6 @@ LEXICON JD_lAS
 !
 LEXICON D_yIS
 %<yis%>:^(y)^Iş   DerivNCont;
-
-! -(y)AsI makes adjectives, and can be attached after voice suffixes,
-!  and possibly to any non-finite verbal form.
-!
-!   okuyası, görülesi, getirtesi 
-!
-!  TODO: There may be two different processes that we hide behind this
-!  derivation. The forms without passive does not function like adjectives.
-!  They mostly be used in conditional/existential predicates, 
-!  'uyuyası olsaydı', 'getiresi varsa ...'. But we mark all resulting
-!  forms as adjectives.
-!
-LEXICON D_yAsI
-%<esi%>:^(y)^As^I   DerivJCont;
 
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
