@@ -277,7 +277,7 @@ LEXICON PostPloc
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
 
 LEXICON PostPlocCont
-%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     AdvCont;
+%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     DerivedPostpCont;
 %<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     Ki;
 
 LEXICON PostPdat
@@ -289,7 +289,7 @@ LEXICON PostPdat
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
 
 LEXICON PostPdatCont
-%<dat%>%<Postp%:adv%:nomC%>:^(y)^A@MB   AdvCont;
+%<dat%>%<Postp%:adv%:nomC%>:^(y)^A@MB   DerivedPostpCont;
 
 LEXICON PostPins
 %<N%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
@@ -300,7 +300,7 @@ LEXICON PostPins
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
 
 LEXICON PostPinsCont
-%<ins%>%<Postp%:adv%:nomC%>:^(y)l^NS^A@MB  AdvCont;
+%<ins%>%<Postp%:adv%:nomC%>:^(y)l^NS^A@MB  DerivedPostpCont;
 
 LEXICON PostPabl
 %<N%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
@@ -311,7 +311,7 @@ LEXICON PostPabl
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
 
 LEXICON PostPablCont
-%<abl%>%<Postp%:adv%:nomC%>:^D^An@MB    AdvCont;
+%<abl%>%<Postp%:adv%:nomC%>:^D^An@MB    DerivedPostpCont;
 
 LEXICON PostPca
 %<N%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
@@ -322,7 +322,11 @@ LEXICON PostPca
 %<N%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
 
 LEXICON PostPcaCont
-%<ca%>%<Postp%:adv%:nomC%>:^C^A@MB       AdvCont;
+%<ca%>%<Postp%:adv%:nomC%>:^C^A@MB       DerivedPostpCont;
+
+LEXICON DerivedPostpCont
+                                         AdvCont;
+                                         NomPredicate;
 
 !
 ! Possessive suffixes after adjectives and determiners make pronouns.
