@@ -15853,7 +15853,7 @@ silahşör              N;
 kapıcı                N;
 yetkili               N;
 suluboya              N;
-gerginlik             N;
+gerginli^k            N;
 sahi^p                N;
 yazıcı                N;
 suçlu                 N; ! derived
@@ -15863,5 +15863,11 @@ yanlışlı^k            N; ! derived
 tutulma               N; ! derived
 oturma                N; ! derived
 yüzme                 N; ! derived
-başbakanlık           N; ! derived
+başbakanlı^k          N; ! derived
 davranış              N; ! derived
+üstünlü^k             N; ! derived
+kolaylı^k             N; ! derived
+dostlu^k              N; ! derived
+yoklu^k               N; ! derived
+varlı^k               N; ! derived
+sıcaklı^k             N; ! derived
