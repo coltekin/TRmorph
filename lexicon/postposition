@@ -126,6 +126,7 @@ dışarı                          ablPostP;
 
 beraber                         insPostP; ! Not in G&K
 birlikte                        insPostP;
+ilgili                          insPostP; ! Not in G&K
 
 
 ! `halde' works with adjectivals (mostly with -lI and -sIz, but also

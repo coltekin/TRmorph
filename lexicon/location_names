@@ -23380,6 +23380,8 @@ Toulouse                NP;
 Molise                  NP;
 Verona                  NP;
 Napoli                  NP;
+New% York               NP;
+New                     NPPart;
 
 !
 ! Rivers/mountains/islands etc.

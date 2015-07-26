@@ -489,6 +489,9 @@ LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;
 @NCOMP%<N%:prop%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NPcont;
 
+LEXICON NPPart
+%<N%:prop%:partial%>:@RB   NPcont;
+
 LEXICON NP
 %<N%:prop%>:@RB   NPcont;
 %<N%:prop%:mredup%>:@MREDUP@RB    NPcont;

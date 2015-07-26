@@ -1324,7 +1324,6 @@ oyunbozan           Adj;
 özgür               Adj;
 öznel               Adj;
 pagan               Adj;
-pahalı              Adj;
 pak                 Adj;
 pakça               Adj;
 pamuksu             Adj;
@@ -2242,3 +2241,12 @@ konuşkan            Adj;
 şeker               Adj;
 önemli              Adj;
 çocukça             Adj;    !derived
+uluslararası        Adj;    !derived
+tatsız              Adj;    !derived
+toplumsal           Adj;    !derived
+pahalı              Adj;    !derived
+başarılı            Adj;    !derived
+hevesli             Adj;    !derived
+bilimsel            Adj;    !derived
+yüzeysel            Adj;    !derived
+karmakarışık        Adj;
