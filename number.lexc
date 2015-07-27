@@ -7,19 +7,21 @@
 ! for details.
 !
 !
-! Numbers, we define bot numbers written as text and digits, the
-! digits part includes support for both arabic and roman numerals.
-! With some effort cover common number groupings. 
-! At the moment recognition of special numbers, like date, time, phone
-! numbers etc. are not included, but should be trivial to do.
+! Here, we define both numbers written as text and digits, the
+! digits part includes support for both Arabic and Roman numerals.
+! The definition also covers common number groupings. 
+! At the moment, there is some rudimentary support for recognizing
+! date and time expressions. More, e.g. phone ! numbers, may  be included
+! in the future.
 !
-!  The definition here is rather ugly with a lot of replication.  There
-!  might be a cleaner solution, but I'm out of clues. 
-!   - If done using xfst, it would certainly be a lot neater, but then
+!  The definition here is rather ugly with a lot of replication. There
+!  should be a cleaner solution, but it is not obvious (to me) with
+!  lexc/xfst.
+!   - If done using xfst, it can certainly be a lot neater, but then
 !     suffixation (e.g., derivations to other word classes) needs to
 !     be replicated in xfst.
 !  - We (can) use xfst syntax in lexc below (in <>), but this does not
-!    allow re-use of automate defined earlier in other places (other
+!    allow re-use of automata defined earlier in other places (other
 !    other brackets or in an external xfst file)
 !
 !  Ugly as it is the following works, one needs to be careful to
@@ -35,6 +37,7 @@ LEXICON Number
 
 LEXICON NumberAlpha
     n0;
+    n0;
     n1;
     n10;
     n100;
@@ -46,6 +49,10 @@ LEXICON NumberAlpha
 
 LEXICON n0
 sıfır   NumStem;
+! we also squeeze half & quarter terms here
+yarım   NumStem;
+buçuk   NumStem;
+çeyrek  NumStem;
 
 LEXICON n1 ! 1 to 9
 bir@dB      n1cont;
