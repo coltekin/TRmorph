@@ -43,8 +43,8 @@ pekço^k         DetIndef;
 çoğu            DetIndef; ! no pronoun
 az              DetIndef;
 fazla           DetIndef;
-hiçbir          DetIndef;
-hiç% bir        DetIndef;
+hiçbir          DetIndefNeg;
+hiç% bir        DetIndefNeg;
 herhangi        DetIndef;
 herhangi% bir   DetIndef;
 başka           DetIndef;

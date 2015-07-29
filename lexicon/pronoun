@@ -37,11 +37,11 @@ falan             PersPrn3s;
 felan             PersPrn3s;
 filan             PersPrn3s;
 hˈerkes           PersPrn3s;
-herşey            Prn;  
-her% şey          Prn;
-hiçbirşey         Prn;
-hiç% kimse        Prn;
-hiçkimse          Prn;    ! is this singular?
+herşey            PrnNeg;
+her% şey          PrnNeg;
+hiçbirşey         PrnNeg;
+hiç% kimse        PrnNeg;
+hiçkimse          PrnNeg;    ! is this singular?
 insan             PersPrn3s;
 kimi              Prn;
 kimseci^k         Prn;

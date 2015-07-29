@@ -901,6 +901,9 @@ LEXICON AdvCont
 LEXICON Prn
 %<Prn%>:@RB PrnCont;
 
+LEXICON PrnNeg
+%<Prn%:neg%>:@RB PrnCont;
+
 LEXICON PrnCont  ! this is all, except compounding
     #;
     Pderiv;
@@ -940,7 +943,7 @@ LEXICON PrnBiriCont
                         PrnPlu;
 
 LEXICON PrnHicbiri
-%<Prn%>:@RB             PrnHicbiriCont;
+%<Prn%:neg%>:@RB             PrnHicbiriCont;
 
 LEXICON PrnHicbiriCont
                         PrnPagr3s;
@@ -1028,6 +1031,9 @@ LEXICON LocPrn  ! TODO: these do not inflect except only in some fixed expressio
 
 LEXICON  DetDef
 %<Det%:def%>:@RB DetCont;
+
+LEXICON  DetIndefNeg
+%<Det%:indef%:neg%>:@RB DetCont;
 
 LEXICON  DetIndef
 %<Det%:indef%>:@RB DetCont;
