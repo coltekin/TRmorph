@@ -1940,6 +1940,7 @@ yosma               Adj;
 yoz                 Adj;
 yüce                Adj;
 yudum               Adj;
+aşağı               Adj;
 yukarı              Adj;
 yükse^k             Adj;
 yumru^k             Adj;
@@ -2255,3 +2256,4 @@ meraklı             Adj;    !derived
 kuvvetli            Adj;    !derived
 suçlu               Adj;    !derived
 ilgili              Adj;    !derived
+gürültülü           Adj;    !derived

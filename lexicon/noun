@@ -1521,7 +1521,6 @@ bas                   N;
 baş                   N;
 başöğretmen           N;
 başörtü               N;
-başoyuncu             N;
 başpapaz              N;
 başparma^k            N;
 başpehlivan           N;
@@ -15871,3 +15870,7 @@ dostlu^k              N; ! derived
 yoklu^k               N; ! derived
 varlı^k               N; ! derived
 sıcaklı^k             N; ! derived
+arama                 N; ! derived
+oyuncu                N; ! derived
+başoyuncu             N; ! derived
+katılımcı             N; ! derived
