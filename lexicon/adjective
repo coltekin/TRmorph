@@ -1923,6 +1923,7 @@ yılışı^k            Adj;
 yırtıcı             Adj;
 yiti^k              Adj;
 yiyece^k            Adj;
+içece^k             Adj;
 yobaz               Adj;
 yoğun               Adj;
 yo^k                Adj;
@@ -2256,3 +2257,8 @@ kuvvetli            Adj;    !derived
 suçlu               Adj;    !derived
 ilgili              Adj;    !derived
 gürültülü           Adj;    !derived
+inatçı              Adj;    !derived
+varlıklı            Adj;    !derived
+telaşlı             Adj;    !derived
+neşeli              Adj;    !derived
+farklı              Adj;    !derived
