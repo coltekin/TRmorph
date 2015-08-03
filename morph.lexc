@@ -169,6 +169,7 @@ LEXICON PostPTimeCont
                             D_dir;
                             D_lArI;
                             D_lIGInA;
+                            CliticSA;
 
 !
 ! ablative complement
@@ -749,6 +750,7 @@ LEXICON NomPredicatePLU
 %<%0%>%<V%>:@MB                 CplAll;
 %<%0%>%<V%>:@MB                 #;
                                        NomPredQ;
+                                      CliticSA;
 
 LEXICON NomPredicate
 %<%0%>%<V%>:@MB                       NomPredPagr3p;
@@ -887,6 +889,7 @@ LEXICON AdvTimeCont
                     AdvCont;
                     D_lArI;
                     D_lIGInA;
+                    CliticSA;
 
 LEXICON AdvCont
                 #;
@@ -2463,6 +2466,16 @@ LEXICON   PD_CA
 %<ca%>:^C^A@MB DerivACont;
 
 
+!
+! -(y)sA/ise (besides being the conditional copula) functions as a
+! discourse connective. The difference is sometimes subtle but
+! important:
+!    cond: EvdeYSE, telefonu açardı "he'd answer the phone IF he was at home"
+!    Cnj:adv: EvdeYSE, hiç çalışamıyorum "At home, ON THE OTHER HAND, I
+!                                           can never work"
+
+LEXICON CliticSA
+%<ise%>%<Cnj%:adv%>:^(y)s^NS^A@MB       #;
 
 ! -(y)IcI makes adjectives (and nouns) from verbs.
 !       bulaşıcı, görücü, yapıcı
