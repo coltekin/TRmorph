@@ -15874,3 +15874,4 @@ arama                 N; ! derived
 oyuncu                N; ! derived
 başoyuncu             N; ! derived
 katılımcı             N; ! derived
+kiracı                N; ! derived
