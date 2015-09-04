@@ -2141,6 +2141,7 @@ LEXICON ConVerb
 %<cv%:dikce%>:^D^Ik^C^A@MB                  DerivACont;
 %<cv%:esiye%>:^(y)^As^Iy^A@MB               DerivACont;
 %<cv%:ye%>:^(y)^A@MB                        DerivACont;
+%<cv%:mesine%>:m^As^In^A@MB                 DerivACont;
 
 LEXICON CVNeg
 %<cv%:den%>:d^An@MB             DerivACont;
