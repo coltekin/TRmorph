@@ -15875,3 +15875,9 @@ oyuncu                N; ! derived
 başoyuncu             N; ! derived
 katılımcı             N; ! derived
 kiracı                N; ! derived
+tamirci               N; ! derived
+dişçi                 N; ! derived
+yapılaşma             N; ! derived
+fizikçi               N; ! derived
+postacı               N; ! derived
+politikacı            N; ! derived
