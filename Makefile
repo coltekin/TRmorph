@@ -5,7 +5,7 @@ CPP=gcc -E -traditional -P -w -x c
 MAKEDEP=gcc -MD
 MAKEDEP=./makedepend.sh
 TARGETS=trmorph.fst segment.fst stem.fst guess.fst hyphenate.fst
-LEXCSRC=analyzer.lexc guesser.lexc morph.lexc number.lexc exceptions.lexc
+LEXCSRC=analyzer.lexc guesser.lexc morph.lexc number.lexc url.lexc exceptions.lexc
 XFSTSRC=analyzer.xfst guesser.xfst hyphenate.xfst morph-phon.xfst segment.xfst stemmer.xfst g2p.xfst
 DEPDIR=.dep
 

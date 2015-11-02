@@ -66,6 +66,10 @@ EndQuote;
 #include "number.lexc"
 #include "exceptions.lexc"
 
+#if (ANALYZE_URLS == 1)
+#include "url.lexc"
+#endif
+
 #if (ALLOW_COMMON_TYPOS == 1)
 #include "lexicon/common_typos"
 #endif

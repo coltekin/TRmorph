@@ -322,3 +322,17 @@
  */
 
 #define DOUBLE_NEGATIVE 1
+
+
+/* ANALYZE_URLS
+ *
+ * This enables analysis of some URL/email patterns.
+ * We also allow noun inflections of emails and URLs after an
+ * apostrophe.
+ *
+ * Currently this slows down foma considerably, and increases the size
+ * of the resulting FST. Default is off.
+ *
+ */
+
+#define ANALYZE_URLS 0
