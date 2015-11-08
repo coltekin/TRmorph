@@ -114,6 +114,7 @@ asil                Adj;
 aşina               Adj;
 aşırı               Adj;
 askeri              Adj;
+askerî              Adj;
 asli                Adj;
 astronomi^k         Adj;
 ataerkil            Adj;
@@ -1035,7 +1036,7 @@ mazoşist            Adj;
 mazur               Adj;
 mecaz               Adj;
 mecbur              Adj;
-meçhul              Adj;
+meçh^pUl            Adj;
 mecruh              Adj;  ! old/rare
 medeni              Adj;
 medik^pAl           Adj;
@@ -1204,6 +1205,7 @@ mütemmim            Adj;
 müteşekkil          Adj;
 müteşekkir          Adj;  !old
 mütevazi            Adj;
+mütevazı            Adj;
 mütevekkil          Adj;
 mütevelli^t         Adj;       !  old/rare
 müthiş              Adj;
@@ -1642,6 +1644,7 @@ tabi                Adj;       !  old/rare?
 tabii               Adj;
 tabu                Adj;
 takli^t             Adj;
+tali                Adj;        ! sometime writen as 'tâli'
 talepkâr            Adj;
 tam                 Adj;
 tamahkar            Adj;
@@ -2238,6 +2241,7 @@ karşı               Adj;
 kalabalı^k          Adj;
 kaplı               Adj;
 akıllı              Adj;
+akil                Adj;
 konuşkan            Adj;
 şeker               Adj;
 önemli              Adj;
@@ -2273,3 +2277,51 @@ sakıncalı           Adj;    !derived
 kararlı             Adj;    !derived
 suçsuz              Adj;    !derived
 iddialı             Adj;    !derived
+arkeolojik          Adj;
+bloke               Adj;
+lanse               Adj;
+atılı               Adj;
+resmî               Adj;
+provoke             Adj;
+millî               Adj;
+interaktif          Adj;
+mevkidaş            Adj;
+endemik             Adj;
+namağlu^p            Adj;
+deklare              Adj;
+istihbari            Adj;
+koroner              Adj;
+birici^k             Adj;
+menfur               Adj;
+yegâne               Adj;
+algın                Adj;   ! also as part of "soğuk algınlığı"
+ofansif              Adj;
+ga^sFUVy             Adj;   ! increased usage
+aleni                Adj;
+toksik               Adj;   ! tinglish?
+nörolojik            Adj;
+sualtı               Adj;
+müreffeh             Adj;
+kompakt              Adj;   ! tinglish?
+rekonstrüktif        Adj;   ! tinglish?
+emperyal             Adj;   ! tinglish
+münhasır             Adj;
+otisti^k             Adj;
+genital              Adj;   ! tinglish
+vajinal              Adj;   ! ? tinglish
+mizahi               Adj;
+neoliberal           Adj;
+erişkin              Adj;
+hip                  Adj;   ! ? tinglish
+şad                  Adj;   ! old
+muasır               Adj;   ! old
+domine               Adj;   ! tinglish
+kamufle              Adj;
+prematüre            Adj;
+istatistiki          Adj;
+gurme                Adj;   ! tinglish
+asimetri^k           Adj;
+nano                 Adj;
+sistemik             Adj;
+tematik              Adj;
+terörize             Adj;

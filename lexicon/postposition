@@ -40,6 +40,8 @@ ile                             nomPostP;
 kadar                           nomPostPadjKi;
 dahi                            nomPostP;
 boyu                            nomPostP;   ! gün boyu
+dahil                           nomPostP;
+dâhil                           nomPostP;
 
 kala                            nomPostP;
 geçe                            nomPostP;

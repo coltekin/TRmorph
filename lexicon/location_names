@@ -45,6 +45,10 @@ Burkina% Faso   NP;
 Polonya         NP;
 Yakutistan      NP;
 Patagonya       NP;
+Kolombiya       NP;
+Estonya         NP;
+
+Britanya        NP;
 
 
 ! these should be turned into 'partial' tokens.
@@ -114,6 +118,7 @@ Hatay           NP;
 Iğdır           NP;
 Isparta         NP;
 İstanbul        NP;
+Istanbul        NP;     ! common typo
 İzmir           NP;
 Kahramanmaraş   NP;
 Karabük         NP;
@@ -23339,6 +23344,15 @@ Zuvar                 NP;
 ! End of data extracted from OSM
 !
 
+
+!
+! Alternative/non-official names of some cities/towns 
+!
+
+Amed                    NP;
+Dersim                  NP;
+Roboski                 NP;
+
 !
 ! Non-TR city names that are written differently than their original names
 !
@@ -23371,6 +23385,25 @@ Yemen                   NP;
 Zürih                   NP;
 Doha                    NP;
 Prag                    NP;
+Kobani                  NP;
+Kobane                  NP;
+Kobanê                  NP;
+Pensilvanya             NP;
+Trablus                 NP;
+Bahreyn                 NP;
+Rakka                   NP;
+Bingazi                 NP;
+Kerbela                 NP;
+Lazkiye                 NP;
+Şengal                  NP;
+Fukuşima                NP;
+Girne                   NP;
+Soçi                    NP;
+Tikrit                  NP;
+Çernobil                NP;
+Cidde                   NP;
+Köstence                NP;
+Dera                    NP;
 
 !
 ! Non-TR city names, written as in the original language (these should be
@@ -23380,6 +23413,15 @@ Toulouse                NP;
 Molise                  NP;
 Verona                  NP;
 Napoli                  NP;
+Porto                   NP;
+Boston                  NP;
+Oslo                    NP;
+Kiev                    NP;
+Sevilla                 NP;
+Rio                     NP;
+Chicago                 NP;
+Vatikan                 NP;
+Lazio                   NP;
 New% York               NP;
 New                     NPPart;
 
@@ -23389,9 +23431,33 @@ New                     NPPart;
 
 Kaf% Dağ                NPcomp;
 Kaf                     NP;
+Pasifi^k                NP;
+Rodos                   NP;
+Heybeliada              NP;
+İztuzu                  NP;
+Validebağ               NP;
+
+Sümela                  NP;
 
 ! misc
-Sibirya                 NP;
-Erhaç                   NP;
-Köstence                NP;
-Asmalımescit            NP;
+Sibirya               NP;
+Fildişi               NP;
+
+Kültürpark            NP;
+
+Erhaç                 NP;
+Asmalımescit          NP;
+Kaleiçi               NP;
+Florya                NP;
+Okmeydanı             NP;
+Kazlıçeşme            NP;
+Demre                 NP;
+Poyrazköy             NP;
+Kemerburgaz           NP;
+Kemeraltı             NP;
+Aspendos              NP;
+Mürşitpınar           NP;
+Basmane               NP;
+Sulukule              NP;
+Samatya               NP;
+
