@@ -1,23 +1,25 @@
 ! This file contains the basic noun lexicon of TRmorph.
 !
-!-----------------------------------------------------------------------
-! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
-!
-! This file is part of TRmorph.
-!
-! TRmorph is free software: you can redistribute it and/or modify
-! it under the terms of the GNU Lesser Public License as published by
-! the Free Software Foundation, either version 3 of the License, or
-! (at your option) any later version.
-!
-! TRmorph is distributed in the hope that it will be useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty of
-! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-! GNU Lesser Public License for more details.
-!
-! You should have received a copy of the GNU Lesser Public License
-! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
-!-----------------------------------------------------------------------
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
 !
 
 !
@@ -87,6 +89,8 @@ yaz                   Ntime;
 bahar                 Ntime;
 ilkbahar              Ntime;
 son                   Ntime; ! this does not get -ki, but gets -lArI
+sezon                 Ntime;
+ileri                 Ntime;
 
 
 trampolin             N;    ! non-standard/alternative
@@ -1912,7 +1916,8 @@ blender               N;
 blöf                  N;
 blokaj                N;
 blok                  N;
-blˈoknot               N;
+blo^k                 N;
+blˈoknot              N;
 blucin                N;
 blum                  N;
 bluz                  N;
@@ -2597,6 +2602,7 @@ ciharıse              N;
 ciharıyek             N;
 cihar                 N;
 ciha^t                N;
+cihad                 N;    ! non-standard cihat
 cihaz                 N;
 cihet                 N;
 çıka^k                N;
@@ -2891,6 +2897,7 @@ dağlağı               N;
 dağ                   N;
 dahi@DEL@l            N;
 dahil                 N;
+dâhil                 N;
 daire                 N;
 daktilografi          N;
 daktilograf           N;
@@ -4660,6 +4667,7 @@ garson                N;
 gaseyan               N;
 gasi@DEL@l            N;
 gas^p                 N;
+gasp                  N;
 gass^pAl              N;
 gastrit               N;
 gastroenterolo^g      N;
@@ -5206,6 +5214,7 @@ hˈalazade              N;
 halef                 N;
 halel                 N;
 hale                  N;
+hâle                  N;    ! non-std ?
 hˈalfa                 N;
 halhal                N;
 halife                N;
@@ -5682,7 +5691,7 @@ höyü^k                N;
 hozan                 N;
 h^pA@DUP@d            N;
 h^pAl                 N;
-! h^pÂl                 N;
+h^pÂl                 N;
 h^pArf                N;
 h^pOl                 N;
 hububat               N;
@@ -5952,13 +5961,13 @@ ilˈahiyat              N;
 ilah                  N;
 ilam                  N;
 ilan                  N;
+ilân                  N;    ! common typo
 ilˈarya                N;
 ilave                 N;
 ilbay                 N;
 ilca                  N;
 ilçebay               N;
 ilçe                  N;
-ileri                 N;
 iletim                N;
 ileti                 N;
 iletişim              N;
@@ -9305,6 +9314,7 @@ mesamat               N;
 mesame                N;
 mesane                N;
 mesci^t               N;
+mescid                N;    ! non-standard
 meşeci^k              N;
 mesele                N;
 mesel                 N;
@@ -9705,6 +9715,7 @@ mücver                N;
 müdafaa               N;
 müdafaaname           N;
 müdahale              N;
+müdahele              N;    ! common typo
 müdana                N;
 müdara                N;
 müddeiumumi           N;
@@ -11028,6 +11039,7 @@ periskop              N;
 periton               N;
 periyodi^k            N;
 periyo^t              N;
+periyot               N;
 perki                 N;
 perküsyon             N;
 perlit                N;
@@ -11454,6 +11466,7 @@ radikalizm            N;
 radika                N;
 radon                 N;
 ra@DUP@b              N;
+r^pA@DUP@b            N;
 radyan                N;
 radyasyon             N;
 radyatör              N;
@@ -11570,6 +11583,7 @@ redoks                N;
 redresör              N;
 redüksiyon            N;
 re@DUP@^t             N;
+red                   N;    ! common typo/non-standard usage or 're@DUP@^t'
 reeskont              N;
 refah                 N;
 refak^pAt             N;
@@ -12571,7 +12585,6 @@ sezgi                 N;
 sezi                  N;
 seziş                 N;
 şezlong               N;
-sezon                 N;
 sezü                  N;
 sezyum                N;
 sfagnum               N;
@@ -13141,6 +13154,7 @@ suibriğigiller        N;
 sˈuikast               N;
 sˈuiniyet              N;
 suistim^pAl           N;
+suiistim^pAl           N;   ! common typo
 süit                  N;
 suiza@DUP@n           N;
 süje                  N;
@@ -13471,6 +13485,7 @@ taksi                 N;
 taksirat              N;
 taksir                N;
 taksi^t               N;
+taksit                N;
 taksonomi             N;
 takti^k               N;
 taktir                N;
@@ -14754,7 +14769,8 @@ us^pUl                N;
 uşşak                 N;
 ustabaşı              N;
 usta                  N;
-üstâ^t                N;
+üsta^t                N;
+üstad                 N;    ! common misspelling
 üstçavuş              N;
 üsteğmen              N;
 üste                  N;
@@ -15881,3 +15897,76 @@ yapılaşma             N; ! derived
 fizikçi               N; ! derived
 postacı               N; ! derived
 politikacı            N; ! derived
+stoper                N;
+eşbaşkan              N;
+metrobüs              N;
+e-devlet              N;
+ebola                 N;
+asist                 N;
+gökgürültü            Ncomp;
+sabote                N;    ! almost exclusivel with sabote et-
+empati                N;
+sit                   N;
+satırbaş              Ncomp;
+seribaş               Ncomp;
+insülin               N;
+alaşağı               N;    ! compound ?
+ofsayt                N;
+blog                  N;
+blo^g                 N;
+arabulucu             N;
+bonzai                N;
+selfie                N;
+tiroid                N;
+botoks                N;
+moderatör             N;
+te                    N;    ! "te cetveli"
+hocaefendi            N;    ! this usage mostly proper noun
+loto                  N;
+inç                   N;
+jazz                  N;
+molotofkokteyli       N;
+pet                   N;    ! pet şişe
+açıköğretim           N;
+kruvaziyer            N;
+hit                   N;    ! fron En. used commonly
+çalıştay              N;
+caretta               N;
+stent                 N;
+reflü                 N;
+başmüzakereci         N;
+başantrenör           N;
+başsavcıvekili        N;    ! this should normally be written 'başsavcı vekili'
+tekbîr                N;    ! common misspelling
+anamuhalefet          N;    ! ? wrong spelling: 'ana muhalefet'
+futbolsever           N;
+epilepsi              N;
+alzheimer             N;
+rehabilite            N;
+mobbing               N;    ! tinglish ?
+pilates               N;
+portal                N;
+akne                  N;    ! tinglish
+öğretmenev            Ncomp;
+halükar               N;    ! only in "her halükarda"
+iskân                 N;
+islamofobi            N;
+tape                  N;
+çip                   N;
+metcezir              N;
+medcezir              N;    ! common non-std/typo
+bilimadam             Ncomp;
+sla^sFUVm             N;   ! tinglish in "grand slam"
+laptop                N;   ! tinglish
+twit                  N;   ! tinglish
+altıpas               N;
+andı^c                N;
+fesh                  N;    ! onl in: "fesh et-"
+önlisans              N;
+taşkömür              Ncomp;
+içtüzük               N;
+mortgage              N;    ! tinglish
+mortgage^sBUV         N;    ! tinglish 
+jean                  N;    ! tinglish 
+jea^sFUVn              N;    ! tinglish 
+go-kart               N;

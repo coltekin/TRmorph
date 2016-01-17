@@ -1,23 +1,26 @@
-! This file contains the basic noun lexicon of TRmorph.
+! This file contains some common non-Turkish person names.
+! vim: filetype=lexc
 !
-!-----------------------------------------------------------------------
-! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
-!
-! This file is part of TRmorph.
-!
-! TRmorph is free software: you can redistribute it and/or modify
-! it under the terms of the GNU Lesser Public License as published by
-! the Free Software Foundation, either version 3 of the License, or
-! (at your option) any later version.
-!
-! TRmorph is distributed in the hope that it will be useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty of
-! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-! GNU Lesser Public License for more details.
-!
-! You should have received a copy of the GNU Lesser Public License
-! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
-!-----------------------------------------------------------------------
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
 !
 
 !
@@ -156,3 +159,104 @@ Taylor                              NPperson;
 Shakespeare                         NPperson;
 Nehru                               NPperson;
 
+Alex                                NPperson;
+Michael                             NPperson;
+Demba                               NPperson;
+Drogba                              NPperson;
+Bilic                               NPperson;
+Kerry                               NPperson;
+Ronaldo                             NPperson;
+Kuyt                                NPperson;
+Emenike                             NPperson;
+Mario                               NPperson;
+Felipe                              NPperson;
+Mancini                             NPperson;
+Angela                              NPperson;
+Quaresma                            NPperson;
+Williams                            NPperson;
+Muslera                             NPperson;
+Charlie                             NPperson;
+Luis                                NPperson;
+Cameron                             NPperson;
+Slaven                              NPperson;
+Red                                 NPperson;
+Kevin                               NPperson;
+Almeida                             NPperson;
+Hollande                            NPperson;
+Fernando                            NPperson;
+Wesley                              NPperson;
+Antonio                             NPperson;
+Fernandes                           NPperson;
+West                                NPperson;
+Berlusconi                          NPperson;
+Chris                               NPperson;
+Prandelli                           NPperson;
+Beşşar                              NPperson;
+Robin                               NPperson;
+Jones                               NPperson;
+Daum                                NPperson;
+Tony                                NPperson;
+Mourinho                            NPperson;
+Alves                               NPperson;
+Didier                              NPperson;
+Andre                               NPperson;
+Joe                                 NPperson;
+Meireles                            NPperson;
+Cristian                            NPperson;
+Shakhtar                            NPperson;
+Eric                                NPperson;
+Hillary                             NPperson;
+Bruno                               NPperson;
+Joseph                              NPperson;
+Souza                               NPperson;
+Kate                                NPperson;
+Pierre                              NPperson;
+Santos                              NPperson;
+Cardozo                             NPperson;
+Sergey                              NPperson;
+Christian                           NPperson;
+Raul                                NPperson;
+Lavrov                              NPperson;
+Rijkaard                            NPperson;
+Lee                                 NPperson;
+Sivok                               NPperson;
+Stephen                             NPperson;
+Dirk                                NPperson;
+Baros                               NPperson;
+Pereira                             NPperson;
+Smith                               NPperson;
+Lionel                              NPperson;
+Reza                                NPperson;
+Harry^sFUV                          NPperson;
+Simon                               NPperson;
+Holosko                             NPperson;
+Fernandao                           NPperson;
+Alzheimer                           NPperson;
+Justin                              NPperson;
+Albert                              NPperson;
+Ricardo                             NPperson;
+Allen                               NPperson;
+Costa                               NPperson;
+Jackson                             NPperson;
+Roger                               NPperson;
+Andrew                              NPperson;
+Juan                                NPperson;
+Love                                NPperson;
+Marc                                NPperson;
+Sebastian                           NPperson;
+Jack                                NPperson;
+Young                               NPperson;
+Michel                              NPperson;
+Jolie                               NPperson;
+Victoria                            NPperson;
+Jennifer                            NPperson;
+Ryan                                NPperson;
+King                                NPperson;
+Sneijder                            NPperson;
+Moussa                              NPperson;
+Hiddink                             NPperson;
+Franco                              NPperson;
+Edward                              NPperson;
+Rasmussen                           NPperson;
+Samuel                              NPperson;
+Elizabeth                           NPperson;

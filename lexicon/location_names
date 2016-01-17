@@ -1,31 +1,30 @@
-! This file is part of TRmorph.
+! This lexicon lists geogrphic names.
+! vim: filetype=lexc
 !
-!-----------------------------------------------------------------------
-! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
-!
-! This file is part of TRmorph.
-!
-! TRmorph is free software: you can redistribute it and/or modify
-! it under the terms of the GNU Lesser Public License as published by
-! the Free Software Foundation, either version 3 of the License, or
-! (at your option) any later version.
-!
-! TRmorph is distributed in the hope that it will be useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty of
-! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-! GNU Lesser Public License for more details.
-!
-! You should have received a copy of the GNU Lesser Public License
-! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
-!-----------------------------------------------------------------------
-!
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
 
 !
-! This lexicon lists geogrphic names.
-!
-! Currently we have an ad-hoc list, which should probably be replaced
-! with data that can be obtained from sources like geonames, or
-! Wikpedia.
+! Some of these items are extracted automatically from Wikipedia or
+! OSM. Some are added manually.
 !
 ! Currently TRmorph does not distinguish subcategories of proper nouns
 ! However, the list below is organized to make a potential fine-grained 
@@ -45,6 +44,10 @@ Burkina% Faso   NP;
 Polonya         NP;
 Yakutistan      NP;
 Patagonya       NP;
+Kolombiya       NP;
+Estonya         NP;
+
+Britanya        NP;
 
 
 ! these should be turned into 'partial' tokens.
@@ -114,6 +117,7 @@ Hatay           NP;
 Iğdır           NP;
 Isparta         NP;
 İstanbul        NP;
+Istanbul        NP;     ! common typo
 İzmir           NP;
 Kahramanmaraş   NP;
 Karabük         NP;
@@ -23339,6 +23343,15 @@ Zuvar                 NP;
 ! End of data extracted from OSM
 !
 
+
+!
+! Alternative/non-official names of some cities/towns 
+!
+
+Amed                    NP;
+Dersim                  NP;
+Roboski                 NP;
+
 !
 ! Non-TR city names that are written differently than their original names
 !
@@ -23371,6 +23384,25 @@ Yemen                   NP;
 Zürih                   NP;
 Doha                    NP;
 Prag                    NP;
+Kobani                  NP;
+Kobane                  NP;
+Kobanê                  NP;
+Pensilvanya             NP;
+Trablus                 NP;
+Bahreyn                 NP;
+Rakka                   NP;
+Bingazi                 NP;
+Kerbela                 NP;
+Lazkiye                 NP;
+Şengal                  NP;
+Fukuşima                NP;
+Girne                   NP;
+Soçi                    NP;
+Tikrit                  NP;
+Çernobil                NP;
+Cidde                   NP;
+Köstence                NP;
+Dera                    NP;
 
 !
 ! Non-TR city names, written as in the original language (these should be
@@ -23380,6 +23412,15 @@ Toulouse                NP;
 Molise                  NP;
 Verona                  NP;
 Napoli                  NP;
+Porto                   NP;
+Boston                  NP;
+Oslo                    NP;
+Kiev                    NP;
+Sevilla                 NP;
+Rio                     NP;
+Chicago                 NP;
+Vatikan                 NP;
+Lazio                   NP;
 New% York               NP;
 New                     NPPart;
 
@@ -23389,9 +23430,33 @@ New                     NPPart;
 
 Kaf% Dağ                NPcomp;
 Kaf                     NP;
+Pasifi^k                NP;
+Rodos                   NP;
+Heybeliada              NP;
+İztuzu                  NP;
+Validebağ               NP;
+
+Sümela                  NP;
 
 ! misc
-Sibirya                 NP;
-Erhaç                   NP;
-Köstence                NP;
-Asmalımescit            NP;
+Sibirya               NP;
+Fildişi               NP;
+
+Kültürpark            NP;
+
+Erhaç                 NP;
+Asmalımescit          NP;
+Kaleiçi               NP;
+Florya                NP;
+Okmeydanı             NP;
+Kazlıçeşme            NP;
+Demre                 NP;
+Poyrazköy             NP;
+Kemerburgaz           NP;
+Kemeraltı             NP;
+Aspendos              NP;
+Mürşitpınar           NP;
+Basmane               NP;
+Sulukule              NP;
+Samatya               NP;
+

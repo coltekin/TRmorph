@@ -1,27 +1,29 @@
-! This file is part of TRmorph
+! This lexicon is for proper names.
+! vim: filetype=lexc
 !
-!-----------------------------------------------------------------------
-! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
-!
-! This file is part of TRmorph.
-!
-! TRmorph is free software: you can redistribute it and/or modify
-! it under the terms of the GNU Lesser Public License as published by
-! the Free Software Foundation, either version 3 of the License, or
-! (at your option) any later version.
-!
-! TRmorph is distributed in the hope that it will be useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty of
-! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-! GNU Lesser Public License for more details.
-!
-! You should have received a copy of the GNU Lesser Public License
-! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
-!-----------------------------------------------------------------------
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
 !
 
 !
-! This lexicon is for proper names.
 !
 ! Most of this lexicon file consist of unorgonized proper nouns of any
 ! type (as of Dec. 2013). In the long run these names are intended to
@@ -51,6 +53,7 @@ Akuvatur                NP;
 Memur-Sen               NP;
 Eğitim-Bir-Sen          NP;
 Göç-Türk                NP;
+Türk-İş                 NP;
 Bal-Göç                 NP;
 Citibank                NP;
 Cabot                   NP;
@@ -58,7 +61,25 @@ Divan                   NP;
 Suişler                 NPcomp;
 Bağ-Kur                 NP;
 CASA                    NP;
+Borusan                 NP;
+Nusra                   NP;
+Eurovision              NP;
+Wikilea^sFUVks          NP;
+Amy^sFUV                NP;
+Erasmus                 NP;
+İnterpol                NP;
 
+Atletico                NP;
+Arsenal                 NP;
+Juventus                NP;
+Borussia                NP;
+Dortmund                NP;
+Schalke                 NP;
+Donetsk                 NP;
+Inter                   NP;
+Valencia                NP;
+Benfica                 NP;
+Tottenham               NP;
 
 !
 ! Product/brand/trade names
@@ -94,7 +115,84 @@ Coca                    NP;
 Cola                    NP;
 Emsan                   NP;
 McDonalds               NP;
-
+Twitter                 NP;
+Twitte^sFUVr            NP;
+Times                   NP;
+Vodafone                NP;
+Show                    NP;
+Galaxy^sBUV             NP;
+Guardian                NP;
+Ferrari                 NP;
+Instagram               NP;
+Survivor                NP;
+Survivo^sFUVr           NP;
+Banvit                  NP;
+Reuters                 NP;
+Sony                    NP;
+Avea                    NP;
+YouTube                 NP;
+Youtube                 NP;
+Biletix                 NP;
+Hyundai                 NP;
+Agos                    NP;
+Passolig                NP;
+Cimbom                  NP;
+Peugeot                 NP;
+Peugeot^sBRV            NP;
+Audi                    NP;
+Guinness                NP;
+Nissan                  NP;
+Honda                   NP;
+WhatsApp                NP;
+Whatsapp                NP;
+Pegasus                 NP;
+Fenerium                NP;
+Intel                   NP;
+Milangaz                NP;
+Lufthansa               NP;
+Armani                  NP;
+Turkuvaz                NP;
+Yahoo                   NP;
+Oyak                    NP;
+Xperia                  NP;
+Türksat                 NP;
+Vakıfbank               NP;
+VakıfBank               NP;
+Sporx                   NP;
+Yandex                  NP;
+Citroen                 NP;
+Sheraton                NP;
+Grundig                 NP;
+Bosch                   NP;
+iPod                    NP;
+iPad                    NP;
+iOS                     NP;
+iPa^sFUVd               NP;
+Kanaltürk               NP;
+Wi                      NP;
+Xbox                    NP;
+Skoda                   NP;
+Skype                   NP;
+Skype^sUC               NP;
+Digitürk                NP;
+Digiturk                NP;
+Marvel                  NP;
+VitrA                   NP;
+Sinpaş                  NP;
+PlayStation             NP;
+Playstation             NP;
+Doblo                   NP;
+Mitsubishi              NP;
+Botaş                   NP;
+Clio                    NP;
+Huawei                  NP;
+Teknosa                 NP;
+iTunes                  NP;
+Eurosport               NP;
+Citigroup               NP;
+Sanko                   NP;
+Swissotel               NP;
+Prada                   NP;
 
 !
 ! Sport clubs/organizations
@@ -121,6 +219,32 @@ Silivrispor            NP;
 Sˈivasspor              NP;
 Trabzonspor            NP;
 Vanspor                NP;
+Gaziantepspor          NP;
+Karabükspor            NP;
+Konyaspor              NP;
+Rizespor               NP;
+İdmanyurdu             NP;
+Manisaspor             NP;
+Elazığspor             NP;
+Erciyesspor            NP;
+Balıkesirspor          NP;
+Demirspor              NP;
+Bucaspor               NP;
+Alanyaspor             NP;
+Ankaraspor             NP;
+Osmanlıspor            NP;
+Diyarbakırspor         NP;
+Şanlıurfaspor          NP;
+Fethiyespor            NP;
+Sakaryaspor            NP;
+Tokatspor              NP;
+Linyitspor             NP;
+Radyospor              NP;
+Kartalspor             NP;
+Bandırmaspor           NP;
+Turgutluspor           NP;
+İstanbulspor           NP;
+Hatayspor              NP;
 
 !
 ! Common names given to pets.
@@ -1953,6 +2077,7 @@ Cerit                  NP;
 Çerkezce               NP;
 Çerkezköy              NP;
 Çerkez                 NP;
+Çerkes                 NP;  ! ? miss-spelling?
 Cermence               NP;
 Cermen% dilleri        NP;
 Cermen                 NP;
@@ -8680,7 +8805,6 @@ Vaiz                   NP;
 Vakar                  NP;
 Vakfıkebir             NP;
 Vakıa                  NP;
-Vakıfbank              NP;
 Vakıf                  NP;
 Vaki                   NP;
 Vakkas                 NP;
@@ -9334,3 +9458,11 @@ Nahuatl                NP;
 Singapur               NP;
 Tunalıhilmi            NP;
 Yakutsk                NP;
+Hollywood              NP;
+Belarus                NP;
+Ezidi                  NP;
+Ezidi                  NP;
+Ha@DUP@k               NP;
+Zaza                   NP;
+Zazaca                 NP;
+Hababam                NP;  ! in "Hababam sınıfı"

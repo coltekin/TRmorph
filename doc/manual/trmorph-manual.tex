@@ -36,6 +36,7 @@
 \usepackage{lingmacros}
 \usepackage{amsmath}
 \usepackage{trmorph-manual}
+\usepackage{textcomp}
 
 %\usepackage{polyglossia}
 %\setlength{\parskip}{1.2ex}
@@ -69,14 +70,13 @@
 
 \section{Introduction}
 
-TRmorph is an open-source\footnote{Current version of TRmorph is
-licensed under \href{http://www.gnu.org/licenses/lgpl.html}{GNU Lesser
-General Public License}. See README file in the TRmorph distribution
-for more information.} finite-state morphological analyzer for
-Turkish.  This document describes how to use the tools that comes with
-this package, as well as some implementation details that may be
-helpful for people who want to customize this open-source tool for
-their own needs.
+TRmorph is an open-source%
+\footnote{Current version of TRmorph is licensed under 
+\href{https://opensource.org/licenses/MIT}{MIT License}. 
+See Appendix~\ref{app:license} for more information.}
+finite-state morphological analyzer for Turkish.
+This document describes how to use the tools that comes with this package,
+as well as some implementation details that may be helpful for people who want to customize this open-source tool for their own needs.
 The source code is available at \url{https://github.com/coltekin/TRmorph},
 and of  the analyzer and a web-based demo can be accessed at \url{http://coltekin.net/cagri/trmorph}. 
 
@@ -1763,6 +1763,28 @@ folks working on Apertium-Turkic,
 and definitely more.
 
 \printbibliography
+\appendix
+\section{\label{app:license}License}
+Copyright \textcopyright 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
 
 \printindex
 

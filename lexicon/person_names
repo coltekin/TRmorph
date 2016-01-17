@@ -1,28 +1,28 @@
-! This file is part of TRmorph.
+! This lexicon lists miscellaneous person names.
 ! vim: filetype=lexc
 !
-!-----------------------------------------------------------------------
-! Copyright 2011-2013 Cagri Coltekin <c.coltekin@rug.nl>
-!
-! This file is part of TRmorph.
-!
-! TRmorph is free software: you can redistribute it and/or modify
-! it under the terms of the GNU Lesser Public License as published by
-! the Free Software Foundation, either version 3 of the License, or
-! (at your option) any later version.
-!
-! TRmorph is distributed in the hope that it will be useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty of
-! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-! GNU Lesser Public License for more details.
-!
-! You should have received a copy of the GNU Lesser Public License
-! along with TRmorph. If not, see <http://www.gnu.org/licenses/>.
-!-----------------------------------------------------------------------
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
 !
 
-!
-! This lexicon lists person names.
 !
 ! The list is initially obtained from Wikipedia and hand-edited and
 ! extended as needed.
@@ -2375,6 +2375,7 @@ Ferzend       NPperson;
 Fesih         NPperson;
 Fethi         NPperson;
 Fethullah     NPperson;
+Fetullah      NPperson;
 Fetih         NPperson;
 Fettah        NPperson;
 Fevzi         NPperson;
@@ -3785,6 +3786,7 @@ Nayman        NPperson;
 Nazar         NPperson;
 Nazif         NPperson;
 Nazım         NPperson;
+Nâzım         NPperson;
 Nazir         NPperson;
 Nazır         NPperson;
 Nazmi         NPperson;
@@ -6290,6 +6292,12 @@ Zülkarneyn    NPperson;
 Zülkif        NPperson;
 Zülküf        NPperson;
 Zürriyet      NPperson;
+Lefter        NPperson;
+Şivan         NPperson;
+İlber         NPperson;
+Şenes         NPperson;
+Rutkay        NPperson;
+Bedii         NPperson;
 
 !
 ! These are (mostly) unisex.
@@ -6936,6 +6944,7 @@ Oytun      NPperson;
 Özenç      NPperson;
 Özen       NPperson;
 Özer       NPperson;
+Özgecan    NPperson;
 Özgen      NPperson;
 Özge       NPperson;
 Özgüneş    NPperson;
@@ -9974,6 +9983,8 @@ Zülfüye       NPperson;
 Zülfüzar      NPperson;
 Zümra         NPperson;
 Zümrüt        NPperson;
+Berfo         NPperson;
+Helin         NPperson;
 
 !
 ! The following are family names. 
@@ -13637,6 +13648,116 @@ Zincirkıran       NPperson;
 Zırh              NPperson;
 Zorlu             NPperson;
 Zülfikaroğlu      NPperson;
+Belözoğlu         NPperson;
+Zeybekci          NPperson;
+Aybaba            NPperson;
+Altepe            NPperson;
+Çalımbay          NPperson;
+Büyükekşi         NPperson;
+Baydemir          NPperson;
+Destici           NPperson;
+Zarrab            NPperson;
+Baransu           NPperson;
+Pektemek          NPperson;
+Aydınus           NPperson;
+Birand            NPperson;
+Tatlıtuğ          NPperson;
+Yılmazer          NPperson;
+Sarısülük         NPperson;
+Yüksekdağ         NPperson;
+Koşaner           NPperson;
+Özkahya           NPperson;
+Özyakup           NPperson;
+İvedik            NPperson;
+Karaloğlu         NPperson;
+Yalçındağ         NPperson;
+Mosturoğlu        NPperson;
+Gökbakar          NPperson;
+Gümüşdağ          NPperson;
+Yarımağan         NPperson;
+Ortaylı           NPperson;
+Eruygur           NPperson;
+Özhaseki          NPperson;
+Çalhanoğlu        NPperson;
+Çetinsaya         NPperson;
+Ciliv             NPperson;
+Meş^pAl           NPperson;
+Mahçupyan         NPperson;
+İrtegün           NPperson;
+Sinirlioğlu       NPperson;
+Hilmioğlu         NPperson;
+Büyükerşen        NPperson;
+Günok             NPperson;
+Kocabıyık         NPperson;
+Iğsız             NPperson;
+Altındöken        NPperson;
+Kocasakal         NPperson;
+Boral             NPperson;
+Atayün            NPperson;
+Karzai            NPperson;
+Özkalfa           NPperson;
+Encü              NPperson;
+Toroğlu           NPperson;
+Kanter            NPperson;
+Özat              NPperson;
+Reçber            NPperson;
+Çelikcan          NPperson;
+Otyakmaz          NPperson;
+Abitoğlu          NPperson;
+Bulaç             NPperson;
+Atınç             NPperson;
+Şişmanoğlu        NPperson;
+Çamdal            NPperson;
+Düzyatan          NPperson;
+Üstünel           NPperson;
+Kocadon           NPperson;
+Özbizerdik        NPperson;
+Kurtiz            NPperson;
+Cumbul            NPperson;
+Balkanlıoğlu      NPperson;
+Süreya            NPperson;
+Hasdal            NPperson;
+Kesimal           NPperson;
+İlgezdi           NPperson;
+Büyüküstün        NPperson;
+Hoşcan            NPperson;
+Ayvalıtaş         NPperson;
+Batdal            NPperson;
+Çolakkadı         NPperson;
+Nişanyan          NPperson;
+Koncuk            NPperson;
+Otyam             NPperson;
+Pekgüzel          NPperson;
+Tahmazoğlu        NPperson;
+Akıncıoğlu        NPperson;
+Karaalioğlu       NPperson;
+Kırbayır          NPperson;
+Evcilmen          NPperson;
+Özçivit           NPperson;
+Yağtu             NPperson;
+Dilipak           NPperson;
+Tüzünataç         NPperson;
+Güzelbey          NPperson;
+Bardakoğlu        NPperson;
+Gümrükçüoğlu      NPperson;
+İnceman           NPperson;
+Hacısalihoğlu     NPperson;
+Yerlitaş          NPperson;
+Kozinoğlu         NPperson;
+Tütüneker         NPperson;
+Karamanoğlu       NPperson;
+Çelikay           NPperson;
+Kasapoğlu         NPperson;
+Koçman            NPperson;
+Özdebir           NPperson;
+Delican           NPperson;
+Epözdemir         NPperson;
+Gülman            NPperson;
+Küçükçiftlik      NPperson;
+Eyyubi            NPperson;
+Çerkezoğlu        NPperson;
+Karaçöl           NPperson;
+
 
 !
 ! TODO: we better analyze produce all surnames with -lI suffix from
@@ -13671,6 +13792,18 @@ Hanzel                  NPperson;
 Polyanna                NPperson;
 Şostakoviç              NPperson;
 Süpermen                NPperson;
+Çipras                  NPperson;
+Bağdadi                 NPperson;
+Yorgo                   NPperson;
+Kalaşnikof              NPperson;
+Ibrahimovic             NPperson;
+İbrahimovic             NPperson;
+Timoşenko               NPperson;
+Zencani                 NPperson;
+Perwer                  NPperson;
+Etyen                   NPperson;
+Hayko                   NPperson;
+Şimon                   NPperson;
 
 
 ! misc.
@@ -13682,3 +13815,4 @@ Kirkor                  NPperson;
 Kuve                    NPperson;
 Miskoye                 NPperson;
 Tontoş                  NPperson;
+Bediüzzaman             NPperson;
