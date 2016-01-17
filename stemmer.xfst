@@ -26,31 +26,20 @@ define ConsV b | d | c | g | v | z | j | f | ğ | l | m | n | r | w | y | B | D 
 define ConsUV p | t | ç | k | f | s | ş | h | P | T | Ç | K | F | S | Ş | H | %^sUC;
 define Cons  ConsV | ConsUV;
 
-
-
 define PoStag "<" ASCIIupper ?*  ">";
 
-
-define stem  ?* ->@ 0 || PoStag _  
-#if (STEMMER_KEEP_ROOT_POS == 0 && STEMMER_LEMMATIZE == 0)
-         .o. PoStag -> 0
+define stem  ?* ->@ 0 || PoStag _ 
+#if (STEMMER_LEMMATIZE == 1)
+    .o. [ %< V %> -> m e k %< V %> || Vf Cons* _ ]
+    .o. [ %< V %> -> m a k %< V %> || Vb Cons* _ ]
+#endif 
+#if (STEMMER_KEEP_ROOT_POS == 0)
+    .o.PoStag -> 0 || _ .#.
 #endif
-        ;
+;
 
 define stems stem.i .o. @"trmorph.fst";
 
-#if (STEMMER_LEMMATIZE == 1)
-    define stemmer  ?* 
-#if (STEMMER_KEEP_ROOT_POS == 0)
-               .o. [ 0 <- %< \">"+ %> ] 
-#endif
-               .o. [ mek %< V %> <- %< V %> || Vf Cons* _ ] 
-               .o. [ mak %< V %> <- %< V %> || Vb Cons* _ ] 
-               .o. stems;
-#else
-    define stemmer stems;
-#endif 
-
-regex stemmer;
+regex stems;
 
 save stack stem.fst
