@@ -210,21 +210,6 @@ LEXICON insPostPadjKi
                         insPostPKi;
 
 !
-! instrumetnal/commutative complement
-!
-
-LEXICON insPostPadj
-%<Postp%:adj%:insC%>:@RB    AdjCont;
-                        insPostP;
-
-LEXICON insPostP
-%<Postp%:adv%:insC%>:@RB    AdvCont;
-
-LEXICON insPostPKi
-%<Postp%:adv%:insC%>:@RB    AdvCont;
-%<Postp%:adv%:insC%>:@RB    Ki;
-
-!
 ! these require a complement with either -lI or -sIz
 !
 
