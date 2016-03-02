@@ -27,13 +27,18 @@ read lexc analyzer.cpp.lexc
 eliminate flags
 define Lexicon;
 
+define url @"lib/url.fst";
+define email @"lib/email.fst";
+
+! define Lexicon [ Lexicon | url | email];
+
 source morph-phon.cpp.xfst
 
 !
 ! Put all of them together. The order is important. 
 !
 clear stack
-read regex     collapseAsymbols.i
+define analyzer  collapseAsymbols.i
            .o. AFilter 
            .o. Lexicon 
            .o. delStressMarks
@@ -82,6 +87,12 @@ read regex     collapseAsymbols.i
 #if (ALLCAPS == 1)
            .o. AllCaps 
 #endif
-           ;
+            ;
+
+regex analyzer 
+#if (ANALYZE_URLS == 1)
+    | url | email
+#endif
+    ;
 
 save stack trmorph.fst

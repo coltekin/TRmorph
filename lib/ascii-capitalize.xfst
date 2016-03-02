@@ -1,0 +1,15 @@
+! ascii-capitalize.xfst
+!
+! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
+! This file is part of TRmorph, released under the terms of 
+! the MIT License. See the file LICENSE  or 
+! <https://opensource.org/licenses/MIT> for details.
+!
+! This transducer optinally capitalizes the input ASCII string.
+
+regex a (->) A, b (->) B, c (->) C, d (->) D, 
+      e (->) E, f (->) F, g (->) G, h (->) H, i (->) I,
+      j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O,
+      p (->) P, r (->) R, s (->) S, t (->) T, q (->) Q, u (->) U,
+      v (->) V, w (->) W, x (->) X, y (->) Y, z (->) Z
+  || .#. _ ;

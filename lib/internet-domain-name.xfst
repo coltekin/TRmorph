@@ -1,0 +1,21 @@
+! internet-domain-name.xfst
+!
+! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
+! This file is part of TRmorph, released under the terms of 
+! the MIT License. See the file LICENSE  or 
+! <https://opensource.org/licenses/MIT> for details.
+!
+
+define ASCIIlower @"ascii-lower.fst";
+define digit @"digit.fst";
+define Capitalize @"ascii-capitalize.fst";
+define AllCaps @"ascii-allcaps.fst";
+define TLD @"dns-tld.fst";
+
+define HostName [[ASCIIlower|digit]
+                 [[ASCIIlower|digit]|%-]^{0,63}
+!                 [[ASCIIlower|digit]|%-]+
+                 [ASCIIlower|digit]]
+                .o. [Capitalize | AllCaps];
+
+regex [HostName [%. HostName]* [%. TLD]].l;

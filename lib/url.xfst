@@ -1,0 +1,30 @@
+! url.xfst
+!
+! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
+! This file is part of TRmorph, released under the terms of 
+! the MIT License. See the file LICENSE  or 
+! <https://opensource.org/licenses/MIT> for details.
+!
+! This automat recognizes common URL patterns.
+
+define ASCII @"ascii.fst";
+define digit @"digit.fst";
+define DomainName @"internet-domain-name.fst";
+define ipv4addr @"ip-addr.fst";
+define EmailString @"";
+
+
+define URLPathChar ASCII|digit|%/|%.|%-|%_|%~|%$|%?|%&|%%|%'|%#|%(|%)|%*|%+|%,|%;|%=|%:|%@|%!;
+
+define URLstring [[[{http}|
+                    {ftp}|
+                    {https}] %: %/ %/ ]
+                 |[[{www}|
+                   {ftp}] %. ]
+                 ] [DomainName | ipv4addr | {localhost}]
+                   (%: digit^{1,5})
+                   (%/ URLPathChar+)
+                | {mailto%:} EmailString;
+
+! regex URLstring %<URL%>:%@RB;
+regex URLstring %<URL%>:0;

@@ -1,0 +1,18 @@
+! email-string.xfst
+!
+! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
+! This file is part of TRmorph, released under the terms of 
+! the MIT License. See the file LICENSE  or 
+! <https://opensource.org/licenses/MIT> for details.
+!
+! This automata accepts valid email strings.
+!
+
+define DomainName @"internet-domain-name.fst";
+define IPv4addr  @"ip-addr.fst";
+define digit @"digit.fst";
+define ASCII @"ascii.fst";
+
+define EmailUserChar ASCII|digit|%.|%-|%_|%+;
+
+regex EmailUserChar+ %@ [DomainName | IPv4addr | {localhost} ];

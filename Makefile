@@ -8,6 +8,7 @@ TARGETS=trmorph.fst segment.fst stem.fst guess.fst hyphenate.fst
 LEXCSRC=analyzer.lexc guesser.lexc morph.lexc number.lexc url.lexc exceptions.lexc
 XFSTSRC=analyzer.xfst guesser.xfst hyphenate.xfst morph-phon.xfst segment.xfst stemmer.xfst g2p.xfst
 DEPDIR=.dep
+SUBDIRS=lib
 
 %.cpp.lexc: %.lexc $(DEPDIR)/%.lexc.P
 	$(CPP) -o $@ $<
@@ -23,19 +24,24 @@ $(DEPDIR)/%.xfst.P: %.xfst
 	mkdir -p $(DEPDIR)
 	$(MAKEDEP) $< $@
 
+.PHONY: subdirs all analyzer
 
 analyzer: trmorph.fst
 
+subdirs: 
+	for dir in $(SUBDIRS); do  $(MAKE) -j 2 -C $$dir;  done
+
+
 all: analyzer segmenter stemmer guesser
 
-trmorph.fst: analyzer.cpp.xfst analyzer.cpp.lexc morph-phon.cpp.xfst
+trmorph.fst: subdirs analyzer.cpp.xfst analyzer.cpp.lexc morph-phon.cpp.xfst
 	foma -f analyzer.cpp.xfst
 
 #
 # a simple segmenter
 #
-segmenter: segment.fst
-segment.fst: segment.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
+segmenter: subdirs segment.fst
+segment.fst: subdirs segment.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
 	foma -f segment.cpp.xfst
 
 #
@@ -43,7 +49,7 @@ segment.fst: segment.cpp.xfst morph.cpp.lexc morph-phon.cpp.xfst
 #
 stemmer: stem.fst 
 
-stem.fst: stemmer.cpp.xfst trmorph.fst
+stem.fst: subdirs stemmer.cpp.xfst trmorph.fst
 	foma -f stemmer.cpp.xfst
 
 #
@@ -51,15 +57,15 @@ stem.fst: stemmer.cpp.xfst trmorph.fst
 #
 guesser: guess.fst analyze_guess.fst
 
-guess.fst: guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
+guess.fst: subdirs guesser.cpp.lexc guesser.cpp.xfst morph-phon.cpp.xfst
 	foma -f guesser.cpp.xfst
 
-analyze_guess.fst: analyze_guess.xfst guess.fst trmorph.fst
+analyze_guess.fst: subdirs analyze_guess.xfst guess.fst trmorph.fst
 	foma -f analyze_guess.xfst
 
 hyphenate: hyphenate.fst
 
-hyphenate.fst: hyphenate.cpp.xfst
+hyphenate.fst: subdirs hyphenate.cpp.xfst
 	foma -f hyphenate.cpp.xfst
 
 #
@@ -67,7 +73,7 @@ hyphenate.fst: hyphenate.cpp.xfst
 #
 g2p: g2p.fst 
 
-g2p.fst: morph-phon.cpp.xfst g2p.cpp.xfst
+g2p.fst: subdirs morph-phon.cpp.xfst g2p.cpp.xfst
 	foma -f g2p.cpp.xfst
 
 #
