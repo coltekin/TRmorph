@@ -159,7 +159,7 @@ for opt, arg in opts:
         usage()
         sys.exit(-1)
 
-a_re = re.compile(r'([^<]+)(<.*)')
+a_re = re.compile(r'(<|[^<]+)(<.*)')
 
 try:
     mfile = open(model_file, 'r', encoding='utf-8')
