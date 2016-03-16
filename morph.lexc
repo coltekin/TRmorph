@@ -1137,6 +1137,7 @@ LEXICON NumDist
 %<dist%>:^(ş)^Ar@MB       NumDistCont;
 
 LEXICON NumDistCont
+            D_lI;
             #;
 
 
