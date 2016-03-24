@@ -91,7 +91,8 @@ def flookup_open(cmd=None):
         cmd=flookup_cmd
     try:
         p = Popen(cmd, shell=True, bufsize=1,
-                  stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=False)
+                  stdin=PIPE, stdout=PIPE, stderr=PIPE,
+                  universal_newlines=True, close_fds=False)
     except:
         print("Cannot start flookup with `trmorph.fst'", file=sys.stderr)
         sys.exit(-1)
@@ -104,10 +105,11 @@ def flookup_close(handle):
 
 def get_analyses(handle, word):
     alist = []
-    handle.stdin.write(bytes(word + "\n", 'utf-8'))
+    if len(word) == 0: return alist
+    handle.stdin.write(word + "\n")
     handle.stdin.flush()
     for astring in handle.stdout:
-        a = astring.decode('utf-8').strip()
+        a = astring.strip()
         if a:
             if a == '+?': continue 
             alist.append(a)
@@ -132,17 +134,19 @@ def usage():
         -f, --flookup-cmd   Command to run for obtaining alternative
                             analses. default="flookup -b -x ./trmorph.fst"
         -m, --model-file    The file with the trained model. default='1M.m2'
+        -N, --no-newline    Suppress newline between the analyses
         """.format(sys.argv[0]))
 
 #-- main --
 
 
-opts, args = getopt.getopt(sys.argv[1:],"h1nsf:m:",["help","best-parse","no-word", "no-score",'flookup-cmd', 'model-file'])
+opts, args = getopt.getopt(sys.argv[1:],"h1nsNf:m:",["help","best-parse","no-word", "no-score", 'no-newline', 'flookup-cmd', 'model-file'])
 
 onlybest = False
 model_file = '1M.m2'
 print_score = True
 print_word = True
+print_newline = True
 flookup_cmd="flookup -b -x ./trmorph.fst"
 for opt, arg in opts:
     if opt in ("-1", "--best-parse"):
@@ -155,6 +159,8 @@ for opt, arg in opts:
         flookup_cmd=arg
     elif opt in ("-m", "--model-file"):
         model_file=arg
+    elif opt in ("-N", "--no-newline"):
+        print_newline = False
     else:
         usage()
         sys.exit(-1)
@@ -174,6 +180,9 @@ trmorph = flookup_open(flookup_cmd)
 
 for line in input_stream:
     w = line.strip()
+    if len(w) == 0:
+        print(file=output_stream)
+        continue
     alist = get_analyses(trmorph, w)
 
     if len(alist) == 0:
@@ -194,4 +203,5 @@ for line in input_stream:
             print('{:.2f}: {}{}'.format(sc, ww, a), file=output_stream)
         else:
             print('{}{}'.format(ww, a), file=output_stream)
-    print(file=output_stream)
+    if print_newline:
+        print(file=output_stream)
