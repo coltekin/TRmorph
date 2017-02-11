@@ -49,6 +49,7 @@ LEXICON Number
     NumberNumeric;
     NumberRoman;
     NumDateTime;
+    NumFraction;
 
 LEXICON NumberAlpha
     n0;
@@ -458,6 +459,7 @@ LEXICON     n1tCont
 
 LEXICON NumberNumeric
 <%0|1|2|3|4|5|6|7|8|9>  FirstNum;
+<¹|²|³½|¼|¾>            NumericStem;
                         NumPercent;
                         dSep;
 
@@ -603,3 +605,10 @@ LEXICON NumDateTime
    [[(%0) [1|2|3|4|5|6|7|8|9]]|
    [[1|2] [%0|1|2|3|4|5|6|7|8|9]]|
    [3     [%0|1]]] >                        DateStem;
+
+% Trivial acceptor for fraction expressions like 1/4
+LEXICON NumFraction
+< [%0|1|2|3|4|5|6|7|8|9]+
+   %/
+  [%0|1|2|3|4|5|6|7|8|9]+ >                 NumericStem;
+

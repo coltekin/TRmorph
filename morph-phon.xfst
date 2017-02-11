@@ -153,8 +153,8 @@ define NumericInsSilentP [..] -> %^sBRV %^sVC || %0^{12,14} ./. %@tSep  _ %@RB
                      .o. [..] -> %^sBUV %^sVC || 9 %0      _ %@RB
                      .o. [..] -> %^sBUV %^sVC || %0        _ %@RB
                      .o. [..] -> %^sFUV %^sVC || 1         _ %@RB
-                     .o. [..] -> %^sFUV       || 2         _ %@RB
-                     .o. [..] -> %^sFRV %^sUC || [3|4]     _ %@RB
+                     .o. [..] -> %^sFUV       || [2|½]     _ %@RB
+                     .o. [..] -> %^sFRV %^sUC || [3|4|¼|¾] _ %@RB
                      .o. [..] -> %^sFUV %^sUC || 5         _ %@RB
                      .o. [..] -> %^sBUV       || 6         _ %@RB
                      .o. [..] -> %^sFUV       || 7         _ %@RB
