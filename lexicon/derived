@@ -1,0 +1,11 @@
+!
+! Some derived forms that should not necessarily be analyzed
+!
+
+gazeteci        N;
+tiyatrocu        N;
+yardımcı        N;
+yayımla         V;
+bağımlı         Adj;
+havalı          Adj;
+köylü           N;

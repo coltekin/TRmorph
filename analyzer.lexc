@@ -64,6 +64,11 @@ EndQuote;
 #include "lexicon/reduplication"
 #include "lexicon/reduplication.part"
 
+! for compatibility with METU-Sabancı treebnak
+#include "lexicon/circumflex"
+#include "lexicon/derived"
+
+
 !
 ! These may be "optionalized", or replaced by a more rule-governed
 ! method in the future.
