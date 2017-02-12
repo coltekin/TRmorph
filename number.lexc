@@ -61,6 +61,7 @@ LEXICON NumberAlpha
     n1m;
     n1g;
     n1t;
+    n1K;
 ! more ??
 
 LEXICON n0
@@ -69,6 +70,7 @@ sıfır   NumStem;
 yarım   NumStem;
 buçuk   NumStem;
 çeyrek  NumStem;
+tek  NumStem;
 
 LEXICON n1 ! 1 to 9
 bir@dB      n1cont;
@@ -442,6 +444,86 @@ LEXICON     n1tCont
     n10;
     n1;
 
+!------------------
+
+LEXICON n1K ! 1,000,000,000,000,000 
+    prefixN1K;
+    N1KNoPrefix;
+
+LEXICON prefixN1K
+    prefixN1K1;
+    prefixN1K10;
+    prefixN1K100;
+
+LEXICON prefixN1K1
+bir@dB      N1K1cont;
+iki@dB      N1K1cont;
+üç@dB       N1K1cont;
+dör^t@dB   N1K1cont;
+beş@dB      N1K1cont;
+altı@dB     N1K1cont;
+yedi@dB     N1K1cont;
+sekiz@dB    N1K1cont;
+dokuz@dB    N1K1cont;
+
+LEXICON N1K1cont
+    N1K;
+
+LEXICON  prefixN1K10
+on@dB       N1K10cont;
+yirmi@dB    N1K10cont;
+otuz@dB     N1K10cont;
+kırk@dB     N1K10cont;
+elli@dB     N1K10cont;
+altmış@dB   N1K10cont;
+yetmiş@dB   N1K10cont;
+seksen@dB   N1K10cont;
+doksan@dB   N1K10cont;
+
+LEXICON N1K10cont
+    N1K;
+    prefixN1K1;
+
+LEXICON  prefixN1K100
+        N1K100pre;
+        N1K100;
+
+LEXICON   N1K100pre
+iki@dB      N1K100preCont;
+üç@dB       N1K100preCont;
+dör^t@dB   N1K100preCont;
+beş@dB      N1K100preCont;
+altı@dB     N1K100preCont;
+yedi@dB     N1K100preCont;
+sekiz@dB    N1K100preCont;
+dokuz@dB    N1K100preCont;
+
+LEXICON   N1K100preCont
+        N1K100;
+
+LEXICON N1K100
+yüz@dB  N1K100Cont;
+
+LEXICON     N1K100Cont
+    N1K;
+    prefixN1K10;
+
+LEXICON N1K
+katrilyon@dB      n1KCont;
+
+LEXICON N1KNoPrefix
+katrilyon@dB   NumStem;
+
+LEXICON     n1KCont
+    NumStem;
+    NumHalf;
+    n1t;
+    n1g;
+    n1m;
+    n1k;
+    n100;
+    n10;
+    n1;
 
 ! Numeric digits: we generate numbers of arbitrary length with
 ! optional thousand separator and possibly one decimal separator.
