@@ -2246,6 +2246,7 @@ LEXICON  Sym
 
 LEXICON Mderiv
         MN_zero;
+        ND_lIk;
 
 LEXICON Nderiv
             D_lI;
@@ -2278,6 +2279,8 @@ LEXICON Pderiv
 LEXICON Jderiv
             JD_lIk;
             D_lI;
+            D_CI;
+            D_sAl;
 #if (ANALYZE_lA == 1)
             D_lA;
 #endif
@@ -2290,6 +2293,7 @@ LEXICON Jderiv
             D_mtrak;
 
 LEXICON Aderiv
+            D_sIz;
             AD_lIk;
             AD_CA;
             AN_zero;
