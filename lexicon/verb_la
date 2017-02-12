@@ -284,7 +284,6 @@ hatırla      V;
 havla        V;
 havuzla      V;
 haydala      V;
-hazırla      V;
 hecele       V;
 hedefle      V;
 herekle      V;
@@ -860,4 +859,6 @@ zorla        V;
 hortumla     V;
 bulutla      V;
 iğretile     V;
+
 mızıkla      V;
+hazırla      V_Rfl;

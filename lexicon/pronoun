@@ -37,6 +37,7 @@ falan             PersPrn3s;
 felan             PersPrn3s;
 filan             PersPrn3s;
 hˈerkes           PersPrn3s;
+hˈerkes           PersPrn3p;    ! for compatibility
 herşey            Prn;
 her% şey          PrnNeg;
 hiçbirşey         PrnNeg;

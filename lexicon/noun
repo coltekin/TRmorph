@@ -5187,7 +5187,6 @@ hafız                 N;
 haf                   N;
 hafniyum              N;
 hafriyat              N;
-hafta                 N;
 hafta% son            Ncomp;
 haftason              Ncomp;
 hahambaşı             N;
@@ -6970,7 +6969,6 @@ karakavza             N;
 karakeçi              N;
 karakılçı^k           N;
 karakol               N;
-karakteristi^k        N;
 karakter              N;
 karakteroloji         N;
 karakuca^k            N;
@@ -7653,7 +7651,6 @@ kirve                 N;
 kısas                 N;
 kısı@DEL@m            N;
 kışı@DEL@r            N;
-kısı^k                N;
 kişili^k              N;
 kişi                  N;
 kısıntı               N;
@@ -8845,7 +8842,6 @@ mahre^k               N;
 mahremiyet            N;
 mahrukat              N;
 mahrumiyet            N;
-mahrum                N;
 mahrut                N;
 mahşer                N;
 mahs^pUl              N;
@@ -15971,3 +15967,47 @@ mortgage^sBUV         N;    ! tinglish
 jean                  N;    ! tinglish 
 jea^sFUVn              N;    ! tinglish 
 go-kart               N;
+
+!
+! Below this line it's new.
+parçacı^k               N; ! dimunitive, but also lexicalized
+u^c                     N;
+evlili^k                N;
+yazı^k                  N;
+bulama^c                N;
+etekli^k                N;
+ezme                    N;
+ezme                    N;
+mezun                   N;
+nişanlı                 N;
+yurtdış             Ncomp;  !  yurtdışı
+tabbule                 N;  ! food
+ikili                   N;
+varoluş                 N;
+ritüel                  N;
+standard                N;  ! common usage - standart
+sabahlı^k               N;
+ortakokul               N;
+ödeme                   N;
+maktul                  N;
+laboratuar              N;  ! laboratuvar 
+korkulu^k               N; 
+gözard                  Ncomp; 
+biz                     N;
+alma^c                  N;
+anababa                 N;
+bilge                   N;
+buyur                   N;  ! in 'buyur etti' only
+buzlu^k                 N;
+çizer                   N;
+dikme                   N;
+demokrat                N;
+deyyus                  N;
+elçili^k                N;
+eşşe^k                  N;
+fail                    N;
+farkındalı^k            N;
+gezgin                  N;
+göçmen                  N;
+hafta                 Ntime;
+hiç                     N;  

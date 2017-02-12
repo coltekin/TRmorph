@@ -2,10 +2,35 @@
 ! Some derived forms that should not necessarily be analyzed
 !
 
+çalışan         N;
 gazeteci        N;
+dondurmacı      N;
+türkücü        N;
+kimayacı        N;
 tiyatrocu        N;
 yardımcı        N;
+balıkçı         N;
+bakıcı          N;
+tarihçi         N;
 yayımla         V;
+ayaklan         V;
+aydınlan        V;
 bağımlı         Adj;
 havalı          Adj;
+gururlu         Adj;
+zamansız        Adj;
+terbiyeli       Adj;
 köylü           N;
+böbürlen        V;
+ilgilen         V;
+andır           V;
+yolculu^k       N;
+içtenli^k       N;
+savcılı^k       N;
+başkanlı^k       N;
+beraberli^k       N;
+başsavcılı^k    N;
+habercili^k    N;
+ayrılı^k    N;
+havacılı^k    N;
+havacılı^k  N;
