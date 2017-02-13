@@ -371,7 +371,9 @@ LEXICON HepPrn
 !
 LEXICON Onom
 %<Onom%>:@RB        OnomCont;
+#if (ALLOW_MREDUP == 1)
 %<Onom%:mredup%>:@MREDUP@RB    OnomCont;
+#endif
 
 LEXICON  OnomCont
                     #;
@@ -385,7 +387,9 @@ LEXICON  OnomCont
 
 LEXICON Interjection
 %<Ij%>:@RB      InterjectionCont;
+#if (ALLOW_MREDUP == 1)
 %<Ij%:mredup%>:@MREDUP@RB    InterjectionCont;
+#endif
 
 LEXICON InterjectionCont
                   #;
@@ -479,14 +483,18 @@ LEXICON EndQuoteCont
 
 LEXICON NPcomp  ! this is only for lexicalized forms with compounding
 @NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;
+#if (ALLOW_MREDUP == 1)
 @NCOMP%<N%:prop%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NPcont;
+#endif
 
 LEXICON NPPart
 %<N%:prop%:partial%>:@RB   NPcont;
 
 LEXICON NP
 %<N%:prop%>:@RB   NPcont;
+#if (ALLOW_MREDUP == 1)
 %<N%:prop%:mredup%>:@MREDUP@RB    NPcont;
+#endif
 
 LEXICON NP_typo
 #if (MARK_TYPOS == 1) 
@@ -523,7 +531,9 @@ LEXICON   NPAposCont
 
 LEXICON NPnation
 %<N%:prop%>:@RB   NPnationCont;
+#if (ALLOW_MREDUP == 1)
 %<N%:prop%:mredup%>:@MREDUP@RB    NPnationCont;
+#endif
 
 LEXICON NPnationCont
                 NPcont;
@@ -531,7 +541,9 @@ LEXICON NPnationCont
 
 LEXICON NPperson
 %<N%:prop%>:@RB   NPpersonCont;
+#if (ALLOW_MREDUP == 1)
 %<N%:prop%:mredup%>:@MREDUP@RB    NPpersonCont;
+#endif
 
 LEXICON NPpersonCont
                 NPcont;
@@ -544,7 +556,9 @@ LEXICON NPpersonCont
 
 LEXICON Ncomp ! this is only for lexicalized forms with compounding
 @NCOMP%<N%>:^(s)^I@NCOMP@RB NcompCont;
+#if (ALLOW_MREDUP == 1)
 @NCOMP%<N%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NcompCont;
+#endif
 
 LEXICON NcompInfl  ! this is for regular nouns
 %<ncomp%>:^(s)^I@NCOMP@MB    NcompCont;
@@ -581,9 +595,11 @@ LEXICON Ninfl
 
 LEXICON Nfamily
 %<N%>:@RB   Ncont;
-%<N%::mredup%>:@MREDUP@RB    Ncont;
 %<N%>:@RB   NfamCont;
+#if (ALLOW_MREDUP == 1)
+%<N%::mredup%>:@MREDUP@RB    Ncont;
 %<N%::mredup%>:@MREDUP@RB    NfamCont;
+#endif
 
 LEXICON NfamCont
 %<p1s%>:^(I)m@MB      NfamPosCont;
@@ -622,7 +638,9 @@ LEXICON NAbbrCont
 
 LEXICON N
 %<N%>:@RB       Ncont;
+#if (ALLOW_MREDUP == 1)
 %<N%:mredup%>:@MREDUP@RB    Ncont;
+#endif
 
 LEXICON N_typo
 #if (MARK_TYPOS == 1) 
@@ -808,7 +826,9 @@ LEXICON DIrEnd
 
 LEXICON Adj
 %<Adj%>:@RB        AdjCont;
+#if (ALLOW_MREDUP == 1)
 %<Adj%:mredup%>:@MREDUP@RB    AdjCont;
+#endif
 
 LEXICON Adj_typo
 #if (MARK_TYPOS == 1) 
@@ -838,7 +858,9 @@ LEXICON AdvHep
 
 LEXICON Adv
 %<Adv%>:@RB         AdvCont;
+#if (ALLOW_MREDUP == 1)
 %<Adv%:mredup%>:@MREDUP@RB    AdvCont;
+#endif
 
 
 LEXICON Adv_typo
@@ -857,19 +879,27 @@ LEXICON AdvPart
                   
 LEXICON QAdv
 %<Adv%:qst%>:@RB  AdvCont;
+#if (ALLOW_MREDUP == 1)
 %<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
+#endif
 
 LEXICON QAdj
 %<Adj%:qst%>:@RB  AdjCont;
+#if (ALLOW_MREDUP == 1)
 %<Adj%:mredup%:qst%>:@MREFUP@RB  AdjCont;
+#endif
 
 LEXICON AdvTime
 %<Adv%>:@RB         AdvTimeCont;
+#if (ALLOW_MREDUP == 1)
 %<Adv%:mredup%>:@MREFUP@RB  AdvTimeCont;
+#endif
 
 LEXICON QAdvTime
 %<Adv%:qst%>:@RB    AdvTimeCont;
+#if (ALLOW_MREDUP == 1)
 %<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
+#endif
 
 LEXICON AdvTimeCont
                     Ki;
@@ -1063,7 +1093,9 @@ LEXICON DateTimeCont
 
 LEXICON NumStem
 %<Num%>:@RB  NumCont;
+#if (ALLOW_MREDUP == 1)
 %<Num%:mredup%>:@MREDUP@RB  NumCont;
+#endif
 
 LEXICON Num_typo
 #if (MARK_TYPOS == 1) 
@@ -1155,7 +1187,9 @@ LEXICON NumDistCont
 
 LEXICON V
 %<V%>:@RB   VCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCont;
+#endif
 
 LEXICON VPartLast
 %<V%:partial%>:@RB   VCont;
@@ -1194,7 +1228,9 @@ LEXICON VNoCausNoAorCont
 
 LEXICON V_Rcp
 %<V%>:@RB   VRcpCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpCont;
+#endif
 
 LEXICON   VRcpCont
                     VCont;
@@ -1207,7 +1243,9 @@ LEXICON VRcp
 
 LEXICON V_Rfl
 %<V%>:@RB   VRflCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflCont;
+#endif
 
 LEXICON   VRflCont
                     VCont;
@@ -1228,7 +1266,9 @@ LEXICON  VRflRcpCont
 
 LEXICON V_CausDir
 %<V%>:@RB           VCausDirCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausDirCont;
+#endif
 
 LEXICON VCausDirCont
                     VCausDir;
@@ -1241,7 +1281,9 @@ LEXICON VCausDir
 !
 LEXICON V_CausIr
 %<V%>:@RB           VCausIrCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausIrCont;
+#endif
 
 LEXICON VCausIrCont
                     VCausIr;
@@ -1254,7 +1296,9 @@ LEXICON VCausIr
 !
 LEXICON V_CausIt
 %<V%>:@RB           VCausItCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausItCont;
+#endif
 
 LEXICON VCausItCont
                     VCausIt;
@@ -1267,7 +1311,9 @@ LEXICON VCausIt
 !
 LEXICON V_Rcp_CausDir
 %<V%>:@RB           VRcpCausDirCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpCausDirCont;
+#endif
 
 LEXICON VRcpCausDirCont
                     VRcp;
@@ -1291,7 +1337,9 @@ LEXICON VRcpCausDirCont
 
 LEXICON V_CausIrreg
 %<V%>:@RB           VCausIrregCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausIrregCont;
+#endif
 
 LEXICON VCausIrregCont
                   VNoCausCont;
@@ -1307,7 +1355,9 @@ LEXICON VCausIrregCont
 
 LEXICON V_Rfl_Rcp_CausIrreg
 %<V%>:@RB           VRflRcpCausIrregCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflRcpCausIrregCont;
+#endif
 
 LEXICON VRflRcpCausIrregCont
                  VRfl;
@@ -1317,7 +1367,9 @@ LEXICON VRflRcpCausIrregCont
 
 LEXICON V_AorAr
 %<V%>:@RB           VAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VAorArCont;
+#endif
 
 LEXICON VAorArCont
             VAorAr;
@@ -1335,7 +1387,9 @@ LEXICON   AorArCont
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpAorArCont;
+#endif
 
 LEXICON  VRcpAorArCont
             VAorAr;
@@ -1345,7 +1399,9 @@ LEXICON  VRcpAorArCont
 
 LEXICON V_Rfl_AorAr
 %<V%>:@RB           VRflAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflAorArCont;
+#endif
 
 
 LEXICON  VRflAorArCont
@@ -1356,7 +1412,9 @@ LEXICON  VRflAorArCont
 
 LEXICON  V_Rfl_Rcp_AorAr
 %<V%>:@RB           VRflRcpAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflRcpAorArCont;
+#endif
 
 
 LEXICON  VRflRcpAorArCont
@@ -1368,7 +1426,9 @@ LEXICON  VRflRcpAorArCont
 
 LEXICON V_CausDir_AorAr
 %<V%>:@RB           VCausDirAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausDirAorArCont;
+#endif
 
 LEXICON VCausDirAorArCont
                         VAorAr;
@@ -1378,7 +1438,9 @@ LEXICON VCausDirAorArCont
 
 LEXICON V_CausIr_AorAr
 %<V%>:@RB           VCausIrAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausIrAorArCont;
+#endif
 
 LEXICON VCausIrAorArCont
                         VAorAr;
@@ -1388,7 +1450,9 @@ LEXICON VCausIrAorArCont
 
 LEXICON V_CausAt_AorAr
 %<V%>:@RB           VCausAtAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausAtAorArCont;
+#endif
 
 LEXICON VCausAtAorArCont
                         VAorAr;
@@ -1401,7 +1465,9 @@ LEXICON VCausAt
 
 LEXICON V_Rcp_CausAr_AorAr
 %<V%>:@RB           VRcpCausArAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpCausArAorArCont;
+#endif
 
 LEXICON VRcpCausArAorArCont
                         VRcp;
@@ -1412,7 +1478,9 @@ LEXICON VRcpCausArAorArCont
 
 LEXICON V_Rcp_CausIr_AorAr
 %<V%>:@RB                   VRcpAorArCausIrCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB    VRcpAorArCausIrCont;
+#endif
 
 LEXICON VRcpAorArCausIrCont
             VAorAr;
@@ -1425,7 +1493,9 @@ LEXICON VRcpAorArCausIrCont
 !
 LEXICON V_CausAr_AorAr
 %<V%>:@RB           VCausArAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausArAorArCont;
+#endif
 
 
 LEXICON VCausArAorArCont
@@ -1440,7 +1510,9 @@ LEXICON VCausAr
 !
 LEXICON V_CausArt_AorAr
 %<V%>:@RB           VCausArtAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausArtAorArCont;
+#endif
 
 LEXICON VCausArtAorArCont
                         VAorAr;
@@ -1454,7 +1526,9 @@ LEXICON VCausArt
 !
 LEXICON V_CausIt_AorAr
 %<V%>:@RB           VCausItAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausItAorArCont;
+#endif
 
 LEXICON VCausItAorArCont
                         VAorAr;
@@ -1465,7 +1539,9 @@ LEXICON VCausItAorArCont
 !
 LEXICON V_Rcp_CausDir_AorAr
 %<V%>:@RB           VRcpCausDirAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpCausDirAorArCont;
+#endif
 
 LEXICON VRcpCausDirAorArCont
                         VAorAr;
@@ -1476,7 +1552,9 @@ LEXICON VRcpCausDirAorArCont
 
 LEXICON V_Rfl_CausDir_AorAr
 %<V%>:@RB           VRflCausDirAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflCausDirAorArCont;
+#endif
 
 LEXICON VRflCausDirAorArCont
                         VAorAr;
@@ -1487,7 +1565,9 @@ LEXICON VRflCausDirAorArCont
 
 LEXICON V_Rfl_Rcp_CausDir_AorAr
 %<V%>:@RB           VRflRcpCausDirAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflRcpCausDirAorArCont;
+#endif
 
 
 LEXICON VRflRcpCausDirAorArCont
@@ -1500,7 +1580,9 @@ LEXICON VRflRcpCausDirAorArCont
 
 LEXICON V_CausIrreg_AorAr
 %<V%>:@RB           VCausIrregAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VCausIrregAorArCont;
+#endif
 
 LEXICON VCausIrregAorArCont
                         VAorAr;
@@ -1509,11 +1591,15 @@ LEXICON VCausIrregAorArCont
 
 LEXICON V_Rcp_CausIrreg_AorAr
 %<V%>:@RB           VRcpCausIrregAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRcpCausIrregAorArCont;
+#endif
 
 LEXICON V_Rfl_CausIrreg_AorAr
 %<V%>:@RB           VRflCausIrregAorArCont;
+#if (ALLOW_MREDUP == 1)
 %<V%:mredup%>:@MREDUP@RB   VRflCausIrregAorArCont;
+#endif
 
 LEXICON VRflCausIrregAorArCont
                         VRfl;
