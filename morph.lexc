@@ -207,7 +207,7 @@ LEXICON insPostP
 
 LEXICON insPostPadjKi
 %<Postp%:adj%:insC%>:@RB    AdjCont;
-                        insPostPKi;
+%<Postp%:adj%:insC%>:@RB    Ki;
 
 !
 ! these require a complement with either -lI or -sIz
@@ -2371,7 +2371,7 @@ LEXICON   AD_lIk
 !
 !
 LEXICON   D_arasi
-%<arasi%>:arası            DerivJCont;
+%<arasi%>:arası@MB            DerivJCont;
 
 ! -(I)mtrak mainly attaches adjectives relating to colors and
 ! tastes, but it may also attach to other adjectives an nouns.
@@ -2381,24 +2381,24 @@ LEXICON   D_arasi
 !       film-trak, sağlam-trak
 
 LEXICON D_mtrak
-%<imtrak%>:^(I)mtrak              DerivJCont;
+%<imtrak%>:^(I)mtrak@MB              DerivJCont;
 
 ! -(I)msI also makes adjectives from nouns and adjectives.
 !           mavi-msi, tatlı-msı, gül-ümsü
 !
 LEXICON   D_imsi
-%<imsi%>:^(I)ms^I     DerivJCont;
+%<imsi%>:^(I)ms^I@MB     DerivJCont;
 
 ! -sI also makes adjectives from nouns.
 !           ot-su, sümük-sü, kadın-sı etc.
 ! This seems to be used only with nouns ending with a consononant.
 !
 LEXICON   D_si
-%<si%>:s^I     DerivJCont;
+%<si%>:s^I@MB     DerivJCont;
 
 !
 LEXICON   D_imsi
-%<imsi%>:^(I)ms^I     DerivJCont;
+%<imsi%>:^(I)ms^I@MB     DerivJCont;
 
 ! Dimunitive suffixes.
 !
@@ -2477,7 +2477,7 @@ LEXICON CliticSA
 !   TODO/CHECK: these may all be lexicalized.
 !
 LEXICON D_yIcI
-%<yici%>:^(y)^Ic^I      DerivJCont;
+%<yici%>:^(y)^Ic^I@MB      DerivJCont;
 
 ! -CIl makes adjectives from nouns
 !       N->J insancıl,
@@ -2488,7 +2488,7 @@ LEXICON D_yIcI
 !  N->N 
 
 LEXICON D_CIl
-%<cil%>:^C^Il              DerivJCont;
+%<cil%>:^C^Il@MB              DerivJCont;
 
 
 ! -gil makes nouns from nouns. 
@@ -2498,7 +2498,7 @@ LEXICON D_CIl
 !      al be lexicalized.
 !
 LEXICON D_gil
-%<gil%>:gil       DerivNCont;
+%<gil%>:gil@MB       DerivNCont;
 
 ! -DIr  makes adverbial phrases from quantified nouns specifying time 
 !       üç gündür, bir zamandır ....
@@ -2506,7 +2506,7 @@ LEXICON D_gil
 ! TODO: tag is the same as other <dir>
 !
 LEXICON D_dir
-%<dir%>:^D^NS^Ir      DerivACont;
+%<dir%>:^D^NS^Ir@MB      DerivACont;
 
 
 ! -lArI makes adverbs from time adverbials `akşamları', `hafta
@@ -2517,7 +2517,7 @@ LEXICON D_dir
 ! slightly different than the ones that combines with -ki
 !
 LEXICON D_lArI
-%<leri%>:l^Ar^I      DerivACont;
+%<leri%>:l^Ar^I@MB      DerivACont;
 
 
 ! -lIğInA is another suffix that attaches to the time expressions. It
@@ -2537,16 +2537,16 @@ LEXICON D_lIGInA
 !LEXICON ND_lA
 !%<la%>:l^A       DerivVCont;
 LEXICON D_lA
-%<la%>:l^A       DerivVCont;
+%<la%>:l^A@MB       DerivVCont;
 
 ! -lAn makes verbs from nouns and adjectives
 !
 !       N->V: av-lan, N->J: kuru-lan
 !
 LEXICON ND_lAn
-%<lan%>:l^An       DerivVCont;
+%<lan%>:l^An@MB       DerivVCont;
 LEXICON JD_lAn
-%<lan%>:l^An       DerivVCont;
+%<lan%>:l^An@MB       DerivVCont;
 
 ! -lAş makes verbs from nouns and adjectives
 !
@@ -2554,9 +2554,9 @@ LEXICON JD_lAn
 !
 !   TODO/CHECK: these may all be lexicalized verbs
 LEXICON ND_lAS
-%<las%>:l^Aş       DerivVCont;
+%<las%>:l^Aş@MB       DerivVCont;
 LEXICON JD_lAS
-%<las%>:l^Aş       DerivVCont;
+%<las%>:l^Aş@MB       DerivVCont;
 
 ! -(y)Iş makes nouns from verbs
 !       yürüyüş, duruş, bakış
@@ -2564,7 +2564,7 @@ LEXICON JD_lAS
 !   TODO: these probably are also lexicalized
 !
 LEXICON D_yIS
-%<yis%>:^(y)^Iş   DerivNCont;
+%<yis%>:^(y)^Iş@MB   DerivNCont;
 
 ! -mA makes nouns and adjectives from verbs
 !    V->N: ödeme, arama, kıyma, kesme
@@ -2580,7 +2580,7 @@ LEXICON D_yIS
 !       bilimsel, tarihsel, duşsel...
 !
 LEXICON D_sAl
-%<sal%>:s^Al  DerivJCont;
+%<sal%>:s^Al@MB  DerivJCont;
 
 
 LEXICON JN_zero
