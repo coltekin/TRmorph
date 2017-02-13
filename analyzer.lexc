@@ -66,7 +66,7 @@ EndQuote;
 
 ! for compatibility with METU-Sabancı treebnak
 #include "lexicon/circumflex"
-#include "lexicon/derived"
+#include "lexicon/new-items"
 
 
 !
