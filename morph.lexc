@@ -1384,6 +1384,8 @@ LEXICON   AorArCont
                     CVcesinePagr;
                     VerbalAdj;
                     AbilPartial;
+!                    DerivNCont;
+!                    DerivJCont;
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
@@ -1725,6 +1727,8 @@ LEXICON AorCont
             TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
             CVcesinePagr;
             VerbalAdj;
+!            DerivNCont;
+!            DerivJCont;
 
 LEXICON TAMFutCont
             TAMg1Cont;
@@ -2388,8 +2392,14 @@ LEXICON Aderiv
 LEXICON Vderiv
             D_yIcI;
             D_yIS;
-!            D_mA;
             D_yAsI;
+!            D_mA;
+
+!            D_inc;
+!            D_ik;
+!            D_ek;
+!            D_ey;
+!            D_ev;
 
 LEXICON Oderiv
             D_lA;
@@ -2658,9 +2668,54 @@ LEXICON D_yIS
 ! these probably are also lexicalized, and this creates a lot of
 ! ambiguity (-mA is also a subordinating suffix). So it's out.
 !
-!LEXICON D_mA
-!%<ma%>:m^A   DerivNCont;
-!%<ma%>:m^A   DerivJCont;
+! LEXICON D_mA
+! %<ma%>:m^A@MB   DerivNCont;
+! %<ma%>:m^A@MB   DerivJCont;
+
+
+! non-productive derivation -(I)nC
+! V -> N: bas-ınç
+! V -> J: kıskan-ç
+! For stems ending with 'n', the form is '-C', we let them pass here
+! and drop In after a a stem ending with 'n'
+!
+! LEXICON D_inc
+! %<inc%>:^(I)n^c@MB   DerivNCont;
+! %<inc%>:^(I)n^c@MB   DerivJCont;
+
+
+! non-productive(?) derivation -(I)K
+! V -> N: kay-ık
+! V -> J: sol-uk
+!
+! LEXICON D_ik
+! %<ik%>:^(I)^k@MB   DerivNCont;
+! %<ik%>:^(I)^k@MB   DerivJCont;
+
+! non-productive derivation -(A)K
+! V -> N: kay-ak
+! V -> J: kork-ak
+!
+! seems to be realted to -(I)K above, but the distinction is not
+! clearcut
+!
+! LEXICON D_ek
+! %<ek%>:^(A)^k@MB   DerivNCont;
+! %<ek%>:^(A)^k@MB   DerivJCont;
+
+! non-productive derivation -(A)y
+! V -> N: den-ey
+! V -> J: düş-ey
+!
+! LEXICON D_ey
+! %<ey%>:^(A)y@MB   DerivNCont;
+! %<ey%>:^(A)y@MB   DerivJCont;
+
+! non-productive derivation -(A)v
+! V -> N: gör-ev
+!
+! LEXICON D_ev
+! %<ev%>:^(A)v@MB   DerivNCont;
 
 ! -sAl makes adjectives from nouns
 !       bilimsel, tarihsel, duşsel...
