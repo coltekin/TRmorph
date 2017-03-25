@@ -642,13 +642,15 @@ define VoicingAssimilation  [ %^D (->) t ,
 define VoicingAssimilation  [ %^D -> t , 
 #endif
 #if (RELAXED_C_ASSIMILATION == 1)
-                              %^C (->) ç  
+                              %^C (->) ç,
 #else
-                              %^C -> ç  
+                              %^C -> ç,
 #endif
+                              %^G -> k  
                              || ConsUV [ IntSym | AposSym]* _ ]
                        .o.  [ %^D -> d,
-                              %^C -> c ];
+                              %^C -> c,
+                              %^G -> g ];
 
 !
 ! Reduplication of some root final consonants (gemination)
