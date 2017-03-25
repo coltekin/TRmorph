@@ -1384,8 +1384,8 @@ LEXICON   AorArCont
                     CVcesinePagr;
                     VerbalAdj;
                     AbilPartial;
-!                    DerivNCont;
-!                    DerivJCont;
+                    DerivNCont;
+                    DerivJCont;
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
@@ -1727,8 +1727,8 @@ LEXICON AorCont
             TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
             CVcesinePagr;
             VerbalAdj;
-!            DerivNCont;
-!            DerivJCont;
+            DerivNCont;
+            DerivJCont;
 
 LEXICON TAMFutCont
             TAMg1Cont;
@@ -2356,10 +2356,10 @@ LEXICON Nderiv
             D_si;
             D_mtrak;
 !            D_gil; ! this works only in special cases.
-!            D_inc;  ! ilgi-nç - any other?
-!            D_al;
-!            D_ik;
-!            D_em;
+            D_inc;  ! ilgi-nç - any other?
+            D_al;
+            D_ik;
+            D_em;
 
 LEXICON Pderiv
             D_lI;
@@ -2397,17 +2397,17 @@ LEXICON Vderiv
             D_yIcI;
             D_yIS;
             D_yAsI;
-!            D_mA;
-!
-!            D_inc;
-!            D_ik;
-!            D_ek;
-!            D_ey;
-!            D_ev;
-!            D_gin;
-!            D_gi;
-!            D_em;
-!            D_im;
+            D_mA;
+
+            D_inc;
+            D_ik;
+            D_ek;
+            D_ey;
+            D_ev;
+            D_gin;
+            D_gi;
+            D_em;
+            D_im;
 
 LEXICON Oderiv
             D_lA;
@@ -2676,9 +2676,9 @@ LEXICON D_yIS
 ! these probably are also lexicalized, and this creates a lot of
 ! ambiguity (-mA is also a subordinating suffix). So it's out.
 !
-! LEXICON D_mA
-! %<ma%>:m^A@MB   DerivNCont;
-! %<ma%>:m^A@MB   DerivJCont;
+LEXICON D_mA
+%<ma%>:m^A@MB   DerivNCont;
+%<ma%>:m^A@MB   DerivJCont;
 
 
 ! non-productive derivation -(I)nC
@@ -2689,18 +2689,18 @@ LEXICON D_yIS
 ! and drop In after a a stem ending with 'n'
 ! TODO: öd(e)-ünç?
 !
-! LEXICON D_inc
-! %<inc%>:^(I)n^c@MB   DerivNCont;
-! %<inc%>:^(I)n^c@MB   DerivJCont;
+LEXICON D_inc
+%<inc%>:^(I)n^c@MB   DerivNCont;
+%<inc%>:^(I)n^c@MB   DerivJCont;
 
 ! non-productive(?) derivation -(I)K
 ! V -> N: kay-ık
 ! V -> J: sol-uk
 ! N -> N/J: orta-k
 !
-! LEXICON D_ik
-! %<ik%>:^(I)^k@MB   DerivNCont;
-! %<ik%>:^(I)^k@MB   DerivJCont;
+LEXICON D_ik
+%<ik%>:^(I)^k@MB   DerivNCont;
+%<ik%>:^(I)^k@MB   DerivJCont;
 
 ! non-productive derivation -(A)K
 ! V -> N: kay-ak
@@ -2709,44 +2709,44 @@ LEXICON D_yIS
 ! seems to be realted to -(I)K above, but the distinction is not
 ! clearcut
 !
-! LEXICON D_ek
-! %<ek%>:^(A)^k@MB   DerivNCont;
-! %<ek%>:^(A)^k@MB   DerivJCont;
+LEXICON D_ek
+%<ek%>:^(A)^k@MB   DerivNCont;
+%<ek%>:^(A)^k@MB   DerivJCont;
 
 ! non-productive derivation -(A)y
 ! V -> N: den-ey
 ! V -> J: düş-ey
 !
-! LEXICON D_ey
-! %<ey%>:^(A)y@MB   DerivNCont;
-! %<ey%>:^(A)y@MB   DerivJCont;
+LEXICON D_ey
+%<ey%>:^(A)y@MB   DerivNCont;
+%<ey%>:^(A)y@MB   DerivJCont;
 
 ! non-productive derivation -(A)v
 ! V -> N: gör-ev
 !
-! LEXICON D_ev
-! %<ev%>:^(A)v@MB   DerivNCont;
+LEXICON D_ev
+%<ev%>:^(A)v@MB   DerivNCont;
 
 ! non-productive derivation -GIn
 ! V -> N: bas-kın, sür-gün
 ! V -> J: yor-gun, şaş-kın
 !
-! LEXICON D_gin
-! %<gin%>:^G^In@MB   DerivNCont;
-! %<gin%>:^G^In@MB   DerivJCont;
+LEXICON D_gin
+%<gin%>:^G^In@MB   DerivNCont;
+%<gin%>:^G^In@MB   DerivJCont;
 
 ! non-productive derivation -GI
 ! V -> N: sil-gi, sev-gi
 !
-! LEXICON D_gi
-! %<gi%>:^G^I@MB   DerivNCont;
+LEXICON D_gi
+%<gi%>:^G^I@MB   DerivNCont;
 
 ! non-productive derivation -(A)m
 ! V -> N: kur-am, tut-am, dön-em
 ! N -> N: ön-em
 !
-! LEXICON D_em
-! %<em%>:^(A)m@MB   DerivNCont;
+LEXICON D_em
+%<em%>:^(A)m@MB   DerivNCont;
 
 ! non-productive derivation -(I)m/-(y)Im
 ! V -> N: dene-yim, bak-ım, anla-m, bil-im
@@ -2754,9 +2754,9 @@ LEXICON D_yIS
 ! TODO/CHECK: this seems to also attach passive or reflexive forms
 ! (geri-l-im)
 !
-! LEXICON D_im
-! %<im%>:^(I)m@MB   DerivNCont;
-! %<yim%>:^(y)^Im@MB   DerivNCont;
+LEXICON D_im
+%<im%>:^(I)m@MB   DerivNCont;
+%<yim%>:^(y)^Im@MB   DerivNCont;
 
 ! -sAl makes adjectives from nouns
 !       bilimsel, tarihsel, duşsel...
@@ -2767,8 +2767,8 @@ LEXICON D_sAl
 ! -Al is similar to -sAl
 !       yasal, yerel, cinsel, ilkel...
 !
-! LEXICON D_al
-! %<al%>:^Al@MB  DerivJCont;
+LEXICON D_al
+%<al%>:^Al@MB  DerivJCont;
 
 
 LEXICON JN_zero
