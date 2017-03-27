@@ -749,27 +749,50 @@ LEXICON Ki
 !
 
 LEXICON NomPredicatePLU
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                 NomPredPagr;
 %<%0%>%<V%>:@MB                 NomPredPagr3s;
 %<%0%>%<V%>:@MB                 NomPredDir;
 %<%0%>%<V%>:@MB                 CplAll;
 %<%0%>%<V%>:@MB                 #;
+#else
+                                NomPredPagr;
+                                NomPredPagr3s;
+                                NomPredDir;
+                                CplAll;
+                                #;
+#endif
                                        NomPredQ;
                                       CliticSA;
 
 LEXICON NomPredicate
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                       NomPredPagr3p;
+#else
+                                      NomPredPagr3p;
+#endif
                                       NomPredicatePLU;
 
 LEXICON NomPredicateMAK
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                        NomPredPagr3s;
 %<%0%>%<V%>:@MB                        NomPredPagr3p;
 %<%0%>%<V%>:@MB                        NomPredDir;
 %<%0%>%<V%>:@MB                        CplAll;
+#else
+                                       NomPredPagr3s;
+                                       NomPredPagr3p;
+                                       NomPredDir;
+                                       CplAll;
+#endif
                                        NomPredQ;
 
 LEXICON NomPredQ
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                         NomPredQCont;
+#else
+                                        NomPredQCont;
+#endif
 
 LEXICON NomPredQCont
 #if (PREDICATE_WITHOUT_PAGR == 1)
@@ -782,12 +805,18 @@ LEXICON NomPredQCont
 LEXICON NomPredPagr
 %<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2s%>:s^NS^In@MB          NomPredPagrCont;
-%<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
 %<cpl%:pres%>%<1p%>:^(y)^NS^Iz@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2p%>:s^NS^In^Iz@MB       NomPredPagrCont;
+                                        NomPredPagr3s;
 
 LEXICON NomPredPagr3s
+#if (ZERO_COPULA == 1)
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
+#else
+                    #;
+                    CVcesine;
+                    DIrEnd;
+#endif
 
 LEXICON NomPredPagrCont
                     #;
@@ -1771,7 +1800,11 @@ LEXICON TAMg1Cont
 ! above on -makta -yor).
 !
 LEXICON VerbalAdj
+#if (ZERO_DERIV == 1)
 %<%0%>%<Adj%>:@MB       AdjCont;
+#else
+                        AdjCont;
+#endif
 
 
 LEXICON TAMG1QCont
@@ -2772,10 +2805,18 @@ LEXICON D_al
 
 
 LEXICON JN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 LEXICON AN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 ! This may be a way for avoiding duplicated adj/adv entries int he
 ! lexicon
@@ -2783,7 +2824,11 @@ LEXICON AN_zero
 !%<%0%>%<Adj%>:@MB   AdjCont;
 
 LEXICON MN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 !
 !

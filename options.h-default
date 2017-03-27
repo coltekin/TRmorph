@@ -6,6 +6,25 @@
  *
  */
 
+/* ZERO_DERIV   Mark zero derivations.
+ *              
+ *              This option enables/disables marking zero derivations.
+ *              
+ */
+
+#define ZERO_DERIV 1
+
+/* ZERO_COPULA  Mark zero copula.
+ *              
+ *              This option enables/disables marking zero copula.
+ *              If enabled, all nouns and adjectives will be marked
+ *              with <cpl:pres><3s>.
+ *              
+ */
+
+#define ZERO_COPULA 1
+
+
 /* MARK_NCOMP   Use the <ncomp> tag to mark potential heads of nominal
  *              compounds.
  *              This tag creates a lot of ambiguity because it
