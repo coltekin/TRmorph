@@ -21,18 +21,18 @@ with minor modifications regarding limited reduplication implemented using foma'
 
 What is new in this version:
     
-    - This is a complete rewrite using more-familiar Xerox languages 
-      lexc/xfst.
-    - A completely new lexicon, semi-automatically constructed using
-      web corpora and online dictionaries. (more work is needed,
-      though)
-    - A revised tag set.
-    - A few more utilities: stemmer, unknown word guesser,
-      segmenter, and a hyphenation tool.
-    - A manual, in progress, but it is already usable.
-    - New license: this version of TRmorph is distributed under 
-      [MIT License](http://www.gnu.org/licenses/lgpl.html) 
-      (see the file LICENSE).
+- This is a complete rewrite using more-familiar Xerox languages 
+  lexc/xfst.
+- A completely new lexicon, semi-automatically constructed using
+  web corpora and online dictionaries. (more work is needed,
+  though)
+- A revised tag set.
+- A few more utilities: stemmer, unknown word guesser,
+  segmenter, and a hyphenation tool.
+- A manual, in progress, but it is already usable.
+- New license: this version of TRmorph is distributed under 
+  [MIT License](https://opensource.org/licenses/MIT) 
+  (see the file LICENSE).
 
 If you use this analyzer in your research, and want to cite it, please
 cite the appropriate papers from the following list:
