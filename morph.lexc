@@ -2390,6 +2390,11 @@ LEXICON Vderiv
             D_yIS;
 !            D_mA;
             D_yAsI;
+            D_Ik;
+
+LEXICON D_Ik
+%<ik%>:^I^k@MB       DerivJCont;
+
 
 LEXICON Oderiv
             D_lA;
