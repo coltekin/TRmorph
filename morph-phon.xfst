@@ -260,6 +260,13 @@ define DeleteLAR  l %^A r -> 0 || Boundary _ Boundary+ l %^A r
 
 
 !
+! `n' deletion in derivation -InC
+! this happesn after the stems einding with `n'
+!
+
+define DeleteN  %^%(I%) n %^c  -> %^c || n Boundary+ _ %@MB ;
+
+!
 ! `n' insertion after (s) / larI (y) -> (n)
 !
 ! After (s)I and larI -DA -DAn become -nDA -nDAn, (y)A becomes nA
@@ -635,13 +642,15 @@ define VoicingAssimilation  [ %^D (->) t ,
 define VoicingAssimilation  [ %^D -> t , 
 #endif
 #if (RELAXED_C_ASSIMILATION == 1)
-                              %^C (->) ç  
+                              %^C (->) ç,
 #else
-                              %^C -> ç  
+                              %^C -> ç,
 #endif
+                              %^G -> k  
                              || ConsUV [ IntSym | AposSym]* _ ]
                        .o.  [ %^D -> d,
-                              %^C -> c ];
+                              %^C -> c,
+                              %^G -> g ];
 
 !
 ! Reduplication of some root final consonants (gemination)

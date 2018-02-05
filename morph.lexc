@@ -749,27 +749,50 @@ LEXICON Ki
 !
 
 LEXICON NomPredicatePLU
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                 NomPredPagr;
 %<%0%>%<V%>:@MB                 NomPredPagr3s;
 %<%0%>%<V%>:@MB                 NomPredDir;
 %<%0%>%<V%>:@MB                 CplAll;
 %<%0%>%<V%>:@MB                 #;
+#else
+                                NomPredPagr;
+                                NomPredPagr3s;
+                                NomPredDir;
+                                CplAll;
+                                #;
+#endif
                                        NomPredQ;
                                       CliticSA;
 
 LEXICON NomPredicate
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                       NomPredPagr3p;
+#else
+                                      NomPredPagr3p;
+#endif
                                       NomPredicatePLU;
 
 LEXICON NomPredicateMAK
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                        NomPredPagr3s;
 %<%0%>%<V%>:@MB                        NomPredPagr3p;
 %<%0%>%<V%>:@MB                        NomPredDir;
 %<%0%>%<V%>:@MB                        CplAll;
+#else
+                                       NomPredPagr3s;
+                                       NomPredPagr3p;
+                                       NomPredDir;
+                                       CplAll;
+#endif
                                        NomPredQ;
 
 LEXICON NomPredQ
+#if (ZERO_DERIV == 1)
 %<%0%>%<V%>:@MB                         NomPredQCont;
+#else
+                                        NomPredQCont;
+#endif
 
 LEXICON NomPredQCont
 #if (PREDICATE_WITHOUT_PAGR == 1)
@@ -782,12 +805,18 @@ LEXICON NomPredQCont
 LEXICON NomPredPagr
 %<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2s%>:s^NS^In@MB          NomPredPagrCont;
-%<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
 %<cpl%:pres%>%<1p%>:^(y)^NS^Iz@MB       NomPredPagrCont;
 %<cpl%:pres%>%<2p%>:s^NS^In^Iz@MB       NomPredPagrCont;
+                                        NomPredPagr3s;
 
 LEXICON NomPredPagr3s
+#if (ZERO_COPULA == 1)
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
+#else
+                    #;
+                    CVcesine;
+                    DIrEnd;
+#endif
 
 LEXICON NomPredPagrCont
                     #;
@@ -1384,6 +1413,8 @@ LEXICON   AorArCont
                     CVcesinePagr;
                     VerbalAdj;
                     AbilPartial;
+!                    DerivNCont;
+!                    DerivJCont;
 
 LEXICON V_Rcp_AorAr
 %<V%>:@RB           VRcpAorArCont;
@@ -1725,6 +1756,8 @@ LEXICON AorCont
             TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
             CVcesinePagr;
             VerbalAdj;
+!            DerivNCont;
+!            DerivJCont;
 
 LEXICON TAMFutCont
             TAMg1Cont;
@@ -1767,7 +1800,11 @@ LEXICON TAMg1Cont
 ! above on -makta -yor).
 !
 LEXICON VerbalAdj
+#if (ZERO_DERIV == 1)
 %<%0%>%<Adj%>:@MB       AdjCont;
+#else
+                        AdjCont;
+#endif
 
 
 LEXICON TAMG1QCont
@@ -1977,7 +2014,7 @@ LEXICON iCont
 ! -mI is the question particle. In its main use, we mark it as <Q>.
 ! For other uses we also analyze it as an adverb (when used for 
 ! emphasizing: 'güzel mi güzel bir kız') or subordinating conjunction
-! for the cases where it is used as such (Ever vardınız mı bana
+! for the cases where it is used as such (Eve vardınız mı bana
 ! telefon edin')
 !
 
@@ -2352,6 +2389,10 @@ LEXICON Nderiv
             D_si;
             D_mtrak;
 !            D_gil; ! this works only in special cases.
+!            D_inc;  ! ilgi-nç - any other?
+!            D_al;
+!            D_ik;
+!            D_em;
 
 LEXICON Pderiv
             D_lI;
@@ -2388,13 +2429,11 @@ LEXICON Aderiv
 LEXICON Vderiv
             D_yIcI;
             D_yIS;
-!            D_mA;
             D_yAsI;
             D_Ik;
 
 LEXICON D_Ik
 %<ik%>:^I^k@MB       DerivJCont;
-
 
 LEXICON Oderiv
             D_lA;
@@ -2663,9 +2702,87 @@ LEXICON D_yIS
 ! these probably are also lexicalized, and this creates a lot of
 ! ambiguity (-mA is also a subordinating suffix). So it's out.
 !
-!LEXICON D_mA
-!%<ma%>:m^A   DerivNCont;
-!%<ma%>:m^A   DerivJCont;
+! LEXICON D_mA
+! %<ma%>:m^A@MB   DerivNCont;
+! %<ma%>:m^A@MB   DerivJCont;
+
+
+! non-productive derivation -(I)nC
+! V -> N: bas-ınç
+! V -> J: kıskan-ç
+! N -> J: ilgi-nç
+! For stems ending with 'n', the form is '-C', we let them pass here
+! and drop In after a a stem ending with 'n'
+! TODO: öd(e)-ünç?
+!
+! LEXICON D_inc
+! %<inc%>:^(I)n^c@MB   DerivNCont;
+! %<inc%>:^(I)n^c@MB   DerivJCont;
+
+! non-productive(?) derivation -(I)K
+! V -> N: kay-ık
+! V -> J: sol-uk
+! N -> N/J: orta-k
+!
+! LEXICON D_ik
+! %<ik%>:^(I)^k@MB   DerivNCont;
+! %<ik%>:^(I)^k@MB   DerivJCont;
+
+! non-productive derivation -(A)K
+! V -> N: kay-ak
+! V -> J: kork-ak
+!
+! seems to be realted to -(I)K above, but the distinction is not
+! clearcut
+!
+! LEXICON D_ek
+! %<ek%>:^(A)^k@MB   DerivNCont;
+! %<ek%>:^(A)^k@MB   DerivJCont;
+
+! non-productive derivation -(A)y
+! V -> N: den-ey
+! V -> J: düş-ey
+!
+! LEXICON D_ey
+! %<ey%>:^(A)y@MB   DerivNCont;
+! %<ey%>:^(A)y@MB   DerivJCont;
+
+! non-productive derivation -(A)v
+! V -> N: gör-ev
+!
+! LEXICON D_ev
+! %<ev%>:^(A)v@MB   DerivNCont;
+
+! non-productive derivation -GIn
+! V -> N: bas-kın, sür-gün
+! V -> J: yor-gun, şaş-kın
+!
+! LEXICON D_gin
+! %<gin%>:^G^In@MB   DerivNCont;
+! %<gin%>:^G^In@MB   DerivJCont;
+
+! non-productive derivation -GI
+! V -> N: sil-gi, sev-gi
+!
+! LEXICON D_gi
+! %<gi%>:^G^I@MB   DerivNCont;
+
+! non-productive derivation -(A)m
+! V -> N: kur-am, tut-am, dön-em
+! N -> N: ön-em
+!
+! LEXICON D_em
+! %<em%>:^(A)m@MB   DerivNCont;
+
+! non-productive derivation -(I)m/-(y)Im
+! V -> N: dene-yim, bak-ım, anla-m, bil-im
+!
+! TODO/CHECK: this seems to also attach passive or reflexive forms
+! (geri-l-im)
+!
+! LEXICON D_im
+! %<im%>:^(I)m@MB   DerivNCont;
+! %<yim%>:^(y)^Im@MB   DerivNCont;
 
 ! -sAl makes adjectives from nouns
 !       bilimsel, tarihsel, duşsel...
@@ -2673,12 +2790,26 @@ LEXICON D_yIS
 LEXICON D_sAl
 %<sal%>:s^Al@MB  DerivJCont;
 
+! -Al is similar to -sAl
+!       yasal, yerel, cinsel, ilkel...
+!
+! LEXICON D_al
+! %<al%>:^Al@MB  DerivJCont;
+
 
 LEXICON JN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 LEXICON AN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 ! This may be a way for avoiding duplicated adj/adv entries int he
 ! lexicon
@@ -2686,7 +2817,11 @@ LEXICON AN_zero
 !%<%0%>%<Adj%>:@MB   AdjCont;
 
 LEXICON MN_zero
+#if (ZERO_DERIV == 1)
 %<%0%>%<N%>:@MB   Ncont;
+#else
+                  Ncont;
+#endif
 
 !
 !

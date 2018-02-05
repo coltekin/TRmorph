@@ -102,6 +102,10 @@ define analyzeBM  analyzeBasic
            .o. "-" -> 0 // "-" _
            .o. "-" -> 0 ||  _ .#.;
 
+regex analyzeBM.i;
+save stack segment-only.fst
+clear stack
+
 read regex analyzeBM.i .o. analyze;
 
 save stack segment.fst

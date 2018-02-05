@@ -50,6 +50,7 @@ define analyzer  collapseAsymbols.i
            .o. CompNoun
            .o. DeleteSI
            .o. DeleteLAR
+           .o. DeleteN
            .o. InsertN
            .o. DelS
            .o. InsertS

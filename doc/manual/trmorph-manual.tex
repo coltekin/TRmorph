@@ -240,7 +240,7 @@ an inflected word may change its part of speech and may also get further inflect
 Example~(\ref{ig-example}) demonstrates this process with the analysis of of the word \xmpl{evdekilerinki}{the \emph{ones} that belong to the \emph{ones} in the house}, as in `the \emph{book} that belong to the \emph{people} in the house'.
 
 \enumsentence{\label{ig-example}%
-\mroot{ev}\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
+\mroot{ev}\mtag{N}\mtag{loc}\mtag{ki}\mtag{Adj}\\~\hspace{2em}\mtag{0}\mtag{N}\mtag{pl}\mtag{gen}\mtag{ki}\mtag{Adj}}
 
 The example analysis in (\ref{ig-example}) can be broken down into the following parts.
 
@@ -790,7 +790,7 @@ Percent sign before a numeral is treated like a prefix, and tagged as
 
 In written text an apostrophe is required after proper nouns and numbers
 (official rules are more complicated).
-However, the real-world use is rather relaxed, and people tend to omit the apostrophe.
+However, real-world use is rather relaxed, and people tend to omit the apostrophe.
 
 Another difficult case for apostrophe is after the compound proper nouns, 
 like \xmplt{Türkiye Büyük Millet Meclisi}{Grand National Assembly of Turkey}, 
@@ -799,7 +799,7 @@ like \xmplt{Türkiye Büyük Millet Meclisi}{Grand National Assembly of Turkey},
 Unless tokenized together, 
 the analyzer cannot know that these words are part of a proper noun,
 and parts of these compounds will be tagged as if they are single words. 
-If the last noun in a compound is part of a proper noun, 
+For such compound proper nouns, 
 an apostrophe is required if further suffixes follow the last noun. 
 TRmorph allows bare nouns, 
 nouns with an \mtag{ncomp} tag or 
