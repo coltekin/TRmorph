@@ -1241,7 +1241,7 @@ aldır        V;
 ağla         V;
 akla         V;
 ağırla       V;
-anla         V;
+anla         V_Rcp;
 arakla       V;
 başla        V;
 bekle        V;
