@@ -1,0 +1,45 @@
+! ------------------------------------------------------------
+! (de)voicing (kitap - kitabı) and voicing assimilation
+! (kitap -> kitapçı, kalem kalemci)
+! ------------------------------------------------------------
+define intSym @"intermediate-symbols.a";
+define boundary ⟪IGB⟫|⟪MB⟫|⟪RB⟫|intSym;
+define vowel  @"vowel.a";
+define vowelAll  vowel|⟪I⟫|⟪A⟫;
+define unvoicedCons  @"cons-unvoiced.a";
+
+
+regex  ⟪c⟫ -> c,
+       ⟪g⟫ -> ğ,
+       ⟪p⟫ -> b,
+!       ⟪K⟫ (->) ğ,   ! uncomment to allow okumağa as well as okumaya
+       ⟪K⟫ -> y,
+       ⟪t⟫ -> d ||    _ [boundary - ⟪apos⟫]* vowelAll
+    ,, ⟪k⟫ -> ğ || \n _ [boundary - ⟪apos⟫]* vowelAll
+    ,, ⟪k⟫ -> g ||  n _ [boundary - ⟪apos⟫]* vowelAll
+! replace above three lines if you want voicing assimilation for proper names.
+!       ⟪t⟫ -> d ||    _ boundary* vowelAll
+!    ,, ⟪k⟫ -> ğ || \n _ boundary* vowelAll
+!    ,, ⟪k⟫ -> g ||  n _ boundary* vowelAll
+   .o. ⟪c⟫ -> c || _ c
+    ,, ⟪g⟫ -> ğ || _ ğ
+    ,, ⟪p⟫ -> b || _ b
+    ,, ⟪t⟫ -> d || _ d
+    ,, ⟪k⟫ -> ğ || _ ğ
+    ,, ⟪k⟫ -> g || _ g
+   .o. ⟪c⟫ -> ç
+    ,, ⟪g⟫ -> g
+    ,, ⟪p⟫ -> p
+    ,, ⟪K⟫ -> k
+    ,, ⟪t⟫ -> t
+    ,, ⟪k⟫ -> k
+   .o. ⟪C⟫ -> ç,
+       ⟪D⟫ -> t,
+!       ⟪C⟫ (->) c, !uncomment to allow "relaxed" assimilation
+!       ⟪D⟫ (->) t, !uncomment to allow "relaxed" assimilation
+       ⟪G⟫ -> k 
+       ||   unvoicedCons boundary* _
+   .o. ⟪C⟫ -> c
+    ,, ⟪D⟫ -> d
+    ,, ⟪G⟫ -> g
+;

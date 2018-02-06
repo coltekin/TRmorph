@@ -1,0 +1,22 @@
+! all intermediate symbols, such as lexical subcatogory markers
+regex ⟪rcp⟫|⟪rfl⟫
+     |⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causDir⟫|⟪causIr⟫|⟪causIt⟫
+     |⟪dup⟫|⟪del⟫|⟪dels⟫
+     |⟪aorAr⟫
+     |⟪abbr⟫|⟪RomNum⟫
+     |⟪apos⟫
+     |⟪def⟫|⟪indef⟫
+     |⟪prn⟫
+     |⟪compn⟫
+     |⟪mispc⟫
+     |⟪ques⟫
+     |⟪adv⟫|⟪coo⟫|⟪sub⟫
+     |⟪family⟫|⟪propn⟫
+     |⟪1p⟫|⟪1s⟫|⟪2p⟫|⟪2s⟫|⟪3p⟫|⟪3s⟫
+     |⟪ppadj⟫|⟪ablC⟫|⟪accC⟫|⟪nomC⟫|⟪liC⟫|⟪insC⟫|⟪genC⟫|⟪datC⟫|⟪numC⟫
+     |⟪dem⟫|⟪loc⟫|⟪pers⟫|⟪refl⟫
+     |⟪emoticon⟫|⟪onom⟫
+     |⟪nation⟫
+     |⟪neg⟫
+     |⟪unit⟫
+;

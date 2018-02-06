@@ -1,79 +1,125 @@
-TRmorph (http://www.let.rug.nl/coltekin/trmorph/)
+This branch holds the source code for  TRmorph version 2.0,
+yet another major rewrite of the earlier versions of
+[TRmorph](http://coltekin.net/cagri/trmorph/),
+the open source finite-state morphological analyzer for Turkish.
 
-This is the README file for the new version of TRmorph (updated 2015-11)
+The code in this branch is (as of February 2018) yet **experimental**.
+Some parts are not yet fully tested,
+some features in the earlier versions have not yet been implemented,
+and the tagset changes are not documentd. 
+The early, more stable version can be found at
+<https://github.com/coltekin/TRmorph>.
 
-TRmorph is a open source/free morphological analyzer for Turkish. The
-current version is a complete rewrite of the (earlier) 
-[SFST](http://www.lrec-conf.org/proceedings/lrec2014/summaries/437.html) 
-version of TRmorph using xfst/lexc. This version is in active development,
-which may cause some problem and incompatibilities between updates.
-However, the status is a lot better than the older SFST version, and
-you are recommended to use the new version.  The SFST version is still
-available through the web page above, but it is not developed any
-further.
 
-TRmorph is being developed with
-[foma](http://www.lrec-conf.org/proceedings/lrec2014/summaries/437.html).
-It should also be trivial to compile it using HFST tools as well
-(since HFST uses foma as back end).
-Compiling with Xerox tools should also be possible (if you have to)
-with minor modifications regarding limited reduplication implemented using foma's `_eq()`.
+### What is new in this version?
 
-What is new in this version:
-    
-- This is a complete rewrite using more-familiar Xerox languages 
-  lexc/xfst.
-- A completely new lexicon, semi-automatically constructed using
-  web corpora and online dictionaries. (more work is needed,
-  though)
-- A revised tag set.
-- A few more utilities: stemmer, unknown word guesser,
-  segmenter, and a hyphenation tool.
-- A manual, in progress, but it is already usable.
-- New license: this version of TRmorph is distributed under 
-  [MIT License](https://opensource.org/licenses/MIT) 
-  (see the file LICENSE).
+- The internals are completely re-organized/re-written. This should
+  make the code more maintable.
+- This version, by default, produces fewer ambiguities. 
+- [Universal Dependencies](http://universaldependencies.org/)
+  conversion, with CoNLL-UL output (through a Python script).
 
-If you use this analyzer in your research, and want to cite it, please
-cite the appropriate papers from the following list:
+### What is *not* implemented yet?
+
+- Additional utilities (stemmer, segmenter, g2p conversion, ...)
+- Compile time options.
+- Disambiguation
+
+## Getting started
+
+The compilation/use of TRmorph requires [foma](https://fomafst.github.io/).
+For compilation, you additonaly need make, and a few standard UNIX tools.
+Assuming you have all requisites
+type `make depend;make` to compile the analyzer.
+If all goes well, you should have a binary automaton
+in foma format called `trmorph.a`.
+After that you can use interactive `foma`,
+or `flookup` for batch processing (both are part of foma).
+See also the Python interface below.
+
+If you do not need/want to compile from the source,
+the (most) [releases](https://github.com/coltekin/TRmorph/releases)
+include pre-compiled binary automata files.
+You still need `foma`/`flookup` to use these files.
+
+Here are some examples:
+```
+    $ foma
+    ...
+    foma[0]: regex @"trmorph.a";
+    3.0 MB. 57187 states, 198655 arcs, Cyclic.
+    foma[1]: up okudum
+    oku⟨V⟩⟨past⟩⟨1s⟩
+
+    $ echo "okudum" |flookup trmorph.a
+    okudum  oku⟨V⟩⟨past⟩⟨1s⟩
+```
+
+## Python interface
+
+This version comes with a default python (python3 only) interface,
+that offers alternative output formats (including a
+[Universal Dependencies](http://universaldependencies.org/) version,
+and CoNLL-UL lattice format).
+The python script uses `flookup` through a pipe,
+so, you still need `foma` installed.
+
+### From command line:
+```
+    $echo "okudum" |tools/trmorph.py 
+    okudum  oku⟨V⟩⟨past⟩⟨1s⟩
+
+    echo "okudum" |tools/trmorph.py -f conll-ul
+    0-1     okudum
+    0       1       okudum  oku     VERB    _ Aspect=Perf|Evidentiality=Fh|Mood=Ind|Number=Sing|Person=1|Tense=Past _     _
+
+	$ echo "altındaki" |tools/trmorph.py
+	altındaki       alt⟨N⟩⟨sg⟩⟨p3s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+	altındaki       alt⟨N⟩⟨sg⟩⟨p2s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+	altındaki       alt⟨Adj⟩⟨sg⟩⟨p3s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+	altındaki       alt⟨Adj⟩⟨sg⟩⟨p2s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+	altındaki       altı⟨Num⟩⟨sg⟩⟨p2s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+	altındaki       altın⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+
+	$ echo "altındaki" |tools/trmorph.py -f conll-ul
+	0-2     altındaki
+	0       1       altında alt     NOUN    _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=3   _       _
+	1       2       ki      ki      ADJ     _       Case=Nom|Number=Sing    _       _
+	0       1       altında alt     NOUN    _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=2   _       _
+	0       1       altında alt     ADJ     _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=3   _       _
+	0       1       altında alt     ADJ     _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=2   _       _
+	0       1       altında altı    NUM     _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=2   _       _
+	0       1       altında altın   NOUN    _       Case=Loc|Number=Sing    _       _
+```
+
+### The API usage:
+```
+>>> from trmorph import Trmorph
+>>> trm = Trmorph()
+>>> trm.analyze("evindeki")
+['ev⟨N⟩⟨sg⟩⟨p3s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩', 'ev⟨N⟩⟨sg⟩⟨p2s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩', 'evin⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩']
+>>> print(trm.to_conll_ul("evindeki"))
+0-2     evindeki
+0       1       evinde  ev      NOUN    _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=3   _       _
+1       2       ki      ki      ADJ     _       Case=Nom|Number=Sing    _       _
+0       1       evinde  ev      NOUN    _       Case=Loc|Number=Sing|Number[psor]=Sing|Person[psor]=2   _       _
+0       1       evinde  evin    NOUN    _       Case=Loc|Number=Sing    _       _
+
+```
+
+A more usable and well documented API is on the way.
+
+## Citing TRmorph
+
+As before, if you use this analyzer in your research,
+please cite the appropriate paper(s) from the following list:
 
 - Çağrı Çöltekin (2010). [A Freely Available Morphological Analyzer for
   Turkish](http://www.lrec-conf.org/proceedings/lrec2010/summaries/109.html)
   In Proceedings of the 7th International Conference on 
   Language Resources and Evaluation (LREC2010)
 - Çağrı Çöltekin (2014) [A Set of Open Source Tools for Turkish Natural 
-  Language Processing](http://www.lrec-conf.org/proceedings/lrec2014/summaries/437.html) In: Proceedings of the Ninth International Conference on 
+  Language Processing](http://www.lrec-conf.org/proceedings/lrec2014/summaries/437.html)
+  In: Proceedings of the Ninth International Conference on 
   Language Resources and Evaluation (LREC'14)
 
-# Getting started
-
-You can get the latest version of TRmorph from GitHub here:
-https://github.com/coltekin/TRmorph. The best is to clone the
-repository using git, and pull often since this version is
-changed relatively frequently, but GitHub also allows you to download
-the as a `.zip` file.
-
-The compilation requires foma and a C preprocessor (gcc preprocessor
-is used by default), and make, and a few more UNIX tools. Assuming you
-have foma[1] installed, type `make` to compile the analyzer. If all
-goes well, you should have a binary automaton in foma format called
-`trmorph.fst`. After that you can use interactive `foma`, or `flookup`
-for batch processing (both are part of foma). Here are some examples:
-
-    $ foma
-    ...
-    foma[0]: regex @"trmorph.fst";
-    2.3 MB. 53564 states, 149484 arcs, Cyclic.
-    foma[1]: up okudum
-    oku<v><past><1s>
-    foma[1]: down oku<v><past><2s>
-    okudun
-    foma[1]: exit
-    $ echo "okudum" |flookup trmorph.fst 
-    okudu   oku<v><past><1s>
-
-There are also separate automata for _segmentation_,
-_stemming_ (or _lemmatization_) and _hyphenation_ that you can compile
-and use. 
-
-See doc/trmorph-manual.pdf for more information.

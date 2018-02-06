@@ -1,0 +1,13 @@
+! ---------------------------------------------------------------------------
+! Accept non-circumflexed versions of the vowels
+!
+! The vowels with circumflex î, û, â are written without circumflex
+! most of the time. We optionally delete the accent from the surface.
+! ---------------------------------------------------------------------------
+regex  î (->) i,
+       Î (->) İ,
+       û (->) u,
+       Û (->) U,
+       â (->) a,
+       Â (->) A
+;

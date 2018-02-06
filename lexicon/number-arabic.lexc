@@ -1,0 +1,97 @@
+! number-arabic.lexc
+!
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
+!
+
+! This defines Arabic numerals.
+! We generate numbers of arbitrary length numerals with
+! optional thousand separator and possibly one decimal separator.
+! Thousand separator is not allowed after decimal separator. We
+! insert special symbols ⟪tSep⟫ and ⟪dSep⟫ here and replace using xfst.
+! This makes it easy to (optionally) accept a number of different
+! configurations.
+
+Multichar_Symbols ⟪dSep⟫ ⟪tSep⟫
+
+LEXICON Root
+<%0|1|2|3|4|5|6|7|8|9>  FirstNum;
+<¹|²|³|½|¼|¾>           #;
+                        dSep;
+                        NumFraction;
+!                        NumPercent;
+
+LEXICON FirstNum
+<%0|1|2|3|4|5|6|7|8|9>  SecondNum;
+                        tSep;
+                        dSep;
+                        #;
+
+LEXICON SecondNum
+<%0|1|2|3|4|5|6|7|8|9>  ThirdNum;
+                        tSep;
+                        dSep;
+                        #;
+
+LEXICON ThirdNum
+<%0|1|2|3|4|5|6|7|8|9>  FourthNum;
+                        tSep;
+                        dSep;
+                        #;
+                        
+LEXICON FourthNum   ! no more thousand separator
+<%0|1|2|3|4|5|6|7|8|9>  FourthNum;
+                        dSep;
+                        #;
+
+LEXICON dSep 
+⟪dSep⟫                 dSepCont;
+    
+LEXICON dSepCont   ! no more separators
+<%0|1|2|3|4|5|6|7|8|9> dSepContCont;
+
+LEXICON dSepContCont
+                       dSepCont;
+                       #;
+
+LEXICON tSep    ! now we have to have tSep after every 3 digits
+⟪tSep⟫                 tStep1;
+
+LEXICON tStep1
+<%0|1|2|3|4|5|6|7|8|9>  tStep2;
+
+LEXICON tStep2
+<%0|1|2|3|4|5|6|7|8|9>  tStep3;
+
+LEXICON tStep3
+<%0|1|2|3|4|5|6|7|8|9>  tStep3cont;
+
+LEXICON tStep3cont
+                        tSep;
+                        dSep;
+                        #;
+
+% Trivial acceptor for fraction expressions like 1/4
+LEXICON NumFraction
+< [%0|1|2|3|4|5|6|7|8|9]+
+   "/"
+  [%0|1|2|3|4|5|6|7|8|9]+ >                 #;
+

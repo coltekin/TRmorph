@@ -1,0 +1,3 @@
+define back   @"vowel-back.a";
+define front  @"vowel-front.a";
+regex back | front;

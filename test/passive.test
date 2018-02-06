@@ -1,6 +1,6 @@
-A;A;gidilir;git<V><pass><V><aor><3s>
-A;R;gidinir;git<V><pass><V><aor><3s>
-A;A;gelinir;gel<V><pass><V><aor><3s>
-A;R;gelilir;gel<V><pass><V><aor><3s>
-G;A;git<V><pass><V><aor><3s>;gidilir
-G;A;gel<V><pass><V><aor><3s>;gelinir
+A;A;gidilir;git⟨V⟩⟨pass⟩⟨aor⟩⟨3s⟩
+A;A;gelinir;gel⟨V⟩⟨pass⟩⟨aor⟩⟨3s⟩
+A;A;gidilinir;git⟨V⟩⟨pass⟩⟨pass⟩⟨aor⟩⟨3s⟩
+A;A;gelinilir;gel⟨V⟩⟨pass⟩⟨pass⟩⟨aor⟩⟨3s⟩
+A;R;gidinir;
+A;R;gelilir;

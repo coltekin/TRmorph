@@ -1,0 +1,6 @@
+! ---------------------------------------------------------------------------
+! Delete / insert space before bound analysis of question particle
+! ---------------------------------------------------------------------------
+regex ⟪mispc⟫ -> 0|" "    ! relaxed version allow mI written without space
+!  ,,  ⟪mispc⟫ -> " "    ! correct version - space is required
+;

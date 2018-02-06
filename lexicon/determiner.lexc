@@ -1,0 +1,66 @@
+Multichar_Symbols ⟪c⟫ ⟪p⟫ ⟪t⟫ ⟪k⟫ ⟪g⟫ ⟪K⟫ ⟪D⟫ ⟪C⟫
+                  ⟪def⟫ ⟪indef⟫ ⟪neg⟫ ⟪ques⟫
+
+LEXICON Root
+bir⟪indef⟫                 #;
+hiçbir⟪indef⟫              #;
+o⟪def⟫                     #;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+aynı⟪def⟫                                       #;
+beri⟪def⟫                                       #;
+beriki⟪def⟫                                     #;
+bu⟪def⟫                                         #;
+bütün⟪def⟫                                      #;
+diğer⟪def⟫                                      #;
+her⟪def⟫                                        #;
+her% bir⟪def⟫                                   #;
+herbir⟪def⟫                                     #;
+iki⟪def⟫                                        #;
+o⟪def⟫                                          #;
+tek⟪def⟫                                        #;
+tüm⟪def⟫                                        #;
+öbür⟪def⟫                                       #;
+öte⟪def⟫                                        #;
+öteki⟪def⟫                                      #;
+şu⟪def⟫                                         #;
+az⟪indef⟫                                       #;
+başka⟪indef⟫                                    #;
+bir⟪indef⟫                                      #;
+bir% bölüm⟪indef⟫                               #;
+bir% kesim⟪indef⟫                               #;
+bir% kısım⟪indef⟫                               #;
+bir% miktar⟪indef⟫                              #;
+birkaç⟪indef⟫                                   #;
+birkaç% tane⟪indef⟫                             #;
+birtakım⟪indef⟫                                 #;
+birço⟪k⟫⟪indef⟫                                 #;
+bu% kadar⟪indef⟫                                #;
+böyle⟪indef⟫                                    #;
+böyle% bir⟪indef⟫                               #;
+böylesi⟪indef⟫                                  #;
+böylesine⟪indef⟫                                #;
+bˈazı⟪indef⟫                                    #;
+bˈiraz⟪indef⟫                                   #;
+bˈunca⟪indef⟫                                   #;
+fazla⟪indef⟫                                    #;
+herhangi⟪indef⟫                                 #;
+herhangi% bir⟪indef⟫                            #;
+kimi⟪indef⟫                                     #;
+ne% kadar⟪indef⟫                                #;
+o% kadar⟪indef⟫                                 #;
+okadar⟪indef⟫                                   #;
+pek% ço⟪k⟫⟪indef⟫                               #;
+pekço⟪k⟫⟪indef⟫                                 #;
+çoğu⟪indef⟫                                     #;
+ço⟪k⟫⟪indef⟫                                    #;
+öyle⟪indef⟫                                     #;
+öyle% bir⟪indef⟫                                #;
+şu% kadar⟪indef⟫                                #;
+şöyle⟪indef⟫                                    #;
+şöyle% bir⟪indef⟫                               #;
+hiç% bir⟪indef⟫⟪neg⟫                            #;
+hiçbir⟪indef⟫⟪neg⟫                              #;
+ne% kadar⟪indef⟫⟪ques⟫                             #;
+hangi⟪def⟫⟪ques⟫                                   #;

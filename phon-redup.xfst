@@ -1,0 +1,15 @@
+! ---------------------------------------------------------------------------
+! Re-duplication of some root final consonants (gemination), e.g.,
+! hak -> hakkı. This happens with only a few (loan) words.
+! Instead of reduplicating the consonant (which is not very 
+! finite-state friently), we keep the reduplicated forms in the
+! lexicon, and remove the duplicate in case we do not need it.
+! ---------------------------------------------------------------------------
+
+define intSym @"intermediate-symbols.a";
+define consonant  @"consonant.a";
+define vowel  @"vowel.a";
+
+regex  ? -> 0  || _ ⟪dup⟫ intSym* ⟪RB⟫ [\vowel]* [consonant|.#.]
+    ,, ⟪dup⟫  -> 0
+;

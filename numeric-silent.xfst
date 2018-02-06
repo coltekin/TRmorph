@@ -1,0 +1,75 @@
+!
+! Add silent phonemes to numbers
+!
+! We add `silent' phonemes to the end of the numeric forms so that
+! they inflect correctly with regard to vowel harmony, buffer deletion
+! and voicing assimilation.
+!
+! This could be done as part of 'phonetize.xfst', done separately for
+! the sake of readability 
+
+define R1       [Ⅰ|I|ⅰ|i];
+define R5       [v|ⅴ|V|Ⅴ];
+define R10      [X|Ⅹ|x|ⅹ];
+define R50      [L|Ⅼ|l|ⅼ];
+define R100     [C|Ⅽ|c|ⅽ];
+define R500     [D|Ⅾ|d|ⅾ];
+define R1000    [M|Ⅿ|m|ⅿ];
+define digit    [%0|1|2|3|4|5|6|7|8|9];
+define nonzero  digit - %0;
+
+regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
+                || nonzero %0^{12,14} / ⟪tSep⟫   _ ⟪RB⟫, ! trilyon
+                   nonzero %0^{6,8}   / ⟪tSep⟫   _ ⟪RB⟫, ! milyon
+                   [1|3] %0                _ ⟪RB⟫, ! 10,30
+                   9                       _ ⟪RB⟫,
+                   R1   R10                _ ⟪RomNum⟫,  ! 9
+                   [\[R50|R10|R1]|.#.] R10^{1,3} _ ⟪RomNum⟫,  ! 10,30
+                   [Ⅸ|ⅸ]                   _ ⟪RomNum⟫   ! 9
+    ,,  [..] -> ⟪sBUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{9,11}  / ⟪tSep⟫   _ ⟪RB⟫, ! milyar
+                   [\[digit|⟪tSep⟫]|.#.] %0+     _ ⟪RB⟫, ! 0, 00, a00
+                   9 %0                    _ ⟪RB⟫, ! doksan
+                   R10 R100                _ ⟪RomNum⟫ ! 90
+    ,,  [..] -> ⟪sFUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{3,5}   / ⟪tSep⟫   _ ⟪RB⟫, ! bin
+                   8 %0                    _ ⟪RB⟫, ! seksen
+                   1                       _ ⟪RB⟫,
+                   8                       _ ⟪RB⟫,
+                   [Ⅷ|ⅷ]                   _ ⟪RomNum⟫, ! 8
+                   R5 R1^3                 _ ⟪RomNum⟫, ! 8
+                   [\[R5|R1]|.#.] R1       _ ⟪RomNum⟫, ! 1
+                   R50 R10^3               _ ⟪RomNum⟫, ! 80
+                   [\R100|.#.] R1000       _ ⟪RomNum⟫  ! 1000
+    ,,  [..] -> ⟪sFRV⟫ ⟪sVC⟫ 
+                || nonzero %0^2            _ ⟪RB⟫,     ! yüz
+                   [\[R10|R1]|.#.] R100    _ ⟪RomNum⟫, ! 100
+                   R500                    _ ⟪RomNum⟫, ! 500
+                   R100 R1000              _ ⟪RomNum⟫  ! 900
+    ,,  [..] -> ⟪sBUV⟫ ⟪sUC⟫
+                || 4 %0                    _ ⟪RB⟫,
+                   6 %0                    _ ⟪RB⟫,
+                   R10 R50                 _ ⟪RomNum⟫, ! 40
+                   R50 R10                 _ ⟪RomNum⟫  ! 60
+    ,,  [..] -> ⟪sFUV⟫ ⟪sUC⟫ 
+                || 7 %0                    _ ⟪RB⟫,
+                   5                       _ ⟪RB⟫,
+                   [\[R1]|.#.] R5          _ ⟪RomNum⟫, ! 5
+                   R50 R10^2               _ ⟪RomNum⟫  ! 70
+    ,,  [..] -> ⟪sFRV⟫ ⟪sUC⟫
+                || [3|4|¼|¾]               _ ⟪RB⟫,
+                   [Ⅲ|ⅲ|Ⅳ|ⅳ]               _ ⟪RomNum⟫, ! 3,4
+                   R1 R5                   _ ⟪RomNum⟫, ! 4
+                   [\R5|.#.] R1^{3,4}      _ ⟪RomNum⟫  ! 3,4
+    ,,  [..] -> ⟪sBUV⟫
+                || 6                       _ ⟪RB⟫,
+                   R5 R1                   _ ⟪RomNum⟫, ! 6
+                   [Ⅵ|ⅵ]                   _ ⟪RomNum⟫  ! 6
+    ,,  [..] -> ⟪sFUV⟫
+                || [2|5] %0                _ ⟪RB⟫,
+                   [2|½|7]                 _ ⟪RB⟫,
+                   [\R10|.#.] R50          _ ⟪RomNum⟫, ! 50
+                   [\R50|.#.] R10^2        _ ⟪RomNum⟫, ! 20
+                   [\R1|.#.] R1^2          _ ⟪RomNum⟫, ! 2,7
+                   [Ⅱ|ⅱ|Ⅶ|ⅶ|Ⅻ|ⅻ]           _ ⟪RomNum⟫  ! 2,7,12
+    .o. ⟪RomNum⟫ -> 0 ;

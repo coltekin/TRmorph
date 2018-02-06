@@ -1,43 +1,60 @@
-A;A;mi;mi<Q>
-A;A;mi;mi<Q><3p>
-A;A;mi;mi<Q><3s>
-A;A;mu;mu<Q><3s>
-A;A;mü;mü<Q><3s>
-A;A;mı;mı<Q><3s>
-A;A;geldi mi;gel<V><past><3p><q>
-A;A;geldin mi;gel<V><past><2s><q>
-A;A;geldiler mi;gel<V><past><3p><q>
-A;A;gelecek mi;gel<V><fut><q><3s>
-A;A;gelecek misin;gel<V><fut><q><2s>
-A;A;gelecekler mi;gel<V><fut><3p><q>
-A;R;gelecek miler;
-A;R;geldi misin;
-A;R;geldi miler;
-A;A;okuyor muyuz;oku<V><cont><q><1p>
-A;A;okuyor muyduk;oku<V><cont><q><cpl:past><1p>
-A;A;okuyor muymuşuz;oku<V><cont><q><cpl:evid><1p>
-A;A;okuyor muymuşlar;oku<V><cont><q><cpl:evid><3p>
-A;A;okuyorlar mıymış;oku<V><cont><3p><q><cpl:evid>
-A;A;göçmüşler mi;göç<V><evid><3p><q>
-A;A;göçüyorlar mıymış;göç<V><cont><3p><q><cpl:evid>
-A;A;göçmüş mü;göç<V><evid><q><3s>
-A;A;göçmüş müdür;göç<V><evid><q><3p><dir>
-A;A;göçmüş müdürler;göç<V><evid><q><dir><3p>
-A;A;okumakta mı;oku<V><impf><q><3s>
-A;A;okumakta mıdır;oku<V><impf><q><3s><dir>
-A;A;okumakta mıdırlar;oku<V><impf><q><dir><3p>
-# the following one is questionable
-A;A;okumaktalar mıdır;oku<V><impf><3p><q><dir>
-A;A;okumaktalar mı;oku<V><impf><3p><q>
-A;A;okumaktalar mıymış;oku<V><impf><3p><q><cpl:evid>
-A;A;okumakta mıymışlar;oku<V><impf><q><cpl:evid><3p>
-A;A;okumalı mı;oku<V><obl><q><3s>
-A;A;okumalı mıyız;oku<V><obl><q><1p>
-A;A;okumalı mısınız;oku<V><obl><q><2p>
-A;A;okumalı mısınızdır;oku<V><obl><q><2p><dir>
-A;R;okumaktalar mıymışlar;oku<V><vn:inf><N><loc><3p><q><cpl:evid><3p>
-A;R;okumakta mıymışızdır;
-A;A;okuyor muydular;oku<V><cont><q><cpl:past><3p>
-A;A;okuyorlar mıydı;oku<V><cont><3p><q><cpl:past>
-A;A;okuyor muyduk;oku<V><cont><q><cpl:past><1p>
-A;A;okuyor muyduksa;oku<V><cont><q><cpl:past><1p><cpl:cond>
+A;A;mı;mı⟨Q⟩⟨3s⟩
+A;A;mi;mi⟨Q⟩⟨3s⟩
+A;A;mu;mu⟨Q⟩⟨3s⟩
+A;A;mü;mü⟨Q⟩⟨3s⟩
+A;A;gelir misin;gel⟨V⟩⟨aor⟩⟨q⟩⟨2s⟩
+A;A;gelir mi;gel⟨V⟩⟨aor⟩⟨q⟩⟨3s⟩
+A;A;gelir miyiz;gel⟨V⟩⟨aor⟩⟨q⟩⟨1p⟩
+A;A;gelir misiniz;gel⟨V⟩⟨aor⟩⟨q⟩⟨2p⟩
+A;A;gelirler mi;gel⟨V⟩⟨aor⟩⟨3p⟩⟨q⟩
+A;A;geliyor musun;gel⟨V⟩⟨prog.yor⟩⟨q⟩⟨2s⟩
+A;A;gelecek miyiz;gel⟨V⟩⟨fut⟩⟨q⟩⟨1p⟩
+A;A;gelmiş misiniz;gel⟨V⟩⟨evid⟩⟨q⟩⟨2p⟩
+A;A;gelmeli miyiz;gel⟨V⟩⟨obl⟩⟨q⟩⟨1p⟩
+A;A;gelmekte misin;gel⟨V⟩⟨prog.mekte⟩⟨q⟩⟨2s⟩
+A;A;gelirler mi;gel⟨V⟩⟨aor⟩⟨3p⟩⟨q⟩
+A;A;geliyorlar mı;gel⟨V⟩⟨prog.yor⟩⟨3p⟩⟨q⟩
+A;A;gelecekler mi;gel⟨V⟩⟨fut⟩⟨3p⟩⟨q⟩
+A;A;gelmişler mi;gel⟨V⟩⟨evid⟩⟨3p⟩⟨q⟩
+A;A;gelmeliler mi;gel⟨V⟩⟨obl⟩⟨3p⟩⟨q⟩
+A;A;gelmekteler mi;gel⟨V⟩⟨prog.mekte⟩⟨3p⟩⟨q⟩
+# next 6 are questionable
+A;A;gelir miler;gel⟨V⟩⟨aor⟩⟨q⟩⟨3p⟩
+A;A;geliyor mular;gel⟨V⟩⟨prog.yor⟩⟨q⟩⟨3p⟩
+A;A;gelecek miler;gel⟨V⟩⟨fut⟩⟨q⟩⟨3p⟩
+A;A;gelmiş miler;gel⟨V⟩⟨evid⟩⟨q⟩⟨3p⟩
+A;A;gelmeli miler;gel⟨V⟩⟨obl⟩⟨q⟩⟨3p⟩
+A;A;gelmekte miler;gel⟨V⟩⟨prog.mekte⟩⟨q⟩⟨3p⟩
+#
+A;A;geldin mi;gel⟨V⟩⟨past⟩⟨2s⟩⟨q⟩
+A;A;geldi mi;gel⟨V⟩⟨past⟩⟨3s⟩⟨q⟩
+A;A;geldik mi;gel⟨V⟩⟨past⟩⟨1p⟩⟨q⟩
+A;A;geldiniz mi;gel⟨V⟩⟨past⟩⟨2p⟩⟨q⟩
+A;A;geldiler mi;gel⟨V⟩⟨past⟩⟨3p⟩⟨q⟩
+A;A;gelsek mi;gel⟨V⟩⟨cond⟩⟨1p⟩⟨q⟩
+A;A;gelelim mi;gel⟨V⟩⟨cond⟩⟨1p⟩⟨q⟩
+#
+A;R;okudu mıyız;
+A;R;okusa mıyız;
+#A;R;okuya mıyız;
+#
+A;A;okuyor muyduk;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨past⟩⟨1p⟩
+A;A;okuyor muymuşuz;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨1p⟩
+A;A;okuyor muymuşlar;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨3p⟩
+A;A;okuyorlar mıymış;oku⟨V⟩⟨prog.yor⟩⟨3p⟩⟨q⟩⟨cpl⟩⟨evid⟩
+A;A;okumuş mudur;oku⟨V⟩⟨evid⟩⟨q⟩⟨3s⟩⟨dir⟩
+A;A;okumuş mudurlar;oku⟨V⟩⟨evid⟩⟨q⟩⟨dir⟩⟨3p⟩
+A;A;okumakta mıymışlar;oku⟨V⟩⟨prog.mekte⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨3p⟩
+A;A;okumaktalar mıymış;oku⟨V⟩⟨prog.mekte⟩⟨3p⟩⟨q⟩⟨cpl⟩⟨evid⟩
+A;A;okumakta mıydılar;oku⟨V⟩⟨prog.mekte⟩⟨q⟩⟨cpl⟩⟨past⟩⟨3p⟩
+A;A;okumaktalar mıydı;oku⟨V⟩⟨prog.mekte⟩⟨3p⟩⟨q⟩⟨cpl⟩⟨past⟩
+A;A;okumakta mıdırlar;oku⟨V⟩⟨prog.mekte⟩⟨q⟩⟨dir⟩⟨3p⟩
+A;A;okumaktalar mıdır;oku⟨V⟩⟨prog.mekte⟩⟨3p⟩⟨q⟩⟨dir⟩
+A;A;okumalı mısınızdır;oku⟨V⟩⟨obl⟩⟨q⟩⟨2p⟩⟨dir⟩
+A;A;okuyor muydular;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨past⟩⟨3p⟩
+A;A;okuyorlar mıydı;oku⟨V⟩⟨prog.yor⟩⟨3p⟩⟨q⟩⟨cpl⟩⟨past⟩
+A;A;okuyor muyduk;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨past⟩⟨1p⟩
+A;A;okuyor muyduksa;oku⟨V⟩⟨prog.yor⟩⟨q⟩⟨cpl⟩⟨past⟩⟨1p⟩⟨cpl⟩⟨cond⟩
+A;A;okumakta mıymışızdır;oku⟨V⟩⟨prog.mekte⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨1p⟩⟨dir⟩
+#
+A;R;okumaktalar mıymışlar;

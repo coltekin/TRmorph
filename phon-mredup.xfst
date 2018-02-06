@@ -1,0 +1,8 @@
+! m-reduplication kitap -> mitap
+!
+!
+
+regex [..] -> m || ⟪mredup⟫ _ vowel
+    ,, consonant -> m || ⟪mredup⟫ _ 
+    ,, ⟪mredup⟫ -> 0
+;

@@ -1,0 +1,525 @@
+! number-alpha.lexc
+!
+! Released under the terms of the MIT License
+! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! 
+! Permission is hereby granted, free of charge, to any person obtaining a
+! copy of this software and associated documentation files (the "Software"),
+! to deal in the Software without restriction, including without limitation
+! the rights to use, copy, modify, merge, publish, distribute, sublicense,
+! and/or sell copies of the Software, and to permit persons to whom the
+! Software is furnished to do so, subject to the following conditions:
+! 
+! The above copyright notice and this permission notice shall be included in
+! all copies or substantial portions of the Software.
+! 
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+! DEALINGS IN THE SOFTWARE.
+!
+
+! This file defines spelled-out "alphabetic" number sequences.
+!
+!  The definition here is rather ugly with a lot of replication. There
+!  should be a cleaner solution, but it is not obvious (to me) with
+!  lexc/xfst.
+!   - If done using xfst, it can certainly be a lot neater, but then
+!     suffixation (e.g., derivations to other word classes) needs to
+!     be replicated in xfst.
+!  - We (can) use xfst syntax in lexc below (in <>), but this does not
+!    allow re-use of automata defined earlier in other places (other
+!    other brackets or in an external xfst file)
+!
+!  Ugly as it is, the following works, one needs to be careful to
+!  modify all replicated parts when modifications are needed.
+! 
+! The special symbol ⟪DB⟫ is inserted here between all parts,
+! 'digits', and replaced optionally by space later. This allows
+! accepting multi-token words like 'bin ikiyüz elli', or when they are
+! written without spaces like 'binikiyüzelli' (quite common especially
+! in financial documents).
+
+Multichar_Symbols ⟪k⟫ ⟪t⟫ ⟪DB⟫ ⟪ques⟫
+
+
+LEXICON Root
+    n0;
+    n0;
+    n1;
+    n10;
+    n100;
+    n1k;
+    n1m;
+    n1g;
+    n1t;
+    n1K;
+kaç⟪ques⟫  #;
+
+LEXICON n0
+sıfır   #;
+! we also squeeze half & quarter terms here
+yarım   #;
+buçuk   #;
+çeyrek  #;
+tek     #;
+
+LEXICON n1 ! 1 to 9
+bir⟪DB⟫      n1cont;
+iki⟪DB⟫      n1cont;
+üç⟪DB⟫       n1cont;
+dör⟪t⟫⟪DB⟫    n1cont;
+beş⟪DB⟫      n1cont;
+altı⟪DB⟫     n1cont;
+yedi⟪DB⟫     n1cont;
+sekiz⟪DB⟫    n1cont;
+dokuz⟪DB⟫    n1cont;
+
+
+
+LEXICON n1cont
+    #;
+    NumHalf;
+
+LEXICON  NumHalf
+buçu⟪k⟫  #;
+
+
+LEXICON n10 ! 11 to 99
+on⟪DB⟫       n10cont;
+yirmi⟪DB⟫    n10cont;
+otuz⟪DB⟫     n10cont;
+kırk⟪DB⟫     n10cont;
+elli⟪DB⟫     n10cont;
+altmış⟪DB⟫   n10cont;
+yetmiş⟪DB⟫   n10cont;
+seksen⟪DB⟫   n10cont;
+doksan⟪DB⟫   n10cont;
+
+LEXICON n10cont
+    #;
+    NumHalf;
+    n1;
+
+
+LEXICON n100 ! 100 to 999
+    prefixN100;
+    N100;
+
+LEXICON prefixN100
+iki⟪DB⟫      N100;
+üç⟪DB⟫       N100;
+dört⟪DB⟫   N100;
+beş⟪DB⟫      N100;
+altı⟪DB⟫     N100;
+yedi⟪DB⟫     N100;
+sekiz⟪DB⟫    N100;
+dokuz⟪DB⟫    N100;
+
+LEXICON N100
+yüz⟪DB⟫    n100cont;
+
+LEXICON   n100cont
+    #;
+    NumHalf;
+    n10;
+    n1;
+
+
+!--------------------
+
+LEXICON n1k ! 1000 to 999,999
+    prefixN1k;
+    N1k;
+
+LEXICON prefixN1k
+    prefixN1k2;
+    prefixN1k10;
+    prefixN1k100;
+
+LEXICON prefixN1k1
+bir⟪DB⟫      N1k2cont;
+            prefixN1k2;
+
+LEXICON prefixN1k2
+iki⟪DB⟫      N1k2cont;
+üç⟪DB⟫       N1k2cont;
+dört⟪DB⟫   N1k2cont;
+beş⟪DB⟫      N1k2cont;
+altı⟪DB⟫     N1k2cont;
+yedi⟪DB⟫     N1k2cont;
+sekiz⟪DB⟫    N1k2cont;
+dokuz⟪DB⟫    N1k2cont;
+
+LEXICON N1k2cont
+    N1k;
+
+LEXICON  prefixN1k10
+on⟪DB⟫       N1k10cont;
+yirmi⟪DB⟫    N1k10cont;
+otuz⟪DB⟫     N1k10cont;
+kırk⟪DB⟫     N1k10cont;
+elli⟪DB⟫     N1k10cont;
+altmış⟪DB⟫   N1k10cont;
+yetmiş⟪DB⟫   N1k10cont;
+seksen⟪DB⟫   N1k10cont;
+doksan⟪DB⟫   N1k10cont;
+
+LEXICON N1k10cont
+    N1k;
+    prefixN1k1;
+
+LEXICON  prefixN1k100
+        N1k100pre;
+        N1k100;
+
+LEXICON   N1k100pre
+iki⟪DB⟫      N1k100preCont;
+üç⟪DB⟫       N1k100preCont;
+dört⟪DB⟫   N1k100preCont;
+beş⟪DB⟫      N1k100preCont;
+altı⟪DB⟫     N1k100preCont;
+yedi⟪DB⟫     N1k100preCont;
+sekiz⟪DB⟫    N1k100preCont;
+dokuz⟪DB⟫    N1k100preCont;
+
+LEXICON   N1k100preCont
+        N1k100;
+
+LEXICON N1k100
+yüz⟪DB⟫  N1k100Cont;
+
+LEXICON     N1k100Cont
+    N1k;
+    prefixN1k10;
+
+LEXICON N1k
+bin⟪DB⟫  n1kCont;
+
+LEXICON     n1kCont
+    #;
+    NumHalf;
+    n100;
+    n10;
+    n1;
+
+!--------------------
+
+LEXICON n1m ! 1,000,000 to 999,999,999
+    prefixN1m;
+    N1mNoPrefix;
+
+LEXICON prefixN1m
+    prefixN1m1;
+    prefixN1m10;
+    prefixN1m100;
+
+LEXICON prefixN1m1
+bir⟪DB⟫      N1m1cont;
+iki⟪DB⟫      N1m1cont;
+üç⟪DB⟫       N1m1cont;
+dört⟪DB⟫   N1m1cont;
+beş⟪DB⟫      N1m1cont;
+altı⟪DB⟫     N1m1cont;
+yedi⟪DB⟫     N1m1cont;
+sekiz⟪DB⟫    N1m1cont;
+dokuz⟪DB⟫    N1m1cont;
+
+LEXICON N1m1cont
+    N1m;
+
+LEXICON  prefixN1m10
+on⟪DB⟫       N1m10cont;
+yirmi⟪DB⟫    N1m10cont;
+otuz⟪DB⟫     N1m10cont;
+kırk⟪DB⟫     N1m10cont;
+elli⟪DB⟫     N1m10cont;
+altmış⟪DB⟫   N1m10cont;
+yetmiş⟪DB⟫   N1m10cont;
+seksen⟪DB⟫   N1m10cont;
+doksan⟪DB⟫   N1m10cont;
+
+LEXICON N1m10cont
+    N1m;
+    prefixN1m1;
+
+LEXICON  prefixN1m100
+        N1m100pre;
+        N1m100;
+
+LEXICON   N1m100pre
+iki⟪DB⟫      N1m100preCont;
+üç⟪DB⟫       N1m100preCont;
+dört⟪DB⟫   N1m100preCont;
+beş⟪DB⟫      N1m100preCont;
+altı⟪DB⟫     N1m100preCont;
+yedi⟪DB⟫     N1m100preCont;
+sekiz⟪DB⟫    N1m100preCont;
+dokuz⟪DB⟫    N1m100preCont;
+
+LEXICON   N1m100preCont
+        N1m100;
+
+LEXICON N1m100
+yüz⟪DB⟫  N1m100Cont;
+
+LEXICON     N1m100Cont
+    N1m;
+    prefixN1m10;
+
+LEXICON N1m
+milyon⟪DB⟫   n1mCont;
+
+LEXICON N1mNoPrefix
+milyon⟪DB⟫   #;
+
+LEXICON     n1mCont
+    #;
+    NumHalf;
+    n1k;
+    n100;
+    n10;
+    n1;
+
+!------------------
+
+LEXICON n1g ! 1,000,000,000 to 999,999,999,999
+    prefixN1g;
+    N1gNoPrefix;
+
+LEXICON prefixN1g
+    prefixN1g1;
+    prefixN1g10;
+    prefixN1g100;
+
+LEXICON prefixN1g1
+bir⟪DB⟫      N1g1cont;
+iki⟪DB⟫      N1g1cont;
+üç⟪DB⟫       N1g1cont;
+dört⟪DB⟫    N1g1cont;
+beş⟪DB⟫      N1g1cont;
+altı⟪DB⟫     N1g1cont;
+yedi⟪DB⟫     N1g1cont;
+sekiz⟪DB⟫    N1g1cont;
+dokuz⟪DB⟫    N1g1cont;
+
+LEXICON N1g1cont
+    N1g;
+
+LEXICON  prefixN1g10
+on⟪DB⟫       N1g10cont;
+yirmi⟪DB⟫    N1g10cont;
+otuz⟪DB⟫     N1g10cont;
+kırk⟪DB⟫     N1g10cont;
+elli⟪DB⟫     N1g10cont;
+altmış⟪DB⟫   N1g10cont;
+yetmiş⟪DB⟫   N1g10cont;
+seksen⟪DB⟫   N1g10cont;
+doksan⟪DB⟫   N1g10cont;
+
+LEXICON N1g10cont
+    N1g;
+    prefixN1g1;
+
+LEXICON  prefixN1g100
+        N1g100pre;
+        N1g100;
+
+LEXICON   N1g100pre
+iki⟪DB⟫      N1g100preCont;
+üç⟪DB⟫       N1g100preCont;
+dört⟪DB⟫   N1g100preCont;
+beş⟪DB⟫      N1g100preCont;
+altı⟪DB⟫     N1g100preCont;
+yedi⟪DB⟫     N1g100preCont;
+sekiz⟪DB⟫    N1g100preCont;
+dokuz⟪DB⟫    N1g100preCont;
+
+LEXICON   N1g100preCont
+        N1g100;
+
+LEXICON N1g100
+yüz⟪DB⟫  N1g100Cont;
+
+LEXICON     N1g100Cont
+    N1g;
+    prefixN1g10;
+
+LEXICON N1g
+milyar⟪DB⟫   n1gCont;
+
+LEXICON N1gNoPrefix
+milyar⟪DB⟫   #;
+
+LEXICON     n1gCont
+    #;
+    NumHalf;
+    n1m;
+    n1k;
+    n100;
+    n10;
+    n1;
+
+!------------------
+
+LEXICON n1t ! 1,000,000,000 to 999,999,999,999
+    prefixN1t;
+    N1tNoPrefix;
+
+LEXICON prefixN1t
+    prefixN1t1;
+    prefixN1t10;
+    prefixN1t100;
+
+LEXICON prefixN1t1
+bir⟪DB⟫      N1t1cont;
+iki⟪DB⟫      N1t1cont;
+üç⟪DB⟫       N1t1cont;
+dört⟪DB⟫   N1t1cont;
+beş⟪DB⟫      N1t1cont;
+altı⟪DB⟫     N1t1cont;
+yedi⟪DB⟫     N1t1cont;
+sekiz⟪DB⟫    N1t1cont;
+dokuz⟪DB⟫    N1t1cont;
+
+LEXICON N1t1cont
+    N1t;
+
+LEXICON  prefixN1t10
+on⟪DB⟫       N1t10cont;
+yirmi⟪DB⟫    N1t10cont;
+otuz⟪DB⟫     N1t10cont;
+kırk⟪DB⟫     N1t10cont;
+elli⟪DB⟫     N1t10cont;
+altmış⟪DB⟫   N1t10cont;
+yetmiş⟪DB⟫   N1t10cont;
+seksen⟪DB⟫   N1t10cont;
+doksan⟪DB⟫   N1t10cont;
+
+LEXICON N1t10cont
+    N1t;
+    prefixN1t1;
+
+LEXICON  prefixN1t100
+        N1t100pre;
+        N1t100;
+
+LEXICON   N1t100pre
+iki⟪DB⟫      N1t100preCont;
+üç⟪DB⟫       N1t100preCont;
+dört⟪DB⟫   N1t100preCont;
+beş⟪DB⟫      N1t100preCont;
+altı⟪DB⟫     N1t100preCont;
+yedi⟪DB⟫     N1t100preCont;
+sekiz⟪DB⟫    N1t100preCont;
+dokuz⟪DB⟫    N1t100preCont;
+
+LEXICON   N1t100preCont
+        N1t100;
+
+LEXICON N1t100
+yüz⟪DB⟫  N1t100Cont;
+
+LEXICON     N1t100Cont
+    N1t;
+    prefixN1t10;
+
+LEXICON N1t
+trilyon⟪DB⟫      n1tCont;
+
+LEXICON N1tNoPrefix
+trilyon⟪DB⟫   #;
+
+LEXICON     n1tCont
+    #;
+    NumHalf;
+    n1g;
+    n1m;
+    n1k;
+    n100;
+    n10;
+    n1;
+
+!------------------
+
+LEXICON n1K ! 1,000,000,000,000,000 
+    prefixN1K;
+    N1KNoPrefix;
+
+LEXICON prefixN1K
+    prefixN1K1;
+    prefixN1K10;
+    prefixN1K100;
+
+LEXICON prefixN1K1
+bir⟪DB⟫      N1K1cont;
+iki⟪DB⟫      N1K1cont;
+üç⟪DB⟫       N1K1cont;
+dört⟪DB⟫   N1K1cont;
+beş⟪DB⟫      N1K1cont;
+altı⟪DB⟫     N1K1cont;
+yedi⟪DB⟫     N1K1cont;
+sekiz⟪DB⟫    N1K1cont;
+dokuz⟪DB⟫    N1K1cont;
+
+LEXICON N1K1cont
+    N1K;
+
+LEXICON  prefixN1K10
+on⟪DB⟫       N1K10cont;
+yirmi⟪DB⟫    N1K10cont;
+otuz⟪DB⟫     N1K10cont;
+kırk⟪DB⟫     N1K10cont;
+elli⟪DB⟫     N1K10cont;
+altmış⟪DB⟫   N1K10cont;
+yetmiş⟪DB⟫   N1K10cont;
+seksen⟪DB⟫   N1K10cont;
+doksan⟪DB⟫   N1K10cont;
+
+LEXICON N1K10cont
+    N1K;
+    prefixN1K1;
+
+LEXICON  prefixN1K100
+        N1K100pre;
+        N1K100;
+
+LEXICON   N1K100pre
+iki⟪DB⟫      N1K100preCont;
+üç⟪DB⟫       N1K100preCont;
+dört⟪DB⟫   N1K100preCont;
+beş⟪DB⟫      N1K100preCont;
+altı⟪DB⟫     N1K100preCont;
+yedi⟪DB⟫     N1K100preCont;
+sekiz⟪DB⟫    N1K100preCont;
+dokuz⟪DB⟫    N1K100preCont;
+
+LEXICON   N1K100preCont
+        N1K100;
+
+LEXICON N1K100
+yüz⟪DB⟫  N1K100Cont;
+
+LEXICON     N1K100Cont
+    N1K;
+    prefixN1K10;
+
+LEXICON N1K
+katrilyon⟪DB⟫      n1KCont;
+
+LEXICON N1KNoPrefix
+katrilyon⟪DB⟫   #;
+
+LEXICON     n1KCont
+    #;
+    NumHalf;
+    n1t;
+    n1g;
+    n1m;
+    n1k;
+    n100;
+    n10;
+    n1;

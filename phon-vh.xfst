@@ -1,0 +1,20 @@
+! ---------------------------------------------------------------------------
+! vowel harmony
+! ---------------------------------------------------------------------------
+
+define back @"vowel-back.a";
+define backrounded  @"vowel-back-rounded.a";
+define backunrounded  @"vowel-back-unrounded.a";
+define front @"vowel-front.a";
+define frontrounded  @"vowel-front-rounded.a";
+define frontunrounded  @"vowel-front-unrounded.a";
+define vowel  @"vowel.a";
+define nonvowel \vowel;
+
+regex  ⟪I⟫ -> ı // backunrounded nonvowel* _
+    ,, ⟪I⟫ -> u // backrounded nonvowel* _
+    ,, ⟪I⟫ -> ü // frontrounded nonvowel* _
+    ,, ⟪I⟫ -> i // frontunrounded nonvowel* _
+    ,, ⟪A⟫ -> a // back nonvowel* _
+    ,, ⟪A⟫ -> e // front nonvowel* _
+;

@@ -1,0 +1,4 @@
+define voiced  @"cons-voiced.a";
+define unvoiced  @"cons-unvoiced.a";
+
+regex voiced | unvoiced;

@@ -1,135 +1,61 @@
-A;A;sıfır;sıfır<Num>
-A;A;bir;bir<Num>
-A;A;dört;dört<Num>
-A;A;on;on<Num>
-A;A;on beş;onbeş<Num>
-A;A;onbeş;onbeş<Num>
-A;A;yirmi;yirmi<Num>
-A;A;yirmi altı;yirmialtı<Num>
-A;A;doksandokuz;doksandokuz<Num>
-A;A;yüz;yüz<Num>
-A;R;bir yüz;
-A;A;yüzbir;yüzbir<Num>
-A;A;yüz sekiz;yüzsekiz<Num>
-A;A;yüz elli sekiz;yüzellisekiz<Num>
-A;A;iki yüz;ikiyüz<Num>
-A;A;iki yüz otuz üç;ikiyüzotuzüç<Num>
-A;A;dokuz yüz doksan dokuz;dokuzyüzdoksandokuz<Num>
-A;A;bin;bin<Num>
-A;R;bir bin;
-A;A;binbir;binbir<Num>
-A;A;bin bir;binbir<Num>
-A;A;bin kırk;binkırk<Num>
-A;A;bin kırk iki;binkırkiki<Num>
-A;A;bin yüz altmış;binyüzaltmış<Num>
-A;A;bin yüz yetmiş altı;binyüzyetmişaltı<Num>
-A;A;bin dört yüz yetmiş altı;bindörtyüzyetmişaltı<Num>
-A;A;iki bin;ikibin<Num>
-A;A;iki bin beş yüz otuz sekiz;ikibinbeşyüzotuzsekiz<Num>
-A;A;yirmi bin beş yüz otuz sekiz;yirmibinbeşyüzotuzsekiz<Num>
-A;A;yirmi iki bin beş yüz otuz sekiz;yirmiikibinbeşyüzotuzsekiz<Num>
-A;A;dokuz yüz doksan dokuz bin dokuz yüz doksan dokuz;dokuzyüzdoksandokuzbindokuzyüzdoksandokuz<Num>
-A;A;milyon;milyon<Num>
-A;A;bir milyon;birmilyon<Num>
-A;A;bir milyon iki yüz otuz dört bin beş yüz altmış yedi;birmilyonikiyüzotuzdörtbinbeşyüzaltmışyedi<Num>
-A;A;üç milyon dört yüz elli altı bin yedi yüz seksen dokuz;üçmilyondörtyüzellialtıbinyediyüzseksendokuz<Num>
-A;A;milyon;milyon<Num>
-A;R;milyon bir;
-A;A;milyar;milyar<Num>
-A;R;milyar bir;
-A;A;trilyon;trilyon<Num>
-A;R;trilyon bir;
-A;A;dokuz yüz doksan dokuz trilyon sekiz yüz seksen sekiz milyar yedi yüz yetmiş yedi milyon altı yüz altmış altı bin beş yüz elli beş;dokuzyüzdoksandokuztrilyonsekizyüzseksensekizmilyaryediyüzyetmişyedimilyonaltıyüzaltmışaltıbinbeşyüzellibeş<Num>
-#
-#
-#
-A;A;1;1<Num:ara>
-A;A;1;1<Num:ara>
-A;A;2;2<Num:ara>
-A;A;3;3<Num:ara>
-A;A;4;4<Num:ara>
-A;A;5;5<Num:ara>
-A;A;6;6<Num:ara>
-A;A;7;7<Num:ara>
-A;A;8;8<Num:ara>
-A;A;9;9<Num:ara>
-A;A;0;0<Num:ara>
-A;A;10;10<Num:ara>
-A;A;11;11<Num:ara>
-A;A;12;12<Num:ara>
-A;A;79821379821371;79821379821371<Num:ara>
-A;R;1.;1.<Num:ara>
-# the following are ok if number format is more relaxed
-#A;R;1.00;
-#A;R;1.000.1;
-#A;R;1.000.50;
-#A;R;1.0;
-A;A;1.000;1.000<Num:ara>
-A;A;1,000;1,000<Num:ara>
-A;A;1,;1,<Num:ara>
-A;R;1,2,3;
-A;R;1,2,3;
-A;A;1.000,04;1.000,04<Num:ara>
-A;A;%10;10<Num:ara><perc>
-A;A;%1032;1032<Num:ara><perc>
-A;A;%1,032;1,032<Num:ara><perc>
-A;A;1'inci;1<Num:ara><ord>
-A;R;1'nci;
-A;R;1'ncü;
-A;R;1'üncü;
-A;R;1'ncı;
-A;R;1'ıncı;
-A;R;1'uncu;
-A;R;1'ncu;
-A;A;2'nci;2<Num:ara><ord>
-A;A;2'inci;
-A;R;2'ncü;
-A;R;2'üncü;
-A;R;2'ncı;
-A;R;2'ıncı;
-A;R;2'uncu;
-A;R;2'ncu;
-A;A;3'üncü;3<Num:ara><ord>
-A;A;4'üncü;4<Num:ara><ord>
-A;A;5'inci;5<Num:ara><ord>
-A;A;6'ncı;6<Num:ara><ord>
-A;A;7'nci;7<Num:ara><ord>
-A;A;8'inci;8<Num:ara><ord>
-A;A;9'uncu;9<Num:ara><ord>
-A;A;10'uncu;10<Num:ara><ord>
-A;A;20'nci;20<Num:ara><ord>
-A;A;30'uncu;30<Num:ara><ord>
-A;A;40'ıncı;40<Num:ara><ord>
-A;A;50'nci;50<Num:ara><ord>
-A;A;60'ıncı;60<Num:ara><ord>
-A;A;70'inci;70<Num:ara><ord>
-A;A;80'inci;80<Num:ara><ord>
-A;A;90'ıncı;90<Num:ara><ord>
-A;A;100'üncü;100<Num:ara><ord>
-A;A;400'üncü;400<Num:ara><ord>
-A;A;1000'inci;1000<Num:ara><ord>
-A;A;1.000'inci;1.000<Num:ara><ord>
-A;A;100.000'inci;100.000<Num:ara><ord>
-A;A;100000'inci;100000<Num:ara><ord>
-A;A;1000000'uncu;1000000<Num:ara><ord>
-A;A;3000000'uncu;3000000<Num:ara><ord>
-A;A;30000000'uncu;30000000<Num:ara><ord>
-A;A;30.000.000'uncu;30.000.000<Num:ara><ord>
-A;A;30.000.000.000'ıncı;30.000.000.000<Num:ara><ord>
-A;A;1'er;1<Num:ara><dist>
-A;A;2'şer;2<Num:ara><dist>
-A;A;3'er;3<Num:ara><dist>
-A;A;4'er;4<Num:ara><dist>
-A;A;5'er;5<Num:ara><dist>
-A;A;6'şar;6<Num:ara><dist>
-A;A;7'şer;7<Num:ara><dist>
-A;A;8'er;8<Num:ara><dist>
-A;A;9'ar;9<Num:ara><dist>
-A;A;10'ar;10<Num:ara><dist>
-A;A;11'er;11<Num:ara><dist>
-A;A;12'şer;12<Num:ara><dist>
-A;A;18'er;18<Num:ara><dist>
-A;A;20'şer;20<Num:ara><dist>
-A;A;100'er;100<Num:ara><dist>
-A;A;1000'er;1000<Num:ara><dist>
-A;A;1002'şer;1002<Num:ara><dist>
+A;A;1;1⟨Num⟩⟨ara⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1,1;1,1⟨Num⟩⟨ara⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1.000.000;1000000⟨Num⟩⟨ara⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1.000.000,00;1000000,00⟨Num⟩⟨ara⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;0ıncı;0⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1inci;1⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;2nci;2⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;3üncü;3⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;4üncü;4⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;5inci;5⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;6ncı;6⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;7nci;7⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;8inci;8⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;9uncu;9⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;10uncu;10⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;11inci;11⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;12nci;12⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;13üncü;13⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;14üncü;14⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;15inci;15⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;16ncı;16⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;17nci;17⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;18inci;18⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;19uncu;19⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;100üncü;100⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1000inci;1000⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;10000inci;10000⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1.000.000uncu;1000000⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;1000000uncu;1000000⟨Num⟩⟨ara⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;1.00,00;
+A;R;0.1.1;
+A;A;01.01.2001;01.01.2001⟨Num⟩⟨date⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;41.01.2001;
+A;R;01.21.2001;
+A;A;10:30;10:30⟨Num⟩⟨time⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;50:30;
+A;R;10:70;
+A;A;Iinci;I⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;IInci;II⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;IIIüncü;III⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;IVüncü;IV⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;IIIIüncü;IIII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;Vinci;V⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;VIncı;VI⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;VIInci;VII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;VIIIinci;VIII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;IXuncu;IX⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;Xuncu;X⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XIinci;XI⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XIInci;XII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XIIIüncü;XIII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XIVüncü;XIV⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XVinci;XV⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XVIncı;XVI⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XVIInci;XVII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XVIIIinci;XVIII⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;XIXuncu;XIX⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;Lnci;L⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;Cüncü;C⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;Minci;M⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;CMüncü;CM⟨Num⟩⟨rom⟩⟨ord⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩

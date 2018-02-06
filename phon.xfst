@@ -1,0 +1,246 @@
+define posSym @"pos-symbols.a";
+define intSym @"intermediate-symbols.a";
+define analysisSym @"analysis-symbols.a";
+define consonant  @"consonant.a";
+define vowel  @"vowel.a";
+
+
+define R1       [Ⅰ|I|ⅰ|i];
+define R5       [v|ⅴ|V|Ⅴ];
+define R10      [X|Ⅹ|x|ⅹ];
+define R50      [L|Ⅼ|l|ⅼ];
+define R100     [C|Ⅽ|c|ⅽ];
+define R500     [D|Ⅾ|d|ⅾ];
+define R1000    [M|Ⅿ|m|ⅿ];
+define digit    [%0|1|2|3|4|5|6|7|8|9];
+define nonzero  digit - %0;
+define numArabic ⟨Num⟩ [⟨ara⟩|⟨time⟩|⟨date⟩];
+define numRoman  ⟨Num⟩ ⟨rom⟩;
+
+define phonetize [⟪def⟫|⟪indef⟫] -> 0
+    ,, [⟪adv⟫|⟪coo⟫|⟪sub⟫] -> 0
+    ,, ⟪propn⟫ -> 0
+    ,, ⟪time⟫ -> 0
+    ,, ⟪family⟫ -> 0
+    ,, ⟪compn⟫ ->  0         || _ intSym* ⟨N⟩ ⟨pl⟩
+    ,, [..] ->  ⟪compn⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟨N⟩ ⟨pl⟩ _
+    ,, [⟨def⟩|⟨indef⟩] -> 0
+! insert 'inflectional group' boundary
+    ,, [..] -> ⟪IGB⟫  || posSym ?* _ ? posSym
+! noun inflections
+   .o. ⟪compn⟫ -> ⟪compn⟫ ⟪bs⟫ ⟪I⟫ 
+    ,, ⟨pl⟩ -> l ⟪A⟫ r
+    ,, ⟨sg⟩ -> 0
+    ,, ⟨p1s⟩  -> ⟪bI⟫ m
+    ,, ⟨p2s⟩  -> ⟪bI⟫ n
+    ,, ⟨p3s⟩  -> ⟪bs⟫ ⟪I⟫
+    ,, ⟨p1p⟩  -> ⟪bI⟫ m ⟪I⟫ z
+    ,, ⟨p2p⟩  -> ⟪bI⟫ n ⟪I⟫ z
+    ,, ⟨p3p⟩  -> l ⟪A⟫ r ⟪I⟫
+    ,, ⟨p%0x⟩ -> 0
+    ,, ⟨nom⟩ -> 0
+    ,, ⟨acc⟩ -> ⟪by⟫ ⟪I⟫
+    ,, ⟨dat⟩ -> ⟪by⟫ ⟪A⟫
+    ,, ⟨abl⟩ -> ⟪D⟫ ⟪A⟫ n
+    ,, ⟨loc⟩ -> ⟪D⟫ ⟪A⟫
+    ,, ⟨gen⟩ -> ⟪bn⟫ ⟪I⟫ n
+    ,, ⟨ins⟩ -> ⟪by⟫ l ⟪NS⟫ ⟪A⟫
+    ,, ⟨siz⟩ -> s ⟪I⟫ z
+    ,, ⟨li⟩  -> l ⟪I⟫
+    ,, ⟨lik⟩ -> l ⟪I⟫ ⟪k⟫
+    ,, ⟨ce⟩  -> ⟪C⟫ ⟪A⟫
+    ,, ⟨ci⟩  -> ⟪C⟫ ⟪I⟫
+    ,, ⟨sel⟩ -> s ⟪A⟫ l
+    ,, ⟨ki⟩ -> k i
+    ,, ⟨le⟩ -> l ⟪A⟫
+    ,, ⟨les⟩ -> l ⟪A⟫ ş
+    ,, ⟨len⟩ -> l ⟪A⟫ n
+! numbers
+    ,, ⟨dist⟩ -> ⟪bş⟫ ⟪A⟫ r
+    ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 
+    ,, ⟨ord⟩  -> ⟪bI⟫ n c ⟪I⟫
+! verbs
+    ,, ⟨rfl⟩      -> ⟪bI⟫ n
+    ,, ⟨rcp⟩      -> ⟪bI⟫ ş
+    ,, ⟨pass⟩     -> ⟪pass⟫ ! replaced afeter buff. deletion
+    ,, ⟨caus⟩     -> ⟪A⟫ r || .#. ?* ⟪causAr⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪A⟫ t || .#. ?* ⟪causAt⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪A⟫ r t || .#. ?* ⟪causArt⟫ \[⟨caus⟩]* ⟨V⟩ _
+    ,, ⟨caus⟩     -> ⟪I⟫ r || .#. ?* ⟪causIr⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪I⟫ t || .#. ?* ⟪causIt⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪D⟫ ⟪I⟫ r || .#. ?* ⟪causDir⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨aor⟩     -> ⟪bA⟫ r || ⟪aorAr⟫ intSym* ⟨V⟩ _
+    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟨V⟩ _ , \[⟨V⟩|⟨neg⟩] _
+    ,, ⟨aor⟩     -> z || ⟨neg⟩ _ \[⟨1s⟩|⟨1p⟩]
+    ,, ⟨aor⟩     -> 0 || ⟨neg⟩ _ [⟨1s⟩|⟨1p⟩]
+    ,, [⟪rcp⟫|⟪rfl⟫|⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causAt⟫|
+        ⟪causDir⟫|⟪causIr⟫|⟪causIt⟫|⟪aorAr⟫] -> 0
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ \⟨neg⟩
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ ⟨neg⟩
+    ,, ⟨iver⟩    -> ⟪by⟫ ⟪I⟫ v e r
+    ,, ⟨adur⟩    -> ⟪by⟫ ⟪A⟫ d u r
+    ,, ⟨agel⟩    -> ⟪by⟫ ⟪A⟫ g e l
+    ,, ⟨agor⟩    -> ⟪by⟫ ⟪A⟫ g ö r
+    ,, ⟨akal⟩    -> ⟪by⟫ ⟪A⟫ k a l
+    ,, ⟨ayaz⟩    -> ⟪by⟫ ⟪A⟫ y a z
+    ,, ⟨neg⟩     -> m ⟪A⟫
+    ,, ⟨cond⟩    -> s ⟪A⟫
+    ,, ⟨evid⟩    -> m ⟪I⟫ ş
+    ,, ⟨fut⟩     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
+    ,, ⟨imp⟩     -> 0
+    ,, ⟨obl⟩     -> m ⟪A⟫ l ⟪I⟫
+    ,, ⟨opt⟩     -> ⟪by⟫ ⟪A⟫ ! || _ \[⟨3s⟩|⟨3p⟩]
+!    ,, ⟨opt⟩     -> 0        || _ [⟨3s⟩|⟨3p⟩]
+    ,, ⟨past⟩    -> ⟪D⟫ ⟪I⟫
+    ,, ⟨prog%.yor⟩ -> ⟪bI⟫ y o r
+    ,, ⟨prog%.mekte⟩ -> m ⟪A⟫ k t ⟪A⟫
+    ,, ⟨cpl⟩     -> ⟪by⟫ || _ (⟨V⟩) [⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  \[⟨V⟩|⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  ⟨V⟩ \[⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨1s⟩      -> m,
+       ⟨2s⟩      -> n,
+       ⟨3s⟩      -> 0,
+       ⟨1p⟩      -> k,
+       ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] _
+    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩] _
+    ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] _
+    ,, ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z 
+            || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨obl⟩|⟨prog%.yor⟩|⟨prog%.mekte⟩
+               |⟨cv%.ken⟩|⟨Q⟩|⟨q⟩] _
+    ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
+       ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> l ⟪I⟫ m,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨opt⟩ _
+    ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
+       ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨cpl⟩ (⟨V⟩) _,
+                                [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩
+                                |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩]  _ ⟨cpl⟩
+    ,, ⟨2s⟩       -> s ⟪A⟫ n ⟪A⟫,
+       ⟨2s⟩       -> 0,
+       ⟨3s⟩       -> s ⟪I⟫ n,
+       ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n,
+       ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n ⟪I⟫ z,
+       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫,
+       ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ _
+    ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ _
+    ,, ⟨dir⟩      -> ⟪D⟫ ⟪I⟫ r
+    ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
+! this compositon is only to get foma compile without consuming a lot
+! of memory. It can be completely paralelized
+    ,, [..]       -> ⟪MB⟫ || [analysisSym]  _
+   .o. "⟨vn.me⟩"        -> m ⟪A⟫
+    ,, "⟨vn.mek⟩"       -> m ⟪A⟫ ⟪K⟫
+    ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş
+    ,, "⟨part.pres⟩"    -> ⟪by⟫ ⟪A⟫ n
+    ,, "⟨part.past⟩"    -> ⟪D⟫ ⟪I⟫ ⟪k⟫
+    ,, "⟨part.fut⟩"     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
+    ,, "⟨part.esi⟩"     -> ⟪by⟫ ⟪A⟫ s ⟪I⟫
+    ,, "⟨part.ici⟩"     -> ⟪by⟫ ⟪I⟫ c ⟪I⟫
+    ,, "⟨cv.cesine⟩"    -> ⟪C⟫ ⟪A⟫ s ⟪I⟫ n ⟪A⟫
+    ,, "⟨cv.ken⟩"       -> k e n
+    ,, "⟨cv.dikce⟩"     -> ⟪D⟫ ⟪I⟫ k ⟪C⟫ ⟪A⟫
+    ,, "⟨cv.eli⟩"       -> ⟪by⟫ ⟪A⟫ l ⟪I⟫
+    ,, "⟨cv.erek⟩"      -> ⟪by⟫ ⟪A⟫ r ⟪A⟫ k
+    ,, "⟨cv.erek⟩"      -> ⟪by⟫ ⟪A⟫ r ⟪A⟫ k t ⟪A⟫ n ! colloquial
+    ,, "⟨cv.esiye⟩"     -> ⟪by⟫ ⟪A⟫ s ⟪I⟫ y ⟪A⟫
+    ,, "⟨cv.inceye⟩"    -> ⟪by⟫ ⟪I⟫ n c ⟪A⟫ y ⟪A⟫
+    ,, "⟨cv.ince⟩"      -> ⟪by⟫ ⟪I⟫ n c ⟪A⟫
+    ,, "⟨cv.ip⟩"        -> ⟪by⟫ ⟪I⟫ p
+    ,, "⟨cv.meden⟩"     -> m ⟪A⟫ d ⟪A⟫ n
+    ,, "⟨cv.meden⟩"     -> m ⟪A⟫ z d ⟪A⟫ n
+    ,, "⟨cv.meksizin⟩"  -> m ⟪A⟫ k s ⟪I⟫ z ⟪I⟫ n
+    ,, "⟨cv.ye⟩"        -> ⟪by⟫ ⟪A⟫
+    ,, [..]       -> ⟪MB⟫ || analysisSym  _
+!
+! Add the default silent front/unronded vowel
+! to abbreviations which do not have any vowel, or any silent
+! letters added in the lexicon.
+! The second rule inserts an optional dot `.' if there isn't one
+! already.
+   .o. [..] -> ⟪sFUV⟫ || .#. consonant+ _ intSym* ⟨abbr⟩
+    ,, [..] (->) %.   || \[%.] _ intSym* ⟨abbr⟩ intSym* posSym .#.
+    ,, ⟨abbr⟩ -> 0
+! replace apostrophe with an intermediate symbol
+    ,, ⟨apos⟩     -> ⟪apos⟫
+!
+! silent vowel insertion for numbers and 
+!
+    ,,  [..] -> ⟪sBRV⟫ ⟪sVC⟫
+                || nonzero %0^{12,14} / ⟪tSep⟫   _ numArabic, ! trilyon
+                   nonzero %0^{6,8}   / ⟪tSep⟫   _ numArabic, ! milyon
+                   [¹|1|3] %0                _ numArabic, ! 10,30
+                   9                       _ numArabic,
+                   R1   R10                _ numRoman,  ! 9
+                   [\[R50|R10|R1]|.#.] R10^{1,3} _ numRoman,  ! 10,30
+                   [Ⅸ|ⅸ]                   _ numRoman   ! 9
+    ,,  [..] -> ⟪sBUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{9,11}  / ⟪tSep⟫   _ numArabic, ! milyar
+                   [\[digit|⟪tSep⟫]|.#.] %0+     _ numArabic, ! 0, 00, a00
+                   9 %0                    _ numArabic, ! doksan
+                   R10 R100                _ numRoman ! 90
+    ,,  [..] -> ⟪sFUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{3,5}   / ⟪tSep⟫   _ numArabic, ! bin
+                   8 %0                    _ numArabic, ! seksen
+                   1                       _ numArabic,
+                   8                       _ numArabic,
+                   [Ⅷ|ⅷ|Ⅺ]                 _ numRoman, ! 8
+                   R5 R1^3                 _ numRoman, ! 8
+                   [\[R5|R1]|.#.] R1       _ numRoman, ! 1
+                   R50 R10^3               _ numRoman, ! 80
+                   [\R100|.#.] R1000       _ numRoman  ! 1000
+    ,,  [..] -> ⟪sFRV⟫ ⟪sVC⟫ 
+                || nonzero %0^2            _ numArabic,     ! yüz
+                   [\[R10|R1]|.#.] R100    _ numRoman, ! 100
+                   R500                    _ numRoman, ! 500
+                   R100 R1000              _ numRoman  ! 900
+    ,,  [..] -> ⟪sBUV⟫ ⟪sUC⟫
+                || 4 %0                    _ numArabic,
+                   6 %0                    _ numArabic,
+                   R10 R50                 _ numRoman, ! 40
+                   R50 R10                 _ numRoman  ! 60
+    ,,  [..] -> ⟪sFUV⟫ ⟪sUC⟫ 
+                || 7 %0                    _ numArabic,
+                   5                       _ numArabic,
+                   [\[R1]|.#.] R5          _ numRoman, ! 5
+                   R50 R10^2               _ numRoman  ! 70
+    ,,  [..] -> ⟪sFRV⟫ ⟪sUC⟫
+                || [³|3|4|¼|¾]             _ numArabic,
+                   [Ⅲ|ⅲ|Ⅳ|ⅳ]               _ numRoman, ! 3,4
+                   R1 R5                   _ numRoman, ! 4
+                   [\R5|.#.] R1^{3,4}      _ numRoman  ! 3,4
+    ,,  [..] -> ⟪sBUV⟫
+                || 6                       _ numArabic,
+                   R5 R1                   _ numRoman, ! 6
+                   [Ⅵ|ⅵ]                   _ numRoman  ! 6
+    ,,  [..] -> ⟪sFUV⟫
+                || [²|2|5] %0              _ numArabic,
+                   [2|½|7]                 _ numArabic,
+                   [\R10|.#.] R50          _ numRoman, ! 50
+                   [\R50|.#.] R10^2        _ numRoman, ! 20
+                   [\R1|.#.] R1^2          _ numRoman, ! 2,7
+                   [Ⅱ|ⅱ|Ⅶ|ⅶ|Ⅻ|ⅻ]           _ numRoman  ! 2,7,12
+! decimal / thousand separator replacement
+    ,, [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩] -> 0
+    ,, ⟪tSep⟫ -> "."|","
+    ,, ⟪dSep⟫ -> "."|","
+    ,, ⟪DB⟫ (->) " " || _ intSym* \⟨Num⟩ !TODO: double check
+    ,, ⟪DB⟫ -> 0
+! realization of causative and aorist (except the exceptions above)
+! depnds on vowel harmony and buffer deletion, we replace them here 
+! with an intermediate symbol, and process it later.
+    ,, ⟨caus⟩     -> ⟪caus⟫
+;
+
+
+
+regex phonetize
+  .o. posSym -> ⟪RB⟫ || .#. [\posSym]+ _
+  .o. posSym -> 0
+;

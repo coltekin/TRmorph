@@ -1,2 +1,1 @@
-*.expect
-tests.expect.all
+__pycache__

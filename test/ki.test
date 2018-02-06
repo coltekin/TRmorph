@@ -1,0 +1,17 @@
+A;A;evdeki;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;evinki;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;odadaki;oda⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;odanınki;oda⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;evki;
+A;R;evimizki;
+A;R;eveki;
+A;R;eviki;
+A;R;evdenki;
+A;R;evleki;
+#
+A;A;dünkü;dün⟨N⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;dünki;dün⟨N⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;gülünki;gül⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;gülünkü;gül⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;evdekü;
+A;R;odanınkü;

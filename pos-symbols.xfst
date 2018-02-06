@@ -1,0 +1,4 @@
+! list of all POS symbols, including subcategorized ones.
+regex ⟨Adj⟩|⟨Adv⟩|⟨Cnj⟩|⟨Det⟩|⟨N⟩|⟨Num⟩|⟨Pron⟩|⟨V⟩
+     |⟨Q⟩|⟨Ij⟩|⟨Punc⟩|⟨Postp⟩|⟨Sym⟩|⟨Alpha⟩
+;

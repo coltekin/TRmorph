@@ -1,8 +1,0 @@
-! ascii-lower.xfst
-!
-! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
-! This file is part of TRmorph, released under the terms of 
-! the MIT License. See the file LICENSE  or 
-! <https://opensource.org/licenses/MIT> for details.
-
-regex a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|w|v|x|y|z;

@@ -1,13 +1,5 @@
-TESTFILES=$(shell ls *.test)
-EXPECTFILES=$(TESTFILES:.test=.expect)
+TESTS := $(shell ls *.test)
+TESTSCRIPT=./test.py
 
-all: test
-
-%.expect: %.test
-	./make-expect.sh $< > $@
-
-test: tests.expect.all
-	expect tests.expect.all 
-
-tests.expect.all: $(EXPECTFILES)
-	cat $^ > $@
+all:
+	@for t in $(TESTS);do $(TESTSCRIPT) $$t;done

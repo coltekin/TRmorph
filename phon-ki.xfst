@@ -1,0 +1,16 @@
+! ---------------------------------------------------------------------------
+! optionally replace ki -> kü in some contexts
+!
+! the suffix -ki may be realized as -kü if the preceding vowel is `ü'
+! this seems to be mostly optional with varying degree of preference
+! over one or the other  based on the root form. For example, it is
+! more likely to hear 'dünkü' but 'gülünki'.
+! ---------------------------------------------------------------------------
+define vowel  @"vowel.a";
+define vowelAll  vowel|⟪I⟫|⟪A⟫;
+define intSym @"intermediate-symbols.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+
+
+regex  i (->) ü || ü [\vowelAll]* boundary+ k _ ⟪MB⟫
+;

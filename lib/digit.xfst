@@ -1,8 +1,0 @@
-! digit.xfst
-!
-! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
-! This file is part of TRmorph, released under the terms of 
-! the MIT License. See the file LICENSE  or 
-! <https://opensource.org/licenses/MIT> for details.
-
-regex %0|1|2|3|4|5|6|7|8|9;

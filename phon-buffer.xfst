@@ -1,0 +1,21 @@
+! ---------------------------------------------------------------------------
+! Buffer vowel/consonant processing
+! ---------------------------------------------------------------------------
+
+define bufferCons ⟪bs⟫|⟪bş⟫|⟪by⟫|⟪bn⟫;
+define bufferVowel ⟪bA⟫|⟪bI⟫;
+define consonant  @"consonant.a";
+define consonantAll  consonant|⟪c⟫|⟪p⟫|⟪t⟫|⟪k⟫|⟪g⟫|⟪K⟫|⟪D⟫|⟪C⟫|⟪L⟫;
+define vowel  @"vowel.a";
+define vowelAll  vowel|⟪I⟫|⟪A⟫;
+
+regex  ⟪by⟫ -> 0 || .#. i ⟪RB⟫ _ , _ [⟪MB⟫|⟪IGB⟫]* .#.
+   .o. bufferVowel -> 0 || vowelAll [\[consonantAll|⟪caus⟫]]* _ ,,
+       bufferCons  -> 0 || [consonantAll|⟪caus⟫] [\vowelAll]* _
+   .o. ⟪bI⟫ -> ⟪I⟫
+    ,, ⟪bA⟫ -> ⟪A⟫
+    ,, ⟪bs⟫ -> s
+    ,, ⟪bş⟫ -> ş
+    ,, ⟪by⟫ -> y
+    ,, ⟪bn⟫ -> n
+;

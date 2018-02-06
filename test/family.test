@@ -1,8 +1,8 @@
-A;A;babamların;baba<N><p1s><pl><gen>
-A;A;babanlarla;baba<N><p2s><pl><ins>
-A;R;babasıların;
-A;R;babamızların;
-A;R;babanızların;
-A;R;babalarıların;
+A;A;annemler;anne⟨N⟩⟨p1s⟩⟨pl⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;annemlerde;anne⟨N⟩⟨p1s⟩⟨pl⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;R;annesileren;
+A;R;annemizlerin;
+A;R;annenizlerin;
+A;R;annelerilerin;
 A;R;kitabınlarla;
 A;R;kitabımlarla;

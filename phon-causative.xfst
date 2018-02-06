@@ -1,0 +1,14 @@
+! ---------------------------------------------------------------------------
+! replace the intermediate symbol ⟪caus⟫ with the proper caustive
+! form.
+!
+! Needs to be done after buffer vowel/consonant deletion
+! ---------------------------------------------------------------------------
+define vowel  @"vowel.a";
+define vowelAll  vowel|⟪I⟫|⟪A⟫;
+define intSym @"intermediate-symbols.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+
+regex  ⟪caus⟫ -> t         //  [vowelAll | l | r] boundary+  _ ⟪MB⟫
+    ,, ⟪caus⟫ -> ⟪D⟫ ⟪I⟫ r // \[vowelAll | l | r] boundary+  _ ⟪MB⟫
+;

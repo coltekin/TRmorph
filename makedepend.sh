@@ -1,22 +1,16 @@
 #!/bin/bash
+shopt -s extglob
 
-source=$1
+srcfile=$1
 depfile=$2
 
 
-DEPS="$(grep '^#include' $source |sed 's/#include[ ]*"\([^"][^"]*\)".*/\1/')"
-DEPS="$DEPS $(grep '^read lexc' $source | sed 's/^read lexc[ ]*//')"
-DEPS="$DEPS $(grep '\@\"[^"]*";' $source | sed 's/.* @"\([^"]*\)";.*/\1/')"
+DEPS=$(grep '[^!]*@".*"' $srcfile  | sed 's/.*@"\(.*\)".*/\1/')
 
-if echo $source |grep '\.xfst' > /dev/null 2>&1; then
-    DEPS+=" "`grep '^source' $source |sed 's/source[ ]*\([^ 	][^ 	]*\).*/\1/'`
-    target=`basename $source .xfst`.cpp.xfst
-else 
-    target=`basename $source .lexc`.cpp.lexc
-fi
+target=${srcfile/.+(xfst|lexc)/.a}
 
 if [ -z "$depfile" ]; then
-    depfile=${source}.d
+    depfile=${srcfile}.d
 fi
 
 echo -n "${target}: " >$depfile
@@ -28,3 +22,4 @@ echo>>$depfile;echo>>$depfile
 for d in $DEPS;do
     echo "${d}:" >>$depfile
 done
+

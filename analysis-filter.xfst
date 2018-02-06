@@ -1,0 +1,42 @@
+!
+! Replace / delete the special symbols used in the lexicon from the analysis
+! side.
+!
+define intSym @"intermediate-symbols.a";
+
+regex  ⟪IGB⟫ -> 0
+,,     ⟪c⟫ -> ç,
+       ⟪p⟫ -> p,
+       ⟪t⟫ -> t,
+       ⟪k⟫ -> k,
+       ⟪g⟫ -> g || _ \⟪dup⟫
+    ,,  ˈ -> 0
+    ,, [⟪sBRV⟫|⟪sBUV⟫|⟪sFRV⟫|⟪sFUV⟫|⟪sUC⟫|⟪sVC⟫] -> 0
+    ,, ? -> 0 || _ ⟪dup⟫
+    ,, ⟪dup⟫ -> 0
+    ,, ⟪del⟫ -> 0
+    ,, ⟪dels⟫ -> 0
+    ,, ⟪prn⟫ -> 0
+    ,, ⟪tSep⟫ -> 0
+    ,, ⟪dSep⟫ -> %,
+    ,, ⟪DB⟫ -> 0
+    ,, ⟪compn⟫ -> 0
+    ,, ⟪mredup⟫ -> 0
+! noun subcategorization
+    ,, [..] -> ⟨prop⟩ || ⟪propn⟫ intSym* ⟨N⟩ intSym* _
+    ,, [..] -> ⟨abbr⟩ || ⟪abbr⟫ intSym* ⟨N⟩ intSym* _
+    ,, ⟪propn⟫ -> 0
+    ,, ⟪abbr⟫ -> 0
+! determiner subcategorization
+    ,, ⟨Det⟩ -> ⟨Det⟩ ⟨indef⟩ || ⟪indef⟫ intSym* _
+    ,, ⟨Det⟩ -> ⟨Det⟩ ⟨def⟩ || ⟪def⟫ intSym* _
+! conjunction subcategorization
+    ,, ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨coo⟩ || ⟪coo⟫ intSym* _
+    ,, ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨adv⟩ || ⟪adv⟫ intSym* _
+    ,, ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨sub⟩ || ⟪sub⟫ intSym* _
+    ,, [⟪adv⟫|⟪coo⟫|⟪sub⟫] -> 0
+    ,, ⟪time⟫ -> 0
+    ,, ⟨opt⟩ -> ⟨cond⟩ || _ ?+ [⟨1s⟩|⟨2s⟩|⟨3s⟩|⟨1p⟩|⟨2p⟩|⟨3p⟩],
+                         _ [⟨1s⟩|⟨2s⟩|⟨3s⟩|⟨1p⟩|⟨2p⟩|⟨3p⟩] ?+
+    ,, intSym -> 0
+;

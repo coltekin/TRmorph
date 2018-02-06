@@ -1,0 +1,15 @@
+Multichar_Symbols ⟪c⟫ ⟪p⟫ ⟪t⟫ ⟪k⟫ ⟪g⟫ ⟪K⟫ ⟪D⟫ ⟪C⟫
+                  ⟪sBRV⟫ ⟪sBUV⟫ ⟪sFRV⟫ ⟪sFUV⟫
+                  ⟪sUC⟫ ⟪sVC⟫
+
+LEXICON Root
+<A|E|I|İ|O|Ö|U|Ü>                                           #;
+<[B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|R|S|Ş|T|V|Y|Z] ⟪sFUV⟫>        #;
+<[H|K|Q|W] ⟪sBUV⟫>                                          #;
+<H ⟪sBUV⟫ ⟪sVC⟫>                                            #;
+<X ⟪sFUV⟫ ⟪sUC⟫>                                            #;
+<a|e|ı|i|o|ö|u|ü>                                         #;
+<[b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|r|s|ş|t|v|y|z] ⟪sFUV⟫>      #;
+<[h|k|q|w] ⟪sBUV⟫>                                        #;
+<h ⟪sBUV⟫ ⟪sVC⟫>                                          #;
+<x ⟪sFUV⟫ ⟪sUC⟫>                                          #;

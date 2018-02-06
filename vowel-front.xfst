@@ -1,0 +1,4 @@
+define rounded  @"vowel-front-rounded.a";
+define unrounded  @"vowel-front-unrounded.a";
+
+regex rounded | unrounded;

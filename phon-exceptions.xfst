@@ -1,0 +1,133 @@
+define intSym @"intermediate-symbols.a";
+define ucase @"uppercase.a";
+define vowel  @"vowel.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+
+! --------------------------------------------------------------------------
+! the verb roots 'de-' and 'ye-' becom di- and yi- if a suffix
+! starting with a 'y' follows
+! --------------------------------------------------------------------------
+regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
+   ,, e -> e || .#. d  _  boundary+ ⟪by⟫ ⟪I⟫ p ⟪MB⟫
+! --------------------------------------------------------------------------
+! -yor exception - `a' `e' and underspecified low-unrounded vowel `A' becomes
+! corresponding high vowel before the suffix -yor
+! --------------------------------------------------------------------------
+   .o. [a|e|⟪A⟫] -> ⟪I⟫ ||  _  boundary+ ⟪bI⟫ y o r ⟪MB⟫
+! --------------------------------------------------------------------------
+! (s)I deletion - the morpheme (s)I is deleted in some contexts.
+! What is deleted is  not clear, but we model such that (s)I gets deleted 
+! - before another (s)I
+! - before lArI
+! - after lI, lIk, sIz, CI
+! - after  -(y)AsI
+! - and optionally after 'aynı' and before a case suffix 
+! --------------------------------------------------------------------------
+    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ _ boundary+ [ ⟪bs⟫ ⟪I⟫
+                                     | l (⟪NS⟫) ⟪A⟫ r ⟪I⟫
+                                     | l ⟪I⟫
+                                       l ⟪I⟫ k
+                                       s ⟪I⟫ z
+                                       ⟪C⟫ ⟪I⟫ ] ⟪MB⟫,
+                                     ⟪by⟫ ⟪A⟫ s ⟪I⟫ boundary+ _ ⟪MB⟫,
+                                     ⟪bs⟫ ⟪I⟫ intSym* ⟪RB⟫ boundary* _ ⟪MB⟫
+    ,,  ⟪bs⟫ ⟪I⟫ (->) 0 || .#. {aynı} ⟪RB⟫ _ boundary* [ ⟪by⟫ ⟪A⟫
+                                                       | ⟪by⟫ ⟪I⟫
+                                                       | ⟪bn⟫ ⟪I⟫ n
+                                                       | ⟪D⟫  ⟪A⟫
+                                                       | ⟪D⟫  ⟪A⟫ n
+                                                       | ⟪by⟫ l   ⟪A⟫ ]
+! ---------------------------------------------------------------------------
+! Optionally Delete (s) after a few marked nouns. The well known example is 
+! cami ! -> cami-i. This deletion in current language seems to be optional
+! (as of 2009-10-21 google finds ! more `camisi' than `camii').
+! ---------------------------------------------------------------------------
+   .o. ⟪bs⟫ (->) 0  || ⟪dels⟫ intSym* boundary* _ ⟪I⟫ ⟪MB⟫
+    ,, ⟪dels⟫  -> 0
+! ---------------------------------------------------------------------------
+! lAr deletion - if there are multiple morphemes in a sequence with surface 
+! form lAr or lArI following each other, only one survives on the surface.
+! ---------------------------------------------------------------------------
+   .o. l ⟪A⟫ r -> 0  || boundary+ _ boundary+ l ⟪A⟫ r
+! ---------------------------------------------------------------------------
+! replace the intermediate symbol ⟪pass⟫ with the proper caustive
+! form, and handle some lexical exceptions when passive suffix 
+! is attached to a verb stem..
+!
+! The passive morpheme is -(I)n if the preceding letter is `l' or a 
+! vowel -(I)n otherwise. 
+! The other exceptions include:
+!   - in the passive form of the verb stems ending with `koy'
+!      `y' becomes `n' optionally (generally preferred). 
+!   - the passive form of `kapa-' is `kapatıl-'.
+!     we treat this change as optional, allowing both kapatıl- and
+!     kapan- as passive of 'kapa'.
+!   - the passive form of `anla' is `anlaşıl'
+! ---------------------------------------------------------------------------
+   .o.  y (->) n   || {ko} _     intSym* ⟪RB⟫ ⟪pass⟫ ⟪MB⟫
+    ,, [..] (->) t || .#. {kapa} _ intSym* ⟪RB⟫  ⟪pass⟫ ⟪MB⟫
+    ,, [..] -> ş   || .#. {anla} _ intSym* ⟪RB⟫  ⟪pass⟫ ⟪MB⟫
+    ,, ⟪pass⟫ ->  ⟪bI⟫ n  //  [vowel|l] boundary+ _ ⟪MB⟫
+    ,, ⟪pass⟫ ->  ⟪bI⟫ l  // \[vowel|l] boundary+ _ ⟪MB⟫
+! ------------------------------------------------------------
+! `n', `y' insertion/replacement after some suffixes / roots
+! TODO: (informal) Fatma’ynan, şunnan, kimnen
+! ------------------------------------------------------------
+   .o. ⟪D⟫ ⟪A⟫ -> n ⟪D⟫ ⟪A⟫,
+       ⟪D⟫ ⟪A⟫ n -> n ⟪D⟫ ⟪A⟫ n,
+       ⟪C⟫ ⟪A⟫ -> n ⟪C⟫ ⟪A⟫,
+       ⟪by⟫ ⟪A⟫ -> n ⟪A⟫,
+       ⟪by⟫ ⟪I⟫ -> n ⟪I⟫
+        || [ [s|⟪bs⟫] ⟪I⟫ | l ⟪A⟫ r ⟪I⟫ | boundary+ [i|ü] ] boundary+
+            _ ⟪MB⟫,
+           .#.  [{o}|{bu}|{şu}|
+                 {aynı}|
+                 {kendi}|{kendisi}|{kendileri}|
+                 {biri}|{birisi}|{birileri}|
+                 {üzeri}] boundary+ _ ⟪MB⟫
+
+   .o. n ⟪A⟫ (->) ⟪by⟫ ⟪A⟫,
+       n ⟪I⟫ (->) ⟪by⟫ ⟪I⟫
+        || ⟪compn⟫ ?* [s|⟪bs⟫] ⟪I⟫ boundary+ _ ⟪MB⟫
+    ,, ⟪compn⟫ -> 0
+    ,, [..] -> n
+           || .#. [{o}|{bu}|{şu}] boundary+ 
+              _ [l ⟪A⟫ r | ⟪by⟫ l ⟪NS⟫ ⟪A⟫ | s ⟪I⟫z] ⟪MB⟫
+    ,, [..] (->) ⟪bn⟫ ⟪I⟫ n
+           || .#. [{sen}|{o}|{siz}|{bu}|{şu}|{kim}] boundary+ 
+              _  (n) ⟪by⟫ l ⟪NS⟫ ⟪A⟫  ⟪MB⟫
+    ,, [..] (->) ⟪bn⟫ ⟪I⟫ m
+           || .#. [{ben}|{biz}] intSym* ⟪prn⟫ boundary+ 
+              _  ⟪by⟫ l ⟪NS⟫ ⟪A⟫  ⟪MB⟫
+    ,, n -> m
+           || .#. [{ben}|{biz}] intSym* ⟪prn⟫ boundary+
+              ⟪bn⟫ ⟪I⟫ _
+    ,, [..] (->) n 
+           || .#. [{kendi}|{kendisi}|{kendileri}] boundary+
+              _ ⟪by⟫ l ⟪NS⟫ ⟪A⟫  ⟪MB⟫
+    ,, [..] -> y
+           || .#. [{o}|{bu}|{şu}] boundary+ 
+              _ [⟪bI⟫ m | ⟪bI⟫ n | ⟪bI⟫ m ⟪I⟫ z|  ⟪bI⟫ m ⟪I⟫ z] ⟪MB⟫,
+              .#. [{su}
+                  |{özsu}
+                  |{karasu}] boundary+ _ [⟪I⟫|⟪bn⟫|⟪bs⟫]
+    ,, [..] (->) y
+           || .#. [{ne}
+                  |{akarsu}] boundary+ 
+                    _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫],
+              .#. ucase [\⟪RB⟫]* s u intSym* [⟪RB⟫] (⟪apos⟫) [⟪IGB⟫|⟪MB⟫]+
+                    _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫]
+! ------------------------------------------------------------
+! Pronoun exceptions
+! - drop of final `i/ı' after içeri/dışarı
+! - drop of final `a/e' after ora/bura/şura/nere
+! ------------------------------------------------------------
+   .o. e -> a || .#. [s|b] _ n ⟪prn⟫ intSym* ⟪RB⟫ [⟪IGB⟫|⟪MB⟫]* ⟪by⟫ ⟪A⟫ ⟪MB⟫
+    ,, [ı|i] (->) 0 || .#. [{içer}|{dışar}] _ 
+                        boundary* ⟪D⟫ ⟪A⟫ (n) ⟪MB⟫
+    ,, [a|e] (->) 0 || .#. [{bˈur}|{şˈur}|{ˈor}|{nˈer}]  _ 
+                boundary* [⟪D⟫ ⟪A⟫ (n) | ⟪by⟫ ⟪A⟫] ⟪MB⟫
+    ,, ⟪by⟫   -> y || .#. [{bura}|{şura}|{ora}|{nere}] 
+                boundary* _ ⟪A⟫ ⟪MB⟫
+    ,, ⟪prn⟫ -> 0
+;

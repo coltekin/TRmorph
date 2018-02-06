@@ -1,7 +1,7 @@
 ! morph.lexc - main morphotactic description
 !
 ! Released under the terms of the MIT License
-! Copyright (c) 2011-2015 Çağrı Çöltekin <cagri@coltekin.net>
+! Copyright (c) 2011-2016 Çağrı Çöltekin <cagri@coltekin.net>
 ! 
 ! Permission is hereby granted, free of charge, to any person obtaining a
 ! copy of this software and associated documentation files (the "Software"),
@@ -20,2826 +20,485 @@
 ! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 ! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 ! DEALINGS IN THE SOFTWARE.
-!
-
-#include "options.h"
-#include "multi-char.lexc"
-
-! LEXICON Root
-! Number; ! numbers are special as they are defined through a set of rules.
-! Exceptions;
-! 
-!
-! This part is the core lexicon. We do not what to leave any
-! of these out. These files do not have lexicon definitions. 
-! They only list the lexical items and their class.
-!
-! #include "lexicon/alpha"
-! #include "lexicon/clitics"
-! #include "lexicon/punctuation"
-! #include "lexicon/qwords"
-! #include "lexicon/adjective"
-! #include "lexicon/adverb"
-! #include "lexicon/conjunction"
-! #include "lexicon/determiner"
-! #include "lexicon/interjection"
-! #include "lexicon/noun"
-! #include "lexicon/proper_noun"
-! #include "lexicon/onomatopoeia"
-! #include "lexicon/postposition"
-! #include "lexicon/pronoun"
-! #include "lexicon/verb"
-! 
-! !
-! ! These may be "optionalized", or replaced by a more rule-governed
-! ! method in the future.
-! !
-! 
-! #include "lexicon/abbreviation"
-! #include "lexicon/part_word"
-! 
-! 
-! !
-! ! Definitions for numbers, including numeric forms (Arabic and Roman numerals)
-! !
-! 
-! #include "number.lexc"
-! #include "exceptions.lexc"
-
 
 !
-! Continuation class for symbols of the alphabet (when they are used
-! literally)
-!
-! when inflected, we require apostrophe after letters (when required
-! for porper names), e.g., 'şekil A'da görüldüğü gibi'.
-!
-LEXICON AlphaCont
-%<Alpha%>:@RB   NPApos;
-%<Alpha%>:@RB   #;
-
-
-!
-! conjunctions
+! This file defines an FSA (not an FST) that describes main
+! morphological process. The definition here is somwhat "idealized".
+! The exceptions are applied as filters.
 !
 
-LEXICON CnjCoo
-%<Cnj%:coo%>:@RB      #;
-
-LEXICON CnjAdv
-%<Cnj%:adv%>:@RB      #;
-
-LEXICON CnjSub
-%<Cnj%:sub%>:@RB      #;
-
-!
-! The following are for multi-word or discontinuous conjunctions.
-!
-LEXICON CnjCooPart
-%<Cnj%:coo%:partial%>:@RB      #;
-
-LEXICON CnjAdvPart
-%<Cnj%:adv%:partial%>:@RB      #;
-
-!
-! Postpositions
-!
-
-!
-! non-case-marked complements
-!
-
-LEXICON nomPostPadj
-%<Postp%:adj%:nomC%>:@RB    AdjCont;
-                        nomPostP;
-
-LEXICON nomPostP
-%<Postp%:adv%:nomC%>:@RB    AdvCont;
-
-LEXICON nomPostPadjKi
-%<Postp%:adj%:nomC%>:@RB    AdjCont;
-                        nomPostPKi;
-
-LEXICON nomPostPKi
-%<Postp%:adv%:nomC%>:@RB    AdvCont;
-%<Postp%:adv%:nomC%>:@RB    Ki;
+Multichar_Symbols ⟨Adj⟩
+                  ⟨Adv⟩
+                  ⟨Cnj⟩ 
+                    ⟨adv⟩ ⟨coo⟩ ⟨sub⟩
+                  ⟨Det⟩
+                    ⟨def⟩ ⟨indef⟩
+                  ⟨N⟩
+                    ⟨pl⟩ ⟨sg⟩
+                    ⟨p1s⟩ ⟨p2s⟩ ⟨p3s⟩ ⟨p1p⟩ ⟨p2p⟩ ⟨p3p⟩ ⟨p%0x⟩ 
+                    ⟨nom⟩ ⟨acc⟩ ⟨dat⟩ ⟨abl⟩ ⟨loc⟩ ⟨gen⟩ ⟨ins⟩ ⟨siz⟩
+                    ⟨ce⟩ ⟨ci⟩ ⟨li⟩ ⟨lik⟩ ⟨sel⟩
+                    ⟨ki⟩
+                    ⟨apos⟩
+                    ⟨len⟩ ⟨les⟩ ⟨le⟩
+                  ⟨Num⟩
+                    ⟨ara⟩ ⟨rom⟩ ⟨date⟩ ⟨time⟩
+                    ⟨dist⟩ ⟨ord⟩
+                  ⟨Pron⟩
+                  ⟨V⟩
+                    ⟨rfl⟩ ⟨rcp⟩ ⟨caus⟩ ⟨pass⟩
+                    ⟨abil⟩ ⟨iver⟩ ⟨adur⟩ ⟨agel⟩ ⟨agor⟩ ⟨akal⟩ ⟨ayaz⟩
+                    ⟨neg⟩
+                    ⟨aor⟩ ⟨cond⟩ ⟨evid⟩ ⟨fut⟩ ⟨imp⟩ 
+                      ⟨obl⟩ ⟨opt⟩ ⟨past⟩ ⟨prog.yor⟩ ⟨prog.mekte⟩
+                    ⟨cpl⟩
+                    ⟨1s⟩ ⟨2s⟩ ⟨3s⟩ ⟨1p⟩ ⟨2p⟩ ⟨3p⟩
+                    ⟨dir⟩
+                    ⟨vn.me⟩ ⟨vn.mek⟩ ⟨vn.yis⟩
+                    ⟨part.pres⟩ ⟨part.past⟩ ⟨part.fut⟩ ⟨part.esi⟩ ⟨part.ici⟩
+                    ⟨cv.cesine⟩ ⟨cv.ken⟩ ⟨cv.dikce⟩ ⟨cv.eli⟩ ⟨cv.erek⟩
+                      ⟨cv.esiye⟩ ⟨cv.inceye⟩ ⟨cv.ince⟩ ⟨cv.ip⟩ ⟨cv.meden⟩
+                      ⟨cv.meksizin⟩ ⟨cv.ye⟩
+                  ⟨Q⟩ ⟨q⟩
+                  ⟨Ij⟩
+                  ⟨Alpha⟩
+                  ⟨Postp⟩
+                  ⟨Sym⟩ ⟨Punc⟩
 
 !
-! genitive complements (note: this is different than the nominal
-! complement case, where they are fine with genitive pronouns, but no
-! other genitive complements)
+! here we define all the categories that come from the lexicon.
 !
 
-LEXICON genPostP
-%<Postp%:adv%:genC%>:@RB    AdvCont;
-
-
-!
-! accusative complements
-!
-LEXICON accPostPadj
-%<Postp%:adv%:accC%>:@RB    AdjCont;
-                            accPostP;
-
-LEXICON accPostP
-%<Postp%:adv%:accC%>:@RB    AdvCont;
-
-!
-! dative complements
-!
-
-LEXICON datPostPadj
-%<Postp%:adj%:datC%>:@RB    AdjCont;
-                        datPostP;
-
-LEXICON datPostP
-%<Postp%:adv%:datC%>:@RB    AdvCont;
-
-LEXICON datPostPadjKi
-%<Postp%:adj%:datC%>:@RB    AdjCont;
-                        datPostPKi;
-
-LEXICON datPostPKi
-%<Postp%:adv%:datC%>:@RB    datPostPKiCont;
-
-LEXICON datPostPKiCont
-                            AdvCont;
-                            Ki;
-                            PostPTimeCont;
-
-LEXICON PostPTimeCont
-                            D_dir;
-                            D_lArI;
-                            D_lIGInA;
-                            CliticSA;
+LEXICON Root
+<@"lexicon/adjective.a">            lex_adjective;
+<@"lexicon/adverb.a">               lex_adverb;
+<@"lexicon/alpha.a">                lex_alpha;
+<@"lexicon/conjunction.a">          lex_conjunction;
+<@"lexicon/determiner.a">           lex_determiner;
+<@"lexicon/interjection.a">         lex_interjection;
+<@"lexicon/noun.a">                 lex_noun;
+<@"lexicon/number-alpha.a">         lex_number_alpha;
+<@"lexicon/number-arabic.a">        lex_number_arabic;
+<@"lexicon/number-date.a">          lex_number_date;
+<@"lexicon/number-roman.a">         lex_number_roman;
+<@"lexicon/number-time.a">          lex_number_time;
+<@"lexicon/postposition.a">         lex_postposition;
+<@"lexicon/pronoun.a">              lex_pronoun;
+<@"lexicon/punctuation.a">          lex_punctuation;
+<@"lexicon/symbol.a">               lex_symbol;
+<@"lexicon/verb.a">                 lex_verb;
+i                                   lex_cpl_i;
+mı                                  lex_question;
+mi                                  lex_question;
+mu                                  lex_question;
+mü                                  lex_question;
 
 !
-! ablative complement
+! This part is only responsible from adding POS tags - lots of repetition :(
 !
 
-LEXICON ablPostPadj
-%<Postp%:adj%:ablC%>:@RB    AdjCont;
-                        ablPostP;
+LEXICON lex_adjective
+⟨Adj⟩                   adjective;
 
-LEXICON ablPostP
-%<Postp%:adv%:ablC%>:@RB    AdvCont;
+LEXICON lex_adverb
+⟨Adv⟩                   adverb;
 
-LEXICON ablPostPadjKi
-%<Postp%:adj%:ablC%>:@RB    AdjCont;
-                        ablPostPKi;
+LEXICON lex_alpha
+⟨Alpha⟩                 #;
+⟨Alpha⟩                 noun_apostrophe;
+
+LEXICON lex_conjunction
+⟨Cnj⟩                   #;
+
+LEXICON lex_determiner
+⟨Det⟩                   determiner;
+
+LEXICON lex_interjection
+⟨Ij⟩                     #;
+
+LEXICON lex_noun
+⟨N⟩                     noun;
+
+LEXICON lex_number_alpha
+⟨Num⟩                   number;
+LEXICON lex_number_arabic
+⟨Num⟩⟨ara⟩              number;
+LEXICON lex_number_roman
+⟨Num⟩⟨rom⟩              number;
+LEXICON lex_number_time
+⟨Num⟩⟨time⟩             number_datetime;
+LEXICON lex_number_date
+⟨Num⟩⟨date⟩             number_datetime;
+
+LEXICON lex_pronoun
+⟨Pron⟩                  noun;
+
+LEXICON lex_punctuation
+⟨Punc⟩                      #;
+
+LEXICON lex_postposition
+⟨Postp⟩                     #;
+⟨Postp⟩                     adverb;     !TODO: need filter
+⟨Postp⟩                     adjective;  !TODO: need filter
+
+LEXICON lex_symbol
+⟨Sym⟩                       #;
+
+LEXICON lex_verb
+⟨V⟩                     verb;
+
+LEXICON lex_cpl_i
+⟨V⟩                     copula;
 
 
-LEXICON ablPostPKi
-%<Postp%:adv%:ablC%>:@RB    AdvCont;
-%<Postp%:adv%:ablC%>:@RB    Ki;
-%<Postp%:adv%:ablC%>:@RB    PostPTimeCont;
+LEXICON lex_question
+⟨Q⟩                     copula;
+⟨Q⟩                     pnaggr;
 
-!
-! instrumetnal/commutative complement
-!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Adjectives
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON insPostPadj
-%<Postp%:adj%:insC%>:@RB    AdjCont;
-                        insPostP;
+LEXICON adjective
+                    noun;
 
-LEXICON insPostP
-%<Postp%:adv%:insC%>:@RB    AdvCont;
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Adverbs
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON insPostPadjKi
-%<Postp%:adj%:insC%>:@RB    AdjCont;
-%<Postp%:adj%:insC%>:@RB    Ki;
-
-!
-! these require a complement with either -lI or -sIz
-!
-
-LEXICON liPostPadj
-%<Postp%:adj%:liC%>:@RB    AdjCont;
-                        liPostP;
-
-LEXICON liPostP
-%<Postp%:adv%:liC%>:@RB    AdvCont;
-
-LEXICON liPostPadjKi
-%<Postp%:adj%:liC%>:@RB    AdjCont;
-                        liPostPKi;
-
-LEXICON liPostPKi
-%<Postp%:adv%:liC%>:@RB    AdvCont;
-%<Postp%:adv%:liC%>:@RB    Ki;
-
-!
-! these requrire a cardinal number as complement
-!
-
-LEXICON numPostPadj
-%<Postp%:adj%:numC%>:@RB    AdjCont;
-                        numPostP;
-
-LEXICON numPostP
-%<Postp%:adv%:numC%>:@RB    AdvCont;
-
-LEXICON numPostPadjKi
-%<Postp%:adj%:numC%>:@RB    AdjCont;
-                        numPostPKi;
-
-LEXICON numPostPKi
-%<Postp%:adv%:numC%>:@RB    AdvCont;
-%<Postp%:adv%:numC%>:@RB    Ki;
-
-!
-! The follwing makes complex postpositons.
-!
-
-LEXICON PostPlocation
-                PostPloc;
-                PostPdat;
-                PostPabl;
-
-LEXICON PostPloc
-%<N%>%<p1s%>:@RB^(I)m@MB      PostPlocCont;
-%<N%>%<p2s%>:@RB^(I)n@MB      PostPlocCont;
-%<N%>%<p3s%>:@RB^(s)^I@MB     PostPlocCont;
-%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPlocCont;
-%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPlocCont;
-%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPlocCont;
-
-LEXICON PostPlocCont
-%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     DerivedPostpCont;
-%<loc%>%<Postp%:adv%:nomC%>:^D^A@MB     Ki;
-
-LEXICON PostPdat
-%<N%>%<p1s%>:@RB^(I)m@MB      PostPdatCont;
-%<N%>%<p2s%>:@RB^(I)n@MB      PostPdatCont;
-%<N%>%<p3s%>:@RB^(s)^I@MB     PostPdatCont;
-%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPdatCont;
-%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPdatCont;
-%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPdatCont;
-
-LEXICON PostPdatCont
-%<dat%>%<Postp%:adv%:nomC%>:^(y)^A@MB   DerivedPostpCont;
-
-LEXICON PostPins
-%<N%>%<p1s%>:@RB^(I)m@MB      PostPinsCont;
-%<N%>%<p2s%>:@RB^(I)n@MB      PostPinsCont;
-%<N%>%<p3s%>:@RB^(s)^I@MB     PostPinsCont;
-%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPinsCont;
-%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPinsCont;
-%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPinsCont;
-
-LEXICON PostPinsCont
-%<ins%>%<Postp%:adv%:nomC%>:^(y)l^NS^A@MB  DerivedPostpCont;
-
-LEXICON PostPabl
-%<N%>%<p1s%>:@RB^(I)m@MB      PostPablCont;
-%<N%>%<p2s%>:@RB^(I)n@MB      PostPablCont;
-%<N%>%<p3s%>:@RB^(s)^I@MB     PostPablCont;
-%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPablCont;
-%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPablCont;
-%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPablCont;
-
-LEXICON PostPablCont
-%<abl%>%<Postp%:adv%:nomC%>:^D^An@MB    DerivedPostpCont;
-
-LEXICON PostPca
-%<N%>%<p1s%>:@RB^(I)m@MB      PostPcaCont;
-%<N%>%<p2s%>:@RB^(I)n@MB      PostPcaCont;
-%<N%>%<p3s%>:@RB^(s)^I@MB     PostPcaCont;
-%<N%>%<p1p%>:@RB^(I)m^Iz@MB   PostPcaCont;
-%<N%>%<p2p%>:@RB^(I)n^Iz@MB   PostPcaCont;
-%<N%>%<p3p%>:@RBl^Ar^I@MB     PostPcaCont;
-
-LEXICON PostPcaCont
-%<ca%>%<Postp%:adv%:nomC%>:^C^A@MB       DerivedPostpCont;
-
-LEXICON DerivedPostpCont
-                                         AdvCont;
-                                         NomPredicate;
-
-!
-! Possessive suffixes after adjectives and determiners make pronouns.
-!
-! TODO: The semantic difference between these are generally difficult
-!       to get:
-!
-!       yeni<Adj><p3s><Prn>  `(a) new one'
-!       yeni<Adj><0><N><p3s> `his/her new one = the new thing that he/she owns'
-!       
-!       And becomes more obscure in cases like this:
-!
-!       mavi<Adj><p2s><Prn>    `the thing that is a blue version of you'
-!       mavi<Adj><0><N><p2s>   `the blue thing that you own'
-!
-
-LEXICON JP_poss
-            JP_plu;
-            JP_possessive;
-
-LEXICON JP_plu
-%<pl%>:l^Ar@MB              JP_possessive12p;
-
-LEXICON     JP_possessive12p
-%<p1p%>%<Prn%>:^(I)m^Iz@MB   NposCont;
-%<p2p%>%<Prn%>:^(I)n^Iz@MB   NposCont;
-
-LEXICON     JP_possessive
-%<p1s%>%<Prn%>:^(I)m@MB      NposCont;
-%<p2s%>%<Prn%>:^(I)n@MB      NposCont;
-%<p3s%>%<Prn%>:^(s)^I@MB     NposCont;
-%<p3p%>%<Prn%>:l^Ar^I@MB     NposCont;
-                             JP_possessive12p;
-
-! besides adjectivals, the adverb `hep' also makes pronominals
-! the same way. Instead of <p3s> version `hepi', the correct 
-! form is `hepsi'. We allow `hepi', too, as it is used colloquially.
-!
-! The 1p and 2p singular forms are probably not possible.
-! We allow them here.
-!
-LEXICON HepPrn
-%<Adv%>%<p3s%>%<Prn%>:s^I@MB       NposCont;
-%<Adv%>%<p3s%>%<Prn%>:^(s)^I@MB    NposCont;
-%<Adv%>%<p1p%>%<Prn%>:^(I)m^Iz@MB  NposCont;
-%<Adv%>%<p2p%>%<Prn%>:^(I)n^Iz@MB  NposCont;
-%<N%>%<p3s%>:s^I@MB         NposCont;
-%<N%>%<p3s%>:^(s)^I@MB      NposCont;
-%<N%>%<p1p%>:^(I)m^Iz@MB    NposCont;
-%<N%>%<p2p%>:^(I)n^Iz@MB    NposCont;
-
-!
-! onomatopoeic words
-!
-LEXICON Onom
-%<Onom%>:@RB        OnomCont;
-#if (ALLOW_MREDUP == 1)
-%<Onom%:mredup%>:@MREDUP@RB    OnomCont;
-#endif
-
-LEXICON  OnomCont
+LEXICON adverb
                     #;
-                    Oderiv; ! TODO: this may be overgenerating
+                    adverb_ca; ! TODO: not all adverbs do this
+                    nom_predicate; ! TODO: introduces ambiguity
 
-!
-! interjections
-!
-! these do not have to be separate lexicons, but it makes things
-! easier with old lexicon conversion.
+LEXICON adverb_ca
+⟨ce⟩                #;
+                    nom_predicate; ! TODO: introduces ambiguity
 
-LEXICON Interjection
-%<Ij%>:@RB      InterjectionCont;
-#if (ALLOW_MREDUP == 1)
-%<Ij%:mredup%>:@MREDUP@RB    InterjectionCont;
-#endif
-
-LEXICON InterjectionCont
-                  #;
-                  D_lA;
-
-#if (ENDQUOTE_AS_NOUN == 1)
-!
-! This part handles the (nominal) suffixes following the quotation
-! marks. This happens when a word, or even a complete sentence is put
-! in quotation marks, and inflected as if it is a noun.
-!   Examples:
-!       ``Manisa  dosyası''nı
-!       ``Çeşitli Kanunlarda Değişiklik Yapılmasına İlişkin Kanun''u
-!
-! TODO: the first example above does not work correctly (due to y -> n
-!       alternation after -sI
-!
-
-LEXICON EndQuote
-%'^sFUV             EndQuoteCont;
-%'^sFRV             EndQuoteCont;
-%'^sBUV             EndQuoteCont;
-%'^sBRV             EndQuoteCont;
-%'^sFUV^sVC         EndQuoteCont;
-%'^sFRV^sVC         EndQuoteCont;
-%'^sBUV^sVC         EndQuoteCont;
-%'^sBRV^sVC         EndQuoteCont;
-%'^sFUV^sUC         EndQuoteCont;
-%'^sFRV^sUC         EndQuoteCont;
-%'^sBUV^sUC         EndQuoteCont;
-%'^sBRV^sUC         EndQuoteCont;
-%'%'^sFUV           EndQuoteCont;
-%'%'^sFRV           EndQuoteCont;
-%'%'^sBUV           EndQuoteCont;
-%'%'^sBRV           EndQuoteCont;
-%'%'^sFUV^sVC       EndQuoteCont;
-%'%'^sFRV^sVC       EndQuoteCont;
-%'%'^sBUV^sVC       EndQuoteCont;
-%'%'^sBRV^sVC       EndQuoteCont;
-%'%'^sFUV^sUC       EndQuoteCont;
-%'%'^sFRV^sUC       EndQuoteCont;
-%'%'^sBUV^sUC       EndQuoteCont;
-%'%'^sBRV^sUC       EndQuoteCont;
-%"^sFUV             EndQuoteCont;
-%"^sFRV             EndQuoteCont;
-%"^sBUV             EndQuoteCont;
-%"^sBRV             EndQuoteCont;
-%"^sFUV^sVC         EndQuoteCont;
-%"^sFRV^sVC         EndQuoteCont;
-%"^sBUV^sVC         EndQuoteCont;
-%"^sBRV^sVC         EndQuoteCont;
-%"^sFUV^sUC         EndQuoteCont;
-%"^sFRV^sUC         EndQuoteCont;
-%"^sBUV^sUC         EndQuoteCont;
-%"^sBRV^sUC         EndQuoteCont;
-%’^sFUV             EndQuoteCont;
-%’^sFRV             EndQuoteCont;
-%’^sBUV             EndQuoteCont;
-%’^sBRV             EndQuoteCont;
-%’^sFUV^sVC         EndQuoteCont;
-%’^sFRV^sVC         EndQuoteCont;
-%’^sBUV^sVC         EndQuoteCont;
-%’^sBRV^sVC         EndQuoteCont;
-%’^sFUV^sUC         EndQuoteCont;
-%’^sFRV^sUC         EndQuoteCont;
-%’^sBUV^sUC         EndQuoteCont;
-%’^sBRV^sUC         EndQuoteCont;
-%”^sFUV             EndQuoteCont;
-%”^sFRV             EndQuoteCont;
-%”^sBUV             EndQuoteCont;
-%”^sBRV             EndQuoteCont;
-%”^sFUV^sVC         EndQuoteCont;
-%”^sFRV^sVC         EndQuoteCont;
-%”^sBUV^sVC         EndQuoteCont;
-%”^sBRV^sVC         EndQuoteCont;
-%”^sFUV^sUC         EndQuoteCont;
-%”^sFRV^sUC         EndQuoteCont;
-%”^sBUV^sUC         EndQuoteCont;
-%”^sBRV^sUC         EndQuoteCont;
-
-LEXICON EndQuoteCont
-                 N;
-!%<N%>:@RB       Nderiv;    ! these are useful in case we want this to 
-!%<N%>:@RB       Ninfl;     ! apply only if there are inflections.
-#endif
-
-!
-! Rules governing nouns, including proper names and compounding
-!
-
-
-LEXICON NPcomp  ! this is only for lexicalized forms with compounding
-@NCOMP%<N%:prop%>:^(s)^I@NCOMP@RB NPcont;
-#if (ALLOW_MREDUP == 1)
-@NCOMP%<N%:prop%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NPcont;
-#endif
-
-LEXICON NPPart
-%<N%:prop%:partial%>:@RB   NPcont;
-
-LEXICON NP
-%<N%:prop%>:@RB   NPcont;
-#if (ALLOW_MREDUP == 1)
-%<N%:prop%:mredup%>:@MREDUP@RB    NPcont;
-#endif
-
-LEXICON NP_typo
-#if (MARK_TYPOS == 1) 
-%<N%:prop%:typo%>:@RB   NPcont;
-%<N%:prop%:mredup%:typo%>:@MREDUP@RB    NPcont;
-#else
-                        NP;
-#endif
-
-LEXICON NP_abbr
-%<N%:prop%:abbr%>:@ABBR@RB   NPAbbrCont;
-
-LEXICON NPAbbrCont
-                #;
-                NPApos;
-#if (APOSTROPHE_OPTIONAL_ABBR == 1)
-                NPAposCont;
-#endif
-
-LEXICON NPcont
-                #;
-                NPApos;
-#if (APOSTROPHE_OPTIONAL_PN == 1) 
-                NPAposCont;
-#endif
-
-
-LEXICON NPApos  
-0:@APOS@MB     NPAposCont;
-
-LEXICON   NPAposCont  
-                Nderiv;
-                Ninfl;
-
-LEXICON NPnation
-%<N%:prop%>:@RB   NPnationCont;
-#if (ALLOW_MREDUP == 1)
-%<N%:prop%:mredup%>:@MREDUP@RB    NPnationCont;
-#endif
-
-LEXICON NPnationCont
-                NPcont;
-                ND_CAlanguage;
-
-LEXICON NPperson
-%<N%:prop%>:@RB   NPpersonCont;
-#if (ALLOW_MREDUP == 1)
-%<N%:prop%:mredup%>:@MREDUP@RB    NPpersonCont;
-#endif
-
-LEXICON NPpersonCont
-                NPcont;
-0:@APOS@MB      D_gil;
-#if (APOSTROPHE_OPTIONAL_PN == 1) 
-                D_gil;
-#endif
-
-
-
-LEXICON Ncomp ! this is only for lexicalized forms with compounding
-@NCOMP%<N%>:^(s)^I@NCOMP@RB NcompCont;
-#if (ALLOW_MREDUP == 1)
-@NCOMP%<N%:mredup%>:^(s)^I@NCOMP@MREDUP@RB NcompCont;
-#endif
-
-LEXICON NcompInfl  ! this is for regular nouns
-%<ncomp%>:^(s)^I@NCOMP@MB    NcompCont;
-
-
-LEXICON NcompCont
-#if (NOUN_APOSTROPHE == 1)
-0:@APOS@MB  NcompAposCont;
-#endif
-            #;
-            NcompAposCont;
-
-LEXICON NcompAposCont
-                Nderiv;
-                Ninfl;
-
-LEXICON Ninfl
-                Nplu;
-                Npos;
-                Ncase;
-                NomPredicate;
-
-!
-! Nouns representing family members can get plural after p1s/p2s
-!
-! teyze-m-ler, dayın-n-lar ..
-! -lAr here works like a derivational morpheme that derives another
-! (plural) noun. However, it is at best odd to have another possessive
-! suffix, so, we do not allow another possessive suffix after -lAr.
-!
-! These may also be treated as a proper noun in combination with the
-! person's name, needing an apostrophe after the possessive suffix.
-! E.g., "Ahmet Amcam'ın"
-
-LEXICON Nfamily
-%<N%>:@RB   Ncont;
-%<N%>:@RB   NfamCont;
-#if (ALLOW_MREDUP == 1)
-%<N%::mredup%>:@MREDUP@RB    Ncont;
-%<N%::mredup%>:@MREDUP@RB    NfamCont;
-#endif
-
-LEXICON NfamCont
-%<p1s%>:^(I)m@MB      NfamPosCont;
-%<p2s%>:^(I)n@MB      NfamPosCont;
-%<p1s%>:^(I)m@MB@APOS@MB      NfamPosCont;
-%<p2s%>:^(I)n@MB@APOS@MB      NfamPosCont;
-%<p1s%>:^(I)m@MB@APOS@MB      NposCont;
-%<p2s%>:^(I)n@MB@APOS@MB      NposCont;
-%<p3s%>:^(s)^I@MB@APOS@MB     NposCont;
-
-LEXICON NfamPosCont
-%<pl%>:l^Ar@MB NposCont;
-! %<pl%>:l^Ar@MB NpluCont; ! use this instead  of the above line
-                           ! to accept forms like dayı-n-lar-ım
-
-!
-! Noun abbreviations
-!
-
-LEXICON N_unit  ! we may treat these differntly later
-%<N%:abbr%>:@ABBR@RB       NAbbrCont;
-
-LEXICON N_abbr  
-%<N%:abbr%>:@ABBR@RB       NAbbrCont;
-
-LEXICON NAbbrCont
-                        #;
-0:@APOS@MB              Ncont;
-#if (APOSTROPHE_OPTIONAL_ABBR == 1) 
-                        Ncont;
-#endif
-
-!
-! End of family nouns + possessive-plural 
-!
-
-LEXICON N
-%<N%>:@RB       Ncont;
-#if (ALLOW_MREDUP == 1)
-%<N%:mredup%>:@MREDUP@RB    Ncont;
-#endif
-
-LEXICON N_typo
-#if (MARK_TYPOS == 1) 
-%<N%:typo%>:@RB     Ncont;
-#else
-                    N;
-#endif
-
-LEXICON NPart
-%<N%:partial%>:@RB   #;
-
-LEXICON NPartLast
-%<N%:partial%>:@RB   Ncont;
-
-LEXICON Ncont
-    Nderiv;
-    NcompCont; ! includes final
-#if (MARK_NCOMP == 1) 
-    NcompInfl;
-#endif
-
-LEXICON Ntime
-%<N%>:@RB    NtimeCont;
-
-LEXICON NtimeCont
-                    Ki;
-                    D_dir;
-%<pl%>:l^Ar@MB      D_dir;
-                    Ncont;
-                    D_lArI;
-                    D_lIGInA;
-
-LEXICON Nplu
-%<pl%>:l^Ar@MB NpluCont;
-
-LEXICON NpluCont
-   #;
-   Npos;
-   Ncase;
-   NomPredicatePLU;
-   ND_CA;
-   D_arasi;
-
-LEXICON Npos
-%<p1s%>:^(I)m@MB      NposCont;
-%<p2s%>:^(I)n@MB      NposCont;
-%<p3s%>:^(s)^I@MB     Npos3sCont;
-%<p1p%>:^(I)m^Iz@MB   NposCont;
-%<p2p%>:^(I)n^Iz@MB   NposCont;
-%<p3p%>:l^Ar^I@MB     NposCont;
-
-LEXICON Npos3sCont
-        NposCont;
-#if (MARK_NCOMP == 0 && NOUN_APOSTROPHE == 1) 
-0:@APOS@MB  NposCont;
-#endif
-
-
-LEXICON  NposCont
-    #;
-    Ncase;
-    NomPredicate;
-    D_gil; ! TODO: this should be restricted
-    ND_CA;
-
-LEXICON  NCaseNoGen
-! %<nom%>:^(y)^I@MB   NomCaseCont; ! we do not (yet) mark for nominative
-%<acc%>:^(y)^I@MB   AccCaseCont;
-%<dat%>:^(y)^A@MB   Case1Cont;
-%<abl%>:^D^An@MB    Case1Cont;
-%<ins%>:^(y)l^NS^A@MB  Case1Cont;
-%<loc%>:^D^A@MB     LocCaseCont;
-
-LEXICON  Ncase
-                    D_sIz; ! sIz can combine after most of the inflectional suffixes
-                    NCaseNoGen;                    
-%<gen%>:^(n)^In@MB  GenCaseCont;
-
-LEXICON Case1Cont
-            #;
-            NomPredicate;
-
-!
-! Normally, predicative use after accusative is almost an
-! impossibility, but some forms exist: `renginiyse Ali seçmiş', 
-!
-LEXICON AccCaseCont
-             Case1Cont;
-!            #;
-
-LEXICON LocCaseCont
-            #;
-            Ki;
-            NomPredicate;
-
-LEXICON GenCaseCont
-            #;
-            Ki;
-            NomPredicate;
-
-LEXICON Ki
-%<ki%>:ki@MB DerivJCont;
-
-!
-! This part deals with person agreement
-!
-
-LEXICON NomPredicatePLU
-#if (ZERO_DERIV == 1)
-%<%0%>%<V%>:@MB                 NomPredPagr;
-%<%0%>%<V%>:@MB                 NomPredPagr3s;
-%<%0%>%<V%>:@MB                 NomPredDir;
-%<%0%>%<V%>:@MB                 CplAll;
-%<%0%>%<V%>:@MB                 #;
-#else
-                                NomPredPagr;
-                                NomPredPagr3s;
-                                NomPredDir;
-                                CplAll;
-                                #;
-#endif
-                                       NomPredQ;
-                                      CliticSA;
-
-LEXICON NomPredicate
-#if (ZERO_DERIV == 1)
-%<%0%>%<V%>:@MB                       NomPredPagr3p;
-#else
-                                      NomPredPagr3p;
-#endif
-                                      NomPredicatePLU;
-
-LEXICON NomPredicateMAK
-#if (ZERO_DERIV == 1)
-%<%0%>%<V%>:@MB                        NomPredPagr3s;
-%<%0%>%<V%>:@MB                        NomPredPagr3p;
-%<%0%>%<V%>:@MB                        NomPredDir;
-%<%0%>%<V%>:@MB                        CplAll;
-#else
-                                       NomPredPagr3s;
-                                       NomPredPagr3p;
-                                       NomPredDir;
-                                       CplAll;
-#endif
-                                       NomPredQ;
-
-LEXICON NomPredQ
-#if (ZERO_DERIV == 1)
-%<%0%>%<V%>:@MB                         NomPredQCont;
-#else
-                                        NomPredQCont;
-#endif
-
-LEXICON NomPredQCont
-#if (PREDICATE_WITHOUT_PAGR == 1)
-%<cpl%:pres%>:@MB                         #;
-#endif
-%<q%>:@miSPCm^I@MB                        NomPredPagr;
-%<q%>:@miSPCm^I@MB                        NomPredDir;
-%<q%>:@miSPCm^I@MB                        CplAll;
-
-LEXICON NomPredPagr
-%<cpl%:pres%>%<1s%>:^(y)^NS^Im@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2s%>:s^NS^In@MB          NomPredPagrCont;
-%<cpl%:pres%>%<1p%>:^(y)^NS^Iz@MB       NomPredPagrCont;
-%<cpl%:pres%>%<2p%>:s^NS^In^Iz@MB       NomPredPagrCont;
-                                        NomPredPagr3s;
-
-LEXICON NomPredPagr3s
-#if (ZERO_COPULA == 1)
-%<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
-#else
-                    #;
-                    CVcesine;
-                    DIrEnd;
-#endif
-
-LEXICON NomPredPagrCont
-                    #;
-                    CVcesine;
-                    DIrEnd;
-
-
-LEXICON  NomPredPagr3p
-%<cpl%:pres%>%<3p%>:l^NS^Ar@MB         NomPredPagr3pCont;
-%<3p%>:l^NS^Ar@MB                      PAgrCplAll;
-
-LEXICON NomPredPagr3pCont
-                        NomPredPagrCont;        ! includes end state
-%<q%>:@miSPCm^I@MB      NomPred3pQCont;
-
-LEXICON  NomPred3pQCont
-                        NomPredPagrCont;        ! includes end state
-                        PAgrCplAll;
-
-LEXICON NomPredDir
-%<dir%>:^D^NS^Ir@MB  NomPredDirCont;
-
-LEXICON NomPredDirCont
-%<3p%>:l^Ar@MB    #;
-
-LEXICON DIrEnd
-%<dir%>:^D^NS^Ir@MB  #;
-
-!
-! Rules governing adjectives and adverbs
-!
-!
-! TODO: proper handling of derivations
-!           . adj -> adv zero derivation
-!           . -ca -casi etc.
-
-LEXICON Adj
-%<Adj%>:@RB        AdjCont;
-#if (ALLOW_MREDUP == 1)
-%<Adj%:mredup%>:@MREDUP@RB    AdjCont;
-#endif
-
-LEXICON Adj_typo
-#if (MARK_TYPOS == 1) 
-%<Adj%:typo%>:@RB     AdjCont;
-%<Adj%:type%:mredup%>:@MREDUP@RB    AdjCont;
-#else
-                    Adj;
-#endif
-
-LEXICON AdjPartLast
-%<Adj%:partial%>:@RB        AdjCont;
-
-LEXICON AdjPart
-%<Adj%:partial%>:@RB        #;
-
-LEXICON AdjNcomp
-@NCOMP%<Adj%>:^(s)^I@NCOMP@RB AdjCont;
-
-LEXICON  AdjCont
-                    #;
-                    NomPredicate;
-                    Jderiv;
-
-LEXICON AdvHep
-                    HepPrn;
-                    Adv;
-
-LEXICON Adv
-%<Adv%>:@RB         AdvCont;
-#if (ALLOW_MREDUP == 1)
-%<Adv%:mredup%>:@MREDUP@RB    AdvCont;
-#endif
-
-
-LEXICON Adv_typo
-#if (MARK_TYPOS == 1) 
-%<Adv%:typo%>:@RB     AdjCont;
-%<Adv%:mredup%:typo%>:@MREDUP@RB    AdvCont;
-#else
-                    Adv;
-#endif
-
-LEXICON AdvPartLast
-%<Adv%:partial%>:@RB        AdvCont;
-
-LEXICON AdvPart
-%<Adv%:partial%>:@RB        #;
-                  
-LEXICON QAdv
-%<Adv%:qst%>:@RB  AdvCont;
-#if (ALLOW_MREDUP == 1)
-%<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
-#endif
-
-LEXICON QAdj
-%<Adj%:qst%>:@RB  AdjCont;
-#if (ALLOW_MREDUP == 1)
-%<Adj%:mredup%:qst%>:@MREFUP@RB  AdjCont;
-#endif
-
-LEXICON AdvTime
-%<Adv%>:@RB         AdvTimeCont;
-#if (ALLOW_MREDUP == 1)
-%<Adv%:mredup%>:@MREFUP@RB  AdvTimeCont;
-#endif
-
-LEXICON QAdvTime
-%<Adv%:qst%>:@RB    AdvTimeCont;
-#if (ALLOW_MREDUP == 1)
-%<Adv%:mredup%:qst%>:@MREFUP@RB  AdvCont;
-#endif
-
-LEXICON AdvTimeCont
-                    Ki;
-                    AdvCont;
-                    D_lArI;
-                    D_lIGInA;
-                    CliticSA;
-
-LEXICON AdvCont
-                #;
-                Aderiv;
-
-
-!
-! Rules governing pronouns
-!
-! TODO: -(y)ken added to som bare pronouns
-
-LEXICON Prn
-%<Prn%>:@RB PrnCont;
-
-LEXICON PrnNeg
-%<Prn%:neg%>:@RB PrnCont;
-
-LEXICON PrnCont  ! this is all, except compounding
-    #;
-    Pderiv;
-    NcompCont;
-
-LEXICON PersPrn1s
-%<Prn%:pers%:1s%>:@PRN@RB PersPrnPlu;
-%<Prn%:pers%:1s%>:@PRN@RB PersPrnCont;
-LEXICON PersPrn2s
-%<Prn%:pers%:2s%>:@PRN@RB PersPrnPlu;
-%<Prn%:pers%:2s%>:@PRN@RB PersPrnCont;
-LEXICON PersPrnPlu
-%<pl%>:l^Ar@MB      PersPrnCont;
-
-LEXICON PersPrn3s
-%<Prn%:pers%:3s%>:@RB PersPrnCont;
-%<Prn%:pers%>:@RB PersPrn3sPlu;
-LEXICON PersPrn3sPlu
-%<3p%>:l^Ar@MB      PersPrnCont;
-                    #;
-
-LEXICON PersPrn1p
-%<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
-LEXICON PersPrn2p
-%<Prn%:pers%:2p%>:@RB PersPrnContPL;
-LEXICON PersPrn3p
-%<Prn%:pers%:3p%>:@RB PersPrnContPL;
-
-LEXICON PrnBiri
-%<Prn%:pers%>:@RB       PrnBiriCont;
-
-LEXICON PrnBiriCont
-                        PrnPagr3s;
-                        PrnPagr3p;
-                        PrnPagr1p2p;
-                        PersPrnCont;
-                        PrnPlu;
-
-LEXICON PrnHicbiri
-%<Prn%:neg%>:@RB             PrnHicbiriCont;
-
-LEXICON PrnHicbiriCont
-                        PrnPagr3s;
-                        PrnPagr1p2p;
-                        PersPrnCont;
-                        PrnPlu;
-
-! this is only 'kendi'
-LEXICON PrnRfl
-%<Prn%:refl%>:@RB PrnRflCont;
-
-LEXICON PrnRflCont
-                    PrnPagr;
-                    PersPrnCont;
-                    PrnPlu;
-
-LEXICON PrnPlu
-%<pl%>:l^Ar@MB      PrnPagr1p2p;
-
-LEXICON PrnPagr
-            PrnPagr3p;
-            PrnPagr3s;
-            PrnPagr1p2p;
-            PrnPagr1s2s;
-
-LEXICON PrnPagr3p
-%<3p%>:l^Ar^I@MB      PersPrnCont;
-
-LEXICON PrnPagr3s
-%<3s%>:^(s)^I@MB      PersPrnCont;
-
-LEXICON PrnPagr1s2s
-%<1s%>:^(I)m@MB       PersPrnCont;
-%<2s%>:^(I)n@MB       PersPrnCont;
-
-LEXICON PrnPagr1p2p
-%<1p%>:^(I)m^Iz@MB    PersPrnCont;
-%<2p%>:^(I)n^Iz@MB    PersPrnCont;
-
-LEXICON PersPrnCont
-                    #;
-                    Ncase;
-                    ND_CA;
-                    D_lI;
-                    ND_lIk;
-                    NomPredicate;
-
-LEXICON PersPrnContPL
-                Nplu;
-                PersPrnCont;
-
-LEXICON PersPrn
-%<Prn%:pers%>:@RB PrnCont;
-
-LEXICON PPrnBirBir
-%<Prn%:rcp%>:@RB BirBirCont;
-
-LEXICON BirBirCont
-                        PrnPagr3p;
-                        PrnPagr1p2p;
-%<3p%>:^(s)^I@MB        PersPrnCont;
-                        PrnPlu;
-
-LEXICON PrnContNoPlu
-        Npos;
-        Ncase;
-
-LEXICON DemPrn
-%<Prn%:dem%>:@RB PrnCont;
-
-LEXICON QPrn
-%<Prn%:qst%>:@RB PrnCont;
-
-LEXICON QPrnLoc
-%<Prn%:qst%:locp%>:@RB PrnCont;
-
-LEXICON QPrnPers
-%<Prn%:qst%:pers%>:@RB PrnCont;
-
-LEXICON LocPrn  ! TODO: these do not inflect except only in some fixed expressions
-%<Prn%:locp%>:@RB PrnCont;
-
-!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Determiners
+! determineres normally do not inflect.
+! when (most?) determiners are suffixed with a possessive suffix,
+! they become pronouns (bir - biri, birimiz) - here we just allow them
+! to get the possessive suffixes, and following nominal inflections
+! TODO: this should be done a better way
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON determiner
+                        #;
+                        determiner_poss;
+
+LEXICON determiner_poss
+⟨p1s⟩               noun;
+⟨p2s⟩               noun;
+⟨p3s⟩               noun;
+⟨p1p⟩               noun;
+⟨p2p⟩               noun;
+⟨p3p⟩               noun;
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Nouns
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! Ordinary nouns
+LEXICON noun
+                    noun_number;
+                    noun_apostrophe;
+                    noun_deriv;
+
+LEXICON noun_deriv
+⟨ci⟩⟨N⟩             noun;
+⟨li⟩⟨N⟩             noun;
+⟨lik⟩⟨N⟩            noun;
+⟨sel⟩⟨Adj⟩          adjective;
+⟨ce⟩⟨Adv⟩           adverb;
+⟨les⟩⟨V⟩            verb;
+⟨len⟩⟨V⟩            verb;
+⟨le⟩⟨V⟩             verb;
+
 !
+! We allow apostrophe to attach any noun here, but filter on 
+! the analysis side (TODO)
+!
+LEXICON noun_apostrophe
+⟨apos⟩              noun_number;
 
-LEXICON  DetDef
-%<Det%:def%>:@RB DetCont;
+! Main morphlogical definition goes below
+LEXICON noun_number
+⟨pl⟩                noun_poss;
+⟨sg⟩                noun_poss;
 
-LEXICON  DetIndefNeg
-%<Det%:indef%:neg%>:@RB DetCont;
+LEXICON noun_poss
+⟨p1s⟩               noun_case;
+⟨p2s⟩               noun_case;
+⟨p3s⟩               noun_case;
+⟨p1p⟩               noun_case;
+⟨p2p⟩               noun_case;
+⟨p3p⟩               noun_case;
+⟨p%0x⟩              noun_case;
 
-LEXICON  DetIndef
-%<Det%:indef%>:@RB DetCont;
+LEXICON noun_case
+⟨nom⟩               noun_nom;
+⟨acc⟩               noun_acc;
+⟨dat⟩               noun_dat;
+⟨abl⟩               noun_abl;
+⟨loc⟩               noun_loc;
+⟨gen⟩               noun_gen;
+⟨ins⟩               noun_ins;
+!
+! the following are a list of suffixes that more-or-less fit into
+! a case slot.
+! these overgenerate, some of them are not possible after
+! number/poss -- need filtering.
+!
+⟨siz⟩               noun_siz;
+⟨li⟩                noun_li;
+⟨lik⟩               noun_lik;
+⟨ce⟩                noun_ca;
+⟨ci⟩                noun_ci;
 
-LEXICON  DetIndef_typo
-#if (MARK_TYPOS == 1) 
-%<Det%:indef%:typo%>:@RB    DetCont;
-#else
-                            DetIndef;
-#endif
 
-LEXICON  DetDefQ
-%<Det%:def%:qst%>:@RB DetCont;
-
-LEXICON  DetIndefQ
-%<Det%:indef%:qst%>:@RB DetCont;
-
-LEXICON DetCont
+LEXICON noun_nom
+                    nom_predicate;
+LEXICON noun_acc
                     #;
-                    JP_poss;    ! TODO: not all determiners do this.
+LEXICON noun_dat
+                    nom_predicate;
+LEXICON noun_abl
+                    nom_predicate;
+LEXICON noun_loc
+                    nom_predicate;
+                    noun_ki;
+LEXICON noun_gen
+                    nom_predicate;
+                    noun_ki;
+LEXICON noun_ins
+                    nom_predicate;
+LEXICON noun_ki
+⟨ki⟩⟨Adj⟩           adjective;
 
-! Date/time
-
-LEXICON DateStem
-%<Num%:date%>:@RB             DateTimeCont;
-LEXICON TimeStem
-%<Num%:time%>:@RB             DateTimeCont;
-
-LEXICON DateTimeCont
-0:@APOS@MB         Ncont;
-#if (APOSTROPHE_OPTIONAL_NUM == 1) 
-                    Ncont;
-#endif
-
-! Number inflections and derivations
-
-LEXICON NumStem
-%<Num%>:@RB  NumCont;
-#if (ALLOW_MREDUP == 1)
-%<Num%:mredup%>:@MREDUP@RB  NumCont;
-#endif
-
-LEXICON Num_typo
-#if (MARK_TYPOS == 1) 
-%<Num%:typo%>:@RB   NumCont;
-%<Num%:mredup%:typo%>:@MREDUP@RB  NumCont;
-#else
-                    NumStem;
-#endif
-
-LEXICON QNum
-%<Num%:qst%>:@RB  NumCont;
-%<Num%:qst%>:@MREDUP@RB  NumCont;
-
-LEXICON  NumHalf
-buçu^k  NumStem;
-
-LEXICON NumCont
-                #;
-                NumDeriv;
-                JP_poss;    ! ikimiz, yedisi, yüzünüz
-
-LEXICON NumericStem
-%<Num%:ara%>:@RB             NumericCont;    
-!%<Num%>%<dig%>:@RB     NumericCont;    
-
-LEXICON RomanStem
-%<Num%:rom%>:@RomNum@RB      NumericCont;
-!%<Num%>%<rom%>:@RB     NumericCont;    
-
-LEXICON NumericCont
-                #;
-                NumericApos;
-                NumericDotOrd;
-
-LEXICON NumericApos
-0:%@APOS@MB      NumDeriv;
-0:%@APOS@MB      JP_poss;
-#if (APOSTROPHE_OPTIONAL_NUM == 1) 
-                 NumDeriv;
-                 JP_poss;
-#endif
-
-LEXICON NumericDotOrd
-%<ord%>:%.@MB      NumericDotOrdCont;
-
-LEXICON   NumericDotOrdCont
-                 #;
-0:%@APOS@MB      AdjCont;
-#if (APOSTROPHE_OPTIONAL_NUM == 1) 
-                 AdjCont;
-#endif
-
-LEXICON NumDeriv
-                        NumOrd; 
-                        NumDist; 
-                        Num_PluCA; 
-                        Mderiv;
-
-! this takes care of words like 'on-lar-ca'
-! TODO: restrict this. There is no 'onbir-ler-ce'
-LEXICON Num_PluCA 
-%<pl%>:l^Ar@MB      MD_CA;
-
-LEXICON NumOrd
-%<ord%>:^(I)nc^I@MB    NumOrdCont;
-
-LEXICON NumOrdCont
-            #;
-            AdjCont;
-
-LEXICON NumDist
-%<dist%>:^(ş)^Ar@MB       NumDistCont;
-
-LEXICON NumDistCont
-            D_lI;
-            #;
-
-
-
+LEXICON noun_siz
+                    nom_predicate;
+LEXICON noun_li
+                    nom_predicate;
+LEXICON noun_lik
+                    nom_predicate;
+LEXICON noun_ca
+                    nom_predicate;
+LEXICON noun_ci
+                    nom_predicate;
 !
-! Verbal morphology starts here
+! Nominal predicates
 !
 
-
-! this is for regular verbs: 
-!  - aorist form is -(I)r
-!  - causative is predictable from the final phoneme
-!  - no reflexive or reciprocal is allowed
-
-LEXICON V
-%<V%>:@RB   VCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCont;
-#endif
-
-LEXICON VPartLast
-%<V%:partial%>:@RB   VCont;
-
-LEXICON VPart
-%<V%:partial%>:@RB   #;
-
-LEXICON   VCont
-                Vderiv;
-                Vinfl;
-                AbilPartial;
-
-LEXICON   Vinfl
-                    VCausRegular;
-                    VCausRegularCont;
-
-LEXICON VNoCausCont
-                    Vderiv;
-                    VPassive;
-                    VPassiveCont;
-                    AbilPartial;
-        
-LEXICON VNoAorCont
-                    VCausRegular;
-                    VNoCausNoAorCont;
-                    AbilPartial;
-
-LEXICON VNoCausNoAorCont
-                    Vderiv;
-                    VPassive;
-                    VCabilNeg;
-                    VNegative;
-                    VComp;
-                    NonFiniteVerbNoAor;
-                    AbilPartial;
-
-LEXICON V_Rcp
-%<V%>:@RB   VRcpCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpCont;
-#endif
-
-LEXICON   VRcpCont
-                    VCont;
-                    VRcp;
-                    AbilPartial;
-
-LEXICON VRcp
-%<rcp%>:^(I)ş@MB     VCont;
-
-
-LEXICON V_Rfl
-%<V%>:@RB   VRflCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflCont;
-#endif
-
-LEXICON   VRflCont
-                    VCont;
-                    VRfl;
-                    AbilPartial;
-LEXICON   VRfl
-%<rfl%>:^(I)n@MB       VCont;
-
-LEXICON  V_Rfl_Rcp
-%<V%>:@RB   VRflRcpCont;
-%<V%>:@RB   VRflRcpCont;
-
-LEXICON  VRflRcpCont
-                    VCont;
-                    VRcp;
-                    VRfl;
-                    AbilPartial;
-
-LEXICON V_CausDir
-%<V%>:@RB           VCausDirCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausDirCont;
-#endif
-
-LEXICON VCausDirCont
-                    VCausDir;
-                    VNoCausCont;
-                    AbilPartial;
-
-LEXICON VCausDir
-%<caus%>:^D^Ir@MB      VCont;
-
-!
-LEXICON V_CausIr
-%<V%>:@RB           VCausIrCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausIrCont;
-#endif
-
-LEXICON VCausIrCont
-                    VCausIr;
-                    VNoCausCont;
-                    AbilPartial;
-
-LEXICON VCausIr
-%<caus%>:^Ir@MB        VCont;
-
-!
-LEXICON V_CausIt
-%<V%>:@RB           VCausItCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausItCont;
-#endif
-
-LEXICON VCausItCont
-                    VCausIt;
-                    VNoCausCont;
-                    AbilPartial;
-
-LEXICON VCausIt
-%<caus%>:^It@MB        VCont;
-
-!
-LEXICON V_Rcp_CausDir
-%<V%>:@RB           VRcpCausDirCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpCausDirCont;
-#endif
-
-LEXICON VRcpCausDirCont
-                    VRcp;
-                    VCausDir;
-                    VNoCausCont;
-                    AbilPartial;
-
-!LEXICON V_Rfl_CausDir
-!%<V%>:@RB           VRflCausDirCont;
-
-!LEXICON           VRflCausDirCont
-!                    VRfl;
-!                    VCausDir;
-!                    VNoCausCont;
-
-!LEXICON V_Rfl_Rcp_CausDir
-!                    VRcp;
-!                    VRfl;
-!                    VCausDir;
-!                    VNoCausCont;
-
-LEXICON V_CausIrreg
-%<V%>:@RB           VCausIrregCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausIrregCont;
-#endif
-
-LEXICON VCausIrregCont
-                  VNoCausCont;
-                  AbilPartial;
-
-! LEXICON V_Rcp_CausIrreg
-!                 VNoCausCont;
-!                 VRcpCont;
-
-! LEXICON V_Rfl_CausIrreg
-!                 VNoCausCont;
-!                 VRflCont;
-
-LEXICON V_Rfl_Rcp_CausIrreg
-%<V%>:@RB           VRflRcpCausIrregCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflRcpCausIrregCont;
-#endif
-
-LEXICON VRflRcpCausIrregCont
-                 VRfl;
-                 VRcp;
-                 VNoCausCont;
-                 AbilPartial;
-
-LEXICON V_AorAr
-%<V%>:@RB           VAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VAorArCont;
-#endif
-
-LEXICON VAorArCont
-            VAorAr;
-            VNoAorCont;
-            AbilPartial;
-
-LEXICON  VAorAr
-%<aor%>:^(A)r@MB   AorArCont;
-
-LEXICON   AorArCont
-                    TAMg1Cont;
-                    CVcesinePagr;
-                    VerbalAdj;
-                    AbilPartial;
-!                    DerivNCont;
-!                    DerivJCont;
-
-LEXICON V_Rcp_AorAr
-%<V%>:@RB           VRcpAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpAorArCont;
-#endif
-
-LEXICON  VRcpAorArCont
-            VAorAr;
-            VRcp;
-            VNoAorCont;
-            AbilPartial;
-
-LEXICON V_Rfl_AorAr
-%<V%>:@RB           VRflAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflAorArCont;
-#endif
-
-
-LEXICON  VRflAorArCont
-            VAorAr;
-            VRfl;
-            VNoAorCont;
-            AbilPartial;
-
-LEXICON  V_Rfl_Rcp_AorAr
-%<V%>:@RB           VRflRcpAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflRcpAorArCont;
-#endif
-
-
-LEXICON  VRflRcpAorArCont
-            VAorAr;
-            VRfl;
-            VRcp;
-            VNoAorCont;
-            AbilPartial;
-
-LEXICON V_CausDir_AorAr
-%<V%>:@RB           VCausDirAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausDirAorArCont;
-#endif
-
-LEXICON VCausDirAorArCont
-                        VAorAr;
-                        VCausDir;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_CausIr_AorAr
-%<V%>:@RB           VCausIrAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausIrAorArCont;
-#endif
-
-LEXICON VCausIrAorArCont
-                        VAorAr;
-                        VCausIr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_CausAt_AorAr
-%<V%>:@RB           VCausAtAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausAtAorArCont;
-#endif
-
-LEXICON VCausAtAorArCont
-                        VAorAr;
-                        VCausAt;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON VCausAt
-%<caus%>:^At@MB        VCont;
-
-LEXICON V_Rcp_CausAr_AorAr
-%<V%>:@RB           VRcpCausArAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpCausArAorArCont;
-#endif
-
-LEXICON VRcpCausArAorArCont
-                        VRcp;
-                        VAorAr;
-                        VCausAr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_Rcp_CausIr_AorAr
-%<V%>:@RB                   VRcpAorArCausIrCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB    VRcpAorArCausIrCont;
-#endif
-
-LEXICON VRcpAorArCausIrCont
-            VAorAr;
-            VRcp;
-            VCausIr;
-            VNoCausNoAorCont;
-            VNoAorCont;
-            AbilPartial;
-
-!
-LEXICON V_CausAr_AorAr
-%<V%>:@RB           VCausArAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausArAorArCont;
-#endif
-
-
-LEXICON VCausArAorArCont
-                        VAorAr;
-                        VCausAr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON VCausAr
-%<caus%>:^Ar@MB        VCont;
-
-!
-LEXICON V_CausArt_AorAr
-%<V%>:@RB           VCausArtAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausArtAorArCont;
-#endif
-
-LEXICON VCausArtAorArCont
-                        VAorAr;
-                        VCausArt;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON VCausArt
-%<caus%>:^Art@MB        VCont;
-
-!
-LEXICON V_CausIt_AorAr
-%<V%>:@RB           VCausItAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausItAorArCont;
-#endif
-
-LEXICON VCausItAorArCont
-                        VAorAr;
-                        VCausIt;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-!
-LEXICON V_Rcp_CausDir_AorAr
-%<V%>:@RB           VRcpCausDirAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpCausDirAorArCont;
-#endif
-
-LEXICON VRcpCausDirAorArCont
-                        VAorAr;
-                        VCausDir;
-                        VRcp;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_Rfl_CausDir_AorAr
-%<V%>:@RB           VRflCausDirAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflCausDirAorArCont;
-#endif
-
-LEXICON VRflCausDirAorArCont
-                        VAorAr;
-                        VCausDir;
-                        VRfl;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_Rfl_Rcp_CausDir_AorAr
-%<V%>:@RB           VRflRcpCausDirAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflRcpCausDirAorArCont;
-#endif
-
-
-LEXICON VRflRcpCausDirAorArCont
-                        VAorAr;
-                        VCausDir;
-                        VRcp;
-                        VRfl;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_CausIrreg_AorAr
-%<V%>:@RB           VCausIrregAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VCausIrregAorArCont;
-#endif
-
-LEXICON VCausIrregAorArCont
-                        VAorAr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON V_Rcp_CausIrreg_AorAr
-%<V%>:@RB           VRcpCausIrregAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRcpCausIrregAorArCont;
-#endif
-
-LEXICON V_Rfl_CausIrreg_AorAr
-%<V%>:@RB           VRflCausIrregAorArCont;
-#if (ALLOW_MREDUP == 1)
-%<V%:mredup%>:@MREDUP@RB   VRflCausIrregAorArCont;
-#endif
-
-LEXICON VRflCausIrregAorArCont
-                        VRfl;
-                        VAorAr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-LEXICON VRcpCausIrregAorArCont
-                        VRcp;
-                        VAorAr;
-                        VNoCausNoAorCont;
-                        AbilPartial;
-
-! LEXICON V_Rfl_Rcp_CausIrreg_AorAr
-
-!
-! Here more regular stuff after stem irregularities
-!
-
-LEXICON VCausRegular
-%<caus%>:@CAUS@MB      VCausLoop;
-
-LEXICON VCausLoop
-            VCausRegular;
-            VCausRegularCont;
-
-LEXICON VCausRegularCont
-            VPassive;
-            VPassiveCont;
-            VNegative;
-            Vderiv;
-            AbilPartial;
-
-LEXICON VPassive
-%<pass%>:^(I)@LN@MB       VPassiveCont;
-%<pass%>:^(I)@LN@MB       VPassive2;
-
-! Double passive. TODO: This should only be allowed for transitive verbs.
-! currently we do not mark the verbs for transitivity.
-!
-LEXICON VPassive2
-%<pass%>:^(I)@LN2@MB       VPassiveCont;
-
-LEXICON  VPassiveCont
-                          VCabilNeg;
-                          VNegative;
-                          VNegativeCont;
-                          AbilPartial;
-                          D_yAsI;
-!
-
-LEXICON VCabilNeg
-%<abil%>:^(y)^A@MB     VNegative;
-
-!
-
-LEXICON VNegative
-%<neg%>:m^NNS^A@MB      VNegativeCont;
-%<neg%>:m^NNS^A@MB      CVNeg;
-
-LEXICON VNegativeCont
-                    VComp;
-                    AbilPartial;
-                    NonFiniteVerb;
-
-! This is a very rare case, where the clictc dA intervenes between the
-! main verb and the VComp -(y)Abil. In this case main verb is suffixed
-! with -(y)A, the rest 'bil-' follows the clitic. For example,
-! 'Görüştürüleme-ye de biliyor muydunuz ?'
-!
-LEXICON AbilPartial
-%<partial%>:^(y)^A@MB #;
-! 0:^(y)^A@MB #;
-
-
-
-LEXICON VComp
-%<abil%>:^(y)^Abil@MB VCompCont;
-%<iver%>:^(y)^Iv^NSer@MB VCompCont;
-%<adur%>:^(y)^Ad^NSur@MB VCompCont;
-%<agel%>:^(y)^Ag^NSel@MB VCompCont;
-%<agor%>:^(y)^Agör@MB VCompCont;
-%<akal%>:^(y)^Ak^NSal@MB VCompCont;
-%<ayaz%>:^(y)^Ay^NSaz@MB VCompCont;
-! %<akoy%>%<V%>:^(y)^Akoy@MB VCompCont;
-
-LEXICON VCompCont
-                    VCausRegular;
-                    VCausRegularCont;
-                    NonFiniteVerb;
-
-LEXICON     NonFiniteVerb
-                    NonFiniteVerbNoAor;
-                    TAMAor;
-
-LEXICON     NonFiniteVerbNoAor
-                    VTAM;
-                    SubSuffixes;
-
-! Tense / aspec / modality markers
-
-LEXICON VTAM
-%<evid%>:m^Iş@MB          TAMNarrCont;
-%<fut%>:^(y)^Ac^A^k@MB    TAMFutCont;
-%<obl%>:m^Al^I@MB         TAMOblCont;
-%<impf%>:m^Akt^A@MB       TAMMaktaCont; ! TODO: -maktayızdır ??
-%<cont%>:^(I)y^NSor@MB       TAMContCont;
-%<past%>:^D^I@MB          TAMDICont;
-%<cond%>:s^A@MB           TAMCondCont;
-%<cond%>:^(y)^A@MB        TAMCondYACont; ! this is informal use
-%<opt%>:^(y)^A@MB         TAMOptCont;
-%<imp%>:0@MB              TAMImpCont;
-
-LEXICON TAMAor      ! this is the regular one
-%<aor%>:^(I)r@MB          AorCont;
-
-LEXICON TAMNarrCont
-            TAMg1Cont;
-            CVcesinePagr;
-            VerbalAdj;
-
-LEXICON AorCont
-            TAMg1Cont;  ! TODO/CHECK: not allow -DIr: okurdur ??
-            CVcesinePagr;
-            VerbalAdj;
-!            DerivNCont;
-!            DerivJCont;
-
-LEXICON TAMFutCont
-            TAMg1Cont;
-            VerbalAdj;
-
-LEXICON TAMOblCont
-            TAMg1Cont;
-
-LEXICON TAMMaktaCont
-            TAMg1Cont;
-!            VerbalAdj;
-
-LEXICON TAMContCont
-            TAMg1Cont;
-!            VerbalAdj;
-
-LEXICON TAMg1Cont
-                        PAgrG1;
-                        PAgrG1p3;
-                        TAMg1DIr;
-                        CplAll;
-%<q%>:@miSPCm^I@MB      TAMG1QCont;
-#if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
-#endif
-
-! This is for cases like: 'birleşmiş milletler', 
-! 'okumakta olan oğrenci', 'basılıyor olan dergiler'
-! 'adam olacak çocuk', 'ele gelir sonuç' etc.
-! some of these (-makta -yor) are restricted to be used 
-! before an auxiliary verb (ol, bul) but some can stand alone.
-! These are, after all, some sort of subordination. The result 
-! is something that complements a noun, so we mark it as 
-! an adjective. Especially -acak is confusing as we also have 
-! an explicit subordinating suffix.
-!
-! We assume that these forms behave just like any other adjective, 
-! although they may be more conservative about combining with all
-! suffixes that attach to adjectives (particularly, see the note 
-! above on -makta -yor).
-!
-LEXICON VerbalAdj
-#if (ZERO_DERIV == 1)
-%<%0%>%<Adj%>:@MB       AdjCont;
-#else
-                        AdjCont;
-#endif
-
-
-LEXICON TAMG1QCont
-                PAgrG1;
-                CplEvid;
-                CplPast;
-                TAMG1QDIr;
-
-LEXICON TAMG1QDIr
-%<dir%>:^D^NS^Ir@MB            TAMG1QDIrCont;
-
-LEXICON TAMG1QDIrCont
-%<3p%>:l^Ar@MB              #;
-
-
-
-LEXICON PAgrG1     ! <3p>:lAr is treated separately
-%<1s%>:^(y)^NS^Im@MB       PAgrG1Cont;
-%<2s%>:s^NS^In@MB          PAgrG1Cont;
-%<3s%>:0@MB             PAgrG1Cont;
-%<1p%>:^(y)^NS^Iz@MB       PAgrG1Cont;
-%<2p%>:s^NS^In^Iz@MB       PAgrG1Cont;
-
-
-LEXICON PAgrG1Cont
+LEXICON nom_predicate
+⟨cpl⟩               pnaggr;
+                    copula;
+                    nompred_question;
+!TODO: replication 
+LEXICON nompred_question 
+⟨q⟩⟨cpl⟩            pnaggr;
+⟨q⟩                 copula;
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Numbers
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON number
+                number_ordinal;
+                number_distributive;
+                noun;
+
+LEXICON number_datetime
+                noun;
+
+LEXICON number_ordinal
+⟨ord⟩               adjective;
+
+LEXICON number_distributive
+⟨dist⟩              number_dist_cont;
+
+LEXICON number_dist_cont
                     #;
-%<dir%>:^D^NS^Ir@MB    #;
+⟨li⟩                noun_li;
 
 
-LEXICON  PAgrG1p3
-%<3p%>:l^Ar@MB   PAgrG1p3Cont;
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Verbs
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON PAgrG1p3Cont
-                        PAgrG1Cont;        ! includes end state
-                        PAgrCplAll;
-%<q%>:@miSPCm^I@MB      PAgrG1p3QCont;
+LEXICON verb
+                verb_reflexive;
 
-LEXICON PAgrG1p3QCont
-                            #;
-                            DIrEnd;
-                            PAgrCplAll;
+LEXICON verb_reflexive
+⟨rfl⟩           verb_causative;
+                verb_reciprocal;
+
+LEXICON verb_reciprocal
+⟨rcp⟩           verb_causative;
+                verb_causative;
+
+LEXICON verb_causative
+⟨caus⟩          verb_causative;
+⟨caus⟩          verb_passive;
+                verb_passive;
+
+LEXICON verb_passive
+⟨pass⟩          verb_passive2; ! double passive / impersonal
+⟨pass⟩          verb_abil_neg;
+                verb_abil_neg;
+
+LEXICON verb_passive2
+⟨pass⟩          verb_abil_neg;
+
+LEXICON verb_abil_neg
+⟨abil⟩          verb_neg;
+                verb_neg;
+
+LEXICON verb_neg
+⟨neg⟩           verb_comp;
+                verb_comp;
 
 
-LEXICON TAMg1DIr
-%<dir%>:^D^NS^Ir@MB TAMg1DIrCont;
+LEXICON verb_comp
+                verb_comp_cont;
+⟨abil⟩          verb_comp_cont;
+⟨iver⟩          verb_comp_cont;
+⟨adur⟩          verb_comp_cont;
+⟨agel⟩          verb_comp_cont;
+⟨agor⟩          verb_comp_cont;
+⟨akal⟩          verb_comp_cont;
+⟨ayaz⟩          verb_comp_cont;
+!⟨akoy⟩
 
-LEXICON TAMg1DIrCont
-%<3p%>:s^Inl^Ar@MB     #;
+LEXICON verb_comp_cont
+                verb_causative;
+                verb_tam;
+                verb_nonfinite;
+!
+! The fllowing handles the cases where a compound form can be cuasativized
+! (yopıverdirtti), passivized (yapıverildi, or yapıverdirtildi),
+! or some compound forms can repeat (yapıverebilirdi).
+!
+                verb_causative;
 
-! ---------------------------
-! -DI
+LEXICON verb_tam
+⟨aor⟩           tam_aor;
+⟨cond⟩          question;
+⟨evid⟩          tam_evidential;
+⟨fut⟩           tam_future;
+⟨imp⟩           pnaggr;
+⟨obl⟩           question;
+⟨opt⟩           question;
+⟨past⟩          question;
+⟨prog.yor⟩      question;
+⟨prog.mekte⟩    question;
+
+!
+! after evidential and future markers, the verb (phrase
+! can function as an adjectival. G&K calls this case as 'truncated
+! olan' (the auxiliary ol- with -(y)An).
+!
+LEXICON tam_future
+                question;
+                adjective;
+
+LEXICON tam_evidential
+                question;
+                adjective;
+
+!
+! aorist is also similar, but this also allows nagative aoris +
+! '-dan', '-lık-tan', cases
+!
+LEXICON tam_aor
+                question;
+                adjective;
+
+LEXICON question
+                pnaggr;
+                copula;
+⟨q⟩             copula;
+⟨q⟩             pnaggr;
+
+!
+! copular suffixes and person/number markers - shared by both verbal
+! and nominal predicates 
 !
 
-LEXICON TAMDICont
-            PAgrDI;
-            CplPast;
-            CplCond;
+LEXICON copula
+⟨cpl⟩          converb_ken;
+⟨cpl⟩          copula_tam;
 
-LEXICON PAgrDI
-%<1s%>:m@MB         PAgrDICont;
-%<2s%>:n@MB         PAgrDICont;
-%<3s%>:0@MB         PAgrDICont;
-%<1p%>:k@MB         PAgrDICont;
-%<2p%>:n^Iz@MB      PAgrDICont;
-%<3p%>:l^Ar@MB      PAgrDICont;
 
-LEXICON PAgrDICont
-                        #;
-                        PAgrCplCond;
-                        PAgrCplPast;
-%<q%>:@miSPCm^I@MB      PAgrDIQCont;
+LEXICON converb_ken
+⟨cv.ken⟩   converb_ken_cont;
 
-LEXICON PAgrDIQCont
-                            #;
-                            PAgrCplPast2; ! we do not allow double 
-                            PAgrCplCond2; ! copula after di-mi 
-                            PAgrCplEvid2;
-!
-!
-!
+LEXICON converb_ken_cont
+                adverb;
+                question;
 
-LEXICON TAMCondCont
-                        TAMCondPAgr;
-                        CplPast2;   ! no double copula sa-di-sa
-                        CplEvid2;   !                  sa-mis-sa
-%<q%>:@miSPCm^I@MB      TAMCondQCpl;
-#if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
-#endif
+LEXICON copula_tam
+⟨cond⟩         copula_cond2;
+⟨evid⟩         copula_evid2;
+⟨past⟩         copula_past2;
 
-LEXICON TAMCondQCpl
-            CplPast2;
-            CplEvid2;
+LEXICON copula_cond2
+                    pnaggr;
+⟨cpl⟩⟨evid⟩         pnaggr;
+⟨cpl⟩⟨past⟩         pnaggr;
 
-LEXICON TAMCondPAgr
-%<1s%>:m@MB         TAMCondPAgrCont;
-%<2s%>:n@MB         TAMCondPAgrCont;
-%<3s%>:0@MB         TAMCondPAgrCont;
-%<1p%>:k@MB         TAMCondPAgrCont;
-%<2p%>:n^Iz@MB      TAMCondPAgrCont;
-%<3p%>:l^Ar@MB      TAMCond3pCont;
+LEXICON copula_evid2
+                    pnaggr;
+⟨cpl⟩⟨cond⟩         pnaggr;
+⟨cpl⟩⟨evid⟩         pnaggr;
 
-LEXICON TAMCondPAgrCont
-                        #;
-%<q%>:@miSPCm^I@MB      TAMCondQPAgrCont; ! this is somewhat odd: oku-sa-k mı
+LEXICON copula_past2
+                    pnaggr;
+⟨cpl⟩⟨cond⟩         pnaggr;
+⟨cpl⟩⟨past⟩         pnaggr;
 
-LEXICON TAMCond3pCont
-                        TAMCondPAgrCont;
-                        PAgrCplPast2;
-                        PAgrCplEvid2;
+LEXICON pnaggr
+⟨1s⟩            pred_finite;
+⟨2s⟩            pred_finite;
+⟨3s⟩            pred_finite;
+⟨1p⟩            pred_finite;
+⟨2p⟩            pred_finite;
+⟨3p⟩            pred_finite;
 
-LEXICON TAMCondQPAgrCont
+LEXICON pred_finite
+                dir;
+                converb_cesine;
+
+
+LEXICON dir
                 #;
-                PAgrCplPast2;
-                PAgrCplEvid2;
-
-LEXICON TAMCondYACont ! this is informal: gel-e-ydi
-            CplPast2;
-            CplEvid2;
-
-!
-! Optative
-!
-
-LEXICON TAMOptCont
-                        OptPAgr;
-%<q%>:@miSPCm^I@MB      OptQCont;
-#if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
-#endif
-
-LEXICON OptQCont
-%<cpl%:past%>:^(y)^D^NS^I@MB     PAgrG2End;
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrG1End;
-
-! TODO: opt3s below seems to be a half-implemented feature, but not
-!       clear what...
-
-LEXICON OptPAgr
-%<1s%>:^(y)^NS^Im@MB    OptPAgrCont;
-%<2s%>:s^In@MB          #;
-%<3s%>:@opt3s^In@MB     OptPAgrCont;
-%<1p%>:l^Im@MB          OptPAgrCont;
-%<2p%>:s^NS^In^Iz@MB    #;
-%<3p%:sInlAr%>:@opt3s^Inl^Ar@MB OptPAgrCont;
-%<3s%:%0%>:0@MB             OptPAgrCont; ! these two are 
-%<3p%>:l^Ar@MB          OptPAgrCont; ! colloquial use
-
-LEXICON OptPAgrCont
-                        #;
-%<q%>:@miSPCm^I@MB      OptPagrQCont;
-
-LEXICON OptPagrQCont
-                        #;
-                        PAgrCplEvid2;
-                        PAgrCplPast2;
-
-!
-! Imperative
-!
-
-LEXICON TAMImpCont
-                        PAgrIMPEnd;
-
-LEXICON PAgrIMPEnd
-%<2s%>:0@MB             #;
-%<2s%:sAnA%>:s^An^NS^A@MB     #;
-%<2s%:yIn%>:^(y)^In@MB       #;
-%<3s%>:s^NS^In@MB       #;
-%<2p%:yIn%>:^(y)^In@MB       #;
-%<2p%:yInIz%>:^(y)^NS^In^Iz@MB #;
-%<2p%:sAnIz%>:s^An^NS^Iz^A@MB  #;
-%<3p%>:s^Inl^Ar@MB      #;
-
-!
-! Person agreement markers, final state.
-!
-LEXICON PAgrG1End
-%<1s%>:^(y)^Im@MB  #;
-%<2s%>:s^In@MB     #;
-%<3s%>:0@MB        #;
-%<1p%>:^(y)^Iz@MB  #;
-%<2p%>:s^In^Iz@MB  #;
-%<3p%>:l^Ar@MB     #;
-
-LEXICON PAgrG2End
-%<1s%>:m@MB         #;
-%<2s%>:n@MB         #;
-%<3s%>:0@MB         #;
-%<1p%>:k@MB         #;
-%<2p%>:n^Iz@MB      #;
-%<3p%>:l^Ar@MB      #;
-
-
-!
-! i- is a bound (verbal) root that combines with copular markers.
-!
-
-LEXICON V_i
-%<V%>:@RB         iCont;
-
-LEXICON iCont
-            CplAll;
-
-
-!
-! -mI is the question particle. In its main use, we mark it as <Q>.
-! For other uses we also analyze it as an adverb (when used for 
-! emphasizing: 'güzel mi güzel bir kız') or subordinating conjunction
-! for the cases where it is used as such (Eve vardınız mı bana
-! telefon edin')
-!
-
-LEXICON mI
-%<Q%>:@RB             mICont;
-%<Cnj%:sub%>:@RB      #;
-%<Adv%>:@RB           #;
-
-LEXICON mICont
-                        #; ! we have person marker before.   
-%<cpl%:pres%>:0         mIPagr; ! in case predicate is not marked for tense
-                        mIPagr;
-                        mIDI;
-                        mIMIS;
-                        mIDIr;
-
-LEXICON mIPagr
-%<1s%>:^(y)^Im@MB      mIPagrCont;
-%<2s%>:s^In@MB         mIPagrCont;
-%<3s%>:0@MB            mIPagrCont;
-%<1p%>:^(y)^Iz@MB      mIPagrCont;
-%<2p%>:s^In^Iz@MB      mIPagrCont;
-
-LEXICON  mIPagrCont
-                        #;
-                        DIrEnd;
-LEXICON mIDI
-%<cpl%:past%>:^(y)^D^NS^I@MB  PAgrG2End;
-
-LEXICON mIMIS
-%<cpl%:evid%>:^(y)m^NS^Iş@MB PAgrG1End;
-
-LEXICON mIDIr
-%<dir%>:^D^NS^Ir@MB        mIDIrCont;
-
-LEXICON  mIDIrCont
-                        #;
-%<3p%>:l^Ar@MB          #;
-
-! Copular marker combinations
-!
-! this is for simplifying the copula replication above.
-!
-! the description below may be a bit too permissive
-
-! here we do not have any agreement markers yet
-!
-LEXICON CplAll
-    CplEvid;
-    CplPast;
-    CplCond;
-    CplKen;
-    lArCplKen; ! this is a trick to analyze words like 'yürürlerken'
-               ! or 'evdelerken'. It seems if person in question is
-               ! <3p>, then it can be added, but other cases take null
-               ! agreement. We only mark <3p>, if there is -lAr.
-               ! Otherwise it can agree with any person, but we do not 
-               ! mark it.
-               !
-               ! TODO: this may not be the best decision.
-
-LEXICON CplEvid
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     CplEvidCont;
-
-LEXICON CplEvidCont
-                PAgrG1End;
-                CplPAgrG1; ! this is marked/rare usage - gidiyormuşumsa
-                CplCond2;
-                CplEvid2;
-                CplPast2;
-                CVcesinePagr;
-! TODO: In a relatively rare number of cases -DIr may follow if -(I)yor 
-!       precedes the evidential copula.
-
-LEXICON CplEvid2
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrG1End;
-    
-LEXICON CplPast2
-%<cpl%:past%>:^(y)^D^NS^I@MB      PAgrG2End;
-
-LEXICON CplCond2
-%<cpl%:cond%>:^(y)s^NS^A@MB       PAgrG2End;
-
-LEXICON CplCond
-%<cpl%:cond%>:^(y)s^NS^A@MB       CplCondCont;
-
-LEXICON  CplCondCont
-                            PAgrG2End;
-                            CplEvid2;
-                            CplPast2;
-
-LEXICON  CplPast
-%<cpl%:past%>:^(y)^D^NS^I@MB      CplPastCont;
-
-LEXICON CplPastCont
-                PAgrG2End;
-                CplCond2;
-                CplPAgrG2; ! this is marked/rare usage - gidiyordumsa
-                CplPast2; ! this is also borderline case: 'yapacaktıydı'
-
-LEXICON CplPAgrG1
-%<1s%>:^(y)^Im@MB  CplPAgrG1Cont;
-%<2s%>:s^In@MB     CplPAgrG1Cont;
-%<3s%>:0@MB        CplPAgrG1Cont;
-%<1p%>:^(y)^Iz@MB  CplPAgrG1Cont;
-%<2p%>:s^In^Iz@MB  CplPAgrG1Cont;
-%<3p%>:l^Ar@MB     CplPAgrG1Cont;
-
-LEXICON CplPAgrG1Cont
-                        #;
-                        PAgrCplCond2;
-
-
-LEXICON CplPAgrG2
-%<1s%>:m@MB         CplPAgrG2Cont;
-%<2s%>:n@MB         CplPAgrG2Cont;
-%<3s%>:0@MB         CplPAgrG2Cont;
-%<1p%>:k@MB         CplPAgrG2Cont;
-%<2p%>:n^Iz@MB      CplPAgrG2Cont;
-%<3p%>:l^Ar@MB      CplPAgrG2Cont;
-
-LEXICON CplPAgrG2Cont
-                        #;
-                        PAgrCplCond2;
-
-! here if we have a person agreement already, happens after -DI, -sA
-! and with -lAr after other TAM markers or nouns.
-! 
-
-LEXICON PAgrCplAll
-                PAgrCplEvid;
-                PAgrCplPast;
-                PAgrCplCond;
-
-LEXICON PAgrCplEvid
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrCplEvidCont;
-
-LEXICON PAgrCplEvidCont
-                            #;
-                            PAgrCplCond2;
-
-LEXICON PAgrCplPast
-%<cpl%:past%>:^(y)^D^NS^I@MB      PAgrCplPastCont;
-
-LEXICON PAgrCplPastCont
-                            PAgrCplCond2;
-                            #;
-
-LEXICON PAgrCplCond
-%<cpl%:cond%>:^(y)s^NS^A@MB       PAgrCplCondCont;
-
-LEXICON PAgrCplCondCont
-                            #;
-                             PAgrCplEvid2;
-                             PAgrCplPast2;
-
-LEXICON PAgrCplEvid2
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     #;
-
-LEXICON PAgrCplPast2
-%<cpl%:past%>:^(y)^D^NS^I@MB      #;
-
-LEXICON PAgrCplCond2
-%<cpl%:cond%>:^(y)s^NS^A@MB       #;
-
-
-!
-! -(y)ken makes adverbials (converb?). However it  attaches where copular 
-! markers typically attach, except it does not combine with person 
-! agreement markers.
-!
-
-LEXICON lArCplKen
-%<3p%>:l^Ar@MB      CplKen;
-
-LEXICON CplKen
-%<cv%:ken%>%<Adv%>:^(y)k^NSen@MB  AdvTimeCont; 
-
-!
-! Subordinating suffixes
-!
-!
-
-LEXICON SubSuffixes
-VerbalNoun;
-Participle;
-ConVerb;
-
-LEXICON VerbalNoun
-%<vn%:infmA%>%<N%>:m^A@MB            VNMaCont;
-%<vn%:infmAK%>%<N%>:m^A^K@MB         VNMakCont;
-%<vn%:past%>%<N%>:^D^I^k@MB          Ncont;
-%<vn%:fut%>%<N%>:^(y)^Ac^A^k@MB      Ncont;
-%<vn%:pres%>%<N%>:^(y)^An@MB         Ncont;
-%<vn%:yis%>%<N%>:^(y)^Iş@MB          Ncont;     !TODO: a better tag name
-%<vn%:esi%>%<N%>:^(y)^As^I@MB        Ncont;     !TODO: a better tag name
-
-LEXICON VNMaCont
-    NcompCont; ! includes final
-    D_lI;
-    ND_lIk;
-    Deriv_MACA;
-    D_CI;
-    D_CIl; ! not likely
-    D_sAl; ! not likely
-#if (MARK_NCOMP == 1) 
-    NcompInfl;
-#endif
-
-LEXICON VNMakCont
-                              #;
-                              NCaseNoGen;
-                              NomPredicateMAK;
-
-LEXICON Participle
-%<part%:past%>%<Adj%>:^D^I^k@MB         PartCont;
-%<part%:fut%>%<Adj%>:^(y)^Ac^A^k@MB     PartCont;
-%<part%:pres%>%<Adj%>:^(y)^An@MB        PartCont;
-%<part%:esi%>%<Adj%>:^(y)^As^I@MB       #;  !TODO: a better tag name
-
-LEXICON PartCont
-                   #;
-                   Ncont;
-!                   AdjCont;
-
-! TODO: this part needs rework. The list below roughly follows
-!       G&K and the SFST version.
-!
-LEXICON ConVerb
-
-%<cv%:ip%>:^(y)^Ip@MB                       DerivACont;
-%<cv%:meksizin%>:m^Aks^NS^Iz^In@MB             DerivACont;
-%<cv%:ince%>:^(y)^Inc^A@MB                  DerivACont;
-%<cv%:erek%>:^(y)^Ar^NS^Ak@MB                  DerivACont;
-%<cv%:eli%>:^(y)^Al^I@MB                    DerivACont;
-%<cv%:dikce%>:^D^Ik^C^A@MB                  DerivACont;
-%<cv%:esiye%>:^(y)^As^Iy^A@MB               DerivACont;
-%<cv%:ye%>:^(y)^A@MB                        DerivACont;
-%<cv%:mesine%>:m^As^In^A@MB                 DerivACont;
-
-LEXICON CVNeg
-%<cv%:den%>:d^An@MB             DerivACont;
-%<cv%:den%:z%>:zd^An@MB         DerivACont; ! this is informal
-
-LEXICON CVcesine
-%<cv%:cesine%>:^C^As^In^A@MB     DerivACont;
-
-LEXICON CVcesinePagr
-%<1s%>:^(y)^Im@MB  CVcesine;
-%<2s%>:s^In@MB     CVcesine;
-%<3s%>:0@MB        CVcesine;
-%<1p%>:^(y)^Iz@MB  CVcesine;
-%<2p%>:s^In^Iz@MB  CVcesine;
-%<3p%>:l^Ar@MB     CVcesine;
-
-
-!
-! The following defines behaviour of a small set of special words
-! (mostly clitics). These are defined in clitics.lexc
-!
-
-! üzer (somewhat) is like `üst', but does not 
-! occur in bare form. Below, we (currently) allow 
-! it to form postpositional phrases just like üst/alt etc. 
-! However, we do not allow it to function as adjectives.
-!
-!
-! TODO: check whether this is too restrictive or not. 
-!
-LEXICON   uzerCont 
-            uzerN;
-            PostPlocation;
-
-LEXICON uzerN
-%<N%>:@RB     uzerNcont; 
-
-LEXICON uzerNcont
-                            Nplu;
-                            Npos;
-                            Ncase;
-                            Nderiv;
-#if (MARK_NCOMP == 1)
-                            NcompInfl;
-#endif
-
-
-LEXICON var
-%<Exist%>:@RB Ncont;
-
-LEXICON yok
-%<Exist%:neg%>:@RB Ncont;
-
-LEXICON degil
-%<Not%>:@RB Ncont;
-
-!LEXICON VYDCont
-!            VYDPAgr;
-!            VYDDir;
-!            CplAll;
-!
-!LEXICON VYDPAgr
-!%<1s%>:^(y)^Im@MB       VYDPAgrCont;
-!%<2s%>:s^In@MB          VYDPAgrCont;
-!%<3s%>:0@MB             VYDPAgrCont;
-!%<3p%:%0%>:0@MB             VYDPAgrCont;
-!%<1p%>:^(y)^Iz@MB       VYDPAgrCont;
-!%<2p%>:s^In^Iz@MB       VYDPAgrCont;
-!%<3p%>:l^Ar@MB          VYDPAgrCont;
-!
-!LEXICON VYDDir
-!%<dir%>:^D^Ir@MB    VYDPAgrp3;
-!
-!LEXICON VYDPAgrCont
-!                    #;
-!%<dir%>:^D^Ir@MB    #;
-!
-!LEXICON  VYDPAgrp3
-!%<3p%>:l^Ar@MB   #;
-
-!
-! Punctuation
-!
-
-LEXICON  Punc
-%<Punc%>:0     #;
-
-!
-! non-puctuation symbols
-!
-
-LEXICON  Sym
-%<Sym%>:0     #;
-
-!
-! Derivational process.
-!
-! We include only a select set of relatively productive derivational
-! morphemes here. However, the description below is still rather liberal. 
-! Most derivational
-! suffixes are either not very productive, or restrictive in their use more
-! than prescribed with the rules below.
-!
-! The first part organizes the entry point to the classes of
-! derivational suffixes. Then we describe the actual suffixes. And
-! later how they continue. Entry/exit parts are rather redundant,
-! However, it helps if certain restrictions (for example, not allowing
-! indefinite number of derivations.
-! 
-!
-! TODO: better handling of derivations. 
-!
-
-LEXICON Mderiv
-        MN_zero;
-        ND_lIk;
-
-LEXICON Nderiv
-            D_lI;
-!            D_sIz; ! sIz can combine after most of the inflectional suffixes
-            ND_lIk;
-            Dimin;
-            ND_CA;
-            D_CI;
-            D_CIl;
-#if (ANALYZE_lA == 1)
-            D_lA;
-#endif
-            ND_lAn;
-            ND_lAS;
-            D_sAl;
-            D_imsi;
-            D_si;
-            D_mtrak;
-!            D_gil; ! this works only in special cases.
-!            D_inc;  ! ilgi-nç - any other?
-!            D_al;
-!            D_ik;
-!            D_em;
-
-LEXICON Pderiv
-            D_lI;
-            D_sIz;
-            ND_lIk;
-            PD_CA;
-            D_CI;
-            D_CIl;
-            ND_lAS;
-
-LEXICON Jderiv
-            JD_lIk;
-            D_lI;
-            D_CI;
-            D_sAl;
-#if (ANALYZE_lA == 1)
-            D_lA;
-#endif
-            JD_CA;
-            JD_lAn;
-            JD_lAS;
-            JN_zero;
-            JP_poss;
-            D_imsi;
-            D_mtrak;
-
-LEXICON Aderiv
-            D_sIz;
-            AD_lIk;
-            AD_CA;
-            AN_zero;
-!            AJ_zero;
-
-LEXICON Vderiv
-            D_yIcI;
-            D_yIS;
-            D_yAsI;
-            D_Ik;
-
-LEXICON D_Ik
-%<ik%>:^I^k@MB       DerivJCont;
-
-LEXICON Oderiv
-            D_lA;
-
-! -lI is productive. The simple example is 
-!           şeker `sugar' -> şeker-li `[something] with sugar' 
-!    some forms are lexicalized, but in most cases semantics is clear.
-!
-! -lI makes nouns or adjective from nouns or adjectives, although
-!     less likely, it may also make adverbs.
-!       N -> N : atlı
-!       N -> J : akıllı
-!       J -> J : mavili
-!
-!   Here, we make use of the fact that adjectives can become a noun
-!   with a zero derivation, and assume that -lI only derives
-!   adjectives from nouns. This may not be too far from reality
-!   either. Since the first example above `atlı' is also an adjective,
-!   and the noun form has a similar sense as any other noun derived
-!   from adjectives. This is less clear for J->J case, but it is more
-!   reasonable to assume that `mavi' in the example above refers to
-!   the color, hence it must start as a noun, likely by derivation from 
-!   the adjective.
-!
-LEXICON   D_lI
-%<li%>:l^I@MB         DerivJCont;
-%<li%>:l^I@MB         DerivACont;
-
-! -sIz behaves almost exactly like -lI, with the opposite meaning.
-!           şeker `sugar' -> şeker-siz `[something] without sugar' 
-!
-! Further, -sIz tends to appear after some nominal suffixes, for
-! example: 'çocuk-lar-ım-sız'. In principle, it can attach wherever 
-! a case suffix can (which may raise the question whether it may 
-! function as a case suffix or not---`abessive case'?). For most of
-! these cases -lI may be plausible too, but it sounds less likely,
-! possibly because the instrumental/commutative suffix has a similar
-! function. We do not allow -lI to combine that freely, unless/until data
-! dictates so.
-!
-! it is more likely for -sIz to form adverbs 
-!       N -> N : kitap-sız (lexicalized)
-!       N -> J : akılsız 
-!       N -> A : arabasız
-LEXICON   D_sIz
-%<siz%>:s^Iz@MB       DerivJCont;
-%<siz%>:s^Iz@MB       DerivACont;
-
-! -lIK makes nouns from nouns, adjectives adverbs
-!       N -> N: kitap-lık, kral-lık
-!       J -> N: iyi-lik
-!       A -> N: yavaş-lık
-!
-LEXICON   ND_lIk
-%<lik%>:l^I^k@MB       DerivNCont;
-%<lik%>:l^I^k@MB       DerivJCont;
-LEXICON   JD_lIk
-%<lik%>:l^I^k@MB       DerivNCont;
-LEXICON   AD_lIk
-%<lik%>:l^I^k@MB       DerivNCont;
-
-! -arası `between' forms some compund adjectives from 
-!        plural nouns this is quite productive.
-!        uluslar-arası, bölgeler-arası, ilkokullar-arası
-!
-!
-LEXICON   D_arasi
-%<arasi%>:arası@MB            DerivJCont;
-
-! -(I)mtrak mainly attaches adjectives relating to colors and
-! tastes, but it may also attach to other adjectives an nouns.
-! Unusual examples from the web: devlet-imtrak, gizem-li-mtrak
-!
-! TODO: It seems if the stem ends with `m' the suffix may become -trak.
-!       film-trak, sağlam-trak
-
-LEXICON D_mtrak
-%<imtrak%>:^(I)mtrak@MB              DerivJCont;
-
-! -(I)msI also makes adjectives from nouns and adjectives.
-!           mavi-msi, tatlı-msı, gül-ümsü
-!
-LEXICON   D_imsi
-%<imsi%>:^(I)ms^I@MB     DerivJCont;
-
-! -sI also makes adjectives from nouns.
-!           ot-su, sümük-sü, kadın-sı etc.
-! This seems to be used only with nouns ending with a consononant.
-!
-LEXICON   D_si
-%<si%>:s^I@MB     DerivJCont;
-
-!
-LEXICON   D_imsi
-%<imsi%>:^(I)ms^I@MB     DerivJCont;
-
-! Dimunitive suffixes.
-!
-! TODO: not every nouns combines with every diminutive marker
-! TODO: some cases like 'küçücük'.
-!
-LEXICON   Dimin
-%<dim%:cIk%>:^C^NS^I^k@MB           DerivNCont;
-%<dim%:cAk%>:c^NS^A^k@MB            DerivNCont;
-%<dim%:IcAk%>:^NS^(I)c^NS^A^k@MB    DerivNCont;
-%<dim%:AcAk%>:^NS^(A)c^NS^A^k@MB    DerivNCont;
-%<dim%:cAgIz%>:c^Ağ^Iz@MB           DerivNCont;
-
-! -CI generally marks occupation, "someone who does or sells something"
-!      N->N : şeker-ci , 
-!      N->J : geri-ci
-!
-!   TODO/CHECK: again assuming that it only derives adjectives is an
-!               option. then adj. might become a noun by zero-deriv.
-!   TODO/CHECK: it also derives nouns from verbs (e.g., ögrenci) but
-!               these should be lexicalized.
-LEXICON   D_CI
-%<ci%>:^C^I@MB     DerivNCont;
-%<ci%>:^C^I@MB   DerivJCont;
-
-! -CA makes adverbs from nouns, pronouns, adjectives and adverbs, and in a 
-!     restrictive case it derives adjectives from numbers.
-!     it also derives nouns from nouns in some cases: Alman-ca.
-!       N->A: çocuk-ça
-!       P->A: ben-ce
-!       A->A: hızlı-ca  `somewhat fast'
-!       J->J: büyük-çe  `somewhat big'
-!       M->J: on-lar-ca
-!  It also derives adjectives from adjectives and adverbs from
-!  adverbs, where it changes the degree
-!
-! Additionally, -CAnA is a colloquial form of -CA,
-!  but it seems to attach to only adverbs and adjectives to make
-!  mainly adverbs 'hızlıcana okudu', 'güzelcene uyu şimdi', but also
-!  adjectives in some cases 'kalıncana bir kitap', 'karışıkçana birşey'
-!
-LEXICON   Deriv_MACA
-%<ca%>:^C^A@MB DerivNCont;
-LEXICON   ND_CAlanguage
-%<ca%>:^C^A@MB DerivNCont;
-LEXICON   ND_CA
-%<ca%>:^C^A@MB DerivACont;
-LEXICON   JD_CA
-%<ca%>:^C^A@MB DerivJCont;
-%<ca%>:^C^A@MB DerivACont;
-%<cana%>:^C^An^A@MB DerivJCont;
-%<cana%>:^C^An^A@MB DerivACont;
-LEXICON   AD_CA
-%<ca%>:^C^A@MB DerivACont;
-%<cana%>:^C^An^A@MB DerivACont;
-LEXICON   MD_CA
-%<ca%>:^C^A@MB DerivJCont;
-LEXICON   PD_CA
-%<ca%>:^C^A@MB DerivACont;
-
-
-!
-! -(y)sA/ise (besides being the conditional copula) functions as a
-! discourse connective. The difference is sometimes subtle but
-! important:
-!    cond: EvdeYSE, telefonu açardı "he'd answer the phone IF he was at home"
-!    Cnj:adv: EvdeYSE, hiç çalışamıyorum "At home, ON THE OTHER HAND, I
-!                                           can never work"
-
-LEXICON CliticSA
-%<ise%>%<Cnj%:adv%>:^(y)s^NS^A@MB       #;
-
-! -(y)IcI makes adjectives (and nouns) from verbs.
-!       bulaşıcı, görücü, yapıcı
-!
-!   TODO/CHECK: these may all be lexicalized.
-!
-LEXICON D_yIcI
-%<yici%>:^(y)^Ic^I@MB      DerivJCont;
-
-! -CIl makes adjectives from nouns
-!       N->J insancıl,
-!
-! it also makes nouns (e.g., balıkçıl) but we, again, assume that this 
-! goes through the adjective path
-!
-!  N->N 
-
-LEXICON D_CIl
-%<cil%>:^C^Il@MB              DerivJCont;
-
-
-! -gil makes nouns from nouns. 
-!   `  it is normally attached to proper names (Ahmet-gil) and nouns 
-!      specifying family members after possessive suffixes (anne-m-gil).
-!      it also occurs with common nouns (bakla-gil), but these should
-!      al be lexicalized.
-!
-LEXICON D_gil
-%<gil%>:gil@MB       DerivNCont;
-
-! -DIr  makes adverbial phrases from quantified nouns specifying time 
-!       üç gündür, bir zamandır ....
-!
-! TODO: tag is the same as other <dir>
-!
-LEXICON D_dir
-%<dir%>:^D^NS^Ir@MB      DerivACont;
-
-
-! -lArI makes adverbs from time adverbials `akşamları', `hafta
-! sonları' ...
-!
-! We currently allow any adverb marked as AdvTime to be used with this
-! derivation, although the set of adverbs that combines with this is 
-! slightly different than the ones that combines with -ki
-!
-LEXICON D_lArI
-%<leri%>:l^Ar^I@MB      DerivACont;
-
-
-! -lIğInA is another suffix that attaches to the time expressions. It
-! roughly translates to 'for', 'birkaç günlüğüne' (for a few days)
-!
-LEXICON D_lIGInA
-%<ligine%>%<Adv%>:l^Iğ^In^A@MB    #;
-
-! -lA is productive, and makes verbs from nouns
-!
-!       tuz-la, şeker-le, kuru-la ....
-!       it also attaches to some(all/most?) onomatopoeic words.
-!
-!  NOTE: although it is productive, the N->V derivation causes a lot 
-!        of ambiguous analyses. it is commented out.
-!
-!LEXICON ND_lA
-!%<la%>:l^A       DerivVCont;
-LEXICON D_lA
-%<la%>:l^A@MB       DerivVCont;
-
-! -lAn makes verbs from nouns and adjectives
-!
-!       N->V: av-lan, N->J: kuru-lan
-!
-LEXICON ND_lAn
-%<lan%>:l^An@MB       DerivVCont;
-LEXICON JD_lAn
-%<lan%>:l^An@MB       DerivVCont;
-
-! -lAş makes verbs from nouns and adjectives
-!
-!       N->V: mektup-laş, N->J: güzel-laş
-!
-!   TODO/CHECK: these may all be lexicalized verbs
-LEXICON ND_lAS
-%<las%>:l^Aş@MB       DerivVCont;
-LEXICON JD_lAS
-%<las%>:l^Aş@MB       DerivVCont;
-
-! -(y)Iş makes nouns from verbs
-!       yürüyüş, duruş, bakış
-!
-!   TODO: these probably are also lexicalized
-!
-LEXICON D_yIS
-%<yis%>:^(y)^Iş@MB   DerivNCont;
-
-! -mA makes nouns and adjectives from verbs
-!    V->N: ödeme, arama, kıyma, kesme
-!    V->J: kıyma, kesme, dökme, bunama
-! these probably are also lexicalized, and this creates a lot of
-! ambiguity (-mA is also a subordinating suffix). So it's out.
-!
-! LEXICON D_mA
-! %<ma%>:m^A@MB   DerivNCont;
-! %<ma%>:m^A@MB   DerivJCont;
-
-
-! non-productive derivation -(I)nC
-! V -> N: bas-ınç
-! V -> J: kıskan-ç
-! N -> J: ilgi-nç
-! For stems ending with 'n', the form is '-C', we let them pass here
-! and drop In after a a stem ending with 'n'
-! TODO: öd(e)-ünç?
-!
-! LEXICON D_inc
-! %<inc%>:^(I)n^c@MB   DerivNCont;
-! %<inc%>:^(I)n^c@MB   DerivJCont;
-
-! non-productive(?) derivation -(I)K
-! V -> N: kay-ık
-! V -> J: sol-uk
-! N -> N/J: orta-k
-!
-! LEXICON D_ik
-! %<ik%>:^(I)^k@MB   DerivNCont;
-! %<ik%>:^(I)^k@MB   DerivJCont;
-
-! non-productive derivation -(A)K
-! V -> N: kay-ak
-! V -> J: kork-ak
-!
-! seems to be realted to -(I)K above, but the distinction is not
-! clearcut
-!
-! LEXICON D_ek
-! %<ek%>:^(A)^k@MB   DerivNCont;
-! %<ek%>:^(A)^k@MB   DerivJCont;
-
-! non-productive derivation -(A)y
-! V -> N: den-ey
-! V -> J: düş-ey
-!
-! LEXICON D_ey
-! %<ey%>:^(A)y@MB   DerivNCont;
-! %<ey%>:^(A)y@MB   DerivJCont;
-
-! non-productive derivation -(A)v
-! V -> N: gör-ev
-!
-! LEXICON D_ev
-! %<ev%>:^(A)v@MB   DerivNCont;
-
-! non-productive derivation -GIn
-! V -> N: bas-kın, sür-gün
-! V -> J: yor-gun, şaş-kın
-!
-! LEXICON D_gin
-! %<gin%>:^G^In@MB   DerivNCont;
-! %<gin%>:^G^In@MB   DerivJCont;
-
-! non-productive derivation -GI
-! V -> N: sil-gi, sev-gi
-!
-! LEXICON D_gi
-! %<gi%>:^G^I@MB   DerivNCont;
-
-! non-productive derivation -(A)m
-! V -> N: kur-am, tut-am, dön-em
-! N -> N: ön-em
-!
-! LEXICON D_em
-! %<em%>:^(A)m@MB   DerivNCont;
-
-! non-productive derivation -(I)m/-(y)Im
-! V -> N: dene-yim, bak-ım, anla-m, bil-im
-!
-! TODO/CHECK: this seems to also attach passive or reflexive forms
-! (geri-l-im)
-!
-! LEXICON D_im
-! %<im%>:^(I)m@MB   DerivNCont;
-! %<yim%>:^(y)^Im@MB   DerivNCont;
-
-! -sAl makes adjectives from nouns
-!       bilimsel, tarihsel, duşsel...
-!
-LEXICON D_sAl
-%<sal%>:s^Al@MB  DerivJCont;
-
-! -Al is similar to -sAl
-!       yasal, yerel, cinsel, ilkel...
-!
-! LEXICON D_al
-! %<al%>:^Al@MB  DerivJCont;
-
-
-LEXICON JN_zero
-#if (ZERO_DERIV == 1)
-%<%0%>%<N%>:@MB   Ncont;
-#else
-                  Ncont;
-#endif
-
-LEXICON AN_zero
-#if (ZERO_DERIV == 1)
-%<%0%>%<N%>:@MB   Ncont;
-#else
-                  Ncont;
-#endif
-
-! This may be a way for avoiding duplicated adj/adv entries int he
-! lexicon
-!LEXICON AJ_zero
-!%<%0%>%<Adj%>:@MB   AdjCont;
-
-LEXICON MN_zero
-#if (ZERO_DERIV == 1)
-%<%0%>%<N%>:@MB   Ncont;
-#else
-                  Ncont;
-#endif
-
-!
-!
-!
-LEXICON DerivNCont
-%<N%>:0@MB       Ncont; ! this gives unlimited application of derivation
-!%<N%>:0@MB      Ninfl;   ! only one derivation after root.
-
-LEXICON DerivJCont
-%<Adj%>:0@MB    AdjCont; ! this gives unlimited application of derivation
-!%<Adj%>:0@MB   #;   ! only one derivation after root.
-
-LEXICON DerivACont
-%<Adv%>:0@MB    AdvCont; ! this gives unlimited application of derivation
-!%<Adv%>:0@MB   #;   ! only one derivation after root.
-
-LEXICON DerivVCont
-%<V%>:0@MB      VCont; ! this gives unlimited application of derivation
-!%<V%>:0@MB     Vinfl; ! only one derivation after root.
-
+⟨dir⟩           #;
+! TODO: filter
+
+
+LEXICON verb_nonfinite
+⟨vn.me⟩         noun;   ! TODO: need filter
+⟨vn.mek⟩        noun;   ! TODO: need filter
+⟨vn.yis⟩        noun;
+⟨part.pres⟩     adjective;      !-(y)An
+⟨part.past⟩     adjective;      !-DIK
+⟨part.fut⟩      adjective;      !-AcAK
+⟨part.esi⟩      adjective;      !-(y)AsI GK does not list this as 'part'
+⟨part.ici⟩      adjective;      !-(y)IcI GK does not list this as 'part'
+⟨cv.dikce⟩      adverb;         !-DIkçA
+⟨cv.eli⟩        adverb;         !-(y)AlI
+⟨cv.erek⟩       adverb;         !-(y)ArAk
+⟨cv.esiye⟩      adverb;         !-(y)AsIyA
+⟨cv.inceye⟩     adverb;         !-(y)IncAyA
+⟨cv.ince⟩       adverb;         !-(y)IncA
+⟨cv.ip⟩         adverb;         !-(y)Ip
+⟨cv.meden⟩      adverb;         !-mAdAn / -mAzdAn
+⟨cv.meksizin⟩   adverb;         !-mAksIzIn
+⟨cv.ye⟩         adverb;         !-(y)A requires reduplication 'okuya okuya'
+
+! the suffix -cAsInA attaches in some finite verb configurations.
+LEXICON converb_cesine
+⟨cv.cesine⟩     adverb;         !-CAsInA TODO: needs filter
 

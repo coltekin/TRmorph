@@ -1,0 +1,11 @@
+define morph  @"morph.a";
+define phon   @"phon.a";
+define morphfilter   @"morph-filter.a";
+define analysisfilter   @"analysis-filter.a";
+define phonfilter   @"phon-filter.a";
+
+
+regex analysisfilter.i 
+  .o. [morph .o. morphfilter].l
+  .o. phon 
+  .o. phonfilter ;
