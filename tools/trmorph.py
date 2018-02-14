@@ -8,6 +8,7 @@ basicConfig(level="INFO", format='%(asctime)s %(message)s')
 
 from flookup import Fst
 from trmorph2ud import trmorph_to_ud
+from conll_ul import CoNLLUL
 
 import os.path
 FST_DIR = os.path.join(os.path.dirname(__file__), "..")
@@ -92,29 +93,35 @@ class Trmorph:
         return(ud_igs)
 
 
-    def to_conll_ul(self, s):
-        segments = []
-        states = {0}
-        analyses = self.analyze(s)
-        for a in analyses:
-            igs = self.igs_to_ud(self.to_igs(a, s))
-            begin = 0
-            w_form = ''
-            for form, lemma, pos, feat in igs:
-                end = begin + len(form)
-                w_form += form
-                states.add(end)
-                feat = '|'.join(sorted(feat))
-                if (begin, end, form, lemma, pos, feat) not in segments:
-                    segments.append((begin, end, form, lemma, pos, feat))
-                begin = end
+    def to_conll_ul(self, s, analyses=None, begin=0):
+        if not analyses:
+            analyses = self.analyze(s)
+        if len(analyses) == 0:
+            segments = [(0, len(s), s, s, "X", "_")]
+            states = [0, len(s)]
+        else:
+            states = {0}
+            segments = []
+            for a in analyses:
+                igs = self.igs_to_ud(self.to_igs(a, s))
+                frm = 0
+                w_form = ''
+                for form, lemma, pos, feat in igs:
+                    to = frm + len(form)
+                    w_form += form
+                    states.add(to)
+                    feat = '|'.join(sorted(feat))
+                    if (frm, to, form, lemma, pos, feat) not in segments:
+                        segments.append((frm, to, form, lemma, pos, feat))
+                    frm = to
         states = sorted(states)
-        ul_str = "0-{}\t{}\n".format(len(states)-1, w_form)
-        fmt = "{}" + "\t{}" * 8
-        for begin, end, form, lemma, pos, feat in segments:
-            ul_str += fmt.format(states.index(begin), states.index(end),
-                        form, lemma, pos, '_', feat, '_', '_') + '\n'
-        return(ul_str)
+        conllul = CoNLLUL(s, begin=states.index(begin))
+        for frm, to, form, lemma, pos, feat in segments:
+            conllul.add_arc(from_state=states.index(frm),
+                            to_state=states.index(to),
+                            form=form, lemma=lemma,
+                            upos=pos, feat=feat)
+        return conllul
 
 
 if __name__ == "__main__":
@@ -132,7 +139,7 @@ if __name__ == "__main__":
             for a in analyses:
                 print("{}\t{}".format(s, a))
         elif 'conll-ul' == opt.out_fmt:
-            print(trmorph.to_conll_ul(analyses))
+            print(trmorph.to_conll_ul(s, analyses=analyses))
         elif 'ud' == opt.out_fmt:
             for a in analyses:
                 igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
