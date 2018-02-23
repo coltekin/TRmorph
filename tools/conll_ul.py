@@ -21,19 +21,21 @@ class CoNLLULArc:
                                self.feat, self.misc, self.anchors)
 
 class CoNLLUL:
-    __slots__ = ("begin", "end", "form", "arcs")
+    __slots__ = ("begin", "end", "form", "arcs", "misc")
 
     def __init__(self, form, begin=0, end=1):
         self.form = form
         self.begin = begin
         self.end = end
         self.arcs = []
+        self.misc = '_'
 
     def __len__(self):
         return len(self.arcs)
 
     def __str__(self):
-        ul_str = "{}-{}\t{}\n".format(self.begin, self.end, self.form)
+        ul_str = "{}-{}\t{}\t{}\n".format(self.begin, self.end,
+                self.form, self.misc)
         for arc in self.arcs:
             ul_str += str(arc)
         return(ul_str)
