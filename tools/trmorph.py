@@ -115,7 +115,7 @@ class Trmorph:
                         segments.append((frm, to, form, lemma, pos, feat))
                     frm = to
         states = sorted(states)
-        conllul = CoNLLUL(s, begin=states.index(begin))
+        conllul = CoNLLUL(s, begin=begin)
         for frm, to, form, lemma, pos, feat in segments:
             conllul.add_arc(from_state=states.index(frm),
                             to_state=states.index(to),
