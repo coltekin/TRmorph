@@ -34,7 +34,9 @@ class CoNLLUL:
         return len(self.arcs)
 
     def __str__(self):
-        ul_str = "{}-{}\t{}\t{}\n".format(self.begin, self.end,
+        ul_str = ""
+        if self.end - self.begin > 1:
+            ul_str = "{}-{}\t{}\t{}\n".format(self.begin, self.end,
                 self.form, self.misc)
         for arc in self.arcs:
             ul_str += str(arc)

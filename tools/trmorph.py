@@ -54,7 +54,8 @@ class Trmorph:
                 m.group('root'),
                 m.group('pos').replace('⟨', '').replace('⟩', ''),
                 [x.replace('⟨', '').replace('⟩', '') for x in\
-                        m.group('inflections').split('⟩⟨')]
+                        m.group('inflections').split('⟩⟨')] \
+                    if m.group('inflections') else []
             ))
             m = re.match(self.a_re, m.group('rest'))
 

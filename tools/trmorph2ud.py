@@ -60,7 +60,7 @@ tag_map = {
     '2s': ('Person=2','Number=Sing'),
     '3s': ('Person=3','Number=Sing'),
     '1p': ('Person=1','Number=Plur'),
-    '2s': ('Person=2','Number=Plur'),
+    '2p': ('Person=2','Number=Plur'),
     '3p': ('Person=3','Number=Plur'),
     'dir': ('Mood=Gen',),
     'vn.me': ('VerbForm=Vnoun',),
@@ -90,6 +90,7 @@ tag_map = {
 
 tags_ignore = {
     'p0x',
+    'coo',  # CCONJ is default
 }
 
 tame_markers = {
@@ -133,7 +134,7 @@ def trmorph_to_ud(ig):
         elif t in tags_ignore:
             pass
         else:
-            warning("Tag `{}' is not handled".format(t))
+            warning("Tag `{}' is not handled in {}".format(t, ig))
 
         del t_tags[0]
 
