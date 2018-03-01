@@ -13,6 +13,12 @@ from conll_ul import CoNLLUL
 import os.path
 FST_DIR = os.path.join(os.path.dirname(__file__), "..")
 
+def tr_upper(s):
+    return s.replace('i', 'İ').upper()
+
+def tr_lower(s):
+    return s.replace('I', 'ı').lower()
+
 class Trmorph:
     a_re = re.compile('(?P<root>.*?)'
           '(?P<pos>⟨[A-Z][A-Za-z0-9:]*⟩)'
@@ -72,15 +78,19 @@ class Trmorph:
 
         igs = [] # tuples of <surface, lemma, pos, inflections>
         for i, (a, s) in enumerate(zip(a_split, s_split)):
+            ig_lemma, ig_pos, ig_infl = a
+            ig_surf = s
+            if i == 0 and sstring[0].isupper() and ig_lemma.islower():
+                ig_surf = tr_upper(ig_surf[0]) + ig_surf[1:]
             if len(s) == 0: # skip zero morphemes (copula)
                 pass
-            elif i > 0 and a[0] not in {'⟨ki⟩', '⟨cpl⟩'}:
+            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩'}:
                 prev_ig = igs.pop()
-                lemma = prev_ig[0] + s.split('⟪MB⟫')[0]
-                igs.append((prev_ig[0] + s.replace('⟪MB⟫', ''),
-                    lemma, a[1], a[2]))
+                ig_lemma = prev_ig[0] + s.split('⟪MB⟫')[0]
+                igs.append((prev_ig[0] + ig_surf.replace('⟪MB⟫', ''),
+                    ig_lemma, ig_pos, ig_infl))
             else:
-                igs.append((s.replace('⟪MB⟫', ''),
+                igs.append((ig_surf.replace('⟪MB⟫', ''),
                     a[0].replace('⟨', '').replace('⟩', ''), a[1], a[2]))
         return igs
 
