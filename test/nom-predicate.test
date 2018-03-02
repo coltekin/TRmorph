@@ -84,6 +84,6 @@ A;A;eveydi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
 A;A;evdendi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
 A;A;evindi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
 A;A;evleydi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
-A;A;evsizdi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨siz⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
-A;A;evliydi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨li⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
+A;A;evsizdi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
+A;A;evliydi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
 A;R;eviydi;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨acc⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩

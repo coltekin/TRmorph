@@ -110,7 +110,7 @@ A;A;mutfaktakilerle;mutfak⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨p
 A;A;arabanınkiyle;araba⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;perdeninkilerle;perde⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;Amerika'dakilerce;Amerika⟨N⟩⟨prop⟩⟨apos⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨ce⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;bahçedekilersiz;bahçe⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨siz⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;bahçedekilersiz;bahçe⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;evdekilerinki;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;anneminkindeki;anne⟨N⟩⟨sg⟩⟨p1s⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p2s⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 ## 8.2
@@ -426,7 +426,7 @@ A;A;bakacak;bak⟨V⟩⟨fut⟩⟨3s⟩
 A;A;orada;ora⟨Pron⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;unutmuşsun;unut⟨V⟩⟨evid⟩⟨2s⟩
 A;A;biliriz;bil⟨V⟩⟨aor⟩⟨1p⟩
-A;A;hatırlamalıyım;hatırla⟨V⟩⟨vn.me⟩⟨sg⟩⟨p0x⟩⟨li⟩⟨cpl⟩⟨V⟩⟨1s⟩
+A;A;hatırlamalıyım;hatırla⟨V⟩⟨obl⟩⟨1s⟩
 A;A;gideceğim;git⟨V⟩⟨fut⟩⟨1s⟩
 A;A;ilgilenmemişler;ilgilen⟨V⟩⟨neg⟩⟨evid⟩⟨3p⟩
 A;A;calışmalıymışız;calış⟨V⟩⟨obl⟩⟨cpl⟩⟨evid⟩⟨1p⟩

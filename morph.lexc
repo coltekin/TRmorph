@@ -207,12 +207,9 @@ LEXICON noun
                     noun_deriv;
 
 LEXICON noun_deriv
-⟨ci⟩⟨N⟩             noun;
-⟨li⟩⟨N⟩             noun;
-⟨lik⟩⟨N⟩            noun;
 ⟨sel⟩⟨Adj⟩          adjective;
-⟨ce⟩⟨Adv⟩           adverb;
-⟨les⟩⟨V⟩            verb;
+⟨ce⟩⟨Adv⟩           adverb;     ! TODO: this is more than a derivation
+⟨les⟩⟨V⟩            verb;       ! this may also show up in inflected forms
 ⟨len⟩⟨V⟩            verb;
 ⟨le⟩⟨V⟩             verb;
 
@@ -277,16 +274,18 @@ LEXICON noun_ins
 LEXICON noun_ki
 ⟨ki⟩⟨Adj⟩           adjective;
 
-LEXICON noun_siz
-                    nom_predicate;
-LEXICON noun_li
-                    nom_predicate;
-LEXICON noun_lik
-                    nom_predicate;
 LEXICON noun_ca
                     nom_predicate;
+
+LEXICON noun_siz
+⟨Adj⟩               adjective;
+LEXICON noun_li
+⟨Adj⟩               adjective;
+LEXICON noun_lik
+⟨Adj⟩               adjective;
 LEXICON noun_ci
-                    nom_predicate;
+⟨N⟩                 noun;
+
 !
 ! Nominal predicates
 !
