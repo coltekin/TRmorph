@@ -41,6 +41,8 @@ tag_map = {
     'gen': ('Case=Gen',),
     'ins': ('Case=Ins',),
     'ce': ('Case=Equ',),    #TODO: not really
+    'dist': ('NumType=Dist',),
+    'ord': ('NumType=Ord',),
     #TODO: other case-like suffixes -siz, -li, -lik
     'rfl': ('Voice=Rfl',),
     'rcp': ('Voice=Rcp',),
@@ -88,8 +90,11 @@ tag_map = {
     'indef': ('Definite=Ind',),
 }
 
-tags_ignore = {
+tags_ignore = { # tags that are not (explicitly) converted
     'p0x',
+    'apos',
+    'rom',  # Roman numerals
+    'ara',  # Arabic numerals
     'coo',  # CCONJ is default
 }
 
@@ -131,6 +136,8 @@ def trmorph_to_ud(ig):
             pos = 'ADV'
         elif t == 'prop' and pos == 'NOUN':
             pos = 'PROPN'
+        elif t == 'cpl' and pos in {'VERB', 'AUX'}:
+            pass
         elif t in tags_ignore:
             pass
         else:
