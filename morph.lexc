@@ -169,7 +169,6 @@ LEXICON adjective
 LEXICON adverb
                     #;
                     adverb_ca; ! TODO: not all adverbs do this
-                    nom_predicate; ! TODO: introduces ambiguity
 
 LEXICON adverb_ca
 ⟨ce⟩                #;
@@ -293,13 +292,12 @@ LEXICON noun_ci
 !
 
 LEXICON nom_predicate
-⟨cpl⟩               pnaggr;
-                    copula;
-                    nompred_question;
-!TODO: replication 
-LEXICON nompred_question 
-⟨q⟩⟨cpl⟩            pnaggr;
-⟨q⟩                 copula;
+⟨cpl⟩⟨V⟩            pnaggr;
+⟨cpl⟩⟨V⟩            converb_ken;
+⟨cpl⟩⟨V⟩            copula_tam;
+⟨q⟩⟨cpl⟩⟨V⟩         pnaggr;
+⟨q⟩⟨cpl⟩⟨V⟩         converb_ken;
+⟨q⟩⟨cpl⟩⟨V⟩         copula_tam;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Numbers

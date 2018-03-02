@@ -11,7 +11,7 @@ A;A;okumazlar;oku⟨V⟩⟨neg⟩⟨aor⟩⟨3p⟩
 A;A;okumazdık;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨past⟩⟨1p⟩
 A;A;okumazdınız;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨past⟩⟨2p⟩
 A;A;okumazmış;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨3s⟩
-A;A;okumazlarmış;oku⟨V⟩⟨neg⟩⟨aor⟩⟨3p⟩⟨cpl⟩⟨evid⟩
+A;A;okumazlarmış;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨3p⟩⟨evid⟩
 A;A;okumazmışız;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨1p⟩
 A;A;okumazsanız;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨cond⟩⟨2p⟩
 A;A;okumazmışlar;oku⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨3p⟩
@@ -26,5 +26,5 @@ A;A;gülmezdiniz;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨past⟩⟨2p⟩
 A;A;gülmezmiş;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨3s⟩
 A;A;gülmezmişiz;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨1p⟩
 A;A;gülmezseniz;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨cond⟩⟨2p⟩
-A;A;gülmezlermiş;gül⟨V⟩⟨neg⟩⟨aor⟩⟨3p⟩⟨cpl⟩⟨evid⟩
+A;A;gülmezlermiş;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨3p⟩⟨evid⟩
 A;A;gülmezmişler;gül⟨V⟩⟨neg⟩⟨aor⟩⟨cpl⟩⟨evid⟩⟨3p⟩

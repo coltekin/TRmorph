@@ -10,7 +10,7 @@ define posSym @"pos-symbols.a";
 
 ! compund verb forms
 define compVerb [⟨abil⟩|⟨iver⟩|⟨adur⟩|⟨agel⟩|⟨agor⟩|⟨akal⟩|⟨ayaz⟩];
-define case [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩ |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩];
+
 
 
 ! TODO: parallelize more
@@ -27,7 +27,8 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
     .o. ~[ ?* ⟨vn%.mek⟩ ⟨pl⟩ ?* ]
     .o. ~[ ?* ⟨imp⟩ ?+ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ]
     .o. ~[ ?* ⟨imp⟩ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ?+ ]
-    .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨3s⟩ ]
+    .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
+    .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ [\[⟪time⟫]]+ ⟨Adv⟩ [⟨ki⟩|⟨leri⟩|⟨ligine⟩] ?*]
     .o. ~[ ?* ⟪time⟫ ?* ⟨Adv⟩ [⟨ca⟩] ?*]
     .o. ~[ ?* {birbir} ⟨Pron⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨3s⟩ ]
@@ -56,21 +57,27 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
        ⟨cpl⟩ ⟨cond⟩ ⟨1p⟩ (->) ⟨1p⟩ ⟨cpl⟩ ⟨cond⟩,
        ⟨cpl⟩ ⟨cond⟩ ⟨2p⟩ (->) ⟨2p⟩ ⟨cpl⟩ ⟨cond⟩
        || ⟨past⟩ _
-    ,, ⟨cpl⟩ ⟨past⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨cpl⟩ ⟨past⟩
-    ,, ⟨cpl⟩ ⟨evid⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨cpl⟩ ⟨evid⟩
-    ,, ⟨cpl⟩ ⟨cond⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨cpl⟩ ⟨cond⟩
-    ,, ⟨cpl⟩ "⟨cv.ken⟩" ⟨3p⟩ (->) ⟨3p⟩ ⟨cpl⟩ "⟨cv.ken⟩"
+    ,, ⟨cpl⟩ ⟨past⟩ ⟨3p⟩ (->) ⟨cpl⟩ ⟨3p⟩ ⟨past⟩
+    ,, ⟨cpl⟩ ⟨past⟩ ⟨3p⟩ (->) ⟨cpl⟩ ⟨3p⟩ ⟨past⟩
+    ,, ⟨cpl⟩ ⟨evid⟩ ⟨3p⟩ (->) ⟨cpl⟩ ⟨3p⟩ ⟨evid⟩
+    ,, ⟨cpl⟩ ⟨cond⟩ ⟨3p⟩ (->) ⟨cpl⟩ ⟨3p⟩ ⟨cond⟩
+    ,, ⟨cpl⟩ "⟨cv.ken⟩" ⟨3p⟩ (->) ⟨cpl⟩ ⟨3p⟩ "⟨cv.ken⟩"
+    ,, ⟨cpl⟩ ⟨V⟩ ⟨past⟩ ⟨3p⟩ (->)     ⟨cpl⟩ ⟨V⟩  ⟨3p⟩ ⟨past⟩
+    ,, ⟨cpl⟩ ⟨V⟩ ⟨past⟩ ⟨3p⟩ (->)     ⟨cpl⟩ ⟨V⟩  ⟨3p⟩ ⟨past⟩
+    ,, ⟨cpl⟩ ⟨V⟩ ⟨evid⟩ ⟨3p⟩ (->)     ⟨cpl⟩ ⟨V⟩  ⟨3p⟩ ⟨evid⟩
+    ,, ⟨cpl⟩ ⟨V⟩ ⟨cond⟩ ⟨3p⟩ (->)     ⟨cpl⟩ ⟨V⟩  ⟨3p⟩ ⟨cond⟩
+    ,, ⟨cpl⟩ ⟨V⟩ "⟨cv.ken⟩" ⟨3p⟩ (->) ⟨cpl⟩ ⟨V⟩  ⟨3p⟩ "⟨cv.ken⟩"
     ,, ⟨3p⟩ ⟨dir⟩       (->) ⟨dir⟩  ⟨3p⟩
-    ,, ⟨q⟩ ⟨3p⟩         (->) ⟨3p⟩ ⟨q⟩
+   .o. ⟨q⟩ ⟨cpl⟩ ⟨3p⟩   (->) ⟨3p⟩ ⟨q⟩ ⟨cpl⟩
     ,, [..]             (->) ⟨3p⟩   || ⟨3p⟩ ⟨dir⟩ _
     ,, ⟨q⟩ ⟨1s⟩ -> ⟨1s⟩ ⟨q⟩,
        ⟨q⟩ ⟨2s⟩ -> ⟨2s⟩ ⟨q⟩,
        ⟨q⟩ ⟨3s⟩ -> ⟨3s⟩ ⟨q⟩,
        ⟨q⟩ ⟨1p⟩ -> ⟨1p⟩ ⟨q⟩,
        ⟨q⟩ ⟨2p⟩ -> ⟨2p⟩ ⟨q⟩ || [⟨opt⟩|⟨cond⟩|⟨past⟩] _
-   ,,  ⟨cpl⟩ ⟨q⟩ -> ⟨q⟩ ⟨cpl⟩ 
-   ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ ! Türkiye Cumhuriyet-i'ne
-   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨3s⟩ ]
+   ! Türkiye Cumhuriyet-i'ne
+   ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ 
+   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
    .o. ⟨q⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨q⟩ 
    .o. [..] (->) ⟪mredup⟫
        || .#. _ ?+ 
@@ -86,5 +93,4 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
     ,, ⟪family⟫  -> 0
 ! nouns expressing time may have -ki suffixed directly
     ,, [..] (->) ⟨ki⟩ ⟨Adj⟩ || ⟪time⟫ intSym* ⟨N⟩ _
-   .o. [..] -> ⟨V⟩ || case (⟨3p⟩) ⟨cpl⟩ _
 ;

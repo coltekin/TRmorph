@@ -11,14 +11,14 @@ A;A;öğretmendi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨p
 A;A;öğretmendik;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨1p⟩
 A;A;öğretmendiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨2p⟩
 A;A;öğretmendiler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3p⟩
-A;A;öğretmenlerdi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨3p⟩⟨cpl⟩⟨V⟩⟨past⟩
+A;A;öğretmenlerdi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3p⟩⟨past⟩
 A;A;öğretmenmişim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨1s⟩
 A;A;öğretmenmişsin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨2s⟩
 A;A;öğretmenmiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨3s⟩
 A;A;öğretmenmişiz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨1p⟩
 A;A;öğretmenmişsiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨2p⟩
 A;A;öğretmenmişler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨3p⟩
-A;A;öğretmenlermiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨3p⟩⟨cpl⟩⟨V⟩⟨evid⟩
+A;A;öğretmenlermiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3p⟩⟨evid⟩
 A;A;öğretmensem;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cond⟩⟨1s⟩
 A;A;öğretmensen;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cond⟩⟨2s⟩
 A;A;öğretmense;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cond⟩⟨3s⟩
@@ -42,27 +42,27 @@ A;A;öğretmenseydiler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V�
 A;A;öğretmenken;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cv.ken⟩
 A;A;öğretmenkense;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cv.ken⟩⟨cpl⟩⟨cond⟩⟨3s⟩
 #
-A;A;öğretmen miyim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨1s⟩
-A;A;öğretmen misin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨2s⟩
-A;A;öğretmen mi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨3s⟩
-A;A;öğretmen miyiz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨1p⟩
-A;A;öğretmen misiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨2p⟩
-A;A;öğretmen miler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨3p⟩
-A;A;öğretmenler mi;öğretmen⟨N⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨3s⟩
-A;A;öğretmen miydim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨1s⟩
-A;A;öğretmen miydin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨2s⟩
-A;A;öğretmen miydi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨3s⟩
-A;A;öğretmen miydik;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨1p⟩
-A;A;öğretmen miydiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨2p⟩
-A;A;öğretmen miydiler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨past⟩⟨3p⟩
-A;A;öğretmen milerdi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨3p⟩⟨cpl⟩⟨past⟩
-A;A;öğretmen miymişim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨1s⟩
-A;A;öğretmen miymişsin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨2s⟩
-A;A;öğretmen miymiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨3s⟩
-A;A;öğretmen miymişiz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨1p⟩
-A;A;öğretmen miymişsiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨2p⟩
-A;A;öğretmen miymişler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨evid⟩⟨3p⟩
-A;A;öğretmen milermiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨3p⟩⟨cpl⟩⟨evid⟩
+A;A;öğretmen miyim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨1s⟩
+A;A;öğretmen misin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨2s⟩
+A;A;öğretmen mi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;öğretmen miyiz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨1p⟩
+A;A;öğretmen misiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨2p⟩
+A;A;öğretmen miler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨3p⟩
+A;A;öğretmenler mi;öğretmen⟨N⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;öğretmen miydim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨1s⟩
+A;A;öğretmen miydin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨2s⟩
+A;A;öğretmen miydi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
+A;A;öğretmen miydik;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨1p⟩
+A;A;öğretmen miydiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨2p⟩
+A;A;öğretmen miydiler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3p⟩
+A;A;öğretmen milerdi;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨3p⟩⟨past⟩
+A;A;öğretmen miymişim;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨1s⟩
+A;A;öğretmen miymişsin;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨2s⟩
+A;A;öğretmen miymiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨3s⟩
+A;A;öğretmen miymişiz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨1p⟩
+A;A;öğretmen miymişsiniz;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨2p⟩
+A;A;öğretmen miymişler;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨evid⟩⟨3p⟩
+A;A;öğretmen milermiş;öğretmen⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨q⟩⟨cpl⟩⟨V⟩⟨3p⟩⟨evid⟩
 #
 A;A;evlerdi;ev⟨N⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨past⟩⟨3s⟩
 #
