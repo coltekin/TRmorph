@@ -5,15 +5,15 @@ class CoNLLULArc:
             "feat", "misc", "anchors")
     def __init__(self, from_state=0, to_state=1, form="_", lemma="_",
                  upos="_", xpos="_", feat="_", misc="_", anchors="_"):
-        self.from_state = from_state
-        self.to_state = to_state
+        self.from_state = int(from_state)
+        self.to_state = int(to_state)
         self.form = form
-        self.lemma = lemma
-        self.upos = upos
-        self.xpos = xpos
-        self.feat = feat
-        self.misc = misc
-        self.anchors = anchors
+        self.lemma = None if not lemma else lemma
+        self.upos = None if not upos else upos
+        self.xpos = None if not xpos else xpos
+        self.feat = None if not feat else feat
+        self.misc = None if not misc else misc
+        self.anchors =  None if not anchors else anchors
     def __str__(self):
         fmt = "{}" + 8 * "\t{}" + "\n"
         return fmt.format( self.from_state, self.to_state, self.form,

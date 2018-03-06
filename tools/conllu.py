@@ -32,16 +32,16 @@ class Node(object):
                  misc=None, children=[], multi=0, empty=0):
         self.index=int(index)
         self.form=form
-        self.lemma=(None if lemma is None or 
+        self.lemma=(None if not lemma or 
                         (lemma == '_' and upos != 'PUNCT')
                     else lemma)
         self.upos=upos
-        self.xpos=None if xpos is None or xpos == '_' else xpos
-        self.feats=None if feats is None or feats == '_' else feats
-        self.head=None if head is None or head == '_' else int(head)
+        self.xpos=None if not xpos or xpos == '_' else xpos
+        self.feats=None if not feats or feats == '_' else feats
+        self.head=None if not head or head == '_' else int(head)
         self.deprel=deprel
-        self.deps=None if deps is None or deps == '_' else deps
-        self.misc=None if misc is None or misc == '_' else misc
+        self.deps=None if not deps or deps == '_' else deps
+        self.misc=None if not misc or misc == '_' else misc
         self.children=children
         self.multi = int(multi)
         self.empty = int(empty)
@@ -76,8 +76,8 @@ class Sentence(object):
         Attributes:
             nodes   - nodes of the primary tree
             multi   - dictionary of multi-word tokens indexed by
-                      beginning of the range, value is a singel
-                      node with 'multi' attribute to the final
+                      beginning of the range, value is a single
+                      node with 'multi' attribute to the final index
             empty   - dictionary of empty tokens indexed by the
                       previous token index, value is a list.
             comment - the pre-sentence comments
