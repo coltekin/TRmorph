@@ -435,6 +435,7 @@ LEXICON converb_ken
 LEXICON converb_ken_cont
                 adverb;
                 question;
+                noun_ki;
 
 LEXICON copula_tam
 ⟨cond⟩         copula_cond2;
