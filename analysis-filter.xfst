@@ -23,9 +23,9 @@ regex  ⟪IGB⟫ -> 0
     ,, ⟪compn⟫ -> 0
     ,, ⟪mredup⟫ -> 0
 ! noun subcategorization
-    ,, [..] -> ⟨prop⟩ || ⟪propn⟫ intSym* ⟨N⟩ intSym* _
-    ,, [..] -> ⟨abbr⟩ || ⟪abbr⟫ intSym* ⟨N⟩ intSym* _
+    ,, [..] -> ⟨prop⟩ || ⟪propn⟫ intSym* ⟨N⟩ _
     ,, ⟪propn⟫ -> 0
+   .o. [..] -> ⟨abbr⟩ || ⟪abbr⟫ intSym* ⟨N⟩ _
     ,, ⟪abbr⟫ -> 0
 ! determiner subcategorization
     ,, ⟨Det⟩ -> ⟨Det⟩ ⟨indef⟩ || ⟪indef⟫ intSym* _

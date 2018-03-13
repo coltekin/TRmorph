@@ -102,7 +102,7 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
        ⟨3s⟩      -> 0,
        ⟨1p⟩      -> k,
        ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] _
-    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩] _
+    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟨Q⟩] _
     ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] _
     ,, ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
@@ -164,9 +164,9 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
 ! letters added in the lexicon.
 ! The second rule inserts an optional dot `.' if there isn't one
 ! already.
-   .o. [..] -> ⟪sFUV⟫ || .#. consonant+ _ intSym* ⟨abbr⟩
-    ,, [..] (->) %.   || \[%.] _ intSym* ⟨abbr⟩ intSym* posSym .#.
-    ,, ⟨abbr⟩ -> 0
+   .o. [..] -> ⟪sFUV⟫ || .#. consonant+ _ intSym* ⟪abbr⟫
+    ,, [..] (->) %.   || \[%.] _ intSym* ⟪abbr⟫ [⟪MB⟫|⟪IGB⟫|posSym]+ .#.
+    ,, ⟪abbr⟫ -> 0
 ! replace apostrophe with an intermediate symbol
     ,, ⟨apos⟩     -> ⟪apos⟫
 !
