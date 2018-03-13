@@ -58,6 +58,7 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
     ,, ⟨dim⟩ -> [ ⟪C⟫ ⟪I⟫ ⟪k⟫   ! TODO: (?) add (A/I)CIK
                  |⟪C⟫ ⟪A⟫ ⟪k⟫ 
                  |⟪C⟫ ⟪A⟫ ğ ⟪I⟫ z]
+    ,, ⟨imsi⟩ -> ⟪bI⟫ m s ⟪I⟫ || intSyme* _
 ! numbers
     ,, ⟨dist⟩ -> ⟪bş⟫ ⟪A⟫ r
     ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 

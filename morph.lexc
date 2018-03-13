@@ -42,6 +42,7 @@ Multichar_Symbols ⟨Adj⟩
                     ⟨apos⟩
                     ⟨len⟩ ⟨les⟩ ⟨le⟩
                     ⟨dim⟩
+                    ⟨imsi⟩
                   ⟨Num⟩
                     ⟨ara⟩ ⟨rom⟩ ⟨date⟩ ⟨time⟩
                     ⟨dist⟩ ⟨ord⟩
@@ -211,6 +212,7 @@ LEXICON noun_deriv
 ⟨sel⟩⟨Adj⟩          adjective;
 ⟨ce⟩⟨Adv⟩           adverb;     ! TODO: this is more than a derivation
 ⟨les⟩⟨V⟩            verb;       ! this may also show up in inflected forms
+⟨imsi⟩⟨Adj⟩         adjective;
 ⟨len⟩⟨V⟩            verb;
 ⟨le⟩⟨V⟩             verb;
 ⟨dim⟩⟨N⟩            diminutive_cont;

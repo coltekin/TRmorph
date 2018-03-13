@@ -4,6 +4,8 @@ regex ⟨pl⟩|⟨sg⟩|
       ⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ce⟩|⟨ci⟩|⟨sel⟩|
       ⟨len⟩|⟨les⟩|⟨le⟩|
       ⟨ki⟩|
+      ⟨dim⟩|
+      ⟨imsi⟩|
       ⟨apos⟩|
       ⟨def⟩|⟨indef⟩|
       ⟨ara⟩|⟨rom⟩|⟨time⟩|⟨date⟩|
