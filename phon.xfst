@@ -55,6 +55,9 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
     ,, ⟨le⟩ -> l ⟪A⟫
     ,, ⟨les⟩ -> l ⟪A⟫ ş
     ,, ⟨len⟩ -> l ⟪A⟫ n
+    ,, ⟨dim⟩ -> [ ⟪C⟫ ⟪I⟫ ⟪k⟫   ! TODO: (?) add (A/I)CIK
+                 |⟪C⟫ ⟪A⟫ ⟪k⟫ 
+                 |⟪C⟫ ⟪A⟫ ğ ⟪I⟫ z]
 ! numbers
     ,, ⟨dist⟩ -> ⟪bş⟫ ⟪A⟫ r
     ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 

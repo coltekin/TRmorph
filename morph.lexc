@@ -41,6 +41,7 @@ Multichar_Symbols ⟨Adj⟩
                     ⟨ki⟩
                     ⟨apos⟩
                     ⟨len⟩ ⟨les⟩ ⟨le⟩
+                    ⟨dim⟩
                   ⟨Num⟩
                     ⟨ara⟩ ⟨rom⟩ ⟨date⟩ ⟨time⟩
                     ⟨dist⟩ ⟨ord⟩
@@ -212,6 +213,11 @@ LEXICON noun_deriv
 ⟨les⟩⟨V⟩            verb;       ! this may also show up in inflected forms
 ⟨len⟩⟨V⟩            verb;
 ⟨le⟩⟨V⟩             verb;
+⟨dim⟩⟨N⟩            diminutive_cont;
+
+LEXICON diminutive_cont
+                    noun_number;
+                    noun_apostrophe;
 
 !
 ! We allow apostrophe to attach any noun here, but filter on 
