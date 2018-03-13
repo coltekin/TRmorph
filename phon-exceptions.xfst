@@ -38,13 +38,6 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
                                                        | ⟪D⟫  ⟪A⟫ n
                                                        | ⟪by⟫ l   ⟪A⟫ ]
 ! ---------------------------------------------------------------------------
-! Optionally Delete (s) after a few marked nouns. The well known example is 
-! cami ! -> cami-i. This deletion in current language seems to be optional
-! (as of 2009-10-21 google finds ! more `camisi' than `camii').
-! ---------------------------------------------------------------------------
-   .o. ⟪bs⟫ (->) 0  || ⟪dels⟫ intSym* boundary* _ ⟪I⟫ ⟪MB⟫
-    ,, ⟪dels⟫  -> 0
-! ---------------------------------------------------------------------------
 ! lAr deletion - if there are multiple morphemes in a sequence with surface 
 ! form lAr or lArI following each other, only one survives on the surface.
 ! ---------------------------------------------------------------------------
@@ -117,6 +110,13 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
                     _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫],
               .#. ucase [\⟪RB⟫]* s u intSym* [⟪RB⟫] (⟪apos⟫) [⟪IGB⟫|⟪MB⟫]+
                     _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫]
+! ---------------------------------------------------------------------------
+! Optionally Delete (s) after a few marked nouns. The well known example is 
+! cami ! -> cami-i. This deletion in current language seems to be optional
+! (as of 2009-10-21 google finds ! more `camisi' than `camii').
+! ---------------------------------------------------------------------------
+   .o. ⟪bs⟫ (->) 0  || ⟪dels⟫ intSym* boundary* _ ⟪I⟫ ⟪MB⟫
+    ,, ⟪dels⟫  -> 0
 ! ------------------------------------------------------------
 ! Pronoun exceptions
 ! - drop of final `i/ı' after içeri/dışarı
