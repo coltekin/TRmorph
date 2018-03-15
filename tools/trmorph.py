@@ -14,10 +14,18 @@ import os.path
 FST_DIR = os.path.join(os.path.dirname(__file__), "..")
 
 def tr_upper(s):
-    return s.replace('i', 'İ').upper()
+    return s.replace('i', 'İ').replace('ı', 'I').upper()
 
 def tr_lower(s):
-    return s.replace('I', 'ı').lower()
+    return s.replace('I', 'ı').replace('İ', 'i').lower()
+
+def del_circumflex(s):
+    return (s.replace('â', 'a')
+             .replace('û', 'u')
+             .replace('î', 'i')
+             .replace('Â', 'A')
+             .replace('Î', 'İ')
+             .replace('Û', 'U'))
 
 class Trmorph:
     a_re = re.compile('(?P<root>.*?)'
@@ -54,7 +62,7 @@ class Trmorph:
 
     def to_igs(self, astring, sstring):
         a_split = []
-        m = re.match(self.a_re, astring)
+        m = self.a_re.match(astring)
         while m and m.group('root'):
             a_split.append((
                 m.group('root'),
@@ -65,33 +73,64 @@ class Trmorph:
             ))
             m = re.match(self.a_re, m.group('rest'))
 
+        match = False
         for s in self.generator_ig.analyze(astring):
             s_form = (s.replace('⟪DB⟫', '').replace('⟪RB⟫', '')
                        .replace('⟪MB⟫', '').replace('⟪IGB⟫', ''))
-            if astring[0].islower() and \
-                    sstring.lower() == s_form.lower():
+            s_form_norm = del_circumflex(s_form)
+            sstring_norm = del_circumflex(sstring)
+            if (( s_form_norm == sstring_norm)
+                 or (astring[0].isupper() and
+                    sstring_norm[0] + tr_lower(sstring_norm[1:]) 
+                        == 
+                    s_form_norm[0] + tr_lower(s_form_norm[1:]))
+                 or (astring[0].islower() and
+                    tr_lower(sstring_norm) == tr_lower(s_form_norm))):
+                match = True
                 break
+            else:
+                debug('Ambiguous generation:', sstring, s_form)
+
         s_split = (s.replace('⟪DB⟫', '').replace('⟪RB⟫', '')
                     .split('⟪IGB⟫'))
 
         assert(len(s_split) == len(a_split))
 
+        def split_like(sp, s):
+            """ Split s similar to the already split same-size string 'sp'
+            """
+            assert len(''.join(sp)) == len(s), "_{}_ - _{}_".format(sp, s)
+            i = 0
+            ssp = []
+            for seg in sp:
+                ssp.append(s[i:i+len(seg)])
+                i += len(seg)
+            return ssp
+
+        ig_forms = split_like([x.replace('⟪MB⟫', '') for x in s_split], sstring)
+
+        if len(''.join(s_split).replace('⟪MB⟫', '')) != len(sstring):
+            print(''.join(s_split).replace('⟪MB⟫', ''), '-',  sstring, file=sys.stderr)
+
         igs = [] # tuples of <surface, lemma, pos, inflections>
         for i, (a, s) in enumerate(zip(a_split, s_split)):
             ig_lemma, ig_pos, ig_infl = a
-            ig_surf = s
-            if i == 0 and sstring[0].isupper() and ig_lemma.islower():
-                ig_surf = tr_upper(ig_surf[0]) + ig_surf[1:]
+            ig_surf = ig_forms[i]
             if len(s) == 0: # skip zero morphemes (copula)
                 pass
-            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩'}:
+            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩'}:
                 prev_ig = igs.pop()
-                ig_lemma = prev_ig[0] + s.split('⟪MB⟫')[0]
-                igs.append((prev_ig[0] + ig_surf.replace('⟪MB⟫', ''),
-                    ig_lemma, ig_pos, ig_infl))
+                ig_morphs = split_like(s.split('⟪MB⟫'), ig_surf)
+                ig_lemma = prev_ig[0] + ig_morphs[0]
+                igs.append((prev_ig[0] + ig_surf, ig_lemma, ig_pos, ig_infl))
             else:
-                igs.append((ig_surf.replace('⟪MB⟫', ''),
-                    a[0].replace('⟨', '').replace('⟩', ''), a[1], a[2]))
+                if ig_lemma == '⟨ki⟩': #TODO: use -ki to distinguis from the free morpheme
+                    ig_lemma = 'ki'
+                elif ig_lemma == '⟨cpl⟩':
+                    ig_lemma = 'i'
+                elif ig_lemma == '⟨li⟩':
+                    ig_lemma = 'li'
+                igs.append((ig_surf, ig_lemma, ig_pos, ig_infl))
         return igs
 
     def to_ud(self, ig):

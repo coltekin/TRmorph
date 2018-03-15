@@ -195,13 +195,18 @@ class Sentence(object):
         else:
             return [x.form for x in self.head]
 
-def conllu_sentences(filename):
-    with open(filename, 'r') as fp:
+def conllu_sentences(f):
+    if isinstance(f, str):
+        fp = open(f, 'r')
+    else: # assume it is a file-like object
+        fp = f
+    sent = Sentence(stream=fp)
+    yield sent
+    while sent:
         sent = Sentence(stream=fp)
         yield sent
-        while sent:
-            sent = Sentence(stream=fp)
-            yield sent
+    if isinstance(f, str): # close only if we opened it
+        fp.close()
 
 
 if '__main__' == __name__:

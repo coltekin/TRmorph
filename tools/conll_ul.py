@@ -34,13 +34,14 @@ class CoNLLUL:
         return len(self.arcs)
 
     def __str__(self):
-        ul_str = ""
+        multi = ''
+        arcs = []
         if self.end - self.begin > 1:
-            ul_str = "{}-{}\t{}\t{}\n".format(self.begin, self.end,
-                self.form, self.misc)
+            multi = "{}-{}\t{}\t{}\n".format(
+                            self.begin, self.end, self.form, self.misc)
         for arc in self.arcs:
-            ul_str += str(arc)
-        return(ul_str)
+            arcs.append(str(arc))
+        return multi + ''.join(sorted(arcs))
 
     def add_arc(self, from_state=0, to_state=1, form="_", lemma="_", upos="_",
                       xpos="_", feat="_", misc="_", anchors="_"):
