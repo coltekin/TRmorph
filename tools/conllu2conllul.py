@@ -49,6 +49,7 @@ for sent in conllu_sentences(opt.conllu):
 
         for arc in conllul.arcs:
             #FIXME: treebank has unspecified lemmas (first cond.  below)
+            is_gold = False
             if node.lemma is None \
                     or del_circumflex(arc.lemma) == del_circumflex(node.lemma):
                 arc.lemma = node.lemma
@@ -57,7 +58,7 @@ for sent in conllu_sentences(opt.conllu):
                 arc.feat = None
             if (arc.lemma, arc.upos) == (node.lemma, node.upos):
                 if arc.feat == node.feats:
-                    have_gold = True
+                    is_gold = True
                 else:
                     ul_feat = set()
                     u_feat = set()
@@ -79,8 +80,8 @@ for sent in conllu_sentences(opt.conllu):
                         if ff in feat_diff: feat_diff.remove(ff)
 
                     if not feat_diff:
-                            have_gold = True
-                if opt.mark_goldid:
+                            is_gold = True
+                if opt.mark_goldid and is_gold:
                     arc.misc = "goldId={}".format(node.index)
         if multi_end is None: print(str(conllul), end="", file=outfp)
     print(file=outfp)
