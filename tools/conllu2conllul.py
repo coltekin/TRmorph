@@ -83,6 +83,8 @@ for sent in conllu_sentences(opt.conllu):
                             is_gold = True
                 if opt.mark_goldid and is_gold:
                     arc.misc = "goldId={}".format(node.index)
+            if arc.upos == 'X':
+                    arc.misc = "oov=1"
         if multi_end is None: print(str(conllul), end="", file=outfp)
     print(file=outfp)
 #        if not have_gold: print("------ No gold", node)
