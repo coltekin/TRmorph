@@ -36,8 +36,9 @@ for sent in conllu_sentences(opt.conllu):
                     begin=offset)
             offset = conllul.end
             multi_end = sent.multi[node.index].multi
-        elif multi_end and multi_end == node.index:
-            multi_end = None
+        elif multi_end:
+            if multi_end == node.index:
+                multi_end = None
         else:
             tok = node.form
             analyses = trmorph.analyze(tok)
@@ -47,18 +48,21 @@ for sent in conllu_sentences(opt.conllu):
                     begin=offset)
             offset = conllul.end
 
+        gold_set = set()
         for arc in conllul.arcs:
-            #FIXME: treebank has unspecified lemmas (first cond.  below)
+            #FIXME: treebank has unspecified lemmas (first cond. below)
             is_gold = False
             if node.lemma is None \
                     or del_circumflex(arc.lemma) == del_circumflex(node.lemma):
                 arc.lemma = node.lemma
-            if arc.lemma in {'ki', 'li'} and arc.upos == 'ADJ':
+            if arc.lemma in {'ki', 'li', 'siz'} and arc.upos == 'ADJ':
                 arc.upos = 'ADP'
                 arc.feat = None
             if (arc.lemma, arc.upos) == (node.lemma, node.upos):
                 if arc.feat == node.feats:
-                    is_gold = True
+                    if node.index not in gold_set:
+                        is_gold = True
+                        gold_set.add(node.index)
                 else:
                     ul_feat = set()
                     u_feat = set()
@@ -80,7 +84,9 @@ for sent in conllu_sentences(opt.conllu):
                         if ff in feat_diff: feat_diff.remove(ff)
 
                     if not feat_diff:
+                        if node.index not in gold_set:
                             is_gold = True
+                            gold_set.add(node.index)
                 if opt.mark_goldid and is_gold:
                     arc.misc = "goldId={}".format(node.index)
             if arc.upos == 'X':

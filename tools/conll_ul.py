@@ -16,9 +16,12 @@ class CoNLLULArc:
         self.anchors =  None if not anchors else anchors
     def __str__(self):
         fmt = "{}" + 8 * "\t{}" + "\n"
-        return fmt.format( self.from_state, self.to_state, self.form,
-                           self.lemma, self.upos, self.xpos,
-                               self.feat, self.misc, self.anchors)
+        return fmt.format(self.from_state, self.to_state, self.form,
+                          self.lemma, self.upos,
+                          self.xpos if self.xpos else '_',
+                          self.feat if self.feat else '_', 
+                          self.misc if self.misc else '_', 
+                          self.anchors if self.anchors else '_')
 
 class CoNLLUL:
     __slots__ = ("begin", "end", "form", "arcs", "misc")
@@ -39,9 +42,9 @@ class CoNLLUL:
         if self.end - self.begin > 1:
             multi = "{}-{}\t{}\t{}\n".format(
                             self.begin, self.end, self.form, self.misc)
-        for arc in self.arcs:
+        for arc in sorted(self.arcs, key=lambda x: (x.from_state, x.to_state)):
             arcs.append(str(arc))
-        return multi + ''.join(sorted(arcs))
+        return multi + ''.join(arcs)
 
     def add_arc(self, from_state=0, to_state=1, form="_", lemma="_", upos="_",
                       xpos="_", feat="_", misc="_", anchors="_"):

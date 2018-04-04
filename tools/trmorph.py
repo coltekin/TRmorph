@@ -118,7 +118,7 @@ class Trmorph:
             ig_surf = ig_forms[i]
             if len(s) == 0: # skip zero morphemes (copula)
                 pass
-            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩'}:
+            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩', '⟨siz⟩'}:
                 prev_ig = igs.pop()
                 ig_morphs = split_like(s.split('⟪MB⟫'), ig_surf)
                 ig_lemma = prev_ig[0] + ig_morphs[0]
@@ -130,6 +130,8 @@ class Trmorph:
                     ig_lemma = 'i'
                 elif ig_lemma == '⟨li⟩':
                     ig_lemma = 'li'
+                elif ig_lemma == '⟨siz⟩':
+                    ig_lemma = 'siz'
                 igs.append((ig_surf, ig_lemma, ig_pos, ig_infl))
         return igs
 
