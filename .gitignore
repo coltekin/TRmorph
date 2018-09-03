@@ -18,3 +18,4 @@ trmorph.xfst
 .junk
 *.md5
 *.att
+options.h
