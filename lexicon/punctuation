@@ -4,8 +4,7 @@
 
 %-              Punc;
 %,              Punc;
-%;              Punc;
-%:              Punc;
+%;              Punc; %: Punc;
 %!              Punc;
 %?              Punc;
 %/              Punc;
