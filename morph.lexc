@@ -76,7 +76,7 @@
 !
 LEXICON AlphaCont
 %<Alpha%>:@RB   NPApos;
-%<Alpha%>:@RB   #;
+%<Alpha%>:@RB   ENDLEX;
 
 
 !
@@ -84,22 +84,22 @@ LEXICON AlphaCont
 !
 
 LEXICON CnjCoo
-%<Cnj%:coo%>:@RB      #;
+%<Cnj%:coo%>:@RB      ENDLEX;
 
 LEXICON CnjAdv
-%<Cnj%:adv%>:@RB      #;
+%<Cnj%:adv%>:@RB      ENDLEX;
 
 LEXICON CnjSub
-%<Cnj%:sub%>:@RB      #;
+%<Cnj%:sub%>:@RB      ENDLEX;
 
 !
 ! The following are for multi-word or discontinuous conjunctions.
 !
 LEXICON CnjCooPart
-%<Cnj%:coo%:partial%>:@RB      #;
+%<Cnj%:coo%:partial%>:@RB      ENDLEX;
 
 LEXICON CnjAdvPart
-%<Cnj%:adv%:partial%>:@RB      #;
+%<Cnj%:adv%:partial%>:@RB      ENDLEX;
 
 !
 ! Postpositions
@@ -376,7 +376,7 @@ LEXICON Onom
 #endif
 
 LEXICON  OnomCont
-                    #;
+                    ENDLEX;
                     Oderiv; ! TODO: this may be overgenerating
 
 !
@@ -392,7 +392,7 @@ LEXICON Interjection
 #endif
 
 LEXICON InterjectionCont
-                  #;
+                  ENDLEX;
                   D_lA;
 
 #if (ENDQUOTE_AS_NOUN == 1)
@@ -508,14 +508,14 @@ LEXICON NP_abbr
 %<N%:prop%:abbr%>:@ABBR@RB   NPAbbrCont;
 
 LEXICON NPAbbrCont
-                #;
+                ENDLEX;
                 NPApos;
 #if (APOSTROPHE_OPTIONAL_ABBR == 1)
                 NPAposCont;
 #endif
 
 LEXICON NPcont
-                #;
+                ENDLEX;
                 NPApos;
 #if (APOSTROPHE_OPTIONAL_PN == 1) 
                 NPAposCont;
@@ -568,7 +568,7 @@ LEXICON NcompCont
 #if (NOUN_APOSTROPHE == 1)
 0:@APOS@MB  NcompAposCont;
 #endif
-            #;
+            ENDLEX;
             NcompAposCont;
 
 LEXICON NcompAposCont
@@ -626,7 +626,7 @@ LEXICON N_abbr
 %<N%:abbr%>:@ABBR@RB       NAbbrCont;
 
 LEXICON NAbbrCont
-                        #;
+                        ENDLEX;
 0:@APOS@MB              Ncont;
 #if (APOSTROPHE_OPTIONAL_ABBR == 1) 
                         Ncont;
@@ -650,7 +650,7 @@ LEXICON N_typo
 #endif
 
 LEXICON NPart
-%<N%:partial%>:@RB   #;
+%<N%:partial%>:@RB   ENDLEX;
 
 LEXICON NPartLast
 %<N%:partial%>:@RB   Ncont;
@@ -677,7 +677,7 @@ LEXICON Nplu
 %<pl%>:l^Ar@MB NpluCont;
 
 LEXICON NpluCont
-   #;
+   ENDLEX;
    Npos;
    Ncase;
    NomPredicatePLU;
@@ -700,7 +700,7 @@ LEXICON Npos3sCont
 
 
 LEXICON  NposCont
-    #;
+    ENDLEX;
     Ncase;
     NomPredicate;
     D_gil; ! TODO: this should be restricted
@@ -720,7 +720,7 @@ LEXICON  Ncase
 %<gen%>:^(n)^In@MB  GenCaseCont;
 
 LEXICON Case1Cont
-            #;
+            ENDLEX;
             NomPredicate;
 
 !
@@ -729,15 +729,15 @@ LEXICON Case1Cont
 !
 LEXICON AccCaseCont
              Case1Cont;
-!            #;
+!            ENDLEX;
 
 LEXICON LocCaseCont
-            #;
+            ENDLEX;
             Ki;
             NomPredicate;
 
 LEXICON GenCaseCont
-            #;
+            ENDLEX;
             Ki;
             NomPredicate;
 
@@ -754,13 +754,13 @@ LEXICON NomPredicatePLU
 %<%0%>%<V%>:@MB                 NomPredPagr3s;
 %<%0%>%<V%>:@MB                 NomPredDir;
 %<%0%>%<V%>:@MB                 CplAll;
-%<%0%>%<V%>:@MB                 #;
+%<%0%>%<V%>:@MB                 ENDLEX;
 #else
                                 NomPredPagr;
                                 NomPredPagr3s;
                                 NomPredDir;
                                 CplAll;
-                                #;
+                                ENDLEX;
 #endif
                                        NomPredQ;
                                       CliticSA;
@@ -796,7 +796,7 @@ LEXICON NomPredQ
 
 LEXICON NomPredQCont
 #if (PREDICATE_WITHOUT_PAGR == 1)
-%<cpl%:pres%>:@MB                         #;
+%<cpl%:pres%>:@MB                         ENDLEX;
 #endif
 %<q%>:@miSPCm^I@MB                        NomPredPagr;
 %<q%>:@miSPCm^I@MB                        NomPredDir;
@@ -813,13 +813,13 @@ LEXICON NomPredPagr3s
 #if (ZERO_COPULA == 1)
 %<cpl%:pres%>%<3s%>:0@MB             NomPredPagrCont;
 #else
-                    #;
+                    ENDLEX;
                     CVcesine;
                     DIrEnd;
 #endif
 
 LEXICON NomPredPagrCont
-                    #;
+                    ENDLEX;
                     CVcesine;
                     DIrEnd;
 
@@ -840,10 +840,10 @@ LEXICON NomPredDir
 %<dir%>:^D^NS^Ir@MB  NomPredDirCont;
 
 LEXICON NomPredDirCont
-%<3p%>:l^Ar@MB    #;
+%<3p%>:l^Ar@MB    ENDLEX;
 
 LEXICON DIrEnd
-%<dir%>:^D^NS^Ir@MB  #;
+%<dir%>:^D^NS^Ir@MB  ENDLEX;
 
 !
 ! Rules governing adjectives and adverbs
@@ -871,13 +871,13 @@ LEXICON AdjPartLast
 %<Adj%:partial%>:@RB        AdjCont;
 
 LEXICON AdjPart
-%<Adj%:partial%>:@RB        #;
+%<Adj%:partial%>:@RB        ENDLEX;
 
 LEXICON AdjNcomp
 @NCOMP%<Adj%>:^(s)^I@NCOMP@RB AdjCont;
 
 LEXICON  AdjCont
-                    #;
+                    ENDLEX;
                     NomPredicate;
                     Jderiv;
 
@@ -904,7 +904,7 @@ LEXICON AdvPartLast
 %<Adv%:partial%>:@RB        AdvCont;
 
 LEXICON AdvPart
-%<Adv%:partial%>:@RB        #;
+%<Adv%:partial%>:@RB        ENDLEX;
                   
 LEXICON QAdv
 %<Adv%:qst%>:@RB  AdvCont;
@@ -938,7 +938,7 @@ LEXICON AdvTimeCont
                     CliticSA;
 
 LEXICON AdvCont
-                #;
+                ENDLEX;
                 Aderiv;
 
 
@@ -954,7 +954,7 @@ LEXICON PrnNeg
 %<Prn%:neg%>:@RB PrnCont;
 
 LEXICON PrnCont  ! this is all, except compounding
-    #;
+    ENDLEX;
     Pderiv;
     NcompCont;
 
@@ -972,7 +972,7 @@ LEXICON PersPrn3s
 %<Prn%:pers%>:@RB PersPrn3sPlu;
 LEXICON PersPrn3sPlu
 %<3p%>:l^Ar@MB      PersPrnCont;
-                    #;
+                    ENDLEX;
 
 LEXICON PersPrn1p
 %<Prn%:pers%:1p%>:@PRN@RB PersPrnContPL;
@@ -1033,7 +1033,7 @@ LEXICON PrnPagr1p2p
 %<2p%>:^(I)n^Iz@MB    PersPrnCont;
 
 LEXICON PersPrnCont
-                    #;
+                    ENDLEX;
                     Ncase;
                     ND_CA;
                     D_lI;
@@ -1102,7 +1102,7 @@ LEXICON  DetIndefQ
 %<Det%:indef%:qst%>:@RB DetCont;
 
 LEXICON DetCont
-                    #;
+                    ENDLEX;
                     JP_poss;    ! TODO: not all determiners do this.
 
 ! Date/time
@@ -1142,7 +1142,7 @@ LEXICON  NumHalf
 buçu^k  NumStem;
 
 LEXICON NumCont
-                #;
+                ENDLEX;
                 NumDeriv;
                 JP_poss;    ! ikimiz, yedisi, yüzünüz
 
@@ -1155,7 +1155,7 @@ LEXICON RomanStem
 !%<Num%>%<rom%>:@RB     NumericCont;    
 
 LEXICON NumericCont
-                #;
+                ENDLEX;
                 NumericApos;
                 NumericDotOrd;
 
@@ -1171,7 +1171,7 @@ LEXICON NumericDotOrd
 %<ord%>:%.@MB      NumericDotOrdCont;
 
 LEXICON   NumericDotOrdCont
-                 #;
+                 ENDLEX;
 0:%@APOS@MB      AdjCont;
 #if (APOSTROPHE_OPTIONAL_NUM == 1) 
                  AdjCont;
@@ -1192,7 +1192,7 @@ LEXICON NumOrd
 %<ord%>:^(I)nc^I@MB    NumOrdCont;
 
 LEXICON NumOrdCont
-            #;
+            ENDLEX;
             AdjCont;
 
 LEXICON NumDist
@@ -1200,7 +1200,7 @@ LEXICON NumDist
 
 LEXICON NumDistCont
             D_lI;
-            #;
+            ENDLEX;
 
 
 
@@ -1224,7 +1224,7 @@ LEXICON VPartLast
 %<V%:partial%>:@RB   VCont;
 
 LEXICON VPart
-%<V%:partial%>:@RB   #;
+%<V%:partial%>:@RB   ENDLEX;
 
 LEXICON   VCont
                 Vderiv;
@@ -1702,8 +1702,8 @@ LEXICON VNegativeCont
 ! 'Görüştürüleme-ye de biliyor muydunuz ?'
 !
 LEXICON AbilPartial
-%<partial%>:^(y)^A@MB #;
-! 0:^(y)^A@MB #;
+%<partial%>:^(y)^A@MB ENDLEX;
+! 0:^(y)^A@MB ENDLEX;
 
 
 
@@ -1781,7 +1781,7 @@ LEXICON TAMg1Cont
                         CplAll;
 %<q%>:@miSPCm^I@MB      TAMG1QCont;
 #if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
+                        ENDLEX;
 #endif
 
 ! This is for cases like: 'birleşmiş milletler', 
@@ -1817,7 +1817,7 @@ LEXICON TAMG1QDIr
 %<dir%>:^D^NS^Ir@MB            TAMG1QDIrCont;
 
 LEXICON TAMG1QDIrCont
-%<3p%>:l^Ar@MB              #;
+%<3p%>:l^Ar@MB              ENDLEX;
 
 
 
@@ -1830,8 +1830,8 @@ LEXICON PAgrG1     ! <3p>:lAr is treated separately
 
 
 LEXICON PAgrG1Cont
-                    #;
-%<dir%>:^D^NS^Ir@MB    #;
+                    ENDLEX;
+%<dir%>:^D^NS^Ir@MB    ENDLEX;
 
 
 LEXICON  PAgrG1p3
@@ -1843,7 +1843,7 @@ LEXICON PAgrG1p3Cont
 %<q%>:@miSPCm^I@MB      PAgrG1p3QCont;
 
 LEXICON PAgrG1p3QCont
-                            #;
+                            ENDLEX;
                             DIrEnd;
                             PAgrCplAll;
 
@@ -1852,7 +1852,7 @@ LEXICON TAMg1DIr
 %<dir%>:^D^NS^Ir@MB TAMg1DIrCont;
 
 LEXICON TAMg1DIrCont
-%<3p%>:s^Inl^Ar@MB     #;
+%<3p%>:s^Inl^Ar@MB     ENDLEX;
 
 ! ---------------------------
 ! -DI
@@ -1872,13 +1872,13 @@ LEXICON PAgrDI
 %<3p%>:l^Ar@MB      PAgrDICont;
 
 LEXICON PAgrDICont
-                        #;
+                        ENDLEX;
                         PAgrCplCond;
                         PAgrCplPast;
 %<q%>:@miSPCm^I@MB      PAgrDIQCont;
 
 LEXICON PAgrDIQCont
-                            #;
+                            ENDLEX;
                             PAgrCplPast2; ! we do not allow double 
                             PAgrCplCond2; ! copula after di-mi 
                             PAgrCplEvid2;
@@ -1892,7 +1892,7 @@ LEXICON TAMCondCont
                         CplEvid2;   !                  sa-mis-sa
 %<q%>:@miSPCm^I@MB      TAMCondQCpl;
 #if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
+                        ENDLEX;
 #endif
 
 LEXICON TAMCondQCpl
@@ -1908,7 +1908,7 @@ LEXICON TAMCondPAgr
 %<3p%>:l^Ar@MB      TAMCond3pCont;
 
 LEXICON TAMCondPAgrCont
-                        #;
+                        ENDLEX;
 %<q%>:@miSPCm^I@MB      TAMCondQPAgrCont; ! this is somewhat odd: oku-sa-k mı
 
 LEXICON TAMCond3pCont
@@ -1917,7 +1917,7 @@ LEXICON TAMCond3pCont
                         PAgrCplEvid2;
 
 LEXICON TAMCondQPAgrCont
-                #;
+                ENDLEX;
                 PAgrCplPast2;
                 PAgrCplEvid2;
 
@@ -1933,7 +1933,7 @@ LEXICON TAMOptCont
                         OptPAgr;
 %<q%>:@miSPCm^I@MB      OptQCont;
 #if (PREDICATE_WITHOUT_PAGR == 1)
-                        #;
+                        ENDLEX;
 #endif
 
 LEXICON OptQCont
@@ -1945,20 +1945,20 @@ LEXICON OptQCont
 
 LEXICON OptPAgr
 %<1s%>:^(y)^NS^Im@MB    OptPAgrCont;
-%<2s%>:s^In@MB          #;
+%<2s%>:s^In@MB          ENDLEX;
 %<3s%>:@opt3s^In@MB     OptPAgrCont;
 %<1p%>:l^Im@MB          OptPAgrCont;
-%<2p%>:s^NS^In^Iz@MB    #;
+%<2p%>:s^NS^In^Iz@MB    ENDLEX;
 %<3p%:sInlAr%>:@opt3s^Inl^Ar@MB OptPAgrCont;
 %<3s%:%0%>:0@MB             OptPAgrCont; ! these two are 
 %<3p%>:l^Ar@MB          OptPAgrCont; ! colloquial use
 
 LEXICON OptPAgrCont
-                        #;
+                        ENDLEX;
 %<q%>:@miSPCm^I@MB      OptPagrQCont;
 
 LEXICON OptPagrQCont
-                        #;
+                        ENDLEX;
                         PAgrCplEvid2;
                         PAgrCplPast2;
 
@@ -1970,33 +1970,33 @@ LEXICON TAMImpCont
                         PAgrIMPEnd;
 
 LEXICON PAgrIMPEnd
-%<2s%>:0@MB             #;
-%<2s%:sAnA%>:s^An^NS^A@MB     #;
-%<2s%:yIn%>:^(y)^In@MB       #;
-%<3s%>:s^NS^In@MB       #;
-%<2p%:yIn%>:^(y)^In@MB       #;
-%<2p%:yInIz%>:^(y)^NS^In^Iz@MB #;
-%<2p%:sAnIz%>:s^An^NS^Iz^A@MB  #;
-%<3p%>:s^Inl^Ar@MB      #;
+%<2s%>:0@MB             ENDLEX;
+%<2s%:sAnA%>:s^An^NS^A@MB     ENDLEX;
+%<2s%:yIn%>:^(y)^In@MB       ENDLEX;
+%<3s%>:s^NS^In@MB       ENDLEX;
+%<2p%:yIn%>:^(y)^In@MB       ENDLEX;
+%<2p%:yInIz%>:^(y)^NS^In^Iz@MB ENDLEX;
+%<2p%:sAnIz%>:s^An^NS^Iz^A@MB  ENDLEX;
+%<3p%>:s^Inl^Ar@MB      ENDLEX;
 
 !
 ! Person agreement markers, final state.
 !
 LEXICON PAgrG1End
-%<1s%>:^(y)^Im@MB  #;
-%<2s%>:s^In@MB     #;
-%<3s%>:0@MB        #;
-%<1p%>:^(y)^Iz@MB  #;
-%<2p%>:s^In^Iz@MB  #;
-%<3p%>:l^Ar@MB     #;
+%<1s%>:^(y)^Im@MB  ENDLEX;
+%<2s%>:s^In@MB     ENDLEX;
+%<3s%>:0@MB        ENDLEX;
+%<1p%>:^(y)^Iz@MB  ENDLEX;
+%<2p%>:s^In^Iz@MB  ENDLEX;
+%<3p%>:l^Ar@MB     ENDLEX;
 
 LEXICON PAgrG2End
-%<1s%>:m@MB         #;
-%<2s%>:n@MB         #;
-%<3s%>:0@MB         #;
-%<1p%>:k@MB         #;
-%<2p%>:n^Iz@MB      #;
-%<3p%>:l^Ar@MB      #;
+%<1s%>:m@MB         ENDLEX;
+%<2s%>:n@MB         ENDLEX;
+%<3s%>:0@MB         ENDLEX;
+%<1p%>:k@MB         ENDLEX;
+%<2p%>:n^Iz@MB      ENDLEX;
+%<3p%>:l^Ar@MB      ENDLEX;
 
 
 !
@@ -2020,11 +2020,11 @@ LEXICON iCont
 
 LEXICON mI
 %<Q%>:@RB             mICont;
-%<Cnj%:sub%>:@RB      #;
-%<Adv%>:@RB           #;
+%<Cnj%:sub%>:@RB      ENDLEX;
+%<Adv%>:@RB           ENDLEX;
 
 LEXICON mICont
-                        #; ! we have person marker before.   
+                        ENDLEX; ! we have person marker before.   
 %<cpl%:pres%>:0         mIPagr; ! in case predicate is not marked for tense
                         mIPagr;
                         mIDI;
@@ -2039,7 +2039,7 @@ LEXICON mIPagr
 %<2p%>:s^In^Iz@MB      mIPagrCont;
 
 LEXICON  mIPagrCont
-                        #;
+                        ENDLEX;
                         DIrEnd;
 LEXICON mIDI
 %<cpl%:past%>:^(y)^D^NS^I@MB  PAgrG2End;
@@ -2051,8 +2051,8 @@ LEXICON mIDIr
 %<dir%>:^D^NS^Ir@MB        mIDIrCont;
 
 LEXICON  mIDIrCont
-                        #;
-%<3p%>:l^Ar@MB          #;
+                        ENDLEX;
+%<3p%>:l^Ar@MB          ENDLEX;
 
 ! Copular marker combinations
 !
@@ -2124,7 +2124,7 @@ LEXICON CplPAgrG1
 %<3p%>:l^Ar@MB     CplPAgrG1Cont;
 
 LEXICON CplPAgrG1Cont
-                        #;
+                        ENDLEX;
                         PAgrCplCond2;
 
 
@@ -2137,7 +2137,7 @@ LEXICON CplPAgrG2
 %<3p%>:l^Ar@MB      CplPAgrG2Cont;
 
 LEXICON CplPAgrG2Cont
-                        #;
+                        ENDLEX;
                         PAgrCplCond2;
 
 ! here if we have a person agreement already, happens after -DI, -sA
@@ -2153,7 +2153,7 @@ LEXICON PAgrCplEvid
 %<cpl%:evid%>:^(y)m^NS^Iş@MB     PAgrCplEvidCont;
 
 LEXICON PAgrCplEvidCont
-                            #;
+                            ENDLEX;
                             PAgrCplCond2;
 
 LEXICON PAgrCplPast
@@ -2161,24 +2161,24 @@ LEXICON PAgrCplPast
 
 LEXICON PAgrCplPastCont
                             PAgrCplCond2;
-                            #;
+                            ENDLEX;
 
 LEXICON PAgrCplCond
 %<cpl%:cond%>:^(y)s^NS^A@MB       PAgrCplCondCont;
 
 LEXICON PAgrCplCondCont
-                            #;
+                            ENDLEX;
                              PAgrCplEvid2;
                              PAgrCplPast2;
 
 LEXICON PAgrCplEvid2
-%<cpl%:evid%>:^(y)m^NS^Iş@MB     #;
+%<cpl%:evid%>:^(y)m^NS^Iş@MB     ENDLEX;
 
 LEXICON PAgrCplPast2
-%<cpl%:past%>:^(y)^D^NS^I@MB      #;
+%<cpl%:past%>:^(y)^D^NS^I@MB      ENDLEX;
 
 LEXICON PAgrCplCond2
-%<cpl%:cond%>:^(y)s^NS^A@MB       #;
+%<cpl%:cond%>:^(y)s^NS^A@MB       ENDLEX;
 
 
 !
@@ -2225,7 +2225,7 @@ LEXICON VNMaCont
 #endif
 
 LEXICON VNMakCont
-                              #;
+                              ENDLEX;
                               NCaseNoGen;
                               NomPredicateMAK;
 
@@ -2233,10 +2233,10 @@ LEXICON Participle
 %<part%:past%>%<Adj%>:^D^I^k@MB         PartCont;
 %<part%:fut%>%<Adj%>:^(y)^Ac^A^k@MB     PartCont;
 %<part%:pres%>%<Adj%>:^(y)^An@MB        PartCont;
-%<part%:esi%>%<Adj%>:^(y)^As^I@MB       #;  !TODO: a better tag name
+%<part%:esi%>%<Adj%>:^(y)^As^I@MB       ENDLEX;  !TODO: a better tag name
 
 LEXICON PartCont
-                   #;
+                   ENDLEX;
                    Ncont;
 !                   AdjCont;
 
@@ -2328,25 +2328,25 @@ LEXICON degil
 !%<dir%>:^D^Ir@MB    VYDPAgrp3;
 !
 !LEXICON VYDPAgrCont
-!                    #;
-!%<dir%>:^D^Ir@MB    #;
+!                    ENDLEX;
+!%<dir%>:^D^Ir@MB    ENDLEX;
 !
 !LEXICON  VYDPAgrp3
-!%<3p%>:l^Ar@MB   #;
+!%<3p%>:l^Ar@MB   ENDLEX;
 
 !
 ! Punctuation
 !
 
 LEXICON  Punc
-%<Punc%>:0     #;
+%<Punc%>:0     ENDLEX;
 
 !
 ! non-puctuation symbols
 !
 
 LEXICON  Sym
-%<Sym%>:0     #;
+%<Sym%>:0     ENDLEX;
 
 !
 ! Derivational process.
@@ -2599,7 +2599,7 @@ LEXICON   PD_CA
 !                                           can never work"
 
 LEXICON CliticSA
-%<ise%>%<Cnj%:adv%>:^(y)s^NS^A@MB       #;
+%<ise%>%<Cnj%:adv%>:^(y)s^NS^A@MB       ENDLEX;
 
 ! -(y)IcI makes adjectives (and nouns) from verbs.
 !       bulaşıcı, görücü, yapıcı
@@ -2654,7 +2654,7 @@ LEXICON D_lArI
 ! roughly translates to 'for', 'birkaç günlüğüne' (for a few days)
 !
 LEXICON D_lIGInA
-%<ligine%>%<Adv%>:l^Iğ^In^A@MB    #;
+%<ligine%>%<Adv%>:l^Iğ^In^A@MB    ENDLEX;
 
 ! -lA is productive, and makes verbs from nouns
 !
@@ -2832,14 +2832,14 @@ LEXICON DerivNCont
 
 LEXICON DerivJCont
 %<Adj%>:0@MB    AdjCont; ! this gives unlimited application of derivation
-!%<Adj%>:0@MB   #;   ! only one derivation after root.
+!%<Adj%>:0@MB   ENDLEX;   ! only one derivation after root.
 
 LEXICON DerivACont
 %<Adv%>:0@MB    AdvCont; ! this gives unlimited application of derivation
-!%<Adv%>:0@MB   #;   ! only one derivation after root.
+!%<Adv%>:0@MB   ENDLEX;   ! only one derivation after root.
 
 LEXICON DerivVCont
 %<V%>:0@MB      VCont; ! this gives unlimited application of derivation
 !%<V%>:0@MB     Vinfl; ! only one derivation after root.
 
-
+LEXICON ENDLEX #;
