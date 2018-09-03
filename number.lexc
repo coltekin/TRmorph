@@ -688,7 +688,7 @@ LEXICON NumDateTime
    [[1|2] [%0|1|2|3|4|5|6|7|8|9]]|
    [3     [%0|1]]] >                        DateStem;
 
-% Trivial acceptor for fraction expressions like 1/4
+! Trivial acceptor for fraction expressions like 1/4
 LEXICON NumFraction
 < [%0|1|2|3|4|5|6|7|8|9]+
    %/
