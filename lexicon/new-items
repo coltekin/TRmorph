@@ -3467,7 +3467,7 @@ Pişit       NP;
 Pittsburgh      NP; ! not person
 Pitts       NP;
 Pizzini     NP;
-plân        N;   = plan
+plân        N; !  = plan
 plasebo     N;
 platonist       N;
 Podel       NP;
