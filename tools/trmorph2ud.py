@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Converter from trmorph tagset to UG.
+""" Converter from trmorph tagset to UD.
 """
 
 from logging import debug, info, warning, basicConfig
@@ -49,13 +49,13 @@ tag_map = {
     'rcp': ('Voice=Rcp',),
     'caus': ('Voice=Cau',),
     'pass': ('Voice=Pass',),
-    'abil': ('Aspect=Pot',),    #TODO: this is also Permissive/Abilitive
+    'abil': ('Mood=Pot',),    #TODO: this is also Permissive/Abilitive
     'ayaz': ('Aspect=Prosp',),
     'iver': ('Aspect=Rapid',),  #TODO: not in UD v2
-    'adur': ('Aspect=Iter',),
-    'agel': ('Aspect=Iter',),
-    'akal': ('Aspect=Iter',),
-    'agor': ('Aspect=Iter',),   #TODO: durative ?
+    'adur': ('Aspect=Dur',),
+    'agel': ('Aspect=Dur',),
+    'akal': ('Aspect=Dur',),
+    'agor': ('Aspect=Dur',),   #TODO: durative ?
     'neg': ('Polarity=Neg',),
     'imp': ('Mood=Imp',),
     # oteher TAME markers are complex, treated below
@@ -275,7 +275,7 @@ def trmorph_to_ud(ig):
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['fut', 'past']:  # okuycaktı
-        ud_tags.append('Tense=Past')
+        ud_tags.append('Tense=Past,Fut')
         ud_tags.append('Aspect=Prosp')  # also a subclass of imperfective
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Fh')
@@ -491,6 +491,8 @@ def trmorph_to_ud(ig):
     return surface, lemma, pos, ud_tags
 
 if __name__ == "__main__":
+    from trmorph import Trmorph
+    import sys
     import pprint
     pp = pprint.PrettyPrinter(indent=4)
     trmorph = Trmorph()
