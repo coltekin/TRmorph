@@ -121,7 +121,7 @@ class Trmorph:
             elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩', '⟨siz⟩'}:
                 prev_ig = igs.pop()
                 ig_morphs = split_like(s.split('⟪MB⟫'), ig_surf)
-                ig_lemma = prev_ig[0] + ig_morphs[0]
+                ig_lemma = prev_ig[1] + ig_morphs[0]
                 igs.append((prev_ig[0] + ig_surf, ig_lemma, ig_pos, ig_infl))
             else:
                 if ig_lemma == '⟨ki⟩': #TODO: use -ki to distinguis from the free morpheme
