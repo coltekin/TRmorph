@@ -180,7 +180,7 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
     ap = ArgumentParser()
     ap.add_argument("--output-format", "-f", dest="out_fmt",
-            choices=('trmorph', 'ud', 'conll-ul'), default='trmorph')
+            choices=('trmorph', 'ud', 'conll-ul', 'udcs'), default='trmorph')
     opt = ap.parse_args()
 
     trmorph = Trmorph()
@@ -196,3 +196,19 @@ if __name__ == "__main__":
             for a in analyses:
                 igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
                 print("{}\t{}".format(s, igs))
+        elif 'udcs' == opt.out_fmt:
+            for a in analyses:
+                igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
+                for i, ig in enumerate(igs):
+                    if i == len(igs) - 1:
+                        sep = "\t"
+                    else:
+                        sep = " "
+                    feat_val = dict()
+                    for ff in ig[3]:
+                        f, v  = ff.split('=')
+                        feat_val[f] = sorted(feat_val.get(f, []) + [v])
+                    feat_val = '|'.join(sorted(['='.join((f, ''.join(v))) for f,v in feat_val.items()]))
+                    print("{}+{}+{}+{}".format(ig[0], ig[1], ig[2], feat_val),
+                            end=sep)
+                print()
