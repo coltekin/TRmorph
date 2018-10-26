@@ -73,6 +73,7 @@ class Trmorph:
             ))
             m = re.match(self.a_re, m.group('rest'))
 
+        debug('sstring = {}, astring = {}'.format(sstring, astring))
         match = False
         for s in self.generator_ig.analyze(astring):
             s_form = (s.replace('⟪DB⟫', '').replace('⟪RB⟫', '')
@@ -91,8 +92,12 @@ class Trmorph:
             else:
                 debug('Ambiguous generation:', sstring, s_form)
 
+        debug('generated = {}'.format(s))
+
         s_split = (s.replace('⟪DB⟫', '').replace('⟪RB⟫', '')
                     .split('⟪IGB⟫'))
+
+        debug('split = {}'.format(s_split))
 
         assert(len(s_split) == len(a_split))
 
@@ -115,14 +120,18 @@ class Trmorph:
         igs = [] # tuples of <surface, lemma, pos, inflections>
         for i, (a, s) in enumerate(zip(a_split, s_split)):
             ig_lemma, ig_pos, ig_infl = a
+            debug('    l = {}, p = {}, infl = {}'.format(ig_lemma, ig_pos, ig_infl))
             ig_surf = ig_forms[i]
             if len(s) == 0: # skip zero morphemes (copula)
                 pass
-            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩', '⟨siz⟩'}:
+            elif i > 0 and ig_lemma not in {'⟨ki⟩', '⟨cpl⟩', '⟨li⟩', '⟨lik⟩', '⟨siz⟩'}:
                 prev_ig = igs.pop()
                 ig_morphs = split_like(s.split('⟪MB⟫'), ig_surf)
-                ig_lemma = prev_ig[1] + ig_morphs[0]
+                ig_lemma = prev_ig[0] + ig_morphs[0]
+                if not ig_lemma.islower() and prev_ig[1].islower():
+                    ig_lemma = tr_lower(ig_lemma)
                 igs.append((prev_ig[0] + ig_surf, ig_lemma, ig_pos, ig_infl))
+                debug('-> pf = {}, pl = {}'.format(prev_ig[0], prev_ig[1]))
             else:
                 if ig_lemma == '⟨ki⟩': #TODO: use -ki to distinguis from the free morpheme
                     ig_lemma = 'ki'
@@ -130,9 +139,12 @@ class Trmorph:
                     ig_lemma = 'i'
                 elif ig_lemma == '⟨li⟩':
                     ig_lemma = 'li'
+                elif ig_lemma == '⟨lik⟩':
+                    ig_lemma = 'lik'
                 elif ig_lemma == '⟨siz⟩':
                     ig_lemma = 'siz'
                 igs.append((ig_surf, ig_lemma, ig_pos, ig_infl))
+        debug('returning = {}'.format(igs))
         return igs
 
     def to_ud(self, ig):
@@ -197,18 +209,22 @@ if __name__ == "__main__":
                 igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
                 print("{}\t{}".format(s, igs))
         elif 'udcs' == opt.out_fmt:
-            for a in analyses:
+            outstr = [s]
+            for a in set(analyses):
                 igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
+                a_out = ""
                 for i, ig in enumerate(igs):
                     if i == len(igs) - 1:
-                        sep = "\t"
+                        sep = ""
                     else:
-                        sep = " "
+                        sep = " -- "
                     feat_val = dict()
                     for ff in ig[3]:
                         f, v  = ff.split('=')
                         feat_val[f] = sorted(feat_val.get(f, []) + [v])
                     feat_val = '|'.join(sorted(['='.join((f, ''.join(v))) for f,v in feat_val.items()]))
-                    print("{}+{}+{}+{}".format(ig[0], ig[1], ig[2], feat_val),
-                            end=sep)
-                print()
+                    if not feat_val:
+                        feat_val = "_"
+                    a_out += "{}+{}+{}{}".format(ig[1], ig[2], feat_val, sep)
+                outstr.append(a_out)
+            print('\t'.join([outstr[0]] + list(set(outstr[1:]))))
