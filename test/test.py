@@ -3,10 +3,8 @@
 import os,sys,fcntl
 from flookup import Fst
 
-analyzer = Fst(cmd=os.environ['HOME'] + "/bin/flookup -b -x ",
-               fst="../trmorph.a")
-generator = Fst(cmd=os.environ['HOME'] + "/bin/flookup -b -x -i",
-               fst="../trmorph.a",
+analyzer = Fst(cmd="flookup -b -x ", fst="../trmorph.a")
+generator = Fst(cmd="flookup -b -x -i", fst="../trmorph.a",
                inverse=True)
 
 print(sys.argv[1], "...", end=" ")

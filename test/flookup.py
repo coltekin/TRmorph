@@ -4,7 +4,7 @@ import os
 from subprocess import Popen,PIPE
 
 class Fst:
-    def_cmd = os.environ['HOME'] + "/bin/flookup -b -x "
+    def_cmd = "/usr/bin/flookup -b -x "
     def_fst = os.environ['HOME'] + "/trmorph/trmorph.fst"
 
     def __init__(self, cmd=def_cmd, fst=def_fst, inverse=False):
