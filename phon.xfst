@@ -138,7 +138,7 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
     ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
 ! this compositon is only to get foma compile without consuming a lot
 ! of memory. It can be completely paralelized
-    ,, [..]       -> ⟪MB⟫ || [analysisSym]  _
+    ,, [..]       -> ⟪MB⟫ || analysisSym  _
    .o. "⟨vn.me⟩"        -> m ⟪A⟫
     ,, "⟨vn.mek⟩"       -> m ⟪A⟫ ⟪K⟫
     ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş
