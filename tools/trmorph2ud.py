@@ -58,6 +58,7 @@ tag_map = {
     'agor': ('Aspect=Dur',),   #TODO: durative ?
     'neg': ('Polarity=Neg',),
     'imp': ('Mood=Imp',),
+    'prs': ('Mood=Prs',),
     # oteher TAME markers are complex, treated below
     '1s': ('Person=1','Number=Sing'),
     '2s': ('Person=2','Number=Sing'),

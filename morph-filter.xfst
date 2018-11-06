@@ -27,6 +27,8 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
     .o. ~[ ?* ⟨vn%.mek⟩ ⟨pl⟩ ?* ]
     .o. ~[ ?* ⟨imp⟩ ?+ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ]
     .o. ~[ ?* ⟨imp⟩ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ?+ ]
+    .o. ~[ ?* ⟨prs⟩ ?+ [⟨2s⟩|⟨2p⟩] ]
+    .o. ~[ ?* ⟨prs⟩ [⟨2s⟩|⟨2p⟩] ?+ ]
     .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ [\[⟪time⟫]]+ ⟨Adv⟩ [⟨ki⟩|⟨leri⟩|⟨ligine⟩] ?*]
