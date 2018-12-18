@@ -2971,7 +2971,7 @@ ment^pOr      N;    ! tinglish
 Mercer      NP;
 Merriam     NP;
 Mesch       NP;
-meslekî     Adj; = mesleki
+meslekî     Adj; ! = mesleki
 Mestre      NP;
 metaanaliz      N;
 metafori^k           Adj;
@@ -3467,7 +3467,7 @@ Pişit       NP;
 Pittsburgh      NP; ! not person
 Pitts       NP;
 Pizzini     NP;
-plân        N;   = plan
+plân        N; !  = plan
 plasebo     N;
 platonist       N;
 Podel       NP;
@@ -5512,7 +5512,7 @@ Doss                 NP;
 Duffy^sFUV                   NP;
 Durán                   NP;
 ECB                 NP_abbr;
-eçerek	+?
+! eçerek	+?
 Edgar                    NP;
 Edinburgh                   NP;
 Eibingen                    NP;
@@ -5606,7 +5606,7 @@ Humphrey                    NP;
 Hunan                   NP;
 IAG^sFUV                 NP;
 Ieyasu                 NP;
-İlâhi	+?
+! İlâhi	+?
 Indiana                  NP;
 Irène                   NP;
 Isabella                    NP;
@@ -5681,7 +5681,7 @@ Margaret                    NP;
 Maroto                  NP;
 Mash                  NP;
 massebot                    N;
-mavimsiye	+?
+! mavimsiye	+?
 McGregor                    NP;
 McNeilly                    NP;
 Meänkieli                   NP;
@@ -5812,7 +5812,7 @@ Samnium                 NP;
 Sánchez                 NP;
 Sarah                   NP;
 Saratoga                 NP;
-sarımsıdan	+?
+! sarımsıdan	+?
 Sarkozy^sFUV                 NP;
 SaskTel                 NP;
 Saul                    NP;
@@ -5933,7 +5933,7 @@ Burgoyne                  NP;
 Carcassonne                  NP;
 Dorset                   NP;
 ECB                  NP_abbr;
-eçerek	+?
+! eçerek	+?
 Elder                    NP;
 EMicro                   NP;
 Francisco               NP;
