@@ -207,7 +207,13 @@ if __name__ == "__main__":
         elif 'ud' == opt.out_fmt:
             for a in analyses:
                 igs = trmorph.igs_to_ud(trmorph.to_igs(a, s))
-                print("{}\t{}".format(s, igs))
+                if len(igs) > 1:
+                    print("0-{}\t{}\t_\t_\t_\t_\t_\t_\t_\t_".format(
+                        len(igs)-1, s))
+                for i, ig in enumerate(igs):
+                    print("{}\t{}\t{}\t{}\t_\t{}\t_\t_\t_\t_".format(i,
+                        *ig[:3], "|".join(sorted(ig[3]))))
+            print()
         elif 'udcs' == opt.out_fmt:
             outstr = [s]
             for a in set(analyses):
