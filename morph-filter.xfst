@@ -27,6 +27,8 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
     .o. ~[ ?* ⟨vn%.mek⟩ ⟨pl⟩ ?* ]
     .o. ~[ ?* ⟨imp⟩ ?+ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ]
     .o. ~[ ?* ⟨imp⟩ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ?+ ]
+    .o. ~[ ?* ⟨prs⟩ ?+ [⟨2s⟩|⟨2p⟩] ]
+    .o. ~[ ?* ⟨prs⟩ [⟨2s⟩|⟨2p⟩] ?+ ]
     .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ [\[⟪time⟫]]+ ⟨Adv⟩ [⟨ki⟩|⟨leri⟩|⟨ligine⟩] ?*]
@@ -77,7 +79,7 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
        ⟨q⟩ ⟨2p⟩ -> ⟨2p⟩ ⟨q⟩ || [⟨opt⟩|⟨cond⟩|⟨past⟩] _
    ! Türkiye Cumhuriyet-i'ne
    ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ 
-   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
+!   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
    .o. ⟨q⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨q⟩ 
    .o. [..] (->) ⟪mredup⟫
        || .#. _ ?+ 

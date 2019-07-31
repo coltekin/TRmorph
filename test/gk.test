@@ -445,8 +445,8 @@ A;A;kalkmayıversin;kalk⟨V⟩⟨neg⟩⟨iver⟩⟨imp⟩⟨3s⟩
 A;A;bitirebilsinler;bit⟨V⟩⟨caus⟩⟨abil⟩⟨imp⟩⟨3p⟩
 A;A;okutun;oku⟨V⟩⟨caus⟩⟨imp⟩⟨2p⟩
 A;A;gel;gel⟨V⟩⟨imp⟩⟨2s⟩
-A;A;otursana;otur⟨V⟩⟨imp⟩⟨2s⟩
-A;A;otursanıza;otur⟨V⟩⟨imp⟩⟨2p⟩
+A;A;otursana;otur⟨V⟩⟨prs⟩⟨2s⟩
+A;A;otursanıza;otur⟨V⟩⟨prs⟩⟨2p⟩
 A;A;oturun;otur⟨V⟩⟨imp⟩⟨2p⟩
 ## 8.5
 A;A;yaratacağı;yarat⟨V⟩⟨part.fut⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩

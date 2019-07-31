@@ -51,7 +51,7 @@ Multichar_Symbols ⟨Adj⟩
                     ⟨rfl⟩ ⟨rcp⟩ ⟨caus⟩ ⟨pass⟩
                     ⟨abil⟩ ⟨iver⟩ ⟨adur⟩ ⟨agel⟩ ⟨agor⟩ ⟨akal⟩ ⟨ayaz⟩
                     ⟨neg⟩
-                    ⟨aor⟩ ⟨cond⟩ ⟨evid⟩ ⟨fut⟩ ⟨imp⟩ 
+                    ⟨aor⟩ ⟨cond⟩ ⟨evid⟩ ⟨fut⟩ ⟨imp⟩ ⟨prs⟩ 
                       ⟨obl⟩ ⟨opt⟩ ⟨past⟩ ⟨prog.yor⟩ ⟨prog.mekte⟩
                     ⟨cpl⟩
                     ⟨1s⟩ ⟨2s⟩ ⟨3s⟩ ⟨1p⟩ ⟨2p⟩ ⟨3p⟩
@@ -162,6 +162,7 @@ LEXICON lex_question
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON adjective
+                    #;
                     noun;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -180,22 +181,26 @@ LEXICON adverb_ca
 ! Determiners
 ! determineres normally do not inflect.
 ! when (most?) determiners are suffixed with a possessive suffix,
-! they become pronouns (bir - biri, birimiz) - here we just allow them
+! they become pronouns (bir - biri, birimiz)
+!
+! Since these are a closed class of words, we can have all of them in
+! the lexicon as pronouns.
+! if commented out, the option below here allows them
 ! to get the possessive suffixes, and following nominal inflections
 ! TODO: this should be done a better way
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON determiner
                         #;
-                        determiner_poss;
-
-LEXICON determiner_poss
-⟨p1s⟩               noun;
-⟨p2s⟩               noun;
-⟨p3s⟩               noun;
-⟨p1p⟩               noun;
-⟨p2p⟩               noun;
-⟨p3p⟩               noun;
+!                         determiner_poss;
+! 
+! LEXICON determiner_poss
+! ⟨p1s⟩               noun;
+! ⟨p2s⟩               noun;
+! ⟨p3s⟩               noun;
+! ⟨p1p⟩               noun;
+! ⟨p2p⟩               noun;
+! ⟨p3p⟩               noun;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -394,6 +399,7 @@ LEXICON verb_tam
 ⟨evid⟩          tam_evidential;
 ⟨fut⟩           tam_future;
 ⟨imp⟩           pnaggr;
+⟨prs⟩           pnaggr;
 ⟨obl⟩           question;
 ⟨opt⟩           question;
 ⟨past⟩          question;

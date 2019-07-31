@@ -92,6 +92,7 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
     ,, ⟨evid⟩    -> m ⟪I⟫ ş
     ,, ⟨fut⟩     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
     ,, ⟨imp⟩     -> 0
+    ,, ⟨prs⟩     -> 0
     ,, ⟨obl⟩     -> m ⟪A⟫ l ⟪I⟫
     ,, ⟨opt⟩     -> ⟪by⟫ ⟪A⟫ ! || _ \[⟨3s⟩|⟨3p⟩]
 !    ,, ⟨opt⟩     -> 0        || _ [⟨3s⟩|⟨3p⟩]
@@ -127,18 +128,18 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
                                 [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩
                                 |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩]  _ ⟨cpl⟩
     ,, ⟨2s⟩       -> s ⟪A⟫ n ⟪A⟫,
-       ⟨2s⟩       -> 0,
+       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫ || ⟨prs⟩ _
+    ,, ⟨2s⟩       -> 0,
        ⟨3s⟩       -> s ⟪I⟫ n,
        ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n,
        ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n ⟪I⟫ z,
-       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫,
        ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ _
     ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ _
     ,, ⟨dir⟩      -> ⟪D⟫ ⟪I⟫ r
     ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
 ! this compositon is only to get foma compile without consuming a lot
 ! of memory. It can be completely paralelized
-    ,, [..]       -> ⟪MB⟫ || [analysisSym]  _
+    ,, [..]       -> ⟪MB⟫ || analysisSym  _
    .o. "⟨vn.me⟩"        -> m ⟪A⟫
     ,, "⟨vn.mek⟩"       -> m ⟪A⟫ ⟪K⟫
     ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş

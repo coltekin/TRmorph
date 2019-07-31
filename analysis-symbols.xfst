@@ -14,7 +14,7 @@ regex ⟨pl⟩|⟨sg⟩|
       ⟨rfl⟩|⟨rcp⟩|⟨pass⟩|⟨caus⟩|
       ⟨abil⟩|⟨iver⟩|⟨adur⟩|⟨agel⟩|⟨agor⟩|⟨akal⟩|⟨ayaz⟩|
       ⟨neg⟩|
-      ⟨aor⟩|⟨cond⟩|⟨evid⟩|⟨fut⟩|⟨imp⟩|
+      ⟨aor⟩|⟨cond⟩|⟨evid⟩|⟨fut⟩|⟨imp⟩|⟨prs⟩|
       ⟨obl⟩|⟨opt⟩|⟨past⟩|⟨prog%.yor⟩|⟨prog%.mekte⟩|
       ⟨cpl⟩|
       ⟨1s⟩|⟨2s⟩|⟨3s⟩|⟨1p⟩|⟨2p⟩|⟨3p⟩|
