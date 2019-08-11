@@ -79,7 +79,7 @@ regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for
        ⟨q⟩ ⟨2p⟩ -> ⟨2p⟩ ⟨q⟩ || [⟨opt⟩|⟨cond⟩|⟨past⟩] _
    ! Türkiye Cumhuriyet-i'ne
    ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ 
-   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
+!   .o. ~[ ?* ⟨apos⟩ (⟨sg⟩ ⟨p3s⟩) ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
    .o. ⟨q⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨q⟩ 
    .o. [..] (->) ⟪mredup⟫
        || .#. _ ?+ 

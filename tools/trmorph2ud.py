@@ -127,6 +127,11 @@ def trmorph_to_ud(ig):
         ud_tags.append('Polarity=Neg')
     if lemma in {'ol', 'i'} and pos == 'VERB':
         pos = 'AUX'
+    if pos == 'AUX' and lemma in {'mi', 'mı', 'mu', 'mü'}:
+        lemma = 'mi'
+        ud_tags.append('PronType=Int')
+    if lemma == 'da' and pos in {'ADV', 'CCONJ', 'SCONJ'}:
+        lemma = 'de'
 
     while t_tags:
         t = t_tags[0]
