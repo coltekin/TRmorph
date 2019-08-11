@@ -31,7 +31,7 @@ def get_analyses(form):
             feat_val = '|'.join(sorted(['='.join((f, ''.join(v))) for f,v in feat_val.items()]))
             if not feat_val:
                 feat_val = "_"
-            a_out += "{}+{}+{}{}".format(ig[1], ig[2], feat_val, sep)
+            a_out += "{}+{}+{}+{}{}".format(ig[0], ig[1], ig[2], feat_val, sep)
         outstr.append(a_out)
     return list(set(outstr[1:]))
 
@@ -50,9 +50,17 @@ for sent in tb:
         if m:
             a_multi = []
             aa = get_analyses(m.form)
+            tmp = []
+            for a in aa:
+                if 'Mood=Cnd' in a:
+                    tmp.append(a.replace('Mood=Cnd', 'Mood=Des'))
+                if a.endswith('+ADJ+Case=Nom|Number=Sing'):
+                    tmp.append(a.replace('+ADJ+Case=Nom|Number=Sing', '+ADJ+_'))
+            aa = aa + tmp
             if not aa:
-                aa = ['__NO_ANALYSIS__']
-            print("{}-{}\t{}\t{}".format(m.index, m.multi, m.form,
+                aa = ['{}+_+_+_'.format(m.form)]
+#            print("{}-{}\t{}\t{}".format(m.index, m.multi, m.form,
+            print("{}\t{}".format(m.form,
                 "\t".join(aa)))
             nparts = m.multi - m.index + 1
             for a in aa:
@@ -65,13 +73,22 @@ for sent in tb:
 
         if a_multi:
             a = "\t".join(a_multi.pop(0))
+            continue
         else:
             a = get_analyses(token.form)
+            tmp = []
+            for aa in a:
+                if 'Mood=Cnd' in aa:
+                    tmp.append(aa.replace('Mood=Cnd', 'Mood=Des'))
+                if aa.endswith('+ADJ+Case=Nom|Number=Sing'):
+                    tmp.append(aa.replace('+ADJ+Case=Nom|Number=Sing', '+ADJ+_'))
+            a = a + tmp
             if a:
                 a = "\t".join(a)
             else:
-                a = '__NO_ANALYSIS__'
-        print("{}\t{}\t{}".format(token.index, token.form, a))
+                a = ['{}+_+_+_'.format(token.form)]
+#        print("{}\t{}\t{}".format(token.index, token.form, a))
+        print("{}\t{}".format(token.form, a))
     print()
 
 trmorph = Trmorph()
