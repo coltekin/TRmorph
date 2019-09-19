@@ -132,6 +132,16 @@ def trmorph_to_ud(ig):
         ud_tags.append('PronType=Int')
     if lemma == 'da' and pos in {'ADV', 'CCONJ', 'SCONJ'}:
         lemma = 'de'
+    if pos == 'PRON':
+        person_number = None
+        for t in t_tags:
+            if t in {'1s', '2s', '3s', '1p', '2p', '3p'}:
+                person_number = t
+                break
+        if person_number == '3s' and 'pl' in t_tags:
+            t_tags = ['3p' if t == '3s' else t for t in t_tags]
+        if person_number is not None:
+            t_tags = [t for t in t_tags if t not in {'sg', 'pl'}]
 
     while t_tags:
         t = t_tags[0]

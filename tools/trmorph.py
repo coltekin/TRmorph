@@ -233,4 +233,7 @@ if __name__ == "__main__":
                         feat_val = "_"
                     a_out += "{}+{}+{}{}".format(ig[1], ig[2], feat_val, sep)
                 outstr.append(a_out)
-            print('\t'.join([outstr[0]] + list(set(outstr[1:]))))
+            if len(outstr) > 1:
+                print('\t'.join([outstr[0]] + list(set(outstr[1:]))))
+            else:
+                print('{}\tUNKNOWN'.format(outstr[0]))
