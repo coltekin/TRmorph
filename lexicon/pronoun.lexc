@@ -4,15 +4,13 @@ Multichar_Symbols ⟪c⟫ ⟪p⟫ ⟪t⟫ ⟪k⟫ ⟪g⟫ ⟪K⟫ ⟪D⟫ ⟪C�
                   ⟪1s⟫ ⟪2s⟫ ⟪3s⟫ ⟪1p⟫ ⟪2p⟫ ⟪3p⟫
 LEXICON Root
 bu⟪dem⟫ #;
-o⟪dem⟫ #;
+! o⟪dem⟫ #;
 şu⟪dem⟫ #;
 bˈura⟪loc⟫ #;
 ˈora⟪loc⟫ #;
 şˈura⟪loc⟫ #;
-bizler⟪pers⟫⟪1p⟫ #;
 biz⟪prn⟫⟪pers⟫⟪1p⟫ #;
 ben⟪prn⟫⟪pers⟫⟪1s⟫ #;
-sizler⟪pers⟫⟪2p⟫ #;
 siz⟪prn⟫⟪pers⟫⟪2p⟫ #;
 sen⟪prn⟫⟪pers⟫⟪2s⟫ #;
 âlem⟪pers⟫⟪3p⟫ #;
@@ -48,6 +46,7 @@ o% bu #;
 öbürkü #;
 ˈoncası #;
 öteki% beriki #;
+beriki #;
 öteki #;
 ötekisi #;
 seninki #;
