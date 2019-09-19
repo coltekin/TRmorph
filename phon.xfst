@@ -17,7 +17,14 @@ define nonzero  digit - %0;
 define numArabic ⟨Num⟩ [⟨ara⟩|⟨time⟩|⟨date⟩];
 define numRoman  ⟨Num⟩ ⟨rom⟩;
 
-define phonetize [⟪def⟫|⟪indef⟫] -> 0
+define phonetize [⟪neg⟫|⟪ques⟫] -> 0
+    ,, [⟪onom⟫|⟪emoticon⟫] -> 0
+    ,, [⟪unit⟫|⟪pers⟫|⟪loc⟫|⟪nation⟫] -> 0
+    ,, [⟪dem⟫|⟪pers⟫|⟪loc⟫|⟪refl⟫] -> 0
+    ,, [⟪1s⟫|⟪2s⟫|⟪3s⟫|⟪1p⟫|⟪2p⟫|⟪3p⟫] -> 0
+    ,, [⟪ppadj⟫|⟪ablC⟫|⟪accC⟫|⟪datC⟫|⟪genC⟫|⟪insC⟫|⟪liC⟫|⟪nomC⟫|⟪numC⟫] -> 0
+    ,, ⟪part⟫ -> 0
+    ,, [⟪def⟫|⟪indef⟫] -> 0
     ,, [⟪adv⟫|⟪coo⟫|⟪sub⟫] -> 0
     ,, ⟪propn⟫ -> 0
     ,, ⟪time⟫ -> 0
@@ -25,6 +32,8 @@ define phonetize [⟪def⟫|⟪indef⟫] -> 0
     ,, ⟪compn⟫ ->  0         || _ intSym* ⟨N⟩ ⟨pl⟩
     ,, [..] ->  ⟪compn⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟨N⟩ ⟨pl⟩ _
     ,, [⟨def⟩|⟨indef⟩] -> 0
+!
+    ,, [⟨1s⟩|⟨1p⟩|⟨2s⟩|⟨2p⟩|⟨3s⟩|⟨3p⟩] -> 0 || ⟨Pron⟩ _
 ! insert 'inflectional group' boundary
     ,, [..] -> ⟪IGB⟫  || posSym ?* _ ? posSym
 ! noun inflections

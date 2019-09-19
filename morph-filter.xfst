@@ -14,14 +14,7 @@ define compVerb [⟨abil⟩|⟨iver⟩|⟨adur⟩|⟨agel⟩|⟨agor⟩|⟨akal�
 
 
 ! TODO: parallelize more
-regex  [⟪neg⟫|⟪ques⟫] -> 0         ! we ignore these lexical symbols for now
-    ,, [⟪onom⟫|⟪emoticon⟫] -> 0
-    ,, [⟪unit⟫|⟪pers⟫|⟪loc⟫|⟪nation⟫] -> 0
-    ,, [⟪dem⟫|⟪pers⟫|⟪loc⟫|⟪refl⟫|⟪neg⟫] -> 0
-    ,, [⟪1s⟫|⟪2s⟫|⟪3s⟫|⟪1p⟫|⟪2p⟫|⟪3p⟫] -> 0
-    ,, [⟪ppadj⟫|⟪ablC⟫|⟪accC⟫|⟪datC⟫|⟪genC⟫|⟪insC⟫|⟪liC⟫|⟪nomC⟫|⟪numC⟫] -> 0
-    ,, ⟪part⟫ -> 0
-    .o. ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
+regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
     .o. ~[ [\[⟪rcp⟫]]+ ⟨rcp⟩ ?*]
     .o. ~[ [\[⟪rfl⟫]]+ ⟨rfl⟩ ?*]
     .o. ~[ ?* ⟨vn%.mek⟩ ⟨pl⟩ ?* ]

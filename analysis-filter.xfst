@@ -23,12 +23,13 @@ regex  ⟪IGB⟫ -> 0
     ,, ⟪compn⟫ -> 0
     ,, ⟪mredup⟫ -> 0
     ,, ⟪pers⟫ -> 0
-    ,, ⟪1s⟫ -> 0
-    ,, ⟪1p⟫ -> 0
-    ,, ⟪2s⟫ -> 0
-    ,, ⟪2p⟫ -> 0
-    ,, ⟪3s⟫ -> 0
-    ,, ⟪3p⟫ -> 0
+    ,, [..] -> ⟨1s⟩ || ⟪1s⟫ intSym* ⟨Pron⟩ _
+    ,, [..] -> ⟨2s⟩ || ⟪2s⟫ intSym* ⟨Pron⟩ _
+    ,, [..] -> ⟨3s⟩ || ⟪3s⟫ intSym* ⟨Pron⟩ _
+    ,, [..] -> ⟨1p⟩ || ⟪1p⟫ intSym* ⟨Pron⟩ _
+    ,, [..] -> ⟨2p⟩ || ⟪2p⟫ intSym* ⟨Pron⟩ _
+    ,, [..] -> ⟨3p⟩ || ⟪3p⟫ intSym* ⟨Pron⟩ _
+    ,, [⟪1s⟫|⟪2s⟫|⟪3s⟫|⟪1p⟫|⟪2p⟫|⟪3p⟫] -> 0
 ! noun subcategorization
     ,, [..] -> ⟨prop⟩ || ⟪propn⟫ intSym* ⟨N⟩ _
     ,, ⟪propn⟫ -> 0

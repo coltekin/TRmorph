@@ -39,8 +39,8 @@ A;A;tanesi;tane⟨N⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;burası;bura⟨Pron⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;içerisi;içeri⟨N⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;eskisi;eski⟨Adj⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;hiçbiri;hiçbir⟨Det⟩⟨indef⟩⟨p3s⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;hiçbiri;hiçbir⟨Det⟩⟨indef⟩⟨p3s⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;hiçbiri;hiçbir⟨Det⟩⟨indef⟩⟨p3s⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;hiçbiri;hiçbir⟨Det⟩⟨indef⟩⟨p3s⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;hiçbirisi;hiçbir⟨Det⟩⟨indef⟩⟨p3s⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;okuması;oku⟨V⟩⟨vn.me⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;zor;zor⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -52,7 +52,7 @@ A;A;küçüğü;küçük⟨Adj⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s
 A;A;Kars'a;Kars⟨N⟩⟨prop⟩⟨apos⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;dereye;dere⟨N⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;masaya;masa⟨N⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;size;siz⟨Pron⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;size;siz⟨Pron⟩⟨2p⟩⟨sg⟩⟨p0x⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;radyoda;radyo⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;evde;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;sepette;sepet⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -62,18 +62,18 @@ A;A;sisten;sis⟨N⟩⟨sg⟩⟨p0x⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;çocuğun;çocuk⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;Fatma'nın;Fatma⟨N⟩⟨prop⟩⟨apos⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;bahçenin;bahçe⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;benim;ben⟨Pron⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;bizim;biz⟨Pron⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;benim;ben⟨Pron⟩⟨1s⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;bizim;biz⟨Pron⟩⟨1p⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
 ### 8.1.4
 A;A;Ahmet'le;Ahmet⟨N⟩⟨prop⟩⟨apos⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;kalemle;kalem⟨N⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;baltayla;balta⟨N⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;kedimle;kedi⟨N⟩⟨sg⟩⟨p1s⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;köpeğim;köpek⟨N⟩⟨sg⟩⟨p1s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;benimle;ben⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;benimle;ben⟨Pron⟩⟨1s⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;şununla;şu⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;kiminle;kim⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;benle;ben⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;benle;ben⟨Pron⟩⟨1s⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;şunla;şu⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;kimle;kim⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #Fatma’ynan
@@ -81,7 +81,7 @@ A;A;kimle;kim⟨Pron⟩⟨sg⟩⟨p0x⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #kimnen
 A;A;evdeki;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;oradaki;ora⟨Pron⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;sizinki;siz⟨Pron⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;sizinki;siz⟨Pron⟩⟨2p⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;kızınki;kız⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;suyunki;su⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;dünkü;dün⟨N⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -94,13 +94,13 @@ A;A;seneki;sene⟨N⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V�
 A;A;zamanki;zaman⟨N⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;sokaktaki;sokak⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;önümüzdeki;ön⟨Adj⟩⟨sg⟩⟨p1p⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;seninki;sen⟨Pron⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;seninki;sen⟨Pron⟩⟨2s⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;adamınki;adam⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;odanınki;oda⟨N⟩⟨sg⟩⟨p2s⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;masadakiler;masa⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;masanınkiler;masa⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;masalardakiler;masa⟨N⟩⟨pl⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;bendekine;ben⟨Pron⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p2s⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
+A;A;bendekine;ben⟨Pron⟩⟨1s⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p2s⟩⟨dat⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;evinkileri;ev⟨N⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨pl⟩⟨p0x⟩⟨acc⟩
 A;A;bahçedekinden;bahçe⟨N⟩⟨sg⟩⟨p0x⟩⟨loc⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p2s⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;anneminkinin;anne⟨N⟩⟨sg⟩⟨p1s⟩⟨gen⟩⟨ki⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -560,7 +560,7 @@ A;A;girip;gir⟨V⟩⟨cv.ip⟩
 A;A;bakarken;bak⟨V⟩⟨aor⟩⟨cpl⟩⟨cv.ken⟩
 A;A;çocukken;çocuk⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cv.ken⟩
 A;A;sokaktayken;
-A;A;bizimken;biz⟨Pron⟩⟨sg⟩⟨p1s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cv.ken⟩
+A;A;bizimken;biz⟨Pron⟩⟨1p⟩⟨sg⟩⟨p1s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨cv.ken⟩
 A;A;giderken;git⟨V⟩⟨aor⟩⟨cpl⟩⟨cv.ken⟩
 A;A;giderlerken;
 A;A;baka;bak⟨V⟩⟨cv.ye⟩
