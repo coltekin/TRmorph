@@ -164,6 +164,9 @@ def trmorph_to_ud(ig):
 
         del t_tags[0]
 
+    if 'NumType=Ord' in ud_tags:
+        pos = 'ADJ'
+
     # Assign Tense/aspect/modality/evidentiality.
     # The long list is intentional (for documenting
     # different cases)
@@ -217,17 +220,17 @@ def trmorph_to_ud(ig):
     # 'cond' ...
     elif tame_tags == ['cond']: # okusa
         ud_tags.append('Tense=Pres')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['cond', 'evid']: # okusaymış
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Perf')   # Impf ?
+        ud_tags.append('Aspect=Perf')   # Imp ?
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['cond', 'past']: # okusaydı
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['cond', 'evid', 'evid']: # okusaymışmış
@@ -237,13 +240,13 @@ def trmorph_to_ud(ig):
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['cond', 'past', 'past']: # (?)okusaydıydı
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['cond', 'evid', 'past'] or # (?)okusaymıştı
           tame_tags == ['cond', 'evid', 'past']):  # (??)okusaydıymış
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
     # 'evid' ...
@@ -260,7 +263,7 @@ def trmorph_to_ud(ig):
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['evid', 'cond']: # okumuşsa
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Perf')   # Impf ?
+        ud_tags.append('Aspect=Perf')   # Imp ?
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
     elif (tame_tags == ['evid', 'cond', 'past'] or # (?)okumuşsaydı
@@ -332,35 +335,35 @@ def trmorph_to_ud(ig):
     # 'obl' ...
     elif tame_tags == ['obl']:          # okumalı
         ud_tags.append('Tense=Pres')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['obl', 'evid']:  # okumalıymış
         ud_tags.append('Tense=Pres')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['obl', 'past']:  # okumalıydı
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['obl', 'cond']:  # okumalıysa
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['obl', 'cond', 'past'] or # okumalıysaydı
           tame_tags == ['obl', 'past', 'cond']):  # okumalıydıysa
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['obl', 'cond', 'evid'] or # okumalıysaymış
           tame_tags == ['obl', 'evid', 'cond']):  # okumalıymışsa
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
@@ -368,40 +371,40 @@ def trmorph_to_ud(ig):
           tame_tags == ['obl', 'past', 'evid'] or # (?)okumalıydıymış
           tame_tags == ['obl', 'evid', 'past']):  # (?)okumalıymıştı
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['obl', 'past', 'past']: # okumalıydıydı
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Nec')
         ud_tags.append('Evident=Fh')
     # 'opt' ...
     elif tame_tags == ['opt']:              # okuya
         ud_tags.append('Tense=Pres')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Opt')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['opt', 'evid']:      # okuyaymış
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Opt')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['opt', 'past']:      # okuyaydı
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Opt')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['opt', 'past', 'past']: # (?)okuyaydıydı
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Opt')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['opt', 'evid', 'evid'] or # okuyaymışmış
           tame_tags == ['opt', 'evid', 'past'] or # (?)okuyaymıştı
           tame_tags == ['opt', 'past', 'evid']):  # (?)okuyaydıymış
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Opt')
         ud_tags.append('Evident=Nfh')
     # 'past' ...
@@ -411,34 +414,34 @@ def trmorph_to_ud(ig):
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Fh')
     elif tame_tags == ['past', 'past']:     # okuduydu
-        ud_tags.append('Tense=Ppq')
+        ud_tags.append('Tense=Pqp')
         ud_tags.append('Aspect=Perf')
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Fh')  # ?
     elif tame_tags == ['past', 'cond']:     # okuduysa
         ud_tags.append('Tense=Past')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['past', 'cond', 'past'] or   # (?)okuduysaydı
           tame_tags == ['past', 'past', 'cond']):    # (?)okuduyduysa
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Fh')
     elif (tame_tags == ['past', 'cond', 'evid'] or   # (?)okuduysaymış
           tame_tags == ['past', 'evid', 'cond']):    # (?)okuduymuşsa
         ud_tags.append('Tense=Pqp')
-        ud_tags.append('Aspect=Impf')
+        ud_tags.append('Aspect=Imp')
         ud_tags.append('Mood=Cnd')
         ud_tags.append('Evident=Nfh')
     elif tame_tags == ['past', 'past', 'past']:     # (?)okuduyduydu
-        ud_tags.append('Tense=Ppq')
+        ud_tags.append('Tense=Pqp')
         ud_tags.append('Aspect=Perf')
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Fh')  # ?
     elif tame_tags == ['past', 'past', 'evid']:     # (?)okuduyduymuş
-        ud_tags.append('Tense=Ppq')
+        ud_tags.append('Tense=Pqp')
         ud_tags.append('Aspect=Perf')
         ud_tags.append('Mood=Ind')
         ud_tags.append('Evident=Nfh')
