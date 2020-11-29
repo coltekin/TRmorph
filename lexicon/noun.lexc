@@ -161,6 +161,7 @@ yaz⟪time⟫           #;
 yıl⟪time⟫           #;
 yüzyıl⟪time⟫        #;
 zaman⟪time⟫         #;
+geçen⟪time⟫         #; !lexicalized
 ! the following are in between noun and adverb
 sˈonra⟪time⟫        #;
 nezdinde⟪time⟫      #;
