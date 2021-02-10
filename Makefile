@@ -4,6 +4,7 @@ SUBDIRS=lexicon
 LEXCSRC=$(shell ls *.lexc)
 XFSTSRC=$(shell ls *.xfst)
 TARGETS=$(LEXCSRC:%.lexc=%.a) $(XFSTSRC:%.xfst=%.a)
+#FOMA=./hfst-compile.sh
 FOMA=./foma-compile.sh
 
 %.a: %.lexc
@@ -31,6 +32,20 @@ analyzer-boundary: subdirs trmorph-boundary.a
 
 clean:
 	rm -fr $(TARGETS)
+
+hfst: analyzer.hfst generator.hfst analyzer-b.hfst generator-b.hfst
+
+analyzer.hfst: trmorph.a 
+	gzip -cd < $< | hfst-invert --input=- --output=- | hfst-fst2fst --input=- --output=$@ -O
+
+generator.hfst: trmorph.a 
+	gzip -cd < $< | hfst-fst2fst --input=- --output=$@ -O
+
+analyzer-b.hfst: trmorph-boundary.a 
+	gzip -cd < $< | hfst-invert --input=- --output=- | hfst-fst2fst --input=- --output=$@ -O
+
+generator-b.hfst: trmorph-boundary.a 
+	gzip -cd < $< | hfst-fst2fst --input=- --output=$@ -O
 
 -include $(LEXCSRC:%.lexc=$(DEPDIR)/%.lexc.P) \
 		 $(XFSTSRC:%.xfst=$(DEPDIR)/%.xfst.P)

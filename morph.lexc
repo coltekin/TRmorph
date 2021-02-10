@@ -163,7 +163,12 @@ LEXICON lex_question
 
 LEXICON adjective
                     #;
+                    adj_deriv;
                     noun;
+
+LEXICON adj_deriv
+⟨lik⟩⟨N⟩            noun;
+⟨ci⟩⟨N⟩             noun;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Adverbs
@@ -221,6 +226,8 @@ LEXICON noun_deriv
 ⟨len⟩⟨V⟩            verb;
 ⟨le⟩⟨V⟩             verb;
 ⟨dim⟩⟨N⟩            diminutive_cont;
+⟨lik⟩⟨Adj⟩          adjective;
+⟨ci⟩⟨N⟩             noun;
 
 LEXICON diminutive_cont
                     noun_number;
@@ -263,9 +270,7 @@ LEXICON noun_case
 !
 ⟨siz⟩               noun_siz;
 ⟨li⟩                noun_li;
-⟨lik⟩               noun_lik;
 ⟨ce⟩                noun_ca;
-⟨ci⟩                noun_ci;
 
 
 LEXICON noun_nom
@@ -293,8 +298,6 @@ LEXICON noun_ca
 LEXICON noun_siz
 ⟨Adj⟩               adjective;
 LEXICON noun_li
-⟨Adj⟩               adjective;
-LEXICON noun_lik
 ⟨Adj⟩               adjective;
 LEXICON noun_ci
 ⟨N⟩                 noun;
