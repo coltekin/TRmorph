@@ -3,13 +3,20 @@
 ! side.
 !
 define intSym @"intermediate-symbols.a";
+define cons @"consonant.a";
+define Cons [cons|⟪c⟫|⟪p⟫|⟪t⟫|⟪k⟫|⟪g⟫];
 
 regex  ⟪IGB⟫ -> 0
 ,,     ⟪c⟫ -> ç,
        ⟪p⟫ -> p,
        ⟪t⟫ -> t,
        ⟪k⟫ -> k,
-       ⟪g⟫ -> g || _ \⟪dup⟫
+       ⟪g⟫ -> g || _ \[⟪dup⟫|⟪compn⟫]
+,,     ⟪c⟫ -> c,
+       ⟪p⟫ -> b,
+       ⟪t⟫ -> d,
+       ⟪k⟫ -> g,
+       ⟪g⟫ -> ğ || _ ⟪compn⟫
     ,,  ˈ -> 0
     ,, [⟪sBRV⟫|⟪sBUV⟫|⟪sFRV⟫|⟪sFUV⟫|⟪sUC⟫|⟪sVC⟫] -> 0
     ,, ? -> 0 || _ ⟪dup⟫
@@ -20,10 +27,17 @@ regex  ⟪IGB⟫ -> 0
     ,, ⟪tSep⟫ -> 0
     ,, ⟪dSep⟫ -> %,
     ,, ⟪DB⟫ -> 0
-    ,, ⟪compn⟫ -> 0
     ,, ⟪mredup⟫ -> 0
     ,, ⟪pers⟫ -> 0
     ,, ⟪part⟫ -> 0
+    ,, ⟪compn⟫ -> i || [i|e] Cons+ intSym* _
+    ,, ⟪compn⟫ -> ı || [ı|a] Cons+ intSym* _
+    ,, ⟪compn⟫ -> ü || [ü|ö] Cons+ intSym* _
+    ,, ⟪compn⟫ -> u || [u|o] Cons+ intSym* _
+    ,, ⟪compn⟫ -> s i || [i|e] intSym* _
+    ,, ⟪compn⟫ -> s ı || [ı|a] intSym* _
+    ,, ⟪compn⟫ -> s ü || [ü|ö] intSym* _
+    ,, ⟪compn⟫ -> s u || [u|o] intSym* _
     ,, [..] -> ⟨1s⟩ || ⟪1s⟫ intSym* ⟨Pron⟩ _
     ,, [..] -> ⟨2s⟩ || ⟪2s⟫ intSym* ⟨Pron⟩ _
     ,, [..] -> ⟨3s⟩ || ⟪3s⟫ intSym* ⟨Pron⟩ _
