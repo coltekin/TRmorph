@@ -227,6 +227,7 @@ LEXICON noun_deriv
 ⟨le⟩⟨V⟩             verb;
 ⟨dim⟩⟨N⟩            diminutive_cont;
 ⟨lik⟩⟨Adj⟩          adjective;
+⟨lik⟩⟨N⟩            noun;
 ⟨ci⟩⟨N⟩             noun;
 
 LEXICON diminutive_cont
