@@ -407,13 +407,14 @@ LEXICON verb_tam
 ⟨obl⟩           question;
 ⟨opt⟩           question;
 ⟨past⟩          question;
-⟨prog.yor⟩      question;
-⟨prog.mekte⟩    question;
+⟨prog.yor⟩      tam_prog;
+⟨prog.mekte⟩    tam_prog;
 
 !
 ! after evidential and future markers, the verb (phrase
 ! can function as an adjectival. G&K calls this case as 'truncated
-! olan' (the auxiliary ol- with -(y)An).
+! olan' (the auxiliary ol- with -(y)An). Examples: 'bu kitabi okumuş insan',
+! 'üniversiteye gidecek çocuk'. 
 !
 LEXICON tam_future
                 question;
@@ -430,6 +431,16 @@ LEXICON tam_evidential
 LEXICON tam_aor
                 question;
                 adjective;
+
+!
+! These forms may also combine with auxiliary ol-. Their adjectival
+! use, e.g., '?? okuyor çocuk' is not plausible, but unlike past and
+! conditional they combine freely with ol, e.g., 'okuyor olacağım',
+! 'yazmakta oludkları için'.
+!
+LEXICON tam_prog
+                question;
+                #;
 
 LEXICON question
                 pnaggr;
