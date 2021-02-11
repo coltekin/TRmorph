@@ -1756,7 +1756,6 @@ som                                             #;
 somurtkan                                       #;
 somut                                           #;
 son                                             #;
-sonbahar                                        #;
 sorumlu                                         #;
 sorumlu                                         #;
 sorumluluk                                      #;
@@ -2774,11 +2773,12 @@ riskli #;
 şerefli #;
 temelli #;
 uykusuz #;
-önceki #;
-sonraki #;
 yapılı #;
 tiksin⟪c⟫ #;
 alakalı #;
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 açıksözlü #;
 geçen #; ! lexicalized
+soluksuz #; ! lexicalized
+sınırlı #; ! lexicalized
+engelli #; ! lexicalized
