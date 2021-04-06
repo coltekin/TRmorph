@@ -69,6 +69,7 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
        ⟨q⟩ ⟨3s⟩ -> ⟨3s⟩ ⟨q⟩,
        ⟨q⟩ ⟨1p⟩ -> ⟨1p⟩ ⟨q⟩,
        ⟨q⟩ ⟨2p⟩ -> ⟨2p⟩ ⟨q⟩ || [⟨opt⟩|⟨cond⟩|⟨past⟩] _
+   ,,  [..] (->) ⟨apos⟩ || ⟪abbr⟫ ?* posSym _
    ! Türkiye Cumhuriyet-i'ne
    ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ 
     .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
