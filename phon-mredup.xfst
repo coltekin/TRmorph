@@ -1,6 +1,8 @@
 ! m-reduplication kitap -> mitap
 !
 !
+define consonant  @"consonant.a";
+define vowel  @"vowel.a";
 
 regex [..] -> m || ⟪mredup⟫ _ vowel
     ,, consonant -> m || ⟪mredup⟫ _ 

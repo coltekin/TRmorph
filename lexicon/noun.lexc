@@ -34852,6 +34852,7 @@ halkoyu #;
 hallihamur #;
 halojen #;
 halt #;
+hâl #;
 halter #;
 halvet #;
 halvethane #;
@@ -35002,6 +35003,7 @@ havyar #;
 havza #;
 hav⟪del⟫il #;
 haya #;
+hayâ #;
 hayalet #;
 hayalhane #;
 hayat #;
@@ -36053,7 +36055,6 @@ içtiha⟪t⟫ #;
 içtima #;
 içtimaiyat #;
 içtina⟪p⟫ #;
-içtüzük #;
 içyüz #;
 iğ #;
 iğbirar #;
@@ -38363,7 +38364,7 @@ maganda #;
 magazin #;
 magnˈezyum #;
 magri #;
-mahal #;
+maha⟪sFRV⟫l #;
 mahalle #;
 maharet #;
 mahbes #;
@@ -40213,7 +40214,7 @@ pantograf #;
 pantolon #;
 pantolon:pantalon #;
 pantufla #;
-panzehir #;
+panzeh⟪del⟫ir #;
 panzer #;
 papel #;
 papikçi #;
@@ -41282,6 +41283,7 @@ sacayağı #;
 sacaya⟪k⟫ #;
 sadaka #;
 sadaka⟪sFUV⟫t #;
+sadakat #;
 sadakor #;
 sadaret #;
 sada⟪k⟫ #;
@@ -44300,6 +44302,7 @@ yapıt #;
 yapıştırıcı #;
 yapı⟪k⟫ #;
 yar #;
+yâr #;
 yara #;
 yaradılış #;
 yarar #;
@@ -45889,6 +45892,7 @@ atasöz⟪compn⟫ #;
 atsine⟪k⟫⟪compn⟫ #;
 aybaş⟪compn⟫ #;
 ayçiçek% yağ⟪compn⟫ #;
+ayçiçek #; ! not used alone
 ayçiçe⟪k⟫⟪compn⟫ #;
 ayçöre⟪k⟫⟪compn⟫ #;
 ayışı⟪k⟫⟪compn⟫ #;
@@ -45990,7 +45994,7 @@ ipu⟪c⟫⟪compn⟫ #;
 iç% tüzük⟪compn⟫ #;
 içgüvey⟪compn⟫ #;
 içiş⟪compn⟫ #;
-içtüzük⟪compn⟫ #;
+içtüzü⟪k⟫⟪compn⟫ #;
 iş% bölüm⟪compn⟫ #;
 iş% gün⟪compn⟫ #;
 işadam⟪compn⟫ #;
@@ -46018,7 +46022,6 @@ köyişler⟪compn⟫ #;
 kırçiçe⟪k⟫⟪compn⟫ #;
 malvarlı⟪k⟫⟪compn⟫ #;
 milet% vekil⟪compn⟫ #;
-miletvekil⟪compn⟫ #;
 milletvekil⟪compn⟫ #;
 mˈasaüst⟪compn⟫ #;
 mˈodaev⟪compn⟫ #;
@@ -69591,3 +69594,71 @@ brusella               #;
 !!!!!!!!!!!!!!!!!!
 lansman             #;
 gürûh               #;
+!!!!!!!!!!!!!!!!!!
+pandemi             #; ! not in TDK
+defaa⟪sFUV⟫t        #;
+cumhurbaşkanlı⟪k⟫⟪compn⟫ #;
+inovasyon #;
+ecrimisil #; ! term (law)
+tecelligâh #; ! odd/archaic but frequent in TBMM
+çölyak #; ! term (medicine)
+toptancı #;
+kıymetiharbiye #;
+sübvanse #;
+gureba #; ! archaic
+gurebâ #; ! archaic
+yazboz #;
+zatıali #; ! limited usage: zatıaliniz, zatıalileri
+ombudsman #;
+biyokütle #;
+evrak #;
+evra⟪k⟫ #; ! not correct, but common use
+acziyet #; ! not in tdk
+ensar #;
+etnisite #;
+hizmetkâr #;
+dezenfektan #;
+teknopark #;
+bani #;
+hanehalk⟪compn⟫ #;
+petrokimya #;
+hazırun #; ! archaic
+esame #;
+başdenetçi #;
+inovasyon #;
+bühtan #;
+acz #; ! not in tdk
+hallaç #;
+sekretarya #;
+sığınmaev⟪compn⟫ #;
+pestisit #;
+seneidevriye #;
+fakruzaruret #;
+kalekol #;
+kayyım #;
+dolamba⟪c⟫ #;
+turunçgil #;
+sükût #;
+regülasyon #;
+kükürtdioksit #;
+iadeiitibar #;
+filyasyon #;
+irtikap #;
+inovasyon #;
+biyodizel #;
+yenidoğan #;
+hülasa #;
+dişhekim⟪compn⟫ #;
+ayetikerime #;
+nezd #; ! archaic, not used alone
+tekâmül #; ! archaic
+mantalite #;
+donanma #;
+vekâletname #;
+tevsik #; !archaic
+diaspora #;
+bark #;
+fosepti⟪k⟫ #;
+işkol⟪compn⟫ #;
+fırkateyn #;
+biyoçeşitlili⟪k⟫ #;

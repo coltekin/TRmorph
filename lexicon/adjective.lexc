@@ -310,7 +310,7 @@ celil                                           #;
 centilmen                                       #;
 cesur                                           #;
 cezai                                           #;
-cezai                                           #;
+cezaî                                           #;
 cici                                            #;
 ciddi                                           #;
 ciddî                                           #;
@@ -327,6 +327,7 @@ cır% cır                                        #;
 cıvı⟪k⟫                                         #;
 daim                                            #;
 daimi                                           #;
+daimî                                           #;
 daki⟪k⟫                                         #;
 dalgın                                          #;
 dalkavu⟪k⟫                                      #;
@@ -366,7 +367,6 @@ denli                                           #;
 den⟪k⟫                                          #;
 depresif                                        #;
 derin                                           #;
-despot                                          #;
 destansı                                        #;
 detoks                                          #;
 dev                                             #;
@@ -447,8 +447,6 @@ düşman                                          #;
 düşünceli                                       #;
 düşü⟪k⟫                                         #;
 dış                                             #;
-dışarı                                          #;
-dışı                                            #;
 dˈiplomati⟪k⟫                                   #;
 ebadî                                           #;
 ecnebi                                          #;
@@ -589,6 +587,7 @@ fetişist                                        #;
 fevri                                           #;
 fiilen                                          #;
 fiili                                           #;
+fiilî                                           #;
 fiks                                            #;
 filan                                           #;
 finansal                                        #;
@@ -619,6 +618,9 @@ gari⟪p⟫                                         #;
 gayri                                           #;
 gayriinsani                                     #;
 gayrimeşru                                      #;
+gayriresmî                                      #;
+gayriresmi                                      #;
+gayriciddi                                      #;
 gayrisafi                                       #;
 gayrımeşru                                      #;
 gazi                                            #;
@@ -744,7 +746,6 @@ hayatî                                          #;
 haylaz                                          #;
 hayran                                          #;
 hayta                                           #;
-hayvan                                          #;
 hayvani                                         #;
 hayvansı                                        #;
 hazin                                           #;
@@ -979,6 +980,7 @@ kesin                                           #;
 keskin                                          #;
 kesme                                           #;
 keyfi                                           #;
+keyfî                                           #;
 keçi                                            #;
 kibar                                           #;
 kindar                                          #;
@@ -1135,6 +1137,7 @@ maddî                                           #;
 madenî                                          #;
 madrabaz                                        #;
 mahalli                                         #;
+mahallî                                         #;
 mahcu⟪p⟫                                        #;
 mahkûm                                          #;
 mahmur                                          #;
@@ -1154,6 +1157,7 @@ makroekonomi⟪k⟫                                 #;
 makrosefal                                      #;
 maktu⟪sFRV⟫l                                    #;
 makus                                           #;
+makûs                                           #;
 maku⟪sFRV⟫l                                     #;
 makyavelci                                      #;
 mali                                            #;
@@ -2592,7 +2596,7 @@ zorlu                                           #;
 özyeterli                                       #;
 üstbilişsel                                     #;
 bilişöte⟪compn⟫                                 #;
-hizmetönccompne                                 #;
+hizmetönce⟪compn⟫                               #;
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 nˈasıl⟪ques⟫ #;
 ne⟪ques⟫ #;
@@ -2684,6 +2688,7 @@ paramparça #;
 parıl% parıl #;
 perperişan #;
 pˈespembe #;
+pırıl #; ! not standalone
 pırıl% pırıl #;
 saçma% sapan #;
 sağlı% sollu #;
@@ -2782,3 +2787,165 @@ geçen #; ! lexicalized
 soluksuz #; ! lexicalized
 sınırlı #; ! lexicalized
 engelli #; ! lexicalized
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+bütüncül #;
+aromatik #;
+mücavir #;
+palyatif #;
+müsebbi⟪p⟫ #;
+mülga #;
+âciz  #;
+subjektif  #;
+mücbir  #;
+fikrî  #;
+adlî  #;
+kriminalize  #; ! not in tdk
+vâkıf #;
+kadük #;
+müteaddit #;
+siyasetüst⟪compn⟫ #;
+matuf #;
+provokatif #; ! not in tdk
+milletlerarası #;
+partilerüstü #;
+hamasi #;
+cüzi #;
+bihaber #;
+vesair #;
+afaki #;
+kalifiye #;
+şeklî #;
+yeksan #;
+asimile #;
+necip #;
+hasmane #;
+abat #; ! archaic
+ari #;
+meri #; ! term (law)
+payidar #;
+jeostrateji⟪k⟫ #;
+maktu #;
+sülfürik #;
+evvelsi #;
+diktatöryal #;
+hegemonik #;
+biyometrik #;
+ahlaken #;
+seyyanen #;
+temsilî #;
+proaktif #;
+mübah #;
+tahminî #;
+hükümran #;
+kahir #;
+ilanihaye #;
+enfekte #;
+despotik #;
+cefakâr #;
+insancıl #;
+mamur #;
+hakaretamiz #;
+ali #;
+oligarşik #;
+gayrimillî #;
+regüle #; ! not in tdk
+müktese⟪p⟫  #;
+malî  #;
+azade  #;
+antiemperyalist  #;
+mezkûr  #;
+hemhâl  #;
+defakto  #;
+suspus  #;
+işari  #;
+coğrafik  #;
+cihadist  #;
+mahir  #;
+aktüeryal #; !term (insurance)
+lâik #; 
+laik #; 
+sâri #; ! archaic
+şifahi #; ! archaic
+mezhebî #;
+mesul #;
+gayriahlaki #;
+mümbit #; ! archaic
+absürt #;
+pespaye #;
+nail #; ! archaic
+konur #;
+kimyevi #;
+mütedeyyin #; ! archaic
+müessif #; ! archaic
+ayyaş #;
+amiyane #;
+sarih #; ! archaic
+cevabi #;
+cevabî #;
+netameli #;
+gayrihukuki #;
+hükmi #;
+berhava #; ! archaic
+şamil #; ! archaic
+bigâne #; ! archaic
+zihnî #;
+muhtasar #; ! archaic
+dezenfekte #;
+müzahir #; ! archaic
+icrai #;
+rövanşist #;
+idarî #;
+dâhilî #;
+cennetmekân #;
+vefakâr #;
+istikşafi #; ! archaic
+âlâ #;
+yolgeçen #;
+müşahhas #; ! archaic
+müflis #;
+müesses #; ! archaic
+arızi #;
+sathi #;
+düçar #; ! archaic
+şehirlerarası #;
+mütecaviz #;
+vatanperver #;
+sahih #; ! archaic
+ortopedik #;
+haleldar #;
+elitist #;
+donör #;
+amade #;
+ajite #;
+mahfuz #;
+iğdiş #;
+kâmil #; ! archaic
+akim #; ! archaic
+ruhi #;
+riyakâr #;
+onore #;
+müteselsil #;
+manipülatif #;
+ırki #;
+inovatif #;
+melun #;
+daniska #;
+vareste #; ! archaic
+galiz #; ! archaic
+speküle #;
+müstafi #; !archaic
+müdafi #;
+muaccel #; !archaic
+indi #; ! archaic
+reforme #;
+müteallik #;
+helalühoş #;
+ensest #;
+malûl #;
+informel #;
+hâlim #;
+riyakâr #;
+kesif #;
+halisane #;
+fennî #;
+tahrikkâr #;
