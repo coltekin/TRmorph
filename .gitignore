@@ -2,3 +2,7 @@
 .foma_history
 .dep
 __pycache__
+analyzer-b.hfst
+analyzer.hfst
+generator-b.hfst
+generator.hfst

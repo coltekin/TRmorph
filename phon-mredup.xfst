@@ -4,7 +4,8 @@
 define consonant  @"consonant.a";
 define vowel  @"vowel.a";
 
-regex [..] -> m || ⟪mredup⟫ _ vowel
-    ,, consonant -> m || ⟪mredup⟫ _ 
-    ,, ⟪mredup⟫ -> 0
-;
+! regex [..] -> m || ⟪mredup⟫ _ vowel
+!     ,, consonant -> m || ⟪mredup⟫ _ 
+!     ,, ⟪mredup⟫ -> 0
+! ;
+regex ⟪mredup⟫ -> 0 ;
