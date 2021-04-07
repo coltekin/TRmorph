@@ -103,13 +103,13 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
               _ [⟪bI⟫ m | ⟪bI⟫ n | ⟪bI⟫ m ⟪I⟫ z|  ⟪bI⟫ m ⟪I⟫ z] ⟪MB⟫,
               .#. [{su}
                   |{özsu}
-                  |{karasu}] boundary+ _ [⟪I⟫|⟪bn⟫|⟪bs⟫]
+                  |{karasu}] boundary+ _ [⟪bI⟫|⟪bn⟫|⟪bs⟫]
     ,, [..] (->) y
            || .#. [{ne}
                   |{akarsu}] boundary+ 
                     _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫],
               .#. ucase [\⟪RB⟫]* s u intSym* [⟪RB⟫] (⟪apos⟫) [⟪IGB⟫|⟪MB⟫]+
-                    _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫]
+                    _ [⟪bI⟫|⟪bn⟫|⟪bs⟫]
 ! ---------------------------------------------------------------------------
 ! Optionally Delete (s) after a few marked nouns. The well known example is 
 ! cami ! -> cami-i. This deletion in current language seems to be optional
