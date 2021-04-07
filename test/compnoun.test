@@ -10,9 +10,9 @@ A;A;buzdolaplarını;buzdolabı⟨N⟩⟨pl⟩⟨p0x⟩⟨acc⟩
 A;A;buzdolaplarını;buzdolabı⟨N⟩⟨pl⟩⟨p0x⟩⟨acc⟩
 A;A;buzdolaplarını;buzdolabı⟨N⟩⟨pl⟩⟨p2s⟩⟨acc⟩
 A;A;buzdolaplarını;buzdolabı⟨N⟩⟨pl⟩⟨p3s⟩⟨acc⟩
-A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p3x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p3p⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+# A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+# A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p3x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+# A;R;buzdolabılar;buzdolabı⟨N⟩⟨pl⟩⟨p3p⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;R;buzdolapılar;
 A;R;buzdolaplar;
 A;A;Eminönü;Eminönü⟨N⟩⟨prop⟩⟨sg⟩⟨p3s⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
