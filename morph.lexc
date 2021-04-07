@@ -376,6 +376,7 @@ LEXICON verb_passive2
 
 LEXICON verb_abil_neg
 ⟨abil⟩          verb_neg;
+⟨abil⟩          verb_nonfinite_neg;
                 verb_neg;
 
 LEXICON verb_neg
@@ -529,9 +530,12 @@ LEXICON verb_nonfinite
 ⟨cv.inceye⟩     adverb;         !-(y)IncAyA
 ⟨cv.ince⟩       adverb;         !-(y)IncA
 ⟨cv.ip⟩         adverb;         !-(y)Ip
+⟨cv.ye⟩         adverb;         !-(y)A requires reduplication 'okuya okuya'
+                verb_nonfinite_neg;
+
+LEXICON verb_nonfinite_neg
 ⟨cv.meden⟩      adverb;         !-mAdAn / -mAzdAn
 ⟨cv.meksizin⟩   adverb;         !-mAksIzIn
-⟨cv.ye⟩         adverb;         !-(y)A requires reduplication 'okuya okuya'
 
 ! the suffix -cAsInA attaches in some finite verb configurations.
 LEXICON converb_cesine

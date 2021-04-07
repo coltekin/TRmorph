@@ -88,8 +88,8 @@ define phonetize [⟪neg⟫|⟪ques⟫] -> 0
     ,, ⟨aor⟩     -> 0 || ⟨neg⟩ _ [⟨1s⟩|⟨1p⟩]
     ,, [⟪rcp⟫|⟪rfl⟫|⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causAt⟫|
         ⟪causDir⟫|⟪causIr⟫|⟪causIt⟫|⟪aorAr⟫] -> 0
-    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ \⟨neg⟩
-    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ ⟨neg⟩
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ [⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ \[⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
     ,, ⟨iver⟩    -> ⟪by⟫ ⟪I⟫ v e r
     ,, ⟨adur⟩    -> ⟪by⟫ ⟪A⟫ d u r
     ,, ⟨agel⟩    -> ⟪by⟫ ⟪A⟫ g e l
