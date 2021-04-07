@@ -22,6 +22,7 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
     .o. ~[ ?* ⟨imp⟩ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ?+ ]
     .o. ~[ ?* ⟨prs⟩ ?+ [⟨2s⟩|⟨2p⟩] ]
     .o. ~[ ?* ⟨prs⟩ [⟨2s⟩|⟨2p⟩] ?+ ]
+    .o. ~[ ?* ⟨apos⟩ ?* ⟨apos⟩ ]
     .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ [\[⟪time⟫]]+ ⟨Adv⟩ [⟨ki⟩|⟨leri⟩|⟨ligine⟩] ?*]
     .o. ~[ ?* ⟪time⟫ ?* ⟨Adv⟩ [⟨ca⟩] ?*]
@@ -37,7 +38,7 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
     .o. ~[ ?* \⟨cpl⟩ ⟨opt⟩ ⟨cpl⟩ ⟨cond⟩ ?* ]     ! okuyaysa
     .o. ~[ ?* \⟨cpl⟩ [⟨past⟩|⟨cond⟩|⟨opt⟩] [\⟨cpl⟩]* ⟨dir⟩ ]
         ! okuduktur okusadır okuyadır
-! the rules below deals with variablity of person/number markers,
+! the rules below deal with variablity of person/number markers,
 ! particularly 3p.
 ! Doing this here means that the surface/analysis forms should match.
 ! For fixed analysis order the same rules can be moved to
@@ -88,6 +89,6 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
        ⟨pl⟩ ⟨p3s⟩  -> ⟨p3s⟩ ⟨pl⟩
        || ⟪family⟫ intSym* ⟨N⟩ _
     ,, ⟪family⟫  -> 0
-! nouns expressing time may have -ki suffixed directly
-    ,, [..] (->) ⟨ki⟩ ⟨Adj⟩ || ⟪time⟫ intSym* ⟨N⟩ _
+! nominals expressing time may have -ki suffixed directly
+    ,, [..] (->) ⟨ki⟩ ⟨Adj⟩ || ⟪time⟫ intSym* [⟨N⟩|⟨Adj⟩|⟨Postp⟩] _
 ;
