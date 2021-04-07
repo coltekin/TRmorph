@@ -327,6 +327,7 @@ LEXICON nom_predicate
 LEXICON number
                 number_ordinal;
                 number_distributive;
+                number_lerce;
                 noun;
 
 LEXICON number_datetime
@@ -342,6 +343,8 @@ LEXICON number_dist_cont
                     #;
 ⟨li⟩                noun_li;
 
+LEXICON number_lerce
+⟨pl⟩⟨ce⟩⟨Adj⟩             adjective;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Verbs
