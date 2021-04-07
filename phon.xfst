@@ -29,8 +29,8 @@ define phonetize [⟪neg⟫|⟪ques⟫] -> 0
     ,, ⟪propn⟫ -> 0
     ,, ⟪time⟫ -> 0
     ,, ⟪family⟫ -> 0
-    ,, ⟪compn⟫ ->  0         || _ intSym* ⟨N⟩ ⟨pl⟩
-    ,, [..] ->  ⟪compn⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟨N⟩ ⟨pl⟩ _
+    ,, [..] (->)  ⟪compn⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟨N⟩ [⟨pl⟩|⟨lik⟩] _
+   .o. ⟪compn⟫ ->  0         || _ intSym* ⟨N⟩ [⟨pl⟩|⟨lik⟩] ⟪compn⟫ ⟪MB⟫
     ,, [⟨def⟩|⟨indef⟩] -> 0
 !
     ,, [⟨1s⟩|⟨1p⟩|⟨2s⟩|⟨2p⟩|⟨3s⟩|⟨3p⟩] -> 0 || ⟨Pron⟩ _
