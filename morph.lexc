@@ -125,13 +125,16 @@ LEXICON lex_number_alpha
 ⟨Num⟩                   number;
 LEXICON lex_number_arabic
 ⟨Num⟩⟨ara⟩              number;
+⟨Num⟩⟨ara⟩⟨apos⟩        number;
 LEXICON lex_number_roman
 ⟨Num⟩⟨rom⟩              #;
 ⟨Num⟩⟨rom⟩⟨apos⟩        number;
 LEXICON lex_number_time
 ⟨Num⟩⟨time⟩             number_datetime;
+⟨Num⟩⟨time⟩⟨apos⟩        number_datetime;
 LEXICON lex_number_date
 ⟨Num⟩⟨date⟩             number_datetime;
+⟨Num⟩⟨date⟩⟨apos⟩        number_datetime;
 
 LEXICON lex_pronoun
 ⟨Pron⟩                  noun;
@@ -201,12 +204,12 @@ LEXICON determiner
 !                         determiner_poss;
 ! 
 ! LEXICON determiner_poss
-! ⟨p1s⟩               noun;
-! ⟨p2s⟩               noun;
-! ⟨p3s⟩               noun;
-! ⟨p1p⟩               noun;
-! ⟨p2p⟩               noun;
-! ⟨p3p⟩               noun;
+! ⟨p1s⟩⟨Pron⟩               noun;
+! ⟨p2s⟩⟨Pron⟩               noun;
+! ⟨p3s⟩⟨Pron⟩               noun;
+! ⟨p1p⟩⟨Pron⟩               noun;
+! ⟨p2p⟩⟨Pron⟩               noun;
+! ⟨p3p⟩⟨Pron⟩               noun;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -252,6 +255,7 @@ LEXICON noun_poss
 ⟨p2s⟩               noun_case;
 ⟨p3s⟩               noun_case;
 ⟨p1p⟩               noun_case;
+⟨p1p⟩⟨apos⟩         noun_case; ! common wrong usage: efedimiz'e
 ⟨p2p⟩               noun_case;
 ⟨p3p⟩               noun_case;
 ⟨p%0x⟩              noun_case;
