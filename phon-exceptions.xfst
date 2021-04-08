@@ -23,7 +23,10 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
 ! - after  -(y)AsI
 ! - and optionally after 'aynı' and before a case suffix 
 ! --------------------------------------------------------------------------
-    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ _ boundary+ [ ⟪bs⟫ ⟪I⟫
+    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _
+    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _
+    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0,
+        ⟪bs⟫ ⟪I⟫ -> 0 \\ _ boundary+ [ ⟪bs⟫ ⟪I⟫
                                      | l (⟪NS⟫) ⟪A⟫ r ⟪I⟫
                                      | l ⟪I⟫
                                        l ⟪I⟫ k
