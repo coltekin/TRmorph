@@ -3,9 +3,24 @@
 !
 define consonant  @"consonant.a";
 define vowel  @"vowel.a";
+define upper  @"uppercase.a";
+define lower  @"lowercase.a";
+define upperV upper & vowel;
+define upperC upper & consonant;
+define lowerV lower & vowel;
+define lowerC lower & consonant;
 
-regex [..] -> m || ⟪mredup⟫ _ vowel
-    ,, consonant -> m || ⟪mredup⟫ _ 
+regex [..] -> m || ⟪mredup⟫ _ lowerV
+    ,,[..] -> M || ⟪mredup⟫ _ upperV
+    ,, lowerC -> m || ⟪mredup⟫ _ 
+    ,, upperC -> M || ⟪mredup⟫ _ 
+    ,,  A -> a, B -> b, C -> c, Ç -> ç, D -> d,
+        E -> e, F -> f, G -> g, Ğ -> ğ, H -> h,
+        I -> i, İ -> i, J -> j, K -> k, L -> l,
+        M -> m, N -> n, O -> o, Ö -> ö, P -> p,
+        R -> r, S -> s, Ş -> ş, T -> t, U -> u,
+        Ü -> ü, V -> v, Y -> y, Z -> z, Î -> î,
+        Û -> û, Â -> â || ⟪mredup⟫ _
     ,, ⟪mredup⟫ -> 0
 ;
 ! regex ⟪mredup⟫ -> 0 ;

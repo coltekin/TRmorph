@@ -4,7 +4,6 @@ define analysisSym @"analysis-symbols.a";
 define consonant  @"consonant.a";
 define vowel  @"vowel.a";
 
-
 define R1       [Ⅰ|I|ⅰ|i];
 define R5       [v|ⅴ|V|Ⅴ];
 define R10      [X|Ⅹ|x|ⅹ];
