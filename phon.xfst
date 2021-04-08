@@ -171,6 +171,8 @@ define phonetize [⟪neg⟫|⟪ques⟫] -> 0
     ,, "⟨cv.meden⟩"     -> m ⟪A⟫ z d ⟪A⟫ n
     ,, "⟨cv.meksizin⟩"  -> m ⟪A⟫ k s ⟪I⟫ z ⟪I⟫ n
     ,, "⟨cv.ye⟩"        -> ⟪by⟫ ⟪A⟫
+    ,, [..]             -> ⟪mredup⟫ || .#. _ ?* ⟨mredup⟩
+    ,, ⟨mredup⟩         -> 0
     ,, [..]       -> ⟪MB⟫ || analysisSym  _
 !
 ! Add the default silent front/unronded vowel

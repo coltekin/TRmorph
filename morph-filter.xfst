@@ -77,10 +77,9 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
     .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ ?* ⟪compn⟫ ?* ⟨sg⟩ [⟨p3s⟩|⟨p3p⟩] ⟨apos⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
    .o. ⟨q⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨q⟩ 
-   .o. [..] (->) ⟪mredup⟫
-       || .#. _ ?+ 
-            [posSym - [⟨Q⟩|⟨Ij⟩|⟨Alpha⟩|⟨Sym⟩|⟨Punc⟩
-                       |⟨Num⟩ [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩]]]
+   .o. [..] (->) ⟨mredup⟩
+       || [posSym - [⟨Q⟩|⟨Ij⟩|⟨Alpha⟩|⟨Sym⟩|⟨Punc⟩
+                       |⟨Num⟩ [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩]]] _
 ! Family nouns can get possessive markers before the pulural marker
 ! in some cases. This is some sort of derivation, but we just analyze 
 ! as if the inflectins are re-ordered.
