@@ -1,5 +1,9 @@
 ! ---------------------------------------------------------------------------
 ! Delete boundary markers
-!TODO: correcttreatment of digit boundary ⟪DB⟫
+!TODO: correct treatment of digit boundary ⟪DB⟫
 ! ---------------------------------------------------------------------------
-regex  ⟪IGB⟫|⟪RB⟫|⟪MB⟫|⟪DB⟫ -> 0;
+
+regex ⟪IGB⟫|⟪RB⟫|⟪MB⟫|⟪DB⟫ -> 0;
+! regex  [..] (->) %" // .#. \[%"|”]+ [⟪RB⟫|⟪MB⟫] _  \[%"|”]+ .#.
+!     ,, [..] (->) ” //  .#. \[%"|”]+ [⟪RB⟫|⟪MB⟫] _  \[%"|”]+ .#.
+!    .o. ⟪IGB⟫|⟪RB⟫|⟪MB⟫|⟪DB⟫ -> 0;
