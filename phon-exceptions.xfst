@@ -133,4 +133,10 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
     ,, ⟪by⟫   -> y || .#. [{bura}|{şura}|{ora}|{nere}] 
                 boundary* _ ⟪A⟫ ⟪MB⟫
     ,, ⟪prn⟫ -> 0
+! ------------------------------------------------------------
+! This is an ugly hack to allow analysis of forms like "İstiklal Marşı'mız".
+! Causes unnecessary generation.
+! TODO: a better, more principled analysis
+! ------------------------------------------------------------
+    ,, [..] (->) ⟪apos⟫ || boundary ⟪bI⟫ _ m ⟪I⟫ z boundary
 ;
