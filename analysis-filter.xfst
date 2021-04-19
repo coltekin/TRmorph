@@ -15,7 +15,7 @@ regex  ⟪IGB⟫ -> 0
 ,,     ⟪c⟫ -> c,
        ⟪p⟫ -> b,
        ⟪t⟫ -> d,
-       ⟪k⟫ -> g,
+       ⟪k⟫ -> ğ,
        ⟪g⟫ -> ğ || _ ⟪compn⟫
     ,,  ˈ -> 0
     ,, [⟪sBRV⟫|⟪sBUV⟫|⟪sFRV⟫|⟪sFUV⟫|⟪sUC⟫|⟪sVC⟫] -> 0
