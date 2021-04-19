@@ -158,6 +158,7 @@ LEXICON lex_cpl_i
 
 
 LEXICON lex_question
+⟨Q⟩                     #;
 ⟨Q⟩                     copula;
 ⟨Q⟩                     pnaggr;
 
