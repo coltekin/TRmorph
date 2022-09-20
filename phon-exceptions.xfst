@@ -22,9 +22,12 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
 ! - after lI, lIk, sIz, CI
 ! - after -(y)AsI
 ! - and optionally after 'aynı' and before a case suffix 
+! TODO: some of these seems to be optional - at least in real world
+!       use. Although 'buzdolaplı' is the correct form, there are many
+!       instances of 'buzdoabılı' on the net.
 ! --------------------------------------------------------------------------
 !    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _         ! not sure why this was here
-!    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _ ! this should not every happen
+!    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _ ! this should not ever happen
     ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0,
         ⟪bs⟫ ⟪I⟫ -> 0 || _ boundary+ [ ⟪bs⟫ ⟪I⟫
                                      | l (⟪NS⟫) ⟪A⟫ r ⟪I⟫

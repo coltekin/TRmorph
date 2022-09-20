@@ -10,6 +10,7 @@ define vowel  @"vowel.a";
 define vowelAll  vowel|⟪I⟫|⟪A⟫;
 
 regex  ⟪by⟫ -> 0 || .#. i ⟪RB⟫ _ , _ [⟪MB⟫|⟪IGB⟫]* .#.
+   ,,  ⟪bş⟫ -> ş || .#. {yarım} ⟪RB⟫ _
    .o. bufferVowel -> 0 || vowelAll [\[consonantAll|⟪caus⟫]]* _ ,,
        bufferCons  -> 0 || [consonantAll|⟪caus⟫] [\vowelAll]* _
    .o. ⟪bI⟫ -> ⟪I⟫
