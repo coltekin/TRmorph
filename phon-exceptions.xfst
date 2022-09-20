@@ -20,18 +20,18 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
 ! - before another (s)I
 ! - before lArI
 ! - after lI, lIk, sIz, CI
-! - after  -(y)AsI
+! - after -(y)AsI
 ! - and optionally after 'aynı' and before a case suffix 
 ! --------------------------------------------------------------------------
-    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _
-    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _
+!    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _         ! not sure why this was here
+!    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _ ! this should not every happen
     ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0,
-        ⟪bs⟫ ⟪I⟫ -> 0 \\ _ boundary+ [ ⟪bs⟫ ⟪I⟫
+        ⟪bs⟫ ⟪I⟫ -> 0 || _ boundary+ [ ⟪bs⟫ ⟪I⟫
                                      | l (⟪NS⟫) ⟪A⟫ r ⟪I⟫
                                      | l ⟪I⟫
-                                       l ⟪I⟫ k
-                                       s ⟪I⟫ z
-                                       ⟪C⟫ ⟪I⟫ ] ⟪MB⟫,
+                                     | l ⟪I⟫ k
+                                     | s ⟪I⟫ z
+                                     | ⟪C⟫ ⟪I⟫ ] ⟪MB⟫,
                                      ⟪by⟫ ⟪A⟫ s ⟪I⟫ boundary+ _ ⟪MB⟫,
                                      ⟪bs⟫ ⟪I⟫ intSym* ⟪RB⟫ boundary* _ ⟪MB⟫
     ,,  ⟪bs⟫ ⟪I⟫ (->) 0 || .#. {aynı} ⟪RB⟫ _ boundary* [ ⟪by⟫ ⟪A⟫
