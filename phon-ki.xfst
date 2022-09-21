@@ -6,11 +6,10 @@
 ! over one or the other  based on the root form. For example, it is
 ! more likely to hear 'dünkü' but 'gülünki'.
 ! ---------------------------------------------------------------------------
-define vowel  @"vowel.a";
-define vowelAll  vowel|⟪I⟫|⟪A⟫;
-define intSym @"intermediate-symbols.a";
-define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+define vowelAll  @"vowel.a"|⟪I⟫|⟪A⟫;
+define consAll  @"consonant.a";
+define intSym @"intermediate-symbols.a"|⟪MB⟫|⟪RB⟫|⟪IGB⟫;
 
 
-regex  i (->) ü || ü [\vowelAll]* boundary+ k _ ⟪MB⟫
+regex  i (->) ü || ü [\vowelAll]* consAll* intSym+ k _ ⟪MB⟫
 ;
