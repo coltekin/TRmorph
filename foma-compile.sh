@@ -9,11 +9,13 @@ case "$src" in
         tgt=${src/.xfst/.a}
         foma -qre "source $src"  -e "save stack $tgt" -s >\
             /tmp/foma-compile.$$ 2>&1
+        foma_return=$?
     ;;
     *.lexc)
         tgt=${src/.lexc/.a}
         foma -qre "read lexc $src"  -e "save stack $tgt" -s >\
             /tmp/foma-compile.$$ 2>&1
+        foma_return=$?
     ;;
     *)
         exit -1
@@ -25,7 +27,7 @@ if grep -iE '(^\*\*\*|error|not enough networks)' /tmp/foma-compile.$$;then
     rm -f $tgt
     exit -1
 else
-    exit 0
+    exit $foma_return
 fi
 
 rm -f /tmp/foma-compile.$$

@@ -1,11 +1,34 @@
-define morph  @"morph.a";
-define phon   @"phon.a";
-define morphfilter   @"morph-filter.a";
-define analysisfilter   @"analysis-filter.a";
-define phonfilter   @"phon-filter.a";
 
+define trmorph @"morph.a";
+define trmorph [trmorph .o. @"morph-filter.a"].l;
+define trmorph @"afilter-lexsym.a" .o. trmorph;
+define trmorph @"afilter-compn.a" .o. trmorph;
+define trmorph @"afilter-cnjsubcat.a" .o. trmorph;
+define trmorph @"afilter-nomsubcat.a" .o. trmorph;
+define trmorph @"afilter-removezero.a" .o. trmorph;
+define trmorph trmorph .o. @"phon.a";
+!define trmorph trmorph .o. @"phon-filter.a";
+define trmorph trmorph .o. @"phon-mredup.a";
+define trmorph trmorph .o. @"phon-exceptions.a";
+define trmorph trmorph .o. @"phon-buffer.a";
+define trmorph trmorph .o. @"phon-causative.a";
+define trmorph trmorph .o. @"phon-voicing.a";
+! TODO: pushing vowel harmony to a later stage may increase the
+! compilation time 
+define trmorph trmorph .o. @"phon-vh.a";
+define trmorph trmorph .o. @"phon-vepenth.a";
+!
+define trmorph trmorph .o. @"phon-ki.a";
+define trmorph trmorph .o. @"phon-redup.a";
+define trmorph trmorph .o. @"phon-mi.a";
+define trmorph trmorph .o. @"delete-stress.a";
+define trmorph trmorph .o. @"delete-silent.a";
+! surface normalization / alternations
+define trmorph trmorph ..o. @"phon-circumflex.a";
+define trmorph trmorph ..o. @"phon-case.a";
+regex trmorph .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
+save stack trmorph-boundary.a
+clear stack
+define trmorph trmorph .o. @"delete-boundary.a";
 
-regex analysisfilter.i 
-  .o. [morph .o. morphfilter].l
-  .o. phon 
-  .o. phonfilter ;
+regex trmorph;

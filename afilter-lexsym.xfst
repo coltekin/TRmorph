@@ -1,0 +1,33 @@
+!
+! Replace / delete the special symbols used in the lexicon from the analysis
+! side.
+!
+regex  ⟪IGB⟫ -> 0
+,,     ⟪c⟫ -> ç,
+       ⟪p⟫ -> p,
+       ⟪t⟫ -> t,
+       ⟪k⟫ -> k,
+       ⟪g⟫ -> g || _ \[⟪dup⟫|⟪compn⟫]
+,,     ⟪c⟫ -> c,
+       ⟪p⟫ -> b,
+       ⟪t⟫ -> d,
+       ⟪k⟫ -> ğ,
+       ⟪g⟫ -> ğ || _ ⟪compn⟫
+      ,,  ˈ -> 0
+    ,, [⟪sBRV⟫|⟪sBUV⟫|⟪sFRV⟫|⟪sFUV⟫|⟪sUC⟫|⟪sVC⟫] -> 0
+    ,, ? -> 0 || _ ⟪dup⟫
+    ,, ⟪dup⟫ -> 0
+    ,, ⟪del⟫ -> 0
+    ,, ⟪dels⟫ -> 0
+    ,, ⟪tSep⟫ -> 0
+    ,, ⟪dSep⟫ -> %,
+    ,, ⟪DB⟫ -> 0
+    ,, ⟪prn⟫ -> 0
+! the following should also turn into analysis symbols, but not
+! handled yet.
+    ,, ⟪pers⟫ -> 0
+    ,, ⟪part⟫ -> 0
+    ,, ⟪time⟫ -> 0
+;
+
+invert net

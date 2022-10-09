@@ -15,7 +15,9 @@ FOMA=./foma-compile.sh
 
 .PHONY: subdirs depend
 
-all: analyzer analyzer-boundary
+.SECONDARY:
+
+all: analyzer
 
 depend:
 	mkdir -p $(DEPDIR)
@@ -28,12 +30,13 @@ subdirs:
 analyzer: subdirs trmorph.a
 	make depend
 
-analyzer-boundary: subdirs trmorph-boundary.a
-
 clean:
 	rm -fr $(TARGETS)
 
 hfst: analyzer.hfst generator.hfst analyzer-b.hfst generator-b.hfst
+
+trmorph-boundary.a: trmorph.a
+	-ls $@
 
 analyzer.hfst: trmorph.a 
 	gzip -cd < $< | hfst-invert --input=- --output=- | hfst-fst2fst --input=- --output=$@ -O

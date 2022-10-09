@@ -1,0 +1,12 @@
+!
+! Move the lexically specified subcat after the POS symbol.
+!
+
+define intSym @"intermediate-symbols.a";
+
+regex  ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨coo⟩ || ⟪coo⟫ intSym* _
+    ,, ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨adv⟩ || ⟪adv⟫ intSym* _
+    ,, ⟨Cnj⟩ -> ⟨Cnj⟩ ⟨sub⟩ || ⟪sub⟫ intSym* _
+    ,, [⟪adv⟫|⟪coo⟫|⟪sub⟫] -> 0
+;
+invert net

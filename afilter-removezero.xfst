@@ -1,0 +1,5 @@
+!
+! Remove redundant symbols due to 'null morphemes'.
+!
+regex [⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩] -> 0 || ⟨N⟩ _;
+invert net
