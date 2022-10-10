@@ -1,0 +1,23 @@
+!
+! Delete lexical/analysis symbols that do not affect surface form.
+!
+
+regex [⟪neg⟫
+      |⟪ques⟫
+      |⟪onom⟫
+      |⟪emoticon⟫
+      |⟪unit⟫
+      |⟪pers⟫
+      |⟪loc⟫
+      |⟪nation⟫
+      |⟪dem⟫|⟪pers⟫|⟪loc⟫
+      |⟪refl⟫
+      |⟪1s⟫|⟪2s⟫|⟪3s⟫|⟪1p⟫|⟪2p⟫|⟪3p⟫
+      |⟪ppadj⟫|⟪ablC⟫|⟪accC⟫|⟪datC⟫|⟪genC⟫|⟪insC⟫|⟪liC⟫|⟪nomC⟫|⟪numC⟫
+      |⟪part⟫
+      |⟪def⟫|⟪indef⟫
+      |⟪adv⟫|⟪coo⟫|⟪sub⟫
+      |⟪propn⟫
+      |⟪time⟫
+      |⟪family⟫] -> 0
+   ,, [⟨1s⟩|⟨1p⟩|⟨2s⟩|⟨2p⟩|⟨3s⟩|⟨3p⟩] -> 0 || ⟨Pron⟩ _;

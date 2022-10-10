@@ -1,0 +1,5 @@
+define posSym @"pos-symbols.a";
+
+regex  posSym -> ⟪RB⟫ || .#. [\posSym]+ _
+   .o. posSym -> 0
+;

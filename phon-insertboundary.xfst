@@ -1,0 +1,9 @@
+!
+! Insert root/morpheme/IG boundaries.
+!
+define posSym @"pos-symbols.a";
+define analysisSym @"analysis-symbols.a";
+
+regex  [..] -> ⟪IGB⟫  || posSym ?* _ ? posSym
+    ,, [..] -> ⟪MB⟫   || analysisSym  _
+;

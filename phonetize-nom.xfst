@@ -1,0 +1,39 @@
+!
+! Phonetize (mainly) nomimal morphemes analysis symbols.
+!
+
+regex  ⟨pl⟩ -> l ⟪A⟫ r
+    ,, ⟨sg⟩ -> 0
+    ,, ⟨p1s⟩  -> ⟪bI⟫ m
+    ,, ⟨p2s⟩  -> ⟪bI⟫ n
+    ,, ⟨p3s⟩  -> ⟪bs⟫ ⟪I⟫
+    ,, ⟨p1p⟩  -> ⟪bI⟫ m ⟪I⟫ z
+    ,, ⟨p2p⟩  -> ⟪bI⟫ n ⟪I⟫ z
+    ,, ⟨p3p⟩  -> l ⟪A⟫ r ⟪I⟫
+    ,, ⟨p%0x⟩ -> 0
+    ,, ⟨nom⟩ -> 0
+    ,, ⟨acc⟩ -> ⟪by⟫ ⟪I⟫
+    ,, ⟨dat⟩ -> ⟪by⟫ ⟪A⟫
+    ,, ⟨abl⟩ -> ⟪D⟫ ⟪A⟫ n
+    ,, ⟨loc⟩ -> ⟪D⟫ ⟪A⟫
+    ,, ⟨gen⟩ -> ⟪bn⟫ ⟪I⟫ n
+    ,, ⟨ins⟩ -> ⟪by⟫ l ⟪NS⟫ ⟪A⟫
+    ,, ⟨siz⟩ -> s ⟪I⟫ z
+    ,, ⟨li⟩  -> l ⟪I⟫
+    ,, ⟨lik⟩ -> l ⟪I⟫ ⟪k⟫
+    ,, ⟨ce⟩  -> ⟪C⟫ ⟪A⟫
+    ,, ⟨ci⟩  -> ⟪C⟫ ⟪I⟫
+    ,, ⟨sel⟩ -> s ⟪A⟫ l
+    ,, ⟨ki⟩ -> k i
+    ,, ⟨le⟩ -> l ⟪A⟫
+    ,, ⟨les⟩ -> l ⟪A⟫ ş
+    ,, ⟨len⟩ -> l ⟪A⟫ n
+    ,, ⟨dim⟩ -> [ ⟪C⟫ ⟪I⟫ ⟪k⟫   ! TODO: (?) add (A/I)CIK
+                 |⟪C⟫ ⟪A⟫ ⟪k⟫ 
+                 |⟪C⟫ ⟪A⟫ ğ ⟪I⟫ z]
+    ,, ⟨imsi⟩ -> ⟪bI⟫ m s ⟪I⟫ || intSyme* _
+! numbers
+    ,, ⟨dist⟩ -> (⟪apos⟫) ⟪bş⟫ ⟪A⟫ r
+    ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 
+    ,, ⟨ord⟩  -> (⟪apos⟫) ⟪bI⟫ n c ⟪I⟫
+;

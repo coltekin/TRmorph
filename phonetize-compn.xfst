@@ -1,0 +1,11 @@
+!
+! Phonetize the compound noun marker. We keep the ⟪compn⟫ here,
+! since it is needed for exceptional cases handled later.
+!
+
+define intSym @"intermediate-symbols.a";
+
+regex [..] (->)  ⟪compn⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟨N⟩ [⟨pl⟩|⟨lik⟩] _
+    .o. ⟪compn⟫ ->  0         || _ intSym* ⟨N⟩ [⟨pl⟩|⟨lik⟩] ⟪compn⟫ ⟪MB⟫
+    .o. ⟪compn⟫ -> ⟪compn⟫ ⟪bs⟫ ⟪I⟫
+;

@@ -1,0 +1,29 @@
+!
+! Phonetize (mainly) verbal morphemes analysis symbols. Part 2.
+!
+
+regex  "⟨vn.me⟩"        -> m ⟪A⟫
+    ,, "⟨vn.mek⟩"       -> m ⟪A⟫ ⟪K⟫
+    ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş
+    ,, "⟨part.pres⟩"    -> ⟪by⟫ ⟪A⟫ n
+    ,, "⟨part.past⟩"    -> ⟪D⟫ ⟪I⟫ ⟪k⟫
+    ,, "⟨part.fut⟩"     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
+    ,, "⟨part.esi⟩"     -> ⟪by⟫ ⟪A⟫ s ⟪I⟫
+    ,, "⟨part.ici⟩"     -> ⟪by⟫ ⟪I⟫ c ⟪I⟫
+    ,, "⟨cv.cesine⟩"    -> ⟪C⟫ ⟪A⟫ s ⟪I⟫ n ⟪A⟫
+    ,, "⟨cv.ken⟩"       -> k e n
+    ,, "⟨cv.dikce⟩"     -> ⟪D⟫ ⟪I⟫ k ⟪C⟫ ⟪A⟫
+    ,, "⟨cv.eli⟩"       -> ⟪by⟫ ⟪A⟫ l ⟪I⟫
+    ,, "⟨cv.erek⟩"      -> ⟪by⟫ ⟪A⟫ r ⟪A⟫ k
+    ,, "⟨cv.erek⟩"      -> ⟪by⟫ ⟪A⟫ r ⟪A⟫ k t ⟪A⟫ n ! colloquial
+    ,, "⟨cv.esiye⟩"     -> ⟪by⟫ ⟪A⟫ s ⟪I⟫ y ⟪A⟫
+    ,, "⟨cv.inceye⟩"    -> ⟪by⟫ ⟪I⟫ n c ⟪A⟫ y ⟪A⟫
+    ,, "⟨cv.ince⟩"      -> ⟪by⟫ ⟪I⟫ n c ⟪A⟫
+    ,, "⟨cv.ip⟩"        -> ⟪by⟫ ⟪I⟫ p
+    ,, "⟨cv.meden⟩"     -> m ⟪A⟫ d ⟪A⟫ n
+    ,, "⟨cv.meden⟩"     -> m ⟪A⟫ z d ⟪A⟫ n
+    ,, "⟨cv.meksizin⟩"  -> m ⟪A⟫ k s ⟪I⟫ z ⟪I⟫ n
+    ,, "⟨cv.ye⟩"        -> ⟪by⟫ ⟪A⟫
+    ,, [..]             -> ⟪mredup⟫ || .#. (ˈ) _ \ˈ ?* ⟨mredup⟩
+    ,, ⟨mredup⟩         -> 0
+;

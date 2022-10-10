@@ -1,0 +1,79 @@
+!
+! Convertion of numbers to their surface forms.
+!
+
+define intSym @"intermediate-symbols.a";
+
+define R1       [Ⅰ|I|ⅰ|i];
+define R5       [v|ⅴ|V|Ⅴ];
+define R10      [X|Ⅹ|x|ⅹ];
+define R50      [L|Ⅼ|l|ⅼ];
+define R100     [C|Ⅽ|c|ⅽ];
+define R500     [D|Ⅾ|d|ⅾ];
+define R1000    [M|Ⅿ|m|ⅿ];
+define digit    [%0|1|2|3|4|5|6|7|8|9];
+define nonzero  digit - %0;
+define numArabic ⟨Num⟩ [⟨ara⟩|⟨time⟩|⟨date⟩];
+define numRoman  ⟨Num⟩ ⟨rom⟩;
+
+regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
+                || nonzero %0^{12,14} / ⟪tSep⟫   _ numArabic, ! trilyon
+                   nonzero %0^{6,8}   / ⟪tSep⟫   _ numArabic, ! milyon
+                   [¹|1|3] %0                _ numArabic, ! 10,30
+                   9                       _ numArabic,
+                   R1   R10                _ numRoman,  ! 9
+                   [\[R50|R10|R1]|.#.] R10^{1,3} _ numRoman,  ! 10,30
+                   [Ⅸ|ⅸ]                   _ numRoman   ! 9
+    ,,  [..] -> ⟪sBUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{9,11}  / ⟪tSep⟫   _ numArabic, ! milyar
+                   [\[digit|⟪tSep⟫]|.#.] %0+     _ numArabic, ! 0, 00, a00
+                   9 %0                    _ numArabic, ! doksan
+                   R10 R100                _ numRoman ! 90
+    ,,  [..] -> ⟪sFUV⟫ ⟪sVC⟫ 
+                || nonzero %0^{3,5}   / ⟪tSep⟫   _ numArabic, ! bin
+                   8 %0                    _ numArabic, ! seksen
+                   1                       _ numArabic,
+                   8                       _ numArabic,
+                   [Ⅷ|ⅷ|Ⅺ]                 _ numRoman, ! 8
+                   R5 R1^3                 _ numRoman, ! 8
+                   [\[R5|R1]|.#.] R1       _ numRoman, ! 1
+                   R50 R10^3               _ numRoman, ! 80
+                   [\R100|.#.] R1000       _ numRoman  ! 1000
+    ,,  [..] -> ⟪sFRV⟫ ⟪sVC⟫ 
+                || nonzero %0^2            _ numArabic,     ! yüz
+                   [\[R10|R1]|.#.] R100    _ numRoman, ! 100
+                   R500                    _ numRoman, ! 500
+                   R100 R1000              _ numRoman  ! 900
+    ,,  [..] -> ⟪sBUV⟫ ⟪sUC⟫
+                || 4 %0                    _ numArabic,
+                   6 %0                    _ numArabic,
+                   R10 R50                 _ numRoman, ! 40
+                   R50 R10                 _ numRoman  ! 60
+    ,,  [..] -> ⟪sFUV⟫ ⟪sUC⟫ 
+                || 7 %0                    _ numArabic,
+                   5                       _ numArabic,
+                   [\[R1]|.#.] R5          _ numRoman, ! 5
+                   R50 R10^2               _ numRoman  ! 70
+    ,,  [..] -> ⟪sFRV⟫ ⟪sUC⟫
+                || [³|3|4|¼|¾]             _ numArabic,
+                   [Ⅲ|ⅲ|Ⅳ|ⅳ]               _ numRoman, ! 3,4
+                   R1 R5                   _ numRoman, ! 4
+                   [\R5|.#.] R1^{3,4}      _ numRoman  ! 3,4
+    ,,  [..] -> ⟪sBUV⟫
+                || 6                       _ numArabic,
+                   R5 R1                   _ numRoman, ! 6
+                   [Ⅵ|ⅵ]                   _ numRoman  ! 6
+    ,,  [..] -> ⟪sFUV⟫
+                || [²|2|5] %0              _ numArabic,
+                   [2|½|7]                 _ numArabic,
+                   [\R10|.#.] R50          _ numRoman, ! 50
+                   [\R50|.#.] R10^2        _ numRoman, ! 20
+                   [\R1|.#.] R1^2          _ numRoman, ! 2,7
+                   [Ⅱ|ⅱ|Ⅶ|ⅶ|Ⅻ|ⅻ]           _ numRoman  ! 2,7,12
+! decimal / thousand separator replacement
+    ,, [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩] -> 0
+    ,, ⟪tSep⟫ -> "."|","
+    ,, ⟪dSep⟫ -> "."|","
+    ,, ⟪DB⟫ (->) " " || _ intSym* \⟨Num⟩ !TODO: double check
+    ,, ⟪DB⟫ -> 0
+;

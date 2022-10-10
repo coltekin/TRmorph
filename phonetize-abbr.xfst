@@ -1,0 +1,19 @@
+!
+! Handling of abbreviations.
+!
+
+define consonant  @"consonant.a";
+define intSym @"intermediate-symbols.a";
+
+!
+! Add the default silent front/unronded vowel
+! to abbreviations which do not have any vowel, or any silent
+! letters added in the lexicon.
+! The second rule inserts an optional dot `.' if there isn't one
+! already.
+regex [..] -> ⟪sFUV⟫ || .#. consonant+ _ intSym* ⟪abbr⟫
+    ,, [..] (->) %.   || \[%.] _ intSym* ⟪abbr⟫ [⟪MB⟫|⟪IGB⟫|⟪RB⟫]+ .#.
+    ,, ⟪abbr⟫ -> 0
+! replace apostrophe with an intermediate symbol
+    ,, ⟨apos⟩     -> ⟪apos⟫
+;

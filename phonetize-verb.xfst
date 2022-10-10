@@ -1,0 +1,84 @@
+!
+! Phonetize (mainly) verbal morphemes analysis symbols.
+!
+
+define intSym @"intermediate-symbols.a";
+
+regex  ⟨rfl⟩      -> ⟪bI⟫ n
+    ,, ⟨rcp⟩      -> ⟪bI⟫ ş
+    ,, ⟨pass⟩     -> ⟪pass⟫ ! replaced afeter buff. deletion
+    ,, ⟨caus⟩     -> ⟪A⟫ r || .#. ?* ⟪causAr⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪A⟫ t || .#. ?* ⟪causAt⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪A⟫ r t || .#. ?* ⟪causArt⟫ \[⟨caus⟩]* ⟨V⟩ _
+    ,, ⟨caus⟩     -> ⟪I⟫ r || .#. ?* ⟪causIr⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪I⟫ t || .#. ?* ⟪causIt⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨caus⟩     -> ⟪D⟫ ⟪I⟫ r || .#. ?* ⟪causDir⟫ \[⟨caus⟩]* ⟨V⟩  _
+    ,, ⟨aor⟩     -> ⟪bA⟫ r || ⟪aorAr⟫ intSym* ⟨V⟩ _
+    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟨V⟩ _ , \[⟨V⟩|⟨neg⟩] _
+    ,, ⟨aor⟩     -> z || ⟨neg⟩ _ \[⟨1s⟩|⟨1p⟩]
+    ,, ⟨aor⟩     -> 0 || ⟨neg⟩ _ [⟨1s⟩|⟨1p⟩]
+    ,, [⟪rcp⟫|⟪rfl⟫|⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causAt⟫|
+        ⟪causDir⟫|⟪causIr⟫|⟪causIt⟫|⟪aorAr⟫] -> 0
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ [⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ \[⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
+    ,, ⟨iver⟩    -> ⟪by⟫ ⟪I⟫ v e r
+    ,, ⟨adur⟩    -> ⟪by⟫ ⟪A⟫ d u r
+    ,, ⟨agel⟩    -> ⟪by⟫ ⟪A⟫ g e l
+    ,, ⟨agor⟩    -> ⟪by⟫ ⟪A⟫ g ö r
+    ,, ⟨akal⟩    -> ⟪by⟫ ⟪A⟫ k a l
+    ,, ⟨ayaz⟩    -> ⟪by⟫ ⟪A⟫ y a z
+    ,, ⟨neg⟩     -> m ⟪A⟫
+    ,, ⟨cond⟩    -> s ⟪A⟫
+    ,, ⟨evid⟩    -> m ⟪I⟫ ş
+    ,, ⟨fut⟩     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
+    ,, ⟨imp⟩     -> 0
+    ,, ⟨prs⟩     -> 0
+    ,, ⟨obl⟩     -> m ⟪A⟫ l ⟪I⟫
+    ,, ⟨opt⟩     -> ⟪by⟫ ⟪A⟫ ! || _ \[⟨3s⟩|⟨3p⟩]
+!    ,, ⟨opt⟩     -> 0        || _ [⟨3s⟩|⟨3p⟩]
+    ,, ⟨past⟩    -> ⟪D⟫ ⟪I⟫
+    ,, ⟨prog%.yor⟩ -> ⟪bI⟫ y o r
+    ,, ⟨prog%.mekte⟩ -> m ⟪A⟫ k t ⟪A⟫
+    ,, ⟨cpl⟩     -> ⟪by⟫ || _ (⟨V⟩) [⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  \[⟨V⟩|⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  ⟨V⟩ \[⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨1s⟩      -> m,
+       ⟨2s⟩      -> n,
+       ⟨3s⟩      -> 0,
+       ⟨1p⟩      -> k,
+       ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] _
+    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟨Q⟩] _
+    ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] _
+    ,, ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z 
+            || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨obl⟩|⟨prog%.yor⟩|⟨prog%.mekte⟩
+               |⟨cv%.ken⟩|⟨Q⟩|⟨q⟩] _
+    ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
+       ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> l ⟪I⟫ m,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨opt⟩ _
+    ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
+       ⟨2s⟩       -> s ⟪I⟫ n,
+       ⟨3s⟩       -> 0,
+       ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨cpl⟩ (⟪MB⟫) (⟨V⟩) _,
+                                [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩
+                                |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩]  _ ⟨cpl⟩
+    ,, ⟨2s⟩       -> s ⟪A⟫ n ⟪A⟫,
+       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫ || ⟨prs⟩ _
+    ,, ⟨2s⟩       -> 0,
+       ⟨3s⟩       -> s ⟪I⟫ n,
+       ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n,
+       ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n ⟪I⟫ z,
+       ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ _
+    ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ _
+    ,, ⟨dir⟩      -> ⟪D⟫ ⟪I⟫ r
+    ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
+! realization of causative (except the exceptions above)
+! depnds on vowel harmony and buffer deletion, we replace it here 
+! with an intermediate symbol, and process it later.
+   .o. ⟨caus⟩     -> ⟪caus⟫
+;

@@ -6,7 +6,16 @@ define trmorph @"afilter-compn.a" .o. trmorph;
 define trmorph @"afilter-cnjsubcat.a" .o. trmorph;
 define trmorph @"afilter-nomsubcat.a" .o. trmorph;
 define trmorph @"afilter-removezero.a" .o. trmorph;
-define trmorph trmorph .o. @"phon.a";
+!define trmorph trmorph .o. @"phon.a";
+define trmorph trmorph .o. @"phon-delasym.a";
+define trmorph trmorph .o. @"phonetize-compn.a";
+define trmorph trmorph .o. @"phon-insertboundary.a";
+define trmorph trmorph .o. @"phonetize-nom.a";
+define trmorph trmorph .o. @"phonetize-verb.a";
+define trmorph trmorph .o. @"phonetize-verb2.a";
+define trmorph trmorph .o. @"phonetize-abbr.a";
+define trmorph trmorph .o. @"phonetize-num.a";
+define trmorph trmorph .o. @"phon-insertrb.a";
 !define trmorph trmorph .o. @"phon-filter.a";
 define trmorph trmorph .o. @"phon-mredup.a";
 define trmorph trmorph .o. @"phon-exceptions.a";
@@ -30,5 +39,5 @@ regex trmorph .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
 save stack trmorph-boundary.a
 clear stack
 define trmorph trmorph .o. @"delete-boundary.a";
-
+!
 regex trmorph;
