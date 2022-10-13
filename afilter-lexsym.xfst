@@ -16,13 +16,21 @@ regex  ⟪IGB⟫ -> 0
       ,,  ˈ -> 0
     ,, [⟪sBRV⟫|⟪sBUV⟫|⟪sFRV⟫|⟪sFUV⟫|⟪sUC⟫|⟪sVC⟫] -> 0
     ,, ? -> 0 || _ ⟪dup⟫
-    ,, ⟪dup⟫ -> 0
-    ,, ⟪del⟫ -> 0
-    ,, ⟪dels⟫ -> 0
-    ,, ⟪tSep⟫ -> 0
+    ,, [⟪dup⟫
+       |⟪del⟫
+       |⟪dels⟫
+       |⟪tSep⟫
+       |⟪DB⟫
+       |⟪prn⟫
+       |⟪aorAr⟫
+       |⟪causNone⟫
+       |⟪causAr⟫
+       |⟪causArt⟫
+       |⟪causAt⟫
+       |⟪causDir⟫
+       |⟪rcp⟫
+       |⟪rfl⟫] -> 0
     ,, ⟪dSep⟫ -> %,
-    ,, ⟪DB⟫ -> 0
-    ,, ⟪prn⟫ -> 0
 ! the following should also turn into analysis symbols, but not
 ! handled yet.
     ,, ⟪pers⟫ -> 0

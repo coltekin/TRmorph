@@ -14,9 +14,9 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
     ,, ⟨caus⟩     -> ⟪I⟫ t || .#. ?* ⟪causIt⟫ \[⟨caus⟩]* ⟨V⟩  _
     ,, ⟨caus⟩     -> ⟪D⟫ ⟪I⟫ r || .#. ?* ⟪causDir⟫ \[⟨caus⟩]* ⟨V⟩  _
     ,, ⟨aor⟩     -> ⟪bA⟫ r || ⟪aorAr⟫ intSym* ⟨V⟩ _
-    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟨V⟩ _ , \[⟨V⟩|⟨neg⟩] _
-    ,, ⟨aor⟩     -> z || ⟨neg⟩ _ \[⟨1s⟩|⟨1p⟩]
-    ,, ⟨aor⟩     -> 0 || ⟨neg⟩ _ [⟨1s⟩|⟨1p⟩]
+    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟨V⟩ _ , \[⟨V⟩|⟨neg⟩] [⟪MB⟫|⟪MB⟫] _
+    ,, ⟨aor⟩     -> z || ⟨neg⟩ ⟪MB⟫ _ ⟪MB⟫ \[⟨1s⟩|⟨1p⟩]
+    ,, ⟨aor⟩     -> 0 || ⟨neg⟩ ⟪MB⟫ _ ⟪MB⟫ [⟨1s⟩|⟨1p⟩]
     ,, [⟪rcp⟫|⟪rfl⟫|⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causAt⟫|
         ⟪causDir⟫|⟪causIr⟫|⟪causIt⟫|⟪aorAr⟫] -> 0
     ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ [⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
@@ -46,35 +46,35 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
        ⟨2s⟩      -> n,
        ⟨3s⟩      -> 0,
        ⟨1p⟩      -> k,
-       ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] _
-    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟨Q⟩] _
-    ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] _
+       ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] (⟪MB⟫) _
+    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟨Q⟩] (⟪MB⟫) _
+    ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] [⟪MB⟫]+ _
     ,, ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
        ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
        ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z 
             || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨obl⟩|⟨prog%.yor⟩|⟨prog%.mekte⟩
-               |⟨cv%.ken⟩|⟨Q⟩|⟨q⟩] _
+               |⟨cv%.ken⟩|⟨Q⟩|⟨q⟩] (⟪MB⟫) _
     ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
        ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
        ⟨1p⟩       -> l ⟪I⟫ m,
-       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨opt⟩ _
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨opt⟩ (⟪MB⟫) _
     ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
        ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
        ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
        ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨cpl⟩ (⟪MB⟫) (⟨V⟩) _,
                                 [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩
-                                |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩]  _ ⟨cpl⟩
+                                |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩] (⟪MB⟫) _ ⟨cpl⟩
     ,, ⟨2s⟩       -> s ⟪A⟫ n ⟪A⟫,
-       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫ || ⟨prs⟩ _
+       ⟨2p⟩       -> s ⟪A⟫ n ⟪I⟫ z ⟪A⟫ || ⟨prs⟩ (⟪MB⟫) _
     ,, ⟨2s⟩       -> 0,
        ⟨3s⟩       -> s ⟪I⟫ n,
        ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n,
        ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n ⟪I⟫ z,
-       ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ _
-    ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ _
+       ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ (⟪MB⟫) _
+    ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ (⟪MB⟫) _
     ,, ⟨dir⟩      -> ⟪D⟫ ⟪I⟫ r
     ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
 ! realization of causative (except the exceptions above)

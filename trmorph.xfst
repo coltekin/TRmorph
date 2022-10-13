@@ -5,7 +5,7 @@ define trmorph @"afilter-lexsym.a" .o. trmorph;
 define trmorph @"afilter-compn.a" .o. trmorph;
 define trmorph @"afilter-cnjsubcat.a" .o. trmorph;
 define trmorph @"afilter-nomsubcat.a" .o. trmorph;
-define trmorph @"afilter-removezero.a" .o. trmorph;
+! define trmorph @"afilter-removezero.a" .o. trmorph;
 !define trmorph trmorph .o. @"phon.a";
 define trmorph trmorph .o. @"phon-delasym.a";
 define trmorph trmorph .o. @"phonetize-compn.a";

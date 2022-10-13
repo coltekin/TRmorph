@@ -1,0 +1,43 @@
+
+define trmorphAA @"morph.a";
+define trmorphAB [trmorphAA .o. @"morph-filter.a"].l;
+define trmorphAC @"afilter-lexsym.a" .o. trmorphAB;
+define trmorphAD @"afilter-compn.a" .o. trmorphAC;
+define trmorphAE @"afilter-cnjsubcat.a" .o. trmorphAD;
+define trmorphAF @"afilter-nomsubcat.a" .o. trmorphAE;
+! define trmorph @"afilter-removezero.a" .o. trmorph;
+!define trmorph trmorph .o. @"phon.a";
+define trmorphAG trmorphAF .o. @"phon-delasym.a";
+define trmorphAH trmorphAG .o. @"phonetize-compn.a";
+define trmorphAI trmorphAH .o. @"phon-insertboundary.a";
+define trmorphAJ trmorphAI .o. @"phonetize-nom.a";
+define trmorphAK trmorphAJ .o. @"phonetize-verb.a";
+define trmorphAL trmorphAK .o. @"phonetize-verb2.a";
+define trmorphAM trmorphAL .o. @"phonetize-abbr.a";
+define trmorphAO trmorphAM .o. @"phonetize-num.a";
+define trmorphAP trmorphAO .o. @"phon-insertrb.a";
+!define trmorph trmorph .o. @"phon-filter.a";
+define trmorphAQ trmorphAP .o. @"phon-mredup.a";
+define trmorphAR trmorphAQ .o. @"phon-exceptions.a";
+define trmorphAS trmorphAR .o. @"phon-buffer.a";
+define trmorphAT trmorphAS .o. @"phon-causative.a";
+define trmorphAU trmorphAT .o. @"phon-voicing.a";
+! TODO: pushing vowel harmony to a later stage may increase the
+! compilation time 
+define trmorphAV trmorphAU .o. @"phon-vh.a";
+define trmorphAW trmorphAV .o. @"phon-vepenth.a";
+!
+define trmorphAX trmorphAW .o. @"phon-ki.a";
+define trmorphAY trmorphAX .o. @"phon-redup.a";
+define trmorphAZ trmorphAY .o. @"phon-mi.a";
+define trmorphBA trmorphAZ .o. @"delete-stress.a";
+define trmorphBB trmorphBA .o. @"delete-silent.a";
+! surface normalization / alternations
+define trmorphBC trmorphBB ..o. @"phon-circumflex.a";
+define trmorphBD trmorphBC ..o. @"phon-case.a";
+! regex trmorphBD .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
+!save stack trmorph-boundary.a
+!clear stack
+define trmorphBE trmorphBD .o. @"delete-boundary.a";
+!
+regex trmorphBE;

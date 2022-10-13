@@ -41,8 +41,8 @@ A;A;arabasının;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabasından;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabasında;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabasıyla;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabasısız;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabasılı;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabasısız;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabasılı;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabasılık;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨lik⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabasınca;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨ce⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabasıcı;araba⟨N⟩⟨sg⟩⟨p3s⟩⟨ci⟩⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -77,8 +77,8 @@ A;A;arabalarının;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s�
 A;A;arabalarından;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarında;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarıyla;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabalarısız;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabalarılı;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabalarısız;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabalarılı;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarılık;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨lik⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarınca;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨ce⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarıcı;araba⟨N⟩⟨sg⟩⟨p3p⟩⟨ci⟩⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -125,8 +125,8 @@ A;A;arabalarının;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨gen⟩⟨cpl⟩⟨V⟩⟨3s�
 A;A;arabalarından;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarında;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarıyla;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabalarısız;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabalarılı;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabalarısız;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabalarılı;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarılık;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨lik⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarınca;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨ce⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarıcı;araba⟨N⟩⟨pl⟩⟨p3s⟩⟨ci⟩⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
@@ -162,7 +162,7 @@ A;A;arabalarından;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨abl⟩⟨cpl⟩⟨V⟩⟨3s�
 A;A;arabalarında;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨loc⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarıyla;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨ins⟩⟨cpl⟩⟨V⟩⟨3s⟩
 A;A;arabalarısız;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨siz⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
-A;A;arabalarılı;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
+#A;A;arabalarılı;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨li⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarılık;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨lik⟩⟨Adj⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarınca;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨ce⟩⟨cpl⟩⟨V⟩⟨3s⟩
 #A;A;arabalarıcı;araba⟨N⟩⟨pl⟩⟨p3p⟩⟨ci⟩⟨N⟩⟨sg⟩⟨p0x⟩⟨nom⟩⟨cpl⟩⟨V⟩⟨3s⟩

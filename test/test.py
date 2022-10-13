@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
 import os,sys,fcntl
-from flookup import Fst
+from trmorpy import TrMorph
 
-analyzer = Fst(cmd="flookup -b -x ", fst="../trmorph.a")
-generator = Fst(cmd="flookup -b -x -i", fst="../trmorph.a",
-               inverse=True)
 
+trm = TrMorph(datadir=os.path.join(sys.path[0],".."))
 print(sys.argv[1], "...", end=" ")
 linenum = 0
 with open(sys.argv[1], 'r') as fp:
@@ -17,11 +15,12 @@ with open(sys.argv[1], 'r') as fp:
         if len(line) == 0: continue
         action, result, surface, analysis = line.split(";")
         if action == 'A':
-            out = analyzer.analyze(surface)
+            out = [x for x in trm.analyze_word(surface)
+                    if '⟨X⟩' not in x]
             expect = analysis
             inp = surface
         elif action == 'G':
-            out = generator.analyze(analysis)
+            out = trm.generate(analysis)
             expect = surface
             inp = analysis
         else:
