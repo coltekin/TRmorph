@@ -13,8 +13,8 @@ define R500     [D|Ⅾ|d|ⅾ];
 define R1000    [M|Ⅿ|m|ⅿ];
 define digit    [%0|1|2|3|4|5|6|7|8|9];
 define nonzero  digit - %0;
-define numArabic ⟨Num⟩ [⟨ara⟩|⟨time⟩|⟨date⟩];
-define numRoman  ⟨Num⟩ ⟨rom⟩;
+define numArabic ⟪RB⟫ [⟨ara⟩|⟨time⟩|⟨date⟩];
+define numRoman  ⟪RB⟫ ⟨rom⟩;
 
 regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                 || nonzero %0^{12,14} / ⟪tSep⟫   _ numArabic, ! trilyon
@@ -74,6 +74,6 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
     ,, [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩] -> 0
     ,, ⟪tSep⟫ -> "."|","
     ,, ⟪dSep⟫ -> "."|","
-    ,, ⟪DB⟫ (->) " " || _ intSym* \⟨Num⟩ !TODO: double check
+    ,, ⟪DB⟫ (->) " " || _ intSym* \⟪RB⟫ !TODO: double check
     ,, ⟪DB⟫ -> 0
 ;

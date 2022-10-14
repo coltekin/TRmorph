@@ -8,7 +8,7 @@
 
 define intSym @"intermediate-symbols.a";
 define consonant  @"consonant.a";
-define vowel  @"vowel.a";
+define vowel  @"vowel.a"|⟪I⟫|⟪A⟫;
 
 regex  ? -> 0  || _ ⟪dup⟫ intSym* ⟪RB⟫ [\vowel]* [consonant|.#.]
     ,, ⟪dup⟫  -> 0

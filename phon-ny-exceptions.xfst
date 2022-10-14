@@ -1,0 +1,50 @@
+define intSym @"intermediate-symbols.a" - ⟪apos⟫;
+define ucase @"uppercase.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫;
+
+regex  ⟪D⟫ ⟪A⟫ -> n ⟪D⟫ ⟪A⟫,
+       ⟪D⟫ ⟪A⟫ n -> n ⟪D⟫ ⟪A⟫ n,
+       ⟪C⟫ ⟪A⟫ -> n ⟪C⟫ ⟪A⟫,
+       ⟪by⟫ ⟪A⟫ -> n ⟪A⟫,
+       ⟪by⟫ ⟪I⟫ -> n ⟪I⟫
+        || [ [s|⟪bs⟫|⟪MB⟫|⟪RB⟫] ⟪I⟫ | l ⟪A⟫ r ⟪I⟫ | boundary+ [i|ü] ] boundary+
+            _ [⟪MB⟫|⟪IGB⟫],
+           .#.  [{o}|{bu}|{şu}|
+                 {aynı}|
+                 {kendi}|{kendisi}|{kendileri}|
+                 {biri}|{birisi}|{birileri}|
+                 {üzeri}] boundary+ _ [⟪MB⟫|⟪IGB⟫]
+    ,, ⟪D⟫ ⟪A⟫ (->) n ⟪D⟫ ⟪A⟫,
+       ⟪D⟫ ⟪A⟫ n (->) n ⟪D⟫ ⟪A⟫ n,
+       ⟪C⟫ ⟪A⟫ (->) n ⟪C⟫ ⟪A⟫,
+       ⟪by⟫ ⟪A⟫ (->) n ⟪A⟫,
+       ⟪by⟫ ⟪I⟫ (->) n ⟪I⟫
+        || [s|⟪bs⟫|⟪MB⟫|⟪RB⟫] ⟪I⟫ boundary+ ⟪apos⟫ boundary* _  [⟪MB⟫|⟪IGB⟫]
+    ,, [..] -> n
+           || .#. [{o}|{bu}|{şu}] boundary+ 
+              _ [l ⟪A⟫ r | ⟪by⟫ l ⟪NS⟫ ⟪A⟫ | s ⟪I⟫z] [⟪MB⟫|⟪IGB⟫]
+    ,, [..] (->) ⟪bn⟫ ⟪I⟫ n
+           || .#. [{sen}|{o}|{siz}|{bu}|{şu}|{kim}] boundary+ 
+              _  (n) ⟪by⟫ l ⟪NS⟫ ⟪A⟫  [⟪MB⟫|⟪IGB⟫]
+    ,, [..] (->) ⟪bn⟫ ⟪I⟫ m
+           || .#. [{ben}|{biz}] intSym* ⟪prn⟫ boundary+ 
+              _  ⟪by⟫ l ⟪NS⟫ ⟪A⟫  [⟪MB⟫|⟪IGB⟫]
+    ,, n -> m
+           || .#. [{ben}|{biz}] intSym* ⟪prn⟫ boundary+
+              ⟪bn⟫ ⟪I⟫ _
+    ,, [..] (->) n 
+           || .#. [{kendi}|{kendisi}|{kendileri}] boundary+
+              _ ⟪by⟫ l ⟪NS⟫ ⟪A⟫  [⟪MB⟫|⟪IGB⟫]
+    ,, [..] -> y
+           || .#. [{o}|{bu}|{şu}] boundary+ 
+              _ [⟪bI⟫ m | ⟪bI⟫ n | ⟪bI⟫ m ⟪I⟫ z|  ⟪bI⟫ m ⟪I⟫ z] [⟪MB⟫|⟪IGB⟫],
+              .#. [{su}
+                  |{özsu}
+                  |{karasu}] boundary+ _ [⟪bI⟫|⟪bn⟫|⟪bs⟫]
+    ,, [..] (->) y
+           || .#. [{ne}
+                  |{akarsu}] boundary+ 
+                    _ [⟪bI⟫|⟪I⟫|⟪bn⟫|⟪bs⟫],
+              .#. ucase [\⟪RB⟫]* s u intSym* [⟪RB⟫] (⟪apos⟫) [⟪IGB⟫|⟪MB⟫]+
+                    _ [⟪bI⟫|⟪bn⟫|⟪bs⟫]
+    ,, ⟪prn⟫ -> 0;

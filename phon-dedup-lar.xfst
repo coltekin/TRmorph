@@ -1,6 +1,4 @@
 define intSym @"intermediate-symbols.a";
-define ucase @"uppercase.a";
-define vowel  @"vowel.a";
 define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
 
 regex  l ⟪A⟫ r -> 0  || boundary+ _ boundary+ l ⟪A⟫ r;

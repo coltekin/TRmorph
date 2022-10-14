@@ -1,0 +1,25 @@
+define intSym @"intermediate-symbols.a";
+define vowel  @"vowel.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+
+! ---------------------------------------------------------------------------
+! replace the intermediate symbol ⟪pass⟫ with the proper caustive
+! form, and handle some lexical exceptions when passive suffix 
+! is attached to a verb stem..
+!
+! The passive morpheme is -(I)n if the preceding letter is `l' or a 
+! vowel -(I)n otherwise. 
+! The other exceptions include:
+!   - in the passive form of the verb stems ending with `koy'
+!      `y' becomes `n' optionally (generally preferred). 
+!   - the passive form of `kapa-' is `kapatıl-'.
+!     we treat this change as optional, allowing both kapatıl- and
+!     kapan- as passive of 'kapa'.
+!   - the passive form of `anla' is `anlaşıl'
+! ---------------------------------------------------------------------------
+regex  y (->) n   || {ko} _     intSym* ⟪RB⟫ ⟪pass⟫ ⟪MB⟫
+    ,, [..] (->) t || .#. {kapa} _ intSym* ⟪RB⟫  ⟪pass⟫ ⟪MB⟫
+    ,, [..] -> ş   || .#. {anla} _ intSym* ⟪RB⟫  ⟪pass⟫ ⟪MB⟫
+    ,, ⟪pass⟫ ->  ⟪bI⟫ n  //  [vowel|l] boundary+ _ ⟪MB⟫
+    ,, ⟪pass⟫ ->  ⟪bI⟫ l  // \[vowel|l] boundary+ _ ⟪MB⟫
+;

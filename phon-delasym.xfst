@@ -7,8 +7,6 @@ regex [⟪neg⟫
       |⟪onom⟫
       |⟪emoticon⟫
       |⟪unit⟫
-      |⟪pers⟫
-      |⟪loc⟫
       |⟪nation⟫
       |⟪dem⟫|⟪pers⟫|⟪loc⟫
       |⟪refl⟫

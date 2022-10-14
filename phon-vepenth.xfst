@@ -2,11 +2,16 @@
 ! Deletion of vowels in some stems 'burun' -> 'burn-u' 
 ! ---------------------------------------------------------------------------
 
-define vowel  @"vowel.a";
+define vowel  @"vowel.a"|⟪I⟫|⟪A⟫;
 define consonant  @"consonant.a";
-define apoSym @"apostrophe.a";
 
-regex  vowel -> 0 \\ ⟪del⟫ _ consonant+ [\consonant]* vowel
+regex  [a|ı|â] -> ⟪sBUV⟫,
+       [e|i|î] -> ⟪sFUV⟫,
+       [u|o|û] -> ⟪sBRV⟫,
+       [ö|ü]   -> ⟪sFRV⟫
+        || ⟪del⟫ _ consonant+ [\consonant]* vowel
     ,, ⟪del⟫ -> 0
-   .o. ⟪apos⟫ -> apoSym
 ;
+
+
+

@@ -1,44 +1,38 @@
 
-define trmorph @"morph.a";
-define trmorph [trmorph .o. @"morph-filter.a"].l;
-define trmorph @"afilter-lexsym.a" .o. trmorph;
-define trmorph @"afilter-compn.a" .o. trmorph;
-define trmorph @"afilter-cnjsubcat.a" .o. trmorph;
-define trmorph @"afilter-nomsubcat.a" .o. trmorph;
-! define trmorph @"afilter-removezero.a" .o. trmorph;
-! define trmorph trmorph .o. @"phon.a";
-define trmorph trmorph .o. @"phon-delasym.a";
-define trmorph trmorph .o. @"phonetize-compn.a";
-define trmorph trmorph .o. @"phon-insertboundary.a";
-define trmorph trmorph .o. @"phonetize-nom.a";
-define trmorph trmorph .o. @"phonetize-verb.a";
-define trmorph trmorph .o. @"phonetize-verb2.a";
-define trmorph trmorph .o. @"phonetize-abbr.a";
-define trmorph trmorph .o. @"phonetize-num.a";
-define trmorph trmorph .o. @"phon-insertrb.a";
-!define trmorph trmorph .o. @"phon-filter.a";
-define trmorph trmorph .o. @"phon-mredup.a";
-define trmorphAR trmorphAQ .o. @"phon-exception-root.a";
-define trmorph trmorph .o. @"phon-exceptions.a";
-define trmorph trmorph .o. @"phon-buffer.a";
-define trmorph trmorph .o. @"phon-causative.a";
-define trmorph trmorph .o. @"phon-voicing.a";
-! TODO: pushing vowel harmony to a later stage may increase the
-! compilation time 
-define trmorph trmorph .o. @"phon-vh.a";
-define trmorph trmorph .o. @"phon-vepenth.a";
-!
-define trmorph trmorph .o. @"phon-ki.a";
-define trmorph trmorph .o. @"phon-redup.a";
-define trmorph trmorph .o. @"phon-mi.a";
-define trmorph trmorph .o. @"delete-stress.a";
-define trmorph trmorph .o. @"delete-silent.a";
+define morph @"morph.a";
+define mfilter [morph .o. @"morph-filter.a"].l;
+define Alexsym @"afilter-lexsym.a" .o. mfilter;
+define Acompn @"afilter-compn.a" .o. Alexsym;
+define AsubcatC @"afilter-cnjsubcat.a" .o. Acompn;
+define AsubcatN @"afilter-nomsubcat.a" .o. AsubcatC;
+define Pdelsym AsubcatN .o. @"phon-delasym.a";
+define Pbound Pdelsym .o. @"phon-insertboundary.a";
+define Pnominal Pbound .o. @"phonetize-nom.a";
+define Pverb1 Pnominal .o. @"phonetize-verb.a";
+define Pverb2 Pverb1 .o. @"phonetize-verb2.a";
+define Pabbr Pverb2 .o. @"phonetize-abbr.a";
+define Pnum Pabbr .o. @"phonetize-num.a";
+define Pmredup Pnum .o. @"phon-mredup.a";
+define Prootex Pmredup .o. @"phon-root-exceptions.a";
+define Ppass Prootex .o. @"phon-passive.a";
+define Plar Ppass .o. @"phon-dedup-lar.a";
+define Psi Plar .o. @"phon-si.a";
+define Pny Psi .o. @"phon-ny-exceptions.a";
+define Pbuffdel Pny .o. @"phon-buffer.a";
+define Pcaus Pbuffdel .o. @"phon-causative.a";
+define Pvoice Pcaus .o. @"phon-voicing.a";
+define Pvepenth Pvoice .o. @"phon-vepenth.a";
+define Predup Pvepenth .o. @"phon-redup.a";
+define Pvh Predup .o. @"phon-vh.a";
+define Pki Pvh .o. @"phon-ki.a";
+define Pdelsilent Pki .o. @"delete-silent.a";
+define Pdelstress Pdelsilent .o. @"delete-stress.a";
 ! surface normalization / alternations
-define trmorph trmorph ..o. @"phon-circumflex.a";
-define trmorph trmorph ..o. @"phon-case.a";
-regex trmorph .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
+define Pmi Pdelstress .o. @"phon-mi.a";
+define Pcirc Pmi ..o. @"phon-circumflex.a";
+define Pcase Pcirc ..o. @"phon-case.a";
+define Papos Pcase ..o. @"phon-apos.a";
+regex Pcase .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
 save stack trmorph-boundary.a
 clear stack
-define trmorph trmorph .o. @"delete-boundary.a";
-!
-regex trmorph;
+regex Papos .o. @"delete-boundary.a";

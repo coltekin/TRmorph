@@ -28,14 +28,26 @@ regex  ⟪IGB⟫ -> 0
        |⟪causArt⟫
        |⟪causAt⟫
        |⟪causDir⟫
+       |⟪causIt⟫
+       |⟪causIr⟫
        |⟪rcp⟫
        |⟪rfl⟫] -> 0
     ,, ⟪dSep⟫ -> %,
 ! the following should also turn into analysis symbols, but not
 ! handled yet.
     ,, ⟪pers⟫ -> 0
+    ,, ⟪dem⟫ -> 0
+    ,, ⟪loc⟫ -> 0
+    ,, ⟪refl⟫ -> 0
+    ,, ⟪def⟫|⟪indef⟫ -> 0
+    ,, ⟪neg⟫ -> 0
+    ,, ⟪ques⟫ -> 0
+    ,, ⟪onom⟫ -> 0
+    ,, ⟪emoticon⟫ -> 0
+    ,, ⟪unit⟫ -> 0
     ,, ⟪part⟫ -> 0
+    ,, ⟪nation⟫ -> 0
     ,, ⟪time⟫ -> 0
+    ,, ⟪ppadj⟫|⟪ablC⟫|⟪accC⟫|⟪datC⟫|⟪genC⟫|⟪insC⟫|⟪liC⟫|⟪nomC⟫|⟪numC⟫ -> 0
 ;
-
 invert net

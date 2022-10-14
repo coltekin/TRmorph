@@ -3,24 +3,25 @@
 !
 
 define intSym @"intermediate-symbols.a";
+define boundary ⟪RB⟫|⟪MB⟫|⟪IGB⟫;
 
 regex  ⟨rfl⟩      -> ⟪bI⟫ n
     ,, ⟨rcp⟩      -> ⟪bI⟫ ş
     ,, ⟨pass⟩     -> ⟪pass⟫ ! replaced afeter buff. deletion
-    ,, ⟨caus⟩     -> ⟪A⟫ r || .#. ?* ⟪causAr⟫ \[⟨caus⟩]* ⟨V⟩  _
-    ,, ⟨caus⟩     -> ⟪A⟫ t || .#. ?* ⟪causAt⟫ \[⟨caus⟩]* ⟨V⟩  _
-    ,, ⟨caus⟩     -> ⟪A⟫ r t || .#. ?* ⟪causArt⟫ \[⟨caus⟩]* ⟨V⟩ _
-    ,, ⟨caus⟩     -> ⟪I⟫ r || .#. ?* ⟪causIr⟫ \[⟨caus⟩]* ⟨V⟩  _
-    ,, ⟨caus⟩     -> ⟪I⟫ t || .#. ?* ⟪causIt⟫ \[⟨caus⟩]* ⟨V⟩  _
-    ,, ⟨caus⟩     -> ⟪D⟫ ⟪I⟫ r || .#. ?* ⟪causDir⟫ \[⟨caus⟩]* ⟨V⟩  _
-    ,, ⟨aor⟩     -> ⟪bA⟫ r || ⟪aorAr⟫ intSym* ⟨V⟩ _
-    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟨V⟩ _ , \[⟨V⟩|⟨neg⟩] [⟪MB⟫|⟪MB⟫] _
+    ,, ⟨caus⟩     -> ⟪A⟫ r || .#. ?* ⟪causAr⟫ \[⟨caus⟩]* ⟪RB⟫  _
+    ,, ⟨caus⟩     -> ⟪A⟫ t || .#. ?* ⟪causAt⟫ \[⟨caus⟩]* ⟪RB⟫  _
+    ,, ⟨caus⟩     -> ⟪A⟫ r t || .#. ?* ⟪causArt⟫ \[⟨caus⟩]* ⟪RB⟫ _
+    ,, ⟨caus⟩     -> ⟪I⟫ r || .#. ?* ⟪causIr⟫ \[⟨caus⟩]* ⟪RB⟫  _
+    ,, ⟨caus⟩     -> ⟪I⟫ t || .#. ?* ⟪causIt⟫ \[⟨caus⟩]* ⟪RB⟫  _
+    ,, ⟨caus⟩     -> ⟪D⟫ ⟪I⟫ r || .#. ?* ⟪causDir⟫ \[⟨caus⟩]* ⟪RB⟫  _
+    ,, ⟨aor⟩     -> ⟪bA⟫ r || ⟪aorAr⟫ intSym* ⟪RB⟫ _
+    ,, ⟨aor⟩     -> ⟪bI⟫ r || .#. [\⟪aorAr⟫]* ⟪RB⟫ _ , \[boundary|⟨neg⟩] [⟪MB⟫|⟪IGB⟫] _
     ,, ⟨aor⟩     -> z || ⟨neg⟩ ⟪MB⟫ _ ⟪MB⟫ \[⟨1s⟩|⟨1p⟩]
     ,, ⟨aor⟩     -> 0 || ⟨neg⟩ ⟪MB⟫ _ ⟪MB⟫ [⟨1s⟩|⟨1p⟩]
     ,, [⟪rcp⟫|⟪rfl⟫|⟪causNone⟫|⟪causAr⟫|⟪causArt⟫|⟪causAt⟫|
         ⟪causDir⟫|⟪causIr⟫|⟪causIt⟫|⟪aorAr⟫] -> 0
-    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ [⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
-    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ \[⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫       || _ ⟪MB⟫ [⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
+    ,, ⟨abil⟩    -> ⟪by⟫ ⟪A⟫ b i l || _ ⟪MB⟫ \[⟨neg⟩|"⟨cv.meden⟩"|"⟨cv.meksizin⟩"]
     ,, ⟨iver⟩    -> ⟪by⟫ ⟪I⟫ v e r
     ,, ⟨adur⟩    -> ⟪by⟫ ⟪A⟫ d u r
     ,, ⟨agel⟩    -> ⟪by⟫ ⟪A⟫ g e l
@@ -29,6 +30,7 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
     ,, ⟨ayaz⟩    -> ⟪by⟫ ⟪A⟫ y a z
     ,, ⟨neg⟩     -> m ⟪A⟫
     ,, ⟨cond⟩    -> s ⟪A⟫
+    ,, ⟨cond⟩    -> ⟪by⟫ ⟪A⟫  || _ ⟪MB⟫ ⟨cpl⟩ ⟪MB⟫ [⟨past⟩|⟨evid⟩] ! non-standard
     ,, ⟨evid⟩    -> m ⟪I⟫ ş
     ,, ⟨fut⟩     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
     ,, ⟨imp⟩     -> 0
@@ -39,22 +41,22 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
     ,, ⟨past⟩    -> ⟪D⟫ ⟪I⟫
     ,, ⟨prog%.yor⟩ -> ⟪bI⟫ y o r
     ,, ⟨prog%.mekte⟩ -> m ⟪A⟫ k t ⟪A⟫
-    ,, ⟨cpl⟩     -> ⟪by⟫ || _ (⟨V⟩) [⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
-    ,, ⟨cpl⟩     -> 0 || _  \[⟨V⟩|⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
-    ,, ⟨cpl⟩     -> 0 || _  ⟨V⟩ \[⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> ⟪by⟫ || _ (boundary) [⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  \[boundary|⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
+    ,, ⟨cpl⟩     -> 0 || _  boundary \[⟨past⟩|⟨evid⟩|⟨cond⟩|"⟨cv.ken⟩"]
     ,, ⟨1s⟩      -> m,
        ⟨2s⟩      -> n,
        ⟨3s⟩      -> 0,
        ⟨1p⟩      -> k,
        ⟨2p⟩      -> n ⟪I⟫ z || [⟨past⟩|⟨cond⟩] (⟪MB⟫) _
-    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟨Q⟩] (⟪MB⟫) _
+    ,, ⟨1s⟩      -> ⟪by⟫ ⟪I⟫ m || [⟨prog%.mekte⟩|⟨obl⟩|⟪RB⟫] (⟪MB⟫) _
     ,, ⟨1s⟩      -> ⟪bI⟫ m || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨prog%.yor⟩|⟨cv%.ken⟩] [⟪MB⟫]+ _
     ,, ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
        ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
        ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z 
             || [⟨aor⟩|⟨evid⟩|⟨fut⟩|⟨obl⟩|⟨prog%.yor⟩|⟨prog%.mekte⟩
-               |⟨cv%.ken⟩|⟨Q⟩|⟨q⟩] (⟪MB⟫) _
+               |⟨cv%.ken⟩|⟪RB⟫|⟨q⟩] (⟪MB⟫) _
     ,, ⟨1s⟩       -> ⟪by⟫ ⟪I⟫ m,
        ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
@@ -64,7 +66,7 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
        ⟨2s⟩       -> s ⟪I⟫ n,
        ⟨3s⟩       -> 0,
        ⟨1p⟩       -> ⟪by⟫ ⟪I⟫ z,
-       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨cpl⟩ (⟪MB⟫) (⟨V⟩) _,
+       ⟨2p⟩       -> s ⟪I⟫ n ⟪I⟫ z || ⟨cpl⟩ boundary* _,
                                 [⟨nom⟩|⟨dat⟩|⟨abl⟩|⟨loc⟩|⟨gen⟩|⟨ins⟩
                                 |⟨siz⟩|⟨li⟩|⟨lik⟩|⟨ci⟩|⟨ce⟩] (⟪MB⟫) _ ⟨cpl⟩
     ,, ⟨2s⟩       -> s ⟪A⟫ n ⟪A⟫,
@@ -75,10 +77,4 @@ regex  ⟨rfl⟩      -> ⟪bI⟫ n
        ⟨2p⟩       -> ⟪by⟫ ⟪I⟫ n ⟪I⟫ z,
        ⟨3p⟩       -> s ⟪I⟫ n l ⟪A⟫ r || ⟨imp⟩ (⟪MB⟫) _
     ,, ⟨3p⟩       -> l ⟪A⟫ r || \⟨imp⟩ (⟪MB⟫) _
-    ,, ⟨dir⟩      -> ⟪D⟫ ⟪I⟫ r
-    ,, ⟨q⟩        -> ⟪mispc⟫ m ⟪I⟫
-! realization of causative (except the exceptions above)
-! depnds on vowel harmony and buffer deletion, we replace it here 
-! with an intermediate symbol, and process it later.
-   .o. ⟨caus⟩     -> ⟪caus⟫
 ;

@@ -32,7 +32,7 @@ A;A;geldik mi;gel⟨V⟩⟨past⟩⟨1p⟩⟨q⟩
 A;A;geldiniz mi;gel⟨V⟩⟨past⟩⟨2p⟩⟨q⟩
 A;A;geldiler mi;gel⟨V⟩⟨past⟩⟨3p⟩⟨q⟩
 A;A;gelsek mi;gel⟨V⟩⟨cond⟩⟨1p⟩⟨q⟩
-A;A;gelelim mi;gel⟨V⟩⟨cond⟩⟨1p⟩⟨q⟩
+A;A;gelelim mi;gel⟨V⟩⟨opt⟩⟨1p⟩⟨q⟩
 #
 A;R;okudu mıyız;
 A;R;okusa mıyız;

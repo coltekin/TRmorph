@@ -19,4 +19,3 @@ regex [..] -> m || ⟪mredup⟫ _ lowerV
     .o. M (->) m || ⟪mredup⟫ _
     ,, ⟪mredup⟫ -> 0
 ;
-! regex ⟪mredup⟫ -> 0 ;

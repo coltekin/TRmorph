@@ -1,6 +1,7 @@
 !
 ! Phonetize (mainly) nomimal morphemes analysis symbols.
 !
+define intSym @"intermediate-symbols.a";
 
 regex  ⟨pl⟩ -> l ⟪A⟫ r
     ,, ⟨sg⟩ -> 0
@@ -31,9 +32,15 @@ regex  ⟨pl⟩ -> l ⟪A⟫ r
     ,, ⟨dim⟩ -> [ ⟪C⟫ ⟪I⟫ ⟪k⟫   ! TODO: (?) add (A/I)CIK
                  |⟪C⟫ ⟪A⟫ ⟪k⟫ 
                  |⟪C⟫ ⟪A⟫ ğ ⟪I⟫ z]
-    ,, ⟨imsi⟩ -> ⟪bI⟫ m s ⟪I⟫ || intSyme* _
+    ,, ⟨imsi⟩ -> ⟪bI⟫ m s ⟪I⟫ || intSym* _
 ! numbers
     ,, ⟨dist⟩ -> (⟪apos⟫) ⟪bş⟫ ⟪A⟫ r
     ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 
     ,, ⟨ord⟩  -> (⟪apos⟫) ⟪bI⟫ n c ⟪I⟫
+! Compund noun marker as part of the root
+    ,, [..] (->) ⟪bs⟫ ⟪I⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟪RB⟫ [⟨pl⟩|⟨lik⟩] [⟪MB⟫|⟪IGB⟫] _
+    ,, ⟪compn⟫ -> ⟪bs⟫ ⟪I⟫
+! mark m-reduplication
+    ,, [..]             -> ⟪mredup⟫ || .#. (ˈ) _ \ˈ ?* ⟨mredup⟩
+    ,, ⟨mredup⟩         -> 0
 ;

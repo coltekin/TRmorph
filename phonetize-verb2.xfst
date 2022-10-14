@@ -2,7 +2,13 @@
 ! Phonetize (mainly) verbal morphemes analysis symbols. Part 2.
 !
 
-regex  "⟨vn.me⟩"        -> m ⟪A⟫
+regex  ⟨dir⟩            -> ⟪D⟫ ⟪I⟫ r
+    ,, ⟨q⟩              -> ⟪mispc⟫ m ⟪I⟫
+! realization of causative (except the exceptions in the previous step)
+! depnds on vowel harmony and buffer deletion, we replace it here 
+! with an intermediate symbol, and process it later.
+    ,, ⟨caus⟩           -> ⟪caus⟫
+    ,,"⟨vn.me⟩"         -> m ⟪A⟫
     ,, "⟨vn.mek⟩"       -> m ⟪A⟫ ⟪K⟫
     ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş
     ,, "⟨part.pres⟩"    -> ⟪by⟫ ⟪A⟫ n
@@ -24,6 +30,4 @@ regex  "⟨vn.me⟩"        -> m ⟪A⟫
     ,, "⟨cv.meden⟩"     -> m ⟪A⟫ z d ⟪A⟫ n
     ,, "⟨cv.meksizin⟩"  -> m ⟪A⟫ k s ⟪I⟫ z ⟪I⟫ n
     ,, "⟨cv.ye⟩"        -> ⟪by⟫ ⟪A⟫
-    ,, [..]             -> ⟪mredup⟫ || .#. (ˈ) _ \ˈ ?* ⟨mredup⟩
-    ,, ⟨mredup⟩         -> 0
 ;
