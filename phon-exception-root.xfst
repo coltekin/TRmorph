@@ -1,0 +1,14 @@
+define intSym @"intermediate-symbols.a";
+define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
+
+! --------------------------------------------------------------------------
+! the verb roots 'de-' and 'ye-' becom di- and yi- if a suffix
+! starting with a 'y' follows
+! --------------------------------------------------------------------------
+regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
+   ,, e -> e || .#. d  _  boundary+ ⟪by⟫ ⟪I⟫ p ⟪MB⟫
+! --------------------------------------------------------------------------
+! -yor exception - `a' `e' and underspecified low-unrounded vowel `A' becomes
+! corresponding high vowel before the suffix -yor
+! --------------------------------------------------------------------------
+   .o. [a|e|⟪A⟫] -> ⟪I⟫ ||  _  boundary+ ⟪bI⟫ y o r ⟪MB⟫;

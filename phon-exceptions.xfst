@@ -4,17 +4,6 @@ define vowel  @"vowel.a";
 define boundary ⟪MB⟫|⟪RB⟫|⟪IGB⟫|intSym;
 
 ! --------------------------------------------------------------------------
-! the verb roots 'de-' and 'ye-' becom di- and yi- if a suffix
-! starting with a 'y' follows
-! --------------------------------------------------------------------------
-regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
-   ,, e -> e || .#. d  _  boundary+ ⟪by⟫ ⟪I⟫ p ⟪MB⟫
-! --------------------------------------------------------------------------
-! -yor exception - `a' `e' and underspecified low-unrounded vowel `A' becomes
-! corresponding high vowel before the suffix -yor
-! --------------------------------------------------------------------------
-   .o. [a|e|⟪A⟫] -> ⟪I⟫ ||  _  boundary+ ⟪bI⟫ y o r ⟪MB⟫
-! --------------------------------------------------------------------------
 ! (s)I deletion - the morpheme (s)I is deleted in some contexts.
 ! What is deleted is  not clear, but we model such that (s)I gets deleted 
 ! - before another (s)I
@@ -26,9 +15,10 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
 !       use. Although 'buzdolaplı' is the correct form, there are many
 !       instances of 'buzdoabılı' on the net.
 ! --------------------------------------------------------------------------
+
 !    ,,  ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _         ! not sure why this was here
 !    ,,  ⟪compn⟫ ⟪bs⟫ ⟪I⟫ -> 0 \\ l ⟪I⟫ boundary* _ ! this should not ever happen
-     ,, ⟪bs⟫ ⟪I⟫ -> 0 || _ boundary+ [ ⟪bs⟫ ⟪I⟫
+regex  ⟪bs⟫ ⟪I⟫ -> 0 || _ boundary+ [ ⟪bs⟫ ⟪I⟫
                                       | l (⟪NS⟫) ⟪A⟫ r ⟪I⟫
                                       | l ⟪I⟫
                                       | l ⟪I⟫ k

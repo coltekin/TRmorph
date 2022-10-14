@@ -1,13 +1,13 @@
 
-define trmorphAA @"morph.a";
-define trmorphAB [trmorphAA .o. @"morph-filter.a"].l;
-define trmorphAC @"afilter-lexsym.a" .o. trmorphAB;
-define trmorphAD @"afilter-compn.a" .o. trmorphAC;
-define trmorphAE @"afilter-cnjsubcat.a" .o. trmorphAD;
-define trmorphAF @"afilter-nomsubcat.a" .o. trmorphAE;
+define trmorphMorph @"morph.a";
+define trmorphMFilter [trmorphMorph .o. @"morph-filter.a"].l;
+define trmorphAlexsym @"afilter-lexsym.a" .o. trmorphMFilter;
+define trmorphAcompn @"afilter-compn.a" .o. trmorphAlexsym;
+define trmorphAsubcatC @"afilter-cnjsubcat.a" .o. trmorphAlexsym;
+define trmorphAsubcatN @"afilter-nomsubcat.a" .o. trmorphAsubcatC;
 ! define trmorph @"afilter-removezero.a" .o. trmorph;
 !define trmorph trmorph .o. @"phon.a";
-define trmorphAG trmorphAF .o. @"phon-delasym.a";
+define trmorphAG trmorphAsubcatN .o. @"phon-delasym.a";
 define trmorphAH trmorphAG .o. @"phonetize-compn.a";
 define trmorphAI trmorphAH .o. @"phon-insertboundary.a";
 define trmorphAJ trmorphAI .o. @"phonetize-nom.a";
@@ -18,6 +18,7 @@ define trmorphAO trmorphAM .o. @"phonetize-num.a";
 define trmorphAP trmorphAO .o. @"phon-insertrb.a";
 !define trmorph trmorph .o. @"phon-filter.a";
 define trmorphAQ trmorphAP .o. @"phon-mredup.a";
+define trmorphAR trmorphAQ .o. @"phon-exception-root.a";
 define trmorphAR trmorphAQ .o. @"phon-exceptions.a";
 define trmorphAS trmorphAR .o. @"phon-buffer.a";
 define trmorphAT trmorphAS .o. @"phon-causative.a";
