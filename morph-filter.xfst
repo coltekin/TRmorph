@@ -22,7 +22,6 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
     .o. ~[ ?* ⟨imp⟩ [⟨2s⟩|⟨3s⟩|⟨2p⟩|⟨3p⟩] ?+ ]
     .o. ~[ ?* ⟨prs⟩ ?+ [⟨2s⟩|⟨2p⟩] ]
     .o. ~[ ?* ⟨prs⟩ [⟨2s⟩|⟨2p⟩] ?+ ]
-    .o. ~[ ?* ⟨apos⟩ ?* ⟨apos⟩ ]
     .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
     .o. ~[ [\[⟪time⟫]]+ ⟨Adv⟩ [⟨ki⟩|⟨leri⟩|⟨ligine⟩] ?*]
     .o. ~[ ?* ⟪time⟫ ?* ⟨Adv⟩ [⟨ca⟩] ?*]
@@ -73,9 +72,9 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
    ,,  [..] (->) ⟨apos⟩ || ⟪abbr⟫ ?* posSym _
    ! Türkiye Cumhuriyet-i'ne
    ,,  [..] (->) ⟨apos⟩ || [⟨p3s⟩|⟨p3p⟩] _ 
-    .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
-    .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
-    .o. ~[ ?* ⟪compn⟫ ?* ⟨sg⟩ [⟨p3s⟩|⟨p3p⟩] ⟨apos⟩ ⟨nom⟩ ⟨cpl⟩ ⟨V⟩ ⟨3s⟩ ]
+    .o. ~[ ?* ⟨apos⟩ ⟨sg⟩ ⟨p%0x⟩ ⟨nom⟩ (⟨cpl⟩ ⟨V⟩ ⟨3s⟩) ]
+    .o. ~[ ?* ⟪compn⟫ ?* ⟨apos⟩ ⟨sg⟩ ⟨p3s⟩ ⟨nom⟩ (⟨cpl⟩ ⟨V⟩ ⟨3s⟩) ]
+    .o. ~[ ?* ⟪compn⟫ ?* ⟨sg⟩ [⟨p3s⟩|⟨p3p⟩] ⟨apos⟩ ⟨nom⟩ (⟨cpl⟩ ⟨V⟩ ⟨3s⟩) ]
    .o. ⟨q⟩ ⟨3p⟩ (->) ⟨3p⟩ ⟨q⟩ 
    .o. [..] (->) ⟨mredup⟩
        || [posSym - [⟨Q⟩|⟨Ij⟩|⟨Alpha⟩|⟨Sym⟩|⟨Punc⟩
