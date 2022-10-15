@@ -314,6 +314,7 @@ LEXICON noun_ci
 !
 
 LEXICON nom_predicate
+                    #;
 ⟨cpl⟩⟨V⟩            pnaggr;
 ⟨cpl⟩⟨V⟩            converb_ken;
 ⟨cpl⟩⟨V⟩            copula_tam;
