@@ -16,6 +16,6 @@ regex [..] -> m || ⟪mredup⟫ _ lowerV
     ,, upperC -> M || ⟪mredup⟫ _ 
     ,,  A -> a, E -> e, I -> i, İ -> i, O -> o, Ö -> ö,
         U -> u, Ü -> ü, Î -> î, Û -> û, Â -> â || ⟪mredup⟫ _
-    .o. M (->) m || ⟪mredup⟫ _
+!    .o. M (->) m || ⟪mredup⟫ _
     ,, ⟪mredup⟫ -> 0
 ;

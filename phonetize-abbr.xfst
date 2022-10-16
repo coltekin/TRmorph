@@ -11,7 +11,7 @@ define intSym @"intermediate-symbols.a";
 ! letters added in the lexicon.
 ! The second rule inserts an optional dot `.' if there isn't one
 ! already.
-regex [..] -> ⟪sFUV⟫ || .#. cons+ _ intSym* ⟪abbr⟫ intSym*
+regex [..] -> ⟪sFUV⟫ || .#. intSym* cons+ _ intSym* ⟪abbr⟫ intSym*
     ,, [..] (->) %.   || \[%.] _ intSym* ⟪abbr⟫ [⟪MB⟫|⟪IGB⟫|⟪RB⟫]+ .#.
     ,, ⟪abbr⟫ -> 0
 ! replace apostrophe with an intermediate symbol
