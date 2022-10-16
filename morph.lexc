@@ -159,7 +159,7 @@ LEXICON lex_cpl_i
 
 LEXICON lex_question
 ⟨Q⟩                     #;
-⟨Q⟩                     copula;
+⟨Q⟩⟨cpl⟩                copula_tam;
 ⟨Q⟩                     pnaggr;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -319,7 +319,6 @@ LEXICON nom_predicate
 ⟨cpl⟩⟨V⟩            converb_ken;
 ⟨cpl⟩⟨V⟩            copula_tam;
 ⟨q⟩⟨cpl⟩⟨V⟩         pnaggr;
-⟨q⟩⟨cpl⟩⟨V⟩         converb_ken;
 ⟨q⟩⟨cpl⟩⟨V⟩         copula_tam;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -456,7 +455,7 @@ LEXICON tam_prog
 LEXICON question
                 pnaggr;
                 copula;
-⟨q⟩             copula;
+⟨q⟩⟨cpl⟩        copula_tam;
 ⟨q⟩             pnaggr;
 
 !

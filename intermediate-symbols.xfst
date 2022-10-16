@@ -9,6 +9,7 @@ regex ⟪rcp⟫|⟪rfl⟫
      |⟪prn⟫
      |⟪compn⟫
      |⟪mispc⟫
+     |⟪mredup⟫
      |⟪ques⟫
      |⟪adv⟫|⟪coo⟫|⟪sub⟫
      |⟪family⟫|⟪propn⟫
