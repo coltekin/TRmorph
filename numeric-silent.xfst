@@ -17,6 +17,7 @@ define R500     [D|Ⅾ|d|ⅾ];
 define R1000    [M|Ⅿ|m|ⅿ];
 define digit    [%0|1|2|3|4|5|6|7|8|9];
 define nonzero  digit - %0;
+¹|²|³|½|¼|¾
 
 regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                 || nonzero %0^{12,14} / ⟪tSep⟫   _ ⟪RB⟫, ! trilyon
@@ -34,7 +35,7 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
     ,,  [..] -> ⟪sFUV⟫ ⟪sVC⟫ 
                 || nonzero %0^{3,5}   / ⟪tSep⟫   _ ⟪RB⟫, ! bin
                    8 %0                    _ ⟪RB⟫, ! seksen
-                   1                       _ ⟪RB⟫,
+                   [1|¹]                   _ ⟪RB⟫,
                    8                       _ ⟪RB⟫,
                    [Ⅷ|ⅷ]                   _ ⟪RomNum⟫, ! 8
                    R5 R1^3                 _ ⟪RomNum⟫, ! 8
@@ -57,7 +58,7 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                    [\[R1]|.#.] R5          _ ⟪RomNum⟫, ! 5
                    R50 R10^2               _ ⟪RomNum⟫  ! 70
     ,,  [..] -> ⟪sFRV⟫ ⟪sUC⟫
-                || [3|4|¼|¾]               _ ⟪RB⟫,
+                || [3|4|³|¼|¾]             _ ⟪RB⟫,
                    [Ⅲ|ⅲ|Ⅳ|ⅳ]               _ ⟪RomNum⟫, ! 3,4
                    R1 R5                   _ ⟪RomNum⟫, ! 4
                    [\R5|.#.] R1^{3,4}      _ ⟪RomNum⟫  ! 3,4
@@ -67,7 +68,7 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                    [Ⅵ|ⅵ]                   _ ⟪RomNum⟫  ! 6
     ,,  [..] -> ⟪sFUV⟫
                 || [2|5] %0                _ ⟪RB⟫,
-                   [2|½|7]                 _ ⟪RB⟫,
+                   [2|²|½|7]               _ ⟪RB⟫,
                    [\R10|.#.] R50          _ ⟪RomNum⟫, ! 50
                    [\R50|.#.] R10^2        _ ⟪RomNum⟫, ! 20
                    [\R1|.#.] R1^2          _ ⟪RomNum⟫, ! 2,7
