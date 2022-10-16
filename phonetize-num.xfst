@@ -64,8 +64,8 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                    R5 R1                   _ numRoman, ! 6
                    [Ⅵ|ⅵ]                   _ numRoman  ! 6
     ,,  [..] -> ⟪sFUV⟫
-                || [²|2|5] %0              _ numArabic,
-                   [2|½|7]                 _ numArabic,
+                || [2|5] %0                _ numArabic,
+                   [²|2|½|7]               _ numArabic,
                    [\R10|.#.] R50          _ numRoman, ! 50
                    [\R50|.#.] R10^2        _ numRoman, ! 20
                    [\R1|.#.] R1^2          _ numRoman, ! 2,7
