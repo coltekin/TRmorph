@@ -33,10 +33,6 @@ regex  ⟨pl⟩ -> l ⟪A⟫ r
                  |⟪C⟫ ⟪A⟫ ⟪k⟫ 
                  |⟪C⟫ ⟪A⟫ ğ ⟪I⟫ z]
     ,, ⟨imsi⟩ -> ⟪bI⟫ m s ⟪I⟫ || intSym* _
-! numbers
-    ,, ⟨dist⟩ -> (⟪apos⟫) ⟪bş⟫ ⟪A⟫ r
-    ,, ⟨dist⟩ -> %. || digit ⟨Num⟩ ⟨ara⟩ _ 
-    ,, ⟨ord⟩  -> (⟪apos⟫) ⟪bI⟫ n c ⟪I⟫
 ! Compund noun marker as part of the root
     ,, [..] (->) ⟪bs⟫ ⟪I⟫ ⟪MB⟫ || ⟪compn⟫ intSym* ⟪RB⟫ [⟨pl⟩|⟨lik⟩] [⟪MB⟫|⟪IGB⟫] _
     ,, ⟪compn⟫ -> ⟪bs⟫ ⟪I⟫

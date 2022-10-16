@@ -3,7 +3,6 @@
 !
 
 define intSym @"intermediate-symbols.a";
-
 define R1       [Ⅰ|I|ⅰ|i];
 define R5       [v|ⅴ|V|Ⅴ];
 define R10      [X|Ⅹ|x|ⅹ];
@@ -11,6 +10,7 @@ define R50      [L|Ⅼ|l|ⅼ];
 define R100     [C|Ⅽ|c|ⅽ];
 define R500     [D|Ⅾ|d|ⅾ];
 define R1000    [M|Ⅿ|m|ⅿ];
+define rdigit   R1|R5|R10|R50|R100|R500|R1000;
 define digit    [%0|1|2|3|4|5|6|7|8|9];
 define nonzero  digit - %0;
 define numArabic ⟪RB⟫ [⟨ara⟩|⟨time⟩|⟨date⟩];
@@ -70,8 +70,12 @@ regex   [..] -> ⟪sBRV⟫ ⟪sVC⟫
                    [\R50|.#.] R10^2        _ numRoman, ! 20
                    [\R1|.#.] R1^2          _ numRoman, ! 2,7
                    [Ⅱ|ⅱ|Ⅶ|ⅶ|Ⅻ|ⅻ]           _ numRoman  ! 2,7,12
-! decimal / thousand separator replacement
+! numbers
+    ,, ⟨dist⟩ -> (⟪apos⟫) ⟪bş⟫ ⟪A⟫ r
+    ,, ⟨ord⟩ -> %. || [digit|rdigit] ⟪RB⟫ [⟨ara⟩|⟨rom⟩] ⟪MB⟫ _ 
+    ,, ⟨ord⟩  -> (⟪apos⟫) ⟪bI⟫ n c ⟪I⟫
     ,, [⟨ara⟩|⟨rom⟩|⟨date⟩|⟨time⟩] -> 0
+! decimal / thousand separator replacement
     ,, ⟪tSep⟫ -> "."|","
     ,, ⟪dSep⟫ -> "."|","
     ,, ⟪DB⟫ (->) " " || _ intSym* \⟪RB⟫ !TODO: double check

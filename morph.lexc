@@ -127,7 +127,7 @@ LEXICON lex_number_arabic
 ⟨Num⟩⟨ara⟩              number;
 ⟨Num⟩⟨ara⟩⟨apos⟩        number;
 LEXICON lex_number_roman
-⟨Num⟩⟨rom⟩              #;
+⟨Num⟩⟨rom⟩              number;
 ⟨Num⟩⟨rom⟩⟨apos⟩        number;
 LEXICON lex_number_time
 ⟨Num⟩⟨time⟩             number_datetime;
