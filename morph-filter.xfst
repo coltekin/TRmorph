@@ -89,6 +89,7 @@ regex   ~[ ?* ⟪causNone⟫ intSym* ⟨V⟩ ⟨caus⟩ ?* ]
        ⟨pl⟩ ⟨p3s⟩  -> ⟨p3s⟩ ⟨pl⟩
        || ⟪family⟫ intSym* ⟨N⟩ _
     ,, ⟪family⟫  -> 0
+    ,, ⟨nom⟩ (->) 0 || [⟨part%.past⟩|⟨part%.evid⟩|⟨part%.fut⟩] ? \⟨p%0x⟩ _
 ! nominals expressing time may have -ki suffixed directly
     ,, [..] (->) ⟨ki⟩ ⟨Adj⟩ || ⟪time⟫ intSym* [⟨N⟩|⟨Adj⟩|⟨Postp⟩] _
 ;
