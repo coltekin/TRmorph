@@ -13,6 +13,7 @@ regex  ⟨dir⟩            -> ⟪D⟫ ⟪I⟫ r
     ,, "⟨vn.yis⟩"       -> ⟪by⟫ ⟪I⟫ ş
     ,, "⟨part.pres⟩"    -> ⟪by⟫ ⟪A⟫ n
     ,, "⟨part.past⟩"    -> ⟪D⟫ ⟪I⟫ ⟪k⟫
+    ,, "⟨part.evid⟩"    -> m ⟪I⟫ ş
     ,, "⟨part.fut⟩"     -> ⟪by⟫ ⟪A⟫ c ⟪A⟫ ⟪k⟫
     ,, "⟨part.esi⟩"     -> ⟪by⟫ ⟪A⟫ s ⟪I⟫
     ,, "⟨part.ici⟩"     -> ⟪by⟫ ⟪I⟫ c ⟪I⟫

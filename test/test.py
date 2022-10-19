@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import os,sys,fcntl
+import os,sys
 from trmorpy import TrMorph
 
 

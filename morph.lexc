@@ -57,7 +57,7 @@ Multichar_Symbols ⟨Adj⟩
                     ⟨1s⟩ ⟨2s⟩ ⟨3s⟩ ⟨1p⟩ ⟨2p⟩ ⟨3p⟩
                     ⟨dir⟩
                     ⟨vn.me⟩ ⟨vn.mek⟩ ⟨vn.yis⟩
-                    ⟨part.pres⟩ ⟨part.past⟩ ⟨part.fut⟩ ⟨part.esi⟩ ⟨part.ici⟩
+                    ⟨part.pres⟩ ⟨part.past⟩ ⟨part.evid⟩ ⟨part.fut⟩ ⟨part.esi⟩ ⟨part.ici⟩
                     ⟨cv.cesine⟩ ⟨cv.ken⟩ ⟨cv.dikce⟩ ⟨cv.eli⟩ ⟨cv.erek⟩
                       ⟨cv.esiye⟩ ⟨cv.inceye⟩ ⟨cv.ince⟩ ⟨cv.ip⟩ ⟨cv.meden⟩
                       ⟨cv.meksizin⟩ ⟨cv.ye⟩
@@ -521,6 +521,7 @@ LEXICON verb_nonfinite
 ⟨vn.yis⟩        noun;
 ⟨part.pres⟩     adjective;      !-(y)An
 ⟨part.past⟩     adjective;      !-DIK
+⟨part.evid⟩     adjective;      !-mIş GK does not list this as 'part'
 ⟨part.fut⟩      adjective;      !-AcAK
 ⟨part.esi⟩      adjective;      !-(y)AsI GK does not list this as 'part'
 ⟨part.ici⟩      adjective;      !-(y)IcI GK does not list this as 'part'
