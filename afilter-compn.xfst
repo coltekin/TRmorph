@@ -14,5 +14,6 @@ regex  ⟪compn⟫ -> i || [i|e] cons+ intSym* _
     ,, ⟪compn⟫ -> s ı || [ı|a] intSym* _
     ,, ⟪compn⟫ -> s ü || [ü|ö] intSym* _
     ,, ⟪compn⟫ -> s u || [u|o] intSym* _
+    ,, [..] -> i || .#. {birbir} _ ⟨Pron⟩
 ;
 invert net
