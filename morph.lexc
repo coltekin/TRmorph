@@ -327,6 +327,7 @@ LEXICON nom_predicate
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON number
+                #;
                 number_ordinal;
                 number_distributive;
                 number_lerce;
