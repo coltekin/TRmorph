@@ -18,6 +18,8 @@ regex e -> i || .#. [d|y]  _  boundary+ (⟪bI⟫|⟪bA⟫) [⟪by⟫|y]
 ! - drop of final `a/e' after ora/bura/şura/nere
 ! ------------------------------------------------------------
     ,, e -> a || .#. [s|b] _ n ⟪prn⟫ intSym* ⟪RB⟫ [⟪IGB⟫|⟪MB⟫]* ⟪by⟫ ⟪A⟫ [⟪MB⟫|⟪IGB⟫]
+    ,, [ı|i] -> 0 || .#. [{üzer}] _ 
+                        boundary* [⟪bs⟫ ⟪I⟫|l ⟪A⟫ r ⟪I⟫] [⟪MB⟫|⟪IGB⟫]
     ,, [ı|i] (->) 0 || .#. [{içer}|{dışar}|{iler}] _ 
                         boundary* ⟪D⟫ ⟪A⟫ (n) [⟪MB⟫|⟪IGB⟫]
     ,, [a|e] (->) 0 || .#. [{bˈur}|{şˈur}|{ˈor}|{nˈer}]  _ 
