@@ -170,6 +170,7 @@ LEXICON adjective
                     #;
                     adj_deriv;
                     noun;
+                    nom_predicate;
 
 LEXICON adj_deriv
 ⟨lik⟩⟨N⟩            noun;
