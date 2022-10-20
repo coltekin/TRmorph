@@ -520,12 +520,12 @@ LEXICON verb_nonfinite
 ⟨vn.me⟩         noun;   ! TODO: need filter
 ⟨vn.mek⟩        noun;   ! TODO: need filter
 ⟨vn.yis⟩        noun;
-⟨part.pres⟩     adjective;      !-(y)An
-⟨part.past⟩     adjective;      !-DIK
-⟨part.evid⟩     adjective;      !-mIş GK does not list this as 'part'
-⟨part.fut⟩      adjective;      !-AcAK
-⟨part.esi⟩      adjective;      !-(y)AsI GK does not list this as 'part'
-⟨part.ici⟩      adjective;      !-(y)IcI GK does not list this as 'part'
+⟨part.pres⟩     participle;      !-(y)An
+⟨part.past⟩     participle;      !-DIK
+⟨part.evid⟩     participle;      !-mIş GK does not list this as 'part'
+⟨part.fut⟩      participle;      !-AcAK
+⟨part.esi⟩      participle;      !-(y)AsI GK does not list this as 'part'
+⟨part.ici⟩      participle;      !-(y)IcI GK does not list this as 'part'
 ⟨cv.dikce⟩      adverb;         !-DIkçA
 ⟨cv.eli⟩        adverb;         !-(y)AlI
 ⟨cv.erek⟩       adverb;         !-(y)ArAk
@@ -535,6 +535,19 @@ LEXICON verb_nonfinite
 ⟨cv.ip⟩         adverb;         !-(y)Ip
 ⟨cv.ye⟩         adverb;         !-(y)A requires reduplication 'okuya okuya'
                 verb_nonfinite_neg;
+
+! Possessive suffixes below indicate person/number of the subject of
+! the subordinate clause. For verbal nouns, number/case is also
+! attached through the adjective transition.
+!
+LEXICON participle
+        adjective;
+⟨p1s⟩   #;
+⟨p2s⟩   #;
+⟨p3s⟩   #;
+⟨p1p⟩   #;
+⟨p2p⟩   #;
+⟨p3p⟩   #;
 
 LEXICON verb_nonfinite_neg
 ⟨cv.meden⟩      adverb;         !-mAdAn / -mAzdAn
