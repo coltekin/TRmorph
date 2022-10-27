@@ -332,6 +332,7 @@ LEXICON number
                 number_distributive;
                 number_lerce;
                 noun;
+                nom_predicate;
 
 LEXICON number_datetime
                 noun;
