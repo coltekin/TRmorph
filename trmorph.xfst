@@ -32,7 +32,7 @@ define Pmi Pdelstress .o. @"phon-mi.a";
 define Pcirc Pmi ..o. @"phon-circumflex.a";
 define Pcase Pcirc ..o. @"phon-case.a";
 define Papos Pcase ..o. @"phon-apos.a";
-regex Pcase .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
+regex Papos .o. ⟪MB⟫ -> 0 // [⟪RB⟫|⟪IGB⟫|⟪MB⟫] _;
 save stack trmorph-boundary.a
 clear stack
 regex Papos .o. @"delete-boundary.a";
